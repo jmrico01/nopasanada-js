@@ -1,0 +1,16 @@
+{
+	"name": "km-website",
+	"version": "0.1.0",
+	"description": "Kapricorn Media website revamp",
+	"main": "server.js",
+	"author": "Jose M Rico",
+	"license": "ISC",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/jmrico01/km-website.git"
+	},
+	"dependencies": {
+		"cson": "^5.1.0",
+		"express": "^4.16.3"
+	}
+}
