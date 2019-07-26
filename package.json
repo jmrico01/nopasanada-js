@@ -1,13 +1,13 @@
 {
-	"name": "km-website",
+	"name": "nopasanada",
 	"version": "0.1.0",
-	"description": "Kapricorn Media website revamp",
+	"description": "No Pasa Nada",
 	"main": "server.js",
 	"author": "Jose M Rico",
 	"license": "ISC",
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/jmrico01/km-website.git"
+		"url": "https://github.com/jmrico01/nopasanada.git"
 	},
 	"dependencies": {
 		"cson": "^5.1.0",
