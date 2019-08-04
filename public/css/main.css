@@ -23,10 +23,16 @@
 }
 
 #headerLogoImage {
-    height: 100%;
+    width: 3.7vw;
+    height: 3.75vw;
 
     float: left;
 }
+#headerLogoImage img {
+    width: 100%;
+    height: 100%;
+}
+
 #headerLogoText {
     font-family: FuturaExtraBold;
     font-size: 2.2vw;
