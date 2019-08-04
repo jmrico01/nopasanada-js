@@ -1,24 +1,40 @@
 #website {
-    padding: 4vw;
+    padding-left: 4.5vw;
+    padding-right: 4.5vw;
+    padding-top: 3.2vw;
+    padding-bottom: 3.6vw;
 }
 
 #headerContainer {
     width: 100%;
-    height: 8vw;
+    height: 6.7vw;
+
+    color: #d7d7d7;
 }
 
 #headerLogoContainer {
-    font-family: FuturaExtraBold;
-    font-size: 3vw;
-    letter-spacing: -0.2vw;
-    line-height: 2.6vw;
-
     float: left;
-    margin-right: 4.5vw;
+    margin-top: 0.3vw;
+    margin-right: 3vw;
 }
 
 #headerLogoContainer a {
     color: inherit;
+}
+
+#headerLogoImage {
+    height: 100%;
+
+    float: left;
+}
+#headerLogoText {
+    font-family: FuturaExtraBold;
+    font-size: 2.2vw;
+    letter-spacing: -0.11vw;
+    line-height: 2vw;
+
+    float: left;
+    margin-left: 0.5vw;
 }
 
 #headerCategories {
@@ -26,38 +42,39 @@
 
 .headerCategory {
     font-family: FuturaHeavyOblique;
-    font-size: 1.6vw;
-    letter-spacing: -0.08vw;
+    font-size: 1.3vw;
+    letter-spacing: -0.06vw;
 
     float: left;
-    margin-right: 2vw;
+    margin-right: 2.5vw;
     margin-top: 0vw;
 }
 
 #featuredContainer {
-    background-color: #CCCCCC;
+    background-color: #d7d7d7;
 
     width: 100%;
-    height: 35vw;
+    height: 42vw;
 }
 
 #featuredTitle {
     font-family: FuturaHeavyOblique;
     color: #FFFFFF;
-    font-size: 8vw;
-    letter-spacing: -0.2vw;
-    line-height: 6vw;
+    font-size: 8.9vw;
+    letter-spacing: -0.1vw;
+    line-height: 7.2vw;
 
-    padding-left: 5vw;
-    padding-top: 5vw;
+    padding-left: 7.2vw;
+    padding-top: 7.2vw;
 }
 
 #featuredSubtitle {
     font-family: FuturaOblique;
     color: #FFFFFF;
-    font-size: 2vw;
-    letter-spacing: -0.01vw;
-    line-height: 6vw;
+    font-size: 2.1vw;
+    letter-spacing: 0vw;
+    line-height: 2.4vw;
 
-    padding-left: 5vw;
+    padding-left: 7.4vw;
+    padding-top: 1.8vw;
 }
