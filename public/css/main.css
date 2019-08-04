@@ -8,9 +8,9 @@
 }
 
 #headerLogoContainer {
-    font-family: FuturaPTExtraBold;
+    font-family: FuturaExtraBold;
     font-size: 3vw;
-    letter-spacing: -0.22vw;
+    letter-spacing: -0.2vw;
     line-height: 2.6vw;
 
     float: left;
@@ -25,9 +25,9 @@
 }
 
 .headerCategory {
-    font-family: FuturaPTHeavyOblique;
+    font-family: FuturaHeavyOblique;
     font-size: 1.6vw;
-    letter-spacing: -0.1vw;
+    letter-spacing: -0.08vw;
 
     float: left;
     margin-right: 2vw;
@@ -42,10 +42,10 @@
 }
 
 #featuredTitle {
-    font-family: FuturaPTHeavyOblique;
+    font-family: FuturaHeavyOblique;
     color: #FFFFFF;
     font-size: 8vw;
-    letter-spacing: -0.4vw;
+    letter-spacing: -0.2vw;
     line-height: 6vw;
 
     padding-left: 5vw;
@@ -53,10 +53,10 @@
 }
 
 #featuredSubtitle {
-    font-family: FuturaPTBookOblique;
+    font-family: FuturaOblique;
     color: #FFFFFF;
     font-size: 2vw;
-    letter-spacing: -0.1vw;
+    letter-spacing: -0.01vw;
     line-height: 6vw;
 
     padding-left: 5vw;

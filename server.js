@@ -24,11 +24,11 @@ app.use(bodyParser.json());
 app.use(express.static(path.join(__dirname, "/public")));
 
 const httpServer = http.createServer(app);
-const httpsServer = https.createServer(credentials, app);
+//const httpsServer = https.createServer(credentials, app);
 
 httpServer.listen(PORT_HTTP, function() {
 	console.log("HTTP server listening on port " + PORT_HTTP);
 });
-httpsServer.listen(PORT_HTTPS, function() {
+/*httpsServer.listen(PORT_HTTPS, function() {
 	console.log("HTTPS server listening on port " + PORT_HTTPS);
-});
+});*/

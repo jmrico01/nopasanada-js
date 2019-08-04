@@ -1,21 +1,43 @@
+/*
 @font-face {
-    font-family: FuturaPTExtraBold;
+    font-family: FuturaExtraBold;
     src: url("../futura-pt/FuturaPTExtraBold.otf") format("opentype");
 }
 
 @font-face {
-    font-family: FuturaPTHeavy;
+    font-family: FuturaHeavy;
     src: url("../futura-pt/FuturaPTHeavy.otf") format("opentype");
 }
 
 @font-face {
-    font-family: FuturaPTHeavyOblique;
+    font-family: FuturaHeavyOblique;
     src: url("../futura-pt/FuturaPTHeavyOblique.otf") format("opentype");
 }
 
 @font-face {
-    font-family: FuturaPTBookOblique;
+    font-family: FuturaBookOblique;
     src: url("../futura-pt/FuturaPTBookOblique.otf") format("opentype");
+}
+*/
+
+@font-face {
+    font-family: FuturaExtraBold;
+    src: url("../futura-lt/FuturaLT-ExtraBold.ttf") format("opentype");
+}
+
+@font-face {
+    font-family: FuturaHeavy;
+    src: url("../futura-lt/FuturaLT-Heavy.ttf") format("opentype");
+}
+
+@font-face {
+    font-family: FuturaHeavyOblique;
+    src: url("../futura-lt/FuturaLT-HeavyOblique.ttf") format("opentype");
+}
+
+@font-face {
+    font-family: FuturaOblique;
+    src: url("../futura-lt/FuturaLT-Oblique.ttf") format("opentype");
 }
 
 html, body {
