@@ -6,8 +6,8 @@ const https = require("https");
 const path = require("path");
 const util = require("util");
 
-const PORT_HTTP = 7070;
-const PORT_HTTPS = 7171;
+const PORT_HTTP = 6060;
+const PORT_HTTPS = 6161;
 const app = express();
 
 const privateKey = fs.readFileSync("./keys/privkey.pem", "utf8");

@@ -1,0 +1,63 @@
+#website {
+    padding: 4vw;
+}
+
+#headerContainer {
+    width: 100%;
+    height: 8vw;
+}
+
+#headerLogoContainer {
+    font-family: FuturaPTExtraBold;
+    font-size: 3vw;
+    letter-spacing: -0.22vw;
+    line-height: 2.6vw;
+
+    float: left;
+    margin-right: 4.5vw;
+}
+
+#headerLogoContainer a {
+    color: inherit;
+}
+
+#headerCategories {
+}
+
+.headerCategory {
+    font-family: FuturaPTHeavyOblique;
+    font-size: 1.6vw;
+    letter-spacing: -0.1vw;
+
+    float: left;
+    margin-right: 2vw;
+    margin-top: 0vw;
+}
+
+#featuredContainer {
+    background-color: #CCCCCC;
+
+    width: 100%;
+    height: 35vw;
+}
+
+#featuredTitle {
+    font-family: FuturaPTHeavyOblique;
+    color: #FFFFFF;
+    font-size: 8vw;
+    letter-spacing: -0.4vw;
+    line-height: 6vw;
+
+    padding-left: 5vw;
+    padding-top: 5vw;
+}
+
+#featuredSubtitle {
+    font-family: FuturaPTBookOblique;
+    color: #FFFFFF;
+    font-size: 2vw;
+    letter-spacing: -0.1vw;
+    line-height: 6vw;
+
+    padding-left: 5vw;
+}
