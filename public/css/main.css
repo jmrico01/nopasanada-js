@@ -5,6 +5,8 @@
     padding-bottom: 3.6vw;
 }
 
+/* HEADER ======================================== */
+
 #headerContainer {
     width: 100%;
     height: 6.7vw;
@@ -55,6 +57,19 @@
     margin-right: 2.5vw;
     margin-top: 0vw;
 }
+
+#headerLogoImageRight {
+    width: 3.7vw;
+    height: 3.75vw;
+
+    float: right;
+}
+#headerLogoImageRight img {
+    width: 100%;
+    height: 100%;
+}
+
+/* CONTENT ======================================== */
 
 #featuredContainer {
     background-color: #d7d7d7;
