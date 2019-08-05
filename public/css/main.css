@@ -7,28 +7,29 @@
 
 /* HEADER ======================================== */
 
-#headerContainer {
+#header {
     width: 100%;
     height: 6.7vw;
 
     color: #d7d7d7;
+    margin: auto;
 }
 
-#headerLogoContainer {
+#headerLogo {
     float: left;
-    margin-top: 0.3vw;
-    margin-right: 3vw;
+    width: 15vw;
+    height: 100%;
+    margin: auto;
+    margin-top: 0.2vw;
 }
-
-#headerLogoContainer a {
+#headerLogo a {
     color: inherit;
 }
 
 #headerLogoImage {
+    float: left;
     width: 3.7vw;
     height: 3.75vw;
-
-    float: left;
 }
 #headerLogoImage img {
     width: 100%;
@@ -46,16 +47,37 @@
 }
 
 #headerCategories {
+    float: left;
+    width: 60vw;
+    height: 2vw; /* headerCategory font-size ish */
+    margin-left: 2vw;
 }
 
 .headerCategory {
     font-family: FuturaHeavyOblique;
     font-size: 1.3vw;
-    letter-spacing: -0.06vw;
+    letter-spacing: -0.04vw;
 
     float: left;
     margin-right: 2.5vw;
-    margin-top: 0vw;
+}
+
+#headerSubcategories {
+    float: left;
+    width: 60vw;
+    height: 2vw; /* headerSubcategory font-size ish */
+    margin-left: 2vw;
+    margin-top: 0.5vw;
+}
+
+.headerSubcategory {
+    font-family: FuturaHeavyOblique;
+    font-size: 1.3vw;
+    letter-spacing: -0.04vw;
+    color: #D03A27;
+
+    float: left;
+    margin-right: 2.5vw;
 }
 
 #headerLogoImageRight {
@@ -63,6 +85,10 @@
     height: 3.75vw;
 
     float: right;
+    margin-top: 0.2vw; /* headerLogo margin-top */
+}
+#headerLogoImageRight a {
+    color: inherit;
 }
 #headerLogoImageRight img {
     width: 100%;

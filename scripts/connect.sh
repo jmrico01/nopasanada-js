@@ -1,1 +1,1 @@
-ssh -i "keys/MasterWebServer.pem" ubuntu@kapricornmedia.com
+ssh -i "keys/MasterWebServer.pem" ubuntu@nopasanada.com

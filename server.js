@@ -3,12 +3,38 @@ const express = require("express");
 const fs = require("fs");
 const http = require("http");
 const https = require("https");
+const mysql = require("mysql");
 const path = require("path");
 const util = require("util");
 
 const PORT_HTTP = 6060;
 const PORT_HTTPS = 6161;
 const app = express();
+
+const dbConnection = mysql.createConnection({
+    host: "localhost",
+    user: "demouser",
+    password: "password",
+    database: "nopasanada"
+});
+
+dbConnection.connect(function(error) {
+    if (error) {
+        console.log(error);
+    }
+
+    console.log("Connected to database");
+});
+
+dbConnection.query("SELECT * FROM raw", function(error, results, fields) {
+    if (error) {
+        console.log(error);
+    }
+
+    console.log("query results:");
+    console.log(results);
+    // console.log(fields);
+});
 
 const privateKey = fs.readFileSync("./keys/privkey.pem", "utf8");
 const cert = fs.readFileSync("./keys/cert.pem", "utf8");
