@@ -20,7 +20,7 @@ const dbConnection = mysql.createConnection({
 
 dbConnection.connect(function(error) {
     if (error) {
-        console.log(error);
+        console.error(error);
     }
 
     console.log("Connected to database");
@@ -28,7 +28,7 @@ dbConnection.connect(function(error) {
 
 dbConnection.query("SELECT * FROM raw", function(error, results, fields) {
     if (error) {
-        console.log(error);
+        console.error(error);
     }
 
     console.log("query results:");

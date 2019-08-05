@@ -2,7 +2,7 @@
     padding-left: 4.5vw;
     padding-right: 4.5vw;
     padding-top: 3.2vw;
-    padding-bottom: 3.6vw;
+    padding-bottom: 3.2vw;
 }
 
 /* HEADER ======================================== */
@@ -48,7 +48,7 @@
 
 #headerCategories {
     float: left;
-    width: 60vw;
+    width: 68vw;
     height: 2vw; /* headerCategory font-size ish */
     margin-left: 2vw;
 }
@@ -64,10 +64,12 @@
 
 #headerSubcategories {
     float: left;
-    width: 60vw;
+    width: 68vw; /* headerCategories width */
     height: 2vw; /* headerSubcategory font-size ish */
     margin-left: 2vw;
     margin-top: 0.5vw;
+
+    visibility: hidden;
 }
 
 .headerSubcategory {
@@ -96,6 +98,9 @@
 }
 
 /* CONTENT ======================================== */
+
+#content {
+}
 
 #featuredContainer {
     background-color: #d7d7d7;
