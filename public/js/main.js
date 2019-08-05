@@ -32,14 +32,13 @@ window.onload = function() {
         $headerSubcategories.css("visibility", "hidden");
     });
 
-    let subcategoriesWidth = $headerSubcategories.width();
-    let subcategoriesOffsetX = parseInt($headerSubcategories.css("margin-left"), 10);
-
     $(".headerCategory").mouseenter(function(event) {
         let $target = $(event.target);
         let targetOffsetX = $target.offset().left - $headerCategories.offset().left;
-        $headerSubcategories.css("margin-left", subcategoriesOffsetX + targetOffsetX);
-        $headerSubcategories.width(subcategoriesWidth - targetOffsetX);
+        let baseOffsetX = parseInt($headerCategories.css("margin-left"), 10);
+        let baseWidth = $headerCategories.width();
+        $headerSubcategories.css("margin-left", baseOffsetX + targetOffsetX);
+        $headerSubcategories.width(baseWidth - targetOffsetX);
         $headerSubcategories.css("visibility", "visible");
     });
 
