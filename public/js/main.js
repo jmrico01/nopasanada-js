@@ -11,7 +11,7 @@ function OnResize() {
     let headerHeight = $("#header").height();
     let clientHeight = document.documentElement.clientHeight;
     let contentHeight = clientHeight - paddingTop - paddingBottom - headerHeight - 5;
-    let maxContentHeight = document.documentElement.clientWidth / 1.85;
+    let maxContentHeight = document.documentElement.clientWidth / 2.4;
     if (contentHeight >= maxContentHeight) {
         contentHeight = maxContentHeight;
     }
