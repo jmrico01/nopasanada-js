@@ -22,9 +22,9 @@
     width: 100%;
     margin: 0;
     position: absolute;
-    top: 60%;
-    -ms-transform: translateY(-60%);
-    transform: translateY(-60%);
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
 }
 
 #headerLogo {
@@ -88,19 +88,3 @@
     float: left;
     margin-right: 2.5vw; /* .headerCategory margin-right */
 }
-
-/*
-#headerLogoImageRight {
-    width: 3.7vw;
-    height: 3.75vw;
-
-    float: right;
-}
-#headerLogoImageRight a {
-    color: inherit;
-}
-#headerLogoImageRight img {
-    width: 100%;
-    height: 100%;
-}
-*/
