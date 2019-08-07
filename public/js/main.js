@@ -7,6 +7,8 @@ function OnResize() {
     $(".screen").css("padding-top", headerHeight);
     $(".screen").css("padding-bottom", headerHeight);
 
+    $("#screen2").css("padding-top", 0);
+
     let aspect = document.documentElement.clientWidth / document.documentElement.clientHeight;
     if (aspect < 1.45 && !warned) {
         warned = true;
