@@ -1,25 +1,31 @@
 "use strict";
 
+let warned = false;
+
 function PixelsToVW(pixels) {
     return 100.0 * pixels / document.documentElement.clientWidth;
 }
 
 function OnResize() {
-    let $website = $("#website");
-    let paddingTop = parseInt($website.css("padding-top"), 10);
-    let paddingBottom = parseInt($website.css("padding-bottom"), 10);
     let headerHeight = $("#header").height();
-    let clientHeight = document.documentElement.clientHeight;
-    let contentHeight = clientHeight - paddingTop - paddingBottom - headerHeight - 5;
-    let maxContentHeight = document.documentElement.clientWidth / 2.4;
-    if (contentHeight >= maxContentHeight) {
-        contentHeight = maxContentHeight;
+    $(".screen").css("padding-top", headerHeight);
+    $(".screen").css("padding-bottom", headerHeight);
+
+    let aspect = document.documentElement.clientWidth / document.documentElement.clientHeight;
+    if (aspect < 1.45 && !warned) {
+        warned = true;
+        setTimeout(function() {
+            alert("WARNING\n\n"
+                + "You are viewing the website at a thin aspect ratio (less than 1.5).\n"
+                + "Layout and spacing will be messed up until we explicitly design\n"
+                + "for these taller formats (tall windows / mobile)");
+        }, 0);
     }
-    $("#featuredContainer").height(contentHeight);
 }
 
 window.onload = function() {
     OnResize();
+    $("#content").css("visibility", "visible");
 
     let $header = $("#header");
     let $headerCategories = $("#headerCategories");

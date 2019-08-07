@@ -1,18 +1,30 @@
 #website {
     padding-left: 4.5vw;
     padding-right: 4.5vw;
-    padding-top: 3vw;
-    padding-bottom: 3vw;
+    padding-top: 0;
+    padding-bottom: 0;
 }
 
 /* HEADER ======================================== */
 
 #header {
+    position: fixed;
     width: 100%;
-    height: 6vw;
+    height: 15vh;
+    max-height: 10vw;
+    z-index: 1;
 
-    color: #d7d7d7;
+    color: #231F20;
     margin: auto;
+}
+
+#headerVerticalCenter {
+    width: 100%;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
 }
 
 #headerLogo {
@@ -20,7 +32,6 @@
     width: 12vw;
     height: 100%;
     margin: auto;
-    /*margin-top: 0.2vw;*/
 }
 #headerLogo a {
     color: inherit;
@@ -99,20 +110,44 @@
 /* CONTENT ======================================== */
 
 #content {
+    visibility: hidden; /* hide wonky stuff until page loads */
+}
+
+.screen {
+    height: 70vh;
+    max-height: 46vw;
+    padding-top: 0;    /* match header, set by JS */
+    padding-bottom: 0; /* match header, set by JS */
 }
 
 #featuredContainer {
     background-color: #d7d7d7;
-    background-image: url('../images/temp-content.png');
+    background-image: url('../images/temp-content.jpg');
+    background-repeat: no-repeat;
     background-size: cover;
+    color: #ffffff;
+    -webkit-filter: brightness(100%);
+    -webkit-transition: all 0.2s ease;
+    -moz-transition: all 0.2s ease;
+    -o-transition: all 0.2s ease;
+    -ms-transition: all 0.2s ease;
+    transition: all 0.2s ease;
 
     width: 100%;
-    height: 42vw;
+    height: 100%;
+}
+
+#featuredContainer:hover {
+    -webkit-filter: brightness(90%);
+    -webkit-transition: all 0.2s ease;
+    -moz-transition: all 0.2s ease;
+    -o-transition: all 0.2s ease;
+    -ms-transition: all 0.2s ease;
+    transition: all 0.2s ease;
 }
 
 #featuredTitle {
     font-family: FuturaHeavyOblique;
-    color: #FFFFFF;
     font-size: 8.9vw;
     letter-spacing: -0.1vw;
     line-height: 7.2vw;
@@ -123,7 +158,6 @@
 
 #featuredSubtitle {
     font-family: FuturaOblique;
-    color: #FFFFFF;
     font-size: 2.1vw;
     letter-spacing: 0vw;
     line-height: 2.4vw;
@@ -139,15 +173,12 @@
     letter-spacing: -0.1vw;
 
     width: 100%;
-    margin-top: 6vw;
-    margin-bottom: 3vw;
+    height: 10%;
 }
 
 #contentList {
     width: 100%;
-    height: 45vw;
-    margin-top: 3vw;
-
+    height: 90%;
     margin: auto;
 }
 
@@ -155,6 +186,21 @@
     float: left;
     width: 24.25%;
     height: 100%;
+    -webkit-filter: brightness(100%);
+    -webkit-transition: all 0.2s ease;
+    -moz-transition: all 0.2s ease;
+    -o-transition: all 0.2s ease;
+    -ms-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+}
+
+.entry:hover {
+    -webkit-filter: brightness(90%);
+    -webkit-transition: all 0.2s ease;
+    -moz-transition: all 0.2s ease;
+    -o-transition: all 0.2s ease;
+    -ms-transition: all 0.2s ease;
+    transition: all 0.2s ease;
 }
 
 .entryImage {
@@ -164,14 +210,20 @@
     height: 90%;
 }
 
+.entryImage img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
 .entryName {
     font-family: FuturaHeavyOblique;
     color: #d7d7d7;
     font-size: 1.86vw;
 
     width: 100%;
-    height: 4%;
-    margin-top: 6%;
+    height: 5%;
+    margin-top: 5%;
 }
 
 .entrySpace {
