@@ -4,8 +4,14 @@ let warned = false;
 
 function OnResize() {
     let headerHeight = $("#header").height();
-    $(".screen").css("padding-top", headerHeight);
-    $(".screen").css("padding-bottom", headerHeight);
+    $(".screen").each(function(index) {
+        let $this = $(this);
+        let thisHeight = $this.height();
+        let topSpacing = headerHeight;
+        let bottomSpacing = document.documentElement.clientHeight - thisHeight - topSpacing;
+        $this.css("padding-top", topSpacing);
+        $this.css("padding-bottom", bottomSpacing);
+    })
 
     $("#screen2").css("padding-top", 0);
 
