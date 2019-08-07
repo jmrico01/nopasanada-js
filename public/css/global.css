@@ -40,6 +40,11 @@
     src: url("../futura-lt/FuturaLT-Oblique.ttf") format("opentype");
 }
 
+@font-face {
+    font-family: FuturaRegular;
+    src: url("../futura-lt/FuturaLT.ttf") format("opentype");
+}
+
 html, body {
     margin: 0;
     padding: 0;
