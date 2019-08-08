@@ -26,6 +26,11 @@
 }
 
 @font-face {
+    font-family: FuturaPTHeavy;
+    src: url("../futura-pt/FuturaPTHeavy.otf") format("opentype");
+}
+
+@font-face {
     font-family: FuturaHeavy;
     src: url("../futura-lt/FuturaLT-Heavy.ttf") format("opentype");
 }

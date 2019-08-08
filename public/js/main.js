@@ -43,10 +43,11 @@ function Shuffle(array)
 
 function SetFeaturedEntry(entry)
 {
-    let imagePath = "../images/" + entry.image;
-    $("#featuredContainer").css("background-image", "url(\"" + imagePath + "\")");
     $("#featuredTitle").html(entry.title);
     $("#featuredSubtitle").html(entry.subtitle);
+
+    let imagePath = "../images/" + entry.image;
+    $("#featuredContainer").css("background-image", "url(\"" + imagePath + "\")");
 }
 
 function HandleHash(hash)
