@@ -41,50 +41,41 @@
 
 #title {
     font-family: FuturaHeavy;
-    font-size: 72pt;
-    letter-spacing: -0.02em;
-    line-height: 72pt;
+    font-size: 5.3vw;
+    letter-spacing: -0.1vw;
+    line-height: 5.3vw;
 
-    padding-bottom: 40pt;
+    padding-bottom: 3.53vw;
 }
 
 #subtitle {
     font-family: FuturaHeavy;
-    font-size: 36pt;
-    letter-spacing: -0.02em;
-    line-height: 42pt;
+    font-size: 2.4vw;
+    letter-spacing: -0.05vw;
+    line-height: 2.8vw;
 
-    padding-bottom: 30pt;
+    padding-bottom: 2.65vw;
 }
 
 #author {
     font-family: FuturaOblique;
-    font-size: 16pt;
+    font-size: 1.2vw;
 }
 
 hr {
-    margin-top: 30pt;
-    margin-bottom: 30pt;
-}
-
-#titleSeparator {
-    font-family: FuturaHeavy;
-    font-size: 72pt;
-
-    width: 100%;
-    height: 32pt;
-    text-align: center;
+    margin-top: 2.65vw;
+    margin-bottom: 2.65vw;
 }
 
 #article {
     font-family: FuturaRegular;
-    font-size: 16pt;
+    font-size: 1.2vw;
 }
 
 #article img {
     width: 100%;
-    margin-top: 48pt;
-    margin-bottom: 24pt;
+    margin-top: 2.65vw;
+    margin-bottom: 2vw;
 }
 
 #article a {
@@ -95,6 +86,7 @@ hr {
 }
 
 .caption {
-    font-size: 14pt;
+    font-size: 1.05vw;
+    color: #757374;
     margin-bottom: 40pt;
 }

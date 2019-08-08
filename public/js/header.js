@@ -1,8 +1,11 @@
 function SetupHeader()
 {
+    let subcategoriesTemplate = $("#headerSubcategoriesTemplate").html();
+    $("#headerSubcategoriesTemplate").remove();
+
     let $header = $("#header");
     let $headerCategories = $("#headerCategories");
-    let $headerSubcategories = $("#headerSubcategories");
+    let $headerSubcategories = $(".headerSubcategories");
     $headerSubcategories.hide();
 
     $("#headerLogo").mouseenter(function(event) {
