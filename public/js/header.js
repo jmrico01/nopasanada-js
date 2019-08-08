@@ -3,12 +3,10 @@ function SetupHeader()
     let $header = $("#header");
     let $headerCategories = $("#headerCategories");
     let $headerSubcategories = $("#headerSubcategories");
+    $headerSubcategories.hide();
 
     $("#headerLogo").mouseenter(function(event) {
-        $headerSubcategories.css("visibility", "hidden");
-    });
-    $("#headerLogoImageRight").mouseenter(function(event) {
-        $headerSubcategories.css("visibility", "hidden");
+        $headerSubcategories.fadeOut(400);
     });
 
     $(".headerCategory").mouseenter(function(event) {
@@ -18,10 +16,10 @@ function SetupHeader()
         let baseWidth = $headerCategories.width();
         $headerSubcategories.css("margin-left", baseOffsetX + targetOffsetX);
         $headerSubcategories.width(baseWidth - targetOffsetX);
-        $headerSubcategories.css("visibility", "visible");
+        $headerSubcategories.fadeIn(400);
     });
 
     $header.mouseleave(function(event) {
-        $headerSubcategories.css("visibility", "hidden");
+        $headerSubcategories.fadeOut(400);
     });
 }

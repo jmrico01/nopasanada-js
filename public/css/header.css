@@ -76,8 +76,6 @@
     width: 75vw; /* #headerCategories width */
     margin-left: 1.2vw;
     margin-top: 1.2vw;
-
-    visibility: hidden;
 }
 
 .headerSubcategory {
