@@ -13,7 +13,7 @@ const ENTRIES_FEATURED = [
     },
     {
         image: "featured3.jpg",
-        title: "magpie jay<br>sessions",
+        title: "magpie jay<br>on tour",
         subtitle: "SUBTITLE > CONTENT<br>BRIEF."
     },
 ];
@@ -52,6 +52,7 @@ function SetFeaturedEntry(entry)
 function HandleHash(hash)
 {
     let entryIndex = 0;
+    let posterNums = [1, 2, 3, 4, 5, 6, 7];
     if (hash === "") {
         entryIndex = 2;
     }
@@ -73,16 +74,26 @@ function HandleHash(hash)
     else if (hash === "#moda") {
         entryIndex = 2;
     }
+    else if (hash === "#magpiejay") {
+        entryIndex = 2;
+        posterNums = null;
+    }
 
     SetFeaturedEntry(ENTRIES_FEATURED[entryIndex]);
 
-    let posterNums = [1, 2, 3, 4, 5, 6, 7];
+    if (posterNums === null) {
+        $("#screen2").hide();
+        return;
+    }
+
     Shuffle(posterNums);
     $(".entryPoster").each(function(index) {
         let $this = $(this);
         let posterImagePath = "images/poster" + posterNums[index] + ".png";
         $this.attr("src", posterImagePath);
     });
+
+    $("#screen2").show();
 }
 
 window.onhashchange = function() {

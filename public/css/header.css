@@ -71,11 +71,39 @@
     margin-right: 2.5vw;
 }
 
-.headerSubcategories {
+.headerCategory a {
+    display: block;
+    height: 100%;
+}
+
+#headerSubcategoriesContainer {
     float: left;
     width: 75vw; /* #headerCategories width */
     margin-left: 1.2vw;
     margin-top: 1.2vw;
+}
+
+.headerSubcategories {
+    position: absolute;
+}
+
+#subcategories-noticias {
+    margin-left: 0vw;
+}
+#subcategories-deportemoto {
+    margin-left: 6.5vw;
+}
+#subcategories-arteycultura {
+    margin-left: 15.8vw;
+}
+#subcategories-politica {
+    margin-left: 25vw;
+}
+#subcategories-comida {
+    margin-left: 31.2vw;
+}
+#subcategories-moda {
+    margin-left: 37.2vw;
 }
 
 .headerSubcategory {
