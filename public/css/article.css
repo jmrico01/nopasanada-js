@@ -28,6 +28,11 @@
     height: 100%;
 }
 
+#titleImageSeparator {
+    margin-top: 7.5vh;
+    margin-bottom: 7.5vh;
+}
+
 #articleContainer {
     width: 50%;
     padding-left: 25%;
