@@ -39,10 +39,12 @@
     font-family: FuturaHeavyOblique;
     font-size: 8.9vw;
     letter-spacing: -0.1vw;
-    line-height: 7.8vw;
+    /*line-height: 7.8vw;*/
+    line-height: 10vw;
 
     padding-left: 7.2vw;
-    padding-top: 6.8vw;
+    /*padding-top: 6.8vw;*/
+    padding-top: 5vw;
 }
 
 #featuredSubtitle {
@@ -53,16 +55,6 @@
 
     padding-left: 7.4vw;
     padding-top: 1.8vw;
-}
-
-#contentTitle {
-    font-family: FuturaHeavyOblique;
-    color: #231F20;
-    font-size: 3.14vw;
-    letter-spacing: -0.1vw;
-
-    width: 100%;
-    height: 15%;
 }
 
 #contentList {
