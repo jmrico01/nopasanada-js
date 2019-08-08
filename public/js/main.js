@@ -1,6 +1,97 @@
 "use strict";
 
+const ENTRIES_FEATURED = [
+    {
+        image: "featured1.jpg",
+        title: "tragicomedia<br>van jalados",
+        subtitle: "SUBTITLE > CONTENT<br>BRIEF."
+    },
+    {
+        image: "featured2.jpg",
+        title: "quien dijo<br>motos?",
+        subtitle: "SUBTITLE > CONTENT<br>BRIEF."
+    },
+    {
+        image: "featured3.jpg",
+        title: "magpie jay<br>sessions",
+        subtitle: "SUBTITLE > CONTENT<br>BRIEF."
+    },
+];
+
+let prevHash = null;
 let warned = false;
+
+function Shuffle(array)
+{
+    let currentIndex = array.length;
+    let temporaryValue, randomIndex;
+
+    // While there remain elements to shuffle...
+    while (0 !== currentIndex) {
+        // Pick a remaining element...
+        randomIndex = Math.floor(Math.random() * currentIndex);
+        currentIndex -= 1;
+
+        // And swap it with the current element.
+        temporaryValue = array[currentIndex];
+        array[currentIndex] = array[randomIndex];
+        array[randomIndex] = temporaryValue;
+    }
+
+    return array;
+};
+
+function SetFeaturedEntry(entry)
+{
+    let imagePath = "../images/" + entry.image;
+    $("#featuredContainer").css("background-image", "url(\"" + imagePath + "\")");
+    $("#featuredTitle").html(entry.title);
+    $("#featuredSubtitle").html(entry.subtitle);
+}
+
+function HandleHash(hash)
+{
+    let entryIndex = 0;
+    if (hash === "") {
+        entryIndex = 2;
+    }
+    else if (hash === "#noticias") {
+        entryIndex = 0;
+    }
+    else if (hash === "#deportemoto") {
+        entryIndex = 1;
+    }
+    else if (hash === "#arteycultura") {
+        entryIndex = 2;
+    }
+    else if (hash === "#politica") {
+        entryIndex = 0;
+    }
+    else if (hash === "#comida") {
+        entryIndex = 1;
+    }
+    else if (hash === "#moda") {
+        entryIndex = 2;
+    }
+
+    SetFeaturedEntry(ENTRIES_FEATURED[entryIndex]);
+
+    let posterNums = [1, 2, 3, 4, 5, 6, 7];
+    Shuffle(posterNums);
+    $(".entryPoster").each(function(index) {
+        let $this = $(this);
+        let posterImagePath = "images/poster" + posterNums[index] + ".png";
+        $this.attr("src", posterImagePath);
+    });
+}
+
+window.onhashchange = function() {
+    let hash = window.location.hash;
+    if (hash !== prevHash) {
+        prevHash = hash;
+        HandleHash(hash);
+    }
+};
 
 function OnResize() {
     let headerHeight = $("#header").height();
@@ -29,6 +120,7 @@ function OnResize() {
 
 window.onload = function() {
     OnResize();
+    HandleHash(window.location.hash);
     $("#content").css("visibility", "visible");
 
     SetupHeader();
