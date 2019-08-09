@@ -71,12 +71,12 @@ body {
 }
 
 #introSubtitle {
-    font-family: FuturaPTBook;
+    font-family: FuturaPTDemi;
     text-align: center;
-    font-size: 1.4vw;
-    letter-spacing: 0.1vw;
+    font-size: 1.5vw;
+    letter-spacing: 0.05vw;
 
-    margin-top: 1.7vw;
+    margin-top: 1vw;
 }
 
 #introText {
