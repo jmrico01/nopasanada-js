@@ -6,7 +6,6 @@ function SetupHeader()
     let $headerSubcategories = $(".headerSubcategories");
     $headerSubcategories.hide();
 
-    /*
     $("#headerLogo").mouseenter(function(event) {
         $headerSubcategories.stop().fadeOut(FADEOUT_TIME_MS);
     });
@@ -36,5 +35,4 @@ function SetupHeader()
     $("#header").mouseleave(function(event) {
         $headerSubcategories.stop().fadeOut(FADEOUT_TIME_MS);
     });
-    */
 }

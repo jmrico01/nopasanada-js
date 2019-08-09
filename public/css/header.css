@@ -29,7 +29,7 @@
 
 #headerLogo {
     float: left;
-    width: 20vw;
+    width: 18vw;
     height: 100%;
     margin: auto;
 }
@@ -48,18 +48,18 @@
 }
 
 #headerLogoText {
-    font-family: FuturaPTHeavy;
+    font-family: FuturaExtraBold;
     font-size: 2.5vw;
-    letter-spacing: 0.11vw;
-    /*line-height: 2vw;*/
+    letter-spacing: -0.04vw;
+    line-height: 2vw;
 
     float: left;
+    margin-left: 0.8vw;
 }
 
 #headerCategories {
-    float: right;
-    text-align: right;
-    margin-top: 0.8vw;
+    float: left;
+    margin-left: 2vw;
 }
 
 .headerCategory {
@@ -68,7 +68,7 @@
     letter-spacing: -0.02vw;
 
     float: left;
-    margin-left: 2.5vw;
+    margin-right: 2.5vw;
 }
 
 .headerCategory a {
@@ -78,8 +78,8 @@
 
 #headerSubcategoriesContainer {
     float: left;
-    width: 75vw; /* #headerCategories width */
-    margin-left: 1.2vw;
+    width: 60vw; /* #headerCategories width */
+    margin-left: 2vw;
     margin-top: 1.2vw;
 }
 

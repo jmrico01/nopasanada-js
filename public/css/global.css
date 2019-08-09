@@ -1,25 +1,3 @@
-/*
-@font-face {
-    font-family: FuturaExtraBold;
-    src: url("../futura-pt/FuturaPTExtraBold.otf") format("opentype");
-}
-
-@font-face {
-    font-family: FuturaHeavy;
-    src: url("../futura-pt/FuturaPTHeavy.otf") format("opentype");
-}
-
-@font-face {
-    font-family: FuturaHeavyOblique;
-    src: url("../futura-pt/FuturaPTHeavyOblique.otf") format("opentype");
-}
-
-@font-face {
-    font-family: FuturaBookOblique;
-    src: url("../futura-pt/FuturaPTBookOblique.otf") format("opentype");
-}
-*/
-/*
 @font-face {
     font-family: FuturaExtraBold;
     src: url("../futura-lt/FuturaLT-ExtraBold.ttf") format("opentype");
@@ -49,7 +27,8 @@
     font-family: FuturaRegular;
     src: url("../futura-lt/FuturaLT.ttf") format("opentype");
 }
-*/
+
+/*
 @font-face {
     font-family: FuturaExtraBold;
     src: url("../futura-pt/FuturaPTExtraBold.otf") format("opentype");
@@ -79,6 +58,7 @@
     font-family: FuturaRegular;
     src: url("../futura-pt/FuturaPTBook.otf") format("opentype");
 }
+*/
 
 html, body {
     margin: 0;
