@@ -43,10 +43,10 @@
 }
 
 #featuredTitle {
-    font-family: FuturaPTHeavyItalic;
+    font-family: FuturaPTDemiItalic;
     font-size: 11vw;
     letter-spacing: -0.6vw;
-    line-height: 7.8vw;
+    line-height: 9vw;
 }
 
 #featuredSubtitle {
@@ -56,19 +56,21 @@
     line-height: 2.4vw;
 
     padding-top: 4vw;
+    display: none;
 }
 
 #featuredLine {
     width: 100%;
-    margin-top: 4vw;
-    margin-bottom: 1.5vw;
+    /*margin-top: 4vw;*/
+    margin-top: 3.5vw;
+    margin-bottom: 0.8vw;
     border-bottom: 3px solid #ffffff;
 }
 
 #featuredText {
     font-family: FuturaPTMedium;
-    font-size: 1.8vw;
-    letter-spacing: -0.04vw;
+    font-size: 1.1vw;
+    letter-spacing: -0.02vw;
 
     overflow: auto;
 }
@@ -79,11 +81,38 @@
 }
 #featuredText2 {
     float: left;
-    width: 47%;
+    width: 54%;
 }
 #featuredText3 {
     float: left;
-    width: 23%;
+    width: 16%;
+}
+
+#footer {
+    width: 100%;
+    margin-top: 1vw;
+
+    color: #2a2a2a;
+    font-family: FuturaPTBook;
+    font-size: 0.9vw;
+}
+
+#footerLine {
+    margin-bottom: 0.8vw;
+    border-bottom: 3px solid #2a2a2a;
+}
+
+#footerText1 {
+    float: left;
+    width: 25.5%;
+    margin-left: 7.5%;
+}
+#footerText2 {
+    float: left;
+    width: 46%;
+}
+#footerText3 {
+    float: left;
 }
 
 #contentList {

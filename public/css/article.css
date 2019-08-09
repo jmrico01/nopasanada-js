@@ -29,9 +29,11 @@
 }
 
 #titleImageSeparator {
-    border-bottom: 1px solid #231F20;
-    margin-top: 5vh;
+    border-bottom: 3px solid #231F20;
+    /*margin-top: 5vh;*/
+    margin-top: 1.6vw;
     margin-bottom: 5vh;
+    visibility:hidden;
 }
 
 #articleContainer {
@@ -72,6 +74,8 @@ hr {
 #article {
     font-family: FuturaPTBook;
     font-size: 1.2vw;
+    letter-spacing: 0.01vw;
+    line-height: 1.8vw;
 }
 
 #article img {

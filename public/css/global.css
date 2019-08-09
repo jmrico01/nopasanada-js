@@ -18,6 +18,10 @@ STANDARD COLORS
     src: url("../futura-pt/FuturaPTHeavyOblique.otf") format("opentype");
 }
 @font-face {
+    font-family: FuturaPTDemi;
+    src: url("../futura-pt/FuturaPTDemi.otf") format("opentype");
+}
+@font-face {
     font-family: FuturaPTDemiItalic;
     src: url("../futura-pt/FuturaPTDemiOblique.otf") format("opentype");
 }

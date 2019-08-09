@@ -7,23 +7,23 @@ const ENTRIES_FEATURED = {
         subtitle: "Diego Delfino.",
         text1: "CONQUISTA SESSIONS.<br>TRIGGER.**",
         text2: "WATCH<br>LIVE DOCUMENTARY",
-        text3: "A NOPASANADA FEA-<br>TURE"
+        text3: "A NOPASANADA FEATURE"
     },
     "#deportemoto": {
         image: "featured-new.png",
-        title: "motos.*",
+        title: "wheels,<br>metal.",
         subtitle: "Los Sadistas.",
         text1: "CONQUISTA SESSIONS.<br>TRIGGER.**",
         text2: "WATCH<br>LIVE DOCUMENTARY",
-        text3: "A NOPASANADA FEA-<br>TURE"
+        text3: "A NOPASANADA FEATURE"
     },
     "#arteycultura": {
-        image: "featured-new.png",
-        title: "on tour.*",
-        subtitle: "Magpie Jay.",
+        image: "featured4.png",
+        title: "cows &<br>landscapes.*",
+        subtitle: "Los Sadistas.",
         text1: "CONQUISTA SESSIONS.<br>TRIGGER.**",
         text2: "WATCH<br>LIVE DOCUMENTARY",
-        text3: "A NOPASANADA FEA-<br>TURE"
+        text3: "A NOPASANADA FEATURE"
     },
     "#politica": {
         image: "featured-new.png",
@@ -31,7 +31,7 @@ const ENTRIES_FEATURED = {
         subtitle: "No Le Hablo.",
         text1: "CONQUISTA SESSIONS.<br>TRIGGER.**",
         text2: "WATCH<br>LIVE DOCUMENTARY",
-        text3: "A NOPASANADA FEA-<br>TURE"
+        text3: "A NOPASANADA FEATURE"
     },
     "#comida": {
         image: "featured-new.png",
@@ -39,7 +39,7 @@ const ENTRIES_FEATURED = {
         subtitle: "Las Delicias.",
         text1: "CONQUISTA SESSIONS.<br>TRIGGER.**",
         text2: "WATCH<br>LIVE DOCUMENTARY",
-        text3: "A NOPASANADA FEA-<br>TURE"
+        text3: "A NOPASANADA FEATURE"
     },
     "#moda": {
         image: "featured-new.png",
@@ -47,7 +47,7 @@ const ENTRIES_FEATURED = {
         subtitle: "Quien es esa Rica?",
         text1: "CONQUISTA SESSIONS.<br>TRIGGER.**",
         text2: "WATCH<br>LIVE DOCUMENTARY",
-        text3: "A NOPASANADA FEA-<br>TURE"
+        text3: "A NOPASANADA FEATURE"
     }
 };
 
