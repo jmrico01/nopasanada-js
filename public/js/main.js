@@ -1,151 +1,69 @@
 "use strict";
 
-const FEATURED_IMAGE_FADE_MS = 400;
+const FADE_TIME_MS = 500;
 
-const ENTRIES_FEATURED = {
-    "noticias": {
-        image: "featured-new2.png",
-        title: "noticias.*",
-        subtitle: "Diego Delfino.",
-        text1: "CONQUISTA SESSIONS.<br>TRIGGER.**",
-        text2: "WATCH<br>LIVE DOCUMENTARY",
-        text3: "A NOPASANADA FEATURE"
-    },
-    "deportemoto": {
-        image: "featured-new1.png",
-        title: "wheels,<br>metal.",
-        subtitle: "Los Sadistas.",
-        text1: "CONQUISTA SESSIONS.<br>TRIGGER.**",
-        text2: "WATCH<br>LIVE DOCUMENTARY",
-        text3: "A NOPASANADA FEATURE"
-    },
-    "arteycultura": {
-        image: "featured-new2.png",
-        title: "cows &<br>landscapes.*",
-        subtitle: "Los Sadistas.",
-        text1: "CONQUISTA SESSIONS.<br>TRIGGER.**",
-        text2: "WATCH<br>LIVE DOCUMENTARY",
-        text3: "A NOPASANADA FEATURE"
-    },
-    "politica": {
-        image: "featured-new1.png",
-        title: "politica.*",
-        subtitle: "No Le Hablo.",
-        text1: "CONQUISTA SESSIONS.<br>TRIGGER.**",
-        text2: "WATCH<br>LIVE DOCUMENTARY",
-        text3: "A NOPASANADA FEATURE"
-    },
-    "comida": {
-        image: "featured-new2.png",
-        title: "munchies.*",
-        subtitle: "Las Delicias.",
-        text1: "CONQUISTA SESSIONS.<br>TRIGGER.**",
-        text2: "WATCH<br>LIVE DOCUMENTARY",
-        text3: "A NOPASANADA FEATURE"
-    },
-    "moda": {
-        image: "featured-new1.png",
-        title: "rose & bare.*",
-        subtitle: "Quien es esa Rica?",
-        text1: "CONQUISTA SESSIONS.<br>TRIGGER.**",
-        text2: "WATCH<br>LIVE DOCUMENTARY",
-        text3: "A NOPASANADA FEATURE"
-    }
-};
-
+let playingVideo = false;
 let prevHash = null;
-let warned = false;
+let player = null;
 
-function Shuffle(array)
+function OnResize() {
+    const TARGET_ASPECT = 16.0 / 9.0;
+    let aspect = document.documentElement.clientWidth / document.documentElement.clientHeight;
+    let marginX, marginY;
+    if (!playingVideo) {
+        marginX = 0;
+        marginY = 0;
+    }
+    else if (aspect > TARGET_ASPECT) {
+        let targetWidth = document.documentElement.clientHeight * TARGET_ASPECT;
+        let pillarWidth = (document.documentElement.clientWidth - targetWidth) / 2.0;
+        marginX = pillarWidth;
+        marginY = 0;
+    }
+    else {
+        let targetHeight = document.documentElement.clientWidth / TARGET_ASPECT;
+        let letterHeight = (document.documentElement.clientHeight - targetHeight) / 2.0;
+        marginX = 0;
+        marginY = letterHeight;
+    }
+
+    let $website = $("#website");
+    $website.css("margin-left",   marginX);
+    $website.css("margin-right",  marginX);
+    $website.css("margin-top",    marginY);
+    $website.css("margin-bottom", marginY);
+    $(".screen").each(function(index) {
+        let $this = $(this);
+        $this.height(document.documentElement.clientHeight - marginY * 2.0);
+    });
+}
+
+function ShowVideoOnly()
 {
-    let currentIndex = array.length;
-    let temporaryValue, randomIndex;
+}
 
-    // While there remain elements to shuffle...
-    while (0 !== currentIndex) {
-        // Pick a remaining element...
-        randomIndex = Math.floor(Math.random() * currentIndex);
-        currentIndex -= 1;
-
-        // And swap it with the current element.
-        temporaryValue = array[currentIndex];
-        array[currentIndex] = array[randomIndex];
-        array[randomIndex] = temporaryValue;
-    }
-
-    return array;
-};
-
-function SetFeaturedEntry(hash)
+function ShowVideoAndIntroText()
 {
-    let category = "deportemoto";
-    let hashIndex = hash.indexOf("#");
-    if (hashIndex !== -1) {
-        let hashCategory = hash.substring(hashIndex + 1, hash.length);
-        if (ENTRIES_FEATURED.hasOwnProperty(hashCategory)) {
-            category = hashCategory;
-        }
-    }
+}
 
-    let $currentActive = $("#featuredImageCycler img.active");
-    let $currentTransition = $("#featuredImageCycler img.transition");
-    let $featuredImage = $("#featuredImage-" + category);
-    if ($currentActive.length === 0 && $currentTransition.length === 0) {
-        $featuredImage.addClass("active");
-    }
-    else if ($currentActive.length > 0 && $currentTransition.length === 0) {
-        $featuredImage.addClass("transition");
-        $currentActive.fadeOut(FEATURED_IMAGE_FADE_MS, function() {
-            $currentActive.removeClass("active").show();
-            $(".transition").addClass("active").removeClass("transition");
-        });
-    }
-    else if ($currentActive.length === 0 && $currentTransition.length > 0) {
-        // strange case, small timing issue, but this is JS so who knows
-        return;
-    }
-    else if ($currentActive.length > 0 && $currentTransition.length > 0) {
-        $(".transition").removeClass("transition");
-        $featuredImage.addClass("transition");
-    }
-
-    let entry = ENTRIES_FEATURED[category];
-    $("#featuredTitle").html(entry.title);
-    $("#featuredSubtitle").html(entry.subtitle);
-    $("#featuredText1").html(entry.text1);
-    $("#featuredText2").html(entry.text2);
-    $("#featuredText3").html(entry.text3);
+function ShowIntroOnly()
+{
 }
 
 function HandleHash(hash)
 {
     if (hash === "#video") {
-        $("#header").hide();
-        $("#intro").hide();
-        $("#screen1").append('<iframe id="video" src="https://www.youtube.com/embed/yKUGwlFJAHw?rel=0;showinfo=0;theme=light;autoplay=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>');
+        player.playVideo();
+        $("#video").fadeIn(FADE_TIME_MS, function() {
+            $("#intro").hide();
+        });
     }
     else {
-        $("#video").remove();
-        $("#header").show();
         $("#intro").show();
+        $("#video").fadeOut(FADE_TIME_MS, function() {
+            player.stopVideo();
+        });
     }
-
-    SetFeaturedEntry(hash);
-
-    let posterNums = [1, 2, 3, 4, 5, 6, 7];
-    if (posterNums === null) {
-        $("#screen2").hide();
-        return;
-    }
-
-    Shuffle(posterNums);
-    $(".entryPoster").each(function(index) {
-        let $this = $(this);
-        let posterImagePath = "images/poster" + posterNums[index] + ".png";
-        $this.attr("src", posterImagePath);
-    });
-
-    // $("#screen2").show();
 }
 
 window.onhashchange = function() {
@@ -156,31 +74,39 @@ window.onhashchange = function() {
     }
 };
 
+
 window.onload = function() {
     OnResize();
-    $("#video").show();
+    $("#video").hide();
 
-    for (let key in ENTRIES_FEATURED) {
-        let imgId = "featuredImage-" + key;
-        let imgPath = "images/" + ENTRIES_FEATURED[key].image;
-        $("#featuredImageCycler").append("<img id=\"" + imgId
-            + "\" src=\"" + imgPath + "\">");
-        // $("#" + imgId).hide();
-    }
-    HandleHash(window.location.hash);
+    player = new YT.Player("video", {
+        height: "100%",
+        width: "100%",
+        videoId: "yKUGwlFJAHw",
+        playerVars: {
+            modestbranding: 1,
+            rel: 0
+        },
+        events: {
+            "onReady": function() {
+                HandleHash(window.location.hash);
+            },
+            "onStateChange": function(event) {
+                let state = event.data;
+                if (state === YT.PlayerState.PAUSED) {
+                    $("#intro").fadeIn(FADE_TIME_MS);
+                }
+                else if (state === YT.PlayerState.PLAYING) {
+                    $("#intro").fadeOut(FADE_TIME_MS);
+                }
+                else if (state === YT.PlayerState.ENDED) {
+                    window.location.hash = "#";
+                }
+            }
+        }
+    });
+
     $("#content").css("visibility", "visible");
-
-    const MONTHS_SPANISH = [
-        "ENERO", "FEBRERO", "MARZO",
-        "ABRIL", "MAYO", "JUNIO",
-        "JULIO", "AGOSTO", "SEPTIEMBRE",
-        "OCTUBRE", "NOVIEMBRE", "DICIEMBRE"
-    ];
-    let today = new Date();
-    $("#footerText1").html(today.getDate() + " DE "
-        + MONTHS_SPANISH[today.getMonth()] + ",<br>"
-        + today.getFullYear());
-    // SetupHeader();
 };
 
 window.onresize = OnResize;

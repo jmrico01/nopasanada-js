@@ -1,137 +1,124 @@
+body {
+    background-color: #000;
+    /*overflow-y: hidden;*/
+}
+
+#website {
+    position: relative;
+    margin: 0; /* set by JS */
+
+    background-color: #666;
+}
+
 #content {
     visibility: hidden; /* hide wonky stuff until page loads */
 }
 
 #screen1 {
     position: relative;
-    background-image: url("../images/featured-new1.png");
+    background-image: url("../images/landing.png");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
 }
 
 #intro {
-    width: 100%;
-    height: 100%;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+
+    z-index: 0;
 }
 
 #video {
     position: absolute;
-    width: 100%;
-    height: 100%;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+
+    z-index: 1;
 }
 
 .screen {
-    /*height: 70vh;
-    max-height: 46vw;
-    padding-top: 0;    /* match header, set by JS */
-    /*padding-bottom: 0; /* match header, set by JS */
+    /* all set by JS */
 }
 
-#featuredContainer {
+#introContainer {
     position: relative;
     width: 100%;
     height: 100%;
 }
 
-#featuredImageCycler {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-}
-
-#featuredImageCycler img {
-    position: absolute;
-    width: 100%;
-    /*height: 100%;*/
-    z-index: -3;
-}
-#featuredImageCycler img.transition {
-    z-index: -2;
-}
-#featuredImageCycler img.active {
-    z-index: -1;
-}
-
-#featuredTextContainer {
+#introTextContainer {
     color: #ffffff;
 
     position: absolute;
-    left: 11.5%;
-    right: 11.5%;
-    bottom: 16%;
+    left: 0;
+    right: 0;
+    top: 4vw;
 }
 
-#featuredTitle {
-    font-family: FuturaPTDemiItalic;
-    font-size: 11vw;
-    letter-spacing: -0.6vw;
-    line-height: 9vw;
+#introTitle {
+    text-align: center;
+    font-family: FuturaPTBold;
+    font-size: 7.5vw;
+    letter-spacing: -0.3vw;
+    line-height: 6vw;
 }
 
-#featuredSubtitle {
-    font-family: FuturaPTDemiItalic;
-    font-size: 3.8vw;
-    letter-spacing: -0.2vw;
-    line-height: 2.4vw;
-
-    padding-top: 4vw;
-    display: none;
-}
-
-#featuredLine {
-    width: 100%;
-    /*margin-top: 4vw;*/
-    margin-top: 3.5vw;
-    margin-bottom: 0.8vw;
-    border-bottom: 3px solid #ffffff;
-}
-
-#featuredText {
-    font-family: FuturaPTMedium;
-    font-size: 1.1vw;
-    letter-spacing: -0.02vw;
-
-    overflow: auto;
-}
-
-#featuredText1 {
-    float: left;
-    width: 30%;
-}
-#featuredText2 {
-    float: left;
-    width: 54%;
-}
-#featuredText3 {
-    float: left;
-    width: 16%;
-}
-
-#footer {
-    width: 100%;
-    margin-top: 1vw;
-
-    color: #2a2a2a;
+#introSubtitle {
     font-family: FuturaPTBook;
-    font-size: 0.9vw;
+    text-align: center;
+    font-size: 1.4vw;
+    letter-spacing: 0.1vw;
+
+    margin-top: 1.7vw;
 }
 
-#footerLine {
-    margin-bottom: 0.8vw;
-    border-bottom: 3px solid #2a2a2a;
+.cross {
+    position: absolute;
+    width: 6vw;
+    height: 6vw;
+
+    left: 2vw;
+    right: 2vw;
+    top: 2vw;
+    bottom: 2vw;
 }
 
-#footerText1 {
-    float: left;
-    width: 23%;
-    margin-left: 11.5%;
+.crossHorizontal {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 50%;
+    border-bottom: 0.1vw solid #fff;
 }
-#footerText2 {
-    float: left;
-    width: 42%;
+.crossVertical {
+    position: absolute;
+    left: 0;
+    right: 50%;
+    top: 0;
+    bottom: 0;
+    border-right: 0.1vw solid #fff;
 }
-#footerText3 {
-    float: left;
+
+#crossTL {
+    right: auto;
+    bottom: auto;
+}
+#crossTR {
+    left: auto;
+    bottom: auto;
+}
+#crossBL {
+    right: auto;
+    top: auto;
+}
+#crossBR {
+    left: auto;
+    top: auto;
 }
