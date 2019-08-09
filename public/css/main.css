@@ -10,27 +10,28 @@
 }
 
 #featuredContainer {
-    background-image: url("../images/featured-new.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-    /*-webkit-filter: brightness(100%);
-    -webkit-transition: all 0.2s ease;
-    -moz-transition: all 0.2s ease;
-    -o-transition: all 0.2s ease;
-    -ms-transition: all 0.2s ease;
-    transition: all 0.2s ease;*/
-
+    position: relative;
     width: 100%;
     height: 100%;
 }
 
-#featuredContainer:hover {
-    /*-webkit-filter: brightness(90%);
-    -webkit-transition: all 0.2s ease;
-    -moz-transition: all 0.2s ease;
-    -o-transition: all 0.2s ease;
-    -ms-transition: all 0.2s ease;
-    transition: all 0.2s ease;*/
+#featuredImageCycler {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+#featuredImageCycler img {
+    position: absolute;
+    height: 100%;
+    z-index: -3;
+}
+#featuredImageCycler img.transition {
+    z-index: -2;
+}
+#featuredImageCycler img.active {
+    z-index: -1;
 }
 
 #featuredTextContainer {

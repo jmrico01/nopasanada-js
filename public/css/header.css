@@ -12,7 +12,7 @@
     left: 4.5vw;  /* #website margin-left */
     right: 4.5vw; /* #website margin-right */
     height: 18vh;
-    z-index: 1; /* TODO investigate toggle when scrolling */
+    z-index: 10; /* TODO investigate toggle when scrolling */
 
     color: #2a2a2a;
     margin: auto;

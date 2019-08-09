@@ -1,48 +1,50 @@
 "use strict";
 
+const FEATURED_IMAGE_FADE_MS = 400;
+
 const ENTRIES_FEATURED = {
-    "#noticias": {
-        image: "featured-new.png",
+    "noticias": {
+        image: "featured-new2.png",
         title: "noticias.*",
         subtitle: "Diego Delfino.",
         text1: "CONQUISTA SESSIONS.<br>TRIGGER.**",
         text2: "WATCH<br>LIVE DOCUMENTARY",
         text3: "A NOPASANADA FEATURE"
     },
-    "#deportemoto": {
-        image: "featured-new.png",
+    "deportemoto": {
+        image: "featured-new1.png",
         title: "wheels,<br>metal.",
         subtitle: "Los Sadistas.",
         text1: "CONQUISTA SESSIONS.<br>TRIGGER.**",
         text2: "WATCH<br>LIVE DOCUMENTARY",
         text3: "A NOPASANADA FEATURE"
     },
-    "#arteycultura": {
-        image: "featured4.png",
+    "arteycultura": {
+        image: "featured-new2.png",
         title: "cows &<br>landscapes.*",
         subtitle: "Los Sadistas.",
         text1: "CONQUISTA SESSIONS.<br>TRIGGER.**",
         text2: "WATCH<br>LIVE DOCUMENTARY",
         text3: "A NOPASANADA FEATURE"
     },
-    "#politica": {
-        image: "featured-new.png",
+    "politica": {
+        image: "featured-new1.png",
         title: "politica.*",
         subtitle: "No Le Hablo.",
         text1: "CONQUISTA SESSIONS.<br>TRIGGER.**",
         text2: "WATCH<br>LIVE DOCUMENTARY",
         text3: "A NOPASANADA FEATURE"
     },
-    "#comida": {
-        image: "featured-new.png",
+    "comida": {
+        image: "featured-new2.png",
         title: "munchies.*",
         subtitle: "Las Delicias.",
         text1: "CONQUISTA SESSIONS.<br>TRIGGER.**",
         text2: "WATCH<br>LIVE DOCUMENTARY",
         text3: "A NOPASANADA FEATURE"
     },
-    "#moda": {
-        image: "featured-new.png",
+    "moda": {
+        image: "featured-new1.png",
         title: "rose & bare.*",
         subtitle: "Quien es esa Rica?",
         text1: "CONQUISTA SESSIONS.<br>TRIGGER.**",
@@ -74,25 +76,42 @@ function Shuffle(array)
     return array;
 };
 
-function SetFeaturedEntry(entry)
+function SetFeaturedEntry(hash)
 {
+    let category = "deportemoto";
+    let hashIndex = hash.indexOf("#");
+    if (hashIndex !== -1) {
+        let hashCategory = hash.substring(hashIndex + 1, hash.length);
+        if (ENTRIES_FEATURED.hasOwnProperty(hashCategory)) {
+            category = hashCategory;
+        }
+    }
+
+    let entry = ENTRIES_FEATURED[category];
     $("#featuredTitle").html(entry.title);
     $("#featuredSubtitle").html(entry.subtitle);
     $("#featuredText1").html(entry.text1);
     $("#featuredText2").html(entry.text2);
     $("#featuredText3").html(entry.text3);
 
-    let imagePath = "../images/" + entry.image;
-    $("#featuredContainer").css("background-image", "url(\"" + imagePath + "\")");
+    let $currentActive = $("#featuredImageCycler img.active");
+    let $featuredImage = $("#featuredImage-" + category);
+    if ($currentActive.length === 0) {
+        $featuredImage.addClass("active");
+    }
+    else {
+        $featuredImage.addClass("transition");
+        $currentActive.fadeOut(FEATURED_IMAGE_FADE_MS, function() {
+            $currentActive.removeClass("active").show();
+            $featuredImage.removeClass("transition");
+            $featuredImage.addClass("active");
+        });
+    }
 }
 
 function HandleHash(hash)
 {
-    let featuredEntry = ENTRIES_FEATURED["#deportemoto"];
-    if (ENTRIES_FEATURED.hasOwnProperty(hash)) {
-        featuredEntry = ENTRIES_FEATURED[hash];
-    }
-    SetFeaturedEntry(featuredEntry);
+    SetFeaturedEntry(hash);
 
     let posterNums = [1, 2, 3, 4, 5, 6, 7];
     if (posterNums === null) {
@@ -120,8 +139,26 @@ window.onhashchange = function() {
 
 window.onload = function() {
     OnResize();
+    for (let key in ENTRIES_FEATURED) {
+        let imgId = "featuredImage-" + key;
+        let imgPath = "images/" + ENTRIES_FEATURED[key].image;
+        $("#featuredImageCycler").append("<img id=\"" + imgId
+            + "\" src=\"" + imgPath + "\">");
+        // $("#" + imgId).hide();
+    }
     HandleHash(window.location.hash);
     $("#content").css("visibility", "visible");
+
+    const MONTHS_SPANISH = [
+        "ENERO", "FEBRERO", "MARZO",
+        "ABRIL", "MAYO", "JUNIO",
+        "JULIO", "AGOSTO", "SEPTIEMBRE",
+        "OCTUBRE", "NOVIEMBRE", "DICIEMBRE"
+    ];
+    let today = new Date();
+    $("#footerText1").html(today.getDate() + " DE "
+        + MONTHS_SPANISH[today.getMonth()] + ",<br>"
+        + today.getFullYear());
 
     SetupHeader();
 };
