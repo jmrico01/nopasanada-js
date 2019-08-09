@@ -11,10 +11,9 @@
 
 #featuredContainer {
     background-color: #d7d7d7;
-    background-image: url("../images/featured3.jpg");
+    background-image: url("../images/featured-new.png");
     background-repeat: no-repeat;
     background-size: cover;
-    color: #ffffff;
     /*-webkit-filter: brightness(100%);
     -webkit-transition: all 0.2s ease;
     -moz-transition: all 0.2s ease;
@@ -35,24 +34,56 @@
     transition: all 0.2s ease;*/
 }
 
+#featuredTextContainer {
+    color: #ffffff;
+
+    width: 84.8%;
+    margin-left: 7.6%;
+    margin-right: 7.6%;
+}
+
 #featuredTitle {
-    font-family: FuturaHeavyOblique;
-    font-size: 8.9vw;
-    letter-spacing: -0.1vw;
+    font-family: FuturaPTHeavyItalic;
+    font-size: 11vw;
+    letter-spacing: -0.6vw;
     line-height: 7.8vw;
 
-    padding-left: 7.2vw;
-    padding-top: 6.8vw;
+    padding-top: 11vw;
 }
 
 #featuredSubtitle {
-    font-family: FuturaOblique;
-    font-size: 2.1vw;
-    letter-spacing: 0vw;
+    font-family: FuturaPTDemiItalic;
+    font-size: 3.8vw;
+    letter-spacing: -0.2vw;
     line-height: 2.4vw;
 
-    padding-left: 7.4vw;
-    padding-top: 1.8vw;
+    padding-top: 4vw;
+}
+
+#featuredLine {
+    width: 100%;
+    margin-top: 4vw;
+    margin-bottom: 1.5vw;
+    border-bottom: 3px solid #ffffff;
+}
+
+#featuredText {
+    font-family: FuturaPTMedium;
+    font-size: 1.8vw;
+    letter-spacing: -0.04vw;
+}
+
+#featuredText1 {
+    float: left;
+    width: 30%;
+}
+#featuredText2 {
+    float: left;
+    width: 47%;
+}
+#featuredText3 {
+    float: left;
+    width: 23%;
 }
 
 #contentList {

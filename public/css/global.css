@@ -1,64 +1,30 @@
-@font-face {
-    font-family: FuturaExtraBold;
-    src: url("../futura-lt/FuturaLT-ExtraBold.ttf") format("opentype");
-}
-
-@font-face {
-    font-family: FuturaPTHeavy;
-    src: url("../futura-pt/FuturaPTHeavy.otf") format("opentype");
-}
-
-@font-face {
-    font-family: FuturaHeavy;
-    src: url("../futura-lt/FuturaLT-Heavy.ttf") format("opentype");
-}
-
-@font-face {
-    font-family: FuturaHeavyOblique;
-    src: url("../futura-lt/FuturaLT-HeavyOblique.ttf") format("opentype");
-}
-
-@font-face {
-    font-family: FuturaOblique;
-    src: url("../futura-lt/FuturaLT-Oblique.ttf") format("opentype");
-}
-
-@font-face {
-    font-family: FuturaRegular;
-    src: url("../futura-lt/FuturaLT.ttf") format("opentype");
-}
-
 /*
-@font-face {
-    font-family: FuturaExtraBold;
-    src: url("../futura-pt/FuturaPTExtraBold.otf") format("opentype");
-}
+STANDARD COLORS
+#ffffff
+#2a2a2a
+#ff301b
+*/
 
 @font-face {
-    font-family: FuturaPTHeavy;
-    src: url("../futura-pt/FuturaPTHeavy.otf") format("opentype");
+    font-family: FuturaPTBold;
+    src: url("../futura-pt/FuturaPTBold.otf") format("opentype");
 }
-
 @font-face {
-    font-family: FuturaHeavy;
-    src: url("../futura-pt/FuturaPTHeavy.otf") format("opentype");
-}
-
-@font-face {
-    font-family: FuturaHeavyOblique;
+    font-family: FuturaPTHeavyItalic;
     src: url("../futura-pt/FuturaPTHeavyOblique.otf") format("opentype");
 }
-
 @font-face {
-    font-family: FuturaOblique;
-    src: url("../futura-pt/FuturaPTBookOblique.otf") format("opentype");
+    font-family: FuturaPTDemiItalic;
+    src: url("../futura-pt/FuturaPTDemiOblique.otf") format("opentype");
 }
-
 @font-face {
-    font-family: FuturaRegular;
+    font-family: FuturaPTMedium;
+    src: url("../futura-pt/FuturaPTMedium.otf") format("opentype");
+}
+@font-face {
+    font-family: FuturaPTBook;
     src: url("../futura-pt/FuturaPTBook.otf") format("opentype");
 }
-*/
 
 html, body {
     margin: 0;

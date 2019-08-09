@@ -1,35 +1,41 @@
 #website {
-    padding-left: 4.5vw;
-    padding-right: 4.5vw;
-    padding-top: 0;
-    padding-bottom: 0;
+    margin-left: 4.5vw;
+    margin-right: 4.5vw;
+    margin-top: 0;
+    margin-bottom: 0;
 }
 
 #header {
     background-color: #ffffff;
 
     position: fixed;
-    width: 100%;
-    height: 15vh;
-    max-height: 10vw;
+    left: 4.5vw;  /* #website margin-left */
+    right: 4.5vw; /* #website margin-right */
+    height: 20vh;
     z-index: 1; /* TODO investigate toggle when scrolling */
 
-    color: #231F20;
+    color: #2a2a2a;
     margin: auto;
 }
 
 #headerVerticalCenter {
-    width: 90.2vw;
-    margin: 0;
     position: absolute;
-    top: 50%;
-    -ms-transform: translateY(-50%);
-    transform: translateY(-50%);
+    left: 0;
+    right: 0;
+    top: 70%;
+    margin: 0;
+    -ms-transform: translateY(-70%);
+    transform: translateY(-70%);
 }
 
 #headerLogo {
+    font-family: FuturaPTBold;
+    font-size: 2.6vw;
+    letter-spacing: -0.04vw;
+    line-height: 2vw;
+    color: #ff301b;
+
     float: left;
-    width: 18vw;
     height: 100%;
     margin: auto;
 }
@@ -37,38 +43,26 @@
     color: inherit;
 }
 
-#headerLogoImage {
+#headerSeparator {
     float: left;
-    width: 3.7vw;
-    height: 3.75vw;
-}
-#headerLogoImage img {
-    width: 100%;
-    height: 100%;
-}
-
-#headerLogoText {
-    font-family: FuturaExtraBold;
-    font-size: 2.5vw;
-    letter-spacing: -0.04vw;
-    line-height: 2vw;
-
-    float: left;
-    margin-left: 0.8vw;
+    height: 5.2vw;
+    border-left: 1px solid #2a2a2a;
+    margin-left: 2.2vw;
+    margin-right: 2.2vw;
 }
 
 #headerCategories {
     float: left;
-    margin-left: 2vw;
+    height: 100%;
 }
 
 .headerCategory {
-    font-family: FuturaHeavyOblique;
-    font-size: 1vw;
+    font-family: FuturaPTMedium;
+    font-size: 1.1vw;
     letter-spacing: -0.02vw;
 
     float: left;
-    margin-right: 2.5vw;
+    margin-right: 3vw;
 }
 
 .headerCategory a {
@@ -76,41 +70,23 @@
     height: 100%;
 }
 
-#headerSubcategoriesContainer {
-    float: left;
-    width: 60vw; /* #headerCategories width */
-    margin-left: 2vw;
-    margin-top: 1.2vw;
-}
-
 .headerSubcategories {
-    position: absolute;
-}
-
-#subcategories-noticias {
-    margin-left: 0vw;
-}
-#subcategories-deportemoto {
-    margin-left: 6.2vw;
-}
-#subcategories-arteycultura {
-    margin-left: 15.1vw;
-}
-#subcategories-politica {
-    margin-left: 23.8vw;
-}
-#subcategories-comida {
-    margin-left: 29.7vw;
-}
-#subcategories-moda {
-    margin-left: 35.5vw;
+    margin-top: 0.5vw;
 }
 
 .headerSubcategory {
-    font-family: FuturaHeavyOblique;
-    font-size: 1vw;
-    letter-spacing: -0.02vw;
+    font-family: FuturaPTBook;
+    font-size: 0.75vw;
+    letter-spacing: 0.04vw;
 
-    float: left;
-    margin-right: 2.5vw; /* .headerCategory margin-right */
+    margin-top: 0.3vw;
+}
+
+#headerEnd {
+    font-family: FuturaPTMedium;
+    font-size: 3vw;
+    letter-spacing: -0.02vw;
+    color: #ff301b;
+
+    float: right;
 }

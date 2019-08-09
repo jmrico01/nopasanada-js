@@ -97,14 +97,6 @@ function HandleHash(hash)
     $("#screen2").show();
 }
 
-window.onhashchange = function() {
-    let hash = window.location.hash;
-    if (hash !== prevHash) {
-        prevHash = hash;
-        HandleHash(hash);
-    }
-};
-
 function OnResize() {
     let headerHeight = $("#header").height();
     $(".screen").each(function(index) {
@@ -116,7 +108,7 @@ function OnResize() {
         $this.css("padding-bottom", bottomSpacing);
     })
 
-    $("#screen2").css("padding-top", 0);
+    //$("#screen2").css("padding-top", 0);
 
     let aspect = document.documentElement.clientWidth / document.documentElement.clientHeight;
     if (aspect < 1.45 && !warned) {
@@ -130,9 +122,19 @@ function OnResize() {
     }
 }
 
+/*
+window.onhashchange = function() {
+    let hash = window.location.hash;
+    if (hash !== prevHash) {
+        prevHash = hash;
+        HandleHash(hash);
+    }
+};
+*/
+
 window.onload = function() {
     OnResize();
-    HandleHash(window.location.hash);
+    // HandleHash(window.location.hash);
     $("#content").css("visibility", "visible");
 
     SetupHeader();

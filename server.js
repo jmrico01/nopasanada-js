@@ -7,8 +7,8 @@ const mysql = require("mysql");
 const path = require("path");
 const util = require("util");
 
-const PORT_HTTP = 5050;
-const PORT_HTTPS = 5151;
+const PORT_HTTP = 6060;
+const PORT_HTTPS = 6161;
 const app = express();
 
 const dbConnection = mysql.createConnection({

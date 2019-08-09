@@ -3,6 +3,7 @@ const FADEOUT_TIME_MS = 200;
 
 function SetupHeader()
 {
+    /*
     let $headerSubcategories = $(".headerSubcategories");
     $headerSubcategories.hide();
 
@@ -35,4 +36,5 @@ function SetupHeader()
     $("#header").mouseleave(function(event) {
         $headerSubcategories.stop().fadeOut(FADEOUT_TIME_MS);
     });
+    */
 }
