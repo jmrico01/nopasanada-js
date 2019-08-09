@@ -62,7 +62,7 @@
     letter-spacing: -0.02vw;
 
     float: left;
-    margin-right: 3vw;
+    margin-right: 2vw;
 }
 
 .headerCategory a {
@@ -89,4 +89,5 @@
     color: #ff301b;
 
     float: right;
+    margin-top: -0.7vw;
 }
