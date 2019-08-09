@@ -3,10 +3,22 @@
 }
 
 #screen1 {
+    position: relative;
     background-image: url("../images/featured-new1.png");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+}
+
+#intro {
+    width: 100%;
+    height: 100%;
+}
+
+#video {
+    position: absolute;
+    width: 100%;
+    height: 100%;
 }
 
 .screen {

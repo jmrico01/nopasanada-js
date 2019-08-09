@@ -119,6 +119,17 @@ function SetFeaturedEntry(hash)
 
 function HandleHash(hash)
 {
+    if (hash === "#video") {
+        $("#header").hide();
+        $("#intro").hide();
+        $("#screen1").append('<iframe id="video" src="https://www.youtube.com/embed/yKUGwlFJAHw?rel=0;showinfo=0;theme=light;autoplay=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>');
+    }
+    else {
+        $("#video").remove();
+        $("#header").show();
+        $("#intro").show();
+    }
+
     SetFeaturedEntry(hash);
 
     let posterNums = [1, 2, 3, 4, 5, 6, 7];
@@ -134,7 +145,7 @@ function HandleHash(hash)
         $this.attr("src", posterImagePath);
     });
 
-    $("#screen2").show();
+    // $("#screen2").show();
 }
 
 window.onhashchange = function() {
@@ -147,6 +158,8 @@ window.onhashchange = function() {
 
 window.onload = function() {
     OnResize();
+    $("#video").show();
+
     for (let key in ENTRIES_FEATURED) {
         let imgId = "featuredImage-" + key;
         let imgPath = "images/" + ENTRIES_FEATURED[key].image;
@@ -167,7 +180,6 @@ window.onload = function() {
     $("#footerText1").html(today.getDate() + " DE "
         + MONTHS_SPANISH[today.getMonth()] + ",<br>"
         + today.getFullYear());
-
     // SetupHeader();
 };
 
