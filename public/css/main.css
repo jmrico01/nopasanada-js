@@ -10,7 +10,6 @@
 }
 
 #featuredContainer {
-    background-color: #d7d7d7;
     background-image: url("../images/featured-new.png");
     background-repeat: no-repeat;
     background-size: cover;
@@ -37,9 +36,10 @@
 #featuredTextContainer {
     color: #ffffff;
 
-    width: 84.8%;
-    margin-left: 7.6%;
-    margin-right: 7.6%;
+    position: absolute;
+    left: 11.5%;
+    right: 11.5%;
+    bottom: 16%;
 }
 
 #featuredTitle {
@@ -47,8 +47,6 @@
     font-size: 11vw;
     letter-spacing: -0.6vw;
     line-height: 7.8vw;
-
-    padding-top: 11vw;
 }
 
 #featuredSubtitle {
@@ -71,6 +69,8 @@
     font-family: FuturaPTMedium;
     font-size: 1.8vw;
     letter-spacing: -0.04vw;
+
+    overflow: auto;
 }
 
 #featuredText1 {
