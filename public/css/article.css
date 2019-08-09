@@ -13,7 +13,7 @@
 
 #titleImage {
     background-color: #d7d7d7;
-    background-image: url('../images/featured3.jpg');
+    background-image: url('../images/featured-new.png');
     background-repeat: no-repeat;
     background-size: cover;
     color: #ffffff;
@@ -29,8 +29,9 @@
 }
 
 #titleImageSeparator {
-    margin-top: 7.5vh;
-    margin-bottom: 7.5vh;
+    border-bottom: 1px solid #231F20;
+    margin-top: 5vh;
+    margin-bottom: 5vh;
 }
 
 #articleContainer {
@@ -40,16 +41,17 @@
 }
 
 #title {
-    font-family: FuturaHeavy;
+    font-family: FuturaPTHeavy;
     font-size: 5.5vw;
     letter-spacing: -0.2vw;
     line-height: 5.3vw;
 
+    padding-top: 2vw;
     padding-bottom: 3.53vw;
 }
 
 #subtitle {
-    font-family: FuturaHeavy;
+    font-family: FuturaPTHeavy;
     font-size: 2.4vw;
     letter-spacing: -0.05vw;
     line-height: 2.8vw;
@@ -58,7 +60,7 @@
 }
 
 #author {
-    font-family: FuturaOblique;
+    font-family: FuturaPTBookItalic;
     font-size: 1.2vw;
 }
 
@@ -68,7 +70,7 @@ hr {
 }
 
 #article {
-    font-family: FuturaRegular;
+    font-family: FuturaPTBook;
     font-size: 1.2vw;
 }
 

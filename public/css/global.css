@@ -10,6 +10,10 @@ STANDARD COLORS
     src: url("../futura-pt/FuturaPTBold.otf") format("opentype");
 }
 @font-face {
+    font-family: FuturaPTHeavy;
+    src: url("../futura-pt/FuturaPTHeavy.otf") format("opentype");
+}
+@font-face {
     font-family: FuturaPTHeavyItalic;
     src: url("../futura-pt/FuturaPTHeavyOblique.otf") format("opentype");
 }
@@ -24,6 +28,10 @@ STANDARD COLORS
 @font-face {
     font-family: FuturaPTBook;
     src: url("../futura-pt/FuturaPTBook.otf") format("opentype");
+}
+@font-face {
+    font-family: FuturaPTBookItalic;
+    src: url("../futura-pt/FuturaPTBookOblique.otf") format("opentype");
 }
 
 html, body {
