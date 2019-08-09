@@ -2,6 +2,13 @@
     visibility: hidden; /* hide wonky stuff until page loads */
 }
 
+#screen1 {
+    background-image: url("../images/featured-new1.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
 .screen {
     /*height: 70vh;
     max-height: 46vw;

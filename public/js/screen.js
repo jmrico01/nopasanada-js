@@ -1,8 +1,14 @@
+let playingVideo = false;
+
 function OnResize() {
     const TARGET_ASPECT = 16.0 / 9.0;
     let aspect = document.documentElement.clientWidth / document.documentElement.clientHeight;
     let marginX, marginY;
-    if (aspect > TARGET_ASPECT) {
+    if (!playingVideo) {
+        marginX = 0;
+        marginY = 0;
+    }
+    else if (aspect > TARGET_ASPECT) {
         let targetWidth = document.documentElement.clientHeight * TARGET_ASPECT;
         let pillarWidth = (document.documentElement.clientWidth - targetWidth) / 2.0;
         marginX = pillarWidth;
@@ -29,7 +35,6 @@ function OnResize() {
     let headerHeight = $("#header").height();
     $(".screen").each(function(index) {
         let $this = $(this);
-        $this.height(document.documentElement.clientHeight - marginY * 2.0 - headerHeight);
-        $this.css("padding-top", headerHeight);
+        $this.height(document.documentElement.clientHeight - marginY * 2.0);
     });
 }
