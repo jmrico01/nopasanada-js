@@ -1,22 +1,55 @@
 "use strict";
 
-const ENTRIES_FEATURED = [
-    {
-        image: "featured1.jpg",
-        title: "tragicomedia<br>van jalados",
-        subtitle: "SUBTITLE > CONTENT<br>BRIEF."
+const ENTRIES_FEATURED = {
+    "#noticias": {
+        image: "featured-new.png",
+        title: "noticias.*",
+        subtitle: "Diego Delfino.",
+        text1: "CONQUISTA SESSIONS.<br>TRIGGER.**",
+        text2: "WATCH<br>LIVE DOCUMENTARY",
+        text3: "A NOPASANADA FEA-<br>TURE"
     },
-    {
-        image: "featured2.jpg",
-        title: "quien dijo<br>motos?",
-        subtitle: "SUBTITLE > CONTENT<br>BRIEF."
+    "#deportemoto": {
+        image: "featured-new.png",
+        title: "motos.*",
+        subtitle: "Los Sadistas.",
+        text1: "CONQUISTA SESSIONS.<br>TRIGGER.**",
+        text2: "WATCH<br>LIVE DOCUMENTARY",
+        text3: "A NOPASANADA FEA-<br>TURE"
     },
-    {
-        image: "featured3.jpg",
-        title: "magpie jay<br>on tour",
-        subtitle: "SUBTITLE > CONTENT<br>BRIEF."
+    "#arteycultura": {
+        image: "featured-new.png",
+        title: "on tour.*",
+        subtitle: "Magpie Jay.",
+        text1: "CONQUISTA SESSIONS.<br>TRIGGER.**",
+        text2: "WATCH<br>LIVE DOCUMENTARY",
+        text3: "A NOPASANADA FEA-<br>TURE"
     },
-];
+    "#politica": {
+        image: "featured-new.png",
+        title: "politica.*",
+        subtitle: "No Le Hablo.",
+        text1: "CONQUISTA SESSIONS.<br>TRIGGER.**",
+        text2: "WATCH<br>LIVE DOCUMENTARY",
+        text3: "A NOPASANADA FEA-<br>TURE"
+    },
+    "#comida": {
+        image: "featured-new.png",
+        title: "munchies.*",
+        subtitle: "Las Delicias.",
+        text1: "CONQUISTA SESSIONS.<br>TRIGGER.**",
+        text2: "WATCH<br>LIVE DOCUMENTARY",
+        text3: "A NOPASANADA FEA-<br>TURE"
+    },
+    "#moda": {
+        image: "featured-new.png",
+        title: "rose & bare.*",
+        subtitle: "Quien es esa Rica?",
+        text1: "CONQUISTA SESSIONS.<br>TRIGGER.**",
+        text2: "WATCH<br>LIVE DOCUMENTARY",
+        text3: "A NOPASANADA FEA-<br>TURE"
+    }
+};
 
 let prevHash = null;
 let warned = false;
@@ -45,6 +78,9 @@ function SetFeaturedEntry(entry)
 {
     $("#featuredTitle").html(entry.title);
     $("#featuredSubtitle").html(entry.subtitle);
+    $("#featuredText1").html(entry.text1);
+    $("#featuredText2").html(entry.text2);
+    $("#featuredText3").html(entry.text3);
 
     let imagePath = "../images/" + entry.image;
     $("#featuredContainer").css("background-image", "url(\"" + imagePath + "\")");
@@ -52,36 +88,13 @@ function SetFeaturedEntry(entry)
 
 function HandleHash(hash)
 {
-    let entryIndex = 0;
+    let featuredEntry = ENTRIES_FEATURED["#deportemoto"];
+    if (ENTRIES_FEATURED.hasOwnProperty(hash)) {
+        featuredEntry = ENTRIES_FEATURED[hash];
+    }
+    SetFeaturedEntry(featuredEntry);
+
     let posterNums = [1, 2, 3, 4, 5, 6, 7];
-    if (hash === "") {
-        entryIndex = 2;
-    }
-    else if (hash === "#noticias") {
-        entryIndex = 0;
-    }
-    else if (hash === "#deportemoto") {
-        entryIndex = 1;
-    }
-    else if (hash === "#arteycultura") {
-        entryIndex = 2;
-    }
-    else if (hash === "#politica") {
-        entryIndex = 0;
-    }
-    else if (hash === "#comida") {
-        entryIndex = 1;
-    }
-    else if (hash === "#moda") {
-        entryIndex = 2;
-    }
-    else if (hash === "#magpiejay") {
-        entryIndex = 2;
-        posterNums = null;
-    }
-
-    SetFeaturedEntry(ENTRIES_FEATURED[entryIndex]);
-
     if (posterNums === null) {
         $("#screen2").hide();
         return;
@@ -122,7 +135,6 @@ function OnResize() {
     }
 }
 
-/*
 window.onhashchange = function() {
     let hash = window.location.hash;
     if (hash !== prevHash) {
@@ -130,11 +142,10 @@ window.onhashchange = function() {
         HandleHash(hash);
     }
 };
-*/
 
 window.onload = function() {
     OnResize();
-    // HandleHash(window.location.hash);
+    HandleHash(window.location.hash);
     $("#content").css("visibility", "visible");
 
     SetupHeader();

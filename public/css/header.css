@@ -62,7 +62,7 @@
     letter-spacing: -0.02vw;
 
     float: left;
-    margin-right: 2vw;
+    margin-right: 3vw;
 }
 
 .headerCategory a {
@@ -71,6 +71,7 @@
 }
 
 .headerSubcategories {
+    position: absolute;
     margin-top: 0.5vw;
 }
 
