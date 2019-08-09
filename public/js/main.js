@@ -87,26 +87,34 @@ function SetFeaturedEntry(hash)
         }
     }
 
+    let $currentActive = $("#featuredImageCycler img.active");
+    let $currentTransition = $("#featuredImageCycler img.transition");
+    let $featuredImage = $("#featuredImage-" + category);
+    if ($currentActive.length === 0 && $currentTransition.length === 0) {
+        $featuredImage.addClass("active");
+    }
+    else if ($currentActive.length > 0 && $currentTransition.length === 0) {
+        $featuredImage.addClass("transition");
+        $currentActive.fadeOut(FEATURED_IMAGE_FADE_MS, function() {
+            $currentActive.removeClass("active").show();
+            $(".transition").addClass("active").removeClass("transition");
+        });
+    }
+    else if ($currentActive.length === 0 && $currentTransition.length > 0) {
+        // strange case, small timing issue, but this is JS so who knows
+        return;
+    }
+    else if ($currentActive.length > 0 && $currentTransition.length > 0) {
+        $(".transition").removeClass("transition");
+        $featuredImage.addClass("transition");
+    }
+
     let entry = ENTRIES_FEATURED[category];
     $("#featuredTitle").html(entry.title);
     $("#featuredSubtitle").html(entry.subtitle);
     $("#featuredText1").html(entry.text1);
     $("#featuredText2").html(entry.text2);
     $("#featuredText3").html(entry.text3);
-
-    let $currentActive = $("#featuredImageCycler img.active");
-    let $featuredImage = $("#featuredImage-" + category);
-    if ($currentActive.length === 0) {
-        $featuredImage.addClass("active");
-    }
-    else {
-        $featuredImage.addClass("transition");
-        $currentActive.fadeOut(FEATURED_IMAGE_FADE_MS, function() {
-            $currentActive.removeClass("active").show();
-            $featuredImage.removeClass("transition");
-            $featuredImage.addClass("active");
-        });
-    }
 }
 
 function HandleHash(hash)
