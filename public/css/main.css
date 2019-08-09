@@ -58,7 +58,8 @@ body {
     position: absolute;
     left: 0;
     right: 0;
-    top: 4vw;
+    top: 4.5vw;
+    bottom: 4.5vw;
 }
 
 #introTitle {
@@ -78,6 +79,62 @@ body {
     margin-top: 1.7vw;
 }
 
+#introText {
+    position: absolute;
+    left: 5vw;
+    right: 5vw;
+    bottom: 0;
+}
+
+#introTextTop {
+    position: relative;
+    width: 100%;
+    font-family: FuturaPTDemi;
+    font-size: 4vw;
+    overflow: auto;
+}
+#introTextTop1 {
+    float: left;
+    width: 50%;
+    margin-left: -0.5vw;
+}
+#introTextTop2 {
+    float: left;
+    width: 32%;
+    margin-left: 18%;
+}
+
+#introBottomLine {
+    width: 100%;
+    border-bottom: 0.1vw solid #fff;
+    margin-top: -1.5vw;
+}
+
+#introTextBottom {
+    width: 100%;
+    overflow: auto;
+}
+#introTextBottom h1 {
+    font-family: FuturaPTDemi;
+    font-size: 1.5vw;
+    letter-spacing: -0.05vw;
+}
+#introTextBottom p {
+    font-family: FuturaPTBook;
+    font-size: 0.7vw;
+    letter-spacing: 0.05vw;
+    line-height: 1.2vw;
+}
+#introTextBottom1 {
+    float: left;
+    width: 50%;
+}
+#introTextBottom2 {
+    float: left;
+    width: 32%;
+    margin-left: 18%;
+}
+
 .cross {
     position: absolute;
     width: 6vw;
@@ -89,6 +146,7 @@ body {
     bottom: 2vw;
 }
 
+/*
 .crossHorizontal {
     position: absolute;
     left: 0;
@@ -105,20 +163,42 @@ body {
     bottom: 0;
     border-right: 0.1vw solid #fff;
 }
+*/
+
+.crossHorizontal {
+    position: absolute;
+}
+.crossVertical {
+    display: none;
+}
 
 #crossTL {
     right: auto;
     bottom: auto;
 }
+#crossTL .crossHorizontal {
+    left: 50%;
+    right: 0;
+    top: 50%;
+    bottom: 0;
+    border-top: 0.1vw solid #fff;
+    border-left: 0.1vw solid #fff;
+}
 #crossTR {
     left: auto;
     bottom: auto;
 }
+#crossTR .crossHorizontal {
+    left: 0;
+    right: 50%;
+    top: 50%;
+    bottom: 0;
+    border-top: 0.1vw solid #fff;
+    border-right: 0.1vw solid #fff;
+}
 #crossBL {
-    right: auto;
-    top: auto;
+    display: none;
 }
 #crossBR {
-    left: auto;
-    top: auto;
+    display: none;
 }
