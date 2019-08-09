@@ -1,0 +1,68 @@
+/*
+STANDARD COLORS
+#ffffff
+#2a2a2a
+#ff301b
+*/
+
+@font-face {
+    font-family: FuturaPTBold;
+    src: url("../futura-pt/FuturaPTBold.otf") format("opentype");
+}
+@font-face {
+    font-family: FuturaPTHeavy;
+    src: url("../futura-pt/FuturaPTHeavy.otf") format("opentype");
+}
+@font-face {
+    font-family: FuturaPTHeavyItalic;
+    src: url("../futura-pt/FuturaPTHeavyOblique.otf") format("opentype");
+}
+@font-face {
+    font-family: FuturaPTDemi;
+    src: url("../futura-pt/FuturaPTDemi.otf") format("opentype");
+}
+@font-face {
+    font-family: FuturaPTDemiItalic;
+    src: url("../futura-pt/FuturaPTDemiOblique.otf") format("opentype");
+}
+@font-face {
+    font-family: FuturaPTMedium;
+    src: url("../futura-pt/FuturaPTMedium.otf") format("opentype");
+}
+@font-face {
+    font-family: FuturaPTBook;
+    src: url("../futura-pt/FuturaPTBook.otf") format("opentype");
+}
+@font-face {
+    font-family: FuturaPTBookItalic;
+    src: url("../futura-pt/FuturaPTBookOblique.otf") format("opentype");
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+
+    width: 100%;
+    height: 100%;
+}
+
+a {
+    color: inherit;
+    text-decoration: inherit;
+    -webkit-transition: all 0.2s ease;
+    -moz-transition: all 0.2s ease;
+    -o-transition: all 0.2s ease;
+    -ms-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+}
+a:hover {
+    color: #ff301b;
+    -webkit-transition: all 0.2s ease;
+    -moz-transition: all 0.2s ease;
+    -o-transition: all 0.2s ease;
+    -ms-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+}
+a:active {
+    color: blue;
+}

@@ -168,7 +168,7 @@ window.onload = function() {
         + MONTHS_SPANISH[today.getMonth()] + ",<br>"
         + today.getFullYear());
 
-    // SetupHeader();
+    SetupHeader();
 };
 
 window.onresize = OnResize;
