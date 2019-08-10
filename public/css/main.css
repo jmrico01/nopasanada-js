@@ -146,7 +146,18 @@ body {
     bottom: 2vw;
 }
 
+#crossTL {
+    right: auto;
+    bottom: auto;
+}
+#crossTR {
+    left: auto;
+    bottom: auto;
+}
+
 /*
+WITHOUT INFO TEXT
+*/
 .crossHorizontal {
     position: absolute;
     left: 0;
@@ -163,7 +174,24 @@ body {
     bottom: 0;
     border-right: 0.1vw solid #fff;
 }
+
+#crossBL {
+    right: auto;
+    top: auto;
+}
+#crossBR {
+    left: auto;
+    top: auto;
+}
+
+#introText {
+    display: none;
+}
+/*
 */
+
+/*
+WITH INFO TEXT
 
 .crossHorizontal {
     position: absolute;
@@ -172,10 +200,6 @@ body {
     display: none;
 }
 
-#crossTL {
-    right: auto;
-    bottom: auto;
-}
 #crossTL .crossHorizontal {
     left: 50%;
     right: 0;
@@ -183,10 +207,6 @@ body {
     bottom: 0;
     border-top: 0.1vw solid #fff;
     border-left: 0.1vw solid #fff;
-}
-#crossTR {
-    left: auto;
-    bottom: auto;
 }
 #crossTR .crossHorizontal {
     left: 0;
@@ -202,3 +222,5 @@ body {
 #crossBR {
     display: none;
 }
+/*
+*/

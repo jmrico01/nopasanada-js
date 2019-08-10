@@ -2,14 +2,32 @@
 
 const FADE_TIME_MS = 500;
 
-let playingVideo = false;
 let prevHash = null;
 let player = null;
 
 function OnResize() {
-    const TARGET_ASPECT = 16.0 / 9.0;
+    //const TARGET_ASPECT = 16.0 / 9.0;
+    const TARGET_ASPECT = 1.0;
     let aspect = document.documentElement.clientWidth / document.documentElement.clientHeight;
+    if (aspect < TARGET_ASPECT) {
+        $("#introTitle").css("font-size", "15vw");
+        $("#introTitle").css("letter-spacing", "-0.6vw");
+        $("#introTitle").css("line-height", "12vw");
+        $("#introSubtitle").css("font-size", "3vw");
+        $(".cross").css("width", "12vw");
+        $(".cross").css("height", "12vw");
+    }
+    else {
+        $("#introTitle").css("font-size", "7.5vw");
+        $("#introTitle").css("letter-spacing", "-0.3vw");
+        $("#introTitle").css("line-height", "6vw");
+        $("#introSubtitle").css("font-size", "1.5vw");
+        $(".cross").css("width", "6vw");
+        $(".cross").css("height", "6vw");
+    }
+
     let marginX, marginY;
+    let playingVideo = false;
     if (!playingVideo) {
         marginX = 0;
         marginY = 0;
@@ -36,18 +54,6 @@ function OnResize() {
         let $this = $(this);
         $this.height(document.documentElement.clientHeight - marginY * 2.0);
     });
-}
-
-function ShowVideoOnly()
-{
-}
-
-function ShowVideoAndIntroText()
-{
-}
-
-function ShowIntroOnly()
-{
 }
 
 function HandleHash(hash)
