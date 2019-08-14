@@ -68,7 +68,7 @@
     line-height: 2.4vw;
 
     padding-top: 4vw;
-    /*display: none;*/
+    display: none;
 }
 
 #featuredLine {
@@ -76,7 +76,7 @@
     /*margin-top: 4vw;*/
     margin-top: 3.5vw;
     margin-bottom: 0.8vw;
-    border-bottom: 3px solid #ffffff;
+    border-bottom: 0.1vw solid #ffffff;
 }
 
 #featuredText {
@@ -93,16 +93,15 @@
 }
 #featuredText2 {
     float: left;
-    width: 54%;
+    width: 56%;
 }
 #featuredText3 {
     float: left;
-    width: 16%;
 }
 
 #footer {
     width: 100%;
-    margin-top: 1vw;
+    margin-top: 0.8vw;
 
     color: #2a2a2a;
     font-family: FuturaPTBook;
@@ -111,7 +110,8 @@
 
 #footerLine {
     margin-bottom: 0.8vw;
-    border-bottom: 3px solid #2a2a2a;
+    border-bottom: 0.05vw solid #2a2a2a;
+    display:none;
 }
 
 #footerText1 {
@@ -121,7 +121,7 @@
 }
 #footerText2 {
     float: left;
-    width: 42%;
+    width: 43.8%;
 }
 #footerText3 {
     float: left;

@@ -59,12 +59,12 @@ function SetFeaturedContent(category, instant)
 {
     let entry = ENTRIES_FEATURED[category];
     $("#featuredTitle").html(entry.title);
-    if (entry.subtitle === "") {
+    /*if (entry.subtitle === "") {
         $("#featuredSubtitle").css("display", "none");
     }
     else {
         $("#featuredSubtitle").html(entry.subtitle);
-    }
+    }*/
     $("#featuredText1").html(entry.text1);
     $("#featuredText2").html(entry.text2);
     $("#featuredText3").html(entry.text3);

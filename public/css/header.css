@@ -59,7 +59,7 @@
 #headerSeparator {
     float: left;
     width: 100%;
-    border-bottom: 3px solid #2a2a2a;
+    border-bottom: 0.1vw solid #2a2a2a;
     padding-top: 1.5vw;
 }
 
