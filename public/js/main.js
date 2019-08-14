@@ -16,7 +16,7 @@ const ENTRIES_FEATURED = {
         image: "featured-deportemoto.png",
         //title: "wheels,<br>metal.",
         title: "pilotos.",
-        subtitle: "EPISODIO 1: FAMILIA",
+        subtitle: "",
         text1: "PROXIMAMENTE",
         text2: "VER TRAILER",
         text3: "UN ESPECIAL DE<br>NOPASANADA.**"
