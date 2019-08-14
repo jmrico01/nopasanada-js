@@ -22,7 +22,7 @@ const ENTRIES_FEATURED = {
         text3: "UN ESPECIAL DE<br>NOPASANADA.**"
     },
     "arteycultura": {
-        image: "featured-arteycultura.jpeg",
+        image: "featured-arteycultura2.jpeg",
         title: "arte &<br>cultura.*",
         subtitle: "",
         text1: "PROXIMAMENTE",
