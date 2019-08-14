@@ -1,118 +1,222 @@
 "use strict";
 
-const FADE_TIME_MS = 500;
+const FEATURED_IMAGE_FADE_MS = 400;
+const ABOUT_TEXT_FADE_MS = 200;
+
+const ENTRIES_FEATURED = {
+    "noticias": {
+        image: "featured-noticias.jpg",
+        title: "noticias.*",
+        subtitle: "",
+        text1: "PROXIMAMENTE",
+        text2: "PROXIMAMENTE",
+        text3: "PROXIMAMENTE"
+    },
+    "deportemoto": {
+        image: "featured-deportemoto.png",
+        //title: "wheels,<br>metal.",
+        title: "pilotos.",
+        subtitle: "EPISODIO 1: FAMILIA",
+        text1: "PROXIMAMENTE",
+        text2: "VER TRAILER",
+        text3: "UN ESPECIAL DE<br>NOPASANADA.**"
+    },
+    "arteycultura": {
+        image: "featured-arteycultura.jpeg",
+        title: "arte &<br>cultura.*",
+        subtitle: "",
+        text1: "PROXIMAMENTE",
+        text2: "PROXIMAMENTE",
+        text3: "PROXIMAMENTE"
+    }
+};
 
 let prevHash = null;
+let warned = false;
 let player = null;
 
-function OnResize() {
-    //const TARGET_ASPECT = 16.0 / 9.0;
-    const TARGET_ASPECT = 1.0;
-    let aspect = document.documentElement.clientWidth / document.documentElement.clientHeight;
-    if (aspect < TARGET_ASPECT) {
-        $("#introTitle").css("font-size", "15vw");
-        $("#introTitle").css("letter-spacing", "-0.6vw");
-        $("#introTitle").css("line-height", "12vw");
-        $("#introSubtitle").css("font-size", "3vw");
-        $(".cross").css("width", "12vw");
-        $(".cross").css("height", "12vw");
-    }
-    else {
-        $("#introTitle").css("font-size", "7.5vw");
-        $("#introTitle").css("letter-spacing", "-0.3vw");
-        $("#introTitle").css("line-height", "6vw");
-        $("#introSubtitle").css("font-size", "1.5vw");
-        $(".cross").css("width", "6vw");
-        $(".cross").css("height", "6vw");
+function Shuffle(array)
+{
+    let currentIndex = array.length;
+    let temporaryValue, randomIndex;
+
+    // While there remain elements to shuffle...
+    while (0 !== currentIndex) {
+        // Pick a remaining element...
+        randomIndex = Math.floor(Math.random() * currentIndex);
+        currentIndex -= 1;
+
+        // And swap it with the current element.
+        temporaryValue = array[currentIndex];
+        array[currentIndex] = array[randomIndex];
+        array[randomIndex] = temporaryValue;
     }
 
-    let marginX, marginY;
-    let playingVideo = false;
-    if (!playingVideo) {
-        marginX = 0;
-        marginY = 0;
-    }
-    else if (aspect > TARGET_ASPECT) {
-        let targetWidth = document.documentElement.clientHeight * TARGET_ASPECT;
-        let pillarWidth = (document.documentElement.clientWidth - targetWidth) / 2.0;
-        marginX = pillarWidth;
-        marginY = 0;
+    return array;
+};
+
+function SetFeaturedContent(category, instant)
+{
+    let entry = ENTRIES_FEATURED[category];
+    $("#featuredTitle").html(entry.title);
+    if (entry.subtitle === "") {
+        $("#featuredSubtitle").css("display", "none");
     }
     else {
-        let targetHeight = document.documentElement.clientWidth / TARGET_ASPECT;
-        let letterHeight = (document.documentElement.clientHeight - targetHeight) / 2.0;
-        marginX = 0;
-        marginY = letterHeight;
+        $("#featuredSubtitle").html(entry.subtitle);
     }
+    $("#featuredText1").html(entry.text1);
+    $("#featuredText2").html(entry.text2);
+    $("#featuredText3").html(entry.text3);
 
-    let $website = $("#website");
-    $website.css("margin-left",   marginX);
-    $website.css("margin-right",  marginX);
-    $website.css("margin-top",    marginY);
-    $website.css("margin-bottom", marginY);
-    $(".screen").each(function(index) {
-        let $this = $(this);
-        $this.height(document.documentElement.clientHeight - marginY * 2.0);
-    });
+    let $currentActive = $("#featuredImageCycler img.active");
+    let $currentTransition = $("#featuredImageCycler img.transition");
+    let $featuredImage = $("#featuredImage-" + category);
+    if (instant) {
+        $currentActive.removeClass("active");
+        $currentTransition.removeClass("transition");
+        $featuredImage.addClass("active");
+    }
+    else {
+        if ($currentActive.length === 0 && $currentTransition.length === 0) {
+            $featuredImage.addClass("active");
+        }
+        else if ($currentActive.length > 0 && $currentTransition.length === 0) {
+            $featuredImage.addClass("transition");
+            $currentActive.fadeOut(FEATURED_IMAGE_FADE_MS, function() {
+                $currentActive.removeClass("active").show();
+                $(".transition").addClass("active").removeClass("transition");
+            });
+        }
+        else if ($currentActive.length === 0 && $currentTransition.length > 0) {
+            // strange case, small timing issue, but this is JS so who knows
+            return;
+        }
+        else if ($currentActive.length > 0 && $currentTransition.length > 0) {
+            $(".transition").removeClass("transition");
+            $featuredImage.addClass("transition");
+        }
+    }
 }
 
-function HandleHash(hash)
+function HandleHash(hash, prevHash)
 {
+    if (prevHash === "#video") {
+        player.stopVideo();
+    }
+
     if (hash === "#video") {
+        if (prevHash === "#nopasanada") {
+            $("#video").show();
+            $("#screen3").stop().fadeOut(ABOUT_TEXT_FADE_MS, function() {
+                $("#screen1").stop().fadeIn(ABOUT_TEXT_FADE_MS);
+            })
+        }
+        else {
+            $("#video").stop().fadeIn(FEATURED_IMAGE_FADE_MS);
+        }
         player.playVideo();
-        $("#video").fadeIn(FADE_TIME_MS, function() {
-            $("#intro").hide();
+    }
+    else if (hash === "#nopasanada") {
+        $("#screen1").stop().fadeOut(ABOUT_TEXT_FADE_MS, function() {
+            $("#screen3").stop().fadeIn(ABOUT_TEXT_FADE_MS);
         });
     }
     else {
-        $("#intro").show();
-        $("#video").fadeOut(FADE_TIME_MS, function() {
-            player.stopVideo();
-        });
+        let category = "deportemoto";
+        let hashIndex = hash.indexOf("#");
+        if (hashIndex !== -1) {
+            let hashCategory = hash.substring(hashIndex + 1, hash.length);
+            if (ENTRIES_FEATURED.hasOwnProperty(hashCategory)) {
+                category = hashCategory;
+            }
+        }
+
+        if (prevHash === "#video") {
+            SetFeaturedContent(category, true);
+            $("#video").stop().fadeOut(FEATURED_IMAGE_FADE_MS);
+            return;
+        }
+        else if (prevHash === "#nopasanada") {
+            SetFeaturedContent(category, true);
+            $("#screen3").stop().fadeOut(ABOUT_TEXT_FADE_MS, function() {
+                $("#screen1").stop().fadeIn(ABOUT_TEXT_FADE_MS);
+            });
+        }
+        else if ((hash === "" && prevHash === "#deportemoto")
+        || (hash === "#deportemoto" && prevHash === "")) {
+            return;
+        }
+        else {
+            SetFeaturedContent(category, false);
+        }
     }
 }
 
 window.onhashchange = function() {
     let hash = window.location.hash;
     if (hash !== prevHash) {
+        let oldPrevHash = prevHash;
         prevHash = hash;
-        HandleHash(hash);
+        HandleHash(hash, oldPrevHash);
     }
 };
 
-
 window.onload = function() {
     OnResize();
-    $("#video").hide();
 
-    player = new YT.Player("video", {
-        height: "100%",
-        width: "100%",
-        videoId: "RDsCahyuga8",
-        playerVars: {
-            modestbranding: 1,
-            rel: 0
-        },
-        events: {
-            "onReady": function() {
-                HandleHash(window.location.hash);
+    $("#video").hide();
+    $("#screen3").hide();
+    try {
+        player = new YT.Player("video", {
+            height: "100%",
+            width: "100%",
+            videoId: "51aG1gGsULU",
+            playerVars: {
+                modestbranding: 1,
+                rel: 0
             },
-            "onStateChange": function(event) {
-                let state = event.data;
-                if (state === YT.PlayerState.PAUSED) {
-                    $("#intro").fadeIn(FADE_TIME_MS);
-                }
-                else if (state === YT.PlayerState.PLAYING) {
-                    $("#intro").fadeOut(FADE_TIME_MS);
-                }
-                else if (state === YT.PlayerState.ENDED) {
-                    window.location.hash = "#";
+            events: {
+                "onReady": function() {
+                    for (let key in ENTRIES_FEATURED) {
+                        let imgId = "featuredImage-" + key;
+                        let imgPath = "images/" + ENTRIES_FEATURED[key].image;
+                        $("#featuredImageCycler").append("<img id=\"" + imgId
+                            + "\" src=\"" + imgPath + "\">");
+                        // $("#" + imgId).hide();
+                    }
+                    HandleHash(window.location.hash);
+
+                    const MONTHS_SPANISH = [
+                        "ENERO", "FEBRERO", "MARZO",
+                        "ABRIL", "MAYO", "JUNIO",
+                        "JULIO", "AGOSTO", "SEPTIEMBRE",
+                        "OCTUBRE", "NOVIEMBRE", "DICIEMBRE"
+                    ];
+                    let today = new Date();
+                    $("#footerText1").html(today.getDate() + " DE "
+                        + MONTHS_SPANISH[today.getMonth()] + ",<br>"
+                        + today.getFullYear());
+
+                    SetupHeader();
+
+                    $("#content").css("visibility", "visible");
+                },
+                "onStateChange": function(event) {
+                    let state = event.data;
+                    if (state === YT.PlayerState.PAUSED) {
+                    }
+                    else if (state === YT.PlayerState.PLAYING) {
+                    }
+                    else if (state === YT.PlayerState.ENDED) {
+                    }
                 }
             }
-        }
-    });
-
-    $("#content").css("visibility", "visible");
+        });
+    }
+    catch (e) {
+        console.log(e);
+    }
 };
 
 window.onresize = OnResize;

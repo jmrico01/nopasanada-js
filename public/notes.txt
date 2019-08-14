@@ -1,0 +1,44 @@
+no pasa nada:
+- noticias
+- editorial
+- originales
+
+noticias (formato texto / articulo)
+- WIP, not yet (tipo en 2 semanas)
+
+noticias (formato video)
+- 
+
+
+
+shows YA YA
+- futbol (liga promerica)
+- enfoque (arte)
+- pilotos
+
+articulos (escritos)
+* 1 tema por semana, se desglosa en la categoria
+ejemplo: tema mujer
+- comida: mujeres en comida
+- belleza/moda: blabla
+- blabla, categoria por cada tema
+sale 1 por dia
+
+noticias en 3 partes
+- explainers de vox (traductor) (1 por semana) tema de interes : VIDEO
+- last week tonight (1 por semana) : VIDEO
+- reporte diario Delfino (1 al dia) : VIDEO creo
+
+SCHEDULE:
+
+
+lunes a viernes: articulos de tema mujer, viernes podcast, sabado explicado, domingo show
+1er episodio enfoque o pilotos
+lunes o miercoles: algo extra
+
+
+
+lunes:     traductor con articulo
+miercoles: 
+viernes episodio
+sabado show
