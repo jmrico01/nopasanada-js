@@ -144,6 +144,7 @@ function HandleHash(hash, prevHash)
             return;
         }
         else if (prevHash === "#nopasanada") {
+            $("#video").hide();
             SetFeaturedContent(category, true);
             $("#screen3").stop().fadeOut(ABOUT_TEXT_FADE_MS, function() {
                 $("#screen1").stop().fadeIn(ABOUT_TEXT_FADE_MS);
