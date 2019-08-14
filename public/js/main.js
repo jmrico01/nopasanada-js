@@ -13,7 +13,7 @@ const ENTRIES_FEATURED = {
         text3: "PROXIMAMENTE"
     },
     "deportemoto": {
-        image: "featured-deportemoto.png",
+        image: "featured-deportemoto2.png",
         //title: "wheels,<br>metal.",
         title: "pilotos.",
         subtitle: "",
