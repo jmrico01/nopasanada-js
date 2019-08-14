@@ -101,7 +101,7 @@
 
 #footer {
     width: 100%;
-    margin-top: 0.8vw;
+    margin-top: 2.2vw;
 
     color: #2a2a2a;
     font-family: FuturaPTBook;
@@ -116,15 +116,13 @@
 
 #footerText1 {
     float: left;
-    width: 23%;
-    margin-left: 11.5%;
+    width: 34.5%;
 }
 #footerText2 {
     float: left;
-    width: 43.8%;
 }
 #footerText3 {
-    float: left;
+    float: right;
 }
 
 #contentList {
