@@ -8,7 +8,7 @@ const ENTRIES_FEATURED = {
         image: "featured-noticias.jpg",
         title: "noticias.*",
         subtitle: "",
-        text1: "PROXIMAMENTE",
+        text1: "PROXIMAMENTE<br>&nbsp;",
         text2: "PROXIMAMENTE",
         text3: "PROXIMAMENTE"
     },
@@ -17,15 +17,15 @@ const ENTRIES_FEATURED = {
         //title: "wheels,<br>metal.",
         title: "pilotos.",
         subtitle: "",
-        text1: "PROXIMAMENTE",
+        text1: "EPISODIO 1:<br>FAMILIA",
         text2: "VER TRAILER",
         text3: "UN ESPECIAL DE<br>NOPASANADA.**"
     },
     "arteycultura": {
-        image: "featured-arteycultura2.jpeg",
-        title: "arte &<br>cultura.*",
+        image: "featured-arteycultura3.png",
+        title: "arte y<br>cultura.*",
         subtitle: "",
-        text1: "PROXIMAMENTE",
+        text1: "PROXIMAMENTE<br>&nbsp;",
         text2: "PROXIMAMENTE",
         text3: "PROXIMAMENTE"
     }
@@ -68,6 +68,12 @@ function SetFeaturedContent(category, instant)
     $("#featuredText1").html(entry.text1);
     $("#featuredText2").html(entry.text2);
     $("#featuredText3").html(entry.text3);
+
+    let href = "#video";
+    if (category !== "deportemoto") {
+        href = "#" + category;
+    }
+    $("#featuredLink").attr("href", href);
 
     let $currentActive = $("#featuredImageCycler img.active");
     let $currentTransition = $("#featuredImageCycler img.transition");
