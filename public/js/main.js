@@ -11,6 +11,7 @@ const ENTRIES_FEATURED = {
         decoration: "***",
         text1: "LOREM IPSUM DOLOR SIT AMET, CON<br>TETUR ADIPISCING ELIT, SED DO EIUS-<br>MOD TEMPOR INCIDIDUNT UT LABOR<br>DOLORE MAGNA ALIQUA",
         text2: "LOREM IPSUM DOLOR SIT AMET, CON<br>TETUR ADIPISCING ELIT, SED DO EIUS-<br>MOD TEMPOR INCIDIDUNT UT LABOR<br>DOLORE MAGNA ALIQUA",
+        link: "#noticias",
         canvasContext: null,
         canvasWidth: 0,
         canvasHeight: 0
@@ -22,6 +23,7 @@ const ENTRIES_FEATURED = {
         decoration: "***",
         text1: "LOREM IPSUM DOLOR SIT AMET, CON<br>TETUR ADIPISCING ELIT, SED DO EIUS-<br>MOD TEMPOR INCIDIDUNT UT LABOR<br>DOLORE MAGNA ALIQUA",
         text2: "LOREM IPSUM DOLOR SIT AMET, CON<br>TETUR ADIPISCING ELIT, SED DO EIUS-<br>MOD TEMPOR INCIDIDUNT UT LABOR<br>DOLORE MAGNA ALIQUA",
+        link: "#content-trailerp",
         canvasContext: null,
         canvasWidth: 0,
         canvasHeight: 0
@@ -33,6 +35,7 @@ const ENTRIES_FEATURED = {
         decoration: "***",
         text1: "LOREM IPSUM DOLOR SIT AMET, CON<br>TETUR ADIPISCING ELIT, SED DO EIUS-<br>MOD TEMPOR INCIDIDUNT UT LABOR<br>DOLORE MAGNA ALIQUA",
         text2: "LOREM IPSUM DOLOR SIT AMET, CON<br>TETUR ADIPISCING ELIT, SED DO EIUS-<br>MOD TEMPOR INCIDIDUNT UT LABOR<br>DOLORE MAGNA ALIQUA",
+        link: "#content-trailere",
         canvasContext: null,
         canvasWidth: 0,
         canvasHeight: 0
@@ -44,6 +47,7 @@ const ENTRIES_FEATURED = {
         decoration: "",
         text1: "LOREM IPSUM DOLOR SIT AMET, CON<br>TETUR ADIPISCING ELIT, SED DO EIUS-<br>MOD TEMPOR INCIDIDUNT UT LABOR<br>DOLORE MAGNA ALIQUA",
         text2: "LOREM IPSUM DOLOR SIT AMET, CON<br>TETUR ADIPISCING ELIT, SED DO EIUS-<br>MOD TEMPOR INCIDIDUNT UT LABOR<br>DOLORE MAGNA ALIQUA",
+        link: "#content-articulo1",
         canvasContext: null,
         canvasWidth: 0,
         canvasHeight: 0
@@ -55,6 +59,7 @@ const ENTRIES_FEATURED = {
         decoration: "***",
         text1: "LOREM IPSUM DOLOR SIT AMET, CON<br>TETUR ADIPISCING ELIT, SED DO EIUS-<br>MOD TEMPOR INCIDIDUNT UT LABOR<br>DOLORE MAGNA ALIQUA",
         text2: "LOREM IPSUM DOLOR SIT AMET, CON<br>TETUR ADIPISCING ELIT, SED DO EIUS-<br>MOD TEMPOR INCIDIDUNT UT LABOR<br>DOLORE MAGNA ALIQUA",
+        link: "#content-video",
         canvasContext: null,
         canvasWidth: 0,
         canvasHeight: 0
@@ -101,21 +106,14 @@ function SetFeaturedContent(category, instant)
 {
     let entry = ENTRIES_FEATURED[category];
     $("#featuredPretitle").html(entry.pretitle);
-    $("#featuredTitle").html(entry.title);
+    $("#featuredTitle a").html(entry.title);
+    $("#featuredTitle a").attr("href", entry.link);
     $("#featuredDecoration").html(entry.decoration);
     $("#featuredText1").html(entry.text1);
     $("#featuredText2").html(entry.text2);
 
-    /*
-    let href = "#video";
-    if (category !== "deportemoto") {
-        href = "#" + category;
-    }
-    $("#featuredLink").attr("href", href);
-    */
-
-    let $currentActive = $("#landingImageCycler img.active");
-    let $currentTransition = $("#landingImageCycler img.transition");
+    let $currentActive = $("#landingImageCycler canvas.active");
+    let $currentTransition = $("#landingImageCycler canvas.transition");
     let $featuredImage = $("#featuredImage-" + category);
     if (instant) {
         $currentActive.removeClass("active");
@@ -146,16 +144,20 @@ function SetFeaturedContent(category, instant)
 
 function HandleHash(hash, prevHash)
 {
+    let isCategory = hash === "";
     let category = "nopasanada";
     let hashIndex = hash.indexOf("#");
     if (hashIndex !== -1) {
         let hashCategory = hash.substring(hashIndex + 1, hash.length);
         if (ENTRIES_FEATURED.hasOwnProperty(hashCategory)) {
+            isCategory = true;
             category = hashCategory;
         }
     }
 
-    SetFeaturedContent(category, false);
+    if (isCategory) {
+        SetFeaturedContent(category, false);
+    }
 }
 
 function OnResize() {
@@ -178,6 +180,14 @@ function OnResize() {
         }, 0);
     }
 }
+
+window.onscroll = function() {
+    let scrollTopMax = Math.max(document.body.scrollHeight, document.body.offsetHeight,
+        document.documentElement.clientHeight, document.documentElement.scrollHeight,
+        document.documentElement.offsetHeight) - document.documentElement.clientHeight;
+    let headerOpacity = document.documentElement.scrollTop / scrollTopMax;
+    $("#header").css("background-color", "rgba(10%, 10%, 10%, " + headerOpacity * 100.0 + "%)");
+};
 
 window.onhashchange = function() {
     let hash = window.location.hash;
