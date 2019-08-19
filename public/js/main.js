@@ -6,8 +6,9 @@ const ABOUT_TEXT_FADE_MS = 200;
 const ENTRIES_FEATURED = {
     "noticias": {
         image: "garrazo.png",
-        pretitle: "ESTO ES:",
-        title: "<b>NO</b> PASA<br>NADA<b>.</b>",
+        pretitle: "PROXIMAMENTE:",
+        title: "NOTICIAS<br>---<b>.</b>",
+        decoration: "***",
         text1: "LOREM IPSUM DOLOR SIT AMET, CON<br>TETUR ADIPISCING ELIT, SED DO EIUS-<br>MOD TEMPOR INCIDIDUNT UT LABOR<br>DOLORE MAGNA ALIQUA",
         text2: "LOREM IPSUM DOLOR SIT AMET, CON<br>TETUR ADIPISCING ELIT, SED DO EIUS-<br>MOD TEMPOR INCIDIDUNT UT LABOR<br>DOLORE MAGNA ALIQUA",
         canvasContext: null,
@@ -16,8 +17,9 @@ const ENTRIES_FEATURED = {
     },
     "deporteymoto": {
         image: "garrazo.png",
-        pretitle: "ESTO ES:",
-        title: "<b>NO</b> PASA<br>TODO<b>.</b>",
+        pretitle: "SERIE:",
+        title: "PILOTOS<br><b>EP 1.</b>",
+        decoration: "***",
         text1: "LOREM IPSUM DOLOR SIT AMET, CON<br>TETUR ADIPISCING ELIT, SED DO EIUS-<br>MOD TEMPOR INCIDIDUNT UT LABOR<br>DOLORE MAGNA ALIQUA",
         text2: "LOREM IPSUM DOLOR SIT AMET, CON<br>TETUR ADIPISCING ELIT, SED DO EIUS-<br>MOD TEMPOR INCIDIDUNT UT LABOR<br>DOLORE MAGNA ALIQUA",
         canvasContext: null,
@@ -26,8 +28,9 @@ const ENTRIES_FEATURED = {
     },
     "arteycultura": {
         image: "garrazo.png",
-        pretitle: "ESTO ES:",
-        title: "<b>SI</b> PASA<br>TOME<b>.</b>",
+        pretitle: "SERIE:",
+        title: "ENFOQUE<br><b>EP 1.</b>",
+        decoration: "***",
         text1: "LOREM IPSUM DOLOR SIT AMET, CON<br>TETUR ADIPISCING ELIT, SED DO EIUS-<br>MOD TEMPOR INCIDIDUNT UT LABOR<br>DOLORE MAGNA ALIQUA",
         text2: "LOREM IPSUM DOLOR SIT AMET, CON<br>TETUR ADIPISCING ELIT, SED DO EIUS-<br>MOD TEMPOR INCIDIDUNT UT LABOR<br>DOLORE MAGNA ALIQUA",
         canvasContext: null,
@@ -35,9 +38,21 @@ const ENTRIES_FEATURED = {
         canvasHeight: 0
     },
     "moda": {
+        image: "featured-arteycultura3.png",
+        pretitle: "TEMA SEMANAL:",
+        title: "LA MUJER,<br><b>D&Iacute;A 1.</b>",
+        decoration: "",
+        text1: "LOREM IPSUM DOLOR SIT AMET, CON<br>TETUR ADIPISCING ELIT, SED DO EIUS-<br>MOD TEMPOR INCIDIDUNT UT LABOR<br>DOLORE MAGNA ALIQUA",
+        text2: "LOREM IPSUM DOLOR SIT AMET, CON<br>TETUR ADIPISCING ELIT, SED DO EIUS-<br>MOD TEMPOR INCIDIDUNT UT LABOR<br>DOLORE MAGNA ALIQUA",
+        canvasContext: null,
+        canvasWidth: 0,
+        canvasHeight: 0
+    },
+    "nopasanada": {
         image: "garrazo.png",
         pretitle: "ESTO ES:",
-        title: "<b>NO</b> PASA<br>CHUPE<b>.</b>",
+        title: "<b>NO</b> PASA<br>NADA<b>.</b>",
+        decoration: "***",
         text1: "LOREM IPSUM DOLOR SIT AMET, CON<br>TETUR ADIPISCING ELIT, SED DO EIUS-<br>MOD TEMPOR INCIDIDUNT UT LABOR<br>DOLORE MAGNA ALIQUA",
         text2: "LOREM IPSUM DOLOR SIT AMET, CON<br>TETUR ADIPISCING ELIT, SED DO EIUS-<br>MOD TEMPOR INCIDIDUNT UT LABOR<br>DOLORE MAGNA ALIQUA",
         canvasContext: null,
@@ -87,6 +102,7 @@ function SetFeaturedContent(category, instant)
     let entry = ENTRIES_FEATURED[category];
     $("#featuredPretitle").html(entry.pretitle);
     $("#featuredTitle").html(entry.title);
+    $("#featuredDecoration").html(entry.decoration);
     $("#featuredText1").html(entry.text1);
     $("#featuredText2").html(entry.text2);
 
@@ -130,7 +146,7 @@ function SetFeaturedContent(category, instant)
 
 function HandleHash(hash, prevHash)
 {
-    let category = "noticias";
+    let category = "nopasanada";
     let hashIndex = hash.indexOf("#");
     if (hashIndex !== -1) {
         let hashCategory = hash.substring(hashIndex + 1, hash.length);

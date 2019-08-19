@@ -6,7 +6,7 @@
 }
 
 #screenPosters {
-    background-color: blue;
+    background-color: #222;
 }
 
 #video {
@@ -71,7 +71,7 @@
     font-family: MiedingerBold;
 }
 
-#featuredAsterisks {
+#featuredDecoration {
     font-family: MiedingerBold;
     font-size: 3.1vw;
     letter-spacing: 0.4vw;
