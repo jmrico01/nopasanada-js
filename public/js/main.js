@@ -5,82 +5,69 @@ const ABOUT_TEXT_FADE_MS = 200;
 
 const ENTRIES_FEATURED = {
     "noticias": {
-        image: "garrazo.png",
+        images: [
+            "garrazo.png"
+        ],
         pretitle: "PROXIMAMENTE:",
         title: "NOTICIAS<br>---<b>.</b>",
         decoration: "***",
         text1: "LOREM IPSUM DOLOR SIT AMET, CON<br>TETUR ADIPISCING ELIT, SED DO EIUS-<br>MOD TEMPOR INCIDIDUNT UT LABOR<br>DOLORE MAGNA ALIQUA",
         text2: "LOREM IPSUM DOLOR SIT AMET, CON<br>TETUR ADIPISCING ELIT, SED DO EIUS-<br>MOD TEMPOR INCIDIDUNT UT LABOR<br>DOLORE MAGNA ALIQUA",
-        link: "#noticias",
-        canvasContext: null,
-        canvasWidth: 0,
-        canvasHeight: 0
+        link: "#noticias"
     },
     "deporteymoto": {
-        image: "garrazo.png",
+        images: [
+            "garrazo.png"
+        ],
         pretitle: "SERIE:",
         title: "PILOTOS<br><b>EP 1.</b>",
         decoration: "***",
         text1: "LOREM IPSUM DOLOR SIT AMET, CON<br>TETUR ADIPISCING ELIT, SED DO EIUS-<br>MOD TEMPOR INCIDIDUNT UT LABOR<br>DOLORE MAGNA ALIQUA",
         text2: "LOREM IPSUM DOLOR SIT AMET, CON<br>TETUR ADIPISCING ELIT, SED DO EIUS-<br>MOD TEMPOR INCIDIDUNT UT LABOR<br>DOLORE MAGNA ALIQUA",
-        link: "#content-trailerp",
-        canvasContext: null,
-        canvasWidth: 0,
-        canvasHeight: 0
+        link: "#content-trailerp"
     },
     "arteycultura": {
-        image: "garrazo.png",
+        images: [
+            "garrazo.png"
+        ],
         pretitle: "SERIE:",
         title: "ENFOQUE<br><b>EP 1.</b>",
         decoration: "***",
         text1: "LOREM IPSUM DOLOR SIT AMET, CON<br>TETUR ADIPISCING ELIT, SED DO EIUS-<br>MOD TEMPOR INCIDIDUNT UT LABOR<br>DOLORE MAGNA ALIQUA",
         text2: "LOREM IPSUM DOLOR SIT AMET, CON<br>TETUR ADIPISCING ELIT, SED DO EIUS-<br>MOD TEMPOR INCIDIDUNT UT LABOR<br>DOLORE MAGNA ALIQUA",
-        link: "#content-trailere",
-        canvasContext: null,
-        canvasWidth: 0,
-        canvasHeight: 0
+        link: "#content-trailere"
     },
     "moda": {
-        image: "featured-arteycultura3.png",
+        images: [
+            "featured-arteycultura3.png"
+        ],
         pretitle: "TEMA SEMANAL:",
         title: "LA MUJER,<br><b>D&Iacute;A 1.</b>",
         decoration: "",
         text1: "LOREM IPSUM DOLOR SIT AMET, CON<br>TETUR ADIPISCING ELIT, SED DO EIUS-<br>MOD TEMPOR INCIDIDUNT UT LABOR<br>DOLORE MAGNA ALIQUA",
         text2: "LOREM IPSUM DOLOR SIT AMET, CON<br>TETUR ADIPISCING ELIT, SED DO EIUS-<br>MOD TEMPOR INCIDIDUNT UT LABOR<br>DOLORE MAGNA ALIQUA",
-        link: "#content-articulo1",
-        canvasContext: null,
-        canvasWidth: 0,
-        canvasHeight: 0
+        link: "#content-articulo1"
     },
     "nopasanada": {
-        image: "garrazo.png",
+        images: [
+            "garrote1.png",
+            "garrote2.png",
+            "garrote3.png",
+            "garrote4.png"
+        ],
         pretitle: "ESTO ES:",
         title: "<b>NO</b> PASA<br>NADA<b>.</b>",
         decoration: "***",
         text1: "LOREM IPSUM DOLOR SIT AMET, CON<br>TETUR ADIPISCING ELIT, SED DO EIUS-<br>MOD TEMPOR INCIDIDUNT UT LABOR<br>DOLORE MAGNA ALIQUA",
         text2: "LOREM IPSUM DOLOR SIT AMET, CON<br>TETUR ADIPISCING ELIT, SED DO EIUS-<br>MOD TEMPOR INCIDIDUNT UT LABOR<br>DOLORE MAGNA ALIQUA",
-        link: "#content-video",
-        canvasContext: null,
-        canvasWidth: 0,
-        canvasHeight: 0
+        link: "#content-video"
     }
 };
 
 let prevHash = null;
 let warned = false;
 let player = null;
-
-// change these settings
-let PATTERN_WIDTH   = 592;
-let PATTERN_HEIGHT  = 577;
-let PATTERN_ALPHA   = 15;
-let PATTERN_PIXELS  = PATTERN_WIDTH * PATTERN_HEIGHT * 4;
-let PATTERN_REFRESH_INTERVAL = 1;
-
-let patternCanvas;
-let patternCtx;
-let patternData;
-let frame = 0;
+let imgCycleInterval = null;
 
 function Shuffle(array)
 {
@@ -112,9 +99,15 @@ function SetFeaturedContent(category, instant)
     $("#featuredText1").html(entry.text1);
     $("#featuredText2").html(entry.text2);
 
-    let $currentActive = $("#landingImageCycler canvas.active");
-    let $currentTransition = $("#landingImageCycler canvas.transition");
-    let $featuredImage = $("#featuredImage-" + category);
+    if (imgCycleInterval !== null) {
+        clearInterval(imgCycleInterval);
+    }
+
+    let imageClass = ".featuredImage-" + category;
+    let imageId = "#featuredImage-" + category + "-0";
+    let $currentActive = $("#landingImageCycler img.active");
+    let $currentTransition = $("#landingImageCycler img.transition");
+    let $featuredImage = $(imageId);
     if (instant) {
         $currentActive.removeClass("active");
         $currentTransition.removeClass("transition");
@@ -133,13 +126,32 @@ function SetFeaturedContent(category, instant)
         }
         else if ($currentActive.length === 0 && $currentTransition.length > 0) {
             // strange case, small timing issue, but this is JS so who knows
-            return;
         }
         else if ($currentActive.length > 0 && $currentTransition.length > 0) {
             $(".transition").removeClass("transition");
             $featuredImage.addClass("transition");
         }
     }
+
+    let counter = 0;
+    let counterDir = 1;
+    imgCycleInterval = setInterval(function() {
+        let numImages = ENTRIES_FEATURED[category].images.length;
+        if (numImages === 1) {
+            return;
+        }
+        let imageId = "#featuredImage-" + category + "-" + counter;
+        let $currentActive = $("#landingImageCycler img.active");
+        $currentActive.removeClass("active");
+        let $featuredImage = $(imageId).addClass("active");
+        if (counter >= numImages - 1) {
+            counterDir = -1;
+        }
+        else if (counter <= 0) {
+            counterDir = 1;
+        }
+        counter += counterDir;
+    }, 250);
 }
 
 function HandleHash(hash, prevHash)
@@ -201,70 +213,19 @@ window.onhashchange = function() {
     }
 };
 
-// create a canvas which will be used as a pattern
-function initGrain() {
-    patternCanvas = document.createElement('canvas');
-    patternCanvas.width = PATTERN_WIDTH;
-    patternCanvas.height = PATTERN_HEIGHT;
-    patternCtx = patternCanvas.getContext('2d');
-    patternData = patternCtx.createImageData(PATTERN_WIDTH, PATTERN_HEIGHT);
-}
-
-// put a random shade of gray into every pixel of the pattern
-function update() {
-    var value;
-
-    for (var i = 0; i < PATTERN_PIXELS; i += 4) {
-        value = (Math.random() * 255) | 0;
-
-        patternData.data[i    ] = value;
-        patternData.data[i + 1] = value;
-        patternData.data[i + 2] = value;
-        patternData.data[i + 3] = PATTERN_ALPHA;
-    }
-
-    patternCtx.putImageData(patternData, 0, 0);
-}
-
-// fill the canvas using the pattern
-function draw() {
-    return;
-    let entry = ENTRIES_FEATURED["noticias"];
-    let context = entry.canvasContext;
-    entry.canvasContext.clearRect(0, 0, entry.canvasWidth, entry.canvasHeight);
-
-    entry.canvasContext.fillStyle = entry.canvasContext.createPattern(patternCanvas, "repeat");
-    entry.canvasContext.fillRect(0, 0, entry.canvasWidth, entry.canvasHeight);
-}
-
-function loop() {
-    if (++frame % PATTERN_REFRESH_INTERVAL === 0) {
-        update();
-        draw();
-    }
-
-    requestAnimationFrame(loop);
-}
-
 window.onload = function() {
     for (let key in ENTRIES_FEATURED) {
-        let imgId = "featuredImage-" + key;
-        let imgPath = "images/" + ENTRIES_FEATURED[key].image;
-        $("#landingImageCycler").append("<canvas id=\"" + imgId + "\">");
-        let $canvas = $("#" + imgId);
-        $canvas.width("100%");
-        $canvas.height("100%");
-        $canvas.css("background-image", "url(\"" + imgPath + "\")");
-        $canvas.css("background-repeat", "no-repeat");
-        $canvas.css("background-size", "cover");
-
-        ENTRIES_FEATURED[key].canvasContext = $canvas[0].getContext("2d");
-        ENTRIES_FEATURED[key].canvasWidth = $canvas[0].clientWidth;
-        ENTRIES_FEATURED[key].canvasHeight = $canvas[0].clientHeight;
-        //ENTRIES_FEATURED[key].canvasContext.scale(patternScaleX, patternScaleY);
+        let imgClass = "featuredImage-" + key;
+        for (let i = 0; i < ENTRIES_FEATURED[key].images.length; i++) {
+            let imgId = imgClass + "-" + i;
+            let imgPath = "images/" + ENTRIES_FEATURED[key].images[i];
+            $("#landingImageCycler").append("<img id=\"" + imgId + "\" class=\"" + imgClass + "\" src=\"" + imgPath + "\">");
+            let $img = $("#" + imgId);
+            $img.width("100%");
+            $img.height("100%");
+        }
     }
-    initGrain();
-    requestAnimationFrame(loop);
+
     HandleHash(window.location.hash);
     OnResize();
 

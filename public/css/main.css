@@ -35,17 +35,17 @@
     z-index: -1;
 }
 
-#landingImageCycler canvas {
+#landingImageCycler img {
     position: absolute;
     top: 0;
     min-width: 100%;
     min-height: 100%;
     z-index: -4;
 }
-#landingImageCycler canvas.transition {
+#landingImageCycler img.transition {
     z-index: -3;
 }
-#landingImageCycler canvas.active {
+#landingImageCycler img.active {
     z-index: -2;
 }
 
