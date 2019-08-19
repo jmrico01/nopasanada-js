@@ -2,11 +2,13 @@
 
 const FEATURED_IMAGE_FADE_MS = 400;
 const ABOUT_TEXT_FADE_MS = 200;
+const IMAGE_ANIM_MS = 250;
 
 const ENTRIES_FEATURED = {
     "noticias": {
         images: [
-            "garrazo.jpg"
+            "garrotex1.jpg",
+            "garrotex2.jpg"
         ],
         pretitle: "PROXIMAMENTE:",
         title: "NOTICIAS<br>---<b>.</b>",
@@ -45,7 +47,7 @@ const ENTRIES_FEATURED = {
     },
     "moda": {
         images: [
-            "guilasexual1.jpg"
+            "garrazo.jpg"
         ],
         pretitle: "TEMA SEMANAL:",
         title: "LA MUJER,<br><b>D&Iacute;A 1.</b>",
@@ -157,7 +159,7 @@ function SetFeaturedContent(category, instant)
             counterDir = 1;
         }
         counter += counterDir;
-    }, 250);
+    }, IMAGE_ANIM_MS);
 }
 
 function HandleHash(hash, prevHash)
@@ -174,7 +176,15 @@ function HandleHash(hash, prevHash)
     }
 
     if (isCategory) {
+        $("#article").hide();
+        $("#screenLanding").show();
+        $("#screenPosters").show();
         SetFeaturedContent(category, false);
+    }
+    else {
+        $("#screenLanding").hide();
+        $("#screenPosters").hide();
+        $("#article").show();
     }
 }
 
