@@ -72,6 +72,21 @@ const ENTRIES_FEATURED = {
     }
 };
 
+const ARTICLES = {
+    "trailerp": {
+        video: "51aG1gGsULU"
+    },
+    "trailere": {
+        video: "g36TGvzIi5o"
+    },
+    "articulo1": {
+        image: "guilasexual1.jpg"
+    },
+    "video": {
+        video: "TzxV2HgY35s"
+    }
+};
+
 let IMAGE_ASPECT = 1920 / 960;
 
 let prevHash = null;
@@ -164,19 +179,68 @@ function SetFeaturedContent(category, instant)
     }, IMAGE_ANIM_MS);
 }
 
+function SetArticle(articleName)
+{
+    $("html, body").animate({ scrollTop: 0 }, 200);
+    let article = ARTICLES[articleName];
+
+    if (article.hasOwnProperty("video")) {
+        $("#articleImage").hide();
+        $("#articleVideo").show();
+        try {
+            player = new YT.Player("articleVideo", {
+                height: "100%",
+                width: "100%",
+                videoId: article.video,
+                playerVars: {
+                    modestbranding: 1,
+                    rel: 0
+                },
+                events: {
+                    "onReady": function() {
+                    },
+                    "onStateChange": function(event) {
+                        let state = event.data;
+                        if (state === YT.PlayerState.PAUSED) {
+                        }
+                        else if (state === YT.PlayerState.PLAYING) {
+                        }
+                        else if (state === YT.PlayerState.ENDED) {
+                        }
+                    }
+                }
+            });
+        }
+        catch (e) {
+            console.log(e);
+        }
+    }
+    else {
+        $("#articleVideo").hide();
+        $("#articleImage").show();
+        $("#articleImage").css("background-image", "url(\"" + "../images/" + article.image + "\")");
+    }
+}
+
 function HandleHash(hash, prevHash)
 {
-    let isCategory = hash === "";
+    let isCategory = hash === null || hash === "";
     let category = "nopasanada";
-    let hashIndex = hash.indexOf("#");
-    if (hashIndex !== -1) {
-        let hashCategory = hash.substring(hashIndex + 1, hash.length);
-        if (ENTRIES_FEATURED.hasOwnProperty(hashCategory)) {
-            isCategory = true;
-            category = hashCategory;
+    if (!isCategory) {
+        let hashIndex = hash.indexOf("#");
+        if (hashIndex !== -1) {
+            let hashCategory = hash.substring(hashIndex + 1, hash.length);
+            if (ENTRIES_FEATURED.hasOwnProperty(hashCategory)) {
+                isCategory = true;
+                category = hashCategory;
+            }
         }
     }
 
+    if (player !== null) {
+        player.destroy();
+        player = null;
+    }
     if (isCategory) {
         $("#article").hide();
         $("#screenLanding").show();
@@ -184,9 +248,12 @@ function HandleHash(hash, prevHash)
         SetFeaturedContent(category, false);
     }
     else {
+        let articleName = hash.substring(hash.indexOf("-") + 1, hash.length);
+        console.log(articleName);
         $("#screenLanding").hide();
         $("#screenPosters").hide();
         $("#article").show();
+        SetArticle(articleName);
     }
 }
 
@@ -261,61 +328,6 @@ window.onload = function() {
 
     $("#screenArticle").hide();
     $("#content").css("visibility", "visible");
-
-/*
-    $("#video").hide();
-    $("#screen3").hide();
-    try {
-        player = new YT.Player("video", {
-            height: "100%",
-            width: "100%",
-            videoId: "51aG1gGsULU",
-            playerVars: {
-                modestbranding: 1,
-                rel: 0
-            },
-            events: {
-                "onReady": function() {
-                    for (let key in ENTRIES_FEATURED) {
-                        let imgId = "featuredImage-" + key;
-                        let imgPath = "images/" + ENTRIES_FEATURED[key].image;
-                        $("#featuredImageCycler").append("<img id=\"" + imgId
-                            + "\" src=\"" + imgPath + "\">");
-                        // $("#" + imgId).hide();
-                    }
-                    HandleHash(window.location.hash);
-
-                    const MONTHS_SPANISH = [
-                        "ENERO", "FEBRERO", "MARZO",
-                        "ABRIL", "MAYO", "JUNIO",
-                        "JULIO", "AGOSTO", "SEPTIEMBRE",
-                        "OCTUBRE", "NOVIEMBRE", "DICIEMBRE"
-                    ];
-                    let today = new Date();
-                    $("#footerText1").html(today.getDate() + " DE "
-                        + MONTHS_SPANISH[today.getMonth()] + ",<br>"
-                        + today.getFullYear());
-
-                    SetupHeader();
-
-                    $("#content").css("visibility", "visible");
-                },
-                "onStateChange": function(event) {
-                    let state = event.data;
-                    if (state === YT.PlayerState.PAUSED) {
-                    }
-                    else if (state === YT.PlayerState.PLAYING) {
-                    }
-                    else if (state === YT.PlayerState.ENDED) {
-                    }
-                }
-            }
-        });
-    }
-    catch (e) {
-        console.log(e);
-    }
-*/
 };
 
 window.onresize = OnResize;
