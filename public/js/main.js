@@ -202,6 +202,7 @@ function update() {
 
 // fill the canvas using the pattern
 function draw() {
+    return;
     let entry = ENTRIES_FEATURED["noticias"];
     let context = entry.canvasContext;
     entry.canvasContext.clearRect(0, 0, entry.canvasWidth, entry.canvasHeight);
