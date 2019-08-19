@@ -35,8 +35,6 @@
 #landingImageCycler img {
     position: absolute;
     top: 0;
-    min-width: 100%;
-    min-height: 100%;
     z-index: -4;
 
     background-color: #000000;

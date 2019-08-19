@@ -72,6 +72,8 @@ const ENTRIES_FEATURED = {
     }
 };
 
+let IMAGE_ASPECT = 1920 / 960;
+
 let prevHash = null;
 let warned = false;
 let player = null;
@@ -198,6 +200,21 @@ function OnResize() {
         $this.css("padding-bottom", 0);
     });
 
+    $(".featuredImage").each(function(index) {
+        let $this = $(this);
+        if (aspect > IMAGE_ASPECT) {
+            $this.width("100%");
+            $this.height("auto");
+        }
+        else {
+            $this.width("auto");
+            $this.height("100%");
+            let imageWidth = document.documentElement.clientHeight * IMAGE_ASPECT;
+            let marginX = (imageWidth - document.documentElement.clientWidth) / 2;
+            $this.css("margin-left", -marginX);
+        }
+    });
+
     if (aspect < 1.45 && !warned) {
         warned = true;
         setTimeout(function() {
@@ -235,10 +252,7 @@ window.onload = function() {
         for (let i = 0; i < ENTRIES_FEATURED[key].images.length; i++) {
             let imgId = imgClass + "-" + i;
             let imgPath = "images/" + ENTRIES_FEATURED[key].images[i];
-            $("#landingImageCycler").append("<img id=\"" + imgId + "\" class=\"" + imgClass + "\" src=\"" + imgPath + "\">");
-            let $img = $("#" + imgId);
-            $img.width("100%");
-            $img.height("100%");
+            $("#landingImageCycler").append("<img id=\"" + imgId + "\" class=\"featuredImage " + imgClass + "\" src=\"" + imgPath + "\">");
         }
     }
 
