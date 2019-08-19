@@ -6,7 +6,7 @@ const ABOUT_TEXT_FADE_MS = 200;
 const ENTRIES_FEATURED = {
     "noticias": {
         images: [
-            "garrazo.png"
+            "garrazo.jpg"
         ],
         pretitle: "PROXIMAMENTE:",
         title: "NOTICIAS<br>---<b>.</b>",
@@ -17,10 +17,10 @@ const ENTRIES_FEATURED = {
     },
     "deporteymoto": {
         images: [
-            "moto1.png",
-            "moto2.png",
-            "moto3.png",
-            "moto4.png"
+            "moto1.jpg",
+            "moto2.jpg",
+            "moto3.jpg",
+            "moto4.jpg"
         ],
         pretitle: "SERIE:",
         title: "PILOTOS<br><b>EP 1.</b>",
@@ -31,10 +31,10 @@ const ENTRIES_FEATURED = {
     },
     "arteycultura": {
         images: [
-            "enfoque1.png",
-            "enfoque2.png",
-            "enfoque3.png",
-            "enfoque4.png"
+            "enfoque1.jpg",
+            "enfoque2.jpg",
+            "enfoque3.jpg",
+            "enfoque4.jpg"
         ],
         pretitle: "SERIE:",
         title: "ENFOQUE<br><b>EP 1.</b>",
@@ -45,7 +45,7 @@ const ENTRIES_FEATURED = {
     },
     "moda": {
         images: [
-            "guilasexual1.png"
+            "guilasexual1.jpg"
         ],
         pretitle: "TEMA SEMANAL:",
         title: "LA MUJER,<br><b>D&Iacute;A 1.</b>",
@@ -56,10 +56,10 @@ const ENTRIES_FEATURED = {
     },
     "nopasanada": {
         images: [
-            "garrote1.png",
-            "garrote2.png",
-            "garrote3.png",
-            "garrote4.png"
+            "garrote1.jpg",
+            "garrote2.jpg",
+            "garrote3.jpg",
+            "garrote4.jpg"
         ],
         pretitle: "ESTO ES:",
         title: "<b>NO</b> PASA<br>NADA<b>.</b>",
