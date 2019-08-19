@@ -1,0 +1,219 @@
+#content {
+    visibility: hidden; /* hide wonky stuff until page loads */
+}
+
+.screen {
+    height: 70vh;
+    max-height: 46vw;
+    padding-top: 0;    /* match header, set by JS */
+    padding-bottom: 0; /* match header, set by JS */
+}
+
+#featuredContainer {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+#video {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+
+    z-index: 1;
+}
+
+#featuredImageCycler {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+#featuredImageCycler img {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: -3;
+}
+#featuredImageCycler img.transition {
+    z-index: -2;
+}
+#featuredImageCycler img.active {
+    z-index: -1;
+}
+
+#featuredTextContainer {
+    color: #ffffff;
+
+    position: absolute;
+    left: 11.5%;
+    right: 11.5%;
+    bottom: 16%;
+}
+
+#featuredTitle {
+    font-family: FuturaPTDemiItalic;
+    font-size: 11vw;
+    letter-spacing: -0.6vw;
+    line-height: 9vw;
+}
+
+#featuredSubtitle {
+    font-family: FuturaPTDemiItalic;
+    font-size: 3.8vw;
+    letter-spacing: -0.2vw;
+    line-height: 2.4vw;
+
+    padding-top: 4vw;
+    display: none;
+}
+
+#featuredLine {
+    width: 100%;
+    /*margin-top: 4vw;*/
+    margin-top: 3.5vw;
+    margin-bottom: 0.8vw;
+    border-bottom: 0.1vw solid #ffffff;
+}
+
+#featuredText {
+    font-family: FuturaPTMedium;
+    font-size: 1.1vw;
+    letter-spacing: -0.02vw;
+
+    overflow: auto;
+}
+
+#featuredText1 {
+    float: left;
+    width: 30%;
+}
+#featuredText2 {
+    float: left;
+    width: 56%;
+}
+#featuredText3 {
+    float: left;
+}
+
+#footer {
+    width: 100%;
+    margin-top: 2.2vw;
+
+    color: #2a2a2a;
+    font-family: FuturaPTBook;
+    font-size: 0.9vw;
+}
+
+#footerLine {
+    margin-bottom: 0.8vw;
+    border-bottom: 0.05vw solid #2a2a2a;
+    display:none;
+}
+
+#footerText1 {
+    float: left;
+    width: 34.5%;
+}
+#footerText2 {
+    float: left;
+}
+#footerText3 {
+    float: right;
+}
+
+#contentList {
+    width: 100%;
+    height: 100%;
+    margin: auto;
+}
+
+.entry {
+    float: left;
+    width: 24.25%;
+    height: 100%;
+    -webkit-filter: brightness(100%);
+    -webkit-transition: all 0.2s ease;
+    -moz-transition: all 0.2s ease;
+    -o-transition: all 0.2s ease;
+    -ms-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+}
+
+.entry:hover {
+    -webkit-filter: brightness(80%);
+    -webkit-transition: all 0.2s ease;
+    -moz-transition: all 0.2s ease;
+    -o-transition: all 0.2s ease;
+    -ms-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+}
+
+.entryImage {
+    background-color: #231F20;
+
+    width: 100%;
+    height: 90%;
+    height: 100%; /* nuke entryName for now */
+}
+
+.entryImage img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.entryName {
+    font-family: FuturaHeavyOblique;
+    color: #231F20;
+    font-size: 1.86vw;
+
+    width: 100%;
+    height: 5%;
+    margin-top: 5%;
+    display: none; /* nuked for now */
+}
+
+.entrySpace {
+    float: left;
+    width: 1%;
+    height: 100%;
+}
+
+#screen3 {
+    padding-top: 21vh;
+    padding-bottom: 15vh;
+}
+
+#articleContainer {
+    width: 50%;
+    padding-left: 25%;
+    padding-right: 25%;
+}
+
+#articleContainer h1 {
+    font-family: FuturaPTHeavy;
+    font-size: 5.5vw;
+    letter-spacing: -0.3vw;
+    line-height: 5.3vw;
+
+    margin-top: 2vw;
+    margin-bottom: 4vw;
+}
+
+#articleContainer p {
+    font-family: FuturaPTBook;
+    font-size: 1.4vw;
+    letter-spacing: 0.01vw;
+    line-height: 1.8vw;
+}
+
+#articleContainer em {
+    font-family: FuturaPTBookItalic;
+    font-size: 1.4vw;
+    letter-spacing: 0.01vw;
+    line-height: 1.8vw;
+}

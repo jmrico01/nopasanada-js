@@ -44,103 +44,148 @@
 	
 	<script type="application/javascript" src="js/jquery-3.4.1.min.js"></script>
 	<script type="application/javascript" src="https://www.youtube.com/iframe_api"></script>
+	<script type="application/javascript" src="js/header.js"></script>
+	<script type="application/javascript" src="js/screen.js"></script>
 	<script type="application/javascript" src="js/main.js"></script>
 </head>
 
 <body>
 	<div id="website">
 		<div id="header">
-			<!--
-			<div id="hrow1"></div>
-			<div id="hrow2"></div>
-			<div id="hrow3">
-				<div id="hrow31"></div>
-				<div id="hrow32"></div>
-			</div>
-			<div id="hrow4"></div>
-			<div id="hrow5"></div>
-			<div id="col1"></div>
-			<div id="col2"></div>
-			<div id="col3"></div>
-			<div id="col4"></div>
-			<div id="col5"></div>
-			<div id="colR2"></div>
-			<div id="colR1"></div>
-		-->
-
-			<div id="headerLogo">
-				<a href="/">
-					NO PASA NADA.
-				</a>
-			</div>
-			<div id="headerCategories">
-				<div class="headerCategory">
-					<a href="#noticias">
-						NOTICIAS
-					</a>
-				</div>
-				<div class="headerCategory">
-					<a href="#deporteymoto">
-						DEPORTE &<br>MOTO
-					</a>
-				</div>
-				<div class="headerCategory">
-					<a href="#arteycultura">
-						ARTE &<br>CULTURA
-					</a>
-				</div>
-				<div class="headerCategory">
-					<a href="#moda">
-						MODA
-					</a>
-				</div>
-				<div id="categoryRight" class="headerCategory">
-					<a href="#nopasanada">
+			<div id="headerVerticalCenter">
+				<div id="headerLogo">
+					<a href="/">
 						NO PASA NADA
 					</a>
+				</div>
+				<div id="headerEnd">
+					***
+				</div>
+				<div id="headerCategories">
+					<div class="headerCategory">
+						<a href="#noticias">
+							NOTICIAS
+						</a>
+						<div class="headerSubcategories">
+							<!-- <a href="#diegodelfino">
+								<div class="headerSubcategory">
+									PROXIMAMENTE
+								</div>
+							</a> -->
+						</div>
+					</div>
+					<div class="headerCategory">
+						<a href="#deportemoto">
+							DEPORTE/MOTO
+						</a>
+						<div class="headerSubcategories">
+							<!-- <a href="#pilotos">
+								<div class="headerSubcategory">
+									PILOTOS
+								</div>
+							</a> -->
+						</div>
+					</div>
+					<div class="headerCategory">
+						<a href="#arteycultura">
+							ARTE Y CULTURA
+						</a>
+						<div class="headerSubcategories">
+							<!-- <a href="#magpiejay">
+								<div class="headerSubcategory">
+									PROXIMAMENTE
+								</div>
+							</a> -->
+						</div>
+					</div>
+					<div class="headerCategory">
+						<a href="#nopasanada">
+							QUIENES SOMOS
+						</a>
+						<div class="headerSubcategories">
+							<!-- <a href="#magpiejay">
+								<div class="headerSubcategory">
+									PROXIMAMENTE
+								</div>
+							</a> -->
+						</div>
+					</div>
+					<!-- <div class="headerCategory">
+						<a href="#comida">
+							COMIDA
+						</a>
+						<div class="headerSubcategories">
+							<a href="#magpiejay">
+								<div class="headerSubcategory">
+									PROXIMAMENTE
+								</div>
+							</a>
+						</div>
+					</div>
+					<div class="headerCategory">
+						<a href="#moda">
+							MODA
+						</a>
+						<div class="headerSubcategories">
+							<a href="#magpiejay">
+								<div class="headerSubcategory">
+									PROXIMAMENTE
+								</div>
+							</a>
+						</div>
+					</div> -->
+				</div>
+				<div id="headerSeparator">
 				</div>
 			</div>
 		</div>
 
 		<div id="content">
-			<div id="screenLanding" class="screen">
-				<!--
-				<div id="hcol21"></div>
-				<div id="hcol22"></div>
-				<div id="hcol23"></div>
-				<div id="hcol24"></div>
-				<div id="hcol25"></div>
-				<div id="hrow21"></div>
-				<div id="hrow22"></div>
-				<div id="hrow23"></div>
-				<div id="hrow24"></div>
-				<div id="hrow25"></div>
-				<div id="hrow26"></div>
-				<div id="hrow27"></div>
-			-->
-
-				<div id="landingImageCycler">
-				</div>
-				<div id="featuredPretitle">
-					ESTO ES:
-				</div>
-				<div id="featuredTitle">
-					<a href="#content">
-						<b>NO</b> PASA<br>NADA<b>.</b>
-					</a>
-				</div>
-				<div id="featuredAsterisks">***</div>
-				<div id="featuredText">
-					<div id="featuredText1">
-						LOREM IPSUM DOLOR SIT AMET, CON<br>TETUR ADIPISCING ELIT, SED DO EIUS-<br>MOD TEMPOR INCIDIDUNT UT LABOR<br>DOLORE MAGNA ALIQUA
+			<div id="screen1" class="screen">
+				<a id="featuredLink" href="#video">
+					<div id="featuredContainer">
+						<div id="featuredImageCycler">
+							<!-- insert img list here, done by JS -->
+						</div>
+						<div id="featuredTextContainer">
+							<div id="featuredTitle">
+								motos.*
+							</div>
+							<div id="featuredSubtitle">
+								Magpie Jay.
+							</div>
+							<div id="featuredLine"></div>
+							<div id="featuredText">
+								<div id="featuredText1">
+									CONQUISTA SESSIONS.<br>TRIGGER**
+								</div>
+								<div id="featuredText2">
+									WATCH<br>LIVE DOCUMENTARY
+								</div>
+								<div id="featuredText3">
+									A NOPASANADA FEA-<br>TURE
+								</div>
+							</div>
+						</div>
+						<div id="video">
+						</div>
 					</div>
-					<div id="featuredText2">
-						LOREM IPSUM DOLOR SIT AMET, CON<br>TETUR ADIPISCING ELIT, SED DO EIUS-<br>MOD TEMPOR INCIDIDUNT UT LABOR<br>DOLORE MAGNA ALIQUA
+				</a>
+				<div id="footer">
+					<div id="footerLine"></div>
+					<div id="footerText1">
+					</div>
+					<div id="footerText2">
+						SAN JOSE,<br>COSTA RICA
+					</div>
+					<div id="footerText3">
+						NO PASA NADA
 					</div>
 				</div>
 			</div>
 
-			<div id="screenPosters" class="screen">
+			<!--
+			<div id="screen2" class="screen">
 				<div id="contentList">
 					<a href="/article">
 						<div class="entry">
@@ -190,8 +235,9 @@
 					</a>
 				</div>
 			</div>
+			-->
 
-			<div id="screenArticle">
+			<div id="screen3">
 				<div id="articleContainer">
 					<h1>
 						No Pasa Nada:<br>El porqu&eacute;.
