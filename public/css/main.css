@@ -8,7 +8,7 @@
 
 #screenPosters {
     position: relative;
-    background-color: #1a1a1a;
+    background-color: #000000;
 }
 
 #video {
@@ -29,9 +29,6 @@
     right: 0;
     overflow: hidden;
 
-    /*background-image: url("../images/garrazo.png");
-    background-repeat: no-repeat;
-    background-size: cover;*/
     z-index: -1;
 }
 

@@ -15,13 +15,13 @@
     margin: auto;
 
     color: #ffffff;
-    background-color: rgba(10%, 10%, 10%, 0%);
+    background-color: rgba(0%, 0%, 0%, 0%);
 }
 #header a:hover {
-    color: #000000;
+    color: #ff301b;
 }
 #header a:active {
-    color: #0000ff;
+    color: #ff301b;
 }
 
 #headerContainer {

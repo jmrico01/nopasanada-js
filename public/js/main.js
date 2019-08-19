@@ -17,7 +17,10 @@ const ENTRIES_FEATURED = {
     },
     "deporteymoto": {
         images: [
-            "garrazo.png"
+            "moto1.png",
+            "moto2.png",
+            "moto3.png",
+            "moto4.png"
         ],
         pretitle: "SERIE:",
         title: "PILOTOS<br><b>EP 1.</b>",
@@ -28,7 +31,10 @@ const ENTRIES_FEATURED = {
     },
     "arteycultura": {
         images: [
-            "garrazo.png"
+            "enfoque1.png",
+            "enfoque2.png",
+            "enfoque3.png",
+            "enfoque4.png"
         ],
         pretitle: "SERIE:",
         title: "ENFOQUE<br><b>EP 1.</b>",
@@ -39,7 +45,7 @@ const ENTRIES_FEATURED = {
     },
     "moda": {
         images: [
-            "featured-arteycultura3.png"
+            "guilasexual1.png"
         ],
         pretitle: "TEMA SEMANAL:",
         title: "LA MUJER,<br><b>D&Iacute;A 1.</b>",
@@ -198,7 +204,7 @@ window.onscroll = function() {
         document.documentElement.clientHeight, document.documentElement.scrollHeight,
         document.documentElement.offsetHeight) - document.documentElement.clientHeight;
     let headerOpacity = document.documentElement.scrollTop / scrollTopMax;
-    $("#header").css("background-color", "rgba(10%, 10%, 10%, " + headerOpacity * 100.0 + "%)");
+    $("#header").css("background-color", "rgba(0%, 0%, 0%, " + headerOpacity * 100.0 + "%)");
 };
 
 window.onhashchange = function() {
