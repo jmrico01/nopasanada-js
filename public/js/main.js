@@ -93,6 +93,7 @@ let prevHash = null;
 let warned = false;
 let player = null;
 let imgCycleInterval = null;
+let allImagesLoaded = false;
 
 function Shuffle(array)
 {
@@ -123,6 +124,10 @@ function SetFeaturedContent(category, instant)
     $("#featuredDecoration").html(entry.decoration);
     $("#featuredText1").html(entry.text1);
     $("#featuredText2").html(entry.text2);
+
+    if (!allImagesLoaded) {
+        return;
+    }
 
     if (imgCycleInterval !== null) {
         clearInterval(imgCycleInterval);
@@ -249,7 +254,6 @@ function HandleHash(hash, prevHash)
     }
     else {
         let articleName = hash.substring(hash.indexOf("-") + 1, hash.length);
-        console.log(articleName);
         $("#screenLanding").hide();
         $("#screenPosters").hide();
         $("#article").show();
@@ -314,17 +318,28 @@ window.onhashchange = function() {
 };
 
 window.onload = function() {
+    let totalImages = 0;
     for (let key in ENTRIES_FEATURED) {
         let imgClass = "featuredImage-" + key;
         for (let i = 0; i < ENTRIES_FEATURED[key].images.length; i++) {
             let imgId = imgClass + "-" + i;
             let imgPath = "images/" + ENTRIES_FEATURED[key].images[i];
             $("#landingImageCycler").append("<img id=\"" + imgId + "\" class=\"featuredImage " + imgClass + "\" src=\"" + imgPath + "\">");
+            totalImages += 1;
         }
     }
 
-    HandleHash(window.location.hash);
+    let loadedImages = 0;
+    $(".featuredImage").on("load", function() {
+        loadedImages += 1;
+        if (loadedImages === totalImages) {
+            allImagesLoaded = true;
+            HandleHash(window.location.hash);
+        }
+    });
+
     OnResize();
+    HandleHash(window.location.hash);
 
     $("#screenArticle").hide();
     $("#content").css("visibility", "visible");
