@@ -98,7 +98,7 @@ const ARTICLES = {
     },
     "articulo1": {
         image: "guilasexual1.jpg",
-        title: "El caso <em>Diet Prada</em> y el<br>abuso sexual en el<br>mundo de la <u>moda</u>.",
+        title: "El caso <em>Diet Prada</em> y el<br>abuso sexual en el<br>mundo de la moda.",
         subtitle: "El negocio turbio detr&aacute;s de la fama<br>y sus fot&oacute;grafos",
         author: "POR: PAULINA JOARISTI",
         date: "AGOSTO 19",
