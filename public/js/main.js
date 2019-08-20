@@ -61,7 +61,7 @@ const ENTRIES_FEATURED = {
         decoration: "",
         text1: "EL CASO DE DIET PRADA Y EL ABUSO SEXUAL EN EL MUNDO DE LA MODA.<br>POR PAULINA JOARISTI<br>#OPINI&Oacute;N",
         text2: "DESCUBRIENDO LAS RELACIONES DE PODER Y EL ACOSO EN EL FASHION<br><br>EL NEGOCIO TURBIO DETR&Aacute;S DE LA FAMA Y SUS FOT&Oacute;GRAFOS",
-        link: "#content-articulo1",
+        link: "/el-caso-diet-prada",
         highlightcolor: "#ff3c45"
     },
     "nopasanada": {
