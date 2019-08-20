@@ -243,9 +243,9 @@
     padding-bottom: 4.4vw;
 }
 
-#articleText p {
-    font-family: FuturaPTBook;
-    font-size: 1.4vw;
+#articleText h2 {
+    font-family: FuturaPTBold;
+    font-size: 1.6vw;
     letter-spacing: 0.01vw;
     line-height: 2.2vw;
 
@@ -253,9 +253,9 @@
     margin-right: 0.4vw;
 }
 
-#articleText h2 {
-    font-family: FuturaPTBold;
-    font-size: 1.6vw;
+#articleText p {
+    font-family: FuturaPTBook;
+    font-size: 1.4vw;
     letter-spacing: 0.01vw;
     line-height: 2.2vw;
 
