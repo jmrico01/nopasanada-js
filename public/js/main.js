@@ -27,7 +27,7 @@ const ENTRIES_FEATURED = {
         pretitle: "SERIE:",
         title: "PILOTOS<br><b>EP 1.</b>",
         decoration: "***",
-        text1: "CONOCEMOS A UNA FAMILIA EN COSTA RICA QUE HA TRIUNFADO EN EL DEPORTE DE ENDURO POR M&Aacute;S DE 50 A&Ntilde;OS",
+        text1: "CONOCEMOS A UNA FAMILIA EN COSTA RICA QUE HA TRIUNFADO EN EL DEPORTE DE ENDURO POR M&Aacute;S DE 50 A&Ntilde;OS.",
         text2: "VER TRAILER",
         link: "#content-trailerp"
     },
@@ -41,7 +41,7 @@ const ENTRIES_FEATURED = {
         pretitle: "SERIE:",
         title: "ENFOQUE<br><b>EP 1.</b>",
         decoration: "***",
-        text1: "CONOCEMOS LAS VIDAS E HISTORIAS DE CELEBRADOS Y NUEVOS ARTISTAS VIVIENDO Y TRABAJANDO EN LATINOAM&Eacute;RICA",
+        text1: "CONOCEMOS LAS VIDAS E HISTORIAS DE CELEBRADOS Y NUEVOS ARTISTAS VIVIENDO Y TRABAJANDO EN LATINOAM&Eacute;RICA.",
         text2: "VER TRAILER",
         link: "#content-trailere"
     },
@@ -52,7 +52,7 @@ const ENTRIES_FEATURED = {
         pretitle: "TEMA SEMANAL:",
         title: "LA MUJER,<br><b>D&Iacute;A 1.</b>",
         decoration: "",
-        text1: "EL CASO DE DIET PRADA Y EL ABUSO SEXUAL EN EL MUNDO DE LA MODA<br>PAULINA JOARISTI<br>OPINI&Oacute;N",
+        text1: "EL CASO DE DIET PRADA Y EL ABUSO SEXUAL EN EL MUNDO DE LA MODA.<br>POR PAULINA JOARISTI<br>#OPINI&Oacute;N",
         text2: "DESCUBRIENDO LAS RELACIONES DE PODER Y EL ACOSO EN EL FASHION<br><br>EL NEGOCIO TURBIO DETR&Aacute;S DE LA FAMA Y SUS FOT&Oacute;GRAFOS",
         link: "#content-articulo1"
     },
@@ -253,7 +253,7 @@ function HandleScroll() {
 function HandleHash(hash, prevHash)
 {
     let isCategory = hash === null || hash === "";
-    let category = "moda";
+    let category = "arteycultura";
     if (!isCategory) {
         let hashIndex = hash.indexOf("#");
         if (hashIndex !== -1) {
