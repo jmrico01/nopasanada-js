@@ -373,6 +373,8 @@ function OnResize() {
         $("#header").css("height", "18vh")
         $("#featuredText").hide();
         $(".entry").css("width", "25vw");
+        $("#articleContainer").css("padding-left", "5vw");
+        $("#articleContainer").css("padding-right", "5vw");
         $("#articleTitle").css("font-size", "24pt");
         $("#articleTitle").css("line-height", "24pt");
         $("#articleSubtitle").css("font-size", "20pt");
@@ -395,6 +397,8 @@ function OnResize() {
         $("#header").css("header", "7.9166666vw")
         $("#featuredText").show();
         $(".entry").css("width", "15.625vw");
+        $("#articleContainer").css("padding-left", "23vw");
+        $("#articleContainer").css("padding-right", "23vw");
         $("#articleTitle").css("font-size", "5.4vw");
         $("#articleTitle").css("line-height", "6.25vw");
         $("#articleSubtitle").css("font-size", "3.4vw");
