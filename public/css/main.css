@@ -253,6 +253,16 @@
     margin-right: 0.4vw;
 }
 
+#articleText p {
+    font-family: FuturaPTBold;
+    font-size: 1.6vw;
+    letter-spacing: 0.01vw;
+    line-height: 2.2vw;
+
+    margin-left: 0.4vw;
+    margin-right: 0.4vw;
+}
+
 #articleText em {
     font-family: FuturaPTBookItalic;
 }
