@@ -54,7 +54,7 @@ const ENTRIES_FEATURED = {
     },
     "moda": {
         images: [
-            "guilasexual1.jpg"
+            "guilasexual2.jpg"
         ],
         pretitle: "TEMA SEMANAL:",
         title: "LA MUJER,<br><b>D&Iacute;A 1.</b>",
