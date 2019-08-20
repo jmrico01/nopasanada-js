@@ -173,6 +173,12 @@
     height: 100%;
     background-size: cover;
     background-repeat: no-repeat;
+
+    text-align: center;
+    vertical-align: text-bottom;
+    font-family: FuturaPTHeavy;
+    font-size: 10.5vw;
+    color: #fff;
 }
 #articleVideo {
     width: 100%;

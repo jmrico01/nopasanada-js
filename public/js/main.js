@@ -219,9 +219,17 @@ function SetArticle(articleName)
     let article = ARTICLES[articleName];
 
     $("#articleTitle").html(article.title);
-    $("#articleSubtitle").html(article.subtitle);
-    $("#articleAuthor").html(article.author);
-    $("#articleDate").html(article.date);
+    if (article.author === "") {
+        $("#articleSubtitle").css("display", "none");
+        $("#articleSubtext").css("display", "none");
+    }
+    else {
+        $("#articleSubtitle").css("display", "block");
+        $("#articleSubtext").css("display", "block");
+        $("#articleSubtitle").html(article.subtitle);
+        $("#articleAuthor").html(article.author);
+        $("#articleDate").html(article.date);
+    }
     $("#articleText").html(article.text);
 
     if (article.hasOwnProperty("video")) {
