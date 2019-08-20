@@ -4,6 +4,8 @@ const FEATURED_IMAGE_FADE_MS = 400;
 const ABOUT_TEXT_FADE_MS = 200;
 const IMAGE_ANIM_MS = 250;
 
+const DEFAULT_RED = "#ff301b";
+
 const ENTRIES_FEATURED = {
     "noticias": {
         images: [
@@ -137,10 +139,9 @@ function SetFeaturedContent(category, instant)
     $("#featuredDecoration").html(entry.decoration);
     $("#featuredText1").html(entry.text1);
     $("#featuredText2").html(entry.text2);
+    $("#header a").unbind("mouseover");
     $("#header a").mouseover(function() {
         $(this).css("color", entry.highlightcolor)
-    }).mouseout(function() {
-        $(this).css("color", "#fff");
     });
 
     if (!allImagesLoaded) {
@@ -280,7 +281,12 @@ function HandleHash(hash, prevHash)
         player = null;
     }
     if (isCategory) {
+        $("#header a").unbind("mouseover mouseout");
+        $("#header a").css("color", "");
         $("#header").css("color", "#fff");
+        $("#header a").mouseout(function() {
+            $(this).css("color", "#fff");
+        });
         $("#article").hide();
         $("#screenLanding").show();
         $("#screenPosters").show();
@@ -288,7 +294,15 @@ function HandleHash(hash, prevHash)
         SetFeaturedContent(category, false);
     }
     else {
+        $("#header a").unbind("mouseover mouseout");
+        $("#header a").css("color", "");
         $("#header").css("color", "#000");
+        $("#header a").mouseover(function() {
+            $(this).css("color", DEFAULT_RED)
+        });
+        $("#header a").mouseout(function() {
+            $(this).css("color", "#000");
+        });
         let articleName = hash.substring(hash.indexOf("-") + 1, hash.length);
         $("#screenLanding").hide();
         $("#screenPosters").hide();
