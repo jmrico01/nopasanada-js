@@ -223,8 +223,12 @@ function SetArticle(articleName)
     if (article.author === "") {
         $("#articleSubtitle").css("display", "none");
         $("#articleSubtext").css("display", "none");
+        $("#color1").hide();
+        $("#color2").hide();
     }
     else {
+        $("#color1").show();
+        $("#color2").show();
         $("#articleSubtitle").css("display", "block");
         $("#articleSubtext").css("display", "block");
         $("#articleSubtitle").html(article.subtitle);
