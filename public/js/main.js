@@ -86,7 +86,7 @@ const ARTICLES = {
     "articulo1": {
         image: "guilasexual1.jpg",
         title: "El caso Diet Prada<br>y el abuso sexual en el mundo de la moda.",
-        text: "<p>El acoso y las relaciones de poder en el mundo de la moda est&aacute;n lejos de ser un secreto, gracias en parte a la ola de denuncias que ha incentivado el movimiento #metoo. El caso Diet Prada deja estas conductas a&uacute;n m&aacute;s en evidencia: desde hace unos a&ntilde;os, la reconocida cuenta de instagram existe para exponer c&oacute;mo los famosos y dise&ntilde;adores se copian entre ellos, pero se volvi&oacute; viral cuando ayud&oacute; a un grupo significativo de mujeres a denunciar a sus acosadores.</p> <p>Queda demostrado además que, aunque el abusador es culpable, la industria también lo es: las agencias de modelaje, los cómplices que reciben algún tipo de ganancia monetaria, etc. La cultura del mundo de la moda no tiene limites establecidos ni oficinas de recursos humanos donde los modelos pueden acudir a pedir ayuda, y pone a los modelos en situaciones que atentan contra su dignidad y su cuerpo para poder alcanzar sus metas.</p> <p>Diet Prada, que se mantiene anónima por temas de seguridad, empezó por denunciar a <a href=\"https://people.com/style/kim-kardashian-photographer-marcus-hyde-accused-of-soliciting-nude-photos-from-model/\">Marcus Hyde</a>, fotógrafo conocido por trabajar con Kim Kardashian y Ariana Grande. Según las tomas de pantalla que publicaron las víctimas, el hombre <a href=\"https://www.dazeddigital.com/fashion/article/45406/1/marcus-hyde-timur-emek-photogaphers-accused-sexual-misconduct-harassment-assault\">ofrecía ayudarlas</a> con su carrera a cambio de fotos desnudas, con la excusa de que necesitaba ver sus cuerpos y determinar si merecía invertir su tiempo en ellas. Las que se negaban a cooperar eran insultadas por Hyde; las que proporcionaban las fotos eran invitadas a una sesión fotográfica donde eran manoseadas y presionadas a tener sexo.</p> <p>Lo curioso es que hay un proceso de <a href=\"https://www.usmagazine.com/celebrity-news/news/kim-kardashian-reacts-to-photographer-marcus-hyde-allegations/\">encubrimiento</a> de las actuaciones del fotógrafo por parte de famosos. Se sabe por ejemplo, que la cuenta de Instagram de Marcus Hyde - la cuál contaba con más de un millón de seguidores - ha sido borrada, y que tanto Kim Kardashian como Ariana Grande han emitido comunicados indicando simpatizar con las víctimas y alabar la decisión de hablar públicamente sobre sus experiencias - aunque no sin detenerse a recalcar que, en lo personal, nunca fueron sujetas de acoso por parte del señor Hyde.</p> <p>Las revelaciones en torno a Hyde propiciaron que unos días después salieran nuevas acusaciones, pero esta vez en contra de Timur Emek. Emek era bien conocido por ser el fotógrafo de las modelos de Victoria Secret. Al igual que en el caso anterior, Emek se aprovechó de su posición para solicitar sexo a cambio de viajes, fama y posicionamiento en la industria del modelaje.</p> <p>Acá algunas de las imágenes que las víctimas hicieron públicas.</p> <p>Caption: En las fotos de arriba podemos observar como Hyde le dice a la modelo que sus photoshoots cuestan dos mil dólares, pero que si ella estuviera dispuesta a hacerlo desnuda lo haría de gratis.</p> <p>Los modelos hombres también pueden ser víctimas.</p> <p>El acoso sexual afecta tanto a la mujer como el hombre en cualquier industria, cultura o país, y el mundo de la moda no es excepción. Bruce Weber y Mario Testino, fotógrafos que en su momento fueron los más importantes de la reconocida revista Vogue, fueron también acusados por su comportamiento y reemplazados de forma definitiva, luego de que varios modelos - en este caso hombres -  los denunciaran por abusar sexualmente de ellos. Ambos negaron los cargos presentados alegando que los acusadores no pueden ser <a href=\"https://www.harpersbazaar.com/uk/fashion/fashion-news/a15156038/mario-testino-accused-of-sexual-assault-by-multiple-models/\">tomados en serio</a>, pero la editora de Vogue, Anna Wintour, se mantuvo firme y dijo que aunque mantiene una relación de amistad con ambos profesionales, no puede ignorar acusaciones como estas.</p> <p>La revista The Cut hizo una serie de entrevistas a víctimas masculinas de acoso sexual que revelan que los hombres también enfrentan estigmas al hablar sobre el abuso; muchos llegan a cuestionarse los hechos al ser confrontados al respecto. ¿Por qué no se defendieron? es una pregunta común. ¿No pudieron haber simplemente golpeado a sus abusadores? Esto crea un ciclo de vergüenza y culpa que impide a las víctimas denunciar.</p> <p>Aunque empresas como Condé Nast han implementado nuevos <a href=\"https://www.vogue.com/article/anna-wintour-responds-mario-testino-bruce-weber-sexual-misconduct-allegations\">códigos de conducta</a> después de haber entrevistado a modelos, estilistas, agencias, fotografos, maquillistas y encargados de sets, cambios significativos en la cultura aún deben suceder para que las víctimas puedan empoderarse y relatar sus experiencias. Imaginen los miles de casos como estos que no han salido a la luz por dinero, poder o influencia… de no ser por el movimiento #metoo, quizá no nos habríamos enterado de ninguno.</p>"
+        text: "<p>El acoso y las relaciones de poder en el mundo de la moda est&aacute;n lejos de ser un secreto, gracias en parte a la ola de denuncias que ha incentivado el movimiento #metoo. El caso Diet Prada deja estas conductas a&uacute;n m&aacute;s en evidencia: desde hace unos a&ntilde;os, la reconocida cuenta de instagram existe para exponer c&oacute;mo los famosos y dise&ntilde;adores se copian entre ellos, pero se volvi&oacute; viral cuando ayud&oacute; a un grupo significativo de mujeres a denunciar a sus acosadores.</p> <p>Queda demostrado adem&aacute;s que, aunque el abusador es culpable, la industria tambi&eacute;n lo es: las agencias de modelaje, los c&oacute;mplices que reciben alg&uacute;n tipo de ganancia monetaria, etc. La cultura del mundo de la moda no tiene l&iacute;mites establecidos ni oficinas de recursos humanos donde los modelos pueden acudir a pedir ayuda, y pone a los modelos en situaciones que atentan contra su dignidad y su cuerpo para poder alcanzar sus metas.</p> <p>Diet Prada, que se mantiene anónima por temas de seguridad, empezó por denunciar a <a href=\"https://people.com/style/kim-kardashian-photographer-marcus-hyde-accused-of-soliciting-nude-photos-from-model/\">Marcus Hyde</a>, fotógrafo conocido por trabajar con Kim Kardashian y Ariana Grande. Según las tomas de pantalla que publicaron las víctimas, el hombre <a href=\"https://www.dazeddigital.com/fashion/article/45406/1/marcus-hyde-timur-emek-photogaphers-accused-sexual-misconduct-harassment-assault\">ofrecía ayudarlas</a> con su carrera a cambio de fotos desnudas, con la excusa de que necesitaba ver sus cuerpos y determinar si merecía invertir su tiempo en ellas. Las que se negaban a cooperar eran insultadas por Hyde; las que proporcionaban las fotos eran invitadas a una sesión fotográfica donde eran manoseadas y presionadas a tener sexo.</p> <p>Lo curioso es que hay un proceso de <a href=\"https://www.usmagazine.com/celebrity-news/news/kim-kardashian-reacts-to-photographer-marcus-hyde-allegations/\">encubrimiento</a> de las actuaciones del fotógrafo por parte de famosos. Se sabe por ejemplo, que la cuenta de Instagram de Marcus Hyde - la cuál contaba con más de un millón de seguidores - ha sido borrada, y que tanto Kim Kardashian como Ariana Grande han emitido comunicados indicando simpatizar con las víctimas y alabar la decisión de hablar públicamente sobre sus experiencias - aunque no sin detenerse a recalcar que, en lo personal, nunca fueron sujetas de acoso por parte del señor Hyde.</p> <p>Las revelaciones en torno a Hyde propiciaron que unos días después salieran nuevas acusaciones, pero esta vez en contra de Timur Emek. Emek era bien conocido por ser el fotógrafo de las modelos de Victoria Secret. Al igual que en el caso anterior, Emek se aprovechó de su posición para solicitar sexo a cambio de viajes, fama y posicionamiento en la industria del modelaje.</p> <p>Acá algunas de las imágenes que las víctimas hicieron públicas.</p> <p>Caption: En las fotos de arriba podemos observar como Hyde le dice a la modelo que sus photoshoots cuestan dos mil dólares, pero que si ella estuviera dispuesta a hacerlo desnuda lo haría de gratis.</p> <p>Los modelos hombres también pueden ser víctimas.</p> <p>El acoso sexual afecta tanto a la mujer como el hombre en cualquier industria, cultura o país, y el mundo de la moda no es excepción. Bruce Weber y Mario Testino, fotógrafos que en su momento fueron los más importantes de la reconocida revista Vogue, fueron también acusados por su comportamiento y reemplazados de forma definitiva, luego de que varios modelos - en este caso hombres -  los denunciaran por abusar sexualmente de ellos. Ambos negaron los cargos presentados alegando que los acusadores no pueden ser <a href=\"https://www.harpersbazaar.com/uk/fashion/fashion-news/a15156038/mario-testino-accused-of-sexual-assault-by-multiple-models/\">tomados en serio</a>, pero la editora de Vogue, Anna Wintour, se mantuvo firme y dijo que aunque mantiene una relación de amistad con ambos profesionales, no puede ignorar acusaciones como estas.</p> <p>La revista The Cut hizo una serie de entrevistas a víctimas masculinas de acoso sexual que revelan que los hombres también enfrentan estigmas al hablar sobre el abuso; muchos llegan a cuestionarse los hechos al ser confrontados al respecto. ¿Por qué no se defendieron? es una pregunta común. ¿No pudieron haber simplemente golpeado a sus abusadores? Esto crea un ciclo de vergüenza y culpa que impide a las víctimas denunciar.</p> <p>Aunque empresas como Condé Nast han implementado nuevos <a href=\"https://www.vogue.com/article/anna-wintour-responds-mario-testino-bruce-weber-sexual-misconduct-allegations\">códigos de conducta</a> después de haber entrevistado a modelos, estilistas, agencias, fotografos, maquillistas y encargados de sets, cambios significativos en la cultura aún deben suceder para que las víctimas puedan empoderarse y relatar sus experiencias. Imaginen los miles de casos como estos que no han salido a la luz por dinero, poder o influencia… de no ser por el movimiento #metoo, quizá no nos habríamos enterado de ninguno.</p>"
     },
     "video": {
         video: "TzxV2HgY35s",
@@ -194,7 +194,6 @@ function SetFeaturedContent(category, instant)
 
 function SetArticle(articleName)
 {
-    $("html, body").animate({ scrollTop: 0 }, 200);
     let article = ARTICLES[articleName];
 
     $("#articleTitle").html(article.title);
@@ -238,6 +237,19 @@ function SetArticle(articleName)
     }
 }
 
+function HandleScroll() {
+    let scrollTopMax = Math.max(document.body.scrollHeight, document.body.offsetHeight,
+        document.documentElement.clientHeight, document.documentElement.scrollHeight,
+        document.documentElement.offsetHeight) - document.documentElement.clientHeight;
+    let headerOpacity = document.documentElement.scrollTop / scrollTopMax;
+    if (!$("#article").is(':visible')) {
+        $("#header").css("background-color", "rgba(0%, 0%, 0%, " + headerOpacity * 100.0 + "%)");
+    }
+    else {
+        $("#header").css("background-color", "rgba(100%, 100%, 100%, 100%)");
+    }
+}
+
 function HandleHash(hash, prevHash)
 {
     let isCategory = hash === null || hash === "";
@@ -258,16 +270,20 @@ function HandleHash(hash, prevHash)
         player = null;
     }
     if (isCategory) {
+        $("#header").css("color", "#fff");
         $("#article").hide();
         $("#screenLanding").show();
         $("#screenPosters").show();
+        HandleScroll();
         SetFeaturedContent(category, false);
     }
     else {
+        $("#header").css("color", "#000");
         let articleName = hash.substring(hash.indexOf("-") + 1, hash.length);
         $("#screenLanding").hide();
         $("#screenPosters").hide();
         $("#article").show();
+        HandleScroll();
         SetArticle(articleName);
     }
 }
@@ -308,13 +324,7 @@ function OnResize() {
     }
 }
 
-window.onscroll = function() {
-    let scrollTopMax = Math.max(document.body.scrollHeight, document.body.offsetHeight,
-        document.documentElement.clientHeight, document.documentElement.scrollHeight,
-        document.documentElement.offsetHeight) - document.documentElement.clientHeight;
-    let headerOpacity = document.documentElement.scrollTop / scrollTopMax;
-    $("#header").css("background-color", "rgba(0%, 0%, 0%, " + headerOpacity * 100.0 + "%)");
-};
+window.onscroll = HandleScroll;
 
 window.onhashchange = function() {
     let hash = window.location.hash;
@@ -322,6 +332,7 @@ window.onhashchange = function() {
         hash = null;
     }
     if (hash !== prevHash) {
+        $("html, body").animate({ scrollTop: 0 }, 200);
         let oldPrevHash = prevHash;
         prevHash = hash;
         HandleHash(hash, oldPrevHash);
