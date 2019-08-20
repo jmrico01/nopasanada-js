@@ -181,30 +181,72 @@
 
 #articleContainer {
     position: relative;
-    width: 50%;
-    padding-left: 25%;
-    padding-right: 25%;
+    padding-left: 23vw;
+    padding-right: 23vw;
     padding-bottom: 10vw;
 }
 
 #articleTitle {
     font-family: FuturaPTHeavy;
-    font-size: 5.5vw;
-    letter-spacing: -0.3vw;
-    line-height: 5.3vw;
+    font-size: 5.4vw;
+    letter-spacing: -0.2vw;
+    line-height: 6.25vw;
 
-    padding-top: 6vw;
-    padding-bottom: 4vw;
+    padding-top: 6.9vw;
+}
+#articleTitle em {
+    font-family: FuturaPTHeavyItalic;
+}
+
+#articleSubtitle {
+    font-family: FuturaPTMedium;
+    font-size: 3.4vw;
+    letter-spacing: -0.1vw;
+    line-height: 3.9vw;
+
+    padding-top: 4.1vw;
+    padding-left: 0.2vw;
+}
+
+#articleSubtext {
+    font-family: FuturaPTDemi;
+    font-size: 1vw;
+    letter-spacing: 0vw;
+    line-height: 3.9vw;
+    overflow: hidden;
+
+    padding-top: 3.2vw;
+    padding-left: 0.4vw;
+}
+#articleAuthor {
+    float: left;
+    width: 20.3vw;
+}
+#articleDate {
+    float: left;
+}
+
+#articleSeparator {
+    font-family: FuturaPTBold;
+    font-size: 3.4vw;
+    letter-spacing: 0.2vw;
+
+    padding-left: 0.3vw;
+    padding-top: 3.6vw;
+    padding-bottom: 4.4vw;
 }
 
 #articleText p {
     font-family: FuturaPTBook;
     font-size: 1.4vw;
     letter-spacing: 0.01vw;
-    line-height: 1.8vw;
+    line-height: 2.4vw;
+
+    margin-left: 0.4vw;
+    margin-right: 0.4vw;
 }
 
-#articleContainer em {
+#articleText em {
     font-family: FuturaPTBookItalic;
 }
 
@@ -453,61 +495,31 @@
 #hcol41 {
     position: absolute;
     left: 0;
-    width: 7.8125vw;
+    width: 23.4375vw;
     top: 0;
     bottom: 0;
 
-    background-color: #fff;
+    background-color: #000;
     opacity: 0.15;
 }
 #hcol42 {
     position: absolute;
     left: 0;
-    width: 25vw;
+    width: 76.5625vw;
     top: 0;
     bottom: 0;
 
-    background-color: #fff;
+    background-color: #000;
     opacity: 0.15;
 }
 #hcol43 {
     position: absolute;
     left: 0;
-    width: 31.25vw;
+    width: 43.75vw;
     top: 0;
     bottom: 0;
 
-    background-color: #fff;
-    opacity: 0.15;
-}
-#hcol44 {
-    position: absolute;
-    left: 0;
-    width: 48.4375vw;
-    top: 0;
-    bottom: 0;
-
-    background-color: #fff;
-    opacity: 0.15;
-}
-#hcol45 {
-    position: absolute;
-    left: 0;
-    width: 53.125vw;
-    top: 0;
-    bottom: 0;
-
-    background-color: #fff;
-    opacity: 0.15;
-}
-#hcol46 {
-    position: absolute;
-    left: 0;
-    width: 92.1875vw;
-    top: 0;
-    bottom: 0;
-
-    background-color: #fff;
+    background-color: #000;
     opacity: 0.15;
 }
 #hrow41 {
@@ -523,7 +535,7 @@
 #hrow42 {
     position: absolute;
     top: 0;
-    height: 37.5vw;
+    height: 9.375vw;
     left: 0;
     right: 0;
 
@@ -533,7 +545,7 @@
 #hrow43 {
     position: absolute;
     top: 0;
-    height: 39.0625vw;
+    height: 15.625vw;
     left: 0;
     right: 0;
 
@@ -543,7 +555,7 @@
 #hrow44 {
     position: absolute;
     top: 0;
-    height: 40.625vw;
+    height: 21.875vw;
     left: 0;
     right: 0;
 
@@ -553,7 +565,7 @@
 #hrow45 {
     position: absolute;
     top: 0;
-    height: 0;
+    height: 28.125vw;
     left: 0;
     right: 0;
 
@@ -563,7 +575,107 @@
 #hrow46 {
     position: absolute;
     top: 0;
-    height: 0;
+    height: 31.25vw;
+    left: 0;
+    right: 0;
+
+    background-color: #000;
+    opacity: 0.15;
+}
+#hrow47 {
+    position: absolute;
+    top: 0;
+    height: 32.8125vw;
+    left: 0;
+    right: 0;
+
+    background-color: #000;
+    opacity: 0.15;
+}
+#hrow48 {
+    position: absolute;
+    top: 0;
+    height: 34.375vw;
+    left: 0;
+    right: 0;
+
+    background-color: #000;
+    opacity: 0.15;
+}
+#hrow49 {
+    position: absolute;
+    top: 0;
+    height: 35.15625vw;
+    left: 0;
+    right: 0;
+
+    background-color: #000;
+    opacity: 0.15;
+}
+#hrow410 {
+    position: absolute;
+    top: 0;
+    height: 35.9375vw;
+    left: 0;
+    right: 0;
+
+    background-color: #000;
+    opacity: 0.15;
+}
+#hrow411 {
+    position: absolute;
+    top: 0;
+    height: 37.5vw;
+    left: 0;
+    right: 0;
+
+    background-color: #000;
+    opacity: 0.15;
+}
+#hrow412 {
+    position: absolute;
+    top: 0;
+    height: 42.1875vw;
+    left: 0;
+    right: 0;
+
+    background-color: #000;
+    opacity: 0.15;
+}
+#hrow413 {
+    position: absolute;
+    top: 0;
+    height: 51.5625vw;
+    left: 0;
+    right: 0;
+
+    background-color: #000;
+    opacity: 0.15;
+}
+#hrow414 {
+    position: absolute;
+    top: 0;
+    height: 59.375vw;
+    left: 0;
+    right: 0;
+
+    background-color: #000;
+    opacity: 0.15;
+}
+#hrow415 {
+    position: absolute;
+    top: 0;
+    height: 61.71875vw;
+    left: 0;
+    right: 0;
+
+    background-color: #000;
+    opacity: 0.15;
+}
+#hrow416 {
+    position: absolute;
+    top: 0;
+    height: 64.0625vw;
     left: 0;
     right: 0;
 
