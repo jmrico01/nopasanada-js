@@ -205,9 +205,6 @@
 
 #articleContainer em {
     font-family: FuturaPTBookItalic;
-    font-size: 1.4vw;
-    letter-spacing: 0.01vw;
-    line-height: 1.8vw;
 }
 
 #articleText a {
@@ -441,6 +438,128 @@
     opacity: 0.15;
 }
 #hrow36 {
+    position: absolute;
+    top: 0;
+    height: 0;
+    left: 0;
+    right: 0;
+
+    background-color: #000;
+    opacity: 0.15;
+}
+
+
+#hcol41 {
+    position: absolute;
+    left: 0;
+    width: 7.8125vw;
+    top: 0;
+    bottom: 0;
+
+    background-color: #fff;
+    opacity: 0.15;
+}
+#hcol42 {
+    position: absolute;
+    left: 0;
+    width: 25vw;
+    top: 0;
+    bottom: 0;
+
+    background-color: #fff;
+    opacity: 0.15;
+}
+#hcol43 {
+    position: absolute;
+    left: 0;
+    width: 31.25vw;
+    top: 0;
+    bottom: 0;
+
+    background-color: #fff;
+    opacity: 0.15;
+}
+#hcol44 {
+    position: absolute;
+    left: 0;
+    width: 48.4375vw;
+    top: 0;
+    bottom: 0;
+
+    background-color: #fff;
+    opacity: 0.15;
+}
+#hcol45 {
+    position: absolute;
+    left: 0;
+    width: 53.125vw;
+    top: 0;
+    bottom: 0;
+
+    background-color: #fff;
+    opacity: 0.15;
+}
+#hcol46 {
+    position: absolute;
+    left: 0;
+    width: 92.1875vw;
+    top: 0;
+    bottom: 0;
+
+    background-color: #fff;
+    opacity: 0.15;
+}
+#hrow41 {
+    position: absolute;
+    top: 0;
+    height: 10.9375vw;
+    left: 0;
+    right: 0;
+
+    background-color: #000;
+    opacity: 0.15;
+}
+#hrow42 {
+    position: absolute;
+    top: 0;
+    height: 37.5vw;
+    left: 0;
+    right: 0;
+
+    background-color: #000;
+    opacity: 0.15;
+}
+#hrow43 {
+    position: absolute;
+    top: 0;
+    height: 39.0625vw;
+    left: 0;
+    right: 0;
+
+    background-color: #000;
+    opacity: 0.15;
+}
+#hrow44 {
+    position: absolute;
+    top: 0;
+    height: 40.625vw;
+    left: 0;
+    right: 0;
+
+    background-color: #000;
+    opacity: 0.15;
+}
+#hrow45 {
+    position: absolute;
+    top: 0;
+    height: 0;
+    left: 0;
+    right: 0;
+
+    background-color: #000;
+    opacity: 0.15;
+}
+#hrow46 {
     position: absolute;
     top: 0;
     height: 0;

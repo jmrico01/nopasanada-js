@@ -105,7 +105,6 @@ const ARTICLES = {
 let IMAGE_ASPECT = 1920 / 960;
 
 let prevHash = null;
-let warned = false;
 let player = null;
 let imgCycleInterval = null;
 let allImagesLoaded = false;
@@ -337,14 +336,25 @@ function OnResize() {
         }
     });
 
-    if (aspect < 1.45 && !warned) {
-        warned = true;
-        setTimeout(function() {
-            alert("WARNING\n\n"
-                + "You are viewing the website at a thin aspect ratio (less than 1.5).\n"
-                + "Layout and spacing will be messed up until we explicitly design\n"
-                + "for these taller formats (tall windows / mobile)");
-        }, 0);
+    if (aspect < 1.45) {
+        $("#headerCategories").hide();
+        $("#headerLogo").css("font-size", "5vw");
+        $("#screenLanding").css("max-height", "78vh");
+        $("#header").css("height", "18vh")
+        $("#featuredText").hide();
+        $(".entry").css("width", "20vw");
+        $("#articleText p").css("font-size", "16pt");
+        $("#articleText p").css("line-height", "16pt");
+    }
+    else {
+        $("#headerCategories").show();
+        $("#headerLogo").css("font-size", "2.35vw");
+        $("#screenLanding").css("max-height", "");
+        $("#header").css("header", "7.9166666vw")
+        $("#featuredText").show();
+        $(".entry").css("width", "15.625vw");
+        $("#articleText p").css("font-size", "1.4vw");
+        $("#articleText p").css("line-height", "1.8vw");
     }
 }
 
