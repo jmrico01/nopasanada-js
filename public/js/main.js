@@ -378,7 +378,7 @@ function OnResize() {
         $("#articleSubtitle").css("font-size", "20pt");
         $("#articleSubtitle").css("line-height", "20pt");
         $("#articleSubtext").css("font-size", "10pt");
-        $("#articleText p").css("font-size", "16pt");
+        $("#articleText p").css("font-size", "14pt");
         $("#articleText p").css("line-height", "16pt");
         $("#screenPosters").css("height", "120vh");
         $(".entryText").css("font-size", "3vw");
