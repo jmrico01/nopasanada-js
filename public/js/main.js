@@ -374,7 +374,6 @@ function OnResize() {
         $("#articleSubtext").css("font-size", "10pt");
         $("#articleText p").css("font-size", "16pt");
         $("#articleText p").css("line-height", "16pt");
-        $("#screenPosters").css("height", "120vh");
         $(".entryText").css("font-size", "3vw");
         $(".entryText").css("line-height", "3vw");
         $(".entryText").css("margin-bottom", "15vw");
@@ -391,7 +390,6 @@ function OnResize() {
         $("#articleSubtext").css("font-size", "1vw");
         $("#articleText p").css("font-size", "1.4vw");
         $("#articleText p").css("line-height", "1.8vw");
-        $("#screenPosters").css("height", "");
         $(".entryText").css("font-size", "0.95vw");
         $(".entryText").css("line-height", "1.6vw");
         $(".entryText").css("margin-bottom", "0");
