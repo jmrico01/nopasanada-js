@@ -98,7 +98,7 @@ const ARTICLES = {
     },
     "articulo1": {
         image: "guilasexual1.jpg",
-        title: "El caso <em>Diet Prada</em> y el<br>abuso sexual en el<br>mundo de la moda.",
+        title: "El caso <em>Diet Prada</em> y el abuso sexual en el mundo de la moda.",
         subtitle: "El negocio turbio detr&aacute;s de la fama<br>y sus fot&oacute;grafos",
         author: "POR: PAULINA JOARISTI",
         date: "AGOSTO 19",
@@ -216,6 +216,7 @@ function SetFeaturedContent(category, instant)
 
 function SetArticle(articleName)
 {
+    console.log("SetArticle: " + articleName);
     let article = ARTICLES[articleName];
 
     $("#articleTitle").html(article.title);
@@ -268,6 +269,8 @@ function SetArticle(articleName)
         $("#articleImage").show();
         $("#articleImage").css("background-image", "url(\"" + "../images/" + article.image + "\")");
     }
+
+    OnResize();
 }
 
 function HandleScroll() {
@@ -366,6 +369,9 @@ function OnResize() {
         $("#header").css("height", "18vh")
         $("#featuredText").hide();
         $(".entry").css("width", "25vw");
+        $("#articleTitle").css("font-size", "24pt");
+        $("#articleSubtitle").css("font-size", "20pt");
+        $("#articleSubtext").css("font-size", "10pt");
         $("#articleText p").css("font-size", "16pt");
         $("#articleText p").css("line-height", "16pt");
         $("#screenPosters").css("height", "120vh");
@@ -380,6 +386,9 @@ function OnResize() {
         $("#header").css("header", "7.9166666vw")
         $("#featuredText").show();
         $(".entry").css("width", "15.625vw");
+        $("#articleTitle").css("font-size", "5.4vw");
+        $("#articleSubtitle").css("font-size", "3.4vw");
+        $("#articleSubtext").css("font-size", "1vw");
         $("#articleText p").css("font-size", "1.4vw");
         $("#articleText p").css("line-height", "1.8vw");
         $("#screenPosters").css("height", "");
