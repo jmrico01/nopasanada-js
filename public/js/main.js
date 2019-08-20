@@ -365,9 +365,13 @@ function OnResize() {
         $("#screenLanding").css("max-height", "78vh");
         $("#header").css("height", "18vh")
         $("#featuredText").hide();
-        $(".entry").css("width", "20vw");
+        $(".entry").css("width", "25vw");
         $("#articleText p").css("font-size", "16pt");
         $("#articleText p").css("line-height", "16pt");
+        $("#screenPosters").css("height", "120vh");
+        $(".entryText").css("font-size", "3vw");
+        $(".entryText").css("line-height", "3vw");
+        $(".entryText").css("margin-bottom", "15vw");
     }
     else {
         $("#headerCategories").show();
@@ -378,6 +382,10 @@ function OnResize() {
         $(".entry").css("width", "15.625vw");
         $("#articleText p").css("font-size", "1.4vw");
         $("#articleText p").css("line-height", "1.8vw");
+        $("#screenPosters").css("height", "");
+        $(".entryText").css("font-size", "0.95vw");
+        $(".entryText").css("line-height", "1.6vw");
+        $(".entryText").css("margin-bottom", "0");
     }
 }
 
