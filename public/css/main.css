@@ -180,6 +180,7 @@
 }
 
 #articleContainer {
+    position: relative;
     width: 50%;
     padding-left: 25%;
     padding-right: 25%;
@@ -192,8 +193,8 @@
     letter-spacing: -0.3vw;
     line-height: 5.3vw;
 
-    margin-top: 6vw;
-    margin-bottom: 4vw;
+    padding-top: 6vw;
+    padding-bottom: 4vw;
 }
 
 #articleText p {
@@ -512,7 +513,7 @@
 #hrow41 {
     position: absolute;
     top: 0;
-    height: 10.9375vw;
+    height: 7.8125vw;;
     left: 0;
     right: 0;
 

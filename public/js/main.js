@@ -9,8 +9,10 @@ const DEFAULT_RED = "#ff301b";
 const ENTRIES_FEATURED = {
     "noticias": {
         images: [
-            "garrotex1.jpg",
-            "garrotex2.jpg"
+            "garrote1.jpg",
+            "garrote2.jpg",
+            "garrote3.jpg",
+            "garrote4.jpg"
         ],
         pretitle: "PROXIMAMENTE:",
         title: "NOTICIAS<br>---<b>.</b>",
@@ -18,7 +20,7 @@ const ENTRIES_FEATURED = {
         text1: "PROXIMAMENTE",
         text2: "NOPASANADA",
         link: "#noticias",
-        highlightcolor: "#ff0000"
+        highlightcolor: "#fe84ff"
     },
     "deporteymoto": {
         images: [
@@ -33,7 +35,7 @@ const ENTRIES_FEATURED = {
         text1: "CONOCEMOS A UNA FAMILIA EN COSTA RICA QUE HA TRIUNFADO EN EL DEPORTE DE ENDURO POR M&Aacute;S DE 50 A&Ntilde;OS.",
         text2: "VER TRAILER",
         link: "#content-trailerp",
-        highlightcolor: "#BF6C44"
+        highlightcolor: "#ff613c"
     },
     "arteycultura": {
         images: [
@@ -48,7 +50,7 @@ const ENTRIES_FEATURED = {
         text1: "CONOCEMOS LAS VIDAS E HISTORIAS DE CELEBRADOS Y NUEVOS ARTISTAS VIVIENDO Y TRABAJANDO EN LATINOAM&Eacute;RICA.",
         text2: "VER TRAILER",
         link: "#content-trailere",
-        highlightcolor: "#ff301b"
+        highlightcolor: "#7fffcb"
     },
     "moda": {
         images: [
@@ -60,14 +62,12 @@ const ENTRIES_FEATURED = {
         text1: "EL CASO DE DIET PRADA Y EL ABUSO SEXUAL EN EL MUNDO DE LA MODA.<br>POR PAULINA JOARISTI<br>#OPINI&Oacute;N",
         text2: "DESCUBRIENDO LAS RELACIONES DE PODER Y EL ACOSO EN EL FASHION<br><br>EL NEGOCIO TURBIO DETR&Aacute;S DE LA FAMA Y SUS FOT&Oacute;GRAFOS",
         link: "#content-articulo1",
-        highlightcolor: "#ff0000"
+        highlightcolor: "#ff3c45"
     },
     "nopasanada": {
         images: [
-            "garrote1.jpg",
-            "garrote2.jpg",
-            "garrote3.jpg",
-            "garrote4.jpg"
+            "garrotex1.jpg",
+            "garrotex2.jpg"
         ],
         pretitle: "ESTO ES:",
         title: "<b>NO</b> PASA<br>NADA<b>.</b>",
@@ -75,7 +75,7 @@ const ENTRIES_FEATURED = {
         text1: "LA PLATAFORMA PREMIER DE CONTENIDO ORIGINAL, REPORTAJES Y NOTICIAS EN ESPA&Ntilde;OL PARA Y POR UNA NUEVA GENERACI&Oacute;N",
         text2: "VER VIDEO",
         link: "#content-video",
-        highlightcolor: "#ff0000"
+        highlightcolor: "#36fffd"
     }
 };
 
