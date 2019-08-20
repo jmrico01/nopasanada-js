@@ -15,7 +15,8 @@ const ENTRIES_FEATURED = {
         decoration: "***",
         text1: "PROXIMAMENTE",
         text2: "NOPASANADA",
-        link: "#noticias"
+        link: "#noticias",
+        highlightcolor: "#ff0000"
     },
     "deporteymoto": {
         images: [
@@ -29,7 +30,8 @@ const ENTRIES_FEATURED = {
         decoration: "***",
         text1: "CONOCEMOS A UNA FAMILIA EN COSTA RICA QUE HA TRIUNFADO EN EL DEPORTE DE ENDURO POR M&Aacute;S DE 50 A&Ntilde;OS.",
         text2: "VER TRAILER",
-        link: "#content-trailerp"
+        link: "#content-trailerp",
+        highlightcolor: "#BF6C44"
     },
     "arteycultura": {
         images: [
@@ -43,7 +45,8 @@ const ENTRIES_FEATURED = {
         decoration: "***",
         text1: "CONOCEMOS LAS VIDAS E HISTORIAS DE CELEBRADOS Y NUEVOS ARTISTAS VIVIENDO Y TRABAJANDO EN LATINOAM&Eacute;RICA.",
         text2: "VER TRAILER",
-        link: "#content-trailere"
+        link: "#content-trailere",
+        highlightcolor: "#ff301b"
     },
     "moda": {
         images: [
@@ -54,7 +57,8 @@ const ENTRIES_FEATURED = {
         decoration: "",
         text1: "EL CASO DE DIET PRADA Y EL ABUSO SEXUAL EN EL MUNDO DE LA MODA.<br>POR PAULINA JOARISTI<br>#OPINI&Oacute;N",
         text2: "DESCUBRIENDO LAS RELACIONES DE PODER Y EL ACOSO EN EL FASHION<br><br>EL NEGOCIO TURBIO DETR&Aacute;S DE LA FAMA Y SUS FOT&Oacute;GRAFOS",
-        link: "#content-articulo1"
+        link: "#content-articulo1",
+        highlightcolor: "#ff0000"
     },
     "nopasanada": {
         images: [
@@ -67,8 +71,9 @@ const ENTRIES_FEATURED = {
         title: "<b>NO</b> PASA<br>NADA<b>.</b>",
         decoration: "***",
         text1: "LA PLATAFORMA PREMIER DE CONTENIDO ORIGINAL, REPORTAJES Y NOTICIAS EN ESPA&Ntilde;OL PARA Y POR UNA NUEVA GENERACI&Oacute;N",
-        text2: "- - -",
-        link: "#content-video"
+        text2: "VER VIDEO",
+        link: "#content-video",
+        highlightcolor: "#ff0000"
     }
 };
 
@@ -132,6 +137,11 @@ function SetFeaturedContent(category, instant)
     $("#featuredDecoration").html(entry.decoration);
     $("#featuredText1").html(entry.text1);
     $("#featuredText2").html(entry.text2);
+    $("#header a").mouseover(function() {
+        $(this).css("color", entry.highlightcolor)
+    }).mouseout(function() {
+        $(this).css("color", "#fff");
+    });
 
     if (!allImagesLoaded) {
         return;
@@ -352,10 +362,12 @@ window.onload = function() {
     }
 
     let loadedImages = 0;
+    $(".featuredImage").hide();
     $(".featuredImage").on("load", function() {
         loadedImages += 1;
         if (loadedImages === totalImages) {
             allImagesLoaded = true;
+            $(".featuredImage").show();
             HandleHash(window.location.hash);
         }
     });

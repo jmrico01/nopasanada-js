@@ -17,12 +17,6 @@
     color: #ffffff;
     background-color: rgba(0%, 0%, 0%, 0%);
 }
-#header a:hover {
-    color: #ff301b;
-}
-#header a:active {
-    color: #ff301b;
-}
 
 #headerContainer {
     position: relative;
