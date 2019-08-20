@@ -177,7 +177,8 @@
     text-align: center;
     vertical-align: text-bottom;
     font-family: FuturaPTHeavy;
-    font-size: 12vw;
+    font-size: 8vw;
+    line-height: 24vw;
     color: #fff;
 }
 #articleVideo {
