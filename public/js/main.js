@@ -390,7 +390,7 @@ function OnResize() {
         $("#articleSubtitle").css("font-size", "3.4vw");
         $("#articleSubtext").css("font-size", "1vw");
         $("#articleText p").css("font-size", "1.4vw");
-        $("#articleText p").css("line-height", "1.8vw");
+        $("#articleText p").css("line-height", "2.2vw");
         $(".entryText").css("font-size", "0.95vw");
         $(".entryText").css("line-height", "1.6vw");
         $(".entryText").css("margin-bottom", "0");
