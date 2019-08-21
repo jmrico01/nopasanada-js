@@ -7,7 +7,7 @@ const mysql = require("mysql");
 const path = require("path");
 const util = require("util");
 
-const DEBUG = false;
+const DEBUG = true;
 
 const app = express();
 
