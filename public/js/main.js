@@ -52,16 +52,16 @@ const ENTRIES_FEATURED = {
         link: "#content-trailere",
         highlightcolor: "#7fffcb"
     },
-    "moda": {
+    "temamujer": {
         images: [
-            "guilasexual2.jpg"
+            "mujer2noise.jpg"
         ],
         pretitle: "TEMA SEMANAL:",
-        title: "LA MUJER,<br><b>D&Iacute;A 1.</b>",
+        title: "LA MUJER,<br><b>D&Iacute;A 2.</b>",
         decoration: "",
-        text1: "EL CASO DE DIET PRADA Y EL ABUSO SEXUAL EN EL MUNDO DE LA MODA.<br>POR PAULINA JOARISTI<br>#OPINI&Oacute;N",
-        text2: "DESCUBRIENDO LAS RELACIONES DE PODER Y EL ACOSO EN EL FASHION<br><br>EL NEGOCIO TURBIO DETR&Aacute;S DE LA FAMA Y SUS FOT&Oacute;GRAFOS",
-        link: "/el-caso-diet-prada",
+        text1: "&iquest;ALGUNA CERVECERA POR AH&Iacute;?<br>POR SEBASTIAN CRUZ",
+        text2: "EXPLORAMOS LA SITUACI&Oacute;N DE LA MUJER EN UN MUNDO ESTEREOT&Iacute;PICAMENTE MASCULINO: LA COMUNIDAD DE LA CERVEZA ARTESANAL COSTARRICENSE",
+        link: "/alguna-cervecera-por-ahi",
         highlightcolor: "#ff3c45"
     },
     "nopasanada": {

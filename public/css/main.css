@@ -263,8 +263,16 @@
     margin-right: 0.4vw;
 }
 
+#articleText p b {
+    font-family: FuturaPTMedium;
+}
+
 #articleText em {
     font-family: FuturaPTBookItalic;
+}
+
+#articleText img {
+    width: 100%;
 }
 
 #articleText a {
