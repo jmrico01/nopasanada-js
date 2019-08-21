@@ -7,54 +7,71 @@ const mysql = require("mysql");
 const path = require("path");
 const util = require("util");
 
-const PORT_HTTP = 7070;
-const PORT_HTTPS = 7171;
+const DEBUG = true;
+
 const app = express();
 
-const dbConnection = mysql.createConnection({
-    host: "localhost",
-    user: "demouser",
-    password: "password",
-    database: "nopasanada"
-});
+if (DEBUG) {
+    const PORT_HTTP = 6060;
 
-dbConnection.connect(function(error) {
-    if (error) {
-        console.error(error);
-    }
+    app.use(bodyParser.json());
+    app.use(express.static(path.join(__dirname, "/public")));
 
-    console.log("Connected to database");
-});
+    const httpServer = http.createServer(app);
 
-dbConnection.query("SELECT * FROM raw", function(error, results, fields) {
-    if (error) {
-        console.error(error);
-    }
+    httpServer.listen(PORT_HTTP, function() {
+        console.log("HTTP server listening on port " + PORT_HTTP);
+    });
+}
+else {
+    const PORT_HTTP = 7070;
+    const PORT_HTTPS = 7171;
 
-    console.log("query results:");
-    console.log(results);
-    // console.log(fields);
-});
+    const dbConnection = mysql.createConnection({
+        host: "localhost",
+        user: "demouser",
+        password: "password",
+        database: "nopasanada"
+    });
 
-const privateKey = fs.readFileSync("./keys/privkey.pem", "utf8");
-const cert = fs.readFileSync("./keys/cert.pem", "utf8");
-const ca = fs.readFileSync("./keys/chain.pem", "utf8");
+    dbConnection.connect(function(error) {
+        if (error) {
+            console.error(error);
+        }
 
-const credentials = {
-	key: privateKey,
-	cert: cert,
-	ca: ca
-};
+        console.log("Connected to database");
+    });
 
-app.use(bodyParser.json());
-app.use(express.static(path.join(__dirname, "/public")));
+    dbConnection.query("SELECT * FROM raw", function(error, results, fields) {
+        if (error) {
+            console.error(error);
+        }
 
-const httpServer = http.createServer(app);
-const httpsServer = https.createServer(credentials, app);
+        console.log("query results:");
+        console.log(results);
+        // console.log(fields);
+    });
 
-httpServer.listen(PORT_HTTP, function() {
-	console.log("HTTP server listening on port " + PORT_HTTP);
-});
-httpsServer.listen(PORT_HTTPS, function() {
-	console.log("HTTPS server listening on port " + PORT_HTTPS);
-});
+    const privateKey = fs.readFileSync("./keys/privkey.pem", "utf8");
+    const cert = fs.readFileSync("./keys/cert.pem", "utf8");
+    const ca = fs.readFileSync("./keys/chain.pem", "utf8");
+
+    const credentials = {
+    	key: privateKey,
+    	cert: cert,
+    	ca: ca
+    };
+
+    app.use(bodyParser.json());
+    app.use(express.static(path.join(__dirname, "/public")));
+
+    const httpServer = http.createServer(app);
+    const httpsServer = https.createServer(credentials, app);
+
+    httpServer.listen(PORT_HTTP, function() {
+    	console.log("HTTP server listening on port " + PORT_HTTP);
+    });
+    httpsServer.listen(PORT_HTTPS, function() {
+    	console.log("HTTPS server listening on port " + PORT_HTTPS);
+    });
+}
