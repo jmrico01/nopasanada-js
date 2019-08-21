@@ -13,6 +13,7 @@ const app = express();
 
 if (DEBUG) {
     const PORT_HTTP = 6060;
+    const PORT_HTTPS = 7272;
 
     app.use(bodyParser.json());
     app.use(express.static(path.join(__dirname, "/public")));
@@ -21,6 +22,22 @@ if (DEBUG) {
 
     httpServer.listen(PORT_HTTP, function() {
         console.log("HTTP server listening on port " + PORT_HTTP);
+    });
+
+    const privateKey = fs.readFileSync("./keys/privkey.pem", "utf8");
+    const cert = fs.readFileSync("./keys/cert.pem", "utf8");
+    const ca = fs.readFileSync("./keys/chain.pem", "utf8");
+
+    const credentials = {
+        key: privateKey,
+        cert: cert,
+        ca: ca
+    };
+
+    const httpsServer = https.createServer(credentials, app);
+
+    httpsServer.listen(PORT_HTTPS, function() {
+        console.log("HTTPS server listening on port " + PORT_HTTPS);
     });
 }
 else {
