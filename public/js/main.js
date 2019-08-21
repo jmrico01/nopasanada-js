@@ -59,9 +59,9 @@ const ENTRIES_FEATURED = {
         pretitle: "TEMA SEMANAL:",
         title: "LA MUJER,<br><b>D&Iacute;A 2.</b>",
         decoration: "",
-        text1: "&iquest;ALGUNA CERVECERA POR AH&Iacute;?<br>POR SEBASTIAN CRUZ",
-        text2: "EXPLORAMOS LA SITUACI&Oacute;N DE LA MUJER EN UN MUNDO ESTEREOT&Iacute;PICAMENTE MASCULINO: LA COMUNIDAD DE LA CERVEZA ARTESANAL COSTARRICENSE",
-        link: "/alguna-cervecera-por-ahi",
+        text1: "ABAJO EL ESTEREOTIPO: LA CERVEZA S&Iacute; ES COSA DE MUJERES.<br>POR SEBASTIAN CRUZ",
+        text2: "CONVERSAMOS CON UNA MUJER CERVECERA SOBRE C&Oacute;MO ES TRABAJAR EN UNA INDUSTRIA ESTEREOT&Iacute;PICAMENTE MASCULINA",
+        link: "/la-cerveza-si-es-cosa-de-mujeres",
         highlightcolor: "#ff3c45"
     },
     "nopasanada": {
