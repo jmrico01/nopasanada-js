@@ -1,7 +1,6 @@
 "use strict";
 
 const FEATURED_IMAGE_FADE_MS = 400;
-const ABOUT_TEXT_FADE_MS = 200;
 const IMAGE_ANIM_MS = 250;
 
 const DEFAULT_RED = "#ff301b";
@@ -36,7 +35,7 @@ const ENTRIES_FEATURED = {
         decoration: "***",
         text1: "CONOCEMOS A UNA FAMILIA EN COSTA RICA QUE HA TRIUNFADO EN EL DEPORTE DE ENDURO POR M&Aacute;S DE 50 A&Ntilde;OS.",
         text2: "VER TRAILER",
-        link: "#content-trailerp",
+        link: "/content/201908/pilotos-trailer",
         highlightcolor: "#ff613c"
     },
     "arteycultura": {
@@ -51,7 +50,7 @@ const ENTRIES_FEATURED = {
         decoration: "***",
         text1: "CONOCEMOS LAS VIDAS E HISTORIAS DE CELEBRADOS Y NUEVOS ARTISTAS VIVIENDO Y TRABAJANDO EN LATINOAM&Eacute;RICA.",
         text2: "VER TRAILER",
-        link: "#content-trailere",
+        link: "/content/201908/enfoque-trailer",
         highlightcolor: "#7fffcb"
     },
     "temamujer": {
@@ -76,42 +75,14 @@ const ENTRIES_FEATURED = {
         decoration: "***",
         text1: "LA PLATAFORMA PREMIER DE CONTENIDO ORIGINAL, REPORTAJES Y NOTICIAS EN ESPA&Ntilde;OL PARA Y POR UNA NUEVA GENERACI&Oacute;N",
         text2: "VER VIDEO",
-        link: "#content-video",
+        link: "/content/201908/nopasanada",
         highlightcolor: "#36fffd"
-    }
-};
-
-const ARTICLES = {
-    "trailerp": {
-        video: "51aG1gGsULU",
-        title: "Pilotos, Episodio 1<br>Trailer",
-        subtitle: "",
-        author: "",
-        date: "",
-        text: "<p><em>&ldquo;Familia&rdquo; o &ldquo;C&oacute;mo ganar en Enduro por m&aacute;s de 50 a&ntilde;os&rdquo; es el primer episodio de nuestra serie Pilotos.</em></p> <p><em>Aqu&iacute; conocemos a una familia en Costa Rica ha triunfado en el deporte de Enduro por m&aacute;s de 50 a&ntilde;os. Esta es su historia.</em></p> <p>Pilotos comienza el 23 de Agosto.</p>"
-    },
-    "trailere": {
-        video: "g36TGvzIi5o",
-        title: "Enfoque, Episodio 1<br>Trailer",
-        subtitle: "",
-        author: "",
-        date: "",
-        text: "<p><em>En Enfoque conocemos las vidas e historias de celebrados y nuevos artistas viviendo y trabajando en Latinoam&eacute;rica.</em></p>"
-    },
-    "video": {
-        video: "TzxV2HgY35s",
-        title: "No Pasa Nada:<br>El porqu&eacute;.",
-        subtitle: "",
-        author: "",
-        date: "",
-        text: "<p>La incertidumbre es una de nuestras respuestas m&aacute;s humanas. Aparece ante eventos inesperados, o momentos que quiebran nuestra rutina. Adem&aacute;s, la incertidumbre es tan cordial que no s&oacute;lo nos acompa&ntilde;a cuando no tenemos control e intentamos buscar orden, pero adem&aacute;s, cuando tenemos control y buscamos hacer algo diferente.</p> <p>La incertidumbre es ese sentimiento que nos abruma con impotencia, nos confunde, nos pesa como yugo de madera vieja en los hombros y nos quita el aire en ese espacio hueco entre nuestras costillas, arriba del estomago y debajo del coraz&otilde;n.</p> <p>La incertidumbre es miedo, es ansiedad, es emoci&oacute;n y felicidad. Es lo que sentimos al entender que vivimos nuestro primer amor, y que ese mismo se acab&oacute;. La incertidumbre es el no saber qu&eacute; va a pasar.</p> <p>Ante la incertidumbre siempre va a existir una respuesta. La respuesta nos encara con nuestra naturaleza, nos hace accionar sobre lo que somos. Ese momento de acci&oacute;n con el cual nos enfrentamos ante lo que se interpuso entre nosotros y lo incierto; nos analiza, nos juzga, nos hace lo que somos, y nos prepara para lo que vamos a ser.</p> <p>Lo que nos define no es no es la situaci&oacute;n que se interpone, ni el sentimiento previo a esta, ni tampoco sus consecuencias absolutas e incambiables. Lo que nos define s&oacute;lo existe en el hacer, porque en un mundo de constantes intangibles podemos s&oacute;lo decir que somos eso que realmente hacemos.</p> <p>Es entonces ese espacio, ese hueco entre nuestras costillas, arriba del estomago y debajo del coraz&oacute;n que se llena en grande de incertidumbre en el antes del hacer, que nace: &ldquo;No Pasa Nada.&rdquo;</p> <p>Es una voz que habla con amor y responsabilidad para decir:</p> <p><em>&ldquo;Anda amigo, tranquilo, no pasa nada.&rdquo;</em></p>"
     }
 };
 
 let IMAGE_ASPECT = 1920 / 960;
 
 let prevHash = null;
-let player = null;
 let imgCycleInterval = null;
 let allImagesLoaded = false;
 
@@ -144,9 +115,12 @@ function SetFeaturedContent(category, instant)
     $("#featuredDecoration").html(entry.decoration);
     $("#featuredText1").html(entry.text1);
     $("#featuredText2").html(entry.text2);
-    $("#header a").unbind("mouseover");
+    $("#header a").unbind("mouseover mouseout");
     $("#header a").mouseover(function() {
         $(this).css("color", entry.highlightcolor)
+    });
+    $("#header a").mouseout(function() {
+        $(this).css("color", "#ffffff");
     });
 
     if (!allImagesLoaded) {
@@ -155,6 +129,7 @@ function SetFeaturedContent(category, instant)
 
     if (imgCycleInterval !== null) {
         clearInterval(imgCycleInterval);
+        imgCycleInterval = null;
     }
 
     let imageClass = ".featuredImage-" + category;
@@ -208,131 +183,27 @@ function SetFeaturedContent(category, instant)
     }, IMAGE_ANIM_MS);
 }
 
-function SetArticle(articleName)
+function HandleScroll()
 {
-    console.log("SetArticle: " + articleName);
-    let article = ARTICLES[articleName];
-
-    $("#articleTitle").html(article.title);
-    if (article.author === "") {
-        $("#articleSubtitle").css("display", "none");
-        $("#articleSubtext").css("display", "none");
-        $("#color1").hide();
-        $("#color2").hide();
-    }
-    else {
-        $("#color1").show();
-        $("#color2").show();
-        $("#articleSubtitle").css("display", "block");
-        $("#articleSubtext").css("display", "block");
-        $("#articleSubtitle").html(article.subtitle);
-        $("#articleAuthor").html(article.author);
-        $("#articleDate").html(article.date);
-    }
-    $("#articleText").html(article.text);
-
-    if (article.hasOwnProperty("video")) {
-        $("#articleImage").hide();
-        $("#articleVideo").show();
-        try {
-            player = new YT.Player("articleVideo", {
-                height: "100%",
-                width: "100%",
-                videoId: article.video,
-                playerVars: {
-                    modestbranding: 1,
-                    rel: 0
-                },
-                events: {
-                    "onReady": function() {
-                    },
-                    "onStateChange": function(event) {
-                        let state = event.data;
-                        if (state === YT.PlayerState.PAUSED) {
-                        }
-                        else if (state === YT.PlayerState.PLAYING) {
-                        }
-                        else if (state === YT.PlayerState.ENDED) {
-                        }
-                    }
-                }
-            });
-        }
-        catch (e) {
-            console.log(e);
-        }
-    }
-    else {
-        $("#articleVideo").hide();
-        $("#articleImage").show();
-        $("#articleImage").css("background-image", "url(\"" + "../images/" + article.image + "\")");
-    }
-
-    OnResize();
-}
-
-function HandleScroll() {
     let scrollTopMax = Math.max(document.body.scrollHeight, document.body.offsetHeight,
         document.documentElement.clientHeight, document.documentElement.scrollHeight,
         document.documentElement.offsetHeight) - document.documentElement.clientHeight;
     let headerOpacity = document.documentElement.scrollTop / scrollTopMax;
-    if (!$("#article").is(':visible')) {
-        $("#header").css("background-color", "rgba(0%, 0%, 0%, " + headerOpacity * 100.0 + "%)");
-    }
-    else {
-        $("#header").css("background-color", "rgba(100%, 100%, 100%, 100%)");
-    }
+    $("#header").css("background-color", "rgba(0%, 0%, 0%, " + headerOpacity * 100.0 + "%)");
 }
 
 function HandleHash(hash, prevHash)
 {
-    let isCategory = hash === null || hash === "";
     let category = DEFAULT_CATEGORY;
-    if (!isCategory) {
-        let hashIndex = hash.indexOf("#");
-        if (hashIndex !== -1) {
-            let hashCategory = hash.substring(hashIndex + 1, hash.length);
-            if (ENTRIES_FEATURED.hasOwnProperty(hashCategory)) {
-                isCategory = true;
-                category = hashCategory;
-            }
+    let hashIndex = hash.indexOf("#");
+    if (hashIndex !== -1) {
+        let hashCategory = hash.substring(hashIndex + 1, hash.length);
+        if (ENTRIES_FEATURED.hasOwnProperty(hashCategory)) {
+            category = hashCategory;
         }
     }
 
-    if (player !== null) {
-        player.destroy();
-        player = null;
-    }
-    if (isCategory) {
-        $("#header a").unbind("mouseover mouseout");
-        $("#header a").css("color", "");
-        $("#header").css("color", "#fff");
-        $("#header a").mouseout(function() {
-            $(this).css("color", "#fff");
-        });
-        $("#article").hide();
-        $("#screenLanding").show();
-        $("#screenPosters").show();
-        HandleScroll();
-        SetFeaturedContent(category, false);
-    }
-    else {
-        $("#header a").unbind("mouseover mouseout");
-        $("#header a").css("color", "");
-        $("#header").css("color", "#000");
-        $("#header a").mouseover(function() {
-            $(this).css("color", DEFAULT_RED)
-        });
-        $("#header a").mouseout(function() {
-            $(this).css("color", "#000");
-        });
-        let articleName = hash.substring(hash.indexOf("-") + 1, hash.length);
-        $("#screenLanding").hide();
-        $("#screenPosters").hide();
-        $("#article").show();
-        HandleScroll();
-        SetArticle(articleName);
-    }
+    SetFeaturedContent(category, false);
 }
 
 function OnResize() {
@@ -367,21 +238,10 @@ function OnResize() {
         $("#header").css("height", "18vh")
         $("#featuredText").hide();
         $(".entry").css("width", "25vw");
-        $("#articleContainer").css("padding-left", "5vw");
-        $("#articleContainer").css("padding-right", "5vw");
-        $("#articleTitle").css("font-size", "24pt");
-        $("#articleTitle").css("line-height", "24pt");
-        $("#articleSubtitle").css("font-size", "20pt");
-        $("#articleSubtitle").css("line-height", "20pt");
-        $("#articleSubtext").css("font-size", "10pt");
-        $("#articleText p").css("font-size", "14pt");
-        $("#articleText p").css("line-height", "16pt");
-        $("#screenPosters").css("height", "120vh");
+        $("#screenPosters").css("min-height", "120vh");
         $(".entryText").css("font-size", "3vw");
         $(".entryText").css("line-height", "3vw");
         $(".entryText").css("margin-bottom", "15vw");
-        $("#color1").css("display", "none");
-        $("#color2").css("display", "none");
     }
     else {
         $("#headerCategories").show();
@@ -390,20 +250,10 @@ function OnResize() {
         $("#header").css("header", "7.9166666vw")
         $("#featuredText").show();
         $(".entry").css("width", "15.625vw");
-        $("#articleContainer").css("padding-left", "23vw");
-        $("#articleContainer").css("padding-right", "23vw");
-        $("#articleTitle").css("font-size", "5.4vw");
-        $("#articleTitle").css("line-height", "6.25vw");
-        $("#articleSubtitle").css("font-size", "3.4vw");
-        $("#articleSubtitle").css("line-height", "3.9vw");
-        $("#articleSubtext").css("font-size", "1vw");
-        $("#articleText p").css("font-size", "1.4vw");
-        $("#articleText p").css("line-height", "2.2vw");
+        $("#screenPosters").css("min-height", "");
         $(".entryText").css("font-size", "0.95vw");
         $(".entryText").css("line-height", "1.6vw");
         $(".entryText").css("margin-bottom", "0");
-        $("#color1").css("display", "block");
-        $("#color2").css("display", "block");
     }
 }
 
@@ -448,7 +298,6 @@ window.onload = function() {
     OnResize();
     HandleHash(window.location.hash);
 
-    $("#screenArticle").hide();
     $("#content").css("visibility", "visible");
 };
 

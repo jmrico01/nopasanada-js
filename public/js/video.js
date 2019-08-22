@@ -1,11 +1,11 @@
 "use strict";
 
 function OnResize() {
-    let aspect = window.innerWidth / window.innerHeight;
+    let aspect = document.documentElement.clientWidth / document.documentElement.clientHeight;
     let headerHeight = $("#header").height();
     $(".screen").each(function(index) {
         let $this = $(this);
-        $this.height(window.innerHeight - headerHeight);
+        $this.height(document.documentElement.clientHeight - headerHeight);
         $this.css("padding-top", headerHeight);
         $this.css("padding-bottom", 0);
     });
@@ -37,13 +37,47 @@ function OnResize() {
         $("#articleSubtext").css("font-size", "1vw");
         $("#articleText p").css("font-size", "1.4vw");
         $("#articleText p").css("line-height", "2.2vw");
+        $(".entryText").css("font-size", "0.95vw");
+        $(".entryText").css("line-height", "1.6vw");
+        $(".entryText").css("margin-bottom", "0");
+        $("#color1").css("display", "block");
+        $("#color2").css("display", "block");
     }
 }
 
 window.onload = function() {
     OnResize();
+
     $("#screenArticle").show();
     $("#content").css("visibility", "visible");
+
+    try {
+        let player = new YT.Player("articleVideo", {
+            height: "100%",
+            width: "100%",
+            videoId: VIDEO_ID, // must be declared in the HTML
+            playerVars: {
+                modestbranding: 1,
+                rel: 0
+            },
+            events: {
+                "onReady": function() {
+                },
+                "onStateChange": function(event) {
+                    let state = event.data;
+                    if (state === YT.PlayerState.PAUSED) {
+                    }
+                    else if (state === YT.PlayerState.PLAYING) {
+                    }
+                    else if (state === YT.PlayerState.ENDED) {
+                    }
+                }
+            }
+        });
+    }
+    catch (e) {
+        console.log(e);
+    }
 };
 
 window.onresize = OnResize;
