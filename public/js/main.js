@@ -6,6 +6,8 @@ const IMAGE_ANIM_MS = 250;
 
 const DEFAULT_RED = "#ff301b";
 
+const DEFAULT_CATEGORY = "temamujer";
+
 const ENTRIES_FEATURED = {
     "noticias": {
         images: [
@@ -54,14 +56,14 @@ const ENTRIES_FEATURED = {
     },
     "temamujer": {
         images: [
-            "mujer2noise.jpg"
+            "copa.jpeg"
         ],
         pretitle: "TEMA SEMANAL:",
-        title: "LA MUJER,<br><b>D&Iacute;A 2.</b>",
+        title: "LA MUJER,<br><b>D&Iacute;A 3.</b>",
         decoration: "",
-        text1: "ABAJO EL ESTEREOTIPO: LA CERVEZA S&Iacute; ES COSA DE MUJERES.<br>POR SEBASTIAN CRUZ",
-        text2: "CONVERSAMOS CON UNA MUJER CERVECERA SOBRE C&Oacute;MO ES TRABAJAR EN UNA INDUSTRIA ESTEREOT&Iacute;PICAMENTE MASCULINA",
-        link: "/content/201908/la-cerveza-si-es-cosa-de-mujeres",
+        text1: "8 PREGUNTAS FRECUENTES SOBRE LA COPA MENSTRUAL RESPONDIDAS CON LA CIENCIA.<br>POR DIANA GONZALES",
+        text2: "NO M&Aacute;S INCERTIDUMBRE O DUDAS ACERCA DE LA COPA MENSTRUAL - SI ESTABAS CONSIDERANDO COMPRARLA, ESTA INFO TE AYUDAR&Aacute; A DECIDIRTE.",
+        link: "/content/201908/preguntas-frecuentes-sobre-la-copa-menstrual",
         highlightcolor: "#ff3c45"
     },
     "nopasanada": {
@@ -285,7 +287,7 @@ function HandleScroll() {
 function HandleHash(hash, prevHash)
 {
     let isCategory = hash === null || hash === "";
-    let category = "arteycultura";
+    let category = DEFAULT_CATEGORY;
     if (!isCategory) {
         let hashIndex = hash.indexOf("#");
         if (hashIndex !== -1) {

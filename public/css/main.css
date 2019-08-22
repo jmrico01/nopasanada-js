@@ -194,25 +194,45 @@
 }
 
 #articleTitle {
+    position: relative;
     font-family: FuturaPTHeavy;
     font-size: 5.4vw;
     letter-spacing: -0.2vw;
     line-height: 6.25vw;
 
     padding-top: 6.9vw;
+    padding-bottom: 4.1vw;
 }
 #articleTitle em {
     font-family: FuturaPTHeavyItalic;
 }
+#articleTitle .backgroundColor {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 9.4vw;
+    bottom: 1vw;
+
+    z-index: -1;
+}
 
 #articleSubtitle {
+    position: relative;
     font-family: FuturaPTMedium;
     font-size: 3.4vw;
     letter-spacing: -0.1vw;
     line-height: 3.9vw;
 
-    padding-top: 4.1vw;
     padding-left: 0.2vw;
+}
+#articleSubtitle .backgroundColor {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 1.6vw;
+    bottom: 0;
+
+    z-index: -1;
 }
 
 #articleSubtext {
@@ -281,25 +301,4 @@
 
 #articleText a:hover {
     color: #ff301b;
-}
-
-#color1 {
-    position: absolute;
-    left: 23.2vw;
-    right: 22.2vw;
-    top: 9.4vw;
-    height: 19vw;
-
-    background-color: #FFC7F7;
-    z-index: -1;
-}
-#color2 {
-    position: absolute;
-    left: 23.2vw;
-    right: 22.2vw;
-    top: 31.3vw;
-    height: 6.2vw;
-
-    background-color: #FFC7F7;
-    z-index: -1;
 }
