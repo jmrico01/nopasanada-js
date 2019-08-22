@@ -62,7 +62,7 @@ const ENTRIES_FEATURED = {
         title: "LA MUJER,<br><b>D&Iacute;A 3.</b>",
         decoration: "",
         text1: "8 PREGUNTAS FRECUENTES SOBRE LA COPA MENSTRUAL RESPONDIDAS CON LA CIENCIA.<br>POR DIANA GONZALES",
-        text2: "NO M&Aacute;S INCERTIDUMBRE O DUDAS ACERCA DE LA COPA MENSTRUAL - SI ESTABAS CONSIDERANDO COMPRARLA, ESTA INFO TE AYUDAR&Aacute; A DECIDIRTE.",
+        text2: "NO M&Aacute;S INCERTIDUMBRE O DUDAS ACERCA DE LA COPA MENSTRUAL.<br>SI ESTABAS CONSIDERANDO COMPRARLA, ESTA INFO TE AYUDAR&Aacute; A DECIDIRTE.",
         link: "/content/201908/preguntas-frecuentes-sobre-la-copa-menstrual",
         highlightcolor: "#ff3c45"
     },
