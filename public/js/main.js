@@ -56,7 +56,7 @@ const ENTRIES_FEATURED = {
     },
     "temamujer": {
         images: [
-            "copa.jpeg"
+            "copanoise.jpg"
         ],
         pretitle: "TEMA SEMANAL:",
         title: "LA MUJER,<br><b>D&Iacute;A 3.</b>",
