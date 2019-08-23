@@ -21,6 +21,7 @@ function OnResize() {
         $("#articleSubtitle").css("font-size", "20pt");
         $("#articleSubtitle").css("line-height", "20pt");
         $("#articleSubtext").css("font-size", "10pt");
+        $("#articleAuthor").css("width", "auto");
         $("#articleDate").css("float", "right");
         $("#articleText p").css("font-size", "14pt");
         $("#articleText p").css("line-height", "16pt");
@@ -36,6 +37,7 @@ function OnResize() {
         $("#articleSubtitle").css("font-size", "3.4vw");
         $("#articleSubtitle").css("line-height", "3.9vw");
         $("#articleSubtext").css("font-size", "1vw");
+        $("#articleAuthor").css("width", "20.3vw");
         $("#articleDate").css("float", "left");
         $("#articleText p").css("font-size", "1.4vw");
         $("#articleText p").css("line-height", "2.2vw");
