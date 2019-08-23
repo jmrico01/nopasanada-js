@@ -55,15 +55,15 @@ const ENTRIES_FEATURED = {
     },
     "temamujer": {
         images: [
-            "copanoise.jpg"
+            "h1.jpg"
         ],
         pretitle: "TEMA SEMANAL:",
-        title: "LA MUJER,<br><b>D&Iacute;A 3.</b>",
+        title: "LA MUJER,<br><b>D&Iacute;A 4.</b>",
         decoration: "",
-        text1: "8 PREGUNTAS FRECUENTES SOBRE LA COPA MENSTRUAL RESPONDIDAS CON LA CIENCIA.<br>POR DIANA GONZ&Aacute;LEZ",
-        text2: "NO M&Aacute;S INCERTIDUMBRE O DUDAS ACERCA DE LA COPA MENSTRUAL.<br>SI ESTABAS CONSIDERANDO COMPRARLA, ESTA INFO TE AYUDAR&Aacute; A DECIDIRTE.",
-        link: "/content/201908/preguntas-frecuentes-sobre-la-copa-menstrual",
-        highlightcolor: "#ff3c45"
+        text1: "JEFAS DE HOGAR COMO CEOS: LOS DILEMAS QUE ENFRENTAN LAS MUJERES AL TRABAJAR.<br>POR ALICIA CASTRO",
+        text2: "SOBRE DISCRIMINACI&Oacute;N DE G&Eacute;NERO, FALTA DE CORRESPONSABILIDAD EN LOS CIUDADANOS, DIVISI&Oacute;N SEXUAL DEL TRABAJO...",
+        link: "/content/201908/jefas-de-hogar-como-ceos",
+        highlightcolor: "#053034"
     },
     "nopasanada": {
         images: [
