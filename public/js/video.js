@@ -33,28 +33,33 @@ window.onload = function() {
     $("#content").css("visibility", "visible");
 
     try {
-        let player = new YT.Player("articleVideo", {
-            height: "100%",
-            width: "100%",
-            videoId: VIDEO_ID, // must be declared in the HTML
-            playerVars: {
-                modestbranding: 1,
-                rel: 0
-            },
-            events: {
-                "onReady": function() {
+        if (VIMEO_VIDEO_ID !== undefined) {
+            // nothing, just embed directly... ugh
+        }
+        else {
+            let player = new YT.Player("articleVideo", {
+                height: "100%",
+                width: "100%",
+                videoId: VIDEO_ID, // must be declared in the HTML
+                playerVars: {
+                    modestbranding: 1,
+                    rel: 0
                 },
-                "onStateChange": function(event) {
-                    let state = event.data;
-                    if (state === YT.PlayerState.PAUSED) {
-                    }
-                    else if (state === YT.PlayerState.PLAYING) {
-                    }
-                    else if (state === YT.PlayerState.ENDED) {
+                events: {
+                    "onReady": function() {
+                    },
+                    "onStateChange": function(event) {
+                        let state = event.data;
+                        if (state === YT.PlayerState.PAUSED) {
+                        }
+                        else if (state === YT.PlayerState.PLAYING) {
+                        }
+                        else if (state === YT.PlayerState.ENDED) {
+                        }
                     }
                 }
-            }
-        });
+            });
+        }
     }
     catch (e) {
         console.log(e);
