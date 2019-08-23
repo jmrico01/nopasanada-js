@@ -1,5 +1,7 @@
 "use strict";
 
+const TRANSITION_ASPECT = 1.45;
+
 const FEATURED_IMAGE_FADE_MS = 400;
 const IMAGE_ANIM_MS = 250;
 
@@ -209,11 +211,11 @@ function HandleHash(hash, prevHash)
 }
 
 function OnResize() {
-    let aspect = document.documentElement.clientWidth / document.documentElement.clientHeight;
+    let aspect = window.innerWidth / window.innerHeight;
     let headerHeight = $("#header").height();
     $(".screen").each(function(index) {
         let $this = $(this);
-        $this.height(document.documentElement.clientHeight - headerHeight);
+        $this.height(window.innerHeight - headerHeight);
         $this.css("padding-top", headerHeight);
         $this.css("padding-bottom", 0);
     });
@@ -239,7 +241,7 @@ function OnResize() {
         cssNarrow.type = "text/css";
         document.getElementsByTagName("head")[0].appendChild(cssNarrow);
     }
-    if (aspect < 1.45) {
+    if (aspect < TRANSITION_ASPECT) {
         cssNarrow.href = "css/main-narrow.css";
     }
     else {

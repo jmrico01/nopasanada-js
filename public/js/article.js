@@ -1,5 +1,7 @@
 "use strict";
 
+const TRANSITION_ASPECT = 1.45;
+
 let cssNarrow = null;
 
 function OnResize() {
@@ -18,7 +20,7 @@ function OnResize() {
         cssNarrow.type = "text/css";
         document.getElementsByTagName("head")[0].appendChild(cssNarrow);
     }
-    if (aspect < 1.45) {
+    if (aspect < TRANSITION_ASPECT) {
         cssNarrow.href = "../../../css/article-narrow.css";
     }
     else {
