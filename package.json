@@ -1,7 +1,7 @@
 {
 	"name": "nopasanada",
-	"version": "0.1.0",
-	"description": "No Pasa Nada",
+	"version": "1.0.0",
+	"description": "I am sad to be using Node",
 	"main": "server.js",
 	"author": "Jose M Rico",
 	"license": "ISC",
