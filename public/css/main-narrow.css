@@ -1,0 +1,35 @@
+#header {
+	height: 18vw;
+}
+#headerLogo {
+	font-size: 10vw;
+}
+#headerCategories {
+	visibility: hidden;
+}
+
+#screenLanding {
+	max-height: 78vh;
+}
+
+#featuredText {
+	visibility: hidden;
+}
+
+#screenPosters {
+	min-height: 150vw;
+}
+
+.entry {
+	width: 25vw;
+}
+
+.entryImage {
+    height: 40vw;
+}
+
+.entryText {
+	font-size: 2.5vw;
+	line-height: 2.5vw;
+	margin-bottom: 15vw;
+}

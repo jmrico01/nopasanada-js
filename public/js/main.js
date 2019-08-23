@@ -80,6 +80,8 @@ const ENTRIES_FEATURED = {
     }
 };
 
+let cssNarrow = null;
+
 let IMAGE_ASPECT = 1920 / 960;
 
 let prevHash = null;
@@ -231,29 +233,17 @@ function OnResize() {
         }
     });
 
+    if (cssNarrow === null) {
+        cssNarrow = document.createElement("link");
+        cssNarrow.rel = "stylesheet";
+        cssNarrow.type = "text/css";
+        document.getElementsByTagName("head")[0].appendChild(cssNarrow);
+    }
     if (aspect < 1.45) {
-        $("#headerCategories").hide();
-        $("#headerLogo").css("font-size", "5vw");
-        $("#screenLanding").css("max-height", "78vh");
-        $("#header").css("height", "18vh")
-        $("#featuredText").hide();
-        $(".entry").css("width", "25vw");
-        $("#screenPosters").css("min-height", "120vh");
-        $(".entryText").css("font-size", "3vw");
-        $(".entryText").css("line-height", "3vw");
-        $(".entryText").css("margin-bottom", "15vw");
+        cssNarrow.href = "css/main-narrow.css";
     }
     else {
-        $("#headerCategories").show();
-        $("#headerLogo").css("font-size", "2.35vw");
-        $("#screenLanding").css("max-height", "");
-        $("#header").css("header", "7.9166666vw")
-        $("#featuredText").show();
-        $(".entry").css("width", "15.625vw");
-        $("#screenPosters").css("min-height", "");
-        $(".entryText").css("font-size", "0.95vw");
-        $(".entryText").css("line-height", "1.6vw");
-        $(".entryText").css("margin-bottom", "0");
+        cssNarrow.href = "";
     }
 }
 
