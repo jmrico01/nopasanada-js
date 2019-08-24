@@ -10,9 +10,9 @@
 		"url": "https://github.com/jmrico01/nopasanada.git"
 	},
 	"dependencies": {
-		"cson": "^5.1.0",
 		"express": "^4.16.3",
 		"mustache": "^3.0.2",
-		"mysql": "^2.17.1"
+		"showdown": "^1.9.0",
+		"xml2js": "^0.4.19"
 	}
 }

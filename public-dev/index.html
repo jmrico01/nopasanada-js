@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>No Pasa Nada</title>
+
+	<script type="application/javascript" src="js/jquery-3.4.1.min.js"></script>
+</head>
+
+<body>
+	Que me dicen rasticas
+	<div id="specialButton" style="width: 100px; height: 100px; background-color: #f00;"></div>
+	<script>
+		window.onload = function() {
+			$("#specialButton").click(function() {
+				let $this = $(this);
+				$.post("/content", {}, function(data, status) {
+					console.log(data);
+					console.log(status);
+				});
+			});
+		};
+	</script>
+</body>
+</html>

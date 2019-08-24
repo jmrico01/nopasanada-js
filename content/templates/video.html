@@ -7,21 +7,21 @@
 
     <!-- - - - - - - - - PAGE METADATA - - - - - - - - -->
     <title>No Pasa Nada</title>
-    <meta name="description" content="Conocemos las vidas e historias de celebrados y nuevos artistas viviendo y trabajando en Latinoam&eacute;rica.">
+    <meta name="description" content="{{ description }}">
 
     <!-- OpenGraph tags -->
-    <meta property="og:title"       content="Enfoque, Episodio 1. Trailer.">
     <meta property="og:type"        content="article">
-    <meta property="og:image"       content="https://www.nopasanada.com/images/enfoque4.jpg">
-    <meta property="og:url"         content="https://www.nopasanada.com/content/201908/enfoque-trailer">
-    <meta property="og:description" content="Conocemos las vidas e historias de celebrados y nuevos artistas viviendo y trabajando en Latinoam&eacute;rica.">
+    <meta property="og:title"       content="{{ title }}">
+    <meta property="og:description" content="{{ description }}">
+    <meta property="og:url"         content="https://www.nopasanada.com{{ url }}">
+    <meta property="og:image"       content="https://www.nopasanada.com{{ image }}">
 
     <!-- Twitter card -->
     <meta name="twitter:card"           content="summary">
-    <meta name="twitter:url"            content="https://www.nopasanada.com/content/201908/enfoque-trailer">
-    <meta name="twitter:title"          content="Enfoque, Episodio 1. Trailer.">
-    <meta name="twitter:description"    content="Conocemos las vidas e historias de celebrados y nuevos artistas viviendo y trabajando en Latinoam&eacute;rica.">
-    <meta name="twitter:image"          content="https://www.nopasanada.com/images/enfoque4.jpg">
+    <meta name="twitter:title"          content="{{ title }}">
+    <meta name="twitter:description"    content="{{ description }}">
+    <meta name="twitter:url"            content="https://www.nopasanada.com{{ url }}">
+    <meta name="twitter:image"          content="https://www.nopasanada.com{{ image }}">
 
     <!-- schema.org -->
     <!-- TODO: ADD TAGS -->
@@ -44,7 +44,7 @@
     
     <script type="application/javascript" src="../../../js/jquery-3.4.1.min.js"></script>
     <script type="application/javascript" src="https://www.youtube.com/iframe_api"></script>
-    <script>let VIDEO_ID = "{{ id }}";</script>
+    <script>let YOUTUBE_VIDEO_ID = "{{ id }}";</script>
     <script type="application/javascript" src="../../../js/video.js"></script>
 </head>
 
@@ -93,11 +93,11 @@
                 </div>
                 <div id="articleContainer">
                     <div id="articleTitle">
-                        <div class="backgroundColor" style="background-color: #7fffcb;"></div>
+                        <div class="backgroundColor" style="background-color: {{ color }};"></div>
                         {{ title }}
                     </div>
                     <div id="articleSubtitle">
-                        <div class="backgroundColor" style="background-color: #7fffcb;"></div>
+                        <div class="backgroundColor" style="background-color: {{ color }};"></div>
                         {{ subtitle }}
                     </div>
                     <div id="articleSubtext">
@@ -112,7 +112,7 @@
                         ...
                     </div>
                     <div id="articleText">
-                        {{ text }}
+                        {{{ text }}}
                     </div>
                 </div>
             </div>
