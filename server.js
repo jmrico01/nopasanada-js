@@ -21,6 +21,10 @@ app.get("/la-cerveza-si-es-cosa-de-mujeres", function(req, res) {
         { root: __dirname });
 });
 
+/*app.get("/content", function(req, res) {
+    res.status(200).send("<p>Hell0</p>");
+});*/
+
 app.use(bodyParser.json());
 app.use(express.static(path.join(__dirname, "/public")));
 

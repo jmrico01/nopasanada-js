@@ -44,7 +44,7 @@
     
     <script type="application/javascript" src="../../../js/jquery-3.4.1.min.js"></script>
     <script type="application/javascript" src="https://www.youtube.com/iframe_api"></script>
-    <script>let YOUTUBE_VIDEO_ID = "g36TGvzIi5o";</script>
+    <script>let VIDEO_ID = "{{ id }}";</script>
     <script type="application/javascript" src="../../../js/video.js"></script>
 </head>
 
@@ -94,24 +94,25 @@
                 <div id="articleContainer">
                     <div id="articleTitle">
                         <div class="backgroundColor" style="background-color: #7fffcb;"></div>
-                        Enfoque, Episodio 1<br>Trailer.
+                        {{ title }}
                     </div>
                     <div id="articleSubtitle">
                         <div class="backgroundColor" style="background-color: #7fffcb;"></div>
+                        {{ subtitle }}
                     </div>
                     <div id="articleSubtext">
                         <div id="articleAuthor">
+                            {{ author }}
                         </div>
                         <div id="articleDate">
+                            {{ date }}
                         </div>
                     </div>
                     <div id="articleSeparator">
                         ...
                     </div>
                     <div id="articleText">
-                        <p>
-                            <em>En Enfoque conocemos las vidas e historias de celebrados y nuevos artistas viviendo y trabajando en Latinoam&eacute;rica.</em>
-                        </p>
+                        {{ text }}
                     </div>
                 </div>
             </div>

@@ -34,15 +34,12 @@ window.onload = function() {
     $("#screenArticle").show();
     $("#content").css("visibility", "visible");
 
-    try {
-        if (VIMEO_VIDEO_ID !== undefined) {
-            // nothing, just embed directly... ugh
-        }
-        else {
+    if (YOUTUBE_VIDEO_ID !== null) {
+        try {
             let player = new YT.Player("articleVideo", {
                 height: "100%",
                 width: "100%",
-                videoId: VIDEO_ID, // must be declared in the HTML
+                videoId: YOUTUBE_VIDEO_ID, // must be declared in the HTML
                 playerVars: {
                     modestbranding: 1,
                     rel: 0
@@ -62,9 +59,9 @@ window.onload = function() {
                 }
             });
         }
-    }
-    catch (e) {
-        console.log(e);
+        catch (e) {
+            console.log(e);
+        }
     }
 };
 
