@@ -17,8 +17,8 @@ const ENTRIES_FEATURED = {
         pretitle: "&nbsp;",
         title: "<b>MODA *</b><br>SOSTENIBLE",
         decoration: "",
-        text1: "UNA NECESIDAD EN UN MUNDO CADA VEZ M&Aacute;S CONTAMINADO.<br>POR PAULINA JOARISTI",
-        text2: "EL FUTURO DEL FASHION EST&Aacute; EN DISE&Ntilde;ADORES COMO ANDREA KADER, TICA DEDICADA A RETAR LA CULTURA DE LA MODA R&Aacute;PIDA.",
+        text1: "LOS DISE&Ntilde;OS SOSTENIBLES DE ANDREA KADER: AIRE FRESCO EN UN MUNDO CADA VEZ M&Aacute;S CONTAMINADO.<br>POR PAULINA JOARISTI",
+        text2: "LA INDUSTRIA TEXTIL ES LA M&Aacute;S CONTAMINANTE DEL PLANETA - SU FUTURO EST&Aacute; EN DISE&Ntilde;ADORES DEDICADOS A RETAR LA CULTURA DE LA MODA R&Aacute;PIDA.",
         link: "/content/201908/moda-sostenible",
         highlightcolor: "#f63d53"
     },
