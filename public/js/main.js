@@ -7,9 +7,21 @@ const IMAGE_ANIM_MS = 250;
 
 const DEFAULT_RED = "#ff301b";
 
-const DEFAULT_CATEGORY = "temamujer";
+const DEFAULT_CATEGORY = "home";
 
 const ENTRIES_FEATURED = {
+    "home": {
+        images: [
+            "fashion.jpg"
+        ],
+        pretitle: "&nbsp;",
+        title: "<b>MODA *</b><br>SOSTENIBLE",
+        decoration: "",
+        text1: "UNA NECESIDAD EN UN MUNDO CADA VEZ M&Aacute;S CONTAMINADO.<br>POR PAULINA JOARISTI",
+        text2: "EL FUTURO DEL FASHION EST&Aacute; EN DISE&Ntilde;ADORES COMO ANDREA KADER, TICA DEDICADA A RETAR LA CULTURA DE LA MODA R&Aacute;PIDA.",
+        link: "/content/201908/moda-sostenible",
+        highlightcolor: "#f63d53"
+    },
     "noticias": {
         images: [
             "garrote1.jpg",
@@ -83,8 +95,6 @@ const ENTRIES_FEATURED = {
 };
 
 let cssNarrow = null;
-
-let IMAGE_ASPECT = 1920 / 960;
 
 let prevHash = null;
 let imgCycleInterval = null;
@@ -220,21 +230,6 @@ function OnResize() {
         $this.css("padding-bottom", 0);
     });
 
-    $(".featuredImage").each(function(index) {
-        let $this = $(this);
-        if (aspect > IMAGE_ASPECT) {
-            $this.width("100%");
-            $this.height("auto");
-        }
-        else {
-            $this.width("auto");
-            $this.height("100%");
-            let imageWidth = document.documentElement.clientHeight * IMAGE_ASPECT;
-            let marginX = (imageWidth - document.documentElement.clientWidth) / 2;
-            $this.css("margin-left", -marginX);
-        }
-    });
-
     if (cssNarrow === null) {
         cssNarrow = document.createElement("link");
         cssNarrow.rel = "stylesheet";
@@ -246,6 +241,30 @@ function OnResize() {
     }
     else {
         cssNarrow.href = "";
+    }
+
+    if (allImagesLoaded) {
+        $(".featuredImage").each(function(index) {
+            let $this = $(this);
+            var img = new Image();
+            img.onload = function() {
+                let imageAspect = img.width / img.height;
+                console.log(imageAspect);
+
+                if (aspect > imageAspect) {
+                    $this.width("100%");
+                    $this.height("auto");
+                }
+                else {
+                    $this.width("auto");
+                    $this.height("100%");
+                    let imageWidth = document.documentElement.clientHeight * imageAspect;
+                    let marginX = (imageWidth - document.documentElement.clientWidth) / 2;
+                    $this.css("margin-left", -marginX);
+                }
+            };
+            img.src = $this.attr("src");
+        });
     }
 }
 
@@ -283,11 +302,13 @@ window.onload = function() {
         if (loadedImages === totalImages) {
             allImagesLoaded = true;
             $(".featuredImage").show();
+            OnResize();
             HandleHash(window.location.hash);
         }
     });
 
     OnResize();
+    HandleScroll();
     HandleHash(window.location.hash);
 
     $("#content").css("visibility", "visible");
