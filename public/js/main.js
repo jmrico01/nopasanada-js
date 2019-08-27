@@ -12,15 +12,15 @@ const DEFAULT_CATEGORY = "home";
 const ENTRIES_FEATURED = {
     "home": {
         images: [
-            "fashion.jpg"
+            "burnout1.jpg"
         ],
-        pretitle: "&nbsp;",
-        title: "<b>MODA *</b><br>SOSTENIBLE",
+        pretitle: "EL S&Iacute;NDROME DE",
+        title: "<b>BURNOUT *</b>",
         decoration: "",
-        text1: "LOS DISE&Ntilde;OS SOSTENIBLES DE ANDREA KADER: AIRE FRESCO EN UN MUNDO CADA VEZ M&Aacute;S CONTAMINADO.<br>POR PAULINA JOARISTI",
-        text2: "LA INDUSTRIA TEXTIL ES LA M&Aacute;S CONTAMINANTE DEL PLANETA - SU FUTURO EST&Aacute; EN DISE&Ntilde;ADORES DEDICADOS A RETAR LA CULTURA DE LA MODA R&Aacute;PIDA.",
-        link: "/content/201908/moda-sostenible",
-        highlightcolor: "#f63d53"
+        text1: "LA CONDICI&Oacute;N IGNORADA QUE ACECHA LOS LUGARES DE TRABAJO<br>POR DIANA GONZ&Aacute;LEZ",
+        text2: "&iquest;QU&Eacute; DICE LA CIENCIA RESPECTO A ESTE FEN&Oacute;MENO RECIENTEMENTE RECONOCIDO POR LA OMS?",
+        link: "/content/201908/el-sindrome-de-burnout",
+        highlightcolor: "#0f1418"
     },
     "noticias": {
         images: [
