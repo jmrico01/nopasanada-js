@@ -15,7 +15,7 @@ const ENTRIES_FEATURED = {
             "burnout1.jpg"
         ],
         pretitle: "EL S&Iacute;NDROME DE",
-        title: "<b>BURNOUT *</b>",
+        title: "BURNOUT <b>*</b>",
         decoration: "",
         text1: "LA CONDICI&Oacute;N IGNORADA QUE ACECHA LOS LUGARES DE TRABAJO<br>POR DIANA GONZ&Aacute;LEZ",
         text2: "&iquest;QU&Eacute; DICE LA CIENCIA RESPECTO A ESTE FEN&Oacute;MENO RECIENTEMENTE RECONOCIDO POR LA OMS?",
