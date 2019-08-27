@@ -20,7 +20,7 @@ const ENTRIES_FEATURED = {
         text1: "LA CONDICI&Oacute;N IGNORADA QUE ACECHA LOS LUGARES DE TRABAJO<br>POR DIANA GONZ&Aacute;LEZ",
         text2: "&iquest;QU&Eacute; DICE LA CIENCIA RESPECTO A ESTE FEN&Oacute;MENO RECIENTEMENTE RECONOCIDO POR LA OMS?",
         link: "/content/201908/el-sindrome-de-burnout",
-        highlightcolor: "#0f1418"
+        highlightcolor: "#44f6be"
     },
     "noticias": {
         images: [
