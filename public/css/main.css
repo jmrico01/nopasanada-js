@@ -173,7 +173,7 @@
 
 .posterArrow {
     font-family: FuturaPTDemi;
-    font-size: 6vw;
+    font-size: 4.5vw;
     color: #fff;
 
     float: left;
@@ -184,6 +184,6 @@
     width: auto; /* Design in a browser is Impossible */
 }
 #arrowRight {
-    margin-left: 1.3vw;
-    margin-top: 7.95vw;
+    margin-left: 1.4vw;
+    margin-top: 9.15vw;
 }
