@@ -14,11 +14,11 @@ const ENTRIES_FEATURED = {
         images: [
             "garlic.jpg"
         ],
-        pretitle: "EL S&Iacute;NDROME DE",
-        title: "BURNOUT <b>*</b>",
+        pretitle: "FUIMOS A LA",
+        title: "FERIA <b>*</b>",
         decoration: "",
-        text1: "LA CONDICI&Oacute;N IGNORADA QUE ACECHA LOS LUGARES DE TRABAJO<br>POR DIANA GONZ&Aacute;LEZ",
-        text2: "&iquest;QU&Eacute; DICE LA CIENCIA RESPECTO A ESTE FEN&Oacute;MENO RECIENTEMENTE RECONOCIDO POR LA OMS?",
+        text1: "FUIMOS A LA FERIA CON 5 ROJOS Y ESTO FUE LO QUE COMPRAMOS.<br>POR SEBASTI&Aacute;N CRUZ",
+        text2: "SE GASTA MENOS DINERO, LAS COSAS EST&Aacute;N M&Aacute;S FRESCAS Y SE CONECTA CON LA COMUNIDAD QUE PRODUCE Y COSECHA NUESTROS ALIMENTOS",
         link: "/content/201908/fuimos-a-la-feria",
         highlightcolor: "#44f6be"
     },
