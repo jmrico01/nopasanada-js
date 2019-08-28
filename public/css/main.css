@@ -8,7 +8,7 @@
 
 #screenPosters {
     position: relative;
-    background-color: #000000;
+    /*background-color: #000000;*/
 }
 
 #landingImageCycler {
@@ -141,7 +141,7 @@
     font-size: 0.95vw;
     letter-spacing: 0.05vw;
     line-height: 1.6vw;
-    color: #fff;
+    color: #000;
 
     width: 100%;
     height: 4.6875vw;
