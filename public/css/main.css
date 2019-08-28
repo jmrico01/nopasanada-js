@@ -97,10 +97,10 @@
 }
 
 #contentList {
-    width: 84.375vw;
+    width: 100%;
     height: 31.25vw;
     margin-top: 3.125vw;
-    margin-left: 7.8125vw;
+    /*margin-left: 7.8125vw;*/
 }
 
 .entry {
@@ -145,9 +145,6 @@
     bottom: 0;
     z-index: 1;
 }
-.entryNumber b {
-    font-family: MiedingerBold;
-}
 
 .entryPoster {
     width: 100%;
@@ -172,4 +169,21 @@
     float: left;
     width: 1.5625vw;
     height: 100%;
+}
+
+.posterArrow {
+    font-family: FuturaPTDemi;
+    font-size: 6vw;
+    color: #fff;
+
+    float: left;
+    height: 100%;
+    width: 7.8125vw;
+}
+#posterArrowRight {
+    width: auto; /* Design in a browser is Impossible */
+}
+#arrowRight {
+    margin-left: 1.3vw;
+    margin-top: 7.95vw;
 }

@@ -261,7 +261,7 @@
     top: 0;
     bottom: 0;
 
-    background-color: #000;
+    background-color: #fff;
     opacity: 0.15;
 }
 #hcol32 {
@@ -271,7 +271,7 @@
     top: 0;
     bottom: 0;
 
-    background-color: #000;
+    background-color: #fff;
     opacity: 0.15;
 }
 #hcol33 {
@@ -281,7 +281,7 @@
     top: 0;
     bottom: 0;
 
-    background-color: #000;
+    background-color: #fff;
     opacity: 0.15;
 }
 #hcol34 {
@@ -291,7 +291,7 @@
     top: 0;
     bottom: 0;
 
-    background-color: #000;
+    background-color: #fff;
     opacity: 0.15;
 }
 #hcol35 {
@@ -301,7 +301,7 @@
     top: 0;
     bottom: 0;
 
-    background-color: #000;
+    background-color: #fff;
     opacity: 0.15;
 }
 #hcol36 {
@@ -311,7 +311,7 @@
     top: 0;
     bottom: 0;
 
-    background-color: #000;
+    background-color: #fff;
     opacity: 0.15;
 }
 #hcol37 {
@@ -321,17 +321,17 @@
     top: 0;
     bottom: 0;
 
-    background-color: #000;
+    background-color: #fff;
     opacity: 0.15;
 }
 #hcol38 {
     position: absolute;
     left: 0;
-    width: 53.125vw;
+    width: 93.75vw;
     top: 0;
     bottom: 0;
 
-    background-color: #000;
+    background-color: #fff;
     opacity: 0.15;
 }
 #hrow31 {
@@ -341,7 +341,7 @@
     left: 0;
     right: 0;
 
-    background-color: #000;
+    background-color: #fff;
     opacity: 0.15;
 }
 #hrow32 {
@@ -351,7 +351,7 @@
     left: 0;
     right: 0;
 
-    background-color: #000;
+    background-color: #fff;
     opacity: 0.15;
 }
 #hrow33 {
@@ -361,7 +361,7 @@
     left: 0;
     right: 0;
 
-    background-color: #000;
+    background-color: #fff;
     opacity: 0.15;
 }
 #hrow34 {
@@ -371,7 +371,7 @@
     left: 0;
     right: 0;
 
-    background-color: #000;
+    background-color: #fff;
     opacity: 0.15;
 }
 #hrow35 {
@@ -381,17 +381,17 @@
     left: 0;
     right: 0;
 
-    background-color: #000;
+    background-color: #fff;
     opacity: 0.15;
 }
 #hrow36 {
     position: absolute;
     top: 0;
-    height: 0;
+    height: 23.4375vw;
     left: 0;
     right: 0;
 
-    background-color: #000;
+    background-color: #fff;
     opacity: 0.15;
 }
 
