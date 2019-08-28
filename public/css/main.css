@@ -113,7 +113,6 @@
     -ms-transition: all 0.2s ease;
     transition: all 0.2s ease;
 }
-
 .entry:hover {
     -webkit-filter: brightness(80%);
     -webkit-transition: all 0.2s ease;
@@ -125,15 +124,36 @@
 
 .entryImage {
     background-color: #231F20;
+    /*opacity: 0.15;*/
 
+    position: relative;
     width: 100%;
     height: 25vw;
 }
 
-.entryImage img {
+.entryNumber {
+    font-family: Miedinger;
+    font-size: 3.35vw;
+    letter-spacing: -0.1vw;
+    color: #fff;
+    opacity: 1.0;
+
+    position: absolute;
+    left: 1.35vw;
+    top: 1.25vw;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+}
+.entryNumber b {
+    font-family: MiedingerBold;
+}
+
+.entryPoster {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    z-index: -1;
 }
 
 .entryText {

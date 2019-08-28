@@ -249,8 +249,6 @@ function OnResize() {
             var img = new Image();
             img.onload = function() {
                 let imageAspect = img.width / img.height;
-                console.log(imageAspect);
-
                 if (aspect > imageAspect) {
                     $this.width("100%");
                     $this.height("auto");

@@ -261,63 +261,83 @@
     top: 0;
     bottom: 0;
 
-    background-color: #fff;
+    background-color: #000;
     opacity: 0.15;
 }
 #hcol32 {
+    position: absolute;
+    left: 0;
+    width: 9.375vw;
+    top: 0;
+    bottom: 0;
+
+    background-color: #000;
+    opacity: 0.15;
+}
+#hcol33 {
+    position: absolute;
+    left: 0;
+    width: 12.5vw;
+    top: 0;
+    bottom: 0;
+
+    background-color: #000;
+    opacity: 0.15;
+}
+#hcol34 {
+    position: absolute;
+    left: 0;
+    width: 15.625vw;
+    top: 0;
+    bottom: 0;
+
+    background-color: #000;
+    opacity: 0.15;
+}
+#hcol35 {
     position: absolute;
     left: 0;
     width: 25vw;
     top: 0;
     bottom: 0;
 
-    background-color: #fff;
+    background-color: #000;
     opacity: 0.15;
 }
-#hcol33 {
+#hcol36 {
     position: absolute;
     left: 0;
     width: 31.25vw;
     top: 0;
     bottom: 0;
 
-    background-color: #fff;
+    background-color: #000;
     opacity: 0.15;
 }
-#hcol34 {
+#hcol37 {
     position: absolute;
     left: 0;
     width: 48.4375vw;
     top: 0;
     bottom: 0;
 
-    background-color: #fff;
+    background-color: #000;
     opacity: 0.15;
 }
-#hcol35 {
+#hcol38 {
     position: absolute;
     left: 0;
     width: 53.125vw;
     top: 0;
     bottom: 0;
 
-    background-color: #fff;
-    opacity: 0.15;
-}
-#hcol36 {
-    position: absolute;
-    left: 0;
-    width: 92.1875vw;
-    top: 0;
-    bottom: 0;
-
-    background-color: #fff;
+    background-color: #000;
     opacity: 0.15;
 }
 #hrow31 {
     position: absolute;
     top: 0;
-    height: 10.9375vw;
+    height: 7.8125vw;
     left: 0;
     right: 0;
 
@@ -327,7 +347,7 @@
 #hrow32 {
     position: absolute;
     top: 0;
-    height: 37.5vw;
+    height: 10.9375vw;
     left: 0;
     right: 0;
 
@@ -337,7 +357,7 @@
 #hrow33 {
     position: absolute;
     top: 0;
-    height: 39.0625vw;
+    height: 12.5vw;
     left: 0;
     right: 0;
 
@@ -347,7 +367,7 @@
 #hrow34 {
     position: absolute;
     top: 0;
-    height: 40.625vw;
+    height: 14.84375vw;
     left: 0;
     right: 0;
 
@@ -357,7 +377,7 @@
 #hrow35 {
     position: absolute;
     top: 0;
-    height: 0;
+    height: 18.75vw;
     left: 0;
     right: 0;
 
