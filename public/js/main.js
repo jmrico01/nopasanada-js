@@ -18,7 +18,7 @@ const ENTRIES_FEATURED = {
         title: "FERIA <b>*</b>",
         decoration: "",
         text1: "FUIMOS A LA FERIA CON 5 ROJOS Y ESTO FUE LO QUE COMPRAMOS.<br>POR SEBASTI&Aacute;N CRUZ",
-        text2: "SE GASTA MENOS DINERO, LAS COSAS EST&Aacute;N M&Aacute;S FRESCAS Y SE CONECTA CON LA COMUNIDAD QUE PRODUCE Y COSECHA NUESTROS ALIMENTOS",
+        text2: "SE GASTA MENOS DINERO, LAS COSAS EST&Aacute;N M&Aacute;S FRESCAS Y SE CONECTA CON LA COMUNIDAD QUE PRODUCE Y COSECHA NUESTROS ALIMENTOS.",
         link: "/content/201908/fuimos-a-la-feria",
         highlightcolor: "#44f6be"
     },
