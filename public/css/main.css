@@ -8,7 +8,7 @@
 
 #screenPosters {
     position: relative;
-    background-color: #000000;
+    background-color: #000;
 }
 
 #landingImageCycler {
@@ -96,11 +96,16 @@
     margin-left: 6.3vw;
 }
 
-#contentList {
+.contentList {
     width: 100%;
     height: 31.25vw;
-    margin-top: 3.125vw;
     /*margin-left: 7.8125vw;*/
+}
+#contentList2 {
+    background-color: #000;
+
+    margin-top: 3.125vw;
+    padding-bottom: 8vw;
 }
 
 .entry {
@@ -144,6 +149,8 @@
     right: 0;
     bottom: 0;
     z-index: 1;
+
+    visibility: hidden;
 }
 
 .entryPoster {

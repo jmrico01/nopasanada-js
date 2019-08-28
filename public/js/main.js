@@ -12,14 +12,14 @@ const DEFAULT_CATEGORY = "home";
 const ENTRIES_FEATURED = {
     "home": {
         images: [
-            "burnout1.jpg"
+            "garlic.jpg"
         ],
         pretitle: "EL S&Iacute;NDROME DE",
         title: "BURNOUT <b>*</b>",
         decoration: "",
         text1: "LA CONDICI&Oacute;N IGNORADA QUE ACECHA LOS LUGARES DE TRABAJO<br>POR DIANA GONZ&Aacute;LEZ",
         text2: "&iquest;QU&Eacute; DICE LA CIENCIA RESPECTO A ESTE FEN&Oacute;MENO RECIENTEMENTE RECONOCIDO POR LA OMS?",
-        link: "/content/201908/el-sindrome-de-burnout",
+        link: "/content/201908/fuimos-a-la-feria",
         highlightcolor: "#44f6be"
     },
     "noticias": {
@@ -199,10 +199,7 @@ function SetFeaturedContent(category, instant)
 
 function HandleScroll()
 {
-    let scrollTopMax = Math.max(document.body.scrollHeight, document.body.offsetHeight,
-        document.documentElement.clientHeight, document.documentElement.scrollHeight,
-        document.documentElement.offsetHeight) - document.documentElement.clientHeight;
-    let headerOpacity = document.documentElement.scrollTop / scrollTopMax;
+    let headerOpacity = Math.min(document.documentElement.scrollTop / window.innerHeight, 1.0);
     $("#header").css("background-color", "rgba(0%, 0%, 0%, " + headerOpacity * 100.0 + "%)");
 }
 
