@@ -54,10 +54,14 @@
     <!-- <link rel="stylesheet" type="text/css" href="../../../css/guides.css"> -->
     
     <script type="application/javascript" src="../../../js/jquery-3.4.1.min.js"></script>
-    <script type="application/javascript" src="../../../js/article.js"></script>
+    <script type="application/javascript" src="../../../js/article1.js"></script>
     <script>
         window.onhashchange = function() {
             let hash = window.location.hash;
+            if (hash === "") {
+                return;
+            }
+
             let target = null;
             if (hash === "#1") {
                 target = "#loc1";
@@ -77,6 +81,7 @@
                     scrollTop: $(target).offset().top
                 }, 500)
             }
+            window.location.hash = "";
         }
     </script>
 </head>
@@ -121,22 +126,42 @@
         <div id="content">
             <div id="article">
                 <div id="articleHeader" class="screen">
-                    <a href="#1">
-                        <div id="articleImage" style="background-image: url('../../../images/amazonas.jpg'); width: 23.85vw; float: left;">
-                        </div>
-                    </a>
-                    <a href="#2">
-                        <div id="articleImage" style="background-image: url('../../../images/amazonas.jpg'); margin-left: 1.1vw; width: 23.85vw; float: left;">
-                        </div>
-                    </a>
-                    <a href="#3">
-                        <div id="articleImage" style="background-image: url('../../../images/amazonas.jpg'); margin-left: 1.1vw; width: 23.85vw; float: left;">
-                        </div>
-                    </a>
-                    <a href="#4">
-                        <div id="articleImage" style="background-image: url('../../../images/amazonas.jpg'); margin-left: 1.1vw; width: 23.85vw; float: left;">
-                        </div>
-                    </a>
+                    <div id="headerDesktop" style="position: relative; width: 100%; height: 100%;">
+                        <a href="#1">
+                            <div id="articleImage" style="background-image: url('../../../images/article190829/vertical1.png'); width: 23.8vw; float: left;">
+                            </div>
+                        </a>
+                        <a href="#2">
+                            <div id="articleImage" style="background-image: url('../../../images/article190829/vertical2.png'); margin-left: 1.1vw; width: 23.8vw; float: left;">
+                            </div>
+                        </a>
+                        <a href="#3">
+                            <div id="articleImage" style="background-image: url('../../../images/article190829/vertical3.png'); margin-left: 1.1vw; width: 23.8vw; float: left;">
+                            </div>
+                        </a>
+                        <a href="#4">
+                            <div id="articleImage" style="background-image: url('../../../images/article190829/vertical4.png'); margin-left: 1.1vw; width: 23.8vw; float: left;">
+                            </div>
+                        </a>
+                    </div>
+                    <div id="headerMobile" style="position: relative; width: 100%; height: 100%;">
+                        <a href="#1">
+                            <div id="articleImage" style="background-image: url('../../../images/article190829/square1.png'); width: 48vw; height: 49.5%; float: left;">
+                            </div>
+                        </a>
+                        <a href="#3">
+                            <div id="articleImage" style="background-image: url('../../../images/article190829/square3.png'); margin-left: 1vw; width: 48vw; height: 49.5%;  float: left;">
+                            </div>
+                        </a>
+                        <a href="#2">
+                            <div id="articleImage" style="background-image: url('../../../images/article190829/square2.png'); margin-top: 1%; width: 48vw; height: 49.5%; float: left;">
+                            </div>
+                        </a>
+                        <a href="#4">
+                            <div id="articleImage" style="background-image: url('../../../images/article190829/square4.png'); margin-left: 1vw; margin-top: 1%; width: 48vw; height: 49.5%; float: left;">
+                            </div>
+                        </a>
+                    </div>
                 </div>
                 <div id="articleContainer">
                     <!--
@@ -161,7 +186,7 @@
                     <div id="hrow416"></div>
                     -->
 
-                    <div id="loc1"></div>
+                    <div id="loc1" style="height: 10vw;"></div>
                     <div id="articleTitle">
                         <div class="backgroundColor" style="background-color: #FCC285;"></div>
                         La Amazonía bajo presión de sequías, especulación y políticas públicas
@@ -202,7 +227,7 @@ Este año ya se produjeron más de 80.000 incendios en Brasil (un alza de caso 8
 Las políticas de protección de territorios y poblaciones amazónicas se fueron implementando desde el retorno a la democracia en 1985, ya sea con presidentes de derecha, de centro-derecha o de izquierda.</p>
                     </div>
 
-                    <div id="loc2"></div>
+                    <div id="loc2" style="height: 10vw;"></div>
                     <div id="articleTitle">
                         <div class="backgroundColor" style="background-color: #FCC285;"></div>
                         Bolsonaro vuelve a exigir una "retractación" para volver a dialogar con Macron
@@ -224,7 +249,7 @@ Las políticas de protección de territorios y poblaciones amazónicas se fueron
 <p>"Hace poco dije que Alemania y en especial Francia están tratando de comprar nuestra soberanía en cuotas", declaró Bolsonaro, cuestionado por sus posturas favorables al desarrollo de actividades agropecuarias y mineras en la Amazonía, incluso en reservas indígenas y áreas ambientales. "Cuando ustedes miran el tamaño de Brasil, la octava economía del mundo parece que 20 millones de dólares es nuestro precio. Brasil no tiene precio. 20 millones o 20.000 millones es lo mismo para nosotros", agregó.</p>
                     </div>
 
-                    <div id="loc3"></div>
+                    <div id="loc3" style="height: 10vw;"></div>
                     <div id="articleTitle">
                         <div class="backgroundColor" style="background-color: #FCC285;"></div>
                         Lluvias y SuperTanker aplacan incendios en el Pantanal boliviano
@@ -247,7 +272,7 @@ Tras confirmar que el fuego fue aplacado en el Pantanal, Morales sostuvo que "mi
 <p>El gobierno boliviano estaba esperaba hacia el final del martes la llegada de dos helicópteros ofrecidos por su par de Perú. Un avión cisterna SuperTanker, Boeing 747, continúa con sus tareas de descarga de agua en el departamento de Santa Cruz desde el viernes pasado, al igual que helicópteros de la Fuerza Aérea Boliviana. De su lado, bomberos y personal civil combaten las llamas desde tierra.</p>
                     </div>
 
-                    <div id="loc4"></div>
+                    <div id="loc4" style="height: 10vw;"></div>
                     <div id="articleTitle">
                         <div class="backgroundColor" style="background-color: #FCC285;"></div>
                         Incendios en los bosques bolivianos constituyen el mayor desastre ecológico registrado en Sudamérica
