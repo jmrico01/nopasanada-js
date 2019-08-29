@@ -7,10 +7,10 @@ const IMAGE_ANIM_MS = 250;
 
 const DEFAULT_RED = "#ff301b";
 
-const DEFAULT_CATEGORY = "home";
+const DEFAULT_CATEGORY = "noticias";
 
 const ENTRIES_FEATURED = {
-    "home": {
+    /*"home": {
         images: [
             "garlic.jpg"
         ],
@@ -21,20 +21,17 @@ const ENTRIES_FEATURED = {
         text2: "SE GASTA MENOS DINERO, LAS COSAS EST&Aacute;N M&Aacute;S FRESCAS Y SE CONECTA CON LA COMUNIDAD QUE PRODUCE Y COSECHA NUESTROS ALIMENTOS.",
         link: "/content/201908/fuimos-a-la-feria",
         highlightcolor: "#44f6be"
-    },
+    },*/
     "noticias": {
         images: [
-            "garrote1.jpg",
-            "garrote2.jpg",
-            "garrote3.jpg",
-            "garrote4.jpg"
+            "amazonas.jpg"
         ],
-        pretitle: "PROXIMAMENTE:",
-        title: "NOTICIAS<br>---<b>.</b>",
-        decoration: "***",
-        text1: "PROXIMAMENTE",
-        text2: "NOPASANADA",
-        link: "#noticias",
+        pretitle: "&nbsp;",
+        title: "EL <b>*</b><br>AMAZONAS",
+        decoration: "",
+        text1: "NOTICIAS<br>NO PASA NADA",
+        text2: "INFORMACIÓN EXCLUSIVA DESDE AMAZONÍA",
+        link: "/content0/201908/el-amazonas",
         highlightcolor: "#fe84ff"
     },
     "deporteymoto": {
