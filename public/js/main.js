@@ -91,6 +91,63 @@ const ENTRIES_FEATURED = {
     }
 };
 
+const ENTRIES_OTHER = [
+    {
+        link: "/content/201908/fuimos-a-la-feria",
+        image: "images/garlic.jpg",
+        text: "FUIMOS A LA FERIA CON 5 ROJOS Y ESTO FUE LO QUE COMPRAMOS"
+    },
+    {
+        link: "/content/201908/el-sindrome-de-burnout",
+        image: "images/burnout.jpg",
+        text: "EL S&Iacute;NDROME DE BURNOUT: LA CONDICI&Oacute;N IGNORADA QUE ACECHA LOS LUGARES DE TRABAJO"
+    },
+    {
+        link: "/content/201908/moda-sostenible",
+        image: "images/fashion.jpg",
+        text: "LOS DISE&Ntilde;OS SOSTENIBLES DE ANDREA KADER: AIRE FRESCO EN UN MUNDO CADA VEZ M&Aacute;S CONTAMINADO"
+    },
+    {
+        link: "/content/201908/jefas-de-hogar-como-ceos",
+        image: "images/h1.jpg",
+        text: "JEFAS DE HOGAR COMO CEOS: LOS DILEMAS QUE ENFRENTAN LAS MUJERES AL TRABAJAR"
+    },
+    {
+        link: "/content/201908/preguntas-frecuentes-sobre-la-copa-menstrual",
+        image: "images/copanoise.jpg",
+        text: "8 PREGUNTAS FRECUENTES SOBRE LA COPA MENSUAL RESPONDIDAS CON LA CIENCIA"
+    },
+    {
+        link: "/content/201908/la-cerveza-si-es-cosa-de-mujeres",
+        image: "images/mujer2poster.jpeg",
+        text: "ABAJO EL ESTEREOTIPO: LA CERVEZA S&Iacute; ES COSA DE MUJERES"
+    },
+    {
+        link: "/content/201908/el-caso-diet-prada",
+        image: "images/guilasexual1.jpg",
+        text: "EL CASO DIET PRADA Y EL ABUSO SEXUAL EN EL MUNDO DE LA MODA"
+    },
+    {
+        link: "/content/201908/pilotos-trailer",
+        image: "images/poster-pilotos.png",
+        text: "PILOTOS: EPISODIO 1<br>TRAILER"
+    },
+    {
+        link: "/content/201908/nopasanada",
+        image: "images/poster-nopasanada.png",
+        text: "ESTO ES: NO PASA NADA"
+    },
+    {
+        link: "/content/201908/enfoque-trailer",
+        image: "images/poster-enfoque.png",
+        text: "ENFOQUE: EPISODIO 1<br>TRAILER"
+    }
+];
+
+let entryTemplate = null;
+let postersPerScreen = 5;
+let posterPositionIndex = 0;
+
 let cssNarrow = null;
 
 let prevHash = null;
@@ -216,13 +273,6 @@ function HandleHash(hash, prevHash)
 
 function OnResize() {
     let aspect = window.innerWidth / window.innerHeight;
-    let headerHeight = $("#header").height();
-    $(".screen").each(function(index) {
-        let $this = $(this);
-        $this.height(window.innerHeight - headerHeight);
-        $this.css("padding-top", headerHeight);
-        $this.css("padding-bottom", 0);
-    });
 
     if (cssNarrow === null) {
         cssNarrow = document.createElement("link");
@@ -236,6 +286,14 @@ function OnResize() {
     else {
         cssNarrow.href = "";
     }
+
+    let headerHeight = $("#header").height();
+    $(".screen").each(function(index) {
+        let $this = $(this);
+        $this.height(window.innerHeight - headerHeight);
+        $this.css("padding-top", headerHeight);
+        $this.css("padding-bottom", 0);
+    });
 
     if (allImagesLoaded) {
         $(".featuredImage").each(function(index) {
@@ -260,6 +318,50 @@ function OnResize() {
     }
 }
 
+function MovePosters(right)
+{
+    if (right) {
+        $("#contentList").css("margin-left", -window.innerWidth);
+        $("#contentArrowLeftButton").show();
+        $("#contentArrowRightButton").hide();
+    }
+    else {
+        $("#contentList").css("margin-left", 0);
+        $("#contentArrowLeftButton").hide();
+        $("#contentArrowRightButton").show();
+    }
+
+}
+
+function ResetPosters()
+{
+    let $contentList = $("#contentList");
+    $contentList.html("");
+
+    $contentList.append("<div class=\"entrySpaceEdge\"></div>");
+    for (let i = 0; i < ENTRIES_OTHER.length; i++) {
+        let entryData = ENTRIES_OTHER[i];
+
+        let $entry = $(entryTemplate);
+        $entry.find("a").attr("href", entryData.link);
+        $entry.find("img").attr("src", entryData.image);
+        $entry.find(".entryText").html(entryData.text);
+        $contentList.append($entry);
+
+        if (i !== ENTRIES_OTHER.length - 1) {
+            if ((i + 1) % postersPerScreen === 0) {
+                $contentList.append("<div class=\"entrySpaceEdge\"></div>");
+                $contentList.append("<div class=\"entrySpaceEdge\"></div>");
+            }
+            else {
+                $contentList.append("<div class=\"entrySpace\"></div>");
+            }
+        }
+    }
+
+    $("#contentArrowLeftButton").hide();
+}
+
 window.onscroll = HandleScroll;
 
 window.onhashchange = function() {
@@ -276,6 +378,10 @@ window.onhashchange = function() {
 };
 
 window.onload = function() {
+    entryTemplate = $("#entryTemplate").html();
+    $("#entryTemplate").remove();
+    ResetPosters();
+
     let totalImages = 0;
     for (let key in ENTRIES_FEATURED) {
         let imgClass = "featuredImage-" + key;
@@ -298,6 +404,13 @@ window.onload = function() {
             HandleHash(window.location.hash);
         }
     });
+
+    $("#contentArrowLeftButton").on("click", function() {
+        MovePosters(false);
+    })
+    $("#contentArrowRightButton").on("click", function() {
+        MovePosters(true);
+    })
 
     OnResize();
     HandleScroll();
