@@ -7,21 +7,21 @@ const IMAGE_ANIM_MS = 250;
 
 const DEFAULT_RED = "#ff301b";
 
-const DEFAULT_CATEGORY = "noticias";
+const DEFAULT_CATEGORY = "home";
 
 const ENTRIES_FEATURED = {
-    /*"home": {
+    "home": {
         images: [
-            "garlic.jpg"
+            "teletrabajo.jpg"
         ],
-        pretitle: "FUIMOS A LA",
-        title: "FERIA <b>*</b>",
+        pretitle: "LA LEY DEL",
+        title: "TELE-<br>TRABAJO",
         decoration: "",
-        text1: "FUIMOS A LA FERIA CON 5 ROJOS Y ESTO FUE LO QUE COMPRAMOS.<br>POR SEBASTI&Aacute;N CRUZ",
-        text2: "SE GASTA MENOS DINERO, LAS COSAS EST&Aacute;N M&Aacute;S FRESCAS Y SE CONECTA CON LA COMUNIDAD QUE PRODUCE Y COSECHA NUESTROS ALIMENTOS.",
-        link: "/content/201908/fuimos-a-la-feria",
+        text1: "UN RESPIRO PARA EMPLEADOS, EMPRESAS - Y EL PA&Iacute;S.<br>POR ALICIA CASTRO",
+        text2: "",
+        link: "/content/201908/teletrabajo",
         highlightcolor: "#44f6be"
-    },*/
+    },
     "noticias": {
         images: [
             "amazonas.jpg"
