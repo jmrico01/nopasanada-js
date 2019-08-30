@@ -287,11 +287,13 @@ function OnResize() {
     }
     if (aspect < TRANSITION_ASPECT) {
         cssNarrow.href = "css/main-narrow.css";
-        postersPerScreen = 3;
+        postersPerScreen = ENTRIES_OTHER.length;
+        $("#contentList").css("width", "100%");
     }
     else {
         cssNarrow.href = "";
         postersPerScreen = 5;
+        $("#contentList").css("width", "1000%");
     }
     ResetPosters();
 
