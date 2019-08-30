@@ -93,6 +93,11 @@ const ENTRIES_FEATURED = {
 
 const ENTRIES_OTHER = [
     {
+        link: "/content0/201908/el-amazonas",
+        image: "images/amazonas.jpg",
+        text: "INFORMACI&Oacute;N EXCLUSIVA DESDE AMAZON&Iacute;A"
+    },
+    {
         link: "/content/201908/fuimos-a-la-feria",
         image: "images/garlic.jpg",
         text: "FUIMOS A LA FERIA CON 5 ROJOS Y ESTO FUE LO QUE COMPRAMOS"
@@ -132,11 +137,11 @@ const ENTRIES_OTHER = [
         image: "images/poster-pilotos.png",
         text: "PILOTOS: EPISODIO 1<br>TRAILER"
     },
-    {
+    /*{
         link: "/content/201908/nopasanada",
         image: "images/poster-nopasanada.png",
         text: "ESTO ES: NO PASA NADA"
-    },
+    },*/ // only support 10 things at the moment
     {
         link: "/content/201908/enfoque-trailer",
         image: "images/poster-enfoque.png",
@@ -282,10 +287,13 @@ function OnResize() {
     }
     if (aspect < TRANSITION_ASPECT) {
         cssNarrow.href = "css/main-narrow.css";
+        postersPerScreen = 3;
     }
     else {
         cssNarrow.href = "";
+        postersPerScreen = 5;
     }
+    ResetPosters();
 
     let headerHeight = $("#header").height();
     $(".screen").each(function(index) {

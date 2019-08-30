@@ -101,7 +101,7 @@
 
 #contentList {
     position: relative;
-    width: 200vw; /* set by JS */
+    width: 1000vw; /* set by JS */
     overflow: auto;
     margin-top: 3.125vw;
 }
