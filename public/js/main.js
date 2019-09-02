@@ -7,10 +7,10 @@ const IMAGE_ANIM_MS = 250;
 
 const DEFAULT_RED = "#ff301b";
 
-const DEFAULT_CATEGORY = "home";
+const DEFAULT_CATEGORY = "temasemanal";
 
 const ENTRIES_FEATURED = {
-    "home": {
+    /*"home": {
         images: [
             "teletrabajo.jpg"
         ],
@@ -21,7 +21,7 @@ const ENTRIES_FEATURED = {
         text2: "",
         link: "/content/201908/teletrabajo",
         highlightcolor: "#44f6be"
-    },
+    },*/
     "noticias": {
         images: [
             "amazonas.jpg"
@@ -64,17 +64,17 @@ const ENTRIES_FEATURED = {
         link: "/content/201908/enfoque-trailer",
         highlightcolor: "#7fffcb"
     },
-    "temamujer": {
+    "temasemanal": {
         images: [
-            "h1.jpg"
+            "coral.jpg"
         ],
-        pretitle: "TEMA SEMANAL:",
-        title: "LA MUJER,<br><b>D&Iacute;A 4.</b>",
+        pretitle: "TEMA SEMANAL, D&Iacute;A 1:",
+        title: "EL MEDIO<br><b>AMBIENTE. *</b>",
         decoration: "",
-        text1: "JEFAS DE HOGAR COMO CEOS: LOS DILEMAS QUE ENFRENTAN LAS MUJERES AL TRABAJAR.<br>POR ALICIA CASTRO",
-        text2: "SOBRE DISCRIMINACI&Oacute;N DE G&Eacute;NERO, FALTA DE CORRESPONSABILIDAD EN LOS CIUDADANOS, DIVISI&Oacute;N SEXUAL DEL TRABAJO...",
-        link: "/content/201908/jefas-de-hogar-como-ceos",
-        highlightcolor: "#053034"
+        text1: "MITOS Y VERDADES SOBRE EL EFECTO DEL BLOQUEADOR SOLAR EN LOS CORALES.<br>POR DIANA GONZ&Aacute;LEZ",
+        text2: "PROTEGER LA PIEL DEL SOL VS. PROTEGER A LOS CORALES, &iquest;DE VERDAD SON EXCLUYENTES?",
+        link: "/content/201909/los-corales",
+        highlightcolor: "#ff613c"
     },
     "nopasanada": {
         images: [
@@ -92,6 +92,11 @@ const ENTRIES_FEATURED = {
 };
 
 const ENTRIES_OTHER = [
+    {
+        link: "/content/201908/teletrabajo",
+        image: "images/teletrabajo.jpg",
+        text: "LA NUEVA LEY PARA REGULAR EL TELETRABAJO ES UN RESPIRO PARA EMPLEADOS, EMPRESAS - Y EL PAÍS"
+    },
     {
         link: "/content0/201908/el-amazonas",
         image: "images/amazonas.jpg",
@@ -142,11 +147,11 @@ const ENTRIES_OTHER = [
         image: "images/poster-nopasanada.png",
         text: "ESTO ES: NO PASA NADA"
     },*/ // only support 10 things at the moment
-    {
+    /*{
         link: "/content/201908/enfoque-trailer",
         image: "images/poster-enfoque.png",
         text: "ENFOQUE: EPISODIO 1<br>TRAILER"
-    }
+    }*/
 ];
 
 let entryTemplate = null;
