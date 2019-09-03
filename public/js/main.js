@@ -7,7 +7,7 @@ const IMAGE_ANIM_MS = 250;
 
 const DEFAULT_RED = "#ff301b";
 
-const DEFAULT_CATEGORY = "temasemanal";
+const DEFAULT_CATEGORY = "noticias";
 
 const ENTRIES_FEATURED = {
     /*"home": {
@@ -24,14 +24,14 @@ const ENTRIES_FEATURED = {
     },*/
     "noticias": {
         images: [
-            "amazonas.jpg"
+            "newsletter0903.jpg"
         ],
-        pretitle: "&nbsp;",
-        title: "EL <b>*</b><br>AMAZONAS",
+        pretitle: "NO PASA NADA:",
+        title: "NEWSLETTER<br><b>03-09-19. *</b>",
         decoration: "",
-        text1: "NOTICIAS<br>NO PASA NADA",
-        text2: "INFORMACIÓN EXCLUSIVA DESDE AMAZONÍA",
-        link: "/content0/201908/el-amazonas",
+        text1: "4 HISTORIAS IMPORTANTES DE LAS M&Aacute;S RECIENTES NOTICIAS INTERACIONALES.",
+        text2: "CURADAS POR<br>NO PASA NADA",
+        link: "/content0/201909/newsletter-03",
         highlightcolor: "#fe84ff"
     },
     "deporteymoto": {
@@ -93,6 +93,11 @@ const ENTRIES_FEATURED = {
 
 const ENTRIES_OTHER = [
     {
+        link: "/content/201909/los-corales",
+        image: "images/coral.jpg",
+        text: "MITOS Y VERDADES SOBRE EL EFECTO DEL BLOQUEADOR SOLAR EN LOS CORALES"
+    },
+    {
         link: "/content/201908/teletrabajo",
         image: "images/teletrabajo.jpg",
         text: "LA NUEVA LEY PARA REGULAR EL TELETRABAJO ES UN RESPIRO PARA EMPLEADOS, EMPRESAS - Y EL PAÍS"
@@ -137,11 +142,11 @@ const ENTRIES_OTHER = [
         image: "images/guilasexual1.jpg",
         text: "EL CASO DIET PRADA Y EL ABUSO SEXUAL EN EL MUNDO DE LA MODA"
     },
-    {
+    /*{
         link: "/content/201908/pilotos-trailer",
         image: "images/poster-pilotos.png",
         text: "PILOTOS: EPISODIO 1<br>TRAILER"
-    },
+    },*/
     /*{
         link: "/content/201908/nopasanada",
         image: "images/poster-nopasanada.png",
