@@ -7,7 +7,7 @@ const IMAGE_ANIM_MS = 250;
 
 const DEFAULT_RED = "#ff301b";
 
-const DEFAULT_CATEGORY = "noticias";
+const DEFAULT_CATEGORY = "temasemanal";
 
 const ENTRIES_FEATURED = {
     /*"home": {
@@ -66,14 +66,14 @@ const ENTRIES_FEATURED = {
     },
     "temasemanal": {
         images: [
-            "coral.jpg"
+            "moda2.jpg"
         ],
-        pretitle: "TEMA SEMANAL, D&Iacute;A 1:",
+        pretitle: "TEMA SEMANAL, D&Iacute;A 2:",
         title: "EL MEDIO<br><b>AMBIENTE. *</b>",
         decoration: "",
-        text1: "MITOS Y VERDADES SOBRE EL EFECTO DEL BLOQUEADOR SOLAR EN LOS CORALES.<br>POR DIANA GONZ&Aacute;LEZ",
-        text2: "PROTEGER LA PIEL DEL SOL VS. PROTEGER A LOS CORALES, &iquest;DE VERDAD SON EXCLUYENTES?",
-        link: "/content/201909/los-corales",
+        text1: "OCHO MARCAS LATINOAMERICANAS DE MODA SOSTENIBLE QUE DEBER&Iacute;AS CONOCER.<br>POR PAULINA JOARISTI",
+        text2: "ESTAS OCHO MARCAS DEMUESTRAN QUE HACER ROPA SOSTENIBLE NO ES UNA UTOP&Iacute;A.",
+        link: "/content/201909/ocho-marcas-moda",
         highlightcolor: "#ff613c"
     },
     "nopasanada": {
