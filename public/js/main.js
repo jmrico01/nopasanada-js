@@ -1,7 +1,5 @@
 "use strict";
 
-const TRANSITION_ASPECT = 1.45;
-
 const FEATURED_IMAGE_FADE_MS = 400;
 const IMAGE_ANIM_MS = 250;
 
@@ -142,52 +140,30 @@ const ENTRIES_OTHER = [
         image: "images/guilasexual1.jpg",
         text: "EL CASO DIET PRADA Y EL ABUSO SEXUAL EN EL MUNDO DE LA MODA"
     },
-    /*{
+    {
         link: "/content/201908/pilotos-trailer",
         image: "images/poster-pilotos.png",
         text: "PILOTOS: EPISODIO 1<br>TRAILER"
-    },*/
-    /*{
+    },
+    {
         link: "/content/201908/nopasanada",
         image: "images/poster-nopasanada.png",
         text: "ESTO ES: NO PASA NADA"
-    },*/ // only support 10 things at the moment
-    /*{
+    },
+    {
         link: "/content/201908/enfoque-trailer",
         image: "images/poster-enfoque.png",
         text: "ENFOQUE: EPISODIO 1<br>TRAILER"
-    }*/
+    }
 ];
 
 let entryTemplate = null;
 let postersPerScreen = 5;
 let posterPositionIndex = 0;
 
-let cssNarrow = null;
-
 let prevHash = null;
 let imgCycleInterval = null;
 let allImagesLoaded = false;
-
-function Shuffle(array)
-{
-    let currentIndex = array.length;
-    let temporaryValue, randomIndex;
-
-    // While there remain elements to shuffle...
-    while (0 !== currentIndex) {
-        // Pick a remaining element...
-        randomIndex = Math.floor(Math.random() * currentIndex);
-        currentIndex -= 1;
-
-        // And swap it with the current element.
-        temporaryValue = array[currentIndex];
-        array[currentIndex] = array[randomIndex];
-        array[randomIndex] = temporaryValue;
-    }
-
-    return array;
-};
 
 function SetFeaturedContent(category, instant)
 {
@@ -266,6 +242,63 @@ function SetFeaturedContent(category, instant)
     }, IMAGE_ANIM_MS);
 }
 
+function MovePosters(indexDelta)
+{
+    let indexMax = Math.floor((ENTRIES_OTHER.length - 1) / postersPerScreen);
+    posterPositionIndex = Math.min(Math.max(posterPositionIndex + indexDelta, 0), indexMax);
+
+    $("#contentList").css("margin-left", -posterPositionIndex * window.innerWidth);
+    if (posterPositionIndex == 0) {
+        $("#contentArrowLeftButton").hide();
+    }
+    else {
+        $("#contentArrowLeftButton").show();
+    }
+    if (posterPositionIndex == indexMax) {
+        $("#contentArrowRightButton").hide();
+    }
+    else {
+        $("#contentArrowRightButton").show();
+    }
+}
+
+function ResetPosters()
+{
+    if (entryTemplate === null) {
+        return;
+    }
+
+    let $contentList = $("#contentList");
+    $contentList.html("");
+
+    $contentList.append("<div class=\"entrySpaceEdge\"></div>");
+    for (let i = 0; i < ENTRIES_OTHER.length; i++) {
+        let entryData = ENTRIES_OTHER[i];
+
+        let $entry = $(entryTemplate);
+        $entry.find("a").attr("href", entryData.link);
+        $entry.find("img").attr("src", entryData.image);
+        $entry.find(".entryText").html(entryData.text);
+        $contentList.append($entry);
+
+        if (i !== ENTRIES_OTHER.length - 1) {
+            if ((i + 1) % postersPerScreen === 0) {
+                $contentList.append("<div class=\"entrySpaceEdge\"></div>");
+                if (isNarrow) {
+                    $contentList.append("<div style=\"width: 100%; height: 65vw;\"></div>");
+                }
+                $contentList.append("<div class=\"entrySpaceEdge\"></div>");
+            }
+            else {
+                $contentList.append("<div class=\"entrySpace\"></div>");
+            }
+        }
+    }
+
+    posterPositionIndex = 0;
+    MovePosters(0);
+}
+
 function HandleScroll()
 {
     let headerOpacity = Math.min(document.documentElement.scrollTop / window.innerHeight, 1.0);
@@ -286,35 +319,27 @@ function HandleHash(hash, prevHash)
     SetFeaturedContent(category, false);
 }
 
-function OnResize() {
-    let aspect = window.innerWidth / window.innerHeight;
-
-    if (cssNarrow === null) {
-        cssNarrow = document.createElement("link");
-        cssNarrow.rel = "stylesheet";
-        cssNarrow.type = "text/css";
-        document.getElementsByTagName("head")[0].appendChild(cssNarrow);
-    }
-    if (aspect < TRANSITION_ASPECT) {
-        cssNarrow.href = "css/main-narrow.css";
-        postersPerScreen = ENTRIES_OTHER.length;
+function AspectChanged(narrow)
+{
+    if (narrow) {
+        postersPerScreen = 3;
         $("#contentList").css("width", "100%");
     }
     else {
-        cssNarrow.href = "";
         postersPerScreen = 5;
-        $("#contentList").css("width", "1000%");
+        let width = Math.ceil(ENTRIES_OTHER.length / postersPerScreen) * window.innerWidth;
+        $("#contentList").css("width", width);
     }
     ResetPosters();
+}
 
-    let headerHeight = $("#header").height();
-    $(".screen").each(function(index) {
-        let $this = $(this);
-        $this.height(window.innerHeight - headerHeight);
-        $this.css("padding-top", headerHeight);
-        $this.css("padding-bottom", 0);
-    });
+function OnResize()
+{
+    if (isNarrow) {
+        $("#screenPosters").css("height", "auto");
+    }
 
+    let aspect = window.innerWidth / window.innerHeight;
     if (allImagesLoaded) {
         $(".featuredImage").each(function(index) {
             let $this = $(this);
@@ -338,50 +363,6 @@ function OnResize() {
     }
 }
 
-function MovePosters(right)
-{
-    if (right) {
-        $("#contentList").css("margin-left", -window.innerWidth);
-        $("#contentArrowLeftButton").show();
-        $("#contentArrowRightButton").hide();
-    }
-    else {
-        $("#contentList").css("margin-left", 0);
-        $("#contentArrowLeftButton").hide();
-        $("#contentArrowRightButton").show();
-    }
-
-}
-
-function ResetPosters()
-{
-    let $contentList = $("#contentList");
-    $contentList.html("");
-
-    $contentList.append("<div class=\"entrySpaceEdge\"></div>");
-    for (let i = 0; i < ENTRIES_OTHER.length; i++) {
-        let entryData = ENTRIES_OTHER[i];
-
-        let $entry = $(entryTemplate);
-        $entry.find("a").attr("href", entryData.link);
-        $entry.find("img").attr("src", entryData.image);
-        $entry.find(".entryText").html(entryData.text);
-        $contentList.append($entry);
-
-        if (i !== ENTRIES_OTHER.length - 1) {
-            if ((i + 1) % postersPerScreen === 0) {
-                $contentList.append("<div class=\"entrySpaceEdge\"></div>");
-                $contentList.append("<div class=\"entrySpaceEdge\"></div>");
-            }
-            else {
-                $contentList.append("<div class=\"entrySpace\"></div>");
-            }
-        }
-    }
-
-    $("#contentArrowLeftButton").hide();
-}
-
 window.onscroll = HandleScroll;
 
 window.onhashchange = function() {
@@ -397,7 +378,7 @@ window.onhashchange = function() {
     }
 };
 
-window.onload = function() {
+$(document).ready(function() {
     entryTemplate = $("#entryTemplate").html();
     $("#entryTemplate").remove();
     ResetPosters();
@@ -426,10 +407,10 @@ window.onload = function() {
     });
 
     $("#contentArrowLeftButton").on("click", function() {
-        MovePosters(false);
+        MovePosters(-1);
     })
     $("#contentArrowRightButton").on("click", function() {
-        MovePosters(true);
+        MovePosters(1);
     })
 
     OnResize();
@@ -437,6 +418,4 @@ window.onload = function() {
     HandleHash(window.location.hash);
 
     $("#content").css("visibility", "visible");
-};
-
-window.onresize = OnResize;
+});
