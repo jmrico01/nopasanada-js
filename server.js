@@ -10,7 +10,7 @@ const path = require("path");
 const showdown = require("showdown");
 const util = require("util");
 
-const DEBUG = false;
+const DEBUG = true;
 
 const app = express();
 const appDev = express();
@@ -34,25 +34,45 @@ for (let i = 0; i < templateFiles.length; i++) {
 
 templates.article.requiredParameters = {
     title: "",
-    subtitle: "",
-    author: "",
-    date: "",
     description: "",
     url: "",
     image: "",
+
     color: "",
+    subtitle: "",
+    author: "",
+    date: "",
     text: ""
+};
+templates.newsletter.requiredParameters = {
+    title: "",
+    description: "",
+    url: "",
+    image: "",
+
+    imageDirectory: "",
+    color: "",
+
+    title1: "",
+    text1: "",
+    title2: "",
+    text2: "",
+    title3: "",
+    text3: "",
+    title4: "",
+    text4: ""
 };
 templates.video.requiredParameters = {
     title: "",
-    subtitle: "",
-    author: "",
-    date: "",
     description: "",
     url: "",
     image: "",
+
     id: "",
     color: "",
+    subtitle: "",
+    author: "",
+    date: "",
     text: ""
 };
 
@@ -61,7 +81,14 @@ app.get("/el-caso-diet-prada", function(req, res) {
     res.redirect("/content/201908/el-caso-diet-prada");
 });
 app.get("/la-cerveza-si-es-cosa-de-mujeres", function(req, res) {
-    res.redirect("/content/201908/la-cerveza-si-es-cosa-de-mujeres");});
+    res.redirect("/content/201908/la-cerveza-si-es-cosa-de-mujeres");
+});
+app.get("/content0/201908/el-amazonas", function(req, res) {
+    res.redirect("/content/201908/newsletter-29");
+});
+app.get("/content0/201909/newsletter-03", function(req, res) {
+    res.redirect("/content/201909/newsletter-03");
+});
 // =======================
 
 app.get("/content/*/*", function(req, res) {
@@ -89,15 +116,14 @@ app.get("/content/*/*", function(req, res) {
 
             let templateObject = null;
             let parameters = null;
-            if (result.hasOwnProperty("article")) {
-                templateObject = templates.article;
-                parameters = result.article;
+            for (let contentType in templates) {
+                if (result.hasOwnProperty(contentType)) {
+                    templateObject = templates[contentType];
+                    parameters = result[contentType];
+                    break;
+                }
             }
-            else if (result.hasOwnProperty("video")) {
-                templateObject = templates.video;
-                parameters = result.video;
-            }
-            else {
+            if (templateObject === null || parameters === null) {
                 console.error("Unknown content type, don't know which template to use");
                 res.status(500).end();
                 return;
@@ -106,7 +132,7 @@ app.get("/content/*/*", function(req, res) {
             for (let k in parameters) {
                 parameters[k] = parameters[k][0].trim();
             }
-            if (parameters.author !== "") {
+            if (parameters.hasOwnProperty("author") && parameters.author !== "") {
                 parameters.author = "POR " + parameters.author.toUpperCase();
             }
             if (parameters.month !== "") {
@@ -124,16 +150,33 @@ app.get("/content/*/*", function(req, res) {
             parameters.url = requestPath;
 
             let converter = new showdown.Converter();
-            parameters.text = converter.makeHtml(parameters.text);
-            let formattedText = "";
-            let textSplit = parameters.text.split("\n");
-            for (let i = 0; i < textSplit.length; i++) {
-                textSplit[i] = textSplit[i].trim();
-                if (textSplit[i] !== "") {
-                    formattedText += "<p>" + textSplit[i] + "</p>";
+            if (result.hasOwnProperty("newsletter")) {
+                for (let t = 1; t <= 4; t++) {
+                    let tttt = "text" + t.toString();
+                    parameters[tttt] = converter.makeHtml(parameters[tttt]);
+                    let formattedText = "";
+                    let textSplit = parameters[tttt].split("\n");
+                    for (let i = 0; i < textSplit.length; i++) {
+                        textSplit[i] = textSplit[i].trim();
+                        if (textSplit[i] !== "") {
+                            formattedText += "<p>" + textSplit[i] + "</p>";
+                        }
+                    }
+                    parameters[tttt] = formattedText;
                 }
             }
-            parameters.text = formattedText;
+            else {
+                parameters.text = converter.makeHtml(parameters.text);
+                let formattedText = "";
+                let textSplit = parameters.text.split("\n");
+                for (let i = 0; i < textSplit.length; i++) {
+                    textSplit[i] = textSplit[i].trim();
+                    if (textSplit[i] !== "") {
+                        formattedText += "<p>" + textSplit[i] + "</p>";
+                    }
+                }
+                parameters.text = formattedText;
+            }
 
             for (let k in templateObject.requiredParameters) {
                 if (!parameters.hasOwnProperty(k)) {

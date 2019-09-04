@@ -31,7 +31,7 @@ const ENTRIES_FEATURED = {
         decoration: "",
         text1: "4 HISTORIAS IMPORTANTES DE LAS M&Aacute;S RECIENTES NOTICIAS INTERNACIONALES.",
         text2: "CURADAS POR<br>NO PASA NADA",
-        link: "/content0/201909/newsletter-03",
+        link: "/content/201909/newsletter-03",
         highlightcolor: "#fe84ff"
     },
     "deporteymoto": {
@@ -103,7 +103,7 @@ const ENTRIES_OTHER = [
         text: "LA NUEVA LEY PARA REGULAR EL TELETRABAJO ES UN RESPIRO PARA EMPLEADOS, EMPRESAS - Y EL PAÍS"
     },
     {
-        link: "/content0/201908/el-amazonas",
+        link: "/content/201908/newsletter-29",
         image: "images/amazonas.jpg",
         text: "INFORMACI&Oacute;N EXCLUSIVA DESDE AMAZON&Iacute;A"
     },

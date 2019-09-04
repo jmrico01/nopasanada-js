@@ -6,7 +6,8 @@
 #article {
     color: #000;
 }
-#articleImage {
+
+.articleImage {
     width: 100%;
     height: 100%;
     background-size: cover;
@@ -20,7 +21,7 @@
     line-height: 24vw;
     color: #fff;
 }
-#articleVideo {
+.articleVideo {
     width: 100%;
     height: 100%;
 }
@@ -32,7 +33,7 @@
     padding-bottom: 10vw;
 }
 
-#articleTitle {
+.articleTitle {
     position: relative;
     font-family: FuturaPTHeavy;
     font-size: 5.4vw;
@@ -42,10 +43,10 @@
     padding-top: 6.9vw;
     padding-bottom: 4.1vw;
 }
-#articleTitle em {
+.articleTitle em {
     font-family: FuturaPTHeavyItalic;
 }
-#articleTitle .backgroundColor {
+.articleTitle .backgroundColor {
     position: absolute;
     left: 0;
     right: 0;
@@ -55,14 +56,14 @@
     z-index: -1;
 }
 
-#articleSubtitle {
+.articleSubtitle {
     position: relative;
     font-family: FuturaPTMedium;
     font-size: 3.4vw;
     letter-spacing: -0.1vw;
     line-height: 3.9vw;
 }
-#articleSubtitle .backgroundColor {
+.articleSubtitle .backgroundColor {
     position: absolute;
     left: 0;
     right: 0;
@@ -72,7 +73,7 @@
     z-index: -1;
 }
 
-#articleSubtext {
+.articleSubtext {
     font-family: FuturaPTDemi;
     font-size: 1vw;
     letter-spacing: 0vw;
@@ -81,15 +82,15 @@
 
     padding-top: 3.2vw;
 }
-#articleAuthor {
+.articleAuthor {
     float: left;
     width: 20.3vw;
 }
-#articleDate {
+.articleDate {
     float: left;
 }
 
-#articleSeparator {
+.articleSeparator {
     font-family: FuturaPTBold;
     font-size: 3.4vw;
     letter-spacing: 0.2vw;
@@ -98,29 +99,29 @@
     padding-bottom: 4.4vw;
 }
 
-#articleText p {
+.articleText p {
     font-family: FuturaPTBook;
     font-size: 1.4vw;
     letter-spacing: 0.01vw;
     line-height: 2.2vw;
 }
 
-#articleText p b {
+.articleText p b {
     font-family: FuturaPTMedium;
 }
 
-#articleText em {
+.articleText em {
     font-family: FuturaPTBookItalic;
 }
 
-#articleText img {
+.articleText img {
     width: 100%;
 }
 
-#articleText a {
+.articleText a {
     text-decoration: underline;
 }
 
-#articleText a:hover {
+.articleText a:hover {
     color: #ff301b;
 }

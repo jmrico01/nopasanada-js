@@ -13,42 +13,42 @@
     padding-right: 5vw;
 }
 
-#articleTitle {
+.articleTitle {
     font-size: 24pt;
     line-height: 24pt;
 
     padding-top: 30pt;
     padding-bottom: 24pt;
 }
-#articleTitle .backgroundColor {
+.articleTitle .backgroundColor {
     left: 0;
     right: 0;
     top: 40pt;
     bottom: 8pt;
 }
 
-#articleSubtitle {
+.articleSubtitle {
     font-size: 18pt;
     line-height: 18pt;
 }
-#articleSubtitle .backgroundColor {
+.articleSubtitle .backgroundColor {
     left: 0;
     right: 0;
     top: 8pt;
     bottom: 0;
 }
 
-#articleSubtext {
+.articleSubtext {
     font-size: 10pt;
 }
-#articleAuthor {
+.articleAuthor {
     width: auto;
 }
-#articleDate {
+.articleDate {
     float: right;
 }
 
-#articleText p {
+.articleText p {
     font-size: 14pt;
     line-height: 22pt;
 }

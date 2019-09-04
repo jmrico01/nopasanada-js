@@ -1,6 +1,5 @@
 #content {
     visibility: hidden; /* hide wonky stuff until page loads */
-    overflow-x: hidden;
 }
 
 #screenLanding {
@@ -96,6 +95,7 @@
 
 #screenPosters {
     position: relative;
+    overflow-x: hidden;
     background-color: #000;
 }
 
