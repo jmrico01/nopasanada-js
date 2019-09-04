@@ -29,7 +29,7 @@ const ENTRIES_FEATURED = {
         pretitle: "NO PASA NADA:",
         title: "NEWSLETTER<br><b>03-09-19. *</b>",
         decoration: "",
-        text1: "4 HISTORIAS IMPORTANTES DE LAS M&Aacute;S RECIENTES NOTICIAS INTERACIONALES.",
+        text1: "4 HISTORIAS IMPORTANTES DE LAS M&Aacute;S RECIENTES NOTICIAS INTERNACIONALES.",
         text2: "CURADAS POR<br>NO PASA NADA",
         link: "/content0/201909/newsletter-03",
         highlightcolor: "#fe84ff"
