@@ -64,14 +64,14 @@ const ENTRIES_FEATURED = {
     },
     "temasemanal": {
         images: [
-            "moda2.jpg"
+            "alimentos.jpg"
         ],
-        pretitle: "TEMA SEMANAL, D&Iacute;A 2:",
+        pretitle: "TEMA SEMANAL, D&Iacute;A 3:",
         title: "EL MEDIO<br><b>AMBIENTE. *</b>",
         decoration: "",
-        text1: "OCHO MARCAS LATINOAMERICANAS DE MODA SOSTENIBLE QUE DEBER&Iacute;AS CONOCER.<br>POR PAULINA JOARISTI",
-        text2: "ESTAS OCHO MARCAS DEMUESTRAN QUE HACER ROPA SOSTENIBLE NO ES UNA UTOP&Iacute;A.",
-        link: "/content/201909/ocho-marcas-moda",
+        text1: "ESTAMOS DEFORESTANDO PARA PRODUCIR ALIMENTOS QUE TERMINAN EN EL BASURERO.<br>POR SEBASTI&Aacute;N CRUZ",
+        text2: "A LO LARGO DE LA CADENA DE PRODUCCIÓN Y CONSUMO, UN TERCIO DE LA COMIDA PRODUCIDA EN EL MUNDO SE DESPERDICIA. ¿CÓMO REDUCIR EL “FOOD WASTE” EN CASA?",
+        link: "/content/201909/alimentos-que-terminan-en-el-basurero",
         highlightcolor: "#ff613c"
     },
     "nopasanada": {
