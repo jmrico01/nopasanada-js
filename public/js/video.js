@@ -2,6 +2,12 @@
 
 function AspectChanged(narrow)
 {
+    if (narrow) {
+        cssNarrow.href = "../../../css/article-narrow.css";
+    }
+    else {
+        cssNarrow.href = "";
+    }
 }
 
 function OnResize()

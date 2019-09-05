@@ -23,12 +23,6 @@ function OnResizeBase()
     let narrow = aspect < TRANSITION_ASPECT;
     if (narrow !== isNarrow) {
         isNarrow = narrow;
-        if (isNarrow) {
-            cssNarrow.href = "css/main-narrow.css";
-        }
-        else {
-            cssNarrow.href = "";
-        }
         AspectChanged(isNarrow);
     }
 

@@ -322,10 +322,12 @@ function HandleHash(hash, prevHash)
 function AspectChanged(narrow)
 {
     if (narrow) {
+        cssNarrow.href = "css/main-narrow.css";
         postersPerScreen = 3;
         $("#contentList").css("width", "100%");
     }
     else {
+        cssNarrow.href = "";
         postersPerScreen = 5;
         let width = Math.ceil(ENTRIES_OTHER.length / postersPerScreen) * window.innerWidth;
         $("#contentList").css("width", width);
