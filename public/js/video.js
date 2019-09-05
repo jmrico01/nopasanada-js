@@ -1,5 +1,13 @@
 "use strict";
 
+function AspectChanged(narrow)
+{
+}
+
+function OnResize()
+{
+}
+
 window.onload = function() {
     OnResize();
     $("#content").css("visibility", "visible");
