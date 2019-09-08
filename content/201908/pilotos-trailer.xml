@@ -3,13 +3,16 @@
 		51aG1gGsULU
 	</id>
 	<image>
-		/images/pilotos4.jpg
+		/images/moto4.jpg
 	</image>
+	<imagePoster>
+		/images/poster-pilotos.png
+	</imagePoster>
 	<color>
 		#ff613c
 	</color>
 	<title>
-		Pilotos, Episodio 1. Trailer
+		Pilotos, Episodio 1.&lt;br&gt;Trailer
 	</title>
 	<subtitle>
 	</subtitle>
@@ -18,10 +21,13 @@
 	<author>
 	</author>
 	<day>
+		1
 	</day>
 	<month>
+		8
 	</month>
 	<year>
+		19
 	</year>
 	<text>
 *&ldquo;Familia&rdquo; o &ldquo;C&oacute;mo ganar en Enduro por m&aacute;s de 50 a&ntilde;os&rdquo; es el primer episodio de nuestra serie Pilotos.*

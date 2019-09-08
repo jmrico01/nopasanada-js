@@ -3,8 +3,6 @@
 const FEATURED_IMAGE_FADE_MS = 400;
 const IMAGE_ANIM_MS = 250;
 
-const DEFAULT_RED = "#ff301b";
-
 const DEFAULT_CATEGORY = "temasemanal";
 
 const ENTRIES_FEATURED = {
@@ -89,73 +87,7 @@ const ENTRIES_FEATURED = {
     }
 };
 
-const ENTRIES_OTHER = [
-    {
-        link: "/content/201909/los-corales",
-        image: "images/coral.jpg",
-        text: "MITOS Y VERDADES SOBRE EL EFECTO DEL BLOQUEADOR SOLAR EN LOS CORALES"
-    },
-    {
-        link: "/content/201908/teletrabajo",
-        image: "images/teletrabajo.jpg",
-        text: "LA NUEVA LEY PARA REGULAR EL TELETRABAJO ES UN RESPIRO PARA EMPLEADOS, EMPRESAS - Y EL PAÍS"
-    },
-    {
-        link: "/content/201908/newsletter-29",
-        image: "images/amazonas.jpg",
-        text: "INFORMACI&Oacute;N EXCLUSIVA DESDE AMAZON&Iacute;A"
-    },
-    {
-        link: "/content/201908/fuimos-a-la-feria",
-        image: "images/garlic.jpg",
-        text: "FUIMOS A LA FERIA CON 5 ROJOS Y ESTO FUE LO QUE COMPRAMOS"
-    },
-    {
-        link: "/content/201908/el-sindrome-de-burnout",
-        image: "images/burnout.jpg",
-        text: "EL S&Iacute;NDROME DE BURNOUT: LA CONDICI&Oacute;N IGNORADA QUE ACECHA LOS LUGARES DE TRABAJO"
-    },
-    {
-        link: "/content/201908/moda-sostenible",
-        image: "images/fashion.jpg",
-        text: "LOS DISE&Ntilde;OS SOSTENIBLES DE ANDREA KADER: AIRE FRESCO EN UN MUNDO CADA VEZ M&Aacute;S CONTAMINADO"
-    },
-    {
-        link: "/content/201908/jefas-de-hogar-como-ceos",
-        image: "images/h1.jpg",
-        text: "JEFAS DE HOGAR COMO CEOS: LOS DILEMAS QUE ENFRENTAN LAS MUJERES AL TRABAJAR"
-    },
-    {
-        link: "/content/201908/preguntas-frecuentes-sobre-la-copa-menstrual",
-        image: "images/copanoise.jpg",
-        text: "8 PREGUNTAS FRECUENTES SOBRE LA COPA MENSUAL RESPONDIDAS CON LA CIENCIA"
-    },
-    {
-        link: "/content/201908/la-cerveza-si-es-cosa-de-mujeres",
-        image: "images/mujer2poster.jpeg",
-        text: "ABAJO EL ESTEREOTIPO: LA CERVEZA S&Iacute; ES COSA DE MUJERES"
-    },
-    {
-        link: "/content/201908/el-caso-diet-prada",
-        image: "images/guilasexual1.jpg",
-        text: "EL CASO DIET PRADA Y EL ABUSO SEXUAL EN EL MUNDO DE LA MODA"
-    },
-    {
-        link: "/content/201908/pilotos-trailer",
-        image: "images/poster-pilotos.png",
-        text: "PILOTOS: EPISODIO 1<br>TRAILER"
-    },
-    {
-        link: "/content/201908/nopasanada",
-        image: "images/poster-nopasanada.png",
-        text: "ESTO ES: NO PASA NADA"
-    },
-    {
-        link: "/content/201908/enfoque-trailer",
-        image: "images/poster-enfoque.png",
-        text: "ENFOQUE: EPISODIO 1<br>TRAILER"
-    }
-];
+let allEntries = null;
 
 let entryTemplate = null;
 let postersPerScreen = 5;
@@ -242,9 +174,9 @@ function SetFeaturedContent(category, instant)
     }, IMAGE_ANIM_MS);
 }
 
-function MovePosters(indexDelta)
+function MovePosters(entries, indexDelta)
 {
-    let indexMax = Math.floor((ENTRIES_OTHER.length - 1) / postersPerScreen);
+    let indexMax = Math.floor((entries.length - 1) / postersPerScreen);
     posterPositionIndex = Math.min(Math.max(posterPositionIndex + indexDelta, 0), indexMax);
 
     $("#contentList").css("margin-left", -posterPositionIndex * window.innerWidth);
@@ -262,26 +194,29 @@ function MovePosters(indexDelta)
     }
 }
 
-function ResetPosters()
+function ResetPosters(entries)
 {
+    console.log("ResetPosters with " + entries.length + " entries");
     if (entryTemplate === null) {
         return;
     }
 
     let $contentList = $("#contentList");
+    let width = Math.ceil(entries.length / postersPerScreen) * window.innerWidth;
+    $contentList.css("width", width);
     $contentList.html("");
 
     $contentList.append("<div class=\"entrySpaceEdge\"></div>");
-    for (let i = 0; i < ENTRIES_OTHER.length; i++) {
-        let entryData = ENTRIES_OTHER[i];
+    for (let i = 0; i < entries.length; i++) {
+        let entryData = entries[i];
 
         let $entry = $(entryTemplate);
         $entry.find("a").attr("href", entryData.link);
         $entry.find("img").attr("src", entryData.image);
-        $entry.find(".entryText").html(entryData.text);
+        $entry.find(".entryText").html(entryData.title);
         $contentList.append($entry);
 
-        if (i !== ENTRIES_OTHER.length - 1) {
+        if (i !== entries.length - 1) {
             if ((i + 1) % postersPerScreen === 0) {
                 $contentList.append("<div class=\"entrySpaceEdge\"></div>");
                 if (isNarrow) {
@@ -296,7 +231,7 @@ function ResetPosters()
     }
 
     posterPositionIndex = 0;
-    MovePosters(0);
+    MovePosters(entries, 0);
 }
 
 function HandleScroll()
@@ -329,10 +264,11 @@ function AspectChanged(narrow)
     else {
         cssNarrow.href = "";
         postersPerScreen = 5;
-        let width = Math.ceil(ENTRIES_OTHER.length / postersPerScreen) * window.innerWidth;
-        $("#contentList").css("width", width);
     }
-    ResetPosters();
+
+    if (allEntries !== null) {
+        ResetPosters(allEntries);
+    }
 }
 
 function OnResize()
@@ -383,7 +319,6 @@ window.onhashchange = function() {
 $(document).ready(function() {
     entryTemplate = $("#entryTemplate").html();
     $("#entryTemplate").remove();
-    ResetPosters();
 
     let totalImages = 0;
     for (let key in ENTRIES_FEATURED) {
@@ -408,11 +343,21 @@ $(document).ready(function() {
         }
     });
 
+    $.post("/content", {}, function(data, status) {
+        if (status !== "success") {
+            console.error("Failed to load entries");
+            return;
+        }
+
+        allEntries = data;
+        ResetPosters(allEntries);
+    });
+
     $("#contentArrowLeftButton").on("click", function() {
-        MovePosters(-1);
+        MovePosters(allEntries, -1);
     })
     $("#contentArrowRightButton").on("click", function() {
-        MovePosters(1);
+        MovePosters(allEntries, 1);
     })
 
     OnResize();

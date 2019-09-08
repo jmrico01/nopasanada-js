@@ -10,7 +10,7 @@ const path = require("path");
 const showdown = require("showdown");
 const util = require("util");
 
-const DEBUG = false;
+const DEBUG = true;
 
 const app = express();
 const appDev = express();
@@ -75,6 +75,72 @@ templates.video.requiredParameters = {
     date: "",
     text: ""
 };
+
+// ugh...
+async function parseXMLStringSync(xml) {
+    return new Promise((resolve, reject) => {
+        parseString(xml, function (err, json) {
+            if (err) {
+                reject(err);
+            }
+            else {
+                resolve(json);
+            }
+        });
+
+    });
+}
+
+let allContent = [];
+let allContentDirs = fs.readdirSync(path.join(__dirname, "content"));
+for (let i = 0; i < allContentDirs.length; i++) {
+    let dirName = allContentDirs[i];
+    if (dirName === "templates") {
+        continue;
+    }
+    let allContentUnderDir = fs.readdirSync(path.join(__dirname, "content", dirName));
+    for (let j = 0; j < allContentUnderDir.length; j++) {
+        let contentFileName = allContentUnderDir[j];
+        let contentURI = "/content/" + dirName + "/" + contentFileName;
+        let contentPath = path.join(__dirname, contentURI);
+        let contentFileData = fs.readFileSync(contentPath);
+        // ugh... FUCK javascript and its culture
+        parseXMLString(contentFileData, function(err, data) {
+            if (err) {
+                throw new Error("file " + contentURI + ", error " + err);
+            }
+
+            let insideData = null;
+            for (let contentType in templates) {
+                if (data.hasOwnProperty(contentType)) {
+                    insideData = data[contentType];
+                    break;
+                }
+            }
+            if (insideData === null) {
+                console.error("Unknown content type, don't know which template to use:");
+                console.error(insideData);
+                return;
+            }
+
+            if (!insideData.hasOwnProperty("imagePoster") && !insideData.hasOwnProperty("image")) {
+                throw new Error("no image on file " + contentURI);
+            }
+            if (!insideData.hasOwnProperty("titlePoster") && !insideData.hasOwnProperty("title")) {
+                throw new Error("no title on file " + contentURI);
+            }
+
+            let imagePoster = insideData.hasOwnProperty("imagePoster") ? insideData.imagePoster : insideData.image;
+            let titlePoster = insideData.hasOwnProperty("titlePoster") ? insideData.titlePoster : insideData.title;
+            allContent.push({
+                link: contentURI,
+                image: imagePoster[0].trim(),
+                title: titlePoster[0].trim().toUpperCase(),
+                categories: [] // TODO revisit
+            });
+        });
+    }
+}
 
 // Backwards compatibility
 app.get("/el-caso-diet-prada", function(req, res) {
@@ -189,6 +255,12 @@ app.get("/content/*/*", function(req, res) {
             res.status(200).send(output);
         });
     });
+});
+
+app.post("/content", function(req, res) {
+    let category = req.query.category;
+    // TODO sort allContent, eventually also filter by category
+    res.status(200).send(allContent);
 });
 
 app.use(express.static(path.join(__dirname, "/public")));

@@ -5,11 +5,14 @@
 	<image>
 		/images/enfoque3.jpg
 	</image>
+	<imagePoster>
+		/images/poster-enfoque.png
+	</imagePoster>
 	<color>
 		#7fffcb
 	</color>
 	<title>
-		Enfoque, Episodio 1. Trailer
+		Enfoque, Episodio 1.&lt;br&gt;Trailer
 	</title>
 	<subtitle>
 	</subtitle>
@@ -18,10 +21,13 @@
 	<author>
 	</author>
 	<day>
+		1
 	</day>
 	<month>
+		8
 	</month>
 	<year>
+		19
 	</year>
 	<text>
 *En Enfoque conocemos las vidas e historias de celebrados y nuevos artistas viviendo y trabajando en Latinoamérica.*
