@@ -1,9 +1,9 @@
 <newsletter>
 	<image>
-		/images/amazonas.jpg
+		/images/201908/headers/amazonas.jpg
 	</image>
 	<imageDirectory>
-		/images/article190829
+		/images/201908/newsletter-29
 	</imageDirectory>
 	<color>
 		#ffc7f7

@@ -1,9 +1,9 @@
 <newsletter>
 	<image>
-		/images/amazonas.jpg
+		/images/201909/headers/newsletter-03.jpg
 	</image>
 	<imageDirectory>
-		/images/newsletter190903
+		/images/201909/newsletter-03
 	</imageDirectory>
 	<color>
 		#FCC285

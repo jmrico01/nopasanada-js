@@ -20,7 +20,7 @@ const ENTRIES_FEATURED = {
     },*/
     "noticias": {
         images: [
-            "newsletter0903.jpg"
+            "201909/headers/newsletter-03.jpg"
         ],
         pretitle: "NO PASA NADA:",
         title: "NEWSLETTER<br><b>03-09-19. *</b>",
@@ -32,10 +32,10 @@ const ENTRIES_FEATURED = {
     },
     "deporteymoto": {
         images: [
-            "moto1.jpg",
-            "moto2.jpg",
-            "moto3.jpg",
-            "moto4.jpg"
+            "201908/headers/moto1.jpg",
+            "201908/headers/moto2.jpg",
+            "201908/headers/moto3.jpg",
+            "201908/headers/moto4.jpg"
         ],
         pretitle: "SERIE:",
         title: "PILOTOS<br><b>EP 1.</b>",
@@ -47,10 +47,10 @@ const ENTRIES_FEATURED = {
     },
     "arteycultura": {
         images: [
-            "enfoque1.jpg",
-            "enfoque2.jpg",
-            "enfoque3.jpg",
-            "enfoque4.jpg"
+            "201908/headers/enfoque1.jpg",
+            "201908/headers/enfoque2.jpg",
+            "201908/headers/enfoque3.jpg",
+            "201908/headers/enfoque4.jpg"
         ],
         pretitle: "SERIE:",
         title: "ENFOQUE<br><b>EP 1.</b>",
@@ -62,7 +62,7 @@ const ENTRIES_FEATURED = {
     },
     "temasemanal": {
         images: [
-            "alimentos.jpg"
+            "201909/headers/alimentos.jpg"
         ],
         pretitle: "TEMA SEMANAL, D&Iacute;A 3:",
         title: "EL MEDIO<br><b>AMBIENTE. *</b>",
@@ -74,8 +74,8 @@ const ENTRIES_FEATURED = {
     },
     "nopasanada": {
         images: [
-            "garrotex1.jpg",
-            "garrotex2.jpg"
+            "201908/headers/garrotex1.jpg",
+            "201908/headers/garrotex2.jpg"
         ],
         pretitle: "ESTO ES:",
         title: "<b>NO</b> PASA<br>NADA<b>.</b>",
@@ -196,7 +196,6 @@ function MovePosters(entries, indexDelta)
 
 function ResetPosters(entries)
 {
-    console.log("ResetPosters with " + entries.length + " entries");
     if (entryTemplate === null) {
         return;
     }
