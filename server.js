@@ -101,13 +101,15 @@ for (let i = 0; i < allContentDirs.length; i++) {
     let allContentUnderDir = fs.readdirSync(path.join(__dirname, "content", dirName));
     for (let j = 0; j < allContentUnderDir.length; j++) {
         let contentFileName = allContentUnderDir[j];
-        let contentURI = "/content/" + dirName + "/" + contentFileName;
-        let contentPath = path.join(__dirname, contentURI);
+        if (contentFileName.length <= 4) {
+            throw new Error("File name too short for .xml extension " + dirName + "/" + contentFileName);
+        }
+        let contentPath = path.join(__dirname, "content", dirName, contentFileName);
         let contentFileData = fs.readFileSync(contentPath);
         // ugh... FUCK javascript and its culture
         parseXMLString(contentFileData, function(err, data) {
             if (err) {
-                throw new Error("file " + contentURI + ", error " + err);
+                throw new Error("file " + contentPath + ", error " + err);
             }
 
             let insideData = null;
@@ -124,18 +126,36 @@ for (let i = 0; i < allContentDirs.length; i++) {
             }
 
             if (!insideData.hasOwnProperty("imagePoster") && !insideData.hasOwnProperty("image")) {
-                throw new Error("no image on file " + contentURI);
+                throw new Error("no image on file " + contentPath);
             }
             if (!insideData.hasOwnProperty("titlePoster") && !insideData.hasOwnProperty("title")) {
-                throw new Error("no title on file " + contentURI);
+                throw new Error("no title on file " + contentPath);
+            }
+            if (!insideData.hasOwnProperty("day") && !insideData.hasOwnProperty("month") && !insideData.hasOwnProperty("year")) {
+                throw new Error("no day/month/year on file " + contentPath);
             }
 
+            let uriPoster = "/content/" + dirName + "/" + contentFileName.substring(0, contentFileName.length - 4);
             let imagePoster = insideData.hasOwnProperty("imagePoster") ? insideData.imagePoster : insideData.image;
             let titlePoster = insideData.hasOwnProperty("titlePoster") ? insideData.titlePoster : insideData.title;
+            let dayPoster = insideData.day[0].trim();
+            while (dayPoster.length < 2) {
+                dayPoster = "0" + dayPoster;
+            }
+            let monthPoster = insideData.month[0].trim();
+            while (monthPoster.length < 2) {
+                monthPoster = "0" + monthPoster;
+            }
+            let yearPoster = insideData.year[0].trim();
+            if (yearPoster.length !== 4) {
+                throw new Error("poster incomplete year / bad format: " + contentPath);
+            }
+            let datePoster = insideData.year[0].trim() + "-" + monthPoster + "-" + dayPoster;
             allContent.push({
-                link: contentURI,
+                link: uriPoster,
                 image: imagePoster[0].trim(),
                 title: titlePoster[0].trim().toUpperCase(),
+                date: datePoster,
                 categories: [] // TODO revisit
             });
         });
@@ -259,8 +279,14 @@ app.get("/content/*/*", function(req, res) {
 
 app.post("/content", function(req, res) {
     let category = req.query.category;
-    // TODO sort allContent, eventually also filter by category
-    res.status(200).send(allContent);
+    // TODO filter content based on category
+    // TODO move this sort until after allContent is ready (but async... bleh)
+    let filteredContent = allContent.slice(0);
+    filteredContent.sort(function(a, b) {
+        // descending date order
+        return a.date > b.date ? -1 : 1;
+    });
+    res.status(200).send(filteredContent);
 });
 
 app.use(express.static(path.join(__dirname, "/public")));
