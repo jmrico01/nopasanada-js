@@ -54,12 +54,19 @@ templates.newsletter.requiredParameters = {
     color: "",
 
     title1: "",
+    author1: "",
     text1: "",
+
     title2: "",
+    author2: "",
     text2: "",
+
     title3: "",
+    author3: "",
     text3: "",
+
     title4: "",
+    author4: "",
     text4: ""
 };
 templates.video.requiredParameters = {
@@ -220,6 +227,18 @@ app.get("/content/*/*", function(req, res) {
             }
             if (parameters.hasOwnProperty("author") && parameters.author !== "") {
                 parameters.author = "POR " + parameters.author.toUpperCase();
+            }
+            if (parameters.hasOwnProperty("author1") && parameters.author1 !== "") {
+                parameters.author1 = "POR " + parameters.author1.toUpperCase();
+            }
+            if (parameters.hasOwnProperty("author2") && parameters.author2 !== "") {
+                parameters.author2 = "POR " + parameters.author2.toUpperCase();
+            }
+            if (parameters.hasOwnProperty("author3") && parameters.author3 !== "") {
+                parameters.author3 = "POR " + parameters.author3.toUpperCase();
+            }
+            if (parameters.hasOwnProperty("author4") && parameters.author4 !== "") {
+                parameters.author4 = "POR " + parameters.author4.toUpperCase();
             }
             if (parameters.month !== "") {
                 const monthNames = [

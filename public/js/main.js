@@ -3,7 +3,7 @@
 const FEATURED_IMAGE_FADE_MS = 400;
 const IMAGE_ANIM_MS = 250;
 
-const DEFAULT_CATEGORY = "temasemanal";
+const DEFAULT_CATEGORY = "noticias";
 
 const ENTRIES_FEATURED = {
     /*"home": {
@@ -20,15 +20,15 @@ const ENTRIES_FEATURED = {
     },*/
     "noticias": {
         images: [
-            "201909/headers/newsletter-03.jpg"
+            "201909/headers/newsletter-10.jpg"
         ],
         pretitle: "NO PASA NADA:",
-        title: "NEWSLETTER<br><b>03-09-19. *</b>",
+        title: "NEWSLETTER<br><b>10-09-19. *</b>",
         decoration: "",
         text1: "4 HISTORIAS IMPORTANTES DE LAS M&Aacute;S RECIENTES NOTICIAS INTERNACIONALES.",
         text2: "CURADAS POR<br>NO PASA NADA",
-        link: "/content/201909/newsletter-03",
-        highlightcolor: "#fe84ff"
+        link: "/content/201909/newsletter-10",
+        highlightcolor: "#3c404b"
     },
     "deporteymoto": {
         images: [
