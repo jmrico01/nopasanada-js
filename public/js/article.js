@@ -20,6 +20,9 @@ function OnResize()
 
 window.onload = function() {
     OnResize();
+    if ($(".articleAudio").attr("src") === "") {
+        $(".articleAudio").remove();
+    }
     $("#content").css("visibility", "visible");
 };
 

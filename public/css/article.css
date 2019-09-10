@@ -33,6 +33,10 @@
     padding-bottom: 10vw;
 }
 
+.articleAudio {
+    margin-top: 6vw;
+}
+
 .articleTitle {
     position: relative;
     font-family: FuturaPTHeavy;

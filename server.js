@@ -51,6 +51,7 @@ templates.newsletter.requiredParameters = {
     image: "",
 
     imageDirectory: "",
+    audioSource: "",
     color: "",
 
     title1: "",
