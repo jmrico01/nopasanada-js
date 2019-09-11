@@ -212,6 +212,7 @@ function ResetPosters(entries)
         let $entry = $(entryTemplate);
         $entry.find("a").attr("href", entryData.link);
         $entry.find("img").attr("src", entryData.image);
+        $entry.find(".entryNumber").html(i + 1 + ".");
         $entry.find(".entryText").html(entryData.title);
         $contentList.append($entry);
 

@@ -178,7 +178,7 @@
     bottom: 0;
     z-index: 1;
 
-    visibility: hidden;
+    /*visibility: hidden;*/
 }
 
 .entryPoster {
