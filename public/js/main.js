@@ -3,21 +3,9 @@
 const FEATURED_IMAGE_FADE_MS = 400;
 const IMAGE_ANIM_MS = 250;
 
-const DEFAULT_CATEGORY = "noticias";
+const DEFAULT_CATEGORY = "arteycultura";
 
 const ENTRIES_FEATURED = {
-    /*"home": {
-        images: [
-            "teletrabajo.jpg"
-        ],
-        pretitle: "LA LEY DEL",
-        title: "TELE-<br>TRABAJO",
-        decoration: "",
-        text1: "UN RESPIRO PARA EMPLEADOS, EMPRESAS - Y EL PA&Iacute;S.<br>POR ALICIA CASTRO",
-        text2: "",
-        link: "/content/201908/teletrabajo",
-        highlightcolor: "#44f6be"
-    },*/
     "noticias": {
         images: [
             "201909/headers/newsletter-10.jpg"
@@ -47,6 +35,18 @@ const ENTRIES_FEATURED = {
     },
     "arteycultura": {
         images: [
+            "201909/headers/maquillaje.jpg"
+        ],
+        pretitle: "EDITORIAL:",
+        title: "MAQUILLAJE,<br><b>IDENTIDAD.</b>",
+        decoration: "",
+        text1: "YA NO SE TRATA DE ALCANZAR LA PERFECCIÓN; NUESTRA RELACIÓN CON EL MAQUILLAJE SE HA TRANSFORMADO.",
+        text2: "POR PAULINA JOARISTI",
+        link: "/content/201909/11-maquillaje-es-identidad",
+        highlightcolor: "#7fffcb"
+    },
+    /*"arteycultura": {
+        images: [
             "201908/headers/enfoque1.jpg",
             "201908/headers/enfoque2.jpg",
             "201908/headers/enfoque3.jpg",
@@ -59,7 +59,7 @@ const ENTRIES_FEATURED = {
         text2: "VER TRAILER",
         link: "/content/201908/enfoque-trailer",
         highlightcolor: "#7fffcb"
-    },
+    },*/
     "temasemanal": {
         images: [
             "201909/headers/alimentos.jpg"
