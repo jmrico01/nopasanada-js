@@ -8,14 +8,14 @@ const DEFAULT_CATEGORY = "arteycultura";
 const ENTRIES_FEATURED = {
     "noticias": {
         images: [
-            "201909/headers/newsletter-10.jpg"
+            "201909/headers/11-newsletter.jpg"
         ],
         pretitle: "NO PASA NADA:",
-        title: "NEWSLETTER<br><b>10-09-19. *</b>",
+        title: "NEWSLETTER<br><b>11-09-19. *</b>",
         decoration: "",
         text1: "4 HISTORIAS IMPORTANTES DE LAS M&Aacute;S RECIENTES NOTICIAS INTERNACIONALES.",
         text2: "CURADAS POR<br>NO PASA NADA",
-        link: "/content/201909/newsletter-10",
+        link: "/content/201909/11-newsletter",
         highlightcolor: "#3c404b"
     },
     "deporteymoto": {
