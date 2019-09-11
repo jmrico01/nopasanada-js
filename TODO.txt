@@ -1,17 +1,31 @@
 click en landing page en toda la imagen
 
+landing page (on home page) scrolls through multiple featured articles
+
+newsletter on click changes content instead of being one long strip
+newsletter browser back button works as expected
+
 M O B I L E
 
-
 categories:
-noticias
-	- newsletter (lo importante)
-	- ...
-editorial
+cultura
+	- belleza & moda
+	- arte & foto
+	- cine & tv
 	- comida
-	- moda & belleza
-	- ciencia
-	- opinion
-coleccion
+	- musica
+ciencia
+	- medicina
+	- nutricion
+	- tecnologia
+opinion
+	- historias
+	- social
+	- politica
+	- editorial
+deporte
+noticias
+	- newsletter
+	- traductor
 
 door code 605512
