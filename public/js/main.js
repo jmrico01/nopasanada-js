@@ -47,14 +47,14 @@ const ENTRIES_FEATURED = {
     },
     "ciencia": {
         images: [
-            "201909/headers/alimentos.jpg"
+            "201909/headers/coral.jpg"
         ],
         pretitle: "TEMA SEMANAL, D&Iacute;A 3:",
         title: "EL MEDIO<br><b>AMBIENTE. *</b>",
         decoration: "",
-        text1: "ESTAMOS DEFORESTANDO PARA PRODUCIR ALIMENTOS QUE TERMINAN EN EL BASURERO.",
-        text2: "POR SEBASTI&Aacute;N CRUZ",
-        link: "/content/201909/alimentos-que-terminan-en-el-basurero",
+        text1: "MITOS Y VERDADES SOBRE EL EFECTO DEL BLOQUEADOR SOLAR EN LOS CORALES.",
+        text2: "POR DIANA GONZ&Aacute;LEZ",
+        link: "/content/201909/los-corales",
         highlightcolor: "#ff613c"
     },
     "opinion": {
