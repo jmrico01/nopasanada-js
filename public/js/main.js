@@ -3,19 +3,19 @@
 const FEATURED_IMAGE_FADE_MS = 400;
 const IMAGE_ANIM_MS = 250;
 
-const DEFAULT_CATEGORY = "cultura";
+const DEFAULT_CATEGORY = "noticias";
 
 const ENTRIES_FEATURED = {
     "noticias": {
         images: [
-            "201909/headers/11-newsletter.jpg"
+            "201909/headers/12-newsletter.jpg"
         ],
         pretitle: "NOTICIAS:",
-        title: "NEWSLETTER<br><b>11-09-19. *</b>",
+        title: "LO IMPORTANTE<br><b>12-09-19. *</b>",
         decoration: "",
         text1: "4 HISTORIAS IMPORTANTES DE LAS M&Aacute;S RECIENTES NOTICIAS INTERNACIONALES.",
         text2: "CURADAS POR<br>NO PASA NADA",
-        link: "/content/201909/11-newsletter",
+        link: "/content/201909/12-newsletter",
         highlightcolor: "#e2d27b"
     },
     "cultura": {
