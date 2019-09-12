@@ -29,20 +29,19 @@
     font-size: 2.35vw;
     letter-spacing: -0.04vw;
 
-    float: left;
-    margin: auto;
-    margin-top: 2.4vw;
-    margin-left: 3vw;
+    position: absolute;
+    left: 3vw;
+    top: 2.4vw;
 }
 #headerLogo a {
     color: inherit;
 }
 
 #headerCategories {
-    float: left;
-    height: 100%;
-    margin-left: 4.25vw;
-    margin-top: 2.92vw;
+    position: absolute;
+    left: 24.95vw;
+    right: 5.9vw;
+    top: 2.92vw;
 }
 
 .headerCategory {
@@ -59,5 +58,5 @@
 }
 
 #categoryRight {
-    margin-left: 25.35vw;
+    float: right;
 }

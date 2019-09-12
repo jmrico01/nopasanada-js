@@ -3,14 +3,14 @@
 const FEATURED_IMAGE_FADE_MS = 400;
 const IMAGE_ANIM_MS = 250;
 
-const DEFAULT_CATEGORY = "arteycultura";
+const DEFAULT_CATEGORY = "cultura";
 
 const ENTRIES_FEATURED = {
     "noticias": {
         images: [
             "201909/headers/11-newsletter.jpg"
         ],
-        pretitle: "NO PASA NADA:",
+        pretitle: "NOTICIAS:",
         title: "NEWSLETTER<br><b>11-09-19. *</b>",
         decoration: "",
         text1: "4 HISTORIAS IMPORTANTES DE LAS M&Aacute;S RECIENTES NOTICIAS INTERNACIONALES.",
@@ -18,7 +18,19 @@ const ENTRIES_FEATURED = {
         link: "/content/201909/11-newsletter",
         highlightcolor: "#3c404b"
     },
-    "deporteymoto": {
+    "cultura": {
+        images: [
+            "201909/headers/maquillaje.jpg"
+        ],
+        pretitle: "EDITORIAL:",
+        title: "MAQUILLAJE,<br><b>IDENTIDAD. *</b>",
+        decoration: "",
+        text1: "YA NO SE TRATA DE ALCANZAR LA PERFECCIÓN; NUESTRA RELACIÓN CON EL MAQUILLAJE SE HA TRANSFORMADO.",
+        text2: "POR PAULINA JOARISTI",
+        link: "/content/201909/11-maquillaje-es-identidad",
+        highlightcolor: "#7fffcb"
+    },
+    "deporte": {
         images: [
             "201908/headers/moto1.jpg",
             "201908/headers/moto2.jpg",
@@ -26,50 +38,35 @@ const ENTRIES_FEATURED = {
             "201908/headers/moto4.jpg"
         ],
         pretitle: "SERIE:",
-        title: "PILOTOS<br><b>EP 1.</b>",
-        decoration: "***",
+        title: "PILOTOS <b>*</><br><b>EP 1.</b>",
+        decoration: "",
         text1: "CONOCEMOS A UNA FAMILIA EN COSTA RICA QUE HA TRIUNFADO EN EL DEPORTE DE ENDURO POR M&Aacute;S DE 50 A&Ntilde;OS.",
         text2: "VER TRAILER",
         link: "/content/201908/pilotos-trailer",
         highlightcolor: "#ff613c"
     },
-    "arteycultura": {
-        images: [
-            "201909/headers/maquillaje.jpg"
-        ],
-        pretitle: "EDITORIAL:",
-        title: "MAQUILLAJE,<br><b>IDENTIDAD.</b>",
-        decoration: "",
-        text1: "YA NO SE TRATA DE ALCANZAR LA PERFECCIÓN; NUESTRA RELACIÓN CON EL MAQUILLAJE SE HA TRANSFORMADO.",
-        text2: "POR PAULINA JOARISTI",
-        link: "/content/201909/11-maquillaje-es-identidad",
-        highlightcolor: "#7fffcb"
-    },
-    /*"arteycultura": {
-        images: [
-            "201908/headers/enfoque1.jpg",
-            "201908/headers/enfoque2.jpg",
-            "201908/headers/enfoque3.jpg",
-            "201908/headers/enfoque4.jpg"
-        ],
-        pretitle: "SERIE:",
-        title: "ENFOQUE<br><b>EP 1.</b>",
-        decoration: "***",
-        text1: "CONOCEMOS LAS VIDAS E HISTORIAS DE CELEBRADOS Y NUEVOS ARTISTAS VIVIENDO Y TRABAJANDO EN LATINOAM&Eacute;RICA.",
-        text2: "VER TRAILER",
-        link: "/content/201908/enfoque-trailer",
-        highlightcolor: "#7fffcb"
-    },*/
-    "temasemanal": {
+    "ciencia": {
         images: [
             "201909/headers/alimentos.jpg"
         ],
         pretitle: "TEMA SEMANAL, D&Iacute;A 3:",
         title: "EL MEDIO<br><b>AMBIENTE. *</b>",
         decoration: "",
-        text1: "ESTAMOS DEFORESTANDO PARA PRODUCIR ALIMENTOS QUE TERMINAN EN EL BASURERO.<br>POR SEBASTI&Aacute;N CRUZ",
-        text2: "A LO LARGO DE LA CADENA DE PRODUCCIÓN Y CONSUMO, UN TERCIO DE LA COMIDA PRODUCIDA EN EL MUNDO SE DESPERDICIA. ¿CÓMO REDUCIR EL “FOOD WASTE” EN CASA?",
+        text1: "ESTAMOS DEFORESTANDO PARA PRODUCIR ALIMENTOS QUE TERMINAN EN EL BASURERO.",
+        text2: "POR SEBASTI&Aacute;N CRUZ",
         link: "/content/201909/alimentos-que-terminan-en-el-basurero",
+        highlightcolor: "#ff613c"
+    },
+    "opinion": {
+        images: [
+            "201908/headers/teletrabajo.jpg"
+        ],
+        pretitle: "OPINI&Oacute;N:",
+        title: "LA <b>LEY</b> DEL <b>*</b><br>TELETRABAJO</b>",
+        decoration: "",
+        text1: "LA NUEVA LEY PARA REGULAR EL TELETRABAJO ES UN RESPIRO PARA EMPLEADOS, EMPRESAS - Y EL PAÍS.",
+        text2: "POR ALICIA CASTRO",
+        link: "/content/201908/teletrabajo",
         highlightcolor: "#ff613c"
     },
     "nopasanada": {

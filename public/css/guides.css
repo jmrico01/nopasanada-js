@@ -119,6 +119,39 @@
     z-index: -1;
 }
 
+#colR5 {
+    position: absolute;
+    right: 6.25vw;
+    width: 1.5625vw;
+    top: 0;
+    bottom: 0;
+
+    background-color: #000;
+    opacity: 0.4;
+    z-index: -1;
+}
+#colR4 {
+    position: absolute;
+    right: 4.6875vw;
+    width: 1.5625vw;
+    top: 0;
+    bottom: 0;
+
+    background-color: #000;
+    opacity: 0.5;
+    z-index: -1;
+}
+#colR3 {
+    position: absolute;
+    right: 3.125vw;
+    width: 1.5625vw;
+    top: 0;
+    bottom: 0;
+
+    background-color: #000;
+    opacity: 0.6;
+    z-index: -1;
+}
 #colR2 {
     position: absolute;
     right: 1.5625vw;
@@ -127,7 +160,7 @@
     bottom: 0;
 
     background-color: #000;
-    opacity: 0.5;
+    opacity: 0.7;
     z-index: -1;
 }
 #colR1 {
@@ -138,7 +171,7 @@
     bottom: 0;
 
     background-color: #000;
-    opacity: 0.75;
+    opacity: 0.8;
     z-index: -1;
 }
 

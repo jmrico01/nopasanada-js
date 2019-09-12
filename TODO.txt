@@ -8,24 +8,24 @@ newsletter browser back button works as expected
 M O B I L E
 
 categories:
-cultura
+NOTICIAS
+	- newsletter
+	- traductor
+CULTURA
 	- belleza & moda
 	- arte & foto
 	- cine & tv
 	- comida
 	- musica
-ciencia
+DEPORTE
+CIENCIA
 	- medicina
 	- nutricion
 	- tecnologia
-opinion
+OPINION
 	- historias
 	- social
 	- politica
 	- editorial
-deporte
-noticias
-	- newsletter
-	- traductor
 
 door code 605512

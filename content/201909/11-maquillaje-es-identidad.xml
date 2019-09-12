@@ -2,11 +2,14 @@
 	<image>
 		/images/201909/headers/maquillaje.jpg
 	</image>
+	<imagePoster>
+		/images/201909/posters/11-article.jpg
+	</imagePoster>
 	<color>
 		#ffbdc8
 	</color>
 	<title>
-		Para las nuevas generaciones, el maquillaje es identidad, expresión y auto-cuido.
+		Para las nuevas generaciones, el maquillaje es identidad, expresión y auto-cuido
 	</title>
 	<subtitle>
 		Ya no se trata de alcanzar la perfección; nuestra relación con el maquillaje se ha transformado.
