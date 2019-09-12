@@ -1,5 +1,8 @@
 click en landing page en toda la imagen
 
+suggest colors for text highlights
+header images white text
+
 landing page (on home page) scrolls through multiple featured articles
 
 newsletter on click changes content instead of being one long strip
