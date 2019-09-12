@@ -16,7 +16,7 @@ const ENTRIES_FEATURED = {
         text1: "4 HISTORIAS IMPORTANTES DE LAS M&Aacute;S RECIENTES NOTICIAS INTERNACIONALES.",
         text2: "CURADAS POR<br>NO PASA NADA",
         link: "/content/201909/12-newsletter",
-        highlightcolor: "#e2d27b"
+        highlightcolor: "#ff613c"
     },
     "cultura": {
         images: [
