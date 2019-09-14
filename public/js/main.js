@@ -3,7 +3,7 @@
 const FEATURED_IMAGE_FADE_MS = 400;
 const IMAGE_ANIM_MS = 250;
 
-const DEFAULT_CATEGORY = "noticias";
+const DEFAULT_CATEGORY = "ciencia";
 
 const ENTRIES_FEATURED = {
     "noticias": {
@@ -47,14 +47,14 @@ const ENTRIES_FEATURED = {
     },
     "ciencia": {
         images: [
-            "201909/headers/coral.jpg"
+            "201909/headers/dormir.jpg"
         ],
-        pretitle: "TEMA SEMANAL, D&Iacute;A 3:",
-        title: "EL MEDIO<br><b>AMBIENTE. *</b>",
+        pretitle: "EDITORIAL:",
+        title: "<b>DORMIR</b> NO<br>EST&Aacute; DE MODA.",
         decoration: "",
-        text1: "MITOS Y VERDADES SOBRE EL EFECTO DEL BLOQUEADOR SOLAR EN LOS CORALES.",
+        text1: "PRIMERA PARTE DE NUESTRO ESPECIAL SOBRE EL SUEÑO.",
         text2: "POR DIANA GONZ&Aacute;LEZ",
-        link: "/content/201909/los-corales",
+        link: "/content/201909/14-dormir",
         highlightcolor: "#ff613c"
     },
     "opinion": {
