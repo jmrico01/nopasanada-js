@@ -52,8 +52,8 @@ const ENTRIES_FEATURED = {
         pretitle: "EDITORIAL:",
         title: "<b>DORMIR</b> NO<br>EST&Aacute; DE MODA.",
         decoration: "",
-        text1: "PRIMERA PARTE DE NUESTRO ESPECIAL SOBRE EL SUEÑO.",
-        text2: "POR DIANA GONZ&Aacute;LEZ",
+        text1: "LOS ESTRAGOS DE LA DEPRIVACI&Oacute;N DE SUE&Ntilde;O EN EL CUERPO",
+        text2: "PRIMERA PARTE DE NUESTRO ESPECIAL SOBRE EL SUE&Ntilde;O.<br>POR DIANA GONZ&Aacute;LEZ",
         link: "/content/201909/14-dormir",
         highlightcolor: "#ff613c"
     },
