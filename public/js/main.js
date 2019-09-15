@@ -50,7 +50,7 @@ const ENTRIES_FEATURED = {
             "201909/headers/dormir.jpg"
         ],
         pretitle: "EDITORIAL:",
-        title: "<b>DORMIR</b> NO<br>EST&Aacute; DE MODA.",
+        title: "<b>DORMIR</b> NO<br>EST&Aacute; DE MODA",
         decoration: "",
         text1: "LOS ESTRAGOS DE LA DEPRIVACI&Oacute;N DE SUE&Ntilde;O EN EL CUERPO",
         text2: "PRIMERA PARTE DE NUESTRO ESPECIAL SOBRE EL SUE&Ntilde;O.<br>POR DIANA GONZ&Aacute;LEZ",
