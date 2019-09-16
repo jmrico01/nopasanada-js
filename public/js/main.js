@@ -3,7 +3,7 @@
 const FEATURED_IMAGE_FADE_MS = 400;
 const IMAGE_ANIM_MS = 250;
 
-const DEFAULT_CATEGORY = "ciencia";
+const DEFAULT_CATEGORY = "noticias";
 
 const ENTRIES_FEATURED = {
     "noticias": {
