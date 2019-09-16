@@ -8,14 +8,14 @@ const DEFAULT_CATEGORY = "ciencia";
 const ENTRIES_FEATURED = {
     "noticias": {
         images: [
-            "201909/headers/13-lo-importante.jpg"
+            "201909/headers/16-lo-importante.jpg"
         ],
         pretitle: "NOTICIAS:",
-        title: "LO IMPORTANTE<br><b>13-09-19. *</b>",
+        title: "LO IMPORTANTE<br><b>16-09-19. *</b>",
         decoration: "",
         text1: "4 HISTORIAS IMPORTANTES DE LAS M&Aacute;S RECIENTES NOTICIAS INTERNACIONALES.",
         text2: "CURADAS POR<br>NO PASA NADA",
-        link: "/content/201909/13-lo-importante",
+        link: "/content/201909/16-lo-importante",
         highlightcolor: "#ff613c"
     },
     "cultura": {
