@@ -3,14 +3,14 @@
 const FEATURED_IMAGE_FADE_MS = 400;
 const IMAGE_ANIM_MS = 250;
 
-const HOMEPAGE_CATEGORY = "noticias";
+const HOMEPAGE_CATEGORY = "cultura";
 const CATEGORY_FEATURED_URIS = {
-    "noticias": "/content/201909/16-lo-importante",
-    "cultura": "/content/201909/11-maquillaje-es-identidad",
-    "deporte": "/content/201908/pilotos-trailer",
-    "ciencia": "/content/201909/14-dormir",
-    "opinion": "/content/201908/teletrabajo",
-    "nopasanada": "/content/201908/nopasanada"
+    "noticias"   : "/content/201909/16-lo-importante",
+    "cultura"    : "/content/201909/tailor-to-suit",
+    "deporte"    : "/content/201908/pilotos-trailer",
+    "ciencia"    : "/content/201909/14-dormir",
+    "opinion"    : "/content/201908/teletrabajo",
+    "nopasanada" : "/content/201908/nopasanada"
 };
 
 let allEntries_ = null;
@@ -285,6 +285,7 @@ $(document).ready(function() {
                 let imgPath = featuredEntries_[key].images[i];
                 $("#landingImageCycler").append("<img id=\"" + imgId + "\" class=\"featuredImage " + imgClass + "\" src=\"" + imgPath + "\">");
                 totalImages += 1;
+                console.log(imgPath);
             }
         }
 
@@ -292,6 +293,7 @@ $(document).ready(function() {
         $(".featuredImage").hide();
         $(".featuredImage").on("load", function() {
             loadedImages += 1;
+            console.log(loadedImages + " / " + totalImages + ": " + $(this).attr("src"));
             if (loadedImages === totalImages) {
                 allImagesLoaded_ = true;
                 $(".featuredImage").show();

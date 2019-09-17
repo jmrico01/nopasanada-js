@@ -10,7 +10,7 @@ const path = require("path");
 const showdown = require("showdown");
 const util = require("util");
 
-const DEBUG = false;
+const DEBUG = true;
 
 const app = express();
 const appDev = express();
@@ -156,6 +156,9 @@ let allContent = [];
                 featuredImages = featuredImages.split(",");
                 for (let k = 0; k < featuredImages.length; k++) {
                     featuredImages[k] = featuredImages[k].trim();
+                    if (featuredImages[k] === "") {
+                        throw new Error("blank featured image (trailing comma?), file " + contentPath);
+                    }
                 }
                 let uri = "/content/" + dirName + "/" + contentFileName.substring(0, contentFileName.length - 4);
                 let imagePoster = insideData.hasOwnProperty("imagePoster") ? insideData.imagePoster : insideData.image;
