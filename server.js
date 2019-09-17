@@ -10,7 +10,7 @@ const path = require("path");
 const showdown = require("showdown");
 const util = require("util");
 
-const DEBUG = true;
+const DEBUG = false;
 
 const app = express();
 const appDev = express();
