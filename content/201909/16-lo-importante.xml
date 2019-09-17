@@ -1,4 +1,24 @@
 <newsletter>
+	<featured>
+		<images>
+			/images/201909/headers/16-lo-importante.jpg
+		</images>
+		<pretitle>
+			NOTICIAS:
+		</pretitle>
+		<title>
+			LO IMPORTANTE&lt;br&gt;&lt;b&gt;16-09-19. *&lt;/b&gt;
+		</title>
+		<text1>
+			4 HISTORIAS IMPORTANTES DE LAS M&Aacute;S RECIENTES NOTICIAS INTERNACIONALES.
+		</text1>
+		<text2>
+			CURADAS POR&lt;br&gt;NO PASA NADA
+		</text2>
+		<highlightColor>
+			#ff613c
+		</highlightColor>
+	</featured>
 	<image>
 		/images/201909/headers/16-lo-importante.jpg
 	</image>

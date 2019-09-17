@@ -1,4 +1,24 @@
 <article>
+	<featured>
+		<images>
+			/images/201909/headers/dormir.jpg
+		</images>
+		<pretitle>
+			EDITORIAL;
+		</pretitle>
+		<title>
+			&lt;b&gt;DORMIR&lt;/b&gt; NO&lt;br&gt;EST&Aacute; DE MODA
+		</title>
+		<text1>
+			LOS ESTRAGOS DE LA DEPRIVACI&Oacute;N DE SUE&Ntilde;O EN EL CUERPO.&lt;br&gt;POR DIANA GONZ&Aacute;LEZ
+		</text1>
+		<text2>
+			PRIMERA PARTE DE NUESTRO ESPECIAL SOBRE EL SUE&Ntilde;O
+		</text2>
+		<highlightColor>
+			#ff613c
+		</highlightColor>
+	</featured>
 	<image>
 		/images/201909/headers/dormir.jpg
 	</image>

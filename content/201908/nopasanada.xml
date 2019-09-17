@@ -1,4 +1,25 @@
 <video>
+	<featured>
+		<images>
+			/images/201908/headers/garrotex1.jpg,
+			/images/201908/headers/garrotex2.jpg
+		</images>
+		<pretitle>
+			ESTO ES:
+		</pretitle>
+		<title>
+			&lt;b&gt;NO&lt;/b&gt; PASA&lt;br&gt;NADA&lt;b&gt;.&lt;/b&gt;
+		</title>
+		<text1>
+			LA PLATAFORMA PREMIER DE CONTENIDO ORIGINAL, REPORTAJES Y NOTICIAS EN ESPA&Ntilde;OL PARA Y POR UNA NUEVA GENERACI&Oacute;N
+		</text1>
+		<text2>
+			VER VIDEO
+		</text2>
+		<highlightColor>
+			#36fffd
+		</highlightColor>
+	</featured>
 	<id>
 		TzxV2HgY35s
 	</id>

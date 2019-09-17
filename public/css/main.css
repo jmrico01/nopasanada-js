@@ -16,6 +16,16 @@
 
     z-index: -1;
 }
+#landingImageCyclerBackground {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+
+    z-index: -10;
+    background-color: #000000;
+}
 
 #landingImageCycler img {
     position: absolute;
@@ -32,7 +42,7 @@
 }
 
 #featuredPretitle {
-    font-family: FuturaPTDemi;
+    font-family: FuturaPTDemi, sans-serif;
     font-size: 1.5vw;
     letter-spacing: 0.15vw;
     color: #fff;
@@ -42,7 +52,7 @@
 }
 
 #featuredTitle {
-    font-family: Miedinger;
+    font-family: Miedinger, sans-serif;
     font-size: 6.2vw;
     letter-spacing: 0.2vw;
     color: #fff;
@@ -52,14 +62,14 @@
     margin-top: 0.95vw;
 }
 #featuredTitle b {
-    font-family: MiedingerBold;
+    font-family: MiedingerBold, sans-serif;
 }
 #featuredTitle:hover {
     color: #ddd;
 }
 
 #featuredDecoration {
-    font-family: MiedingerBold;
+    font-family: MiedingerBold, sans-serif;
     font-size: 3.1vw;
     letter-spacing: 0.4vw;
     color: #fff;
@@ -70,7 +80,7 @@
 }
 
 #featuredText {
-    font-family: FuturaPTMedium;
+    font-family: FuturaPTMedium, sans-serif;
     font-size: 0.95vw;
     letter-spacing: 0.05vw;
     line-height: 1.6vw;
@@ -107,7 +117,7 @@
 }
 
 .contentArrowContainer {
-    font-family: FuturaPTDemi;
+    font-family: FuturaPTDemi, sans-serif;
     font-size: 4.5vw;
     color: #fff;
 
@@ -165,7 +175,7 @@
 }
 
 .entryNumber {
-    font-family: Miedinger;
+    font-family: Miedinger, sans-serif;
     font-size: 3.35vw;
     letter-spacing: -0.1vw;
     color: #fff;
@@ -189,7 +199,7 @@
 }
 
 .entryText {
-    font-family: FuturaPTMedium;
+    font-family: FuturaPTMedium, sans-serif;
     font-size: 0.95vw;
     letter-spacing: 0.05vw;
     line-height: 1.6vw;

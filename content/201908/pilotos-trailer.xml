@@ -1,4 +1,27 @@
 <video>
+	<featured>
+		<images>
+			/images/201908/headers/moto1.jpg,
+			/images/201908/headers/moto2.jpg,
+			/images/201908/headers/moto3.jpg,
+			/images/201908/headers/moto4.jpg
+		</images>
+		<pretitle>
+			SERIE:
+		</pretitle>
+		<title>
+			PILOTOS &lt;b&gt;*&lt;/&gt;&lt;br&gt;&lt;b&gt;EP 1.&lt;/b&gt;
+		</title>
+		<text1>
+			CONOCEMOS A UNA FAMILIA EN COSTA RICA QUE HA TRIUNFADO EN EL DEPORTE DE ENDURO POR M&Aacute;S DE 50 A&Ntilde;OS.
+		</text1>
+		<text2>
+			VER TRAILER
+		</text2>
+		<highlightColor>
+			#ff613c
+		</highlightColor>
+	</featured>
 	<id>
 		51aG1gGsULU
 	</id>

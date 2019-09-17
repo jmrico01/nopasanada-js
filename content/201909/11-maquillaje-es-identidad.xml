@@ -1,4 +1,24 @@
 <article>
+	<featured>
+		<images>
+			/images/201909/headers/maquillaje.jpg
+		</images>
+		<pretitle>
+			EDITORIAL:
+		</pretitle>
+		<title>
+			MAQUILLAJE,&lt;br&gt;&lt;b&gt;IDENTIDAD. *&lt;/b&gt;
+		</title>
+		<text1>
+			YA NO SE TRATA DE ALCANZAR LA PERFECCIÓN; NUESTRA RELACIÓN CON EL MAQUILLAJE SE HA TRANSFORMADO.
+		</text1>
+		<text2>
+			POR PAULINA JOARISTI
+		</text2>
+		<highlightColor>
+			#7fffcb
+		</highlightColor>
+	</featured>
 	<image>
 		/images/201909/headers/maquillaje.jpg
 	</image>
