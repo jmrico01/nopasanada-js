@@ -249,6 +249,9 @@ app.get("/content/*/*", function(req, res) {
             }
 
             for (let k in parameters) {
+                if (k === "featured") {
+                    continue;
+                }
                 parameters[k] = parameters[k][0].trim();
             }
             if (parameters.hasOwnProperty("author") && parameters.author !== "") {
