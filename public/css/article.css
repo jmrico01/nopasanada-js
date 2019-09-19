@@ -143,3 +143,13 @@
 .articleText a:hover {
     color: #ff301b;
 }
+
+.articleCaption {
+    font-family: FuturaPTBook;
+    font-size: 1.4vw;
+    letter-spacing: 0.01vw;
+    line-height: 2.2vw;
+    color: #aaa;
+
+    margin-top: -1vw;
+}
