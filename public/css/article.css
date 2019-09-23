@@ -95,7 +95,7 @@
     font-family: FuturaPTDemi;
     font-size: 1vw;
     letter-spacing: 0vw;
-    line-height: 3.9vw;
+    line-height: 2vw; /* for authors with e-mails */
     overflow: hidden;
 
     padding-top: 3.2vw;
@@ -115,6 +115,10 @@
 
     padding-top: 3.6vw;
     padding-bottom: 4.4vw;
+}
+
+.articleLoc {
+    height: 5vw;
 }
 
 .articleText p {
