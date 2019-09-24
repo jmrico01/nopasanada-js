@@ -41,8 +41,10 @@ $(document).ready(function() {
     $("input").attr("size", "100");
     $(".taSmall").attr("cols", "100");
     $(".taSmall").attr("rows", "8");
+    $(".taMedium").attr("cols", "100");
+    $(".taMedium").attr("rows", "50");
     $(".taLarge").attr("cols", "100");
-    $(".taLarge").attr("rows", "80");
+    $(".taLarge").attr("rows", "100");
 
     let url = new URL(window.location.href);
     let entryPath = url.searchParams.get("entry");
