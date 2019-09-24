@@ -10,10 +10,9 @@ const path = require("path");
 const showdown = require("showdown");
 const util = require("util");
 
-const DEBUG = false;
+const serverSettings = require("./server-settings.js");
 
 const app = express();
-const appDev = express();
 
 let templates = {};
 let templateFiles = fs.readdirSync(path.join(__dirname, "/content/templates"));
@@ -342,78 +341,79 @@ app.post("/content", function(req, res) {
 
 app.use(express.static(path.join(__dirname, "/public")));
 
-appDev.post("/content", function(req, res) {
-    fs.readdir(path.join(__dirname, "content"), function(err, contentDirs) {
-        if (err) {
-            res.send(500).end();
-            return;
-        }
-
-        let completed = 0;
-        let allFilePaths = [];
-        for (let i = 0; i < contentDirs.length; i++) {
-            if (contentDirs[i] === "templates") {
-                continue;
-            }
-
-            let dirPath = path.join("content", contentDirs[i]);
-            fs.readdir(path.join(__dirname, dirPath), function(err, contentFiles) {
-                if (err) {
-                    res.send(500).end();
-                    return;
-                }
-
-                for (let j = 0; j < contentFiles.length; j++) {
-                    allFilePaths.push(path.join(dirPath, contentFiles[j]));
-                }
-                completed += 1;
-
-                if (completed === contentDirs.length - 1) {
-                    res.status(200).send(allFilePaths);
-                }
-            });
-        }
-    });
-});
-
-appDev.use(bodyParser.json());
-appDev.use(express.static(path.join(__dirname, "/public-dev")));
-
-if (DEBUG) {
-    const PORT_PUBLIC_HTTP = 6060;
-    const PORT_DEV_HTTP = 6061;
-
-    const httpServer = http.createServer(app);
-    httpServer.listen(PORT_PUBLIC_HTTP, function() {
-        console.log("HTTP server listening on port " + PORT_PUBLIC_HTTP);
-    });
-
-    const httpServerDev = http.createServer(appDev);
-    httpServerDev.listen(PORT_DEV_HTTP, function() {
-        console.log("HTTP dev server listening on port " + PORT_DEV_HTTP);
-    });
-}
-else {
-    const PORT_PUBLIC_HTTPS = 7070;
-    const PORT_DEV_HTTPS = 7071;
-
+let credentials = null;
+if (serverSettings.isHttps) {
     const privateKey = fs.readFileSync("./keys/privkey.pem", "utf8");
     const cert = fs.readFileSync("./keys/cert.pem", "utf8");
     const ca = fs.readFileSync("./keys/chain.pem", "utf8");
-
-    const credentials = {
-    	key: privateKey,
-    	cert: cert,
-    	ca: ca
+    credentials = {
+        key: privateKey,
+        cert: cert,
+        ca: ca
     };
 
     const httpsServer = https.createServer(credentials, app);
-    httpsServer.listen(PORT_PUBLIC_HTTPS, function() {
-        console.log("HTTPS server listening on port " + PORT_PUBLIC_HTTPS);
+    httpsServer.listen(serverSettings.port, function() {
+        console.log("HTTPS server listening on port " + serverSettings.port);
+    });
+}
+else {
+    const httpServer = http.createServer(app);
+    httpServer.listen(serverSettings.port, function() {
+        console.log("HTTP server listening on port " + serverSettings.port);
+    });
+}
+
+if (serverSettings.isDev) {
+    const appDev = express();
+
+    appDev.post("/content", function(req, res) {
+        fs.readdir(path.join(__dirname, "content"), function(err, contentDirs) {
+            if (err) {
+                res.send(500).end();
+                return;
+            }
+
+            let completed = 0;
+            let allFilePaths = [];
+            for (let i = 0; i < contentDirs.length; i++) {
+                if (contentDirs[i] === "templates") {
+                    continue;
+                }
+
+                let dirPath = path.join("content", contentDirs[i]);
+                fs.readdir(path.join(__dirname, dirPath), function(err, contentFiles) {
+                    if (err) {
+                        res.send(500).end();
+                        return;
+                    }
+
+                    for (let j = 0; j < contentFiles.length; j++) {
+                        allFilePaths.push(path.join(dirPath, contentFiles[j]));
+                    }
+                    completed += 1;
+
+                    if (completed === contentDirs.length - 1) {
+                        res.status(200).send(allFilePaths);
+                    }
+                });
+            }
+        });
     });
 
-    const httpsServerDev = https.createServer(credentials, appDev);
-    httpsServerDev.listen(PORT_DEV_HTTPS, function() {
-        console.log("HTTPS dev server listening on port " + PORT_DEV_HTTPS);
-    });
+    appDev.use(bodyParser.json());
+    appDev.use(express.static(path.join(__dirname, "/public-dev")));
+
+    if (serverSettings.isHttps) {
+        const httpsServerDev = https.createServer(credentials, appDev);
+        httpsServerDev.listen(serverSettings.portDev, function() {
+            console.log("HTTPS dev server listening on port " + serverSettings.portDev);
+        });
+    }
+    else {
+        const httpServerDev = http.createServer(appDev);
+        httpServerDev.listen(serverSettings.portDev, function() {
+            console.log("HTTP dev server listening on port " + serverSettings.portDev);
+        });
+    }
 }
