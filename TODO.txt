@@ -1,9 +1,17 @@
 click en landing page en toda la imagen
 
+on resize images sometimes leaking through
+
 suggest colors for text highlights
 header images white text
 
-landing page (on home page) scrolls through multiple featured articles
+1. back-end
+
+2. landing page (on home page) scrolls through multiple featured articles
+
+3. page breakdown: featured, then coleccion, then rest of shit
+
+landing page loading optimization
 
 newsletter on click changes content instead of being one long strip
 newsletter browser back button works as expected

@@ -258,6 +258,9 @@ $(document).ready(function() {
         }
 
         allEntries_ = data;
+        for (let i = 0; i < allEntries_.length; i++) {
+            allEntries_[i].title = allEntries_[i].title.toUpperCase();
+        }
         featuredEntries_ = {};
         for (let category in CATEGORY_FEATURED_URIS) {
             let uri = CATEGORY_FEATURED_URIS[category];
