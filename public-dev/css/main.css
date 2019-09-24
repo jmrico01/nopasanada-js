@@ -7,6 +7,20 @@ html, body {
     font-family: sans-serif;
 }
 
+h1 {
+    font-size: 24pt;
+    font-weight: bold;
+}
+h2 {
+    font-size: 18pt;
+    font-weight: bold;
+    font-style: italic;
+}
+h3 {
+    font-size: 14pt;
+    font-weight: normal;
+}
+
 th, td {
     border: 1px solid black;
     padding: 6pt;
@@ -16,6 +30,7 @@ th {
     font-size: 18pt;
     font-weight: bold;
     text-align: left;
+    font-style: italic;
 }
 td {
     font-family: sans-serif;
