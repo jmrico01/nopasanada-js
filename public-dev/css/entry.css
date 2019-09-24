@@ -1,0 +1,27 @@
+h1 {
+    font-size: 24pt;
+    font-weight: bold;
+}
+h2 {
+    font-size: 24pt;
+    font-weight: bold;
+}
+h3 {
+    font-size: 14pt;
+    font-weight: normal;
+}
+
+#saveButton {
+    width: 160pt;
+    height: 42pt;
+    margin-top: 36pt;
+
+    font-size: 36pt;
+    font-weight: bold;
+    text-align: center;
+    background-color: #8f8;
+}
+#saveButton:hover {
+    background-color: #2f2;
+    cursor: pointer;
+}

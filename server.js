@@ -186,7 +186,7 @@ let allContent = [];
                     },
                     link: uri,
                     image: imagePoster[0].trim(),
-                    title: titlePoster[0].trim().toUpperCase(),
+                    title: titlePoster[0].trim(),
                     date: datePoster,
                     categories: [] // TODO revisit
                 });
@@ -212,18 +212,14 @@ app.get("/content0/201909/newsletter-03", function(req, res) {
 });
 // =======================
 
-app.get("/content/*/*", function(req, res) {
-    let requestPath = req.path;
-    if (requestPath[requestPath.length - 1] === "/") {
-        requestPath = requestPath.substring(0, requestPath.length - 1);
-    }
-
-    let xmlPath = path.join(__dirname, path.normalize(requestPath + ".xml"));
+function GetEntryData(url, callback)
+{
+    let xmlPath = path.join(__dirname, path.normalize(url + ".xml"));
     fs.readFile(xmlPath, function(err, data) {
         if (err) {
             console.error("Failed to read XML file at " + xmlPath);
             console.error(err);
-            res.status(404).end();
+            callback(404, null, null);
             return;
         }
 
@@ -231,103 +227,124 @@ app.get("/content/*/*", function(req, res) {
             if (err) {
                 console.error("Failed to parse XML file data at " + xmlPath);
                 console.error(err);
-                res.status(500).end();
+                callback(500, null, null);
                 return;
             }
 
-            let templateObject = null;
+            let resultContentType = null;
             let parameters = null;
             for (let contentType in templates) {
                 if (result.hasOwnProperty(contentType)) {
-                    templateObject = templates[contentType];
+                    resultContentType = contentType;
                     parameters = result[contentType];
                     break;
                 }
             }
-            if (templateObject === null || parameters === null) {
+            if (resultContentType === null || parameters === null) {
                 console.error("Unknown content type, don't know which template to use");
-                res.status(500).end();
+                callback(500, null, null);
                 return;
             }
 
             for (let k in parameters) {
                 if (k === "featured") {
+                    parameters[k] = parameters[k][0];
+                    for (let kFeatured in parameters[k]) {
+                        parameters[k][kFeatured] = parameters[k][kFeatured][0].trim();
+                    }
                     continue;
                 }
                 parameters[k] = parameters[k][0].trim();
             }
-            if (parameters.hasOwnProperty("author") && parameters.author !== "") {
-                parameters.author = "POR " + parameters.author.toUpperCase();
-            }
-            if (parameters.hasOwnProperty("author1") && parameters.author1 !== "") {
-                parameters.author1 = "POR " + parameters.author1.toUpperCase();
-            }
-            if (parameters.hasOwnProperty("author2") && parameters.author2 !== "") {
-                parameters.author2 = "POR " + parameters.author2.toUpperCase();
-            }
-            if (parameters.hasOwnProperty("author3") && parameters.author3 !== "") {
-                parameters.author3 = "POR " + parameters.author3.toUpperCase();
-            }
-            if (parameters.hasOwnProperty("author4") && parameters.author4 !== "") {
-                parameters.author4 = "POR " + parameters.author4.toUpperCase();
-            }
-            if (parameters.month !== "") {
-                const monthNames = [
-                    "ENERO", "FEBRERO", "MARZO", "ABRIL",
-                    "MAYO", "JUNIO", "JULIO", "AGOSTO",
-                    "SEPTIEMBRE", "OCTUBRE", "NOVIEMBRE", "DICIEMBRE"
-                ];
-                let monthIndex = parseInt(parameters.month) - 1;
-                parameters.date = parameters.day + " DE " + monthNames[monthIndex];
-            }
-            else {
-                parameters.date = "";
-            }
-            parameters.url = requestPath;
 
-            let converter = new showdown.Converter();
-            if (result.hasOwnProperty("newsletter")) {
-                for (let t = 1; t <= 4; t++) {
-                    let tttt = "text" + t.toString();
-                    parameters[tttt] = converter.makeHtml(parameters[tttt]);
-                    let formattedText = "";
-                    let textSplit = parameters[tttt].split("\n");
-                    for (let i = 0; i < textSplit.length; i++) {
-                        textSplit[i] = textSplit[i].trim();
-                        if (textSplit[i] !== "") {
-                            formattedText += "<p>" + textSplit[i] + "</p>";
-                        }
-                    }
-                    parameters[tttt] = formattedText;
-                }
-            }
-            else {
-                parameters.text = converter.makeHtml(parameters.text);
+            callback(200, resultContentType, parameters);
+        });
+    });
+}
+
+app.get("/content/*/*", function(req, res) {
+    let requestPath = req.path;
+    if (requestPath[requestPath.length - 1] === "/") {
+        requestPath = requestPath.substring(0, requestPath.length - 1);
+    }
+    GetEntryData(requestPath, function(status, contentType, parameters) {
+        if (status != 200) {
+            res.status(status).end();
+            return;
+        }
+
+        if (parameters.hasOwnProperty("author") && parameters.author !== "") {
+            parameters.author = "POR " + parameters.author.toUpperCase();
+        }
+        if (parameters.hasOwnProperty("author1") && parameters.author1 !== "") {
+            parameters.author1 = "POR " + parameters.author1.toUpperCase();
+        }
+        if (parameters.hasOwnProperty("author2") && parameters.author2 !== "") {
+            parameters.author2 = "POR " + parameters.author2.toUpperCase();
+        }
+        if (parameters.hasOwnProperty("author3") && parameters.author3 !== "") {
+            parameters.author3 = "POR " + parameters.author3.toUpperCase();
+        }
+        if (parameters.hasOwnProperty("author4") && parameters.author4 !== "") {
+            parameters.author4 = "POR " + parameters.author4.toUpperCase();
+        }
+        if (parameters.month !== "") {
+            const monthNames = [
+                "ENERO", "FEBRERO", "MARZO", "ABRIL",
+                "MAYO", "JUNIO", "JULIO", "AGOSTO",
+                "SEPTIEMBRE", "OCTUBRE", "NOVIEMBRE", "DICIEMBRE"
+            ];
+            let monthIndex = parseInt(parameters.month) - 1;
+            parameters.date = parameters.day + " DE " + monthNames[monthIndex];
+        }
+        else {
+            parameters.date = "";
+        }
+        parameters.url = requestPath;
+
+        let converter = new showdown.Converter();
+        if (contentType === "newsletter") {
+            for (let t = 1; t <= 4; t++) {
+                let tttt = "text" + t.toString();
+                parameters[tttt] = converter.makeHtml(parameters[tttt]);
                 let formattedText = "";
-                let textSplit = parameters.text.split("\n");
+                let textSplit = parameters[tttt].split("\n");
                 for (let i = 0; i < textSplit.length; i++) {
                     textSplit[i] = textSplit[i].trim();
                     if (textSplit[i] !== "") {
                         formattedText += "<p>" + textSplit[i] + "</p>";
                     }
                 }
-                parameters.text = formattedText;
+                parameters[tttt] = formattedText;
             }
-
-            for (let k in templateObject.requiredParameters) {
-                if (!parameters.hasOwnProperty(k)) {
-                    console.error("Missing required template parameter " + k);
-                    res.status(500).end();
-                    return;
+        }
+        else {
+            parameters.text = converter.makeHtml(parameters.text);
+            let formattedText = "";
+            let textSplit = parameters.text.split("\n");
+            for (let i = 0; i < textSplit.length; i++) {
+                textSplit[i] = textSplit[i].trim();
+                if (textSplit[i] !== "") {
+                    formattedText += "<p>" + textSplit[i] + "</p>";
                 }
             }
-            let output = mustache.render(templateObject.template, parameters);
-            res.status(200).send(output);
-        });
+            parameters.text = formattedText;
+        }
+
+        const templateObject = templates[contentType];
+        for (let k in templateObject.requiredParameters) {
+            if (!parameters.hasOwnProperty(k)) {
+                console.error("Missing required template parameter " + k);
+                res.status(500).end();
+                return;
+            }
+        }
+        let output = mustache.render(templateObject.template, parameters);
+        res.status(200).send(output);
     });
 });
 
-app.post("/content", function(req, res) {
+app.post("/entries", function(req, res) {
     let category = req.query.category;
     // TODO filter content based on category
     // TODO move this sort until after allContent is ready (but async... bleh)
@@ -367,38 +384,29 @@ else {
 if (serverSettings.isDev) {
     const appDev = express();
 
-    appDev.post("/content", function(req, res) {
-        fs.readdir(path.join(__dirname, "content"), function(err, contentDirs) {
-            if (err) {
-                res.send(500).end();
+    appDev.post("/content/*/*", function(req, res) {
+        let requestPath = req.path;
+        if (requestPath[requestPath.length - 1] === "/") {
+            requestPath = requestPath.substring(0, requestPath.length - 1);
+        }
+        GetEntryData(requestPath, function(status, contentType, parameters) {
+            if (status != 200) {
+                res.status(status).end();
                 return;
             }
 
-            let completed = 0;
-            let allFilePaths = [];
-            for (let i = 0; i < contentDirs.length; i++) {
-                if (contentDirs[i] === "templates") {
-                    continue;
-                }
-
-                let dirPath = path.join("content", contentDirs[i]);
-                fs.readdir(path.join(__dirname, dirPath), function(err, contentFiles) {
-                    if (err) {
-                        res.send(500).end();
-                        return;
-                    }
-
-                    for (let j = 0; j < contentFiles.length; j++) {
-                        allFilePaths.push(path.join(dirPath, contentFiles[j]));
-                    }
-                    completed += 1;
-
-                    if (completed === contentDirs.length - 1) {
-                        res.status(200).send(allFilePaths);
-                    }
-                });
-            }
+            parameters.contentType = contentType;
+            res.status(200).send(parameters);
         });
+    });
+
+    appDev.post("/entries", function(req, res) {
+        let content = allContent.slice(0);
+        content.sort(function(a, b) {
+            // descending date order
+            return a.date > b.date ? -1 : 1;
+        });
+        res.status(200).send(content);
     });
 
     appDev.use(bodyParser.json());

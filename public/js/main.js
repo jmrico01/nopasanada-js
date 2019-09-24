@@ -251,7 +251,7 @@ $(document).ready(function() {
     entryTemplate_ = $("#entryTemplate").html();
     $("#entryTemplate").remove();
 
-    $.post("/content", {}, function(data, status) {
+    $.post("/entries", {}, function(data, status) {
         if (status !== "success") {
             console.error("Failed to load entries");
             return;
