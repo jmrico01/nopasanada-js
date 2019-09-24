@@ -3,9 +3,9 @@
 const FEATURED_IMAGE_FADE_MS = 400;
 const IMAGE_ANIM_MS = 250;
 
-const HOMEPAGE_CATEGORY = "cultura";
+const HOMEPAGE_CATEGORY = "noticias";
 const CATEGORY_FEATURED_URIS = {
-    "noticias"   : "/content/201909/23-lo-importante",
+    "noticias"   : "/content/201909/24-lo-importante",
     "cultura"    : "/content/201909/23-quesopinto-gerardina",
     "deporte"    : "/content/201908/pilotos-trailer",
     "ciencia"    : "/content/201909/14-dormir",
