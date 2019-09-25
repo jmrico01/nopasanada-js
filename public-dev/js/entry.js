@@ -18,20 +18,30 @@ function LoadEntryData(entryData)
     document.getElementsByName("featuredText2")[0].value = entryData.featured.text2;
 
     document.getElementsByName("title")[0].value = entryData.title;
-    document.getElementsByName("titlePoster")[0].value = entryData.titlePoster;
+    let titlePoster = entryData.titlePoster;
+    if (titlePoster === undefined) {
+        titlePoster = "";
+    }
+    document.getElementsByName("titlePoster")[0].value = titlePoster;
     document.getElementsByName("description")[0].value = entryData.description;
     let dateString = entryData.day + "/" + entryData.month + "/" + entryData.year;
     document.getElementsByName("date")[0].value = dateString;
+
     document.getElementsByName("author")[0].value = entryData.author;
     document.getElementsByName("youtubeID")[0].value = entryData.id;
+
     document.getElementsByName("audioSource")[0].value = entryData.audioSource;
     document.getElementsByName("title1")[0].value = entryData.title1;
+    document.getElementsByName("author1")[0].value = entryData.author1;
     document.getElementsByName("text1")[0].value = entryData.text1;
     document.getElementsByName("title2")[0].value = entryData.title2;
+    document.getElementsByName("author2")[0].value = entryData.author2;
     document.getElementsByName("text2")[0].value = entryData.text2;
     document.getElementsByName("title3")[0].value = entryData.title3;
+    document.getElementsByName("author3")[0].value = entryData.author3;
     document.getElementsByName("text3")[0].value = entryData.text3;
     document.getElementsByName("title4")[0].value = entryData.title4;
+    document.getElementsByName("author4")[0].value = entryData.author4;
     document.getElementsByName("text4")[0].value = entryData.text4;
     document.getElementsByName("subtitle")[0].value = entryData.subtitle;
     document.getElementsByName("text")[0].value = entryData.text;

@@ -3,19 +3,12 @@
 const FEATURED_IMAGE_FADE_MS = 400;
 const IMAGE_ANIM_MS = 250;
 
-const HOMEPAGE_CATEGORY = "noticias";
-const CATEGORY_FEATURED_URIS = {
-    "noticias"   : "/content/201909/24-lo-importante",
-    "cultura"    : "/content/201909/23-quesopinto-gerardina",
-    "deporte"    : "/content/201908/pilotos-trailer",
-    "ciencia"    : "/content/201909/14-dormir",
-    "opinion"    : "/content/201908/teletrabajo",
-    "nopasanada" : "/content/201908/nopasanada"
-};
+const HOMEPAGE_CATEGORY = "home";
+const FEATURED_TAG_PREFIX = "featured-";
 
 let allEntries_ = null;
-let loadedEntries_ = null;
 let featuredEntries_ = null;
+let loadedEntries_ = null;
 
 let entryTemplate_ = null;
 let postersPerScreen_ = 5;
@@ -27,12 +20,14 @@ let allImagesLoaded_ = false;
 
 function GetCurrentCategory()
 {
-    let hash = window.location.hash;
-    let hashIndex = hash.indexOf("#");
-    if (hashIndex !== -1) {
-        let hashCategory = hash.substring(hashIndex + 1, hash.length);
-        if (CATEGORY_FEATURED_URIS.hasOwnProperty(hashCategory)) {
-            return hashCategory;
+    if (featuredEntries_ !== null) {
+        let hash = window.location.hash;
+        let hashIndex = hash.indexOf("#");
+        if (hashIndex !== -1) {
+            let hashCategory = hash.substring(hashIndex + 1, hash.length);
+            if (featuredEntries_.hasOwnProperty(hashCategory) !== -1) {
+                return hashCategory;
+            }
         }
     }
 
@@ -254,7 +249,7 @@ function OnHashChanged()
 
         loadedEntries_ = [];
         for (let i = 0; i < allEntries_.length; i++) {
-            if (allEntries_[i].tags.includes(category)) {
+            if (allEntries_[i].tags.indexOf(category) !== -1) {
                 loadedEntries_.push(allEntries_[i]);
             }
         }
@@ -275,27 +270,23 @@ $(document).ready(function() {
         }
 
         allEntries_ = data;
+        featuredEntries_ = {};
         loadedEntries_ = [];
         let currentCategory = GetCurrentCategory();
         for (let i = 0; i < allEntries_.length; i++) {
             allEntries_[i].title = allEntries_[i].title.toUpperCase();
-            if (allEntries_[i].tags.includes(currentCategory)) {
-                loadedEntries_.push(allEntries_[i]);
-            }
-        }
-        featuredEntries_ = {};
-        for (let category in CATEGORY_FEATURED_URIS) {
-            let uri = CATEGORY_FEATURED_URIS[category];
-            let found = false;
-            for (let i = 0; i < allEntries_.length; i++) {
-                if (allEntries_[i].link === uri) {
-                    featuredEntries_[category] = allEntries_[i].featuredInfo;
-                    featuredEntries_[category].link = uri;
-                    found = true;
+            let entryTags = allEntries_[i].tags;
+            for (let j = 0; j < entryTags.length; j++) {
+                let tag = entryTags[j];
+                if (tag.length > FEATURED_TAG_PREFIX.length
+                && tag.substring(0, FEATURED_TAG_PREFIX.length) == FEATURED_TAG_PREFIX) {
+                    let featuredCategory = tag.substring(FEATURED_TAG_PREFIX.length, tag.length);
+                    featuredEntries_[featuredCategory] = allEntries_[i].featuredInfo;
+                    featuredEntries_[featuredCategory].link = allEntries_[i].link;
                 }
-            }
-            if (!found) {
-                console.error("Failed to find entry " + uri + " for category " + category);
+                if (tag === currentCategory) {
+                    loadedEntries_.push(allEntries_[i]);
+                }
             }
         }
 
