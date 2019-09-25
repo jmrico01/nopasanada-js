@@ -14,6 +14,9 @@
 		<highlightColor>
 		</highlightColor>
 	</featured>
+	<tags>
+		noticias
+	</tags>
 	<image>
 		/images/201908/headers/amazonas.jpg
 	</image>
@@ -24,9 +27,13 @@
 		#ffc7f7
 	</color>
 	<title>
-		Newsletter 29-08-19: Informaci&oacute;n exclusiva desde Amazon&iacute;a
+		Lo Importante: 29-08-19. Informaci&oacute;n exclusiva desde Amazon&iacute;a.
 	</title>
+	<titlePoster>
+		Lo Importante: 29-08-19&lt;br&gt;Informaci&oacute;n exclusiva desde Amazon&iacute;a
+	</titlePoster>
 	<description>
+		4 historias importantes de las más recientes noticias internacionales
 	</description>
 	<day>
 		29

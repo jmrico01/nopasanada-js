@@ -75,142 +75,13 @@ templates.video.requiredParameters = {
     url: "",
     image: "",
 
-    id: "",
+    videoID: "",
     color: "",
     subtitle: "",
     author: "",
     date: "",
     text: ""
 };
-
-let allContent = [];
-{
-    let allContentDirs = fs.readdirSync(path.join(__dirname, "content"));
-    for (let i = 0; i < allContentDirs.length; i++) {
-        let dirName = allContentDirs[i];
-        if (dirName === "templates") {
-            continue;
-        }
-        let allContentUnderDir = fs.readdirSync(path.join(__dirname, "content", dirName));
-        for (let j = 0; j < allContentUnderDir.length; j++) {
-            let contentFileName = allContentUnderDir[j];
-            if (contentFileName.length <= 4) {
-                throw new Error("File name too short for .xml extension " + dirName + "/" + contentFileName);
-            }
-            let contentPath = path.join(__dirname, "content", dirName, contentFileName);
-            let contentFileData = fs.readFileSync(contentPath);
-            let done = false; // ugh... FUCK javascript and its culture
-            parseXMLString(contentFileData, function(err, data) {
-                if (err) {
-                    throw new Error("file " + contentPath + ", error " + err);
-                }
-
-                let insideData = null;
-                for (let contentType in templates) {
-                    if (data.hasOwnProperty(contentType)) {
-                        insideData = data[contentType];
-                        break;
-                    }
-                }
-                if (insideData === null) {
-                    console.error("Unknown content type, don't know which template to use:");
-                    console.error(insideData);
-                    return;
-                }
-
-                if (!insideData.hasOwnProperty("imagePoster") && !insideData.hasOwnProperty("image")) {
-                    throw new Error("no image on file " + contentPath);
-                }
-                if (!insideData.hasOwnProperty("titlePoster") && !insideData.hasOwnProperty("title")) {
-                    throw new Error("no title on file " + contentPath);
-                }
-                if (!insideData.hasOwnProperty("day") && !insideData.hasOwnProperty("month") && !insideData.hasOwnProperty("year")) {
-                    throw new Error("no day/month/year on file " + contentPath);
-                }
-
-                if (!insideData.hasOwnProperty("featured")) {
-                    throw new Error("no featured data on file " + contentPath);
-                }
-                let featuredInfo = insideData.featured[0];
-                if (!featuredInfo.hasOwnProperty("images")) {
-                    throw new Error("no images on featured info, file " + contentPath);
-                }
-                if (!featuredInfo.hasOwnProperty("pretitle")) {
-                    throw new Error("no pretitle on featured info, file " + contentPath);
-                }
-                if (!featuredInfo.hasOwnProperty("title")) {
-                    throw new Error("no title on featured info, file " + contentPath);
-                }
-                if (!featuredInfo.hasOwnProperty("text1")) {
-                    throw new Error("no text1 on featured info, file " + contentPath);
-                }
-                if (!featuredInfo.hasOwnProperty("text2")) {
-                    throw new Error("no text2 on featured info, file " + contentPath);
-                }
-                if (!featuredInfo.hasOwnProperty("highlightColor")) {
-                    throw new Error("no highlightColor on featured info, file " + contentPath);
-                }
-
-                let featuredImages = featuredInfo.images[0].trim();
-                featuredImages = featuredImages.split(",");
-                for (let k = 0; k < featuredImages.length; k++) {
-                    featuredImages[k] = featuredImages[k].trim();
-                    if (featuredImages[k] === "") {
-                        throw new Error("blank featured image (trailing comma?), file " + contentPath);
-                    }
-                }
-                let uri = "/content/" + dirName + "/" + contentFileName.substring(0, contentFileName.length - 4);
-                let imagePoster = insideData.hasOwnProperty("imagePoster") ? insideData.imagePoster : insideData.image;
-                let titlePoster = insideData.hasOwnProperty("titlePoster") ? insideData.titlePoster : insideData.title;
-                let dayPoster = insideData.day[0].trim();
-                while (dayPoster.length < 2) {
-                    dayPoster = "0" + dayPoster;
-                }
-                let monthPoster = insideData.month[0].trim();
-                while (monthPoster.length < 2) {
-                    monthPoster = "0" + monthPoster;
-                }
-                let yearPoster = insideData.year[0].trim();
-                if (yearPoster.length !== 4) {
-                    throw new Error("poster incomplete year / bad format: " + contentPath);
-                }
-                let datePoster = insideData.year[0].trim() + "-" + monthPoster + "-" + dayPoster;
-                allContent.push({
-                    featuredInfo: {
-                        images: featuredImages,
-                        pretitle: featuredInfo.pretitle[0].trim(),
-                        title: featuredInfo.title[0].trim(),
-                        text1: featuredInfo.text1[0].trim(),
-                        text2: featuredInfo.text2[0].trim(),
-                        highlightColor: featuredInfo.highlightColor[0].trim()
-                    },
-                    link: uri,
-                    image: imagePoster[0].trim(),
-                    title: titlePoster[0].trim(),
-                    date: datePoster,
-                    categories: [] // TODO revisit
-                });
-                done = true;
-            });
-            while (!done) {} // force this shit to be synchronous
-        }
-    }
-}
-
-// Backwards compatibility
-app.get("/el-caso-diet-prada", function(req, res) {
-    res.redirect("/content/201908/el-caso-diet-prada");
-});
-app.get("/la-cerveza-si-es-cosa-de-mujeres", function(req, res) {
-    res.redirect("/content/201908/la-cerveza-si-es-cosa-de-mujeres");
-});
-app.get("/content0/201908/el-amazonas", function(req, res) {
-    res.redirect("/content/201908/newsletter-29");
-});
-app.get("/content0/201909/newsletter-03", function(req, res) {
-    res.redirect("/content/201909/newsletter-03");
-});
-// =======================
 
 function GetEntryData(url, callback)
 {
@@ -247,20 +118,142 @@ function GetEntryData(url, callback)
             }
 
             for (let k in parameters) {
+                parameters[k] = parameters[k][0];
                 if (k === "featured") {
-                    parameters[k] = parameters[k][0];
                     for (let kFeatured in parameters[k]) {
                         parameters[k][kFeatured] = parameters[k][kFeatured][0].trim();
                     }
                     continue;
                 }
-                parameters[k] = parameters[k][0].trim();
+                else if (k === "tags") {
+                    parameters[k] = parameters[k].split(",");
+                    for (let i = 0; i < parameters[k].length; i++) {
+                        parameters[k][i] = parameters[k][i].trim();
+                    }
+                    continue;
+                }
+                parameters[k] = parameters[k].trim();
             }
 
             callback(200, resultContentType, parameters);
         });
     });
 }
+
+let allContent = [];
+{
+    let allContentDirs = fs.readdirSync(path.join(__dirname, "content"));
+    for (let i = 0; i < allContentDirs.length; i++) {
+        let dirName = allContentDirs[i];
+        if (dirName === "templates") {
+            continue;
+        }
+        let allContentUnderDir = fs.readdirSync(path.join(__dirname, "content", dirName));
+        for (let j = 0; j < allContentUnderDir.length; j++) {
+            let contentFileName = allContentUnderDir[j];
+            if (contentFileName.length <= 4) {
+                throw new Error("File name too short for .xml extension " + dirName + "/" + contentFileName);
+            }
+            let uri = "/content/" + dirName + "/"
+                + contentFileName.substring(0, contentFileName.length - 4);
+            GetEntryData(uri, function(status, contentType, parameters) {
+                if (status !== 200) {
+                    throw new Error("GetEntryData failed: " + uri + " status " + status);
+                }
+
+                if (!parameters.hasOwnProperty("imagePoster") && !parameters.hasOwnProperty("image")) {
+                    throw new Error("no image on file " + uri);
+                }
+                if (!parameters.hasOwnProperty("titlePoster") && !parameters.hasOwnProperty("title")) {
+                    throw new Error("no title on file " + uri);
+                }
+                if (!parameters.hasOwnProperty("day") && !parameters.hasOwnProperty("month") && !parameters.hasOwnProperty("year")) {
+                    throw new Error("no day/month/year on file " + uri);
+                }
+
+                if (!parameters.hasOwnProperty("tags")) {
+                    throw new Error("no tags data on file " + uri);
+                }
+                if (!parameters.hasOwnProperty("featured")) {
+                    throw new Error("no featured data on file " + uri);
+                }
+                let featuredInfo = parameters.featured;
+                if (!featuredInfo.hasOwnProperty("images")) {
+                    throw new Error("no images on featured info, file " + uri);
+                }
+                if (!featuredInfo.hasOwnProperty("pretitle")) {
+                    throw new Error("no pretitle on featured info, file " + uri);
+                }
+                if (!featuredInfo.hasOwnProperty("title")) {
+                    throw new Error("no title on featured info, file " + uri);
+                }
+                if (!featuredInfo.hasOwnProperty("text1")) {
+                    throw new Error("no text1 on featured info, file " + uri);
+                }
+                if (!featuredInfo.hasOwnProperty("text2")) {
+                    throw new Error("no text2 on featured info, file " + uri);
+                }
+                if (!featuredInfo.hasOwnProperty("highlightColor")) {
+                    throw new Error("no highlightColor on featured info, file " + uri);
+                }
+
+                let featuredImages = featuredInfo.images;
+                featuredImages = featuredImages.split(",");
+                for (let k = 0; k < featuredImages.length; k++) {
+                    featuredImages[k] = featuredImages[k].trim();
+                    if (featuredImages[k] === "") {
+                        throw new Error("blank featured image (trailing comma?), file " + uri);
+                    }
+                }
+                let imagePoster = parameters.hasOwnProperty("imagePoster") ? parameters.imagePoster : parameters.image;
+                let titlePoster = parameters.hasOwnProperty("titlePoster") ? parameters.titlePoster : parameters.title;
+                let dayPoster = parameters.day;
+                while (dayPoster.length < 2) {
+                    dayPoster = "0" + dayPoster;
+                }
+                let monthPoster = parameters.month;
+                while (monthPoster.length < 2) {
+                    monthPoster = "0" + monthPoster;
+                }
+                let yearPoster = parameters.year;
+                if (yearPoster.length !== 4) {
+                    throw new Error("poster incomplete year / bad format: " + uri);
+                }
+                let datePoster = parameters.year + "-" + monthPoster + "-" + dayPoster;
+                allContent.push({
+                    featuredInfo: {
+                        images: featuredImages,
+                        pretitle: featuredInfo.pretitle,
+                        title: featuredInfo.title,
+                        text1: featuredInfo.text1,
+                        text2: featuredInfo.text2,
+                        highlightColor: featuredInfo.highlightColor
+                    },
+                    tags: parameters.tags,
+                    link: uri,
+                    image: imagePoster,
+                    title: titlePoster,
+                    date: datePoster
+                });
+            });
+        }
+    }
+}
+
+// Backwards compatibility
+app.get("/el-caso-diet-prada", function(req, res) {
+    res.redirect("/content/201908/el-caso-diet-prada");
+});
+app.get("/la-cerveza-si-es-cosa-de-mujeres", function(req, res) {
+    res.redirect("/content/201908/la-cerveza-si-es-cosa-de-mujeres");
+});
+app.get("/content0/201908/el-amazonas", function(req, res) {
+    res.redirect("/content/201908/newsletter-29");
+});
+app.get("/content0/201909/newsletter-03", function(req, res) {
+    res.redirect("/content/201909/newsletter-03");
+});
+// =======================
 
 app.get("/content/*/*", function(req, res) {
     let requestPath = req.path;

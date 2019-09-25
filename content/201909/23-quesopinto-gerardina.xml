@@ -10,15 +10,18 @@
             &lt;b&gt;QUESOPINTO. *&lt;/b&gt;
         </title>
         <text1>
-            El in&eacute;dito platillo de Do&ntilde;a Gerardina.
+            EL IN&Eacute;DITO PLATILLO DE DO&Ntilde;A GERARDINA.
         </text1>
         <text2>
-            Crónicas gastronómicas&lt;br&gt;por Alberto Gatgens
+            CRÓNICAS GASTRONÓMICAS&lt;BR&gt;POR ALBERTO GATGENS
         </text2>
         <highlightColor>
             #ff613c
         </highlightColor>
     </featured>
+    <tags>
+        cultura
+    </tags>
     <image>
         /images/201909/headers/23-quesopinto.jpg
     </image>

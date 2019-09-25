@@ -14,15 +14,30 @@ const CATEGORY_FEATURED_URIS = {
 };
 
 let allEntries_ = null;
+let loadedEntries_ = null;
 let featuredEntries_ = null;
 
 let entryTemplate_ = null;
 let postersPerScreen_ = 5;
 let posterPositionIndex_ = 0;
 
-let prevHash_ = null;
+let prevCategory_ = null;
 let imgCycleInterval_ = null;
 let allImagesLoaded_ = false;
+
+function GetCurrentCategory()
+{
+    let hash = window.location.hash;
+    let hashIndex = hash.indexOf("#");
+    if (hashIndex !== -1) {
+        let hashCategory = hash.substring(hashIndex + 1, hash.length);
+        if (CATEGORY_FEATURED_URIS.hasOwnProperty(hashCategory)) {
+            return hashCategory;
+        }
+    }
+
+    return HOMEPAGE_CATEGORY;
+}
 
 function SetFeaturedContent(featuredEntries, category, instant)
 {
@@ -171,20 +186,6 @@ function HandleScroll()
     $("#header").css("background-color", "rgba(0%, 0%, 0%, " + headerOpacity * 100.0 + "%)");
 }
 
-function HandleHash(featuredEntries, hash)
-{
-    let category = HOMEPAGE_CATEGORY;
-    let hashIndex = hash.indexOf("#");
-    if (hashIndex !== -1) {
-        let hashCategory = hash.substring(hashIndex + 1, hash.length);
-        if (CATEGORY_FEATURED_URIS.hasOwnProperty(hashCategory)) {
-            category = hashCategory;
-        }
-    }
-
-    SetFeaturedContent(featuredEntries, category, false);
-}
-
 function AspectChanged(narrow)
 {
     if (narrow) {
@@ -197,8 +198,8 @@ function AspectChanged(narrow)
         postersPerScreen_ = 5;
     }
 
-    if (allEntries_ !== null) {
-        ResetPosters(allEntries_);
+    if (loadedEntries_ !== null) {
+        ResetPosters(loadedEntries_);
     }
 }
 
@@ -234,18 +235,25 @@ function OnResize()
 
 window.onscroll = HandleScroll;
 
-window.onhashchange = function() {
-    let hash = window.location.hash;
-    if (hash === "") {
-        hash = null;
+function OnHashChanged()
+{
+    let category = GetCurrentCategory();
+    if (category !== prevCategory_) {
+        // $("html, body").animate({ scrollTop: 0 }, 200);
+        prevCategory_ = category;
+        SetFeaturedContent(featuredEntries_, category, false);
+
+        loadedEntries_ = [];
+        for (let i = 0; i < allEntries_.length; i++) {
+            if (allEntries_[i].tags.includes(category)) {
+                loadedEntries_.push(allEntries_[i]);
+            }
+        }
+        ResetPosters(loadedEntries_);
     }
-    if (hash !== prevHash_) {
-        $("html, body").animate({ scrollTop: 0 }, 200);
-        let oldPrevHash = prevHash_;
-        prevHash_ = hash;
-        HandleHash(featuredEntries_, hash);
-    }
-};
+}
+
+window.onhashchange = OnHashChanged;
 
 $(document).ready(function() {
     entryTemplate_ = $("#entryTemplate").html();
@@ -258,8 +266,13 @@ $(document).ready(function() {
         }
 
         allEntries_ = data;
+        loadedEntries_ = [];
+        let currentCategory = GetCurrentCategory();
         for (let i = 0; i < allEntries_.length; i++) {
             allEntries_[i].title = allEntries_[i].title.toUpperCase();
+            if (allEntries_[i].tags.includes(currentCategory)) {
+                loadedEntries_.push(allEntries_[i]);
+            }
         }
         featuredEntries_ = {};
         for (let category in CATEGORY_FEATURED_URIS) {
@@ -277,8 +290,7 @@ $(document).ready(function() {
             }
         }
 
-        ResetPosters(allEntries_);
-        HandleHash(featuredEntries_, window.location.hash);
+        ResetPosters(loadedEntries_);
 
         let totalImages = 0;
         for (let key in featuredEntries_) {
@@ -288,7 +300,6 @@ $(document).ready(function() {
                 let imgPath = featuredEntries_[key].images[i];
                 $("#landingImageCycler").append("<img id=\"" + imgId + "\" class=\"featuredImage " + imgClass + "\" src=\"" + imgPath + "\">");
                 totalImages += 1;
-                console.log(imgPath);
             }
         }
 
@@ -296,21 +307,20 @@ $(document).ready(function() {
         $(".featuredImage").hide();
         $(".featuredImage").on("load", function() {
             loadedImages += 1;
-            console.log(loadedImages + " / " + totalImages + ": " + $(this).attr("src"));
             if (loadedImages === totalImages) {
                 allImagesLoaded_ = true;
                 $(".featuredImage").show();
                 OnResize();
-                HandleHash(featuredEntries_, window.location.hash);
+                OnHashChanged();
             }
         });
     });
 
     $("#contentArrowLeftButton").on("click", function() {
-        MovePosters(allEntries_, -1);
+        MovePosters(loadedEntries_, -1);
     })
     $("#contentArrowRightButton").on("click", function() {
-        MovePosters(allEntries_, 1);
+        MovePosters(loadedEntries_, 1);
     })
 
     OnResize();

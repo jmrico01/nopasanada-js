@@ -4,7 +4,7 @@
 			/images/201909/headers/dormir.jpg
 		</images>
 		<pretitle>
-			EDITORIAL;
+			EDITORIAL:
 		</pretitle>
 		<title>
 			&lt;b&gt;DORMIR&lt;/b&gt; NO&lt;br&gt;EST&Aacute; DE MODA
@@ -19,6 +19,9 @@
 			#ff613c
 		</highlightColor>
 	</featured>
+	<tags>
+		ciencia
+	</tags>
 	<image>
 		/images/201909/headers/dormir.jpg
 	</image>

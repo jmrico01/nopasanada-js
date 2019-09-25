@@ -12,12 +12,10 @@ function AspectChanged(narrow)
 
 function OnResize()
 {
+    // Called from resize.js
 }
 
 window.onload = function() {
-    OnResize();
-    $("#content").css("visibility", "visible");
-
     if (YOUTUBE_VIDEO_ID !== null) {
         try {
             let player = new YT.Player("articleVideo", {
@@ -49,4 +47,6 @@ window.onload = function() {
     }
 };
 
-window.onresize = OnResize;
+$(document).ready(function() {
+    $("#content").css("visibility", "visible");
+});

@@ -14,6 +14,9 @@
 		<highlightColor>
 		</highlightColor>
 	</featured>
+	<tags>
+		noticias
+	</tags>
 	<image>
 		/images/201909/headers/11-newsletter.jpg
 	</image>
@@ -24,7 +27,7 @@
 		#FCC285
 	</color>
 	<title>
-		Newsletter 11-09-19
+		Lo Importante: 11-09-19
 	</title>
 	<description>
 		4 historias importantes de las más recientes noticias internacionales
