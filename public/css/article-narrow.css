@@ -13,6 +13,11 @@
     padding-right: 5vw;
 }
 
+.textEntrySpacer {
+    width: 100%;
+    height: 20vw;
+}
+
 .articleTitle {
     font-size: 24pt;
     line-height: 24pt;

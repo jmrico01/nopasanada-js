@@ -51,6 +51,11 @@
     margin-top: 6vw;
 }
 
+.textEntrySpacer {
+    width: 100%;
+    height: 5vw;
+}
+
 .articleTitle {
     position: relative;
     font-family: FuturaPTHeavy;

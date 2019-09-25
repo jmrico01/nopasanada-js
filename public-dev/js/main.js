@@ -1,5 +1,6 @@
 let tableFields = [
     [ "date", "Date" ],
+    [ "type", "Type" ],
     [ "title", "Title" ],
     [ "link", "ID / URL" ],
 ];

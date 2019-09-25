@@ -69,6 +69,18 @@ templates.newsletter.requiredParameters = {
     author4: "",
     text4: ""
 };
+templates.text.requiredParameters = {
+    title: "",
+    description: "",
+    url: "",
+    image: "",
+
+    color: "",
+    subtitle: "",
+    subtext1: "",
+    subtext2: "",
+    text: ""
+};
 templates.video.requiredParameters = {
     title: "",
     description: "",
@@ -229,6 +241,7 @@ let allContent = [];
                         text2: featuredInfo.text2,
                         highlightColor: featuredInfo.highlightColor
                     },
+                    type: contentType,
                     tags: parameters.tags,
                     link: uri,
                     image: imagePoster,
@@ -280,6 +293,12 @@ app.get("/content/*/*", function(req, res) {
         }
         if (parameters.hasOwnProperty("author4") && parameters.author4 !== "") {
             parameters.author4 = "POR " + parameters.author4.toUpperCase();
+        }
+        if (parameters.hasOwnProperty("subtext1") && parameters.subtext1 !== "") {
+            parameters.subtext1 = parameters.subtext1.toUpperCase();
+        }
+        if (parameters.hasOwnProperty("subtext2") && parameters.subtext2 !== "") {
+            parameters.subtext2 = parameters.subtext2.toUpperCase();
         }
         if (parameters.month !== "") {
             const monthNames = [

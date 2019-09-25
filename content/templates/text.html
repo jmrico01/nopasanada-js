@@ -53,10 +53,8 @@
     <link rel="stylesheet" type="text/css" href="../../../css/article.css">
     
     <script type="application/javascript" src="../../../js/jquery-3.4.1.min.js"></script>
-    <script type="application/javascript" src="https://www.youtube.com/iframe_api"></script>
-    <script>let YOUTUBE_VIDEO_ID = "{{ videoID }}";</script>
     <script type="application/javascript" src="../../../js/resize.js"></script>
-    <script type="application/javascript" src="../../../js/video.js"></script>
+    <script type="application/javascript" src="../../../js/article.js"></script>
 </head>
 
 <body>
@@ -120,11 +118,9 @@
 
         <div id="content">
             <div id="article">
-                <div id="articleHeader" class="screen">
-                    <div id="articleVideo">
-                    </div>
-                </div>
                 <div id="articleContainer">
+                    <div class="textEntrySpacer"></div>
+
                     <div class="articleTitle">
                         <div class="backgroundColor" style="background-color: {{ color }};"></div>
                         {{{ title }}}
@@ -135,10 +131,10 @@
                     </div>
                     <div class="articleSubtext">
                         <div class="articleAuthor">
-                            {{ author }}
+                            {{ subtext1 }}
                         </div>
                         <div class="articleDate">
-                            {{ date }}
+                            {{ subtext2 }}
                         </div>
                     </div>
                     <div class="articleSeparator">
