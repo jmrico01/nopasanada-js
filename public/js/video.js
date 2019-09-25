@@ -3,10 +3,10 @@
 function AspectChanged(narrow)
 {
     if (narrow) {
-        cssNarrow.href = "../../../css/article-narrow.css";
+        cssNarrow_.href = "../../../css/article-narrow.css";
     }
     else {
-        cssNarrow.href = "";
+        cssNarrow_.href = "";
     }
 }
 

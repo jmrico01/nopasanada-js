@@ -140,15 +140,20 @@ function MovePosters(entries, indexDelta)
     }
 }
 
+function SetPosterContentWidth(entries)
+{
+    let width = Math.ceil(entries.length / postersPerScreen_) * window.innerWidth;
+    $("#contentList").css("width", width);
+}
+
 function ResetPosters(entries)
 {
     if (entryTemplate_ === null) {
         return;
     }
 
+    SetPosterContentWidth(entries);
     let $contentList = $("#contentList");
-    let width = Math.ceil(entries.length / postersPerScreen_) * window.innerWidth;
-    $contentList.css("width", width);
     $contentList.html("");
 
     $contentList.append("<div class=\"entrySpaceEdge\"></div>");
@@ -165,7 +170,7 @@ function ResetPosters(entries)
         if (i !== entries.length - 1) {
             if ((i + 1) % postersPerScreen_ === 0) {
                 $contentList.append("<div class=\"entrySpaceEdge\"></div>");
-                if (isNarrow) {
+                if (isNarrow_) {
                     $contentList.append("<div style=\"width: 100%; height: 65vw;\"></div>");
                 }
                 $contentList.append("<div class=\"entrySpaceEdge\"></div>");
@@ -189,12 +194,12 @@ function HandleScroll()
 function AspectChanged(narrow)
 {
     if (narrow) {
-        cssNarrow.href = "css/main-narrow.css";
+        cssNarrow_.href = "css/main-narrow.css";
         postersPerScreen_ = 3;
         $("#contentList").css("width", "100%");
     }
     else {
-        cssNarrow.href = "";
+        cssNarrow_.href = "";
         postersPerScreen_ = 5;
     }
 
@@ -205,7 +210,7 @@ function AspectChanged(narrow)
 
 function OnResize()
 {
-    if (isNarrow) {
+    if (isNarrow_) {
         $("#screenPosters").css("height", "auto");
     }
 
@@ -230,6 +235,10 @@ function OnResize()
             };
             img.src = $this.attr("src");
         });
+    }
+
+    if (loadedEntries_ !== null) {
+        SetPosterContentWidth(loadedEntries_);
     }
 }
 

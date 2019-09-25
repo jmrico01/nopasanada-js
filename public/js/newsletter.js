@@ -3,12 +3,12 @@
 function AspectChanged(narrow)
 {
     if (narrow) {
-        cssNarrow.href = "../../../css/article-narrow.css";
+        cssNarrow_.href = "../../../css/article-narrow.css";
         $("#headerDesktop").hide();
         $("#headerMobile").show();
     }
     else {
-        cssNarrow.href = "";
+        cssNarrow_.href = "";
         $("#headerMobile").hide();
         $("#headerDesktop").show();
     }

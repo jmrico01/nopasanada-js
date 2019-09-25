@@ -4,8 +4,8 @@
 //     function AspectChanged(isNarrow) {}
 //     function OnResize() {}
 
-let cssNarrow = null;
-let isNarrow = null;
+let cssNarrow_ = null;
+let isNarrow_ = null;
 
 function OnResizeBase()
 {
@@ -21,19 +21,19 @@ function OnResizeBase()
 
     let aspect = window.innerWidth / window.innerHeight;
     let narrow = aspect < TRANSITION_ASPECT;
-    if (narrow !== isNarrow) {
-        isNarrow = narrow;
-        AspectChanged(isNarrow);
+    if (narrow !== isNarrow_) {
+        isNarrow_ = narrow;
+        AspectChanged(isNarrow_);
     }
 
     OnResize();
 }
 
 $(document).ready(function() {
-    cssNarrow = document.createElement("link");
-    cssNarrow.rel = "stylesheet";
-    cssNarrow.type = "text/css";
-    document.getElementsByTagName("head")[0].appendChild(cssNarrow);
+    cssNarrow_ = document.createElement("link");
+    cssNarrow_.rel = "stylesheet";
+    cssNarrow_.type = "text/css";
+    document.getElementsByTagName("head")[0].appendChild(cssNarrow_);
 
     $(window).resize(OnResizeBase);
     OnResizeBase();
