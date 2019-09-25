@@ -1,6 +1,6 @@
 "use strict";
 
-function AspectChanged(narrow)
+function OnAspectChanged(narrow)
 {
     if (narrow) {
         cssNarrow_.href = "../../../css/article-narrow.css";

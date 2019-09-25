@@ -191,7 +191,7 @@ function HandleScroll()
     $("#header").css("background-color", "rgba(0%, 0%, 0%, " + headerOpacity * 100.0 + "%)");
 }
 
-function AspectChanged(narrow)
+function OnAspectChanged(narrow)
 {
     if (narrow) {
         cssNarrow_.href = "css/main-narrow.css";
