@@ -55,35 +55,6 @@
     <script type="application/javascript" src="../../../js/jquery-3.4.1.min.js"></script>
     <script type="application/javascript" src="../../../js/resize.js"></script>
     <script type="application/javascript" src="../../../js/newsletter.js"></script>
-    <script>
-        window.onhashchange = function() {
-            let hash = window.location.hash;
-            if (hash === "") {
-                return;
-            }
-
-            let target = null;
-            if (hash === "#1") {
-                target = "#loc1";
-            }
-            else if (hash === "#2") {
-                target = "#loc2";
-            }
-            else if (hash === "#3") {
-                target = "#loc3";
-            }
-            else if (hash === "#4") {
-                target = "#loc4";
-            }
-
-            if (target !== null) {
-                $([document.documentElement, document.body]).animate({
-                    scrollTop: $(target).offset().top
-                }, 500)
-            }
-            window.location.hash = "";
-        }
-    </script>
 </head>
 
 <body>
@@ -178,87 +149,92 @@
                         </a>
                     </div>
                 </div>
+
                 <div id="articleContainer">
                     <iframe class="articleAudio" frameborder="0" allowfullscreen="" scrolling="no" height="200" src="{{ audioSource }}" style='border:1px solid #EEE; box-sizing:border-box; width:100%;'></iframe>
 
-                    <div id="loc1" class="articleLoc"></div>
-                    <div class="articleTitle">
-                        <div class="backgroundColor" style="background-color: {{ color }};"></div>
-                        {{ title1 }}
-                    </div>
-                    <div class="articleSubtext">
-                        <div class="articleAuthor">
-                            {{ author1 }}
+                    <div id="articleSubcontainer1" class="articleSubcontainer">
+                        <div class="articleTitle">
+                            <div class="backgroundColor" style="background-color: {{ color }};"></div>
+                            {{ title1 }}
                         </div>
-                        <div class="articleDate">
-                            {{ date1 }}
+                        <div class="articleSubtext">
+                            <div class="articleAuthor">
+                                {{ author1 }}
+                            </div>
+                            <div class="articleDate">
+                                {{ date1 }}
+                            </div>
                         </div>
-                    </div>
-                    <div class="articleSeparator">
-                        ...
-                    </div>
-                    <div class="articleText">
-                        {{{ text1 }}}
+                        <div class="articleSeparator">
+                            ...
+                        </div>
+                        <div class="articleText">
+                            {{{ text1 }}}
+                        </div>
                     </div>
 
-                    <div id="loc2" class="articleLoc"></div>
-                    <div class="articleTitle">
-                        <div class="backgroundColor" style="background-color: {{ color }};"></div>
-                        {{ title2 }}
-                    </div>
-                    <div class="articleSubtext">
-                        <div class="articleAuthor">
-                            {{ author2 }}
+                    <div id="articleSubcontainer2" class="articleSubcontainer">
+                        <div class="articleTitle">
+                            <div class="backgroundColor" style="background-color: {{ color }};"></div>
+                            {{ title2 }}
                         </div>
-                        <div class="articleDate">
-                            {{ date2 }}
+                        <div class="articleSubtext">
+                            <div class="articleAuthor">
+                                {{ author2 }}
+                            </div>
+                            <div class="articleDate">
+                                {{ date2 }}
+                            </div>
                         </div>
-                    </div>
-                    <div class="articleSeparator">
-                        ...
-                    </div>
-                    <div class="articleText">
-                        {{{ text2 }}}
+                        <div class="articleSeparator">
+                            ...
+                        </div>
+                        <div class="articleText">
+                            {{{ text2 }}}
+                        </div>
                     </div>
 
-                    <div id="loc3" class="articleLoc"></div>
-                    <div class="articleTitle">
-                        <div class="backgroundColor" style="background-color: {{ color }};"></div>
-                        {{ title3 }}
-                    </div>
-                    <div class="articleSubtext">
-                        <div class="articleAuthor">
-                            {{ author3 }}
+                    <div id="articleSubcontainer3" class="articleSubcontainer">
+                        <div class="articleTitle">
+                            <div class="backgroundColor" style="background-color: {{ color }};"></div>
+                            {{ title3 }}
                         </div>
-                        <div class="articleDate">
-                            {{ date3 }}
+                        <div class="articleSubtext">
+                            <div class="articleAuthor">
+                                {{ author3 }}
+                            </div>
+                            <div class="articleDate">
+                                {{ date3 }}
+                            </div>
                         </div>
-                    </div>
-                    <div class="articleSeparator">
-                        ...
-                    </div>
-                    <div class="articleText">
-                        {{{ text3 }}}
+                        <div class="articleSeparator">
+                            ...
+                        </div>
+                        <div class="articleText">
+                            {{{ text3 }}}
+                        </div>
                     </div>
 
-                    <div id="loc4" class="articleLoc"></div>
-                    <div class="articleTitle">
-                        <div class="backgroundColor" style="background-color: {{ color }};"></div>
-                        {{ title4 }}
-                    </div>
-                    <div class="articleSubtext">
-                        <div class="articleAuthor">
-                            {{ author4 }}
+                    <div id="articleSubcontainer4" class="articleSubcontainer">
+                        <div class="articleTitle">
+                            <div class="backgroundColor" style="background-color: {{ color }};"></div>
+                            {{ title4 }}
                         </div>
-                        <div class="articleDate">
-                            {{ date4 }}
+                        <div class="articleSubtext">
+                            <div class="articleAuthor">
+                                {{ author4 }}
+                            </div>
+                            <div class="articleDate">
+                                {{ date4 }}
+                            </div>
                         </div>
-                    </div>
-                    <div class="articleSeparator">
-                        ...
-                    </div>
-                    <div class="articleText">
-                        {{{ text4 }}}
+                        <div class="articleSeparator">
+                            ...
+                        </div>
+                        <div class="articleText">
+                            {{{ text4 }}}
+                        </div>
                     </div>
                 </div>
             </div>

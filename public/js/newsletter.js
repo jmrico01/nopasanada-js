@@ -19,37 +19,46 @@ function OnResize()
     // Called from resize.js
 }
 
-window.onhashchange = function() {
-    let hash = window.location.hash;
-    if (hash === "") {
-        return;
-    }
+function OnHashChanged()
+{
+    $(".articleSubcontainer").hide();
 
-    let target = null;
+    let hash = window.location.hash;
+    let target = "#articleSubcontainer";
     if (hash === "#1") {
-        target = "#loc1";
+        target += "1";
     }
     else if (hash === "#2") {
-        target = "#loc2";
+        target += "2";
     }
     else if (hash === "#3") {
-        target = "#loc3";
+        target += "3";
     }
     else if (hash === "#4") {
-        target = "#loc4";
+        target += "4";
+    }
+    else {
+        target += "1";
     }
 
-    if (target !== null) {
-        $([document.documentElement, document.body]).animate({
-            scrollTop: $(target).offset().top
-        }, 500)
+    $(target).show();
+    if (hash === "") {
+        window.scrollTo(0, 0);
     }
-    window.location.hash = "";
+    else {
+        let topOffset = $("#header").height();
+        $([document.documentElement, document.body]).animate({
+            scrollTop: $("#articleContainer").offset().top - topOffset
+        }, 200);
+    }
 }
+
+window.onhashchange = OnHashChanged;
 
 $(document).ready(function() {
     if ($(".articleAudio").attr("src") === "") {
         $(".articleAudio").remove();
     }
+    OnHashChanged();
     $("#content").css("visibility", "visible");
 });
