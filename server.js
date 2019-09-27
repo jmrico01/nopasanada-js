@@ -8,15 +8,23 @@ const mustache = require("mustache");
 const path = require("path");
 const showdown = require("showdown");
 const util = require("util");
-const xml2js = require("xml2js");
+const xml2jsParseString = require("xml2js").parseString;
 
 // Jesus...
 const readdirAsync = util.promisify(fs.readdir);
 const readFileAsync = util.promisify(fs.readFile);
 async function parseXMLStringAsync(xmlString)
 {
-    let parser = new xml2js.Parser();
-    return parser.parseStringPromise(xmlString);
+    return new Promise(function(resolve, reject) {
+        xml2jsParseString(xmlString, function(err, result) {
+            if (err) {
+                reject(err);
+            }
+            else {
+                resolve(result);
+            }
+        });
+    });
 }
 
 const serverSettings = require("./server-settings.js");
