@@ -12,7 +12,7 @@
     height: 100%;
     background-size: cover;
     background-repeat: no-repeat;
-    background-size: center top;
+    background-position: center top;
 
     text-align: center;
     vertical-align: text-bottom;
