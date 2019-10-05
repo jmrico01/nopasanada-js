@@ -18,7 +18,7 @@ function FormatTableFieldValue(tableField, entry)
 }
 
 $(document).ready(function() {
-    $.post("/entries", {}, function(data, status) {
+    $.get("/entries", function(data) {
         let tableHtml = "<tr>\n";
         for (let j = 0; j < tableFields.length; j++) {
             if (tableFields[j][0] === "date") {

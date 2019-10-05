@@ -1,9 +1,9 @@
 const assert = require("assert");
-const bodyParser = require("body-parser");
 const express = require("express");
 const fs = require("fs");
 const http = require("http");
 const https = require("https");
+//const js2xmlparser = require("js2xmlparser");
 const mustache = require("mustache");
 const path = require("path");
 const showdown = require("showdown");
@@ -173,6 +173,13 @@ async function GetEntryData(url, templates)
     }
 
     return { status: 200, contentType: resultContentType, entryData: entryData };
+}
+
+async function SaveEntryData(url, entryData)
+{
+    let xmlPath = path.join(__dirname, path.normalize(url + ".xml"));
+    console.log(entryData);
+    console.log("write to " + xmlPath);
 }
 
 async function LoadAllEntryMetadata(templates)
@@ -449,12 +456,23 @@ if (serverSettings.isDev) {
     }
 
     const appDev = express();
+    appDev.use(express.json());
 
-    appDev.post("/content/*/*", checkAuthNoRedirect, async function(req, res) {
+    appDev.get("/entries", checkAuthNoRedirect, function(req, res) {
+        let content = allEntryMetadata_.slice(0);
+        content.sort(function(a, b) {
+            // descending date order
+            return a.date > b.date ? -1 : 1;
+        });
+        res.status(200).send(content);
+    });
+
+    appDev.get("/content/*/*", checkAuthNoRedirect, async function(req, res) {
         let requestPath = req.path;
         if (requestPath[requestPath.length - 1] === "/") {
             requestPath = requestPath.substring(0, requestPath.length - 1);
         }
+
         const {status, contentType, entryData} = await GetEntryData(requestPath, templates_);
         if (status != 200) {
             res.status(status).end();
@@ -465,19 +483,18 @@ if (serverSettings.isDev) {
         res.status(200).send(entryData);
     });
 
-    appDev.post("/entries", checkAuthNoRedirect, function(req, res) {
-        let content = allEntryMetadata_.slice(0);
-        content.sort(function(a, b) {
-            // descending date order
-            return a.date > b.date ? -1 : 1;
-        });
-        res.status(200).send(content);
+    appDev.post("/content/*/*", checkAuthNoRedirect, async function(req, res) {
+        let requestPath = req.path;
+        if (requestPath[requestPath.length - 1] === "/") {
+            requestPath = requestPath.substring(0, requestPath.length - 1);
+        }
+
+        await SaveEntryData(requestPath, req.body);
     });
 
     appDev.get("/", checkAuthRedirect);
     appDev.get("/entry", checkAuthRedirect);
 
-    appDev.use(bodyParser.json());
     appDev.use(express.static(path.join(__dirname, "/public-dev")));
 
     if (serverSettings.isHttps) {
