@@ -43,6 +43,8 @@
             <input type="text" name="title"><br>
             <h3>Title for Poster (leave blank to use Title above)</h3>
             <input type="text" name="titlePoster"><br>
+            <h3>Highlight Color</h3>
+            <input type="text" name="color"><br>
             <h3>Description (shows in social medial links)</h3>
             <textarea class="taSmall" name="description"></textarea><br>
             <h3>Date (dd/mm/yyyy)</h3>
@@ -99,21 +101,47 @@
                 <textarea class="taLarge" name="text"></textarea><br>
             </div>
         </form>
+        <h1>Images</h1>
+        <form id="imagesListAddForm" method="post" action="/newImage">
+            <div id="imagesListAdd">
+                <div class="rowInfo">
+                    <div id="rowAddButton">
+                        ADD
+                    </div>
+                    <div class="rowText">
+                        Name: <input type="text" name="newImageName" cols="20">
+                    </div>
+                </div>
+                <div class="rowImage">
+                    <input id="imagesListAddInput" type="file" accept="image/*"/>
+                </div>
+            </div>
+        </form>
+        <div id="imagesList">
+            <div id="imagesListRowTemplate">
+                <div class="imagesListRow">
+                    <div class="rowInfo">
+                        <div class="rowEditButton">
+                            EDIT
+                        </div>
+                        <div class="rowDeleteButton">
+                            DELETE
+                        </div>
+                        <div class="rowText">
+                            <h2>Some text</h2>
+                        </div>
+                    </div>
+                    <div class="rowImage">
+                        <img src="">
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </body>
 </html>
 
 <!-- MISSING THINGS
-    <image>
-        /images/201909/headers/tailor1.jpg
-    </image>
-    <color>
-        #ff613c
-    </color>
-
-    <imagePoster>
-        /images/201909/posters/18-lo-importante.jpg
-    </imagePoster>
     <imageDirectory>
         /images/201909/18-lo-importante
     </imageDirectory>

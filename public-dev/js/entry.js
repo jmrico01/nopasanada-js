@@ -1,3 +1,18 @@
+let imageRowTemplate_ = null;
+
+function UpdateImageList(images)
+{
+    let $imageList = $("#imagesList");
+    $imageList.html("");
+
+    for (let i = 0; i < images.length; i++) {
+        let $imageRow = $(imageRowTemplate_);
+        $imageRow.find(".rowImage img").attr("src", "http://localhost:6060" + images[i].uri); // TODO url here oops
+        $imageRow.find(".rowText h2").html(images[i].name);
+        $imageList.append($imageRow);
+    }
+}
+
 function GetEntryPath()
 {
     let url = new URL(window.location.href);
@@ -14,6 +29,51 @@ function OnContentTypeChanged()
 
 function LoadEntryData(entryData)
 {
+    let images = [];
+    images.push({
+        name: "header",
+        uri: entryData.image
+    });
+    if (entryData.imagePoster) {
+        images.push({
+            name: "poster",
+            uri: entryData.imagePoster
+        });
+    }
+    for (let i = 0; i < entryData.featured.images.length; i++) {
+        images.push({
+            name: "featured" + (i + 1),
+            uri: entryData.featured.images[i]
+        });
+    }
+    for (let i = 0; i < 4; i++) {
+        images.push({
+            name: "header-desktop" + (i + 1),
+            uri: entryData.imageDirectory + "/vertical" + (i + 1) + ".jpg"
+        });
+    }
+    for (let i = 0; i < 4; i++) {
+        images.push({
+            name: "header-mobile" + (i + 1),
+            uri: entryData.imageDirectory + "/square" + (i + 1) + ".jpg"
+        });
+    }
+
+    let imagesDedup = [];
+    for (let i = 0; i < images.length; i++) {
+        let duplicate = false;
+        for (let j = 0; j < imagesDedup.length; j++) {
+            if (images[i].uri === imagesDedup[j].uri) {
+                duplicate = true;
+                break;
+            }
+        }
+        if (!duplicate) {
+            imagesDedup.push(images[i]);
+        }
+    }
+    UpdateImageList(imagesDedup);
+
     document.getElementById("contentType").value = entryData.contentType;
     OnContentTypeChanged();
 
@@ -31,6 +91,7 @@ function LoadEntryData(entryData)
     document.getElementsByName("description")[0].value = entryData.description;
     let dateString = entryData.day + "/" + entryData.month + "/" + entryData.year;
     document.getElementsByName("date")[0].value = dateString;
+    document.getElementsByName("color")[0].value = entryData.color;
 
     document.getElementsByName("author")[0].value = entryData.author;
     document.getElementsByName("youtubeID")[0].value = entryData.id;
@@ -66,9 +127,9 @@ function SaveEntryData()
         title:       document.getElementsByName("title")[0].value,
         titlePoster: document.getElementsByName("titlePoster")[0].value,
         description: document.getElementsByName("description")[0].value,
-        year:        "2019",
-        month:       "10",
         day:         "04",
+        month:       "10",
+        year:        "2019",
         author:      document.getElementsByName("author")[0].value,
         id:          document.getElementsByName("youtubeID")[0].value,
         audioSource: document.getElementsByName("audioSource")[0].value,
@@ -106,7 +167,13 @@ function SaveEntryData()
 }
 
 $(document).ready(function() {
-    $("input").attr("size", "100");
+    imageRowTemplate_ = $("#imagesListRowTemplate").html();
+    $("#imagesListRowTemplate").remove();
+
+    let sizeAttr = $("input").attr("size");
+    if (typeof(sizeAttr) !== typeof(undefined) && sizeAttr !== false) {
+        $("input").attr("size", "100");
+    }
     $(".taSmall").attr("cols", "100");
     $(".taSmall").attr("rows", "8");
     $(".taMedium").attr("cols", "100");
@@ -130,6 +197,10 @@ $(document).ready(function() {
 
             $("#saveButton").click(function() {
                 SaveEntryData();
+            });
+
+            $("#rowAddButton").click(function() {
+                document.getElementById("imagesListAddForm").submit();
             })
         },
         failure: function(error) {

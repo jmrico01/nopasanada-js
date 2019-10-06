@@ -3,7 +3,6 @@ const express = require("express");
 const fs = require("fs");
 const http = require("http");
 const https = require("https");
-//const js2xmlparser = require("js2xmlparser");
 const mustache = require("mustache");
 const path = require("path");
 const showdown = require("showdown");
@@ -13,6 +12,7 @@ const xml2jsParseString = require("xml2js").parseString;
 // Jesus...
 const readdirAsync = util.promisify(fs.readdir);
 const readFileAsync = util.promisify(fs.readFile);
+const writeFileAsync = util.promisify(fs.writeFile);
 async function parseXMLStringAsync(xmlString)
 {
     return new Promise(function(resolve, reject) {
@@ -25,6 +25,59 @@ async function parseXMLStringAsync(xmlString)
             }
         });
     });
+}
+
+const XML_SINGLE_INDENT_STRING = "    ";
+const XML_ESCAPED_CHARS = {
+    "<" : "&lt;",
+    ">" : "&gt;",
+    "&" : "&amp;",
+    "\"": "&quot;",
+    "\'": "&apos;"
+};
+
+function ObjectToXMLRecursive(prefix, object)
+{
+    let xml = "";
+    let type = typeof(object);
+    if (type === "object") {
+        for (let key in object) {
+            let result = ObjectToXMLRecursive(prefix + XML_SINGLE_INDENT_STRING, object[key]);
+            if (result !== null) {
+                xml += prefix + "<" + key + ">\n";
+                xml += result;
+                xml += prefix + "</" + key + ">\n";
+            }
+        }
+    }
+    else {
+        if (object === "undefined") {
+            console.warn("\"undefined\" string, treated as undefined value");
+            return null;
+        }
+        let string = prefix + object + "\n";
+        for (let i = 0; i < string.length; i++) {
+            if (XML_ESCAPED_CHARS.hasOwnProperty(string[i])) {
+                string = string.substring(0, i) + XML_ESCAPED_CHARS[string[i]] + string.substring(i + 1, string.length);
+            }
+        }
+        xml += string;
+    }
+
+    return xml;
+}
+
+function ObjectToXML(rootNode, object)
+{
+    let result = ObjectToXMLRecursive(XML_SINGLE_INDENT_STRING, object);
+    if (result === null) {
+        return null;
+    }
+
+    let xml = "<" + rootNode + ">\n";
+    xml += result;
+    xml += "</" + rootNode + ">\n";
+    return xml;
 }
 
 const serverSettings = require("./server-settings.js");
@@ -158,28 +211,49 @@ async function GetEntryData(url, templates)
         entryData[k] = entryData[k][0];
         if (k === "featured") {
             for (let kFeatured in entryData[k]) {
-                entryData[k][kFeatured] = entryData[k][kFeatured][0].trim();
+                entryData[k][kFeatured] = entryData[k][kFeatured][0];
+                if (kFeatured === "images") {
+                    entryData[k][kFeatured] = entryData[k][kFeatured].split(",");
+                    for (let i = 0; i < entryData[k][kFeatured].length; i++) {
+                        entryData[k][kFeatured][i] = entryData[k][kFeatured][i].trim();
+                        if (entryData[k][kFeatured][i] === "") {
+                            throw new Error("Empty featured image, maybe a trailing comma? " + url);
+                        }
+                    }
+                }
+                else {
+                    entryData[k][kFeatured] = entryData[k][kFeatured].trim();
+                }
             }
-            continue;
         }
         else if (k === "tags") {
             entryData[k] = entryData[k].split(",");
             for (let i = 0; i < entryData[k].length; i++) {
                 entryData[k][i] = entryData[k][i].trim();
             }
-            continue;
         }
-        entryData[k] = entryData[k].trim();
+        else {
+            entryData[k] = entryData[k].trim();
+        }
     }
 
     return { status: 200, contentType: resultContentType, entryData: entryData };
 }
 
-async function SaveEntryData(url, entryData)
+async function SaveEntryData(url, templates, entryData)
 {
+    let contentType = entryData.contentType;
+    if (!templates.hasOwnProperty(contentType)) {
+        console.error("Unknown contentType, can't save entry data: " + contentType);
+        return false;
+    }
+    delete entryData.contentType;
+    let xml = ObjectToXML(contentType, entryData);
+
     let xmlPath = path.join(__dirname, path.normalize(url + ".xml"));
-    console.log(entryData);
-    console.log("write to " + xmlPath);
+    await writeFileAsync(xmlPath, xml);
+
+    return true;
 }
 
 async function LoadAllEntryMetadata(templates)
@@ -240,14 +314,6 @@ async function LoadAllEntryMetadata(templates)
                 throw new Error("no highlightColor on featured info, file " + uri);
             }
 
-            let featuredImages = featuredInfo.images;
-            featuredImages = featuredImages.split(",");
-            for (let k = 0; k < featuredImages.length; k++) {
-                featuredImages[k] = featuredImages[k].trim();
-                if (featuredImages[k] === "") {
-                    throw new Error("blank featured image (trailing comma?), file " + uri);
-                }
-            }
             let imagePoster = entryData.hasOwnProperty("imagePoster") ? entryData.imagePoster : entryData.image;
             let titlePoster = entryData.hasOwnProperty("titlePoster") ? entryData.titlePoster : entryData.title;
             let dayPoster = entryData.day;
@@ -265,7 +331,7 @@ async function LoadAllEntryMetadata(templates)
             let datePoster = entryData.year + "-" + monthPoster + "-" + dayPoster;
             allEntryMetadata.push({
                 featuredInfo: {
-                    images: featuredImages,
+                    images: featuredInfo.images,
                     pretitle: featuredInfo.pretitle,
                     title: featuredInfo.title,
                     text1: featuredInfo.text1,
@@ -456,6 +522,13 @@ if (serverSettings.isDev) {
     }
 
     const appDev = express();
+
+    appDev.post("/newImage", checkAuthNoRedirect, async function(req, res) {
+        console.log(req);
+        console.log(req.body);
+        res.end();
+    });
+
     appDev.use(express.json());
 
     appDev.get("/entries", checkAuthNoRedirect, function(req, res) {
@@ -489,7 +562,11 @@ if (serverSettings.isDev) {
             requestPath = requestPath.substring(0, requestPath.length - 1);
         }
 
-        await SaveEntryData(requestPath, req.body);
+        await SaveEntryData(requestPath, templates_, req.body);
+
+        // Reload global data
+        templates_ = LoadTemplateData();
+        allEntryMetadata_ = await LoadAllEntryMetadata(templates_);
     });
 
     appDev.get("/", checkAuthRedirect);

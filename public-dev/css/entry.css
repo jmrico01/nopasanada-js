@@ -6,9 +6,87 @@
     font-size: 36pt;
     font-weight: bold;
     text-align: center;
-    background-color: #8f8;
+    background-color: #ccf;
 }
 #saveButton:hover {
-    background-color: #2f2;
+    background-color: #99f;
     cursor: pointer;
+}
+
+#imagesListAdd {
+	height: 100pt;
+	margin-top: 20pt;
+	margin-bottom: 20pt;
+	padding: 20pt;
+	padding-bottom: 20pt;
+
+	background-color: #ddd;
+}
+
+#rowAddButton, .rowEditButton, .rowDeleteButton {
+	position: absolute;
+	left: 0;
+    width: 72pt;
+    height: 24pt;
+    padding-top: 8pt;
+
+    font-size: 14pt;
+    text-align: center;
+}
+
+#rowAddButton {
+    background-color: #8f8;
+}
+#rowAddButton:hover {
+    cursor: pointer;
+    background-color: #2f2;
+}
+
+.imagesListRow {
+	height: 200pt;
+	margin-top: 20pt;
+	margin-bottom: 20pt;
+	padding: 20pt;
+	padding-bottom: 20pt;
+
+	background-color: #ddd;
+}
+
+.rowInfo {
+	position: relative;
+	float: left;
+	width: 50%;
+	height: 100%;
+}
+
+.rowEditButton {
+	top: 0;
+    background-color: #ff8;
+}
+.rowEditButton:hover {
+    cursor: pointer;
+    background-color: #ee2;
+}
+.rowDeleteButton {
+	bottom: 0;
+    background-color: #f88;
+}
+.rowDeleteButton:hover {
+    cursor: pointer;
+    background-color: #f55;
+}
+
+.rowText {
+	padding-right: 20pt;
+	font-size: 14pt;
+	text-align: right;
+}
+
+.rowImage {
+	float: left;
+	width: 50%;
+	height: 100%;
+}
+.rowImage img {
+	height: 100%;
 }
