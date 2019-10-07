@@ -502,7 +502,7 @@ else {
 
 if (serverSettings.isDev) {
     function isAuthenticated(req) {
-        return true; // TODO authentication logic
+        return false; // TODO authentication logic
     }
     function checkAuthRedirect(req, res, next) {
         if (!isAuthenticated(req)) {
