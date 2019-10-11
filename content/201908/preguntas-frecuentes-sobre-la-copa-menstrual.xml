@@ -14,6 +14,13 @@
 		<highlightColor>
 		</highlightColor>
 	</featured>
+	<passes>
+		<images>
+			/images/201908/article-21/insert.png,
+			/images/201908/article-21/folds1.png,
+			/images/201908/article-21/folds2.png
+		</images>
+	</passes>
 	<tags>
 		ciencia
 	</tags>
@@ -65,7 +72,7 @@ En No Pasa Nada nos pusimos la tarea de aclarar las preguntas más frecuentes qu
 
 Es un dispositivo de silicon, hule o látex que se introduce dentro de la vagina con el fin de colectar flujo menstrual, y tiene capacidad de colectar 10-38 mL. Hay dos tipos de copa disponibles: las vaginales, que se mantienen en la vagina y son las más populares, y las cervicales que se colocan alrededor del cérvix, localizado entre la parte más externa del útero y la parte más profunda de la vagina.
 
-&lt;img src=&quot;../../../images/201908/article-21/insert.png&quot;&gt;
+{{{ images0 }}}
 
 **¿Cuál es su vida útil?**
 
@@ -87,8 +94,8 @@ Si bien la copa promedio tiene un costo de $23, hay un beneficio económico a la
 
 Una de las mayores desventajas de la copa es la dificultad para aprender a usarla. Sin embargo, existen [varios videos en YouTube](https://www.youtube.com/watch?v=o9fPUfm-uYE) que explican cómo insertarla y removerla. Además, [las copas demostraron](https://www.ncbi.nlm.nih.gov/pubmed/20373933) permitir menos escapes (en un 0,5%) cuando se les comparó con los tampones. 
 
-&lt;img src=&quot;../../../images/201908/article-21/folds1.png&quot;&gt;
-&lt;img src=&quot;../../../images/201908/article-21/folds2.png&quot;&gt;
+{{{ images1 }}}
+{{{ images2 }}}
 
 [The Lancet](https://www.thelancet.com/journals/lanpub/article/PIIS2468-2667(19)30111-2/fulltext#tbl2), una revista médica británica prestigiosa, analizó la información de 43 estudios con 3319 participantes en total; de estas, 5 mujeres reportaron dolor vaginal y rupturas a nivel vaginal, 6 reportaron alergia al material de la copa y 9 reportaron problemas con respecto al tracto urinario (como dificultad para orinar). 
 
