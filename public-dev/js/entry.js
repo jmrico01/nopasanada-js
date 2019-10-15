@@ -1,4 +1,5 @@
 let imageRowTemplate_ = null;
+let images_ = null;
 
 function UpdateImageList(images)
 {
@@ -11,6 +12,8 @@ function UpdateImageList(images)
         $imageRow.find(".rowText h2").html(images[i].name);
         $imageList.append($imageRow);
     }
+
+    images_ = images;
 }
 
 function GetEntryPath()
@@ -81,6 +84,9 @@ function LoadEntryData(entryData)
     document.getElementsByName("featuredTitle")[0].value = entryData.featured.title;
     document.getElementsByName("featuredText1")[0].value = entryData.featured.text1;
     document.getElementsByName("featuredText2")[0].value = entryData.featured.text2;
+    document.getElementsByName("highlightColor")[0].value = entryData.featured.highlightColor;
+
+    document.getElementsByName("tags")[0].value = entryData.tags;
 
     document.getElementsByName("title")[0].value = entryData.title;
     let titlePoster = entryData.titlePoster;
@@ -113,23 +119,66 @@ function LoadEntryData(entryData)
     document.getElementsByName("text")[0].value = entryData.text;
 }
 
+function GetImageByName(name, images)
+{
+    for (let i = 0; i < images.length; i++) {
+        if (images[i].name === name) {
+            return images[i];
+        }
+    }
+
+    return null;
+}
+
 function SaveEntryData()
 {
-    let date = document.getElementsByName("date")[0].value; // TODO split into day/month/year
+    let date = document.getElementsByName("date")[0].value;
+    let dateSplit = date.split("/");
+    for (let i = 0; i < dateSplit.length; i++) {
+        dateSplit[i] = dateSplit[i].trim();
+    }
+    let dateError = null;
+    if (dateSplit.length !== 3) {
+        dateError = "expected 2 slashes";
+    }
+    if (dateSplit[0].length !== 2) {
+        dateError = "bad day format";
+    }
+    if (dateSplit[1].length !== 2) {
+        dateError = "bad month format";
+    }
+    let monthInt = parseInt(dateSplit[1]);
+    if (monthInt <= 0 || monthInt > 12) {
+        dateError = "month not 1 through 12";
+    }
+    if (dateSplit[2].length !== 4) {
+        dateError = "bad year format";
+    }
+    if (dateError !== null) {
+        alert("Incorrect date \"" + date + "\", should be dd/mm/yyyy (" + dateError + ")");
+        return;
+    }
+
     let entryData = {
         contentType: document.getElementById("contentType").value,
         featured: {
-            pretitle: document.getElementsByName("featuredPretitle")[0].value,
-            title:    document.getElementsByName("featuredTitle")[0].value,
-            text1:    document.getElementsByName("featuredText1")[0].value,
-            text2:    document.getElementsByName("featuredText2")[0].value
+            pretitle:       document.getElementsByName("featuredPretitle")[0].value,
+            title:          document.getElementsByName("featuredTitle")[0].value,
+            text1:          document.getElementsByName("featuredText1")[0].value,
+            text2:          document.getElementsByName("featuredText2")[0].value,
+            highlightColor: document.getElementsByName("highlightColor")[0].value
         },
+
+        tags:        document.getElementsByName("tags")[0].value,
+
         title:       document.getElementsByName("title")[0].value,
         titlePoster: document.getElementsByName("titlePoster")[0].value,
         description: document.getElementsByName("description")[0].value,
-        day:         "04",
-        month:       "10",
-        year:        "2019",
+        day:         dateSplit[0],
+        month:       dateSplit[1],
+        year:        dateSplit[2],
+        color:       document.getElementsByName("color")[0].value,
+
         author:      document.getElementsByName("author")[0].value,
         id:          document.getElementsByName("youtubeID")[0].value,
         audioSource: document.getElementsByName("audioSource")[0].value,
@@ -149,19 +198,75 @@ function SaveEntryData()
         text:        document.getElementsByName("text")[0].value
     };
 
+    let images = images_;
+    let imageHeader = GetImageByName("header", images);
+    if (imageHeader === null) {
+        alert("Missing header image (upload image with name \"header\")");
+        return;
+    }
+    entryData.featured.images = imageHeader.uri;
+    entryData.image = imageHeader.uri;
+
+    let imagePoster = GetImageByName("poster", images);
+    if (imagePoster !== null) {
+        entryData.imagePoster = imagePoster.uri;
+    }
+
+    let anyPresent = false;
+    let allPresent = true;
+    let imagesDesktop = [];
+    let imagesMobile = [];
+    for (let i = 0; i < 4; i++) {
+        let imageDesktop = GetImageByName("header-desktop" + (i + 1), images);
+        let imageMobile = GetImageByName("header-mobile" + (i + 1), images);
+        if (imageDesktop !== null || imageMobile !== null) {
+            anyPresent = true;
+        }
+        if (imageDesktop === null || imageMobile === null) {
+            allPresent = false;
+        }
+        imagesDesktop.push(imageDesktop);
+        imagesMobile.push(imageMobile);
+    }
+    if (anyPresent && !allPresent) {
+        alert("Missing some newsletter images");
+        return;
+    }
+    if (!anyPresent && allPresent) {
+        alert("Unexpected error with newsletter images");
+        return;
+    }
+
+    if (anyPresent) {
+        let uri0 = imagesDesktop[0].uri;
+        let commonPath = uri0.substring(0, uri0.lastIndexOf("/"));
+        for (let i = 0; i < 4; i++) {
+            let uri = imagesDesktop[i].uri;
+            if (commonPath !== uri.substring(0, uri.lastIndexOf("/"))) {
+                alert("Upload path error with newsletter desktop images");
+                return;
+            }
+            uri = imagesMobile[i].uri;
+            if (commonPath !== uri.substring(0, uri.lastIndexOf("/"))) {
+                alert("Upload path error with newsletter mobile images");
+                return;
+            }
+        }
+        entryData.imageDirectory = commonPath;
+    }
+
+    $("#statusMessage").html("Saving...");
     $.ajax({
         type: "POST",
         url: GetEntryPath(),
         contentType: "application/json",
-        dataType: "json",
         async: true,
         data: JSON.stringify(entryData),
         success: function(data) {
-            console.log("sent entryData");
-            console.log(entryData);
+            $("#statusMessage").html("Successfully saved entry!");
         },
-        failure: function(error) {
-            console.error(error);
+        error: function(error) {
+            $("#statusMessage").html("Entry save failed, error: " + error);
         }
     });
 }
@@ -203,7 +308,7 @@ $(document).ready(function() {
                 document.getElementById("imagesListAddForm").submit();
             })
         },
-        failure: function(error) {
+        error: function(error) {
             console.error(error);
         }
     });

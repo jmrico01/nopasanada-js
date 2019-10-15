@@ -42,6 +42,10 @@
     background-color: #2f2;
 }
 
+#statusMessage {
+    color: #666;
+}
+
 .imagesListRow {
 	height: 200pt;
 	margin-top: 20pt;

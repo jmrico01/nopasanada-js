@@ -255,16 +255,13 @@ async function SaveEntryData(url, templates, entryData)
 {
     let contentType = entryData.contentType;
     if (!templates.hasOwnProperty(contentType)) {
-        console.error("Unknown contentType, can't save entry data: " + contentType);
-        return false;
+        throw new Error("Unknown contentType, can't save entry data: " + contentType);
     }
     delete entryData.contentType;
     let xml = ObjectToXML(contentType, entryData);
 
     let xmlPath = path.join(__dirname, path.normalize(url + ".xml"));
     await writeFileAsync(xmlPath, xml);
-
-    return true;
 }
 
 async function LoadAllEntryMetadata(templates)
@@ -528,7 +525,7 @@ else {
 
 if (serverSettings.isDev) {
     function isAuthenticated(req) {
-        return false; // TODO authentication logic
+        return true; // TODO authentication logic
     }
     function checkAuthRedirect(req, res, next) {
         if (!isAuthenticated(req)) {
@@ -588,11 +585,16 @@ if (serverSettings.isDev) {
             requestPath = requestPath.substring(0, requestPath.length - 1);
         }
 
-        await SaveEntryData(requestPath, templates_, req.body);
-
-        // Reload global data
-        templates_ = LoadTemplateData();
-        allEntryMetadata_ = await LoadAllEntryMetadata(templates_);
+        try {
+            await SaveEntryData(requestPath, templates_, req.body);
+            // Reload global data
+            templates_ = LoadTemplateData();
+            allEntryMetadata_ = await LoadAllEntryMetadata(templates_);
+        }
+        catch (e) {
+            res.status(500).end();
+        }
+        res.end();
     });
 
     appDev.get("/", checkAuthRedirect);
