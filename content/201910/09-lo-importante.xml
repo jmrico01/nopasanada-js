@@ -1,8 +1,5 @@
 <newsletter>
     <featured>
-        <images>
-            /images/201910/headers/09-lo-importante.jpg
-        </images>
         <pretitle>
             NOTICIAS:
         </pretitle>
@@ -10,7 +7,7 @@
             LO IMPORTANTE&lt;br&gt;&lt;b&gt;09-10-19. *&lt;/b&gt;
         </title>
         <text1>
-            4 HISTORIAS IMPORTANTES DE LAS M&Aacute;S RECIENTES NOTICIAS INTERNACIONALES.
+            4 HISTORIAS IMPORTANTES DE LAS MÁS RECIENTES NOTICIAS INTERNACIONALES.
         </text1>
         <text2>
             CURADAS POR&lt;br&gt;NO PASA NADA
@@ -18,25 +15,19 @@
         <highlightColor>
             #ff613c
         </highlightColor>
+        <images>
+            /images/201910/headers/09-lo-importante.jpg
+        </images>
     </featured>
     <tags>
-        noticias, home
+        noticias,home
     </tags>
-    <image>
-        /images/201910/headers/09-lo-importante.jpg
-    </image>
-    <imagePoster>
-        /images/201910/posters/09-lo-importante.jpg
-    </imagePoster>
-    <imageDirectory>
-        /images/201910/09-lo-importante
-    </imageDirectory>
-    <color>
-        #FCC285
-    </color>
     <title>
         Lo Importante: 09-10-19
     </title>
+    <titlePoster>
+        
+    </titlePoster>
     <description>
         4 historias importantes de las más recientes noticias internacionales
     </description>
@@ -49,9 +40,12 @@
     <year>
         2019
     </year>
+    <color>
+        #FCC285
+    </color>
     <audioSource>
+        
     </audioSource>
-
     <title1>
         Erdogan dice que operación militar turca contra milicia kurda en Siria ya empezó
     </title1>
@@ -59,31 +53,30 @@
         AFP
     </author1>
     <text1>
-**¿Qué necesitas saber?**
+        **¿Qué necesitas saber?**
 
 El presidente turco, Recep Tayyip Erdogan, anunció el miércoles el inicio de la operación militar turca contra la milicia kurda de las Unidades de Protección del Pueblo (YPG), grupo apoyado por países occidentales, pero perseguido por Ankara.
 
-"Las fuerzas armadas turcas y el Ejército nacional sirio (rebeldes sirios apoyados por Ankara) dieron inicio a la operación 'Fuente de paz' en el norte de Siria", dijo Erdogan en la red social Twitter.
+&quot;Las fuerzas armadas turcas y el Ejército nacional sirio (rebeldes sirios apoyados por Ankara) dieron inicio a la operación &apos;Fuente de paz&apos; en el norte de Siria&quot;, dijo Erdogan en la red social Twitter.
 
 **¿Por qué nos importa?**
 
 Coincidiendo con este anuncio, los periodistas de la AFP escucharon una fuerte explosión en la región Ras al Ain, en la frontera entre los dos países.
 
-"Aviones de guerra turcos han empezado a bombardear zonas civiles, hay pánico entre la gente" indicó por su lado un portavoz de los fuerzas kurdas, Mustafa Bali.
+&quot;Aviones de guerra turcos han empezado a bombardear zonas civiles, hay pánico entre la gente&quot; indicó por su lado un portavoz de los fuerzas kurdas, Mustafa Bali.
 
-Esta operación tiene como objetivo, según Erdogan, "remover los terroristas de las YPG y de Dáesh (acrónimo árabe del grupo Estado Islámico)" e implementar una "zona de seguridad" en el noreste de Siria.
+Esta operación tiene como objetivo, según Erdogan, &quot;remover los terroristas de las YPG y de Dáesh (acrónimo árabe del grupo Estado Islámico)&quot; e implementar una &quot;zona de seguridad&quot; en el noreste de Siria.
 
-"La zona de seguridad que vamos a crear va a permitir el retorno de los refugiados sirios (que se encuentran en Turquía, ndlr) a su país" agregó.
+&quot;La zona de seguridad que vamos a crear va a permitir el retorno de los refugiados sirios (que se encuentran en Turquía, ndlr) a su país&quot; agregó.
 
 **EE. UU.**
 
-El presidente estadounidense Donald Trump pareció dar su luz verde el domingo a esta operación turca, antes de rectificar sus palabras y asegurar que Estados Unidos "no ha abandonado a los kurdos", que desempeñaron un rol crucial en la lucha contra el EI.
+El presidente estadounidense Donald Trump pareció dar su luz verde el domingo a esta operación turca, antes de rectificar sus palabras y asegurar que Estados Unidos &quot;no ha abandonado a los kurdos&quot;, que desempeñaron un rol crucial en la lucha contra el EI.
 
 **Rusia**
 
-Antes de este anuncio de Erdogan, el presidente ruso Vladimir Putin lo había instado a que "reflexione" antes de lanzar cualquier ofensiva en Siria.
+Antes de este anuncio de Erdogan, el presidente ruso Vladimir Putin lo había instado a que &quot;reflexione&quot; antes de lanzar cualquier ofensiva en Siria.
     </text1>
-
     <title2>
         Evangélicos ganan influencia en una Argentina en crisis
     </title2>
@@ -91,7 +84,7 @@ Antes de este anuncio de Erdogan, el presidente ruso Vladimir Putin lo había in
         AFP
     </author2>
     <text2>
-**¿Qué necesitas saber?**
+        **¿Qué necesitas saber?**
 
 A través de programas de ayuda y contención, la presencia de la Iglesia evangélica, encabezada por los pentecostales, es cada vez más visible entre los argentinos, agobiados por una brutal crisis económica con un índice de pobreza que alcanzó al 35,4% de la población.
 
@@ -99,39 +92,39 @@ Con gran capacidad de movilización, mediante espacios radiales y en la televisi
 
 **¿Por qué nos importa?**
 
-De indiscutible influencia en el debate sobre familia, aborto y sexualidad en todos los estratos sociales, "políticos de todos los bandos" le hacen la corte de cara a las elecciones del 27 de octubre.
+De indiscutible influencia en el debate sobre familia, aborto y sexualidad en todos los estratos sociales, &quot;políticos de todos los bandos&quot; le hacen la corte de cara a las elecciones del 27 de octubre.
 
-**"Mi vida se la debo a Él"**
+**&quot;Mi vida se la debo a Él&quot;**
 
-No hay situación adversa que Él no pueda transformar", insiste el pastor pentecostal Alberto Rey, con un carisma digno del líder de una banda de rock.
+No hay situación adversa que Él no pueda transformar&quot;, insiste el pastor pentecostal Alberto Rey, con un carisma digno del líder de una banda de rock.
 
-"¡Todo lo que necesitas está en Él y nadie más que Él!", pregona Rey, de 52 años y vestido con impecable traje azul, mientras miles de personas alzan sus manos en la Iglesia Manantial de Bendiciones.
+&quot;¡Todo lo que necesitas está en Él y nadie más que Él!&quot;, pregona Rey, de 52 años y vestido con impecable traje azul, mientras miles de personas alzan sus manos en la Iglesia Manantial de Bendiciones.
 
-Al final del culto, pastores en primera fila ponen su mano sobre la cabeza de los "hermanos" que se les acercan. Mucho lloran y se balancean como si estuvieran en trance.
+Al final del culto, pastores en primera fila ponen su mano sobre la cabeza de los &quot;hermanos&quot; que se les acercan. Mucho lloran y se balancean como si estuvieran en trance.
 
-"Hemos pasado otras crisis y Dios jamás nos dejó desamparados", asegura Aldana Masuco, de 38 años.
+&quot;Hemos pasado otras crisis y Dios jamás nos dejó desamparados&quot;, asegura Aldana Masuco, de 38 años.
 
 El avance evangélico en Argentina se dio a partir de 2001, cuando el país vivió la peor crisis económica de su historia.
 
-"Es indudable su influencia y legitimidad creciente a partir de allí", sostiene Marcos Carbonelli, doctor en Ciencias Sociales por la Universidad de Buenos Aires. 
+&quot;Es indudable su influencia y legitimidad creciente a partir de allí&quot;, sostiene Marcos Carbonelli, doctor en Ciencias Sociales por la Universidad de Buenos Aires. 
 
-"Las iglesias evangélicas tienen un discurso que marida mejor con la crisis. Muchos se acercan también por la red de ayuda social, encuentran trabajo o consuelo entre la comunidad", explica el analista, investigador del CONICET, organismo estatal de promoción de la investigación científica del país.
+&quot;Las iglesias evangélicas tienen un discurso que marida mejor con la crisis. Muchos se acercan también por la red de ayuda social, encuentran trabajo o consuelo entre la comunidad&quot;, explica el analista, investigador del CONICET, organismo estatal de promoción de la investigación científica del país.
 
-**"La clase política lo sabe y los usa para sus programas", añade.**
+**&quot;La clase política lo sabe y los usa para sus programas&quot;, añade.**
 
 El gobierno liberal de Mauricio Macri acudió a ellos a fines de 2018 para la distribución de alimentos en las zonas más pobres de la periferia de Buenos Aires, de difícil acceso.
 
-**"Los templos se multiplican"**
+**&quot;Los templos se multiplican&quot;**
 
-En Buenos Aires han ido conquistando casi todos los barrios, en cines o antiguos salones convertidos en iglesias gigantes, y miles de "células" como se conoce a los hogares de la gente donde hacen "mini-cultos", guiados por su pastor.
+En Buenos Aires han ido conquistando casi todos los barrios, en cines o antiguos salones convertidos en iglesias gigantes, y miles de &quot;células&quot; como se conoce a los hogares de la gente donde hacen &quot;mini-cultos&quot;, guiados por su pastor.
 
-"En los últimos diez años el crecimiento fue acelerado; ¡es tremendo!", señala el pastor Rúben Proietti, líder de la Alianza Cristiana de las Iglesias Evangélicas de la República Argentina (ACIERA).
+&quot;En los últimos diez años el crecimiento fue acelerado; ¡es tremendo!&quot;, señala el pastor Rúben Proietti, líder de la Alianza Cristiana de las Iglesias Evangélicas de la República Argentina (ACIERA).
 
-"En todos los barrios son más las iglesias evangelistas que las católicas", agrega.
+&quot;En todos los barrios son más las iglesias evangelistas que las católicas&quot;, agrega.
 
 Según miembros de ACIERA, hay más de 5.000 templos en Buenos Aires y aunque no hay datos oficiales sobre el número de fieles, se estima que pasó del 8% de la población adulta a casi el 20% en una década.
 
-De todas maneras el fenómeno está lejos de Brasil o Guatemala, este último considerado su "capital" en la región. Según un informe de Latinobarómetro, en la mayoría de los países de América Central, salvo Panamá y Costa Rica, la religión católica ya no es mayoría y buena parte de su población se define como evangélica.
+De todas maneras el fenómeno está lejos de Brasil o Guatemala, este último considerado su &quot;capital&quot; en la región. Según un informe de Latinobarómetro, en la mayoría de los países de América Central, salvo Panamá y Costa Rica, la religión católica ya no es mayoría y buena parte de su población se define como evangélica.
 
 **¿Dios al poder?**
 
@@ -139,13 +132,12 @@ Las movilizaciones en 2018 contra un proyecto de ley para legalizar el aborto no
 
 Sin embargo no ha surgido un partido o líder político al estilo brasileño.
 
-"Son ellos que vienen y piden, políticos de todos los bandos y nosotros los recibimos", dice Proietti al desmentir informes de prensa de que son afines al gobierno de Macri.
+&quot;Son ellos que vienen y piden, políticos de todos los bandos y nosotros los recibimos&quot;, dice Proietti al desmentir informes de prensa de que son afines al gobierno de Macri.
 
 Por ahora su representación en la clase política argentina es mínima. 
 
-"A pesar de sus acercamientos con políticos oficialistas y la presencia de algunos evangélicos en el gobierno, de momento no creo que encontremos pastores que sean candidatos a gobernadores o a presidentes en Argentina", destaca Carbonelli.
+&quot;A pesar de sus acercamientos con políticos oficialistas y la presencia de algunos evangélicos en el gobierno, de momento no creo que encontremos pastores que sean candidatos a gobernadores o a presidentes en Argentina&quot;, destaca Carbonelli.
     </text2>
-
     <title3>
         Japón se prepara a hacer frente al gigantesco tifón Hagibis
     </title3>
@@ -153,11 +145,11 @@ Por ahora su representación en la clase política argentina es mínima.
         AFP
     </author3>
     <text3>
-**¿Qué necesitas saber?**
+        **¿Qué necesitas saber?**
 
 El tifón Hagibis, uno de los más poderosos de las últimas décadas en la región, amenaza partidos de la Copa del Mundo de Rugby y el Gran Premio de Fórmula 1 este fin de semana en Japón.
 
-Clasificado como tifón "violento", Hagibis se dirige hacia el sudeste del país y podría alcanzar la región de Tokio el sábado, advirtieron el miércoles los meteorólogos japoneses.
+Clasificado como tifón &quot;violento&quot;, Hagibis se dirige hacia el sudeste del país y podría alcanzar la región de Tokio el sábado, advirtieron el miércoles los meteorólogos japoneses.
 
 Si su fuerza no se debilita para entonces, podría perturbar, o incluso impedir, la celebración de varios partidos de la Copa del Mundo de Rugby.
 
@@ -167,23 +159,22 @@ Los organizadores han previsto diferentes soluciones que van desde el aplazamien
 
 En ese caso, cada equipo recibiría dos puntos (empate 0-0), lo que podría costarle la clasificación a cuartos a Escocia, en estos momentos por detrás de Japón e Irlanda en la llave A.
 
-**"Vientos de 45 metros por segundo"**
+**&quot;Vientos de 45 metros por segundo&quot;**
 
 El Gran Premio de Fórmula 1 de Suzuka, otro acontecimiento que atrae a decenas de miles de espectadores en el centro de Japón, también podría verse amenazado.
 
 Según un funcionario de la agencia meteorológica japonesa (JMA), la potencia actual de Hagibis es similar al de cuatro de los mayores tifones que ha conocido la isla en las últimas décadas, incluido Faxai el mes pasado, que causó grandes daños en los suburbios de Tokio.
 
-Para el sábado "prevemos vientos de una velocidad de 45 metros por segundo", es decir unos 162 kilómetros horarios, declaró un responsable de la JMA en una rueda de prensa.
+Para el sábado &quot;prevemos vientos de una velocidad de 45 metros por segundo&quot;, es decir unos 162 kilómetros horarios, declaró un responsable de la JMA en una rueda de prensa.
 
 **¿Por qué nos importa?**
 
-"El tifón provocará fuertes lluvias en una amplia parte" del país. "Al principio soplarán vientos violentos, seguidos de lluvias torrenciales", añadió. "En la costa se esperan también grandes olas".
+&quot;El tifón provocará fuertes lluvias en una amplia parte&quot; del país. &quot;Al principio soplarán vientos violentos, seguidos de lluvias torrenciales&quot;, añadió. &quot;En la costa se esperan también grandes olas&quot;.
 
-"Pedimos a los habitantes proceder pronto a las evacuaciones voluntarias y estar pendientes de las consignas de evacuación de las autoridades locales", insistió el funcionario.
+&quot;Pedimos a los habitantes proceder pronto a las evacuaciones voluntarias y estar pendientes de las consignas de evacuación de las autoridades locales&quot;, insistió el funcionario.
 
 Este miércoles al principio de la noche (hora japonesa), Hagibis se desplazaba por el Pacífico a unos 1.000 km al sur de Tokio, con ráfagas de viento que llegaban hasta los 270 km/h, según la JMA.
     </text3>
-
     <title4>
         Dos muertos en un tiroteo en plena calle en la ciudad alemana de Halle
     </title4>
@@ -191,11 +182,11 @@ Este miércoles al principio de la noche (hora japonesa), Hagibis se desplazaba 
         AFP
     </author4>
     <text4>
-**¿Qué necesitas saber?**
+        **¿Qué necesitas saber?**
 
 Dos personas murieron en un tiroteo en plena calle en la ciudad alemana de Halle (este) y un sospechoso de participar en el ataque fue luego detenido, anunció la policía local.
 
-"Dos personas murieron en Halle, según los primeros datos disponibles. Hubo varios disparos. Los presuntos autores se dieron a la fuga en un vehículo" anunció la policía en Twitter, que pidió a los "habitantes que permanezcan en sus casas". 
+&quot;Dos personas murieron en Halle, según los primeros datos disponibles. Hubo varios disparos. Los presuntos autores se dieron a la fuga en un vehículo&quot; anunció la policía en Twitter, que pidió a los &quot;habitantes que permanezcan en sus casas&quot;. 
 
 Posteriormente, la policía explicó que una persona había sido detenida, sin dar más detalles.
 
@@ -205,8 +196,17 @@ Según un testigo, los disparos tuvieron por objetivo un restaurante turco. Seg�
 
 Los judíos celebran este miércoles la fiesta del Yom Kippur o día del perdón.
 
-"Uno de los agresores llevaba un casco y ropa militar", dijo uno de los testigos. "Lanzó una granada que estalló en la puerta del restaurante", agregó.
+&quot;Uno de los agresores llevaba un casco y ropa militar&quot;, dijo uno de los testigos. &quot;Lanzó una granada que estalló en la puerta del restaurante&quot;, agregó.
 
 Toda la zona fue acordonada y la estación de tren de la ciudad, cerrada, según la policía.
     </text4>
+    <image>
+        /images/201910/headers/09-lo-importante.jpg
+    </image>
+    <imagePoster>
+        /images/201910/posters/09-lo-importante.jpg
+    </imagePoster>
+    <imageDirectory>
+        /images/201910/09-lo-importante
+    </imageDirectory>
 </newsletter>

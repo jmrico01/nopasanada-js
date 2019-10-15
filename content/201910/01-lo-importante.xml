@@ -1,8 +1,5 @@
 <newsletter>
     <featured>
-        <images>
-            /images/201910/headers/01-lo-importante.jpg
-        </images>
         <pretitle>
             NOTICIAS:
         </pretitle>
@@ -10,7 +7,7 @@
             LO IMPORTANTE&lt;br&gt;&lt;b&gt;01-10-19. *&lt;/b&gt;
         </title>
         <text1>
-            4 HISTORIAS IMPORTANTES DE LAS M&Aacute;S RECIENTES NOTICIAS INTERNACIONALES.
+            4 HISTORIAS IMPORTANTES DE LAS MÁS RECIENTES NOTICIAS INTERNACIONALES.
         </text1>
         <text2>
             CURADAS POR&lt;br&gt;NO PASA NADA
@@ -18,25 +15,19 @@
         <highlightColor>
             #ff613c
         </highlightColor>
+        <images>
+            /images/201910/headers/01-lo-importante.jpg
+        </images>
     </featured>
     <tags>
         noticias
     </tags>
-    <image>
-        /images/201910/headers/01-lo-importante.jpg
-    </image>
-    <imagePoster>
-        /images/201910/posters/01-lo-importante.jpg
-    </imagePoster>
-    <imageDirectory>
-        /images/201910/01-lo-importante
-    </imageDirectory>
-    <color>
-        #FCC285
-    </color>
     <title>
         Lo Importante: 01-10-19
     </title>
+    <titlePoster>
+        
+    </titlePoster>
     <description>
         4 historias importantes de las más recientes noticias internacionales
     </description>
@@ -49,23 +40,26 @@
     <year>
         2019
     </year>
+    <color>
+        #FCC285
+    </color>
     <audioSource>
+        
     </audioSource>
-
     <title1>
-        Un herido de bala en el "Día de Dolor" en Hong Kong por los 70 años de China popular
+        Un herido de bala en el &quot;Día de Dolor&quot; en Hong Kong por los 70 años de China popular
     </title1>
     <author1>
         AFP
     </author1>
     <text1>
-**¿Qué necesitas saber?**
+        **¿Qué necesitas saber?**
 
-Un manifestante fue herido de bala este martes en Hong Kong durante una multitudinaria manifestación prodemocracia con motivo del "Día de dolor", convocado para alterar los festejos  del 70 aniversario de la fundación de la República popular china.
+Un manifestante fue herido de bala este martes en Hong Kong durante una multitudinaria manifestación prodemocracia con motivo del &quot;Día de dolor&quot;, convocado para alterar los festejos  del 70 aniversario de la fundación de la República popular china.
 
 Un policía disparó con munición real al manifestante, que fue herido en el pecho, durante enfrentamientos entre las fuerzas de seguridad y los movilizados.
 
-"El oficial disparó tras ser atacado y alcanzó en el pecho a una persona (...)" dijo una fuente policial que requirió el anonimato.
+&quot;El oficial disparó tras ser atacado y alcanzó en el pecho a una persona (...)&quot; dijo una fuente policial que requirió el anonimato.
 
 El herido fue atendido en el lugar, y luego conducido a un hospital, donde otras 15 personas eran atendidas por heridas. Una de ellas está en estado grave, dijo una portavoz del hospital, pero no precisó si se trataba del manifestante herido por bala.
 
@@ -73,13 +67,12 @@ Hong Kong, región del sur de China, vive desde junio su crisis política más g
 
 **¿Por qué nos importa?**
 
-Los manifestantes denuncian además la violación, según ellos, del principio de "Un país, dos sistemas", que les otorga libertades no conocidas en el resto del país y que se acordó en el momento de la devolución hace 22 años a China de esta excolonia británica.
+Los manifestantes denuncian además la violación, según ellos, del principio de &quot;Un país, dos sistemas&quot;, que les otorga libertades no conocidas en el resto del país y que se acordó en el momento de la devolución hace 22 años a China de esta excolonia británica.
 
 Este martes, mientras China festejó por todo lo alto el 70º aniversario de la creación de la República Popular, proclamada por los comunistas en 1949, el movimiento prodemocracia convocó en Hong Kong nuevas manifestaciones para expresar su rechazo al régimen chino.
 
-Este "Día del dolor" fue organizado esencialmente a través de las redes sociales.
+Este &quot;Día del dolor&quot; fue organizado esencialmente a través de las redes sociales.
     </text1>
-
     <title2>
         El presidente peruano afianza su poder después de disolver el Congreso
     </title2>
@@ -87,7 +80,7 @@ Este "Día del dolor" fue organizado esencialmente a través de las redes social
         AFP
     </author2>
     <text2>
-**¿Qué necesitas saber?**
+        **¿Qué necesitas saber?**
 
 El presidente peruano, Martín Vizcarra, afianzaba el martes su poder al obtener el respaldo de miles de ciudadanos, de la cúpula militar y de los gobernadores regionales, al día siguiente de disolver el Congreso dominado por la oposición, que reaccionó suspendiendo a su vez al jefe de Estado.
 
@@ -103,17 +96,17 @@ Sin embargo, nadie salió a las calles a apoyar al Congreso, que enfrenta el rec
 
 Vizcarra ha ganado popularidad al impulsar una cruzada contra la corrupción en un país donde los cuatro anteriores presidentes quedaron bajo la lupa de la fiscalía acusados de recibir dádivas de la constructora brasileña Odebrecht. 
 
-Una disolución del Congreso no ocurría en Perú desde abril de 1992, cuando el presidente Alberto Fujimori (1990-2000) dio un "autogolpe" y asumió plenos poderes con apoyo de los militares. Ahora, en cambio, Vizcarra se amparó en la Constitución para dar este paso.
+Una disolución del Congreso no ocurría en Perú desde abril de 1992, cuando el presidente Alberto Fujimori (1990-2000) dio un &quot;autogolpe&quot; y asumió plenos poderes con apoyo de los militares. Ahora, en cambio, Vizcarra se amparó en la Constitución para dar este paso.
 
 Vizcarra convocó elecciones parlamentarias para el 26 de enero, según un decreto publicado en la gaceta oficial. Por una reforma ratificada en referéndum en 2018, los parlamentarios no pueden ser reelegidos.
 
 Aráoz, economista y exministra del difunto presidente Alan García (1985-1990 y 2006-2011), fue juramentada el lunes por el jefe del Congreso, Pedro Olaechea.
 
-"No me corro a mis responsabilidades por más difíciles que sean las circunstancias", dijo Aráoz, quien se había distanciado de Vizcarra y quien calificó como "inconstitucional" la disolución del Congreso.
+&quot;No me corro a mis responsabilidades por más difíciles que sean las circunstancias&quot;, dijo Aráoz, quien se había distanciado de Vizcarra y quien calificó como &quot;inconstitucional&quot; la disolución del Congreso.
 
 Casi a la misma hora en que juraba Aráoz los comandantes de las Fuerzas Armadas y la Policía expresaban su lealtad a Vizcarra.
 
-"El Jefe del Comando Conjunto de las Fuerzas Armadas y los Comandantes Generales del Ejército, Marina, Fuerza Aérea y Policía Nacional del Perú reafirman en Palacio de Gobierno su pleno respaldo al orden constitucional y al presidente Martín Vizcarra", dijo el gobierno en Twitter con una fotografía de la reunión.
+&quot;El Jefe del Comando Conjunto de las Fuerzas Armadas y los Comandantes Generales del Ejército, Marina, Fuerza Aérea y Policía Nacional del Perú reafirman en Palacio de Gobierno su pleno respaldo al orden constitucional y al presidente Martín Vizcarra&quot;, dijo el gobierno en Twitter con una fotografía de la reunión.
 
 También expresaron su apoyo a Vizcarra una decena de gobernadores regionales, algunos de los cuales participaron en las celebraciones para festejar la disolución.
 
@@ -137,11 +130,10 @@ La decisión de Vizcarra abrió un debate sobre la constitucionalidad de su deci
 
 “Acá la Comisión Permanente del Congreso continuará funcionando hasta que se produzca las elecciones parlamentarias (...). Lo que está claro es que aquí no hay golpe de Estado”, declaró el excanciller Diego García-Sayán, expresidente de la Corte Interamericana de Derechos Humanos.
 
-Pero un exjefe del Tribunal Constitucional, Oscar Urviola, afirmó que "el Congreso tiene que vacar (destituir) a Vizcarra pues la decisión del mismo de disolver el Congreso es inconstitucional".
+Pero un exjefe del Tribunal Constitucional, Oscar Urviola, afirmó que &quot;el Congreso tiene que vacar (destituir) a Vizcarra pues la decisión del mismo de disolver el Congreso es inconstitucional&quot;.
 
 Vizcarra pidió el voto de confianza luego de que el Congreso archivara el jueves su proyecto de adelantar elecciones a abril de 2020, lo que implicaba recortar un año su mandato y el del Legislativo. La propuesta era apoyada por el 75% de los peruanos, según encuestas.
     </text2>
-
     <title3>
         Corea del Norte anuncia conversaciones con EEUU sobre el programa nuclear el sábado
     </title3>
@@ -149,17 +141,17 @@ Vizcarra pidió el voto de confianza luego de que el Congreso archivara el jueve
         AFP
     </author3>
     <text3>
-**¿Qué necesitas saber?**
+        **¿Qué necesitas saber?**
 
 Corea del Norte anunció el martes que se mantendrán unas reuniones de trabajo sobre la cuestión nuclear con Estados Unidos el próximo sábado, lo cual confirma la reanudación de las negociaciones después del fracaso de la cumbre de Hanói el pasado febrero.
 
-Las dos partes acordaron mantener una reunión de "contacto preliminar" el 4 de octubre y negociaciones de trabajo el día después, dijo la viceministra de Relaciones Exteriores de Corea del Norte, Choe Son Hui, en un comunicado difundido por la agencia de prensa oficial KCNA.
+Las dos partes acordaron mantener una reunión de &quot;contacto preliminar&quot; el 4 de octubre y negociaciones de trabajo el día después, dijo la viceministra de Relaciones Exteriores de Corea del Norte, Choe Son Hui, en un comunicado difundido por la agencia de prensa oficial KCNA.
 
-"Mi deseo es que estas reuniones de trabajo impulsen la positiva evolución de las relaciones entre Corea del Norte y Estados Unidos", dijo la responsable.
+&quot;Mi deseo es que estas reuniones de trabajo impulsen la positiva evolución de las relaciones entre Corea del Norte y Estados Unidos&quot;, dijo la responsable.
 
 El anuncio de Corea del Norte fue confirmado por Estados Unidos poco después.
 
-"Puedo confirmar que oficiales de Estados Unidos y de Corea del Norte planean reunirse la semana que viene", dijo la portavoz del Departamento de Estado Morgan Ortagus, sin dar detalles.
+&quot;Puedo confirmar que oficiales de Estados Unidos y de Corea del Norte planean reunirse la semana que viene&quot;, dijo la portavoz del Departamento de Estado Morgan Ortagus, sin dar detalles.
 
 **¿Por qué nos importa?**
 
@@ -169,7 +161,6 @@ Los dos dirigentes se reunieron de nuevo brevemente en junio en la zona desmilit
 
 Sin embargo, estas discusiones no se reanudaron hasta ahora. Pyongyang no ocultó su decepción ante la negativa estadounidense de anular sus maniobras militares con Seúl. Las relaciones sí mejoraron cuando el exconsejero para la Seguridad de Trump, John Bolton, conocido por su tono duro hacia Corea del Norte, salió del gobierno.
     </text3>
-
     <title4>
         Secretaría General de OEA apoya a Colombia en querella con Venezuela por grupos armados
     </title4>
@@ -177,11 +168,11 @@ Sin embargo, estas discusiones no se reanudaron hasta ahora. Pyongyang no ocult�
         AFP
     </author4>
     <text4>
-**¿Qué necesitas saber?**
+        **¿Qué necesitas saber?**
 
 La Secretaría General de la OEA expresó este lunes su apoyo a Colombia en la denuncia de Bogotá ante la ONU de que Venezuela alberga a grupos armados en la frontera.
 
-La Secretaría General de la OEA "considera que los trabajos continuos que realiza el gobierno de Colombia en la sistematización y análisis de pruebas son relevantes para fortalecer la paz y la seguridad en el Hemisferio". 
+La Secretaría General de la OEA &quot;considera que los trabajos continuos que realiza el gobierno de Colombia en la sistematización y análisis de pruebas son relevantes para fortalecer la paz y la seguridad en el Hemisferio&quot;. 
 
 La semana pasada, durante la Asamblea General de la ONU, el presidente de Colombia, Iván Duque, acusó a Venezuela de albergar a guerrilleros colombianos en un informe de 128 páginas. 
 
@@ -189,7 +180,7 @@ La semana pasada, durante la Asamblea General de la ONU, el presidente de Colomb
 
 El informe generó polémica ya que algunos datos contenidos resultaron falsos, lo que este lunes llevó a la renuncia el jefe de inteligencia militar del país. Al menos dos de las imágenes del documento, cuyo contenido no ha sido revelado en su totalidad, tenían datos erróneos, corroboró AFP.
 
-La vicepresidenta de Venezuela, Delcy Rodríguez contestó en la ONU afirmando que en Colombia había campamentos donde se entrena a "terroristas" para atacar Venezuela.
+La vicepresidenta de Venezuela, Delcy Rodríguez contestó en la ONU afirmando que en Colombia había campamentos donde se entrena a &quot;terroristas&quot; para atacar Venezuela.
 
 Este lunes, el presidente de Venezuela, Nicolás Maduro, afirmó que no tolerará la presencia de grupos armados ilegales colombianos en su país. 
 
@@ -201,8 +192,17 @@ Duque indicó que su informe contenía pruebas del apoyo de Venezuela al Ejérci
 
 Estados Unidos también denunció que grupos rebeldes de Colombia operan en Venezuela con apoyo del gobierno de Maduro.
 
-"El apoyo al terrorismo y narcotráfico en otro país constituye crímenes contra la paz y la seguridad hemisférica", dijo la secretaría general de la OEA. 
+&quot;El apoyo al terrorismo y narcotráfico en otro país constituye crímenes contra la paz y la seguridad hemisférica&quot;, dijo la secretaría general de la OEA. 
 
-"Colombia ha sido el principal país afectado por estos crímenes contra la paz del régimen madurista", añadió.
+&quot;Colombia ha sido el principal país afectado por estos crímenes contra la paz del régimen madurista&quot;, añadió.
     </text4>
+    <image>
+        /images/201910/headers/01-lo-importante.jpg
+    </image>
+    <imagePoster>
+        /images/201910/posters/01-lo-importante.jpg
+    </imagePoster>
+    <imageDirectory>
+        /images/201910/01-lo-importante
+    </imageDirectory>
 </newsletter>

@@ -1,40 +1,36 @@
 <article>
     <featured>
+        <pretitle>
+            
+        </pretitle>
+        <title>
+            
+        </title>
+        <text1>
+            
+        </text1>
+        <text2>
+            
+        </text2>
+        <highlightColor>
+            
+        </highlightColor>
         <images>
             /images/201910/headers/08-otras-noticias.jpg
         </images>
-        <pretitle>
-        </pretitle>
-        <title>
-        </title>
-        <text1>
-        </text1>
-        <text2>
-        </text2>
-        <highlightColor>
-        </highlightColor>
     </featured>
     <tags>
-        noticias, home
+        noticias,home
     </tags>
-    <image>
-        /images/201910/headers/08-otras-noticias.jpg
-    </image>
-    <imagePoster>
-        /images/201910/posters/08-otras-noticias.jpg
-    </imagePoster>
-    <color>
-        #ffb3a1
-    </color>
     <title>
         Indígenas toman Quito y ponen en jaque al gobierno de Moreno
     </title>
-    <subtitle>
-    </subtitle>
+    <titlePoster>
+        
+    </titlePoster>
     <description>
+        
     </description>
-    <author>
-    </author>
     <day>
         08
     </day>
@@ -44,8 +40,17 @@
     <year>
         2019
     </year>
+    <color>
+        #ffb3a1
+    </color>
+    <author>
+        
+    </author>
+    <subtitle>
+        
+    </subtitle>
     <text>
-**¿Qué necesitas saber?**
+        **¿Qué necesitas saber?**
 
 Miles de indígenas y campesinos de todo el país siguen llegando este martes a Quito para protestar contra un acechado presidente Lenín Moreno, que tuvo que trasladar la sede del gobierno a Guayaquil.
 
@@ -55,13 +60,13 @@ En su largo trayecto hacia la capital, cubierto a pie y en vehículos, los abor�
 
 Ni el estado de excepción decretado por el gobierno el pasado jueves ni la presencia de los militares en las calles han sido suficientes para sofocar el estallido social que desencadenó el alza de los combustibles.
 
-Los manifestantes, que el lunes intentaron en Quito ocupar el Legislativo y atacaron el edificio de la Contraloría, son acusados por Moreno de avanzar un "intento de golpe de Estado" con la complicidad del presidente venezolano, Nicolás Maduro.
+Los manifestantes, que el lunes intentaron en Quito ocupar el Legislativo y atacaron el edificio de la Contraloría, son acusados por Moreno de avanzar un &quot;intento de golpe de Estado&quot; con la complicidad del presidente venezolano, Nicolás Maduro.
 
 El parque El Arbolito y el vecino complejo de la Casa de la Cultura se convirtieron en un fortín de grupos de protesta, vigilado este martes por personas armadas con palos, verificó en la madrugada un periodista de la AFP.
 
 Los indígenas, que planean realizar su gran protesta el miércoles, tomaron distancia de los incidentes violentos. 
 
-"Los hechos vandálicos que se reportan en la Contraloría y la Asamblea no tienen nada que ver con nuestras bases, no deslegitimarán nuestra agenda de lucha", expresó este martes por Twitter la influyente Confederación de Nacionalidades Indígenas (Conaie).
+&quot;Los hechos vandálicos que se reportan en la Contraloría y la Asamblea no tienen nada que ver con nuestras bases, no deslegitimarán nuestra agenda de lucha&quot;, expresó este martes por Twitter la influyente Confederación de Nacionalidades Indígenas (Conaie).
 
 Ecuador, cuya economía dolarizada enfrenta problemas de iliquidez y un alto endeudamiento, eliminó subsidios a los combustibles más utilizados en el país como parte de un acuerdo con el Fondo Monetario Internacional (FMI) para obtener créditos por 4.209 millones de dólares. Los precios aumentaron en consecuencia hasta 123%.
 
@@ -71,17 +76,17 @@ Moreno, en el poder desde mayo de 2017, desplegó a las Fuerzas Armadas ante las
 
 El lunes las protestas volvieron a aproximarse al Palacio de Carondelet, la ahora desocupada sede del Ejecutivo en el centro colonial de Quito.
 
-En una aparición en televisión, rodeado del alto mando militar, el gobernante de 66 años acusó a Rafael Correa, su antecesor y exaliado que vive en Bélgica, y a Maduro de querer desestabilizar a su gobierno en un proyecto en el que se están "usando" a sectores de aborígenes "aprovechando su movilización, para saquear y destruir a su paso".
+En una aparición en televisión, rodeado del alto mando militar, el gobernante de 66 años acusó a Rafael Correa, su antecesor y exaliado que vive en Bélgica, y a Maduro de querer desestabilizar a su gobierno en un proyecto en el que se están &quot;usando&quot; a sectores de aborígenes &quot;aprovechando su movilización, para saquear y destruir a su paso&quot;.
 
-"El sátrapa de Maduro ha activado junto con Correa su plan de desestabilización", afirmó.
+&quot;El sátrapa de Maduro ha activado junto con Correa su plan de desestabilización&quot;, afirmó.
 
 Moreno y Correa (2007-2017) sostienen una pugna de poder que hundió en la crisis al oficialismo. 
 
-La Conaie afirmó también que "se deslinda de la plataforma golpista del Correismo, nuestra lucha es por la salida del #FMI del Ecuador. NO permitiremos a los que nos criminalizaron por 10 años aprovecharse de nuestra lucha y la del pueblo ecuatoriano. ¡Miserables!".
+La Conaie afirmó también que &quot;se deslinda de la plataforma golpista del Correismo, nuestra lucha es por la salida del #FMI del Ecuador. NO permitiremos a los que nos criminalizaron por 10 años aprovecharse de nuestra lucha y la del pueblo ecuatoriano. ¡Miserables!&quot;.
 
-El opositor venezolano Juan Guaidó, a quien Estados Unidos y las potencias europeas reconocen como mandatario interino de Venezuela, suscribió los señalamientos de Moreno: "Un grupo financiado por los cómplices de Maduro en América, aprovechándose de los más vulnerables, busca acabar con la estabilidad del país" andino, escribió en Twitter.
+El opositor venezolano Juan Guaidó, a quien Estados Unidos y las potencias europeas reconocen como mandatario interino de Venezuela, suscribió los señalamientos de Moreno: &quot;Un grupo financiado por los cómplices de Maduro en América, aprovechándose de los más vulnerables, busca acabar con la estabilidad del país&quot; andino, escribió en Twitter.
 
-El gobierno español llamó este martes a evitar "nuevos hechos violentos" y a buscar una salida negociada en Ecuador.
+El gobierno español llamó este martes a evitar &quot;nuevos hechos violentos&quot; y a buscar una salida negociada en Ecuador.
 
 La ocupación de pozos llevó a la caída de 12% en la producción de crudo (de 531.000 barriles por día), principal producto de exportación, según el ministerio de Energía.
 
@@ -91,6 +96,12 @@ Las fuertes protestas sociales, no vistas desde que Correa asumiera en 2007, dej
 
 Estados Unidos, aliado de Moreno, dijo que sigue de cerca la situación en Ecuador, donde manifestaciones provocaron el derrocamiento de tres gobernantes entre 1997 y 2005.
 
-"Rechazamos la violencia como una forma de protesta política", manifestó por Twitter el subsecretario interino de Estado para Asuntos del Hemisferio Occidental, Michael Kozak.
+&quot;Rechazamos la violencia como una forma de protesta política&quot;, manifestó por Twitter el subsecretario interino de Estado para Asuntos del Hemisferio Occidental, Michael Kozak.
     </text>
+    <image>
+        /images/201910/headers/08-otras-noticias.jpg
+    </image>
+    <imagePoster>
+        /images/201910/posters/08-otras-noticias.jpg
+    </imagePoster>
 </article>

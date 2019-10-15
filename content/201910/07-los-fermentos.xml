@@ -1,8 +1,5 @@
 <article>
     <featured>
-        <images>
-            /images/201910/headers/07-los-fermentos.jpg
-        </images>
         <pretitle>
             GASTRONOMÍA:
         </pretitle>
@@ -18,28 +15,22 @@
         <highlightColor>
             #ff613c
         </highlightColor>
+        <images>
+            /images/201910/headers/07-los-fermentos.jpg
+        </images>
     </featured>
     <tags>
-        ciencia, featured-ciencia, home
+        ciencia,featured-ciencia,home
     </tags>
-    <image>
-        /images/201910/headers/07-los-fermentos.jpg
-    </image>
-    <color>
-        #ffb3a1
-    </color>
     <title>
-        Los fermentos: el experimento gastronómico más antiguo de la humanidad 
+        Los fermentos: el experimento gastronómico más antiguo de la humanidad
     </title>
-    <subtitle>
-        Desde el queso y la cerveza, hasta el yogurt y la kombucha, los productos fermentados que más amamos tienen una cosa en común: microorganismos.
-    </subtitle>
+    <titlePoster>
+        
+    </titlePoster>
     <description>
         Desde el queso y la cerveza, hasta el yogurt y la kombucha, los productos fermentados que más amamos tienen una cosa en común: microorganismos.
     </description>
-    <author>
-        Rodolfo Gutiérrez
-    </author>
     <day>
         07
     </day>
@@ -49,8 +40,17 @@
     <year>
         2019
     </year>
+    <color>
+        #ffb3a1
+    </color>
+    <author>
+        Rodolfo Gutiérrez
+    </author>
+    <subtitle>
+        Desde el queso y la cerveza, hasta el yogurt y la kombucha, los productos fermentados que más amamos tienen una cosa en común: microorganismos.
+    </subtitle>
     <text>
-¿Qué chef - aficionado o profesional - no se ha obsesionado con la fermentación, el proceso increíble detrás de algunos de los productos favoritos de la humanidad? Los fermentos y probióticos han ganado popularidad en los últimos años, y se les han atribuido una serie de beneficios para la salud, aunque pueda parecer contraintuitivo:  **¿cómo es eso de que un alimento tiene millones de bacterias creciendo encima, no sólo sabe bien sino que nos beneficia comerlo?** ¿No es más bien cierto  que las bacterias y los hongos son malos y enferman a la gente? 
+        ¿Qué chef - aficionado o profesional - no se ha obsesionado con la fermentación, el proceso increíble detrás de algunos de los productos favoritos de la humanidad? Los fermentos y probióticos han ganado popularidad en los últimos años, y se les han atribuido una serie de beneficios para la salud, aunque pueda parecer contraintuitivo:  **¿cómo es eso de que un alimento tiene millones de bacterias creciendo encima, no sólo sabe bien sino que nos beneficia comerlo?** ¿No es más bien cierto  que las bacterias y los hongos son malos y enferman a la gente? 
 
 La humanidad ha consumido productos fermentados y con probióticos desde hace mucho: se especula que desde que el ser humano se asentó y comenzó a desarrollar la agricultura, hace unos 10,000 años. Entre los primeros productos que descubrieron nuestros antepasados estuvo el yogurt, el cual se presume surgió cuando los granjeros [transportaban la leche en envases confeccionados con la piel de los estómagos de los animales que pastoreaban](https://journals.lww.com/jcge/FullText/2016/11001/Probiotics_History.3.aspx) - como pueden imaginarse, estaban llenos de bacterias y a temperatura ambiente. Sin saber qué ocurría realmente, veíamos la leche en esa bolsa transformarse en otro alimento.
 
@@ -74,4 +74,7 @@ Para atraer estos buenos “bichitos”, el chef debe de asegurarse de crear el 
 
 Tendremos mucho tiempo de hablar de esto y más en esta columna, donde espero demostrar la intrínseca relación entre la ciencia y la comida. Después de todo, la gastronomía (sus sabores, texturas y procesos) podría fácilmente ser el experimento científico más largo y continuo en el que  se ha embarcado la humanidad.
     </text>
+    <image>
+        /images/201910/headers/07-los-fermentos.jpg
+    </image>
 </article>

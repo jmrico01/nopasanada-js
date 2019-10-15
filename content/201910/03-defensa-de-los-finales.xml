@@ -1,8 +1,5 @@
 <article>
     <featured>
-        <images>
-            /images/201910/headers/03-finales.jpg
-        </images>
         <pretitle>
             CINE &amp; TV:
         </pretitle>
@@ -18,28 +15,22 @@
         <highlightColor>
             #ff613c
         </highlightColor>
+        <images>
+            /images/201910/headers/03-finales.jpg
+        </images>
     </featured>
     <tags>
-        cultura, featured-cultura, home
+        cultura,featured-cultura,home
     </tags>
-    <image>
-        /images/201910/headers/03-finales.jpg
-    </image>
-    <color>
-        #ffb3a1
-    </color>
     <title>
         En defensa de los finales: por qué las franquicias deben terminar
     </title>
-    <subtitle>
-        Hoy en día, Hollywood se resiste a ponerle punto final a sus historias: las franquicias, spin-offs y secuelas se han apoderado del cine. Pero, ¿es una historia verdaderamente una historia si nunca termina?
-    </subtitle>
+    <titlePoster>
+        
+    </titlePoster>
     <description>
         Hoy en día, Hollywood se resiste a ponerle punto final a sus historias: las franquicias, spin-offs y secuelas se han apoderado del cine. Pero, ¿es una historia verdaderamente una historia si nunca termina?
     </description>
-    <author>
-        Marco Golcher
-    </author>
     <day>
         03
     </day>
@@ -49,8 +40,17 @@
     <year>
         2019
     </year>
+    <color>
+        #ffb3a1
+    </color>
+    <author>
+        Marco Golcher
+    </author>
+    <subtitle>
+        Hoy en día, Hollywood se resiste a ponerle punto final a sus historias: las franquicias, spin-offs y secuelas se han apoderado del cine. Pero, ¿es una historia verdaderamente una historia si nunca termina?
+    </subtitle>
     <text>
-En 2015, Netflix estrenó *Stranger Things*, una serie de ciencia ficción sobre un grupo de niños que investigan la desaparición de su amigo, con giros dramáticos y sobrenaturales. Alimentada por la ola de nostalgia de lo 80s que permea gran parte de la producción cultural de los últimos 10 años, *Stranger Things* no pudo haber salido en un mejor momento. Sin embargo, la serie no fue solo un ejercicio de nostalgia vacía; tenía corazón, estaba envuelta en referencias a películas de John Carpenter, pero era fiel a sus personajes, sus arcos narrativos, y nos hizo simpatizar con su inocencia, perdida y amistad.
+        En 2015, Netflix estrenó *Stranger Things*, una serie de ciencia ficción sobre un grupo de niños que investigan la desaparición de su amigo, con giros dramáticos y sobrenaturales. Alimentada por la ola de nostalgia de lo 80s que permea gran parte de la producción cultural de los últimos 10 años, *Stranger Things* no pudo haber salido en un mejor momento. Sin embargo, la serie no fue solo un ejercicio de nostalgia vacía; tenía corazón, estaba envuelta en referencias a películas de John Carpenter, pero era fiel a sus personajes, sus arcos narrativos, y nos hizo simpatizar con su inocencia, perdida y amistad.
  
 Todo esto en una narrativa tallada, concisa y siempre emocionante; verla en una sentada no era muy diferente de ver una película de ocho horas. Para el último capítulo, se puede apreciar el crecimiento, el desarrollo de los personajes; es en esencia  un final concluso, nos deja satisfechos y felices. Eso es claro, hasta que el último minuto del último capítulo, cuando  esa escena gratuita nos golpea con el codo y nos dice “¡... Ey, pero hay más!”
  
@@ -68,4 +68,7 @@ Saber terminar una historia también influye en el  lugar que ocupará dentro de
  
 La bancarrota creativa que afecta al cine popular posiblemente se acabe cuando Hollywood se vea obligado a dejar morir sus franquicias, a terminarlas por el inevitable (y esperado) momento en que el público pierda interés en ideas viejas. **Las grandes productoras se lo deben al cine, el cual a pesar de semejante escasez de originalidad, sigue siendo fundamentalmente un medio artístico.** La historia difícilmente recordará con cariño esta época del cine popular, si es que la recuerda del todo.
     </text>
+    <image>
+        /images/201910/headers/03-finales.jpg
+    </image>
 </article>

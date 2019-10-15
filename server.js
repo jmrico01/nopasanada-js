@@ -323,7 +323,10 @@ async function LoadAllEntryMetadata(templates)
             }
 
             let imagePoster = entryData.hasOwnProperty("imagePoster") ? entryData.imagePoster : entryData.image;
-            let titlePoster = entryData.hasOwnProperty("titlePoster") ? entryData.titlePoster : entryData.title;
+            let titlePoster = entryData.title;
+            if (entryData.hasOwnProperty("titlePoster") && entryData.titlePoster.trim() !== "") {
+                titlePoster = entryData.titlePoster;
+            }
             let dayPoster = entryData.day;
             while (dayPoster.length < 2) {
                 dayPoster = "0" + dayPoster;
