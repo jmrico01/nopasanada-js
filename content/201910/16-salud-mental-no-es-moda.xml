@@ -1,26 +1,26 @@
 <article>
     <featured>
         <pretitle>
-            MEDICINA:
+            MODA:
         </pretitle>
         <title>
-            SLEEP&lt;br&gt;&lt;b&gt;PARALYSIS.&lt;/b&gt;
+            SALUD &lt;b&gt;MENTAL.&lt;/b&gt;
         </title>
         <text1>
-            ¿QUÉ SE SABE SOBRE LA PARÁLISIS DEL SUEÑO, Y CÓMO SE PUEDE EVITAR?
+            EL MENSAJE DE UNA MODELO A LOS DISEÑADORES DE GUCCI.
         </text1>
         <text2>
-            POR DIANA GONZÁLEZ
+            POR PAULINA JOARISTI
         </text2>
         <highlightColor>
             #ff613c
         </highlightColor>
         <images>
-            /images/201910/headers/15-sleep-paralysis.jpg
+            /images/201910/headers/16-salud-mental-moda.jpg
         </images>
     </featured>
     <tags>
-        ciencia,featured-ciencia,home
+        cultura,featured-cultura,featured-home
     </tags>
     <title>
         Sleep paralysis: cuando irse a dormir es aterrador
@@ -75,6 +75,9 @@ Precisamente, ese fue mi caso: lo controlé no entrando en pánico, sin luchar p
 ***¿Tienen una historia relacionada con parálisis del sueño? En NPN siempre estamos buscando nuevos colaboradores. ¡Queremos escucharla, y tal vez publicarla en nuestra plataforma! Recibimos drafts al correo [info@nopasanada.com](mailto:info@nopasanada.com), con el asunto “sleep paralysis.”***
     </text>
     <image>
-        /images/201910/headers/15-sleep-paralysis.jpg
+        /images/201910/headers/16-salud-mental-moda.jpg
     </image>
+    <imagePoster>
+        /images/201910/posters/16-salud-mental-moda.jpg
+    </imagePoster>
 </article>
