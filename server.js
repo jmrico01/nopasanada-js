@@ -1,4 +1,5 @@
 const assert = require("assert");
+const { exec } = require("child_process");
 const express = require("express");
 const fs = require("fs");
 const http = require("http");
@@ -582,6 +583,36 @@ if (serverSettings.isDev) {
         res.status(200).send(entryData);
     });
 
+    appDev.get("/diff", checkAuthNoRedirect, async function(req, res) {
+        exec("git diff --name-status", (err, stdout, stderr) => {
+            if (err) {
+                console.error("Error when running git diff: " + stderr);
+                res.status(500).end();
+                return;
+            }
+
+            let diffFiles = [];
+            let stdoutLines = stdout.split("\n");
+            for (let i = 0; i < stdoutLines.length; i++) {
+                let stdoutLine = stdoutLines[i].trim();
+                if (stdoutLine === "") {
+                    continue;
+                }
+                let pair = stdoutLine.split(/\s+/);
+                if (pair.length !== 2) {
+                    console.error("Diff pair not length 2");
+                    res.status(500).end();
+                    continue;
+                }
+                diffFiles.push({
+                    file: pair[1],
+                    flag: pair[0]
+                });
+            }
+            res.status(200).send(diffFiles);
+        });
+    });
+
     appDev.post("/content/*/*", checkAuthNoRedirect, async function(req, res) {
         let requestPath = req.path;
         if (requestPath[requestPath.length - 1] === "/") {
@@ -597,6 +628,10 @@ if (serverSettings.isDev) {
         catch (e) {
             res.status(500).end();
         }
+        res.end();
+    });
+
+    appDev.post("/commit", checkAuthNoRedirect, async function(req, res) {
         res.end();
     });
 

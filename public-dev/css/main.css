@@ -46,3 +46,30 @@ td {
 #entryTable {
     width: 100%;
 }
+
+.bigBoyButton {
+    width: 160pt;
+    height: 42pt;
+    margin-top: 24pt;
+
+    font-size: 36pt;
+    font-weight: bold;
+    text-align: center;
+}
+.bigBoyButton:hover {
+    cursor: pointer;
+}
+
+#commitButton {
+    background-color: #f88;
+}
+#commitButton:hover {
+    background-color: #f55;
+}
+
+#diffButton {
+    background-color: #8f8;
+}
+#diffButton:hover {
+    background-color: #5f5;
+}

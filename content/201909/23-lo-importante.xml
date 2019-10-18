@@ -1,8 +1,5 @@
 <newsletter>
     <featured>
-        <images>
-            /images/201909/headers/23-lo-importante.jpg
-        </images>
         <pretitle>
             NOTICIAS:
         </pretitle>
@@ -10,7 +7,7 @@
             LO IMPORTANTE&lt;br&gt;&lt;b&gt;23-09-19. *&lt;/b&gt;
         </title>
         <text1>
-            4 HISTORIAS IMPORTANTES DE LAS M&Aacute;S RECIENTES NOTICIAS INTERNACIONALES.
+            4 HISTORIAS IMPORTANTES DE LAS MÁS RECIENTES NOTICIAS INTERNACIONALES.
         </text1>
         <text2>
             CURADAS POR&lt;br&gt;NO PASA NADA
@@ -18,25 +15,19 @@
         <highlightColor>
             #ff613c
         </highlightColor>
+        <images>
+            /images/201909/headers/23-lo-importante.jpg
+        </images>
     </featured>
     <tags>
         noticias
     </tags>
-    <image>
-        /images/201909/headers/23-lo-importante.jpg
-    </image>
-    <imagePoster>
-        /images/201909/posters/23-lo-importante.jpg
-    </imagePoster>
-    <imageDirectory>
-        /images/201909/23-lo-importante
-    </imageDirectory>
-    <color>
-        #FCC285
-    </color>
     <title>
         Lo Importante: 23-09-19
     </title>
+    <titlePoster>
+        
+    </titlePoster>
     <description>
         4 historias importantes de las más recientes noticias internacionales
     </description>
@@ -44,15 +35,17 @@
         23
     </day>
     <month>
-        9
+        09
     </month>
     <year>
         2019
     </year>
+    <color>
+        #FCC285
+    </color>
     <audioSource>
         https://mx.ivoox.com/en/player_ej_41852276_4_1.html?c1=5e5e5e
     </audioSource>
-
     <title1>
         Corte Suprema del Reino Unido decidirá mañana sobre la suspensión del parlamento
     </title1>
@@ -60,7 +53,7 @@
         AFP
     </author1>
     <text1>
-**¿Qué necesitas saber?**
+        **¿Qué necesitas saber?**
 
 La Corte Suprema del Reino Unido anunciará mañana si considera legal o ilegal la decisión del primer ministro Boris Johnson de suspender las labores del parlamento británico hasta dos semanas antes del Brexit, informó este lunes el tribunal.
 
@@ -78,21 +71,20 @@ El primer ministro conservador, llegó al poder a finales de julio para reemplaz
 
 Sin embargo, de no lograrlo, sigue amenazando con sacar al país brutalmente del bloque. Para impedirlo, el parlamento aprobó de urgencia antes de la suspensión una ley que le obligaría a pedir un nuevo aplazamiento del Brexit a falta de un acuerdo al 19 de octubre.
     </text1>
-
     <title2>
-        Game of Thrones se lleva su último Emmy 
+        Game of Thrones se lleva su último Emmy
     </title2>
     <author2>
         AFP
     </author2>
     <text2>
-**¿Qué necesitas saber?**
+        **¿Qué necesitas saber?**
 
 Game Of Thrones obtuvo el último Emmy de su historia en un triunfo que estaba más que previsto, con todo y el enfado que causó entre muchos fanáticos su final.
 
 La fantasía épica y sanguinaria de HBO sobre familias nobles peleando por el Trono de Hierro se llevó 10 premios en las categorías técnicas, entregadas el fin de semana pasado, y para Peter Dinklage como mejor actor de reparto por su papel del locuaz e inteligente Tyrion Lannister.
 
-"GOT" ya había ganado 12 estatuillas, un récord para un programa dramático en una misma edición, en otras dos oportunidades. En total ganó 59 en ocho temporadas.
+&quot;GOT&quot; ya había ganado 12 estatuillas, un récord para un programa dramático en una misma edición, en otras dos oportunidades. En total ganó 59 en ocho temporadas.
 
 **¿Por qué te interesa?**
 
@@ -102,7 +94,6 @@ De ese total de espectadores, 10.1 millones vieron la serie a través de la señ
 
 La serie fue creada por David Benioff, D.B. Weiss a partir de la saga de libros A Song of Ice and Fire, escrita por George R.R. Martin.
     </text2>
-
     <title3>
         Trump confirma que habló de Biden con su par ucraniano
     </title3>
@@ -110,7 +101,7 @@ La serie fue creada por David Benioff, D.B. Weiss a partir de la saga de libros 
         AFP
     </author3>
     <text3>
-**¿Qué necesitas saber?**
+        **¿Qué necesitas saber?**
 
 El presidente de Estados Unidos, Donald Trump, confirmó el domingo que habló sobre el exvicepresidente Joe Biden y las acusaciones de corrupción en una llamada telefónica con el líder de Ucrania, en momentos en que la oposición pide su destitución.
 
@@ -120,13 +111,12 @@ Trump confirmó que en la conversación, llevada a cabo en julio, había abordad
 
 The Wall Street Journal informó que durante la llamada, Trump presionó a Zelensky unas ocho veces para que investigara el posible caso de corrupción que involucraba a Hunter, quien trabajó con una compañía ucraniana de gas natural mientras su padre era vicepresidente.
 
-Biden le dijo a periodistas el domingo que las acciones de Trump parecían "ser un abrumador abuso de poder". 
+Biden le dijo a periodistas el domingo que las acciones de Trump parecían &quot;ser un abrumador abuso de poder&quot;. 
 
 El Partido Demócrata se ha mostrado dividido sobre si presionar para un proceso de juicio político contra Trump desde que llegó al poder en 2017.
 
-Los candidatos presidenciales demócratas Elizabeth Warren y Beto O'Rourke han pedido la destitución de Trump.
+Los candidatos presidenciales demócratas Elizabeth Warren y Beto O&apos;Rourke han pedido la destitución de Trump.
     </text3>
-
     <title4>
         ONU celebra su Asamblea General esta semana
     </title4>
@@ -134,7 +124,7 @@ Los candidatos presidenciales demócratas Elizabeth Warren y Beto O'Rourke han p
         AFP
     </author4>
     <text4>
-**¿Qué necesitas saber?**
+        **¿Qué necesitas saber?**
 En los próximos días, como todos los años, reyes, presidentes y primeros ministros se darán cita en Nueva York para acudir a la sede de las Naciones Unidas, donde se celebrará la Asamblea General. 
 Uno de los asistentes que genera más interés es Donald Trump quien promete participar con un su típico estilo provocador, pero según analistas no podrá presumir de algún avance importante en la política exterior de los Estados Unidos.
 **¿Por qué te interesa?**
@@ -173,6 +163,15 @@ Dos pequeños países, Bután y Surinam, ya tienen una huella de carbono cero y,
 
 Otros cuatro países han consagrado el objetivo de la neutralidad de carbono en su legislación nacional: Noruega (2030), Suecia (2045), el Reino Unido y Francia para 2050 (la votación final en el Senado francés prevista a finales de septiembre).
 
-Catorce naciones, así como la Unión Europea, se encuentran en diversas etapas legislativas: Chile, Nueva Zelanda, siete países europeos, Fiji, las Islas Marshall, Uruguay, Costa Rica e Islandia, según la Unidad de Inteligencia Energética y Climática. 
+Catorce naciones, así como la Unión Europea, se encuentran en diversas etapas legislativas: Chile, Nueva Zelanda, siete países europeos, Fiji, las Islas Marshall, Uruguay, Costa Rica e Islandia, según la Unidad de Inteligencia Energética y Climática.
     </text4>
+    <image>
+        /images/201909/headers/23-lo-importante.jpg
+    </image>
+    <imagePoster>
+        /images/201909/posters/23-lo-importante.jpg
+    </imagePoster>
+    <imageDirectory>
+        /images/201909/23-lo-importante
+    </imageDirectory>
 </newsletter>

@@ -45,4 +45,10 @@ $(document).ready(function() {
 
         $("#entryTable").html(tableHtml);
     });
+
+    $("#diffButton").click(function() {
+        $.get("/diff", function(data) {
+            console.log(data);
+        });
+    });
 });
