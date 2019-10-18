@@ -40,7 +40,7 @@ $(document).ready(function() {
                 tableHtml += FormatTableFieldValue(tableFields[j], data[i]);
                 tableHtml += "</td>\n";
             }
-            tableHtml += "</tr>\n";
+            tableHtml += "</tr>\n\n";
         }
 
         $("#entryTable").html(tableHtml);
@@ -48,6 +48,16 @@ $(document).ready(function() {
 
     $("#diffButton").click(function() {
         $.get("/diff", function(data) {
+            let string = "DIFF\n\n";
+            for (let i = 0; i < data.length; i++) {
+                string += data[i].flag + " " + data[i].file + "\n";
+            }
+            alert(string);
+        });
+    });
+
+    $("#commitButton").click(function() {
+        $.post("/commit", function(data) {
             console.log(data);
         });
     });

@@ -632,7 +632,34 @@ if (serverSettings.isDev) {
     });
 
     appDev.post("/commit", checkAuthNoRedirect, async function(req, res) {
-        res.end();
+        exec("git add -A", function(err, stdout, stderr) {
+            if (err) {
+                console.error("git back-end add failed: " + stderr);
+                res.status(500).end();
+                return;
+            }
+
+            let date = Date(Date.now());
+            let commitMessage = "backend-" + date.toString();
+            exec("git commit -m \"" + commitMessage + "\"", function(err, stdout, stderr) {
+                if (err) {
+                    console.error("git back-end commit failed: " + stderr);
+                    res.status(500).end();
+                    return;
+                }
+
+                exec("git push", function(err, stdout, stderr) {
+                    if (err) {
+                        console.error("git back-end push failed: " + stderr);
+                        res.status(500).end();
+                        return;
+                    }
+
+                    console.log("added, commited, and pushed " + commitMessage);
+                    res.end();
+                });
+            });
+        });
     });
 
     appDev.get("/", checkAuthRedirect);

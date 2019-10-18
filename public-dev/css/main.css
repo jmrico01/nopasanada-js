@@ -48,7 +48,7 @@ td {
 }
 
 .bigBoyButton {
-    width: 160pt;
+    width: 180pt;
     height: 42pt;
     margin-top: 24pt;
 
@@ -60,16 +60,23 @@ td {
     cursor: pointer;
 }
 
-#commitButton {
-    background-color: #f88;
-}
-#commitButton:hover {
-    background-color: #f55;
-}
-
 #diffButton {
     background-color: #8f8;
 }
 #diffButton:hover {
     background-color: #5f5;
+}
+
+#commitButton {
+    background-color: #ff8;
+}
+#commitButton:hover {
+    background-color: #ee2;
+}
+
+#deployButton {
+    background-color: #f88;
+}
+#deployButton:hover {
+    background-color: #f55;
 }
