@@ -640,7 +640,7 @@ if (serverSettings.isDev) {
             }
 
             let date = Date(Date.now());
-            let commitMessage = "backend-" + date.toString();
+            let commitMessage = "backend : " + date.toString();
             exec("git commit -m \"" + commitMessage + "\"", function(err, stdout, stderr) {
                 if (err) {
                     console.error("git back-end commit failed: " + stderr);
