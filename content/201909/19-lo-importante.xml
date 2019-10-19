@@ -19,11 +19,11 @@
 			#ff613c
 		</highlightColor>
 	</featured>
-	<passes>
-		<images>
+	<media>
+		<image type="image">
 			/images/201909/19-lo-importante/img.jpg
-		</images>
-	</passes>
+		</image>
+	</media>
 	<tags>
 		noticias
 	</tags>
@@ -100,7 +100,7 @@ El equipo espera ahora el regreso de Neymar, sancionado tres partidos en Champio
 		AFP
 	</author2>
 	<text2>
-{{{ images0 }}}
+{{{ image }}}
 
 &lt;div class="articleCaption"&gt;TIME MAGAZINE&lt;br&gt;Esta foto muestra a Justin Trudeau con maquillaje de cara morena durante una fiesta de las "Noches árabes" en Vancouver en 2001.&lt;/div&gt;
 

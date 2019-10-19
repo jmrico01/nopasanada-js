@@ -14,18 +14,32 @@
 		<highlightColor>
 		</highlightColor>
 	</featured>
-	<passes>
-		<images>
-			/images/201908/article-28/1.jpg,
-			/images/201908/article-28/2.jpg,
-			/images/201908/article-28/3.jpg,
-			/images/201908/article-28/4.jpg,
-			/images/201908/article-28/5.jpg,
-			/images/201908/article-28/6.jpg,
-			/images/201908/article-28/7.jpg,
+	<media>
+		<image1 type="image">
+			/images/201908/article-28/1.jpg
+		</image1>
+		<image2 type="image">
+			/images/201908/article-28/2.jpg
+		</image2>
+		<image3 type="image">
+			/images/201908/article-28/3.jpg
+		</image3>
+		<image4 type="image">
+			/images/201908/article-28/4.jpg
+		</image4>
+		<image5 type="image">
+			/images/201908/article-28/5.jpg
+		</image5>
+		<image6 type="image">
+			/images/201908/article-28/6.jpg
+		</image6>
+		<image7 type="image">
+			/images/201908/article-28/7.jpg
+		</image7>
+		<image8 type="image">
 			/images/201908/article-28/8.jpg
-		</images>
-	</passes>
+		</image8>
+	</media>
 	<tags>
 		cultura
 	</tags>
@@ -67,25 +81,25 @@ Visitamos este espacio que existe en diferentes ubicaciones de Costa Rica desde 
 
 Se nos vino a la mente derretir un poco de mantequilla, picarle bastante ajo y untarlo en una tostada. Compramos dos trenzas por mil colones. Usualmente son más caros, pero como ya se acercaba el final de la feria, nos hicieron un precio especial. Pueden considerar ir más tarde si quieren obtener mejores precios en algunos productos, aunque posiblemente los mejores se hayan vendido más temprano.
 
-{{{ images0 }}}
+{{{ image1 }}}
 
 **Chiles**
 
 Nos volvimos locos con un  puesto en el que vendían una gran variedad de chiles, entre ellos **rocoto, ají peruano, cayena, jalapeño, y habanero** (también conocido como chile panameño). ¿Una buena combinación de chiles en abundante cantidad por **menos de mil colones?** ¿En cuál supermercado se encuentra eso?
 
-{{{ images1 }}}
+{{{ image2 }}}
 
 Inmediatamente dijimos: ¡qué ganas de llegar a la casa a armar una chilera!
 
 Y efectivamente, eso fue lo que hicimos: los chiles variados que compramos estarán fermentándose en un frasco de vidrio por un mínimo dos semanas; esto nos ayudará a obtener la mayor cantidad de sabor posible.
 
-{{{ images2 }}}
+{{{ image3 }}}
 
 **Chile Dulce**
 
 El chile dulce es un clásico de la gastronomía tica. No es solamente un “olor”; en realidad, es un ingrediente muy versátil que se puede preparar de mil maneras - ¡no se vale decir que no les gusta! ¿Qué tal un chile relleno con queso al horno?
 
-{{{ images3 }}}
+{{{ image4 }}}
 
 **Hongos y espárragos**
 
@@ -93,7 +107,7 @@ Si existen dos ingredientes que vale la pena comprar en la feria, son precisamen
 
 Consejo gratis: Piquen tocineta y la ponen en un sartén caliente, agreguen espárragos enteros y hongos en rodajas. Añadan sal y pimienta, y cocinen por 5 minutos ¡Wow! Excelente acompañamiento gourmet para cualquier proteína; perfecto como un plato en sí mismo.
 
-{{{ images4 }}}
+{{{ image5 }}}
 
 **Cebollas**
 
@@ -101,7 +115,7 @@ La cebolla nunca puede faltar en la cocina. Es tan versátil que ni sabemos por 
 
 Con la cebolla que compramos planeamos hacer un encurtido súper fácil: a una cebolla morada cortada en julianas, se mete en un frasco y se le agrega un toque de vinagre y limón. Dura días en la refri y es perfecto para darle vida y alegría a cualquier ensalada.
 
-{{{ images5 }}}
+{{{ image6 }}}
 
 **Hierbas**
 
@@ -109,7 +123,7 @@ Todavía me acuerdo de la vez que mi mamá me mandó por culantro y yo de burro 
 
 Pro tip: No descarten los tallos del culantro (o de cualquier otra hierba); ahí está  la mayoría del sabor y la textura crujiente hace más entretenidas las ensaladas, los picos de gallo y el guacamole.
 
-{{{ images6 }}}
+{{{ image7 }}}
 
 **Coco (pipa)**
 
@@ -117,6 +131,6 @@ El día se estaba poniendo muy caliente. Aunque admito que dolió un poco ver la
 
 Con cero colones restantes y sin la prisa de tener que comprar, disfrutamos un rato del día y del ambiente, antes de irnos a la casa a hacer inventos con las verduras que compramos.
 
-{{{ images7 }}}
+{{{ image8 }}}
 	</text>
 </article>
