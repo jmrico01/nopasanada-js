@@ -275,15 +275,8 @@ $(document).ready(function() {
     imageRowTemplate_ = $("#imagesListRowTemplate").html();
     $("#imagesListRowTemplate").remove();
 
-    let sizeAttr = $("input").attr("size");
-    if (typeof(sizeAttr) !== typeof(undefined) && sizeAttr !== false) {
-        $("input").attr("size", "100");
-    }
-    $(".taSmall").attr("cols", "100");
     $(".taSmall").attr("rows", "8");
-    $(".taMedium").attr("cols", "100");
     $(".taMedium").attr("rows", "50");
-    $(".taLarge").attr("cols", "100");
     $(".taLarge").attr("rows", "100");
 
     $.ajax({

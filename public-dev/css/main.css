@@ -48,11 +48,11 @@ td {
 }
 
 .bigBoyButton {
-    width: 180pt;
-    height: 42pt;
-    margin-top: 24pt;
+    display: inline-block;
+    padding: 8pt 12pt;
+    border-radius: 5pt;
 
-    font-size: 36pt;
+    font-size: 24pt;
     font-weight: bold;
     text-align: center;
 }

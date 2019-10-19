@@ -1,37 +1,83 @@
-#saveButton {
-    width: 160pt;
-    height: 42pt;
-    margin-top: 36pt;
+a {
+    color: inherit;
+    font-weight: inherit;
+    text-decoration: inherit;
+}
+a:hover {
+    color: inherit;
+    font-weight: inherit;
+    text-decoration: inherit;
+}
 
-    font-size: 36pt;
-    font-weight: bold;
-    text-align: center;
+#header {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    padding: 24pt;
+    height: 50pt;
+    z-index: 1;
+
+    background-color: #aaa;
+}
+
+#backButton {
+    float: left;
+
     background-color: #ccf;
 }
-#saveButton:hover {
+#backButton:hover {
     background-color: #99f;
-    cursor: pointer;
+}
+
+#saveButton {
+    float: left;
+    margin-left: 20pt;
+
+    background-color: #ff8;
+}
+#saveButton:hover {
+    background-color: #ee2;
+}
+
+#statusMessage {
+    float: right;
+}
+
+#content {
+    margin-top: 120pt; /* at least #header height + 2*padding-top */
+}
+
+.section {
+    margin-top: 20pt;
+    margin-bottom: 20pt;
+    padding: 20pt;
+    border-radius: 10pt;
+    background-color: #eee;
+}
+
+input[type=text], textarea, select {
+    padding: 8pt 12pt;
+    margin: 8pt 0;
+    display: inline-block;
+    border: 2pt solid #ccc;
+    border-radius: 5pt;
+    box-sizing: border-box;
+
+    font-family: sans-serif;
+    font-size: 12pt;
+    font-weight: normal;
+    text-align: left;
+}
+input[type=text], textarea {
+    width: 100%;
+}
+select {
+    width: auto;
 }
 
 #imagesListAdd {
 	height: 100pt;
-	margin-top: 20pt;
-	margin-bottom: 20pt;
-	padding: 20pt;
-	padding-bottom: 20pt;
-
-	background-color: #ddd;
-}
-
-#rowAddButton, .rowEditButton, .rowDeleteButton {
-	position: absolute;
-	left: 0;
-    width: 72pt;
-    height: 24pt;
-    padding-top: 8pt;
-
-    font-size: 14pt;
-    text-align: center;
 }
 
 #rowAddButton {
@@ -42,18 +88,21 @@
     background-color: #2f2;
 }
 
-#statusMessage {
-    color: #666;
+input[type=file] {
+    font-family: sans-serif;
+    font-size: 12pt;
+    font-weight: normal;
+    text-align: left;
 }
 
 .imagesListRow {
-	height: 200pt;
-	margin-top: 20pt;
-	margin-bottom: 20pt;
-	padding: 20pt;
-	padding-bottom: 20pt;
+    overflow: hidden;
+}
 
-	background-color: #ddd;
+.imagesListRow hr {
+    width: 100%;
+    margin-top: 20pt;
+    margin-bottom: 20pt;
 }
 
 .rowInfo {
@@ -64,7 +113,6 @@
 }
 
 .rowEditButton {
-	top: 0;
     background-color: #ff8;
 }
 .rowEditButton:hover {
@@ -72,7 +120,8 @@
     background-color: #ee2;
 }
 .rowDeleteButton {
-	bottom: 0;
+    margin-left: 20pt;
+
     background-color: #f88;
 }
 .rowDeleteButton:hover {
@@ -92,5 +141,5 @@
 	height: 100%;
 }
 .rowImage img {
-	height: 100%;
+	width: 100%;
 }
