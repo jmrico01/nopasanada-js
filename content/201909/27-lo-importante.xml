@@ -1,8 +1,5 @@
 <newsletter>
     <featured>
-        <images>
-            /images/201909/headers/27-lo-importante.jpg
-        </images>
         <pretitle>
             NOTICIAS:
         </pretitle>
@@ -10,7 +7,7 @@
             LO IMPORTANTE&lt;br&gt;&lt;b&gt;27-09-19. *&lt;/b&gt;
         </title>
         <text1>
-            4 HISTORIAS IMPORTANTES DE LAS M&Aacute;S RECIENTES NOTICIAS INTERNACIONALES.
+            4 HISTORIAS IMPORTANTES DE LAS MÁS RECIENTES NOTICIAS INTERNACIONALES.
         </text1>
         <text2>
             CURADAS POR&lt;br&gt;NO PASA NADA
@@ -18,25 +15,19 @@
         <highlightColor>
             #ff613c
         </highlightColor>
+        <images>
+            /images/201909/headers/27-lo-importante.jpg
+        </images>
     </featured>
     <tags>
         noticias
     </tags>
-    <image>
-        /images/201909/headers/27-lo-importante.jpg
-    </image>
-    <imagePoster>
-        /images/201909/posters/27-lo-importante.jpg
-    </imagePoster>
-    <imageDirectory>
-        /images/201909/27-lo-importante
-    </imageDirectory>
-    <color>
-        #FCC285
-    </color>
     <title>
         Lo Importante: 27-09-19
     </title>
+    <titlePoster>
+        
+    </titlePoster>
     <description>
         4 historias importantes de las más recientes noticias internacionales
     </description>
@@ -44,46 +35,48 @@
         27
     </day>
     <month>
-        9
+        09
     </month>
     <year>
         2019
     </year>
+    <color>
+        #FCC285
+    </color>
     <audioSource>
+        
     </audioSource>
-
     <title1>
-        Trump "no nos dio otra opción" que lanzar juicio político, dice Pelosi
+        Trump &quot;no nos dio otra opción&quot; que lanzar juicio político, dice Pelosi
     </title1>
     <author1>
         AFP
     </author1>
     <text1>
-**¿Qué necesitas saber?**
+        **¿Qué necesitas saber?**
 
-Los demócratas no tuvieron "otra opción" que lanzar una investigación de juicio político contra Donald Trump, dijo el viernes la presidenta de la Cámara de Representantes, Nancy Pelosi, subrayando que el presidente de Estados Unidos puso en peligro la seguridad nacional al solicitar a Ucrania que investigue a su rival político Joe Biden.
+Los demócratas no tuvieron &quot;otra opción&quot; que lanzar una investigación de juicio político contra Donald Trump, dijo el viernes la presidenta de la Cámara de Representantes, Nancy Pelosi, subrayando que el presidente de Estados Unidos puso en peligro la seguridad nacional al solicitar a Ucrania que investigue a su rival político Joe Biden.
 
 A principios de semana, Pelosi lanzó formalmente la investigación para iniciar un proceso de juicio político en medio de una confrontación entre el Congreso y la Casa Blanca por un informe de un denunciante en relación a la explosiva llamada del 25 de julio entre Trump y el nuevo presidente de Ucrania Volodimir Zelenski.
 
-Los congresistas demócratas "tomaron sus propias decisiones a su debido tiempo sobre esto. Pero al tratarse de un tema de seguridad tan convincente, simplemente [Trump] no nos dio otra opción", dijo la presidenta de la Cámara en una entrevista con la cadena MSNBC.
+Los congresistas demócratas &quot;tomaron sus propias decisiones a su debido tiempo sobre esto. Pero al tratarse de un tema de seguridad tan convincente, simplemente [Trump] no nos dio otra opción&quot;, dijo la presidenta de la Cámara en una entrevista con la cadena MSNBC.
 
 **¿Por qué nos importa?**
 
-El denunciante, un integrante de los servicios de inteligencia que dice que habló con al menos seis funcionarios del gobierno estadounidense, concluyó que Trump estaba "usando el poder de su cargo para solicitar la injerencia de un país extranjero en la elección estadounidense de 2020", según el informe, que fue divulgado el jueves.
+El denunciante, un integrante de los servicios de inteligencia que dice que habló con al menos seis funcionarios del gobierno estadounidense, concluyó que Trump estaba &quot;usando el poder de su cargo para solicitar la injerencia de un país extranjero en la elección estadounidense de 2020&quot;, según el informe, que fue divulgado el jueves.
 
 Trump reconoce que instó a Ucrania a lanzar una investigación anticorrupción contra Biden, uno de los principales candidatos en la carrera demócrata, y a su hijo.
 
 Para coordinar con las autoridades ucranianas en la investigación, Trump le dijo a Zelenski que se pusiera en contacto tanto con su abogado personal, Rudy Giuliani, como con el fiscal general Bill Barr, lo que llevó a Pelosi a acusar al jefe del Departamento de Justicia de mala conducta.
 
-"Creo que lo que están haciendo es un encubrimiento del encubrimiento. Y eso es realmente muy triste para ellos", dijo.
+&quot;Creo que lo que están haciendo es un encubrimiento del encubrimiento. Y eso es realmente muy triste para ellos&quot;, dijo.
 
-Trump ha dicho que no ejerció "presión" sobre Kiev, una afirmación que fue respaldada por Zelenski.
+Trump ha dicho que no ejerció &quot;presión&quot; sobre Kiev, una afirmación que fue respaldada por Zelenski.
 
 Pero los críticos aseguran que el presidente retuvo casi 400 millones de dolares en ayuda militar a Ucrania para presionar a su líder.
 
 Hasta el viernes, 223 demócratas -todos menos 12- y un congresista republicano de la Cámara de Representantes de 435 escaños, apoyan una investigación de juicio político, según Politico.
     </text1>
-
     <title2>
         Estados Unidos impone sanciones al cubano Raúl Castro y su familia
     </title2>
@@ -91,11 +84,11 @@ Hasta el viernes, 223 demócratas -todos menos 12- y un congresista republicano 
         AFP
     </author2>
     <text2>
-**¿Qué necesitas saber?**
+        **¿Qué necesitas saber?**
 
 Estados Unidos anunció el jueves sanciones de viaje contra el cubano Raúl Castro y su familia, acusando al expresidente de violaciones a los derechos humanos.
 
-Dentro de su rol en el Partido Comunista, "Raúl Castro supervisa un sistema que detiene arbitrariamente a miles de cubanos y que retiene actualmente a más de 100 presos políticos", dijo el secretario de Estado estadounidense, Mike Pompeo.
+Dentro de su rol en el Partido Comunista, &quot;Raúl Castro supervisa un sistema que detiene arbitrariamente a miles de cubanos y que retiene actualmente a más de 100 presos políticos&quot;, dijo el secretario de Estado estadounidense, Mike Pompeo.
 
 Las sanciones implican que el expresidente, hermano del difunto líder revolucionario Fidel Castro, no podrá para viajar a Estados Unidos.
 
@@ -109,15 +102,14 @@ Ella visitó San Francisco y Nueva York en 2012, provocando una protesta de los 
 
 Pompeo detalló que también se tomó esta decisión debido al apoyo de Raúl Castro al mandatario izquierdista de Venezuela, Nicolás Maduro, cuyo país se encuentra sumergido en una grave crisis económica.
 
-"Estados Unidos apoya firmemente los derechos del pueblo cubano y venezolano", dijo Pompeo en comunicado.
+&quot;Estados Unidos apoya firmemente los derechos del pueblo cubano y venezolano&quot;, dijo Pompeo en comunicado.
 
-"Continuaremos buscando todas las herramientas diplomáticas y económicas para ayudar al pueblo venezolano a lograr la transición que se merece", siguió.
+&quot;Continuaremos buscando todas las herramientas diplomáticas y económicas para ayudar al pueblo venezolano a lograr la transición que se merece&quot;, siguió.
 
 El presidente estadounidense, Donald Trump, ha prometido librar a América Latina del socialismo, una postura que hace eco en muchos exiliados cubanos y venezolanos en Florida, estado políticamente clave para las elecciones de 2020 en las que buscará la reelección.
 
 Sus medidas son un marcado contraste con las del expresidente Barack Obama, quien conoció a Castro en un histórico viaje de 2016 a Cuba mientras buscaba poner fin a décadas de hostilidad entre los dos países.
     </text2>
-
     <title3>
         Una empresa española, sospechosa de haber espiado a Assange para la CIA
     </title3>
@@ -125,7 +117,7 @@ Sus medidas son un marcado contraste con las del expresidente Barack Obama, quie
         AFP
     </author3>
     <text3>
-**¿Qué necesitas saber?**
+        **¿Qué necesitas saber?**
 
 Una empresa de seguridad española que está siendo investigada por la justicia habría espiado a Julian Assange a cuenta de Estados Unidos cuando vivía en la embajada de Ecuador de Londres, afirmó este viernes el diario El País.
 
@@ -133,9 +125,9 @@ Los empleados de Undercover Global S.L., encargada de garantizar la seguridad de
 
 Un juez de la Audiencia Nacional española está investigando el caso, indicó uno de los abogados de Julian Assange. La AFP contactó con el tribunal, pero éste declinó hacer comentarios. 
 
-"Hay una causa penal abierta en la Audiencia Nacional pero sigue en secreto la investigación [...] y no podemos hacer declaraciones sobre lo que se está investigado más allá de lo que se ha filtrado" a la prensa, declaró a la AFP Aitor Martínez, que representa al fundador de Wikileaks. 
+&quot;Hay una causa penal abierta en la Audiencia Nacional pero sigue en secreto la investigación [...] y no podemos hacer declaraciones sobre lo que se está investigado más allá de lo que se ha filtrado&quot; a la prensa, declaró a la AFP Aitor Martínez, que representa al fundador de Wikileaks. 
 
-El material "habrá sido filtrado por trabajadores de la empresa, me imagino", apuntó el abogado. 
+El material &quot;habrá sido filtrado por trabajadores de la empresa, me imagino&quot;, apuntó el abogado. 
 
 **¿Por qué nos importa?**
 
@@ -153,7 +145,6 @@ Tras haber pasado siete años en la embajada ecuatoriana, Assange fue expulsado 
 
 A principios de mayo, fue condenado por un tribunal londinense a 50 semanas de prisión por violar la libertad condicional.
     </text3>
-
     <title4>
         Francia da primer paso para que todas las mujeres tengan reproducción asistida
     </title4>
@@ -161,7 +152,7 @@ A principios de mayo, fue condenado por un tribunal londinense a 50 semanas de p
         AFP
     </author4>
     <text4>
-**¿Qué necesitas saber?**
+        **¿Qué necesitas saber?**
 
 La Asamblea Nacional francesa aprobó este viernes la ampliación del tratamiento de reproducción asistida a todas las mujeres, incluidas solteras y lesbianas, con los votos del partido de gobierno y la izquierda, pese a la oposición de la derecha.
 
@@ -189,17 +180,17 @@ El derecho a la reproducción asistida para todas las mujeres era una promesa de
 
 Sin embargo, gran parte de los diputados de Los Republicanos (derecha) y de Agrupamiento Nacional (ultraderecha) rechazan el proyecto. 
 
-Hay quien teme que la ampliación de la cobertura de la reproducción asistida tenga un "efecto dominó" y que desemboque en la legislación de la gestación subrogada, prohibida en la actualidad. 
+Hay quien teme que la ampliación de la cobertura de la reproducción asistida tenga un &quot;efecto dominó&quot; y que desemboque en la legislación de la gestación subrogada, prohibida en la actualidad. 
 
-Cerca de 20 grupos conservadores convocaron una manifestación en París el 6 de octubre contra el proyecto de ley, al que acusan de "privar a los niños de sus padres".
+Cerca de 20 grupos conservadores convocaron una manifestación en París el 6 de octubre contra el proyecto de ley, al que acusan de &quot;privar a los niños de sus padres&quot;.
 
 **Conocer la identidad del donante**
 
-El diario Le Figaro (conservador) escribió en un editorial el lunes que la reforma "amenaza los fundamentos de nuestra humanidad", mientras que la prestigiosa Academia de Medicina francesa manifestó su preocupación por el potencial impacto psicológico que el proyecto pueda tener en los niños. 
+El diario Le Figaro (conservador) escribió en un editorial el lunes que la reforma &quot;amenaza los fundamentos de nuestra humanidad&quot;, mientras que la prestigiosa Academia de Medicina francesa manifestó su preocupación por el potencial impacto psicológico que el proyecto pueda tener en los niños. 
 
-Los diputados tienen libertad de voto, y las divisiones han aparecido "no entre los grupos, sino a nivel individual", según la ministra de Salud, Agnès Buzyn. 
+Los diputados tienen libertad de voto, y las divisiones han aparecido &quot;no entre los grupos, sino a nivel individual&quot;, según la ministra de Salud, Agnès Buzyn. 
 
-Buzyn afirmó a la AFP que no pretende "escandalizar" a los parlamentarios ni tampoco a la sociedad francesa a través de ellos, frente a las "emociones" vinculadas con las "historias de vida". 
+Buzyn afirmó a la AFP que no pretende &quot;escandalizar&quot; a los parlamentarios ni tampoco a la sociedad francesa a través de ellos, frente a las &quot;emociones&quot; vinculadas con las &quot;historias de vida&quot;. 
 
 El proyecto prevé que el sistema de salud público cubra los costes del procedimiento para todas las mujeres menores de 43 años. 
 
@@ -209,4 +200,13 @@ La reproducción asistida está autorizada a mujeres lesbianas y mujeres soltera
 
 Siete la autorizan a las solteras pero no a las parejas de lesbianas: Estonia, Letonia, Hungría, Croacia, Bulgaria, Grecia y Chipre. Austria y Malta, en cambio, la permiten para las parejas de lesbianas, pero no para las mujeres solteras.
     </text4>
+    <image>
+        /images/201909/headers/27-lo-importante.jpg
+    </image>
+    <imagePoster>
+        /images/201909/posters/27-lo-importante.jpg
+    </imagePoster>
+    <imageDirectory>
+        /images/201909/27-lo-importante
+    </imageDirectory>
 </newsletter>

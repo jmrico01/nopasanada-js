@@ -1,51 +1,56 @@
 <article>
-	<featured>
-		<images>
-			/images/201909/headers/alimentos.jpg
-		</images>
-		<pretitle>
-		</pretitle>
-		<title>
-		</title>
-		<text1>
-		</text1>
-		<text2>
-		</text2>
-		<highlightColor>
-		</highlightColor>
-	</featured>
-	<tags>
-		ciencia
-	</tags>
-	<image>
-		/images/201909/headers/alimentos.jpg
-	</image>
-	<color>
-		#ffb3a1
-	</color>
-	<title>
-		Estamos deforestando para producir alimentos que terminan en el basurero
-	</title>
-	<subtitle>
-		1.4 billones de hectáreas de tierra son utilizadas para producir comida que nunca va a ser consumida. En No pasa Nada preparamos algunos consejos para mitigar el problema desde el ámbito personal.
-	</subtitle>
-	<description>
-		1.4 billones de hectáreas de tierra son utilizadas para producir comida que nunca va a ser consumida. En No pasa Nada preparamos algunos consejos para mitigar el problema desde el ámbito personal.
-	</description>
-	<author>
-		Sebasti&aacute;n Cruz
-	</author>
-	<day>
-		5
-	</day>
-	<month>
-		9
-	</month>
-	<year>
-		2019
-	</year>
-	<text>
-Según [estudios](https://news.un.org/es/story/2018/11/1445131) de la Organización de las Naciones Unidas para la Alimentación y la Agricultura, un tercio de toda la comida producida en el mundo se desperdicia.. Impactante ¿No? 
+    <featured>
+        <pretitle>
+            
+        </pretitle>
+        <title>
+            
+        </title>
+        <text1>
+            
+        </text1>
+        <text2>
+            
+        </text2>
+        <highlightColor>
+            
+        </highlightColor>
+        <images>
+            /images/201909/headers/alimentos.jpg
+        </images>
+    </featured>
+    <tags>
+        ciencia
+    </tags>
+    <title>
+        Estamos deforestando para producir alimentos que terminan en el basurero
+    </title>
+    <titlePoster>
+        
+    </titlePoster>
+    <description>
+        1.4 billones de hectáreas de tierra son utilizadas para producir comida que nunca va a ser consumida. En No pasa Nada preparamos algunos consejos para mitigar el problema desde el ámbito personal.
+    </description>
+    <day>
+        05
+    </day>
+    <month>
+        09
+    </month>
+    <year>
+        2019
+    </year>
+    <color>
+        #ffb3a1
+    </color>
+    <author>
+        Sebastián Cruz
+    </author>
+    <subtitle>
+        1.4 billones de hectáreas de tierra son utilizadas para producir comida que nunca va a ser consumida. En No pasa Nada preparamos algunos consejos para mitigar el problema desde el ámbito personal.
+    </subtitle>
+    <text>
+        Según [estudios](https://news.un.org/es/story/2018/11/1445131) de la Organización de las Naciones Unidas para la Alimentación y la Agricultura, un tercio de toda la comida producida en el mundo se desperdicia.. Impactante ¿No? 
  
 El mismo estudio indica que **un cuarto de la carne producida a nivel mundial, y casi la mitad de los productos vegetales nunca son consumidos.** Esto es aún más indignante cuando se consideran los altos niveles de deforestación necesarios para destinar tierras a cultivos y  ganadería.
 
@@ -73,5 +78,8 @@ Cuando consumimos proteínas animales, usualmente escogemos de entre un selecto 
 
 Con pequeños cambios en nuestra manera de hacer las cosas, acostumbramos a la mente a no desperdiciar. Por ejemplo, no hacer las compras con hambre nos puede evitar comprar antojos que no serán esenciales cuando ya estemos bien comidos en la casa. Muchos de estos antojos se quedan meses en las despensas antes de pasar a la basura; planear las comidas semanalmente puede ayudarnos a comprar solo lo estrictamente necesario; ponernos retos como el “viernes de sobras” es un win-win: al final de la semana, cuando más pereza da cocinar… ¿por qué no comerse todos esos poquitos de comida que nos sobraron después de cada comida? 
 Cambiar hábitos puede parecer difícil, pero en realidad toma poco tiempo. La próxima vez que caminen con un tupper hacia el basurero de la cocina, listos para botar sus contenidos, **fíjense en lo que están tirando y pregúntense si se pudo haber evitado.**
-	</text>
+    </text>
+    <image>
+        /images/201909/headers/alimentos.jpg
+    </image>
 </article>

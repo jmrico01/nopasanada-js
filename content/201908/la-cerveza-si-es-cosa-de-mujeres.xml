@@ -1,68 +1,70 @@
 <article>
-	<featured>
-		<images>
-			/images/201908/headers/cerveza.jpg
-		</images>
-		<pretitle>
-		</pretitle>
-		<title>
-		</title>
-		<text1>
-		</text1>
-		<text2>
-		</text2>
-		<highlightColor>
-		</highlightColor>
-	</featured>
-	<media>
-		<image1 type="image">
-			/images/201908/article-20/1.jpeg
-		</image1>
-		<image2 type="image">
-			/images/201908/article-20/2.jpeg
-		</image2>
-		<image3 type="image">
-			/images/201908/article-20/3.jpeg
-		</image3>
-		<image4 type="image">
-			/images/201908/article-20/4.jpeg
-		</image4>
-	</media>
-	<tags>
-		cultura, opinion
-	</tags>
-	<image>
-		/images/201908/headers/cerveza.jpg
-	</image>
-	<imagePoster>
-		/images/201908/posters/cerveza.jpg
-	</imagePoster>
-	<color>
-		#ffe7ab
-	</color>
-	<title>
-		Abajo el estereotipo: la cerveza s&iacute; es cosa de mujeres
-	</title>
-	<subtitle>
-		Conversamos con una mujer cervecera sobre c&oacute;mo es trabajar en una industria estereot&iacute;picamente masculina
-	</subtitle>
-	<description>
-		Conversamos con una mujer cervecera sobre c&oacute;mo es trabajar en una industria estereot&iacute;picamente masculina.
-	</description>
-	<author>
-		Sebasti&aacute;n Cruz
-	</author>
-	<day>
-		20
-	</day>
-	<month>
-		8
-	</month>
-	<year>
-		2019
-	</year>
-	<text>
-Las mujeres toman cerveza light y los hombres stout, ¿cierto? No me lo creo - yo soy el vivo ejemplo de que no es así: aunque me encanta todo tipo de cerveza, lo más probable es que en una fiesta con amigos prefiera una cerveza suave.
+    <featured>
+        <pretitle>
+            
+        </pretitle>
+        <title>
+            
+        </title>
+        <text1>
+            
+        </text1>
+        <text2>
+            
+        </text2>
+        <highlightColor>
+            
+        </highlightColor>
+        <images>
+            /images/201908/headers/cerveza.jpg
+        </images>
+    </featured>
+    <media>
+        <image1 type="image">
+            /images/201908/article-20/1.jpeg
+        </image1>
+        <image2 type="image">
+            /images/201908/article-20/2.jpeg
+        </image2>
+        <image3 type="image">
+            /images/201908/article-20/3.jpeg
+        </image3>
+        <image4 type="image">
+            /images/201908/article-20/4.jpeg
+        </image4>
+    </media>
+    <tags>
+        cultura,opinion
+    </tags>
+    <title>
+        Abajo el estereotipo: la cerveza sí es cosa de mujeres
+    </title>
+    <titlePoster>
+        
+    </titlePoster>
+    <description>
+        Conversamos con una mujer cervecera sobre cómo es trabajar en una industria estereotípicamente masculina.
+    </description>
+    <day>
+        20
+    </day>
+    <month>
+        08
+    </month>
+    <year>
+        2019
+    </year>
+    <color>
+        #ffe7ab
+    </color>
+    <author>
+        Sebastián Cruz
+    </author>
+    <subtitle>
+        Conversamos con una mujer cervecera sobre cómo es trabajar en una industria estereotípicamente masculina
+    </subtitle>
+    <text>
+        Las mujeres toman cerveza light y los hombres stout, ¿cierto? No me lo creo - yo soy el vivo ejemplo de que no es así: aunque me encanta todo tipo de cerveza, lo más probable es que en una fiesta con amigos prefiera una cerveza suave.
 
 La cerveza fue en principio una creación de las mujeres: eran ellas las que [preparaban la bebida](https://www.elespanol.com/cocinillas/recetas/bebidas/20180308/mujer-historia-cerveza-papel-protagonista-no-hablar/1001161933797_30.html). Pero sabemos que el mundo de las bebidas alcohólicas está plagado de [estereotipos](http://thetaste.ie/wp/stereotypes-in-drinks-worst-old-fashioned/) sexistas fomentados por el mercadeo. En No Pasa Nada nos gusta la cerveza - también nos gusta cuestionar los estereotipos - así que quisimos hablar de las mujeres que hacen cerveza artesanal en Costa Rica.
 
@@ -118,8 +120,14 @@ A nivel latinoamericano estamos creando una asociación, [Mujeres Cerveceras En 
 
 {{{ image4 }}}
 
-*Im&aacute;genes 1 y 2: Fotografías cortesía de [Matanga Project](https://instagram.com/matanga_project?igshid=1mvubpyyj81cc) por Jaime Zuluaga Vargas y María José Gutiérrez. https://instagram.com/matanga_project?igshid=1mvubpyyj81cc. Prohibida su reproducción total o parcial.*
+*Imágenes 1 y 2: Fotografías cortesía de [Matanga Project](https://instagram.com/matanga_project?igshid=1mvubpyyj81cc) por Jaime Zuluaga Vargas y María José Gutiérrez. https://instagram.com/matanga_project?igshid=1mvubpyyj81cc. Prohibida su reproducción total o parcial.*
 
-*Im&aacute;gen 3: Fotografía proporcionada por Carolina Castro de Elviaje Cervecería y Mujeres Cerveceras en Latinoamérica.*
-	</text>
+*Imágen 3: Fotografía proporcionada por Carolina Castro de Elviaje Cervecería y Mujeres Cerveceras en Latinoamérica.*
+    </text>
+    <image>
+        /images/201908/headers/cerveza.jpg
+    </image>
+    <imagePoster>
+        /images/201908/posters/cerveza.jpg
+    </imagePoster>
 </article>

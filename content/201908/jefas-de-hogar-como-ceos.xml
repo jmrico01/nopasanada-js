@@ -1,51 +1,56 @@
 <article>
-	<featured>
-		<images>
-			/images/201908/headers/jefas-de-hogar.jpg
-		</images>
-		<pretitle>
-		</pretitle>
-		<title>
-		</title>
-		<text1>
-		</text1>
-		<text2>
-		</text2>
-		<highlightColor>
-		</highlightColor>
-	</featured>
-	<tags>
-		opinion
-	</tags>
-	<image>
-		/images/201908/headers/jefas-de-hogar.jpg
-	</image>
-	<color>
-		#fcc285
-	</color>
-	<title>
-		Jefas de hogar como CEOs: los dilemas que enfrentan las mujeres al trabajar.
-	</title>
-	<subtitle>
-		Discriminaci&oacute;n de g&eacute;nero, falta de corresponsabilidad en los cuidados, divisi&oacute;n sexual del trabajo... realidades que dificultan a las mujeres incursionar en el mercado laboral
-	</subtitle>
-	<description>
-		Discriminaci&oacute;n de g&eacute;nero, falta de corresponsabilidad en los cuidados, divisi&oacute;n sexual del trabajo... realidades que dificultan a las mujeres incursionar en el mercado laboral.
-	</description>
-	<author>
-		Alicia Castro
-	</author>
-	<day>
-		22
-	</day>
-	<month>
-		8
-	</month>
-	<year>
-		2019
-	</year>
-	<text>
-En una conferencia reciente organizada por la Unión Costarricense de Cámaras y Asociaciones del Sector Empresarial Privado (UCCAEP) sobre Mujeres en el Mundo Empresarial, la Primera Dama de la República, con el fin de dar un espacio para reflexión, nos contó una anécdota sobre una mujer allegada a ella a quien le fue ofrecido un puesto gerencial para el cual tenía todas las capacidades y estudios necesarios.
+    <featured>
+        <pretitle>
+            
+        </pretitle>
+        <title>
+            
+        </title>
+        <text1>
+            
+        </text1>
+        <text2>
+            
+        </text2>
+        <highlightColor>
+            
+        </highlightColor>
+        <images>
+            /images/201908/headers/jefas-de-hogar.jpg
+        </images>
+    </featured>
+    <tags>
+        opinion
+    </tags>
+    <title>
+        Jefas de hogar como CEOs: los dilemas que enfrentan las mujeres al trabajar.
+    </title>
+    <titlePoster>
+        
+    </titlePoster>
+    <description>
+        Discriminación de género, falta de corresponsabilidad en los cuidados, división sexual del trabajo... realidades que dificultan a las mujeres incursionar en el mercado laboral.
+    </description>
+    <day>
+        22
+    </day>
+    <month>
+        08
+    </month>
+    <year>
+        2019
+    </year>
+    <color>
+        #fcc285
+    </color>
+    <author>
+        Alicia Castro
+    </author>
+    <subtitle>
+        Discriminación de género, falta de corresponsabilidad en los cuidados, división sexual del trabajo... realidades que dificultan a las mujeres incursionar en el mercado laboral
+    </subtitle>
+    <text>
+        En una conferencia reciente organizada por la Unión Costarricense de Cámaras y Asociaciones del Sector Empresarial Privado (UCCAEP) sobre Mujeres en el Mundo Empresarial, la Primera Dama de la República, con el fin de dar un espacio para reflexión, nos contó una anécdota sobre una mujer allegada a ella a quien le fue ofrecido un puesto gerencial para el cual tenía todas las capacidades y estudios necesarios.
 
 Al momento de recibir la oferta, esta mujer se cuestionó si aceptarla o no, ya que además de su trabajo “oficial” tiene otro en casa: ser jefa de hogar. Doña Claudia reflexionó que, de haber sido un hombre, éste sin duda habría aceptado de inmediato. Las mujeres, en cambio, tendemos a darle vueltas en la cabeza a las decisiones que tomamos pues normalmente consideramos las repercusiones que podrían tener en otras esferas de nuestra vida. Esta mujer en específico terminó aceptando el trabajo y desempeñándose extraordinariamente en él.
 
@@ -72,5 +77,8 @@ La consecuencia más inmediata de estos prejuicios es la segmentación del merca
 En una llamada telefónica, representantes del INAMU también nos confirmaron que existe en efecto la necesidad de generar reformas que promuevan la plena igualdad en el mercado laboral y la erradicación de la división sexual del trabajo, para lograr una reducción de la pobreza en los hogares liderados por mujeres. Actualmente, la legislación costarricense cuenta con diversas normas y acuerdos internacionales ratificados para apoyar esto. Sin embargo, no es suficiente.
 
 Para reducir - y eventualmente eliminar - estas cifras, se han puesto en marcha muchos esfuerzos: leyes en contra del acoso callejero y el hostigamiento sexual, derechos de maternidad, una red nacional de cuido, entre otros. Si bien debe reconocerse el trabajo de las autoridades en penar estos comportamientos negativos, está en nosotros ayudar a visibilizar prejuicios que en muchas ocasiones nos son inherentes. Un verdadero cambio cultural inicia con nosotros mismos.
-	</text>
+    </text>
+    <image>
+        /images/201908/headers/jefas-de-hogar.jpg
+    </image>
 </article>

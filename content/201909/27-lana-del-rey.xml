@@ -1,10 +1,7 @@
 <article>
     <featured>
-        <images>
-            /images/201909/headers/27-lana-del-rey.jpg
-        </images>
         <pretitle>
-            M&Uacute;SICA:
+            MÚSICA:
         </pretitle>
         <title>
             EL PODER DE&lt;br&gt;&lt;b&gt;LANA DEL REY.&lt;/b&gt;
@@ -18,39 +15,42 @@
         <highlightColor>
             #ff613c
         </highlightColor>
+        <images>
+            /images/201909/headers/27-lana-del-rey.jpg
+        </images>
     </featured>
     <tags>
         cultura
     </tags>
-    <image>
-        /images/201909/headers/27-lana-del-rey.jpg
-    </image>
-    <color>
-        #ffb3a1
-    </color>
     <title>
         El poder de Lana del Rey: mantenerse en la cima siendo ella misma
     </title>
-    <subtitle>
-        La música de Lana del Rey representa el alter ego de una generación. Ahora, llega a una fase de cierre con un solo mensaje: la esperanza es algo peligroso para una mujer como ella, pero la tiene.
-    </subtitle>
+    <titlePoster>
+        
+    </titlePoster>
     <description>
         La música de Lana del Rey representa el alter ego de una generación. Ahora, llega a una fase de cierre con un solo mensaje: la esperanza es algo peligroso para una mujer como ella, pero la tiene.
     </description>
-    <author>
-        Irina P&eacute;rez
-    </author>
     <day>
         27
     </day>
     <month>
-        9
+        09
     </month>
     <year>
         2019
     </year>
+    <color>
+        #ffb3a1
+    </color>
+    <author>
+        Irina Pérez
+    </author>
+    <subtitle>
+        La música de Lana del Rey representa el alter ego de una generación. Ahora, llega a una fase de cierre con un solo mensaje: la esperanza es algo peligroso para una mujer como ella, pero la tiene.
+    </subtitle>
     <text>
-Crecer en la era de Lana del Rey nos ha enseñado que podemos ser sensibles y románticas con todo en la vida: desde nuestros traumas, amoríos y adicciones, hasta la estabilidad después de la crisis existencial (algo muy característico de su signo: cancer).
+        Crecer en la era de Lana del Rey nos ha enseñado que podemos ser sensibles y románticas con todo en la vida: desde nuestros traumas, amoríos y adicciones, hasta la estabilidad después de la crisis existencial (algo muy característico de su signo: cancer).
 
 Las [letras de Lana han sido categorizadas como poesía](https://www.nme.com/blogs/nme-blogs/lana-del-rey-the-sublime-smoky-poetry-of-her-10-greatest-lyrics-so-far-16890): desde su primer álbum *Born to Die*, hasta su último, *Norman Fucking Rockwell!*, nos ha llevado a través de lo que parecen ser fases lunares con una autenticidad inigualable.
 
@@ -80,4 +80,7 @@ Al final del álbum, todo se resume en que, para Lana, esta es su luna llena y n
 
 Lana del rey no es diferente de Lady Gaga, Beyoncé, Kanye o cualquier músico que haya creado un alter ego para hacer de su música una zona de confort. Pero a diferencia de muchos artistas, Lana se tomó un chance y un riesgo; clavó su bandera y se instaló para hacer lo que ama usando una fórmula complicada, pero que siempre le ha sido efectiva: es decir, no pedir disculpas, y dejarle claro al mundo que nunca se sentirá mal por hacer lo que es mejor para ella.
     </text>
+    <image>
+        /images/201909/headers/27-lana-del-rey.jpg
+    </image>
 </article>

@@ -1,8 +1,5 @@
 <newsletter>
     <featured>
-        <images>
-            /images/201909/headers/26-lo-importante.jpg
-        </images>
         <pretitle>
             NOTICIAS:
         </pretitle>
@@ -10,7 +7,7 @@
             LO IMPORTANTE&lt;br&gt;&lt;b&gt;26-09-19. *&lt;/b&gt;
         </title>
         <text1>
-            4 HISTORIAS IMPORTANTES DE LAS M&Aacute;S RECIENTES NOTICIAS INTERNACIONALES.
+            4 HISTORIAS IMPORTANTES DE LAS MÁS RECIENTES NOTICIAS INTERNACIONALES.
         </text1>
         <text2>
             CURADAS POR&lt;br&gt;NO PASA NADA
@@ -18,25 +15,19 @@
         <highlightColor>
             #ff613c
         </highlightColor>
+        <images>
+            /images/201909/headers/26-lo-importante.jpg
+        </images>
     </featured>
     <tags>
         noticias
     </tags>
-    <image>
-        /images/201909/headers/26-lo-importante.jpg
-    </image>
-    <imagePoster>
-        /images/201909/posters/26-lo-importante.jpg
-    </imagePoster>
-    <imageDirectory>
-        /images/201909/26-lo-importante
-    </imageDirectory>
-    <color>
-        #FCC285
-    </color>
     <title>
         Lo Importante: 26-09-19
     </title>
+    <titlePoster>
+        
+    </titlePoster>
     <description>
         4 historias importantes de las más recientes noticias internacionales
     </description>
@@ -44,14 +35,17 @@
         26
     </day>
     <month>
-        9
+        09
     </month>
     <year>
         2019
     </year>
+    <color>
+        #FCC285
+    </color>
     <audioSource>
+        
     </audioSource>
-
     <title1>
         ¿Y los 43 estudiantes desaparecidos en 2014?, lacerante pregunta en México
     </title1>
@@ -59,7 +53,7 @@
         AFP
     </author1>
     <text1>
-**¿Qué tienes que saber?**
+        **¿Qué tienes que saber?**
 
 A cinco años de la desaparición de 43 estudiantes en el estado mexicano de Guerrero (sur), familiares y activistas se manifiestan este jueves para exigir a la nueva fiscalía independiente una explicación convincente sobre el paradero de los jóvenes y castigo a los responsables.
 
@@ -71,43 +65,42 @@ Pero fueron capturados por policías coludidos con el cartel de drogas Guerreros
 
 **De vuelta al presente**
 
-El actual mandatario, el izquierdista Andrés Manuel López Obrador, creó una Comisión de la Verdad para este caso mientras la fiscalía general, que tras una reforma ahora es independiente del Ejecutivo, se compromete a reiniciar la investigación "casi desde cero".
+El actual mandatario, el izquierdista Andrés Manuel López Obrador, creó una Comisión de la Verdad para este caso mientras la fiscalía general, que tras una reforma ahora es independiente del Ejecutivo, se compromete a reiniciar la investigación &quot;casi desde cero&quot;.
 
 A la espera de conocerse el destino de los jóvenes, la justicia mexicana ha liberado a 77 detenidos de la investigación original, entre ellos uno de los cabecillas de Guerreros Unidos, cuyos testimonios fueron obtenidos bajo torturas.
 
-Alejandro Hope, exoficial de la inteligencia mexicana y experto en seguridad, comenta a la AFP que más que empezar "desde cero", la fiscalía debe retomar "líneas de investigación que no se siguieron en su momento".
+Alejandro Hope, exoficial de la inteligencia mexicana y experto en seguridad, comenta a la AFP que más que empezar &quot;desde cero&quot;, la fiscalía debe retomar &quot;líneas de investigación que no se siguieron en su momento&quot;.
 
 **Diferentes hipótesis**
 
-Pero Hope no espera novedades. "No creo lleguen a un resultado notoriamente distinto. Hay dos hechos sobre los cuales no parece haber duda: los estudiantes fueron secuestrados por policías y fueron entregados al cartel Guerreros Unidos".
+Pero Hope no espera novedades. &quot;No creo lleguen a un resultado notoriamente distinto. Hay dos hechos sobre los cuales no parece haber duda: los estudiantes fueron secuestrados por policías y fueron entregados al cartel Guerreros Unidos&quot;.
 
-En el gobierno de Peña Nieto, la fiscalía general, que dependía del Ejecutivo, presentó la denominada "verdad histórica": los narcotraficantes, creyendo que los jóvenes serían de un cartel rival, los habrían matado para luego incinerar sus cuerpos en un basurero y arrojarlos a un río.
+En el gobierno de Peña Nieto, la fiscalía general, que dependía del Ejecutivo, presentó la denominada &quot;verdad histórica&quot;: los narcotraficantes, creyendo que los jóvenes serían de un cartel rival, los habrían matado para luego incinerar sus cuerpos en un basurero y arrojarlos a un río.
 
 Pero expertos de la Comisión Interamericana de Derechos Humanos, (CIDH, un ente autónomo de la OEA) que realizaron una investigación cuestionaron esta teoría y pidieron seguir otras hipótesis.
 
 Esta semana se iniciaron investigaciones en otro basurero, en la comunidad de Tepecoacuilco, a unos 15km de Iguala.
 
-Pero aún siguiendo nuevas hipótesis, Hope descarta que se llegue a una conclusión distinta. "¿Qué hicieron con ellos? No lo sabemos, pero lo más seguro es que los mataron", dice.
+Pero aún siguiendo nuevas hipótesis, Hope descarta que se llegue a una conclusión distinta. &quot;¿Qué hicieron con ellos? No lo sabemos, pero lo más seguro es que los mataron&quot;, dice.
 
 Durante las investigaciones en 2014, la fiscalía reunió pequeños restos óseos y los envió al laboratorio de Innsbruck, en Austria. Sólo se logró identificar restos de uno de los jóvenes.
 
 **Pero algunos padres aún mantienen la esperanza de que los jóvenes estén con vida.**
 
-"No sé si mi corazón de madre me engañe, pero no siento que mi hijo esté muerto. Quiero verlo caminar, regresar y abrazarlo, a él y a sus 42 compañeros", señala con lágrimas Blanca Luz Nava, ama de casa de 46 años y que el miércoles, con la imagen de su hijo Jorge Álvarez, uno de los chicos desaparecidos, se manifestó ante la fiscalía general.
+&quot;No sé si mi corazón de madre me engañe, pero no siento que mi hijo esté muerto. Quiero verlo caminar, regresar y abrazarlo, a él y a sus 42 compañeros&quot;, señala con lágrimas Blanca Luz Nava, ama de casa de 46 años y que el miércoles, con la imagen de su hijo Jorge Álvarez, uno de los chicos desaparecidos, se manifestó ante la fiscalía general.
 
 Las familias han convocado una nueva protesta en Ciudad de México para este jueves para marcar el quinto aniversario de la desaparición.
 
 La CIDH se congratula por el compromiso de reiniciar la investigación, pero no ve avances suficientes.
 
-"Quisiéramos tener, para el 26 de septiembre, algo concreto de parte de las autoridades, algo detallado de la investigación para hallar a los responsables, pero también a los muchachos", dijo Esmeralda Arosamena de Troitiño, presidenta de la CIDH, al diario El Universal.
+&quot;Quisiéramos tener, para el 26 de septiembre, algo concreto de parte de las autoridades, algo detallado de la investigación para hallar a los responsables, pero también a los muchachos&quot;, dijo Esmeralda Arosamena de Troitiño, presidenta de la CIDH, al diario El Universal.
 
 **La investigación que espera la CIDH** Una de las líneas de investigación a privilegiar, según expertos de la CIDH, es la existencia de un quinto autobús, que estaría cargado de droga destinada a Chicago, en Estados Unidos, y que habría sido secuestrado sin querer por los estudiantes.
 
-Este "quinto autobús" desapareció de la investigación oficial.
+Este &quot;quinto autobús&quot; desapareció de la investigación oficial.
 
-Hope resalta que traficar droga en autobuses que salen desde Guerrero hacia Estados Unidos es un "método bastante sencillo" desde hace años porque la vigilancia en las centrales de transporte terrestre es laxa comparada con aeropuertos.
+Hope resalta que traficar droga en autobuses que salen desde Guerrero hacia Estados Unidos es un &quot;método bastante sencillo&quot; desde hace años porque la vigilancia en las centrales de transporte terrestre es laxa comparada con aeropuertos.
     </text1>
-
     <title2>
         Elecciones presidenciales en Afganistán bajo la amenaza de atentados y fraude
     </title2>
@@ -115,7 +108,7 @@ Hope resalta que traficar droga en autobuses que salen desde Guerrero hacia Esta
         AFP
     </author2>
     <text2>
-**¿Qué tienes que saber?**
+        **¿Qué tienes que saber?**
 
 Afganistán celebra este domingo elecciones presidenciales de alto riesgo, bajo la amenaza de atentados y fraudes, mientras las negociaciones con los talibanes para poner fin al conflicto siguen empantanadas.
 
@@ -135,13 +128,13 @@ Esta pasada elección, ensombrecida por múltiples acusaciones de fraude, gener�
 
 Nada indica que el actual presidente Donald Trump esté ahora dispuesto a ejercer de mediador, opinan los observadores extranjeros en la capital afgana.
 
-**"Títere"**
+**&quot;Títere&quot;**
 
 Las presidenciales de este domingo se celebran además después de que el presidente Trump pusiera brutalmente fin, a principios de septiembre, a las conversaciones entre Estados Unidos y los talibanes, sobre una retirada de las tropas norteamericanas del país.
 
 Un acuerdo entre ambas partes parecía inminente, y varios observadores ya anticipaban que las presidenciales se suspenderían una vez más para permitir que se aplicara el plan de retirada.
 
-Los talibanes rehúsan desde siempre negociar con el gobierno de Kabul, al considerar que es un "títere" de Washington. De hecho, el gobierno afgano quedó totalmente excluido de las negociaciones celebradas en Catar en estos últimos meses.
+Los talibanes rehúsan desde siempre negociar con el gobierno de Kabul, al considerar que es un &quot;títere&quot; de Washington. De hecho, el gobierno afgano quedó totalmente excluido de las negociaciones celebradas en Catar en estos últimos meses.
 
 **Violencia y fraudes**
 
@@ -153,9 +146,8 @@ La campaña se había iniciado en julio con un ataque contra las oficinas de un 
 
 Cuando el propio Ghani se arriesgó a celebrar un mitin en Charikar, a una hora de carretera de la capital, los talibanes volvieron a golpear con un atentado suicida que dejó 26 muertos.
 
-Para el analista Ahmad Saeedi, "las amenazas en materia de seguridad y la falta de confianza en la transparencia electoral podrían traducirse en una débil participación, que mermará la legitimidad de la elección y del gobierno que salga de ella".
+Para el analista Ahmad Saeedi, &quot;las amenazas en materia de seguridad y la falta de confianza en la transparencia electoral podrían traducirse en una débil participación, que mermará la legitimidad de la elección y del gobierno que salga de ella&quot;.
     </text2>
-
     <title3>
         Neymar, en todos los frentes judiciales
     </title3>
@@ -163,13 +155,13 @@ Para el analista Ahmad Saeedi, "las amenazas en materia de seguridad y la falta 
         AFP
     </author3>
     <text3>
-**¿Qué tienes que saber?**
+        **¿Qué tienes que saber?**
 
 España, Brasil, Francia: Neymar, la estrella brasileña del Paris SG, está o se ha visto implicado en varios procedimientos judiciales y fiscales, especialmente relacionados con sus traspasos, del Santos al Barcelona en 2013 y del Barça al PSG en 2017.
 
 **Traspaso del Barça al PSG**
 
-La prima de renovación prometida a 'Ney' por el Barça antes de su fichaje por el PSG en 2017 (222 millones de euros) está en el centro del litigio entre el brasileño y el club catalán que se dirime el viernes ante un tribunal barcelonés.
+La prima de renovación prometida a &apos;Ney&apos; por el Barça antes de su fichaje por el PSG en 2017 (222 millones de euros) está en el centro del litigio entre el brasileño y el club catalán que se dirime el viernes ante un tribunal barcelonés.
 
 Neymar había negociado con el Barça el pago progresivo de una prima en su renovación de 2016, pero tras su repentina salida un año más tarde al PSG, el club azulgrana se negó a pagar los 26 millones de euros que faltaban por abonarle.
 
@@ -181,21 +173,21 @@ Tras haber intentado en vano un recurso ante la FIFA, los abogados del jugador p
 
 Una denuncia por violación presentada por Najila Trindade en Sao Paulo, fue revelada a principios de junio por un medio brasileño. Esa modelo de 26 años aseguró que los hechos ocurrieron el 15 de mayo en un hotel parisino.
 
-Neymar denunció una "trampa", saliendo a la luz una sucesión de imágenes y declaraciones impactantes por medios interpuestos. La justicia archivó el caso a principios de agosto, por falta de pruebas concluyentes.
+Neymar denunció una &quot;trampa&quot;, saliendo a la luz una sucesión de imágenes y declaraciones impactantes por medios interpuestos. La justicia archivó el caso a principios de agosto, por falta de pruebas concluyentes.
 
 **Denuncia de un hincha por agresión**
 
-Tras la derrota del PSG frente al Rennes en la final de la Copa de Francia a finales de abril, unas imágenes muestran a 'Ney' dando un golpe en la cara a un espectador que le había dicho "¡aprende a jugar al fútbol!".
+Tras la derrota del PSG frente al Rennes en la final de la Copa de Francia a finales de abril, unas imágenes muestran a &apos;Ney&apos; dando un golpe en la cara a un espectador que le había dicho &quot;¡aprende a jugar al fútbol!&quot;.
 
 El hombre de 29 años denunció en agosto al brasileño por agresión ante un tribunal de Bobigny. 
 
-"¿Hice mal? Sí. Pero nadie puede quedarse indiferente", se defendió el brasileño, que fue suspendido tres partidos.
+&quot;¿Hice mal? Sí. Pero nadie puede quedarse indiferente&quot;, se defendió el brasileño, que fue suspendido tres partidos.
 
 **Traspaso del Santos al Barça**
 
 El grupo brasileño DIS, antiguo poseedor de una parte de los derechos del jugador, denunció a Neymar, su padre, al Santos, al Barça y a sus dirigentes por considerarse perjudicado en el traspaso del delantero en 2013.
 
-En 2017, un juez madrileño había anunciado la apertura de un juicio por "corrupción en los negocios" contra ellos. Los dos clubes y sus dirigentes también están acusados de "estafa".
+En 2017, un juez madrileño había anunciado la apertura de un juicio por &quot;corrupción en los negocios&quot; contra ellos. Los dos clubes y sus dirigentes también están acusados de &quot;estafa&quot;.
 
 Pero el juicio todavía está pendiente de una decisión sobre la jurisdicción competente.
 
@@ -211,7 +203,6 @@ Neymar también es objetivo del fisco brasileño, que lo acusa de no haber pagad
 
 Neymar aceptó en 2017 pagar una multa de 2,1 millones de euros, según el tipo de cambio del momento, para poner fin al contencioso, pero el Tesoro brasileño anunció en 2018 que debía, en realidad, en torno a 16 millones, lo que es cuestionado por la defensa del jugador.
     </text3>
-
     <title4>
         Dirigente chavista se encuentra en Corea del Norte, según prensa estatal
     </title4>
@@ -219,14 +210,14 @@ Neymar aceptó en 2017 pagar una multa de 2,1 millones de euros, según el tipo 
         AFP
     </author4>
     <text4>
-**¿Qué tienes que saber?**
+        **¿Qué tienes que saber?**
 
-El dirigente chavista Diosdado Cabello se encuentra en Corea del Norte liderando una "delegación de alto nivel", dijo este jueves la prensa estatal del país asiático, en un momento en que ambas naciones sufren la presión económica de las sanciones internacionales.
-Cabello, presidente de la oficialista Asamblea Nacional Constituyente, entregó al líder norcoreano, Kim Jong Un, "una carta personal y un regalo" del presidente venezolano, Nicolás Maduro, según la agencia oficial norcoreana KCNA.
+El dirigente chavista Diosdado Cabello se encuentra en Corea del Norte liderando una &quot;delegación de alto nivel&quot;, dijo este jueves la prensa estatal del país asiático, en un momento en que ambas naciones sufren la presión económica de las sanciones internacionales.
+Cabello, presidente de la oficialista Asamblea Nacional Constituyente, entregó al líder norcoreano, Kim Jong Un, &quot;una carta personal y un regalo&quot; del presidente venezolano, Nicolás Maduro, según la agencia oficial norcoreana KCNA.
 
 Según KCNA, Cabello, número dos del chavismo, hizo entrega del regalo el miércoles durante su encuentro con Choe Ryong Hae, considerado uno de los principales colaboradores de Kim. 
 
-"Durante el encuentro, que se celebró en un ambiente amistoso, se expresó la voluntad de hacer esfuerzos para expandir y desarrollar la amistad bilateral en todos los ámbitos", según KCNA.
+&quot;Durante el encuentro, que se celebró en un ambiente amistoso, se expresó la voluntad de hacer esfuerzos para expandir y desarrollar la amistad bilateral en todos los ámbitos&quot;, según KCNA.
 
 De acuerdo con la agencia oficial, la delegación venezolana también se reunió con Ri Su Yong, vicepresidente del partido en el poder en Corea del Norte.
 
@@ -244,4 +235,13 @@ El panel aseguró haber recibido evaluaciones de Estados miembros según las cua
 
 Las conversaciones sobre el desmantelamiento del arsenal nuclear de Corea del Norte están en punto muerto desde el fracaso, en febrero, de una cumbre entre Trump y Kim en Hanói.
     </text4>
+    <image>
+        /images/201909/headers/26-lo-importante.jpg
+    </image>
+    <imagePoster>
+        /images/201909/posters/26-lo-importante.jpg
+    </imagePoster>
+    <imageDirectory>
+        /images/201909/26-lo-importante
+    </imageDirectory>
 </newsletter>

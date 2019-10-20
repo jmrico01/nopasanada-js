@@ -1,68 +1,65 @@
 <video>
-	<featured>
-		<images>
-			/images/201908/headers/moto1.jpg,
-			/images/201908/headers/moto2.jpg,
-			/images/201908/headers/moto3.jpg,
-			/images/201908/headers/moto4.jpg
-		</images>
-		<pretitle>
-			SERIE:
-		</pretitle>
-		<title>
-			PILOTOS &lt;b&gt;*&lt;/&gt;&lt;br&gt;&lt;b&gt;EP 1.&lt;/b&gt;
-		</title>
-		<text1>
-			CONOCEMOS A UNA FAMILIA EN COSTA RICA QUE HA TRIUNFADO EN EL DEPORTE DE ENDURO POR M&Aacute;S DE 50 A&Ntilde;OS.
-		</text1>
-		<text2>
-			VER TRAILER
-		</text2>
-		<highlightColor>
-			#ff613c
-		</highlightColor>
-	</featured>
-	<tags>
-		cultura, deporte, featured-deporte, home
-	</tags>
-	<videoID>
-		51aG1gGsULU
-	</videoID>
-	<image>
-		/images/201908/headers/moto4.jpg
-	</image>
-	<imagePoster>
-		/images/201908/posters/pilotos.jpg
-	</imagePoster>
-	<color>
-		#ff613c
-	</color>
-	<title>
-		Pilotos, Episodio 1. Trailer
-	</title>
-	<titlePoster>
-		Pilotos, Episodio 1.&lt;br&gt;Trailer
-	</titlePoster>
-	<subtitle>
-	</subtitle>
-	<description>
-	</description>
-	<author>
-	</author>
-	<day>
-		13
-	</day>
-	<month>
-		8
-	</month>
-	<year>
-		2019
-	</year>
-	<text>
-*&ldquo;Familia&rdquo; o &ldquo;C&oacute;mo ganar en Enduro por m&aacute;s de 50 a&ntilde;os&rdquo; es el primer episodio de nuestra serie Pilotos.*
+    <featured>
+        <pretitle>
+            SERIE:
+        </pretitle>
+        <title>
+            PILOTOS &lt;b&gt;*&lt;/&gt;&lt;br&gt;&lt;b&gt;EP 1.&lt;/b&gt;
+        </title>
+        <text1>
+            CONOCEMOS A UNA FAMILIA EN COSTA RICA QUE HA TRIUNFADO EN EL DEPORTE DE ENDURO POR MÁS DE 50 AÑOS.
+        </text1>
+        <text2>
+            VER TRAILER
+        </text2>
+        <highlightColor>
+            #ff613c
+        </highlightColor>
+        <images>
+            /images/201908/headers/moto4.jpg
+        </images>
+    </featured>
+    <tags>
+        cultura,deporte,featured-deporte,home
+    </tags>
+    <title>
+        Pilotos, Episodio 1. Trailer
+    </title>
+    <titlePoster>
+        Pilotos, Episodio 1.&lt;br&gt;Trailer
+    </titlePoster>
+    <description>
+        
+    </description>
+    <day>
+        13
+    </day>
+    <month>
+        08
+    </month>
+    <year>
+        2019
+    </year>
+    <color>
+        #ff613c
+    </color>
+    <author>
+        
+    </author>
+    <subtitle>
+        
+    </subtitle>
+    <text>
+        *“Familia” o “Cómo ganar en Enduro por más de 50 años” es el primer episodio de nuestra serie Pilotos.*
 
-*Aqu&iacute; conocemos a una familia en Costa Rica ha triunfado en el deporte de Enduro por m&aacute;s de 50 a&ntilde;os. Esta es su historia.*
+*Aquí conocemos a una familia en Costa Rica ha triunfado en el deporte de Enduro por más de 50 años. Esta es su historia.*
 
 Pilotos comienza el 23 de Agosto.
-	</text>
+    </text>
+    <image>
+        /images/201908/headers/moto4.jpg
+    </image>
+    <imagePoster>
+        /images/201908/posters/pilotos.jpg
+    </imagePoster>
 </video>

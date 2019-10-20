@@ -1,51 +1,56 @@
 <article>
-	<featured>
-		<images>
-			/images/201908/headers/burnout.jpg
-		</images>
-		<pretitle>
-		</pretitle>
-		<title>
-		</title>
-		<text1>
-		</text1>
-		<text2>
-		</text2>
-		<highlightColor>
-		</highlightColor>
-	</featured>
-	<tags>
-		ciencia
-	</tags>
-	<image>
-		/images/201908/headers/burnout.jpg
-	</image>
-	<color>
-		#ffbbc9
-	</color>
-	<title>
-		El síndrome de burnout: la condición ignorada que acecha los lugares de trabajo
-	</title>
-	<subtitle>
-		Sentirse agobiado por el trabajo se ha normalizado, pero a veces, el estrés en el trabajo es tanto que tiene nombre: burnout. ¿Qué dice la ciencia respecto a este fenómeno recientemente reconocido por la OMS?
-	</subtitle>
-	<description>
-		Sentirse agobiado por el trabajo se ha normalizado, pero a veces, el estrés en el trabajo es tanto que tiene nombre: burnout. ¿Qué dice la ciencia respecto a este fenómeno recientemente reconocido por la OMS?
-	</description>
-	<author>
-		Diana Gonz&aacute;lez
-	</author>
-	<day>
-		27
-	</day>
-	<month>
-		8
-	</month>
-	<year>
-		2019
-	</year>
-	<text>
-*el nombre ha sido cambiado por razones de privacidad.
+    <featured>
+        <pretitle>
+            
+        </pretitle>
+        <title>
+            
+        </title>
+        <text1>
+            
+        </text1>
+        <text2>
+            
+        </text2>
+        <highlightColor>
+            
+        </highlightColor>
+        <images>
+            /images/201908/headers/burnout.jpg
+        </images>
+    </featured>
+    <tags>
+        ciencia
+    </tags>
+    <title>
+        El síndrome de burnout: la condición ignorada que acecha los lugares de trabajo
+    </title>
+    <titlePoster>
+        
+    </titlePoster>
+    <description>
+        Sentirse agobiado por el trabajo se ha normalizado, pero a veces, el estrés en el trabajo es tanto que tiene nombre: burnout. ¿Qué dice la ciencia respecto a este fenómeno recientemente reconocido por la OMS?
+    </description>
+    <day>
+        27
+    </day>
+    <month>
+        08
+    </month>
+    <year>
+        2019
+    </year>
+    <color>
+        #ffbbc9
+    </color>
+    <author>
+        Diana González
+    </author>
+    <subtitle>
+        Sentirse agobiado por el trabajo se ha normalizado, pero a veces, el estrés en el trabajo es tanto que tiene nombre: burnout. ¿Qué dice la ciencia respecto a este fenómeno recientemente reconocido por la OMS?
+    </subtitle>
+    <text>
+        *el nombre ha sido cambiado por razones de privacidad.
 
 *&amp;ldquo;En el  consultorio se pueden ver hasta 300 pacientes por día. Entro a las 5:30am para poder tener todo listo a tiempo. A la hora de pasar visita, los asistentes (médicos que ya son especialistas) son muy exigentes académicamente; el ambiente es muy estresante. Algunos resuelven todo a gritos y de mal modo: ¡Venga para acá! ¡No hizo esto! ¡Está haciendo todo mal!&amp;rdquo;*
 
@@ -106,6 +111,9 @@ Entrenamiento de ejercicios respiración, espacios de autocuidado, tratar al má
  
 En cuanto a ambiente laboral, cooperar con otras especialidades en vez de competir, servir con cariño y dejarle a los demás hacer lo que saben hacer.
  
-La terapia se basa en sentimientos de humildad. Demostrar que uno es capaz de reconocer sus propias limitaciones. Siempre nos enseñan a dar más y más; que los errores son inaceptables: una autoexigencia que no sana. Hay que reconocer que hay cosas que se salen de nuestras manos, y si que si hubieran otras condiciones se hubiera resuelto el trabajo más satisfactoriamente. 
-	</text>
+La terapia se basa en sentimientos de humildad. Demostrar que uno es capaz de reconocer sus propias limitaciones. Siempre nos enseñan a dar más y más; que los errores son inaceptables: una autoexigencia que no sana. Hay que reconocer que hay cosas que se salen de nuestras manos, y si que si hubieran otras condiciones se hubiera resuelto el trabajo más satisfactoriamente.
+    </text>
+    <image>
+        /images/201908/headers/burnout.jpg
+    </image>
 </article>

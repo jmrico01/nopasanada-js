@@ -1,8 +1,5 @@
 <article>
     <featured>
-        <images>
-            /images/201909/headers/28-salud-mental.jpg
-        </images>
         <pretitle>
             SOCIEDAD:
         </pretitle>
@@ -18,39 +15,42 @@
         <highlightColor>
             #ff613c
         </highlightColor>
+        <images>
+            /images/201909/headers/28-salud-mental.jpg
+        </images>
     </featured>
     <tags>
-        ciencia, home
+        ciencia,home
     </tags>
-    <image>
-        /images/201909/headers/28-salud-mental.jpg
-    </image>
-    <color>
-        #ffb3a1
-    </color>
     <title>
         Salud Mental en Costa Rica: con diagnóstico pendiente
     </title>
-    <subtitle>
-        La salud mental no parece ser prioridad para un país que desde hace cuatro administraciones no invierte en estudios macro al respecto.
-    </subtitle>
+    <titlePoster>
+        
+    </titlePoster>
     <description>
         La salud mental no parece ser prioridad para un país que desde hace cuatro administraciones no invierte en estudios macro al respecto.
     </description>
-    <author>
-        Roberto Morales
-    </author>
     <day>
         28
     </day>
     <month>
-        9
+        09
     </month>
     <year>
         2019
     </year>
+    <color>
+        #ffb3a1
+    </color>
+    <author>
+        Roberto Morales
+    </author>
+    <subtitle>
+        La salud mental no parece ser prioridad para un país que desde hace cuatro administraciones no invierte en estudios macro al respecto.
+    </subtitle>
     <text>
-Hace poco, desayunaba en un restaurante de comida rápida - no ayudándole mucho a mi propia salud física y emocional - mientras miraba la tele del local; estaban dando un programa de entrevistas vespertino. En el programa, anunciaban que el “burnout”, o “Síndrome de Trabajador Quemado”, había sido incluído en la Clasificación Internacional de Enfermedades (CIE-11) de la OMS. También, se discutía con panelistas invitados acerca de las repercusiones que conlleva el “burnout” en el trabajo de cuidadores, y como este suele ser asociado con figuras específicas de las familias - acotaría yo, con mujeres que se deben hacer cargo del cuido de personas adultas mayores, niñez y personas con algún tipo de discapacidad o enfermedad. 
+        Hace poco, desayunaba en un restaurante de comida rápida - no ayudándole mucho a mi propia salud física y emocional - mientras miraba la tele del local; estaban dando un programa de entrevistas vespertino. En el programa, anunciaban que el “burnout”, o “Síndrome de Trabajador Quemado”, había sido incluído en la Clasificación Internacional de Enfermedades (CIE-11) de la OMS. También, se discutía con panelistas invitados acerca de las repercusiones que conlleva el “burnout” en el trabajo de cuidadores, y como este suele ser asociado con figuras específicas de las familias - acotaría yo, con mujeres que se deben hacer cargo del cuido de personas adultas mayores, niñez y personas con algún tipo de discapacidad o enfermedad. 
 Dejé de lado el programa y me hundí en la pantalla del celular mientras comía, igual que las dos compañeras de trabajo que comían a mi lado. En mis redes sociales, volví a toparme con la noticia. Traté entonces de romper la mala maña de estar cada uno en lo suyo: “¿vieron?” les dije mientras señalaba en la pantalla de mi celular el titular sobre el burnout en [CrHoy](https://www.crhoy.com/mundo/la-oms-incluye-el-desgaste-profesional-o-burn-out-en-su-lista-de-enfermedades/). “Ya era hora,” dijo una de ellas, mientras ambas volvían a ponerse los audífonos.
 Ignorado, miré a mi alrededor: me percaté de que la gente en el restaurante tampoco ponía mucha atención a lo que decían sus compañeras de mesa y mucho menos lo que decía la tele, pero varios observaron la reseña escrita “ya no doy más en mi trabajo”, lo que suscitó en el local algunas risas penosas que entre dientes reconocían vivir estrés laboral o cansancio por motivos de trabajo. 
 Más tarde, me enteré de que la clasificación del burnout en el CIE-11 no entraría ni siquiera en vigencia hasta el 2022, pero ningún medio especificaba eso;  confirmada la poca importancia que le damos a escuchar las noticias, pero peor aún, como solemos ignorar nuestra salud mental. 
@@ -66,4 +66,7 @@ Se que con la anterior afirmación muchos lectores se echarán para atrás y dir
 **El reduccionismo nos lleva a pensar que la “bronca mental” es de aquella o de aquel, cuando en realidad es reflejo de un sistema**, de la competitividad voraz que manipula nuestra forma de relacionarlos; cómo el *brete* para muchos se vuelve panacea ante las crisis existenciales (obviando la precarización continua del mundo laboral); sobre todo, de lo que escondemos con los audífonos puestos, los celulares en la mesa y las sonrisas forzadas, en medio de conocidos y extraños que saborean su Gallo Pinto con sabor a papas fritas antes de iniciar otro día de trabajo, y haciendo chota de lo que ven en Buen Día sin comprenderlo. 
 ***Roberto Morales Rodríguez.** Escritor y Licenciado en Trabajo Social egresado de la Universidad de Costa Rica, con experiencia en trabajo comunitario y de campo en organizaciones y fundaciones con impacto social en diversas provincias del país.*
     </text>
+    <image>
+        /images/201909/headers/28-salud-mental.jpg
+    </image>
 </article>

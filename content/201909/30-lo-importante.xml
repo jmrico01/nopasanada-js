@@ -1,8 +1,5 @@
 <newsletter>
     <featured>
-        <images>
-            /images/201909/headers/30-lo-importante.jpg
-        </images>
         <pretitle>
             NOTICIAS:
         </pretitle>
@@ -10,7 +7,7 @@
             LO IMPORTANTE&lt;br&gt;&lt;b&gt;30-09-19. *&lt;/b&gt;
         </title>
         <text1>
-            4 HISTORIAS IMPORTANTES DE LAS M&Aacute;S RECIENTES NOTICIAS INTERNACIONALES.
+            4 HISTORIAS IMPORTANTES DE LAS MÁS RECIENTES NOTICIAS INTERNACIONALES.
         </text1>
         <text2>
             CURADAS POR&lt;br&gt;NO PASA NADA
@@ -18,25 +15,19 @@
         <highlightColor>
             #ff613c
         </highlightColor>
+        <images>
+            /images/201909/headers/30-lo-importante.jpg
+        </images>
     </featured>
     <tags>
         noticias
     </tags>
-    <image>
-        /images/201909/headers/30-lo-importante.jpg
-    </image>
-    <imagePoster>
-        /images/201909/posters/30-lo-importante.jpg
-    </imagePoster>
-    <imageDirectory>
-        /images/201909/30-lo-importante
-    </imageDirectory>
-    <color>
-        #FCC285
-    </color>
     <title>
         Lo Importante: 30-09-19
     </title>
+    <titlePoster>
+        
+    </titlePoster>
     <description>
         4 historias importantes de las más recientes noticias internacionales
     </description>
@@ -44,14 +35,17 @@
         30
     </day>
     <month>
-        9
+        09
     </month>
     <year>
         2019
     </year>
+    <color>
+        #FCC285
+    </color>
     <audioSource>
+        
     </audioSource>
-
     <title1>
         El presidente chino Xi Jinping promete respetar la autonomía de Hong Kong
     </title1>
@@ -59,39 +53,38 @@
         AFP
     </author1>
     <text1>
--**¿Qué necesitas saber?**
+        -**¿Qué necesitas saber?**
 
-El presidente chino Xi Jinping prometió el lunes respetar la autonomía de Hong Kong y mantener el principio aplicado a la excolonia británica de "un país, dos sistemas", tras meses de manifestaciones prodemocracia en ese territorio.
+El presidente chino Xi Jinping prometió el lunes respetar la autonomía de Hong Kong y mantener el principio aplicado a la excolonia británica de &quot;un país, dos sistemas&quot;, tras meses de manifestaciones prodemocracia en ese territorio.
 
-En una recepción en Pekín en víspera de las celebraciones del 70 aniversario de la creación de China comunista, Xi dijo que su país "seguirá aplicando íntegra y fielmente el principio de un país, dos sistemas" así como "un alto grado de autonomía" en Hong Kong.
+En una recepción en Pekín en víspera de las celebraciones del 70 aniversario de la creación de China comunista, Xi dijo que su país &quot;seguirá aplicando íntegra y fielmente el principio de un país, dos sistemas&quot; así como &quot;un alto grado de autonomía&quot; en Hong Kong.
 
 **¿Por qué nos importa?**
 
-Bajo el principio "un país, dos sistemas" –vigente hasta 2047– Hong Kong goza en teoría de ciertas libertades de las que no disfrutan los ciudadanos del resto de China, como la libertad de expresión, el acceso sin restricciones a internet y la independencia judicial.
+Bajo el principio &quot;un país, dos sistemas&quot; –vigente hasta 2047– Hong Kong goza en teoría de ciertas libertades de las que no disfrutan los ciudadanos del resto de China, como la libertad de expresión, el acceso sin restricciones a internet y la independencia judicial.
 
 Esta región del sur de China, vive desde junio su crisis política más grave desde su retrocesión a Pekín en 1997.
 
 En los últimos cuatro meses Hong Kong es escenario de  manifestaciones casi diarias para exigir reformas democráticas y denunciar la creciente injerencia de Pekín.
     </text1>
-
     <title2>
-        Situación "trágica" en campo de refugiados en Grecia según la ONU
+        Situación &quot;trágica&quot; en campo de refugiados en Grecia según la ONU
     </title2>
     <author2>
         AFP
     </author2>
     <text2>
-**¿Qué necesitas saber?**
+        **¿Qué necesitas saber?**
 
-El alcalde de Lesbos y la Agencia de la ONU para los refugiados exhortaron el lunes a las autoridades griegas a "descongestionar inmediatamente" el campamento de migrantes de Moria, donde la situación es "trágica" al día siguiente de un mortal incendio seguido de disturbios.
+El alcalde de Lesbos y la Agencia de la ONU para los refugiados exhortaron el lunes a las autoridades griegas a &quot;descongestionar inmediatamente&quot; el campamento de migrantes de Moria, donde la situación es &quot;trágica&quot; al día siguiente de un mortal incendio seguido de disturbios.
 
 El campamento de Moria en la isla de Lesbos, el mayor de Europa, recuperaba cierta calma el lunes por la mañana, tras un incendio que costó la vida a una mujer y un niño, constató un fotógrafo de la AFP.
 
-Sin embargo, "muchos refugiados están tristes y estresados, pues temen un nuevo accidente", declaró Farid, un joven afgano interrogado por teléfono por la AFP.
+Sin embargo, &quot;muchos refugiados están tristes y estresados, pues temen un nuevo accidente&quot;, declaró Farid, un joven afgano interrogado por teléfono por la AFP.
 
-"La situación es muy trágica" declaró Boris Sheshirkov, portavoz de la agencia de la ONU en Grecia.
+&quot;La situación es muy trágica&quot; declaró Boris Sheshirkov, portavoz de la agencia de la ONU en Grecia.
 
-"Pedimos la descongestión inmediata de nuestras islas y el refuerzo del control en las fronteras" declaró a la cadena ERT el alcalde de Lesbos, Stratos Kytelis. 
+&quot;Pedimos la descongestión inmediata de nuestras islas y el refuerzo del control en las fronteras&quot; declaró a la cadena ERT el alcalde de Lesbos, Stratos Kytelis. 
 
 **¿Por qué nos importa?**
 
@@ -109,7 +102,6 @@ Según un comunicado de la policía, los disturbios comenzaron después de que s
 
 Grecia acoge actualmente unos 70.000 migrantes, principalmente refugiados sirios, que huyeron de su país desde 2015 y se sometieron a la arriesgada travesía desde las vecinas costas turcas.
     </text2>
-
     <title3>
         Mar y fuego: los fantasmas de Morales en las elecciones bolivianas
     </title3>
@@ -117,7 +109,7 @@ Grecia acoge actualmente unos 70.000 migrantes, principalmente refugiados sirios
         AFP
     </author3>
     <text3>
-**¿Qué necesitas saber?**
+        **¿Qué necesitas saber?**
 
 Un descomunal incendio forestal, que sigue incontrolable a días de las elecciones del 20 de octubre en Bolivia, amenaza con pasarle factura al presidente Evo Morales, que busca un cuarto mandato consecutivo con el estigma de ser responsable del desastre ecológico.
 
@@ -125,43 +117,42 @@ En la recta final de la campaña presidencial, es quizás el golpe de imagen má
 
 El propio mandatario se encargó estos días de abrir la llaga al abordar ambos temas ante la asamblea de la ONU.
 
-El fallo de La Haya "no ha terminado la controversia (por el mar)", sostuvo, en relación al dictamen de la Corte Internacional de Justicia (CIJ) que dijo que Chile no tenía obligación de negociar un acceso a la costa para Bolivia.
+El fallo de La Haya &quot;no ha terminado la controversia (por el mar)&quot;, sostuvo, en relación al dictamen de la Corte Internacional de Justicia (CIJ) que dijo que Chile no tenía obligación de negociar un acceso a la costa para Bolivia.
 
 **¿Por qué nos importa?**
 
-Además, en el mismo foro, el gobernante aseguró: "Estamos ganando la batalla al fuego, nuestra respuesta ha sido rápida y efectiva", **pese a que las llamas han devorado ya 5,3 millones de hectáreas de bosque y pastizales.**
+Además, en el mismo foro, el gobernante aseguró: &quot;Estamos ganando la batalla al fuego, nuestra respuesta ha sido rápida y efectiva&quot;, **pese a que las llamas han devorado ya 5,3 millones de hectáreas de bosque y pastizales.**
 
 Las oenegés ambientalistas, sobre todo, responsabilizan a Morales por el fuego, pues autorizó por decreto la quema para el desmonte.
 
 **La iglesia habla**
 
-"Hablar del mar en estos momentos, del diálogo con Chile y de que hemos vencido los incendios, creo que es desviar un poco la atención sobre el tema principal que tiene Bolivia que son las elecciones", criticó el arzobispo de Sucre, monseñor Jesús Juárez.
+&quot;Hablar del mar en estos momentos, del diálogo con Chile y de que hemos vencido los incendios, creo que es desviar un poco la atención sobre el tema principal que tiene Bolivia que son las elecciones&quot;, criticó el arzobispo de Sucre, monseñor Jesús Juárez.
 
-"Vemos claramente que hace falta autocrítica, porque todos sabemos que el incendio sigue. Las medidas que se han tomado en primer lugar fueron tardías", disparó de su lado el presidente de la Conferencia Episcopal Boliviana (CEB), monseñor Ricardo Centellas.
+&quot;Vemos claramente que hace falta autocrítica, porque todos sabemos que el incendio sigue. Las medidas que se han tomado en primer lugar fueron tardías&quot;, disparó de su lado el presidente de la Conferencia Episcopal Boliviana (CEB), monseñor Ricardo Centellas.
 
 **El punto de vista de los ciudadanos**
 
 Una parte de la opinión pública se pregunta si los temas del mar y de los incendios pesan en la definición del voto.
 
-El analista Iván Arias considera que "lo que no termina de medirse hasta ahora es el efecto incendios". 
+El analista Iván Arias considera que &quot;lo que no termina de medirse hasta ahora es el efecto incendios&quot;. 
 
-Pero un exasesor de imagen de Morales, Wálter Chávez, cree que "la gente no vota por el incendio, no influye en el tema de esta elección". Además argumenta: "¿Por qué no influyó el mar en la candidatura de Evo?, porque los bolivianos queremos un tipo que luche".
+Pero un exasesor de imagen de Morales, Wálter Chávez, cree que &quot;la gente no vota por el incendio, no influye en el tema de esta elección&quot;. Además argumenta: &quot;¿Por qué no influyó el mar en la candidatura de Evo?, porque los bolivianos queremos un tipo que luche&quot;.
 
 Quizás tenga razón, pues un sondeo de medios estableció el domingo que el impacto negativo para Morales es mínimo, aunque un 56% le endilga cierta responsabilidad por no haber actuado pronto.
 
 **Crucial primera vuelta**
 
-Hasta ahora Morales encabeza todas las encuestas. "La apuesta del gobierno es ganar en primera vuelta, porque sabe que en segunda vuelta es revuelta, es decir, que en segunda vuelta pierde", apunta Arias.
+Hasta ahora Morales encabeza todas las encuestas. &quot;La apuesta del gobierno es ganar en primera vuelta, porque sabe que en segunda vuelta es revuelta, es decir, que en segunda vuelta pierde&quot;, apunta Arias.
 
 El objetivo de su principal rival, el expresidente Carlos Mesa es, obviamente, forzar el balotaje, previsto para el 15 de diciembre. En esa instancia, la oposición, actualmente fragmentada en ocho candidaturas, podría respaldar a Mesa, según algunos analistas.
 
 El sondeo del conglomerado mediático El Deber, Los Tiempos y Página Siete da a Morales una ventaja de 7 puntos sobre Mesa y presagia una segunda vuelta. Sin embargo, un 15% de indecisos podría inclinar la balanza hacia uno u otro lado.
 
-El vicepresidente Álvaro García opina sin embargo que para el oficialismo "no está en juego la segunda vuelta, sino está en juego si tenemos dos tercios" en el Congreso, lo que le ha dado en las dos últimas gestiones el manejo pleno del poder político.
+El vicepresidente Álvaro García opina sin embargo que para el oficialismo &quot;no está en juego la segunda vuelta, sino está en juego si tenemos dos tercios&quot; en el Congreso, lo que le ha dado en las dos últimas gestiones el manejo pleno del poder político.
 
 La nueva Constitución (en vigencia desde 2009) establece que un candidato puede ganar la presidencia en primera vuelta si obtiene 50% más uno de los votos válidos o logra el 40% con una ventaja de 10 puntos sobre el segundo. Hasta ahora, Morales alcanzó arrolladores triunfos en primera ronda.
     </text3>
-
     <title4>
         Firma estadounidense de moda Forever 21 presenta pedido de quiebra voluntaria
     </title4>
@@ -169,7 +160,7 @@ La nueva Constitución (en vigencia desde 2009) establece que un candidato puede
         AFP
     </author4>
     <text4>
-**¿Qué necesitas saber?**
+        **¿Qué necesitas saber?**
 
 La firma estadounidense de moda Forever 21 indicó el domingo que presentará un pedido de quiebra voluntaria, convirtiéndose así en la última víctima de las cadenas con tiendas a la calle obligada a reestructurarse ante el auge del comercio en línea.
 
@@ -177,9 +168,9 @@ La firma estadounidense de moda Forever 21 indicó el domingo que presentará un
 
 La iniciativa tendrá como consecuencia el cierre de 350 de sus tiendas en todo el mundo, incluyendo 178 en Estados Unidos, afirmó el Wall Street Journal citando a una portavoz de la firma.
 
-La invocación del denominado "Capítulo 11" permite presentar una solicitud de protección de quiebra. "Es un paso decisivo y deliberado para colocarnos en una senda exitosa para el futuro", dijo la firma en un comunicado.
+La invocación del denominado &quot;Capítulo 11&quot; permite presentar una solicitud de protección de quiebra. &quot;Es un paso decisivo y deliberado para colocarnos en una senda exitosa para el futuro&quot;, dijo la firma en un comunicado.
 
-Esta "reorganización" bajo la protección de la ley garantiza a Forever 21 mantener el control y posesión de sus bienes mientras se lleva adelante la reestructuración.
+Esta &quot;reorganización&quot; bajo la protección de la ley garantiza a Forever 21 mantener el control y posesión de sus bienes mientras se lleva adelante la reestructuración.
 
 **Su auge y caída**
 
@@ -189,4 +180,13 @@ Compitiendo con firmas como H&amp;M y Zara, la cadena lanzó una agresiva expans
 
 Pero los analistas afirman que Forever 21 falló a la hora de reaccionar ante el ascenso de la venta minoritas online, así como ante el cambio de actitud de los consumidores por el impacto medioambiental de la moda rápida y la preocupación por las condiciones de trabajo en las fábricas que elaboran sus productos.
     </text4>
+    <image>
+        /images/201909/headers/30-lo-importante.jpg
+    </image>
+    <imagePoster>
+        /images/201909/posters/30-lo-importante.jpg
+    </imagePoster>
+    <imageDirectory>
+        /images/201909/30-lo-importante
+    </imageDirectory>
 </newsletter>

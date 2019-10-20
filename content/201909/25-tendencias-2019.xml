@@ -1,8 +1,5 @@
 <article>
     <featured>
-        <images>
-            /images/201909/headers/25-tendencias-2019.jpg
-        </images>
         <pretitle>
             MODA:
         </pretitle>
@@ -18,6 +15,9 @@
         <highlightColor>
             #ff613c
         </highlightColor>
+        <images>
+            /images/201909/headers/25-tendencias-2019.jpg
+        </images>
     </featured>
     <media>
         <patchwork1 type="instagram">
@@ -26,42 +26,36 @@
         <patchwork2 type="instagram">
             BpJ_rZCHDAe
         </patchwork2>
-
         <raincoats1 type="instagram">
             BxjlA19ilWu
         </raincoats1>
         <raincoats2 type="instagram">
             BlPy3r3hv79
         </raincoats2>
-
         <matching1 type="instagram">
             By_eKqmBq7y
         </matching1>
         <matching2 type="instagram">
             B0ZwyfTH1lq
         </matching2>
-
         <tiedye1 type="instagram">
             Bwou-SJnQQU
         </tiedye1>
         <tiedye2 type="instagram">
             ByiTV9Pgiu-
         </tiedye2>
-
         <petiteBags1 type="instagram">
             Bz0RaYaDG2I
         </petiteBags1>
         <petiteBags2 type="instagram">
             Bm3eKt1gXg7
         </petiteBags2>
-
         <neon1 type="instagram">
             BmpOov-ja-J
         </neon1>
         <neon2 type="instagram">
             BsGlh0Rj9nT
         </neon2>
-
         <bikerShortsAndBlazers1 type="instagram">
             BsgtNJPBu-E
         </bikerShortsAndBlazers1>
@@ -72,35 +66,35 @@
     <tags>
         cultura
     </tags>
-    <image>
-        /images/201909/headers/25-tendencias-2019.jpg
-    </image>
-    <color>
-        #ffb3a1
-    </color>
     <title>
         Las tendencias más amadas (y más odiadas) de este año
     </title>
-    <subtitle>
-        ¿Qué tendencias trajo el 2019? Algunas son medio raras, pero todas se valen si se encuentra la forma correcta de usarlas
-    </subtitle>
+    <titlePoster>
+        
+    </titlePoster>
     <description>
         ¿Qué tendencias trajo el 2019? Algunas son medio raras, pero todas se valen si se encuentra la forma correcta de usarlas
     </description>
-    <author>
-        Paulina Joaristi
-    </author>
     <day>
         25
     </day>
     <month>
-        9
+        09
     </month>
     <year>
         2019
     </year>
+    <color>
+        #ffb3a1
+    </color>
+    <author>
+        Paulina Joaristi
+    </author>
+    <subtitle>
+        ¿Qué tendencias trajo el 2019? Algunas son medio raras, pero todas se valen si se encuentra la forma correcta de usarlas
+    </subtitle>
     <text>
-Dicen que para gustos hay colores - es muy difícil definir que es “bonito” o “feo”. Así pasa con estas 7 tendencias; algunas están entre las más controversiales del 2019 - es muy fácil amarlas, y también es fácil odiarlas. Para familiarizarse con algunos de estos trends, vale la pena ir a distintas tiendas y probarse diferentes looks; sobretodo, hay que saber cómo y cuándo usarlas. 
+        Dicen que para gustos hay colores - es muy difícil definir que es “bonito” o “feo”. Así pasa con estas 7 tendencias; algunas están entre las más controversiales del 2019 - es muy fácil amarlas, y también es fácil odiarlas. Para familiarizarse con algunos de estos trends, vale la pena ir a distintas tiendas y probarse diferentes looks; sobretodo, hay que saber cómo y cuándo usarlas. 
 
 **Patchwork**
 Esta tendencia originaria de los años 70s vuelve a las pasarelas más cotizadas del mundo, aunque, la verdad, existen muy pocas personas que logran verse bien usando algo que parece una colcha como falda … si a pesar de esto existe algún intrépido que quiera atreverse, le damos un buen consejo: las piezas de patchwork funcionan mejor cuando son combinadas con colores sólidos y básicos como el azul marino, el negro, el gris o el blanco; importante no usar más de una pieza de patchwork a la vez, y jamás mezclarlas con mezclilla. 
@@ -145,4 +139,7 @@ Hace unos años, cambiamos nuestros jeans por leggins; además de ser más cómo
 {{{ bikerShortsAndBlazers1 }}}
 {{{ bikerShortsAndBlazers2 }}}
     </text>
+    <image>
+        /images/201909/headers/25-tendencias-2019.jpg
+    </image>
 </article>

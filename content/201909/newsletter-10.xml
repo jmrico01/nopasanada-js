@@ -1,184 +1,188 @@
 <newsletter>
-	<featured>
-		<images>
-			/images/201909/headers/newsletter-10.jpg
-		</images>
-		<pretitle>
-		</pretitle>
-		<title>
-		</title>
-		<text1>
-		</text1>
-		<text2>
-		</text2>
-		<highlightColor>
-		</highlightColor>
-	</featured>
-	<tags>
-		noticias
-	</tags>
-	<image>
-		/images/201909/headers/newsletter-10.jpg
-	</image>
-	<imageDirectory>
-		/images/201909/newsletter-10
-	</imageDirectory>
-	<color>
-		#FCC285
-	</color>
-	<title>
-		Lo Importante: 10-09-19
-	</title>
-	<description>
-		4 historias importantes de las más recientes noticias internacionales
-	</description>
-	<day>
-		10
-	</day>
-	<month>
-		9
-	</month>
-	<year>
-		2019
-	</year>
-	<audioSource>
-		https://us.ivoox.com/en/player_ej_41202540_4_1.html?c1=e33c18
-	</audioSource>
-
-	<title1>
-		Bachelet denuncia más posibles ejecuciones extrajudiciales y torturas en Venezuela
-	</title1>
-	<author1>
-		AFP
-	</author1>
-	<text1>
-La Alta Comisionada de la ONU para los Derechos Humanos, Michelle Bachelet, denunció este lunes más casos de "posibles ejecuciones extrajudiciales", así como de "torturas y malos tratos" de detenidos en Venezuela.
+    <featured>
+        <pretitle>
+            
+        </pretitle>
+        <title>
+            
+        </title>
+        <text1>
+            
+        </text1>
+        <text2>
+            
+        </text2>
+        <highlightColor>
+            
+        </highlightColor>
+        <images>
+            /images/201909/headers/newsletter-10.jpg
+        </images>
+    </featured>
+    <tags>
+        noticias
+    </tags>
+    <title>
+        Lo Importante: 10-09-19
+    </title>
+    <titlePoster>
+        
+    </titlePoster>
+    <description>
+        4 historias importantes de las más recientes noticias internacionales
+    </description>
+    <day>
+        10
+    </day>
+    <month>
+        09
+    </month>
+    <year>
+        2019
+    </year>
+    <color>
+        #FCC285
+    </color>
+    <audioSource>
+        https://us.ivoox.com/en/player_ej_41202540_4_1.html?c1=e33c18
+    </audioSource>
+    <title1>
+        Bachelet denuncia más posibles ejecuciones extrajudiciales y torturas en Venezuela
+    </title1>
+    <author1>
+        AFP
+    </author1>
+    <text1>
+        La Alta Comisionada de la ONU para los Derechos Humanos, Michelle Bachelet, denunció este lunes más casos de &quot;posibles ejecuciones extrajudiciales&quot;, así como de &quot;torturas y malos tratos&quot; de detenidos en Venezuela.
 
 En un discurso en la 42ª sesión del Consejo de Derechos Humanos de Naciones Unidas en Ginebra, Bachelet presentó un duro nuevo informe sobre la situación en Venezuela bajo el gobierno del presidente Nicolás Maduro.
 
-"Mi oficina ha seguido documentando casos de posibles ejecuciones extrajudiciales cometidas por miembros de las Fuerzas de Acción Especiales de la Policía Nacional -conocidas como FAES- en algunos barrios del país", señaló.
+&quot;Mi oficina ha seguido documentando casos de posibles ejecuciones extrajudiciales cometidas por miembros de las Fuerzas de Acción Especiales de la Policía Nacional -conocidas como FAES- en algunos barrios del país&quot;, señaló.
 
-"Tan sólo en el pasado mes de julio la organización no-gubernamental 'Monitor de Víctimas' identificó 57 nuevos casos de presuntas ejecuciones cometidas por miembros del FAES en Caracas", precisó la exmandataria chilena.
+&quot;Tan sólo en el pasado mes de julio la organización no-gubernamental &apos;Monitor de Víctimas&apos; identificó 57 nuevos casos de presuntas ejecuciones cometidas por miembros del FAES en Caracas&quot;, precisó la exmandataria chilena.
 
-Bachelet indicó además que su oficina documentó "casos de tortura y malos tratos, tanto físicos como psicológicos, de personas arbitrariamente privadas de su libertad, en particular de militares".
+Bachelet indicó además que su oficina documentó &quot;casos de tortura y malos tratos, tanto físicos como psicológicos, de personas arbitrariamente privadas de su libertad, en particular de militares&quot;.
 
-En contraposición a estas denuncias, dijo que el gobierno de Maduro cumplió con "la excarcelación" de "83 personas", entre ellas "aquellas cuya detención había sido considerada como arbitraria por el Grupo de Trabajo de Detención Arbitraria".
+En contraposición a estas denuncias, dijo que el gobierno de Maduro cumplió con &quot;la excarcelación&quot; de &quot;83 personas&quot;, entre ellas &quot;aquellas cuya detención había sido considerada como arbitraria por el Grupo de Trabajo de Detención Arbitraria&quot;.
 
-El número dos del chavismo, Diosdado Cabello, desestimó horas después este nuevo informe crítico de Bachelet, y la acusó de "ensañamiento" contra Venezuela.
+El número dos del chavismo, Diosdado Cabello, desestimó horas después este nuevo informe crítico de Bachelet, y la acusó de &quot;ensañamiento&quot; contra Venezuela.
 
-"Lo que diga la señora Bachelet (...) no nos va a quitar el sueño, no nos vamos a dejar chantajear para nada", afirmó en una rueda de prensa televisada Cabello, presidente de la oficialista Asamblea Nacional Constituyente.
+&quot;Lo que diga la señora Bachelet (...) no nos va a quitar el sueño, no nos vamos a dejar chantajear para nada&quot;, afirmó en una rueda de prensa televisada Cabello, presidente de la oficialista Asamblea Nacional Constituyente.
 
-El dirigente rechazó el "ensañamiento" de la representante de la ONU contra su país y criticó que "su vista esté posicionada sobre Venezuela, Cuba y Nicaragua" mientras, según denunció, "no ve nada" de violaciones de derechos humanos en países como Colombia o el propio Chile.
-En un primer informe, presentado el pasado 5 de julio, Bachelet había denunciado la "erosión del Estado de derecho" en Venezuela, advirtiendo también que las sanciones internacionales agravaban la crisis en el país.
+El dirigente rechazó el &quot;ensañamiento&quot; de la representante de la ONU contra su país y criticó que &quot;su vista esté posicionada sobre Venezuela, Cuba y Nicaragua&quot; mientras, según denunció, &quot;no ve nada&quot; de violaciones de derechos humanos en países como Colombia o el propio Chile.
+En un primer informe, presentado el pasado 5 de julio, Bachelet había denunciado la &quot;erosión del Estado de derecho&quot; en Venezuela, advirtiendo también que las sanciones internacionales agravaban la crisis en el país.
 
-"La situación de derechos humanos sigue afectando a millones de personas en Venezuela y con claros impactos desestabilizadores en la región", reiteró este lunes.
+&quot;La situación de derechos humanos sigue afectando a millones de personas en Venezuela y con claros impactos desestabilizadores en la región&quot;, reiteró este lunes.
 
 
 **Sanciones para las oenegés**
 
-Bachelet deploró, por otra parte, "las recientes acciones" con vistas a aprobar una ley que "tipifica como delito las actividades de las organizaciones de derechos humanos nacionales que reciben fondos del extranjero". 
+Bachelet deploró, por otra parte, &quot;las recientes acciones&quot; con vistas a aprobar una ley que &quot;tipifica como delito las actividades de las organizaciones de derechos humanos nacionales que reciben fondos del extranjero&quot;. 
 
-"Esa ley, si se aprueba y aplica, reducirá aún más el espacio democrático", advirtió la representante de la ONU.
+&quot;Esa ley, si se aprueba y aplica, reducirá aún más el espacio democrático&quot;, advirtió la representante de la ONU.
 
 Hace unas semanas, Cabello había advertido que la Asamblea Constituyente aprobaría una legislación para sancionar el financiamiento externo de las oenegés.
 
-"Vamos a (...) aprobar una ley para sancionar severamente a esas oenegés y personas que están recibiendo plata del imperialismo para conspirar contra nuestro país. Eso no lo permiten en Estados Unidos", dijo Cabello el pasado 14 de agosto, en su programa semanal en la televisión estatal VTV.
+&quot;Vamos a (...) aprobar una ley para sancionar severamente a esas oenegés y personas que están recibiendo plata del imperialismo para conspirar contra nuestro país. Eso no lo permiten en Estados Unidos&quot;, dijo Cabello el pasado 14 de agosto, en su programa semanal en la televisión estatal VTV.
 
 
 **Grave situación humanitaria**
 
-En su nuevo informe, Bachelet insistió además en que las sanciones del gobierno del presidente estadounidense Donald Trump contra el gobierno de Maduro contribuyen a "agravar la situación humanitaria" del país y el "éxodo" de venezolanos.
+En su nuevo informe, Bachelet insistió además en que las sanciones del gobierno del presidente estadounidense Donald Trump contra el gobierno de Maduro contribuyen a &quot;agravar la situación humanitaria&quot; del país y el &quot;éxodo&quot; de venezolanos.
 
-La representante de la ONU alertó que la situación económica y social del país se "sigue deteriorándose rápidamente".
+La representante de la ONU alertó que la situación económica y social del país se &quot;sigue deteriorándose rápidamente&quot;.
 
-La economía "atraviesa lo que podría ser el episodio hiperinflacionario más agudo que haya experimentado" América Latina, subrayó.
+La economía &quot;atraviesa lo que podría ser el episodio hiperinflacionario más agudo que haya experimentado&quot; América Latina, subrayó.
 
-Actualmente, el salario mínimo equivale a 2 dólares mensuales, en comparación con los 7 dólares en junio, precisó Bachelet. "Una familia necesita percibir el equivalente a 41 salarios mínimos mensuales para poder cubrir la canasta básica alimentaria".
+Actualmente, el salario mínimo equivale a 2 dólares mensuales, en comparación con los 7 dólares en junio, precisó Bachelet. &quot;Una familia necesita percibir el equivalente a 41 salarios mínimos mensuales para poder cubrir la canasta básica alimentaria&quot;.
 
 Venezuela vive la peor crisis en su historia reciente, reflejada en hiperinflación, el desplome de su vital producción de crudo y el éxodo de 3,6 millones de personas desde principios de 2016.
-	</text1>
+    </text1>
+    <title2>
+        Chavismo desestima informe de Bachelet: &quot;No nos va a quitar el sueño&quot;
+    </title2>
+    <author2>
+        AFP
+    </author2>
+    <text2>
+        El número dos del chavismo, Diosdado Cabello, desestimó este lunes un nuevo informe crítico de la alta comisionada de la ONU para los Derechos Humanos, Michelle Bachelet, afirmando que no les va a &quot;quitar el sueño&quot;, y la acusó de &quot;ensañamiento&quot; contra Venezuela.
 
-	<title2>
-		Chavismo desestima informe de Bachelet: "No nos va a quitar el sueño"
-	</title2>
-	<author2>
-		AFP
-	</author2>
-	<text2>
-El número dos del chavismo, Diosdado Cabello, desestimó este lunes un nuevo informe crítico de la alta comisionada de la ONU para los Derechos Humanos, Michelle Bachelet, afirmando que no les va a "quitar el sueño", y la acusó de "ensañamiento" contra Venezuela.
+&quot;Lo que diga la señora Bachelet (...) no nos va a quitar el sueño, no nos vamos a dejar chantajear para nada&quot;, afirmó en una rueda de prensa televisada Cabello, presidente de la oficialista Asamblea Nacional Constituyente.
 
-"Lo que diga la señora Bachelet (...) no nos va a quitar el sueño, no nos vamos a dejar chantajear para nada", afirmó en una rueda de prensa televisada Cabello, presidente de la oficialista Asamblea Nacional Constituyente.
+Esta fue la primera reacción del chavismo al nuevo informe presentado por Bachelet este lunes en el Consejo de Derechos Humanos de las Naciones Unidas en Ginebra, en el que denunció más casos de &quot;posibles ejecuciones extrajudiciales&quot;, así como de &quot;torturas y malos tratos&quot; de detenidos en Venezuela.
 
-Esta fue la primera reacción del chavismo al nuevo informe presentado por Bachelet este lunes en el Consejo de Derechos Humanos de las Naciones Unidas en Ginebra, en el que denunció más casos de "posibles ejecuciones extrajudiciales", así como de "torturas y malos tratos" de detenidos en Venezuela.
+Bachelet presentó en julio un primer informe, alertando de la &quot;erosión del Estado de derecho&quot; en el país caribeño, miles de asesinatos por parte de fuerzas de seguridad y represión al ejercicio de derechos fundamentales.
 
-Bachelet presentó en julio un primer informe, alertando de la "erosión del Estado de derecho" en el país caribeño, miles de asesinatos por parte de fuerzas de seguridad y represión al ejercicio de derechos fundamentales.
+Para el gobierno de Nicolás Maduro, el texto estaba lleno de &quot;graves errores, falsas acusaciones y omisiones&quot;.
 
-Para el gobierno de Nicolás Maduro, el texto estaba lleno de "graves errores, falsas acusaciones y omisiones".
+&quot;Señora Bachelet, haga ese y 20 informes más (...). No nos afecta mucho, nosotros seguiremos avanzando y respetando los derechos humanos porque así lo establece nuestra Constitución y la ley&quot;, subrayó Cabello.
 
-"Señora Bachelet, haga ese y 20 informes más (...). No nos afecta mucho, nosotros seguiremos avanzando y respetando los derechos humanos porque así lo establece nuestra Constitución y la ley", subrayó Cabello.
-
-El dirigente rechazó "el ensañamiento" de la también expresidenta chilena contra su país y criticó que "su vista esté posicionada sobre Venezuela, Cuba y Nicaragua" mientras, según denunció, "no ve nada" de violaciones de derechos humanos en países como Colombia o el propio Chile.
+El dirigente rechazó &quot;el ensañamiento&quot; de la también expresidenta chilena contra su país y criticó que &quot;su vista esté posicionada sobre Venezuela, Cuba y Nicaragua&quot; mientras, según denunció, &quot;no ve nada&quot; de violaciones de derechos humanos en países como Colombia o el propio Chile.
 
 En Caracas, activistas de derechos humanos se concentraron este lunes frente a la sede del Programa de las Naciones Unidas para el Desarrollo para pedir una Comisión de Investigación específica sobre Venezuela.
 
 Además de vivir una crisis política por la pugna de poder entre Maduro y el líder opositor Juan Guaidó, reconocido como gobernante interino por medio centenar de países, Venezuela está inmersa en la peor crisis socioeconómica en su historia reciente, que ha provocado el éxodo de 3,6 millones de personas desde principios de 2016.
-	</text2>
-
-	<title3>
-		EEUU cree que Maduro podría impulsar una petición contra Trump en la ONU
-	</title3>
-	<author3>
-		AFP
-	</author3>
-	<text3>
-El mandatario de Venezuela, Nicolás Maduro, podría presentar una petición en la ONU contra el presidente de Estados Unidos, Donald Trump, que según la oposición venezolana se sustenta en firmas de la ciudadanía recogidas bajo amenazas de retener la ayuda alimentaria, dicen diplomáticos estadounidenses. 
+    </text2>
+    <title3>
+        EEUU cree que Maduro podría impulsar una petición contra Trump en la ONU
+    </title3>
+    <author3>
+        AFP
+    </author3>
+    <text3>
+        El mandatario de Venezuela, Nicolás Maduro, podría presentar una petición en la ONU contra el presidente de Estados Unidos, Donald Trump, que según la oposición venezolana se sustenta en firmas de la ciudadanía recogidas bajo amenazas de retener la ayuda alimentaria, dicen diplomáticos estadounidenses. 
 
 Maduro, quien sigue en el poder en Venezuela a pesar de que sus opositores, respaldados por Estados Unidos, buscan que deje el cargo para que pueda convocarse a nuevas elecciones, aún no ha anunciado si viajará a Nueva York para la Asamblea General de las Naciones Unidas (AGNU) a finales de este mes. 
 
-"Nuestros diplomáticos han escuchado que Maduro planea presentar una petición contra el presidente Trump, firmada por millones de venezolanos, en la AGNU si finalmente asiste", dijo un funcionario estadounidense. 
+&quot;Nuestros diplomáticos han escuchado que Maduro planea presentar una petición contra el presidente Trump, firmada por millones de venezolanos, en la AGNU si finalmente asiste&quot;, dijo un funcionario estadounidense. 
 
-Trump, que considera el gobierno de Maduro como una "dictadura" y lo culpa de la debacle económica de la otrora potencia petrolera, ha impuesto una batería de sanciones a Venezuela para presionar la salida del mandatario e instalar un gobierno de transición encabezado por el jefe parlamentario Juan Guaido, considerado presidente interino por más de 50 países.
+Trump, que considera el gobierno de Maduro como una &quot;dictadura&quot; y lo culpa de la debacle económica de la otrora potencia petrolera, ha impuesto una batería de sanciones a Venezuela para presionar la salida del mandatario e instalar un gobierno de transición encabezado por el jefe parlamentario Juan Guaido, considerado presidente interino por más de 50 países.
 
-El gobierno de Maduro ha estado recogiendo firmas entre los venezolanos como parte de su campaña "No más Trump". 
+El gobierno de Maduro ha estado recogiendo firmas entre los venezolanos como parte de su campaña &quot;No más Trump&quot;. 
 
 Pero la oposición venezolana dice que el gobierno de Maduro ha reunido las firmas a través de extorsiones que ponen en juego la necesitada asistencia nutricional. 
 
-Videos publicados recientemente por la red venezolana de periodismo ciudadano Reporte Ya y por otros medios mostraron a quienes parecían ser venezolanos rechazando las órdenes de firmar la petición a cambio de recibir la ayuda, conocida localmente como "cajas CLAP", por ser entregadas por los Comités Locales de Abastecimiento y Producción.
+Videos publicados recientemente por la red venezolana de periodismo ciudadano Reporte Ya y por otros medios mostraron a quienes parecían ser venezolanos rechazando las órdenes de firmar la petición a cambio de recibir la ayuda, conocida localmente como &quot;cajas CLAP&quot;, por ser entregadas por los Comités Locales de Abastecimiento y Producción.
 
-"Si no firmas contra Trump y las sanciones, entonces no hay cajas de comida del CLAP", informó La Patilla, un destacado sitio de noticias cercano a la oposición, citando a una mujer perteneciente a consejos comunales del país.
+&quot;Si no firmas contra Trump y las sanciones, entonces no hay cajas de comida del CLAP&quot;, informó La Patilla, un destacado sitio de noticias cercano a la oposición, citando a una mujer perteneciente a consejos comunales del país.
 
-El Departamento de Estado de Estados Unidos describió el esfuerzo de Maduro como una "petición de hambre" y dijo que era evidente que no podía ganar una elección justa. 
+El Departamento de Estado de Estados Unidos describió el esfuerzo de Maduro como una &quot;petición de hambre&quot; y dijo que era evidente que no podía ganar una elección justa. 
 
-"Maduro no tiene suficiente apoyo entre el pueblo de Venezuela, por lo que depende de la extorsión para recolectar esas firmas", dijo un portavoz del Departamento de Estado. 
+&quot;Maduro no tiene suficiente apoyo entre el pueblo de Venezuela, por lo que depende de la extorsión para recolectar esas firmas&quot;, dijo un portavoz del Departamento de Estado. 
 
-"Que Maduro esté reteniendo alimentos para obligar a firmar es otro ejemplo de sus abusos contra los derechos humanos y de la manipulación política de los recursos humanitarios", señaló. 
+&quot;Que Maduro esté reteniendo alimentos para obligar a firmar es otro ejemplo de sus abusos contra los derechos humanos y de la manipulación política de los recursos humanitarios&quot;, señaló. 
 
 Maduro cuenta con el apoyo de Rusia, China y Cuba, así como de la jerarquía militar de Venezuela. Su gobierno ocupa el asiento de Venezuela en la ONU, por lo cual tiene derecho a participar en la AGNU, la cumbre anual de Naciones Unidas a la que Trump también asistirá.
-	</text3>
+    </text3>
+    <title4>
+        Venezuela llevará a la ONU &quot;pruebas&quot; de agresiones amparadas desde Colombia
+    </title4>
+    <author4>
+        AFP
+    </author4>
+    <text4>
+        El canciller venezolano, Jorge Arreaza, anunció este lunes que Caracas llevará a la ONU &quot;pruebas&quot; de agresiones contra su país amparadas desde Colombia, en medio de nuevas tensiones surgidas entre ambos países en días recientes.
 
-	<title4>
-		Venezuela llevará a la ONU "pruebas" de agresiones amparadas desde Colombia
-	</title4>
-	<author4>
-		AFP
-	</author4>
-	<text4>
-El canciller venezolano, Jorge Arreaza, anunció este lunes que Caracas llevará a la ONU "pruebas" de agresiones contra su país amparadas desde Colombia, en medio de nuevas tensiones surgidas entre ambos países en días recientes.
+&quot;No hemos hecho más que aportar a la paz (colombiana), mientras que desde territorio colombiano se amparan acciones terroristas contra Venezuela y nosotros sí tenemos datos, sí tenemos pruebas&quot;, dijo Arreaza ante el cuerpo diplomático acreditado en Caracas.
 
-"No hemos hecho más que aportar a la paz (colombiana), mientras que desde territorio colombiano se amparan acciones terroristas contra Venezuela y nosotros sí tenemos datos, sí tenemos pruebas", dijo Arreaza ante el cuerpo diplomático acreditado en Caracas.
-
-"Llevaremos la información a Naciones Unidas", señaló el canciller.
+&quot;Llevaremos la información a Naciones Unidas&quot;, señaló el canciller.
 
 El gobierno venezolano aseguró el 31 de agosto haber frustrado varios atentados con explosivos contra instalaciones públicas en Caracas, vinculando con esos planes al presidente colombiano, Iván Duque. 
 
-Además, este lunes arremetió contra un reporte de la revista colombiana Semana sobre una "alianza" entre el gobierno de Nicolás Maduro con grupos irregulares colombianos, afirmando que es otro "falso positivo" (montaje) basado en documentos "forjados" para provocar un "conflicto militar" entre los dos países.
+Además, este lunes arremetió contra un reporte de la revista colombiana Semana sobre una &quot;alianza&quot; entre el gobierno de Nicolás Maduro con grupos irregulares colombianos, afirmando que es otro &quot;falso positivo&quot; (montaje) basado en documentos &quot;forjados&quot; para provocar un &quot;conflicto militar&quot; entre los dos países.
 
-Estas denuncias ocurren dentro de renovadas tensiones entre Bogotá y Caracas, iniciadas a finales de agosto cuando Duque acusó al gobierno venezolano de dar "albergue" y "apoyo" a disidentes de la disuelta guerrilla de las FARC, que anunciaron su rearme.
+Estas denuncias ocurren dentro de renovadas tensiones entre Bogotá y Caracas, iniciadas a finales de agosto cuando Duque acusó al gobierno venezolano de dar &quot;albergue&quot; y &quot;apoyo&quot; a disidentes de la disuelta guerrilla de las FARC, que anunciaron su rearme.
 
 En respuesta, Maduro convocó ejercicios castrenses en la frontera común del 10 al 28 de septiembre y el despliegue de un sistema de misiles terrestres y antiaéreos.
 
 El canciller Arreaza reiteró que Caracas, que en febrero rompió relaciones diplomáticas con Bogotá por el apoyo de Duque al opositor Juan Guaidó como presidente interino de Venezuela, no ampara a los grupos irregulares colombianos.
 
-"Lo que hemos hecho con la autorización de las autoridades colombianas en todo momento ha sido estar al servicio del pueblo de Colombia (...) para procurar que haya paz", dijo el canciller venezolano, cuyo país fue uno de los facilitadores de los acuerdos de paz con las FARC.
-	</text4>
+&quot;Lo que hemos hecho con la autorización de las autoridades colombianas en todo momento ha sido estar al servicio del pueblo de Colombia (...) para procurar que haya paz&quot;, dijo el canciller venezolano, cuyo país fue uno de los facilitadores de los acuerdos de paz con las FARC.
+    </text4>
+    <image>
+        /images/201909/headers/newsletter-10.jpg
+    </image>
+    <imageDirectory>
+        /images/201909/newsletter-10
+    </imageDirectory>
 </newsletter>

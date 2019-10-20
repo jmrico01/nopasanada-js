@@ -1,51 +1,56 @@
 <article>
-	<featured>
-		<images>
-			/images/201909/headers/coral.jpg
-		</images>
-		<pretitle>
-		</pretitle>
-		<title>
-		</title>
-		<text1>
-		</text1>
-		<text2>
-		</text2>
-		<highlightColor>
-		</highlightColor>
-	</featured>
-	<tags>
-		ciencia
-	</tags>
-	<image>
-		/images/201909/headers/coral.jpg
-	</image>
-	<color>
-		#ffb3a1
-	</color>
-	<title>
-		Mitos y verdades sobre el efecto del bloqueador solar en los corales
-	</title>
-	<subtitle>
-		Nos han dicho que el protector solar que dejamos detrás en el mar contribuye al blaqueamiento de los corales, pero los científicos no están del todo convencidos.
-	</subtitle>
-	<description>
-		Nos han dicho que el protector solar que dejamos detrás en el mar contribuye al blaqueamiento de los corales, pero los científicos no están del todo convencidos.
-	</description>
-	<author>
-		Diana Gonz&aacute;lez
-	</author>
-	<day>
-		2
-	</day>
-	<month>
-		9
-	</month>
-	<year>
-		2019
-	</year>
-	<text>
-Lo hemos escuchado montones últimamente: es irresponsable usar bloqueador solar cuando nos bañamos en el mar. Parece que protegerse del sol en la playa sin impactar al medio ambiente es un dilema más de nuestros tiempos… pero, ¿realmente es así? ¿qué tal hacer un repaso de lo que dice la ciencia al respecto?
+    <featured>
+        <pretitle>
+            
+        </pretitle>
+        <title>
+            
+        </title>
+        <text1>
+            
+        </text1>
+        <text2>
+            
+        </text2>
+        <highlightColor>
+            
+        </highlightColor>
+        <images>
+            /images/201909/headers/coral.jpg
+        </images>
+    </featured>
+    <tags>
+        ciencia
+    </tags>
+    <title>
+        Mitos y verdades sobre el efecto del bloqueador solar en los corales
+    </title>
+    <titlePoster>
+        
+    </titlePoster>
+    <description>
+        Nos han dicho que el protector solar que dejamos detrás en el mar contribuye al blaqueamiento de los corales, pero los científicos no están del todo convencidos.
+    </description>
+    <day>
+        02
+    </day>
+    <month>
+        09
+    </month>
+    <year>
+        2019
+    </year>
+    <color>
+        #ffb3a1
+    </color>
+    <author>
+        Diana González
+    </author>
+    <subtitle>
+        Nos han dicho que el protector solar que dejamos detrás en el mar contribuye al blaqueamiento de los corales, pero los científicos no están del todo convencidos.
+    </subtitle>
+    <text>
+        Lo hemos escuchado montones últimamente: es irresponsable usar bloqueador solar cuando nos bañamos en el mar. Parece que protegerse del sol en la playa sin impactar al medio ambiente es un dilema más de nuestros tiempos… pero, ¿realmente es así? ¿qué tal hacer un repaso de lo que dice la ciencia al respecto?
  
 Los arrecifes de coral son una parte importante de la vida marítima por [numerosas razones](https://www.qm.qld.gov.au/microsites/biodiscovery/05human-impact/importance-of-coral-reefs.html): protegen a las costas del daño ocasionado por las olas y tormentas tropicales, proveen hábitat para varios animales marítimos, son fuente de nitrógeno y otros nutrientes esenciales para la cadena alimenticia marina, y asisten en la [fijación de nitrógeno](https://www.nature.com/scitable/knowledge/library/biological-nitrogen-fixation-23570419/) y carbono. Sin embargo, están en peligro y [podrían desaparecer para el año 2100, ocasionando daños inumerables al ecosistema](http://archivo-es.greenpeace.org/espana/Global/espana/report/cambio_climatico/el-cambio-climatico-y-los-arre.pdf); al fenómeno que los amenaza se le llama **blanqueo o blanqueamiento.**
 
@@ -87,6 +92,9 @@ Cuando te aplicás bloqueador en spray, cae una cantidad importante en la arena,
 
 **5. Esperá mínimo 30 minutos después de la aplicación de protector solar antes de meterte al mar**
 
-Cuando hayan pasado treinta minutos desde la aplicación de bloqueador, la piel habrá absorbido la mayoría de la crema. La cantidad que se disolvería en el mar sería menor. 
-	</text>
+Cuando hayan pasado treinta minutos desde la aplicación de bloqueador, la piel habrá absorbido la mayoría de la crema. La cantidad que se disolvería en el mar sería menor.
+    </text>
+    <image>
+        /images/201909/headers/coral.jpg
+    </image>
 </article>

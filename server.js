@@ -747,6 +747,7 @@ if (serverSettings.isDev) {
 
         try {
             await SaveEntryData(requestPath, templates_, req.body);
+            console.log("Saved entry " + requestPath);
             // Reload global data
             templates_ = LoadTemplateData();
             allEntryMetadata_ = await LoadAllEntryMetadata(templates_);
@@ -754,7 +755,7 @@ if (serverSettings.isDev) {
         catch (e) {
             res.status(500).end();
         }
-        res.end();
+        res.status(200).end();
     });
 
     appDev.post("/commit", checkAuthNoRedirect, async function(req, res) {

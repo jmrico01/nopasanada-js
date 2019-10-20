@@ -1,53 +1,58 @@
 <video>
-	<featured>
-		<images>
-			/images/201908/headers/enfoque3.jpg
-		</images>
-		<pretitle>
-		</pretitle>
-		<title>
-		</title>
-		<text1>
-		</text1>
-		<text2>
-		</text2>
-		<highlightColor>
-		</highlightColor>
-	</featured>
-	<tags>
-		cultura, home
-	</tags>
-	<videoID>
-		g36TGvzIi5o
-	</videoID>
-	<image>
-		/images/201908/headers/enfoque3.jpg
-	</image>
-	<color>
-		#7fffcb
-	</color>
-	<title>
-		Enfoque, Episodio 1. Trailer
-	</title>
-	<titlePoster>
-		Enfoque, Episodio 1.&lt;br&gt;Trailer
-	</titlePoster>
-	<subtitle>
-	</subtitle>
-	<description>
-	</description>
-	<author>
-	</author>
-	<day>
-		15
-	</day>
-	<month>
-		8
-	</month>
-	<year>
-		2019
-	</year>
-	<text>
-*En Enfoque conocemos las vidas e historias de celebrados y nuevos artistas viviendo y trabajando en Latinoamérica.*
-	</text>
+    <featured>
+        <pretitle>
+            
+        </pretitle>
+        <title>
+            
+        </title>
+        <text1>
+            
+        </text1>
+        <text2>
+            
+        </text2>
+        <highlightColor>
+            
+        </highlightColor>
+        <images>
+            /images/201908/headers/enfoque3.jpg
+        </images>
+    </featured>
+    <tags>
+        cultura,home
+    </tags>
+    <title>
+        Enfoque, Episodio 1. Trailer
+    </title>
+    <titlePoster>
+        Enfoque, Episodio 1.&lt;br&gt;Trailer
+    </titlePoster>
+    <description>
+        
+    </description>
+    <day>
+        15
+    </day>
+    <month>
+        08
+    </month>
+    <year>
+        2019
+    </year>
+    <color>
+        #7fffcb
+    </color>
+    <author>
+        
+    </author>
+    <subtitle>
+        
+    </subtitle>
+    <text>
+        *En Enfoque conocemos las vidas e historias de celebrados y nuevos artistas viviendo y trabajando en Latinoamérica.*
+    </text>
+    <image>
+        /images/201908/headers/enfoque3.jpg
+    </image>
 </video>

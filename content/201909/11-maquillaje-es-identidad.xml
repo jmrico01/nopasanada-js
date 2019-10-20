@@ -1,59 +1,56 @@
 <article>
-	<featured>
-		<images>
-			/images/201909/headers/maquillaje.jpg
-		</images>
-		<pretitle>
-			EDITORIAL:
-		</pretitle>
-		<title>
-			MAQUILLAJE,&lt;br&gt;&lt;b&gt;IDENTIDAD. *&lt;/b&gt;
-		</title>
-		<text1>
-			YA NO SE TRATA DE ALCANZAR LA PERFECCIÓN; NUESTRA RELACIÓN CON EL MAQUILLAJE SE HA TRANSFORMADO.
-		</text1>
-		<text2>
-			POR PAULINA JOARISTI
-		</text2>
-		<highlightColor>
-			#7fffcb
-		</highlightColor>
-	</featured>
-	<tags>
-		cultura, opinion
-	</tags>
-	<image>
-		/images/201909/headers/maquillaje.jpg
-	</image>
-	<imagePoster>
-		/images/201909/posters/11-article.jpg
-	</imagePoster>
-	<color>
-		#ffbdc8
-	</color>
-	<title>
-		Para las nuevas generaciones, el maquillaje es identidad, expresión y auto-cuido
-	</title>
-	<subtitle>
-		Ya no se trata de alcanzar la perfección; nuestra relación con el maquillaje se ha transformado.
-	</subtitle>
-	<description>
-		Ya no se trata de alcanzar la perfección; nuestra relación con el maquillaje se ha transformado.
-	</description>
-	<author>
-		Paulina Joaristi
-	</author>
-	<day>
-		11
-	</day>
-	<month>
-		9
-	</month>
-	<year>
-		2019
-	</year>
-	<text>
-Las nuevas generaciones creemos en el maquillaje como forma de expresión; ya no se trata de esconder imperfecciones, si no de cuidarse, de quererse, y de demostrarle al mundo quiénes somos en verdad.
+    <featured>
+        <pretitle>
+            EDITORIAL:
+        </pretitle>
+        <title>
+            MAQUILLAJE,&lt;br&gt;&lt;b&gt;IDENTIDAD. *&lt;/b&gt;
+        </title>
+        <text1>
+            YA NO SE TRATA DE ALCANZAR LA PERFECCIÓN; NUESTRA RELACIÓN CON EL MAQUILLAJE SE HA TRANSFORMADO.
+        </text1>
+        <text2>
+            POR PAULINA JOARISTI
+        </text2>
+        <highlightColor>
+            #7fffcb
+        </highlightColor>
+        <images>
+            /images/201909/headers/maquillaje.jpg
+        </images>
+    </featured>
+    <tags>
+        cultura,opinion
+    </tags>
+    <title>
+        Para las nuevas generaciones, el maquillaje es identidad, expresión y auto-cuido
+    </title>
+    <titlePoster>
+        
+    </titlePoster>
+    <description>
+        Ya no se trata de alcanzar la perfección; nuestra relación con el maquillaje se ha transformado.
+    </description>
+    <day>
+        11
+    </day>
+    <month>
+        09
+    </month>
+    <year>
+        2019
+    </year>
+    <color>
+        #ffbdc8
+    </color>
+    <author>
+        Paulina Joaristi
+    </author>
+    <subtitle>
+        Ya no se trata de alcanzar la perfección; nuestra relación con el maquillaje se ha transformado.
+    </subtitle>
+    <text>
+        Las nuevas generaciones creemos en el maquillaje como forma de expresión; ya no se trata de esconder imperfecciones, si no de cuidarse, de quererse, y de demostrarle al mundo quiénes somos en verdad.
 
 Marcas como [Glossier](https://www.glossier.com/) son representantes de una nueva generación de maquillaje y están rompiendo paradigmas: para ellos, maquillarse y cuidarse la piel no tienen que ser ni sacrificios económicos, ni deberían quitarnos demasiado tiempo; más bien, son maneras de hacer self-care. Estas marcas, se enfocan en promocionar la belleza natural y sus [productos son ligeros, fáciles de aplicar y duraderos](https://www.forbes.com/sites/pamdanziger/2018/11/07/5-keys-to-beauty-brand-glossiers-success/#2eae59f9417d(); así, nos hablan directamente a los millenials. Nosotros no compramos maquillaje para tapar nuestras inseguridades… ¡los compramos para mejorar nuestra piel y expresar nuestra identidad!  
 
@@ -69,6 +66,12 @@ Las redes sociales han sido una herramienta poderosa durante esta tranformación
 
 Las nuevas generaciones también consideran su impacto ecológico, y demandan lo mismo de las empresas que fabrican sus productos. Hacer pruebas en animales - algo muy común en el pasado - ya no es fácilmente aceptado por los consumidores; las marcas con el sello “cruelty free” ofrecen un valor agregado, y empresas como Kiehl’s, EOS, M.A.C, y L’Occitane, son conocidos por tener programas especiales de [reciclaje](http://hair-and-makeup-artist.com/womens-1950s-makeup/). 
 
-Mi mamá se maquillaba todos los días, especialmente en las noches. Hoy en día, nunca se maquilla, y siempre me recuerda que mi generación se quitó - y le quitó a ella - ese peso de encima. Maquillarse se ha vuelto una práctica de autocuido, asociada con la expresión de la identidad y por lo tanto inclusiva… y no una búsqueda de “perfección” dictada por estándares canónicos de belleza. 
-	</text>
+Mi mamá se maquillaba todos los días, especialmente en las noches. Hoy en día, nunca se maquilla, y siempre me recuerda que mi generación se quitó - y le quitó a ella - ese peso de encima. Maquillarse se ha vuelto una práctica de autocuido, asociada con la expresión de la identidad y por lo tanto inclusiva… y no una búsqueda de “perfección” dictada por estándares canónicos de belleza.
+    </text>
+    <image>
+        /images/201909/headers/maquillaje.jpg
+    </image>
+    <imagePoster>
+        /images/201909/posters/11-article.jpg
+    </imagePoster>
 </article>

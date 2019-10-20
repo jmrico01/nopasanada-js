@@ -1,73 +1,78 @@
 <article>
-	<featured>
-		<images>
-			/images/201908/headers/copanoise.jpg
-		</images>
-		<pretitle>
-		</pretitle>
-		<title>
-		</title>
-		<text1>
-		</text1>
-		<text2>
-		</text2>
-		<highlightColor>
-		</highlightColor>
-	</featured>
-	<media>
-		<insert type="image">
-			/images/201908/article-21/insert.png
-		</insert>
-		<folds1 type="image">
-			/images/201908/article-21/folds1.png
-		</folds1>
-		<folds2 type="image">
-			/images/201908/article-21/folds2.png
-		</folds2>
-		<opinion1 type="image" style="width: 50%;">
-			/images/201908/article-21/opinion1.png
-		</opinion1>
-		<opinion2 type="image" style="width: 50%;">
-			/images/201908/article-21/opinion2.png
-		</opinion2>
-		<opinion3 type="image" style="width: 50%;">
-			/images/201908/article-21/opinion3.png
-		</opinion3>
-	</media>
-	<tags>
-		ciencia
-	</tags>
-	<image>
-		/images/201908/headers/copanoise.jpg
-	</image>
-	<color>
-		#ffc2e0
-	</color>
-	<title>
-		8 preguntas frecuentes sobre la copa menstrual respondidas con la ciencia
-	</title>
-	<subtitle>
-		La popularidad de la copa menstrual ha incrementado exponencialmente gracias al &ldquo;de boca en boca&rdquo; entre mujeres: la mayor&iacute;a dicen que les cambi&oacute; la vida. Pero, &iquest;qu&eacute; dice la ciencia?
-	</subtitle>
-	<description>
-		No m&aacute;s incertidumbre o dudas acerca de la copa menstrual. Si estabas considerando comprarla, esta info te ayudar&aacute; a decidirte.
-	</description>
-	<author>
-		Diana Gonz&aacute;lez
-	</author>
-	<day>
-		21
-	</day>
-	<month>
-		8
-	</month>
-	<year>
-		2019
-	</year>
-	<text>
-*&ldquo;No tuve que volver a comprar tampones ni toallas. Uso la copa todos los días que tengo el periodo, ni siquiera tengo que ponerme un protector diario.&rdquo;*
+    <featured>
+        <pretitle>
+            
+        </pretitle>
+        <title>
+            
+        </title>
+        <text1>
+            
+        </text1>
+        <text2>
+            
+        </text2>
+        <highlightColor>
+            
+        </highlightColor>
+        <images>
+            /images/201908/headers/copanoise.jpg
+        </images>
+    </featured>
+    <media>
+        <insert type="image">
+            /images/201908/article-21/insert.png
+        </insert>
+        <folds1 type="image">
+            /images/201908/article-21/folds1.png
+        </folds1>
+        <folds2 type="image">
+            /images/201908/article-21/folds2.png
+        </folds2>
+        <opinion1 type="image" style="width: 50%;">
+            /images/201908/article-21/opinion1.png
+        </opinion1>
+        <opinion2 type="image" style="width: 50%;">
+            /images/201908/article-21/opinion2.png
+        </opinion2>
+        <opinion3 type="image" style="width: 50%;">
+            /images/201908/article-21/opinion3.png
+        </opinion3>
+    </media>
+    <tags>
+        ciencia
+    </tags>
+    <title>
+        8 preguntas frecuentes sobre la copa menstrual respondidas con la ciencia
+    </title>
+    <titlePoster>
+        
+    </titlePoster>
+    <description>
+        No más incertidumbre o dudas acerca de la copa menstrual. Si estabas considerando comprarla, esta info te ayudará a decidirte.
+    </description>
+    <day>
+        21
+    </day>
+    <month>
+        08
+    </month>
+    <year>
+        2019
+    </year>
+    <color>
+        #ffc2e0
+    </color>
+    <author>
+        Diana González
+    </author>
+    <subtitle>
+        La popularidad de la copa menstrual ha incrementado exponencialmente gracias al “de boca en boca” entre mujeres: la mayoría dicen que les cambió la vida. Pero, ¿qué dice la ciencia?
+    </subtitle>
+    <text>
+        *“No tuve que volver a comprar tampones ni toallas. Uso la copa todos los días que tengo el periodo, ni siquiera tengo que ponerme un protector diario.”*
 
-*&ldquo;Mi piel es muy sensible y alérgica; cada vez que tenía la menstruación se me irritaba el área por los kotex. Llevo 3 meses usando la copa menstrual y desde la primera vez noté la diferencia en mi piel.&rdquo;*
+*“Mi piel es muy sensible y alérgica; cada vez que tenía la menstruación se me irritaba el área por los kotex. Llevo 3 meses usando la copa menstrual y desde la primera vez noté la diferencia en mi piel.”*
 
 Motivada por opiniones así de parte de mis amigas y conocidas, y debido al hype en torno a la copa menstrual de los últimos años, quise investigar si este producto era una buena opción para mí. Pedí opiniones a mis profesores ginecólogos, pero me sorprendí por su poco conocimiento del tema. Su excusa es que que son muy nuevas en Costa Rica y que no muchas de sus pacientes las usan. 
 
@@ -132,14 +137,17 @@ La copa es menos amenazante de lo que parece, es un producto de larga duración 
 
 {{{ opinion1 }}}
 
-&ldquo;Desde que empecé a usar la copa hace un año, mi vida cambió en muchos aspectos. No tuve que volver a comprar tampones ni toallas, con la copa es suficiente. La uso todos los días que tengo el periodo, ni siquiera tengo que ponerme un protector diario. Varios pueden estar preocupados por la idea de estar en contacto con la sangre, pero es la sangre propia, entonces uno se acostumbra rápido. Es más higiénico también porque las toallas y los tampones agarran olor y tienen químicos que no son buenos para el cuerpo. La copa por otro lado está hecha de silicón, que es fácil de limpiar y no genera malos olores. Cuando hago ejercicio o salgo a caminar, no siento que la tengo puesta. Ya no veo el periodo como algo malo, se ha convertido en un proceso cómodo y natural de mi cuerpo. La recomiendo 100% porque además es sostenible, y necesitamos cuidar del planeta.&rdquo;
+“Desde que empecé a usar la copa hace un año, mi vida cambió en muchos aspectos. No tuve que volver a comprar tampones ni toallas, con la copa es suficiente. La uso todos los días que tengo el periodo, ni siquiera tengo que ponerme un protector diario. Varios pueden estar preocupados por la idea de estar en contacto con la sangre, pero es la sangre propia, entonces uno se acostumbra rápido. Es más higiénico también porque las toallas y los tampones agarran olor y tienen químicos que no son buenos para el cuerpo. La copa por otro lado está hecha de silicón, que es fácil de limpiar y no genera malos olores. Cuando hago ejercicio o salgo a caminar, no siento que la tengo puesta. Ya no veo el periodo como algo malo, se ha convertido en un proceso cómodo y natural de mi cuerpo. La recomiendo 100% porque además es sostenible, y necesitamos cuidar del planeta.”
 
 {{{ opinion2 }}}
 
-&ldquo;Amo todo lo que tiene que ver con la copa: es super fácil, uno la puede usar por mucho tiempo y es como si uno no tuviera la regla. Llevo casi un año usándola. Es conveniente económicamente porque no hay que comprar toallas ni tampones, por lo que uno se ahorra mucho dinero. Cuando uno viaja no se tiene que preocupar por empacar productos menstruales, sólo empaca la copa y listo, la cual no quita nada de espacio. Lo único que hay que destacar es que al principio cuesta un poco acostumbrarse a ponérsela pero una vez que uno se acostumbra, vale la pena.&rdquo;
+“Amo todo lo que tiene que ver con la copa: es super fácil, uno la puede usar por mucho tiempo y es como si uno no tuviera la regla. Llevo casi un año usándola. Es conveniente económicamente porque no hay que comprar toallas ni tampones, por lo que uno se ahorra mucho dinero. Cuando uno viaja no se tiene que preocupar por empacar productos menstruales, sólo empaca la copa y listo, la cual no quita nada de espacio. Lo único que hay que destacar es que al principio cuesta un poco acostumbrarse a ponérsela pero una vez que uno se acostumbra, vale la pena.”
 
 {{{ opinion3 }}}
 
-&ldquo;Son muchísimas las ventajas que he experimentado usando la copa menstrual. Mi piel es muy sensible y alérgica; cada vez que tenía la menstruación se me irritaba el área por los kotex. Llevo 3 meses usando la copa menstrual y desde la primera vez noté la diferencia en mi piel. También recuerdo que, con el kotex, cuando uno se levantaba en la mañana sentía la humedad que se había acumulado durante la noche - era un sentimiento muy desagradable. ¡Con la copa menstrual me levanto y hasta se me olvida que tengo la regla! Otra de las razones por las cuales la prefiero es porque soy una persona muy activa y voy mucho al gimnasio. Cuando hago ejercicio, siento para nada la copita. No le he encontrado ninguna desventaja.&rdquo;
-	</text>
+“Son muchísimas las ventajas que he experimentado usando la copa menstrual. Mi piel es muy sensible y alérgica; cada vez que tenía la menstruación se me irritaba el área por los kotex. Llevo 3 meses usando la copa menstrual y desde la primera vez noté la diferencia en mi piel. También recuerdo que, con el kotex, cuando uno se levantaba en la mañana sentía la humedad que se había acumulado durante la noche - era un sentimiento muy desagradable. ¡Con la copa menstrual me levanto y hasta se me olvida que tengo la regla! Otra de las razones por las cuales la prefiero es porque soy una persona muy activa y voy mucho al gimnasio. Cuando hago ejercicio, siento para nada la copita. No le he encontrado ninguna desventaja.”
+    </text>
+    <image>
+        /images/201908/headers/copanoise.jpg
+    </image>
 </article>

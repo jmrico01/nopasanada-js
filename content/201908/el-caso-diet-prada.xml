@@ -1,56 +1,61 @@
 <article>
-	<featured>
-		<images>
-			/images/201908/headers/diet-prada.jpg
-		</images>
-		<pretitle>
-		</pretitle>
-		<title>
-		</title>
-		<text1>
-		</text1>
-		<text2>
-		</text2>
-		<highlightColor>
-		</highlightColor>
-	</featured>
-	<media>
-		<instagram type="instagram">
-			B0OVdQHnfBu
-		</instagram>
-	</media>
-	<tags>
-		cultura, opinion
-	</tags>
-	<image>
-		/images/201908/headers/diet-prada.jpg
-	</image>
-	<color>
-		#ffc7f7
-	</color>
-	<title>
-		El caso Diet Prada y el abuso sexual en el mundo de la moda
-	</title>
-	<subtitle>
-		El negocio turbio detr&aacute;s de la fama y sus fot&oacute;grafos
-	</subtitle>
-	<description>
-		El negocio turbio detr&aacute;s de la fama y sus fot&oacute;grafos.
-	</description>
-	<author>
-		Paulina Joaristi
-	</author>
-	<day>
-		19
-	</day>
-	<month>
-		8
-	</month>
-	<year>
-		2019
-	</year>
-	<text>
-El acoso y las relaciones de poder en el mundo de la moda están lejos de ser un secreto, gracias en parte a la ola de denuncias que ha incentivado el movimiento #metoo. El caso Diet Prada deja estas conductas aún más en evidencia: desde hace unos años, la reconocida cuenta de instagram existe para exponer cómo los famosos y diseñadores se copian entre ellos, pero se volvió viral cuando ayudó a un grupo significativo de mujeres a denunciar a sus acosadores.
+    <featured>
+        <pretitle>
+            
+        </pretitle>
+        <title>
+            
+        </title>
+        <text1>
+            
+        </text1>
+        <text2>
+            
+        </text2>
+        <highlightColor>
+            
+        </highlightColor>
+        <images>
+            /images/201908/headers/diet-prada.jpg
+        </images>
+    </featured>
+    <media>
+        <instagram type="instagram">
+            B0OVdQHnfBu
+        </instagram>
+    </media>
+    <tags>
+        cultura,opinion
+    </tags>
+    <title>
+        El caso Diet Prada y el abuso sexual en el mundo de la moda
+    </title>
+    <titlePoster>
+        
+    </titlePoster>
+    <description>
+        El negocio turbio detrás de la fama y sus fotógrafos.
+    </description>
+    <day>
+        19
+    </day>
+    <month>
+        08
+    </month>
+    <year>
+        2019
+    </year>
+    <color>
+        #ffc7f7
+    </color>
+    <author>
+        Paulina Joaristi
+    </author>
+    <subtitle>
+        El negocio turbio detrás de la fama y sus fotógrafos
+    </subtitle>
+    <text>
+        El acoso y las relaciones de poder en el mundo de la moda están lejos de ser un secreto, gracias en parte a la ola de denuncias que ha incentivado el movimiento #metoo. El caso Diet Prada deja estas conductas aún más en evidencia: desde hace unos años, la reconocida cuenta de instagram existe para exponer cómo los famosos y diseñadores se copian entre ellos, pero se volvió viral cuando ayudó a un grupo significativo de mujeres a denunciar a sus acosadores.
 Queda demostrado además que, aunque el abusador es culpable, la industria también lo es: las agencias de modelaje, los cómplices que reciben algún tipo de ganancia monetaria, etc. La cultura del mundo de la moda no tiene límites establecidos ni oficinas de recursos humanos donde los modelos pueden acudir a pedir ayuda, y pone a los modelos en situaciones que atentan contra su dignidad y su cuerpo para poder alcanzar sus metas.
 
 Diet Prada, que se mantiene anónima por temas de seguridad, empezó por denunciar a [Marcus Hyde](https://people.com/style/kim-kardashian-photographer-marcus-hyde-accused-of-soliciting-nude-photos-from-model/), fotógrafo conocido por trabajar con Kim Kardashian y Ariana Grande. Según las tomas de pantalla que publicaron las víctimas, el hombre [ofrecía ayudarlas](https://www.dazeddigital.com/fashion/article/45406/1/marcus-hyde-timur-emek-photogaphers-accused-sexual-misconduct-harassment-assault) con su carrera a cambio de fotos desnudas, con la excusa de que necesitaba ver sus cuerpos y determinar si merecía invertir su tiempo en ellas. Las que se negaban a cooperar eran insultadas por Hyde; las que proporcionaban las fotos eran invitadas a una sesión fotográfica donde eran manoseadas y presionadas a tener sexo.
@@ -72,5 +77,8 @@ El acoso sexual afecta tanto a la mujer como el hombre en cualquier industria, c
 La revista The Cut hizo una serie de entrevistas a víctimas masculinas de acoso sexual que revelan que los hombres también enfrentan estigmas al hablar sobre el abuso; muchos llegan a cuestionarse los hechos al ser confrontados al respecto. ¿Por qué no se defendieron? es una pregunta común. ¿No pudieron haber simplemente golpeado a sus abusadores? Esto crea un ciclo de vergüenza y culpa que impide a las víctimas denunciar.
 
 Aunque empresas como Condé Nast han implementado nuevos [códigos de conducta](https://www.vogue.com/article/anna-wintour-responds-mario-testino-bruce-weber-sexual-misconduct-allegations) después de haber entrevistado a modelos, estilistas, agencias, fotografos, maquillistas y encargados de sets, cambios significativos en la cultura aún deben suceder para que las víctimas puedan empoderarse y relatar sus experiencias. Imaginen los miles de casos como estos que no han salido a la luz por dinero, poder o influencia… de no ser por el movimiento #metoo, quizá no nos habríamos enterado de ninguno.
-	</text>
+    </text>
+    <image>
+        /images/201908/headers/diet-prada.jpg
+    </image>
 </article>

@@ -1,56 +1,56 @@
 <article>
-	<featured>
-		<images>
-			/images/201908/headers/teletrabajo.jpg
-		</images>
-		<pretitle>
-			OPINI&Oacute;N:
-		</pretitle>
-		<title>
-			LA &lt;b&gt;LEY&lt;/b&gt; DEL &lt;b&gt;*&lt;/b&gt;&lt;br&gt;TELETRABAJO&lt;/b&gt;
-		</title>
-		<text1>
-			LA NUEVA LEY PARA REGULAR EL TELETRABAJO ES UN RESPIRO PARA EMPLEADOS, EMPRESAS - Y EL PAÍS.
-		</text1>
-		<text2>
-			POR ALICIA CASTRO
-		</text2>
-		<highlightColor>
-			#ff613c
-		</highlightColor>
-	</featured>
-	<tags>
-		ciencia, opinion, featured-opinion, home
-	</tags>
-	<image>
-		/images/201908/headers/teletrabajo.jpg
-	</image>
-	<color>
-		#c7ffed
-	</color>
-	<title>
-		La nueva ley para regular el teletrabajo es un respiro para empleados, empresas - y el país.
-	</title>
-	<subtitle>
-		Reducir costos, incrementar productividad, disminuir el consumo de combustibles: así enumera el Ministerio de Trabajo las consecuencias positivas de la nueva Ley.
-	</subtitle>
-	<description>
-		Reducir costos, incrementar productividad, disminuir el consumo de combustibles: así enumera el Ministerio de Trabajo las consecuencias positivas de la nueva Ley.
-	</description>
-	<author>
-		Alicia Castro
-	</author>
-	<day>
-		30
-	</day>
-	<month>
-		8
-	</month>
-	<year>
-		2019
-	</year>
-	<text>
-Jimena es una universitaria que estudia en San Pedro pero trabaja tiempo completo en Belén, y vive en Desamparados. Pensar en recorrer ese triángulo a hora pico, en cualquier tipo de transporte - pero sobretodo en transporte público - es una pesadilla para cualquiera. En el caso de Jimena, tener un acuerdo de teletrabajo con su empleador le ha dado la oportunidad de acomodar su horario universitario, y asistir a clases los días que no va a la oficina. Esto ha mejorado muchísimo su rendimiento: significa que trabaja más cómoda y motivada, y sin tener que lidiar con muchas de las situaciones que nos causan estrés a diario. Por ejemplo, [perder hasta dos horas y media de nuestro día en el tráfico](https://semanariouniversidad.com/pais/congestionamiento-vial-le-costaria-hasta-un-38-del-pib-a-costa-rica-cada-ano/).
+    <featured>
+        <pretitle>
+            OPINIÓN:
+        </pretitle>
+        <title>
+            LA &lt;b&gt;LEY&lt;/b&gt; DEL &lt;b&gt;*&lt;/b&gt;&lt;br&gt;TELETRABAJO&lt;/b&gt;
+        </title>
+        <text1>
+            LA NUEVA LEY PARA REGULAR EL TELETRABAJO ES UN RESPIRO PARA EMPLEADOS, EMPRESAS - Y EL PAÍS.
+        </text1>
+        <text2>
+            POR ALICIA CASTRO
+        </text2>
+        <highlightColor>
+            #ff613c
+        </highlightColor>
+        <images>
+            /images/201908/headers/teletrabajo.jpg
+        </images>
+    </featured>
+    <tags>
+        ciencia,opinion,featured-opinion,home
+    </tags>
+    <title>
+        La nueva ley para regular el teletrabajo es un respiro para empleados, empresas - y el país.
+    </title>
+    <titlePoster>
+        
+    </titlePoster>
+    <description>
+        Reducir costos, incrementar productividad, disminuir el consumo de combustibles: así enumera el Ministerio de Trabajo las consecuencias positivas de la nueva Ley.
+    </description>
+    <day>
+        30
+    </day>
+    <month>
+        08
+    </month>
+    <year>
+        2019
+    </year>
+    <color>
+        #c7ffed
+    </color>
+    <author>
+        Alicia Castro
+    </author>
+    <subtitle>
+        Reducir costos, incrementar productividad, disminuir el consumo de combustibles: así enumera el Ministerio de Trabajo las consecuencias positivas de la nueva Ley.
+    </subtitle>
+    <text>
+        Jimena es una universitaria que estudia en San Pedro pero trabaja tiempo completo en Belén, y vive en Desamparados. Pensar en recorrer ese triángulo a hora pico, en cualquier tipo de transporte - pero sobretodo en transporte público - es una pesadilla para cualquiera. En el caso de Jimena, tener un acuerdo de teletrabajo con su empleador le ha dado la oportunidad de acomodar su horario universitario, y asistir a clases los días que no va a la oficina. Esto ha mejorado muchísimo su rendimiento: significa que trabaja más cómoda y motivada, y sin tener que lidiar con muchas de las situaciones que nos causan estrés a diario. Por ejemplo, [perder hasta dos horas y media de nuestro día en el tráfico](https://semanariouniversidad.com/pais/congestionamiento-vial-le-costaria-hasta-un-38-del-pib-a-costa-rica-cada-ano/).
 
 **Una alternativa a las presas**
 
@@ -73,5 +73,8 @@ Los empleadores también se ven beneficiados: Gonzalo Delgado, presidente de la 
 La reducción del flujo vehicular que podría resultar de la nueva ley no solo beneficiaría a los que teletrabajan, sino a todos los que aún tendríamos que viajar a diario. Esta legislación, junto con otras iniciativas de refuerzo del transporte público, nos ayudarían a tener una ciudad más habitable y [menos contaminada](https://presidencia.go.cr/comunicados/2019/02/sintesis-plan-nacional-de-descarbonizacion-2018-2050/). Según [datos del Ministerio de Trabajo](http://www.mtss.go.cr/prensa/comunicados/2015/septiembre/Se_firma_Decreto_de_Teletrabajo_para_el_Sector_Publico.html), **el tránsito hacia la ciudad de San José se reduciría en aproximadamente 1.100 vehículos por día, ahorrando cerca de 350.000 litros de combustible al año, y disminuyendo en cerca de 60 toneladas las emisiones de CO2 al año.**
 
 Gracias a la aprobación de la ley, muchos podrán asumir sus responsabilidades sin pasar sus días entre pasillos grises o perdiendo su tiempo en presas interminables. **Seguramente habrá más empleados motivados, - y un país entero respirando aire más limpio.**
-	</text>
+    </text>
+    <image>
+        /images/201908/headers/teletrabajo.jpg
+    </image>
 </article>

@@ -1,51 +1,56 @@
 <article>
-	<featured>
-		<images>
-			/images/201908/headers/fashion.jpg
-		</images>
-		<pretitle>
-		</pretitle>
-		<title>
-		</title>
-		<text1>
-		</text1>
-		<text2>
-		</text2>
-		<highlightColor>
-		</highlightColor>
-	</featured>
-	<tags>
-		cultura
-	</tags>
-	<image>
-		/images/201908/headers/fashion.jpg
-	</image>
-	<color>
-		#ffc7f7
-	</color>
-	<title>
-		 Los diseños sostenibles de Andrea Kader: aire fresco en un mundo cada vez más contaminado.
-	</title>
-	<subtitle>
-		La moda es la industria más contaminante del planeta. El futuro del fashion está en diseñadores como Andrea Kader, tica dedicada a retar la cultura de la moda rápida.
-	</subtitle>
-	<description>
-		La moda es la industria más contaminante del planeta. El futuro del fashion está en diseñadores como Andrea Kader, tica dedicada a retar la cultura de la moda rápida.
-	</description>
-	<author>
-		Paulina Joaristi
-	</author>
-	<day>
-		26
-	</day>
-	<month>
-		8
-	</month>
-	<year>
-		2019
-	</year>
-	<text>
-Para [Andrea Kader](https://www.instagram.com/andreakader/), confeccionar una prenda requiere de muchas horas que nadie ve: pensar y dibujar en diseños originales y diferentes; hacer los patrones y las pruebas en tela de muselina; ir de tienda en tienda en búsqueda de la mejor calidad; lavar el material y empezar a descoser las piezas que se utilizan como tela - todo esto para que el diseño lentamente tome forma mientras pone alfileres y cose distintos pedazos. 
+    <featured>
+        <pretitle>
+            
+        </pretitle>
+        <title>
+            
+        </title>
+        <text1>
+            
+        </text1>
+        <text2>
+            
+        </text2>
+        <highlightColor>
+            
+        </highlightColor>
+        <images>
+            /images/201908/headers/fashion.jpg
+        </images>
+    </featured>
+    <tags>
+        cultura
+    </tags>
+    <title>
+        Los diseños sostenibles de Andrea Kader: aire fresco en un mundo cada vez más contaminado.
+    </title>
+    <titlePoster>
+        
+    </titlePoster>
+    <description>
+        La moda es la industria más contaminante del planeta. El futuro del fashion está en diseñadores como Andrea Kader, tica dedicada a retar la cultura de la moda rápida.
+    </description>
+    <day>
+        26
+    </day>
+    <month>
+        08
+    </month>
+    <year>
+        2019
+    </year>
+    <color>
+        #ffc7f7
+    </color>
+    <author>
+        Paulina Joaristi
+    </author>
+    <subtitle>
+        La moda es la industria más contaminante del planeta. El futuro del fashion está en diseñadores como Andrea Kader, tica dedicada a retar la cultura de la moda rápida.
+    </subtitle>
+    <text>
+        Para [Andrea Kader](https://www.instagram.com/andreakader/), confeccionar una prenda requiere de muchas horas que nadie ve: pensar y dibujar en diseños originales y diferentes; hacer los patrones y las pruebas en tela de muselina; ir de tienda en tienda en búsqueda de la mejor calidad; lavar el material y empezar a descoser las piezas que se utilizan como tela - todo esto para que el diseño lentamente tome forma mientras pone alfileres y cose distintos pedazos. 
 
 Esta es la definición de slow fashion: una alternativa a los procesos de confección textil tradicionales, los cuales han probado ser insostenibles para el planeta.
  
@@ -84,5 +89,8 @@ Pero usar materiales alternativos no es la única manera en la que Andrea hace p
 En los próximos años, Andrea sueña con hacer crecer su propia empresa y vender a escalas un poco mayores. Asegura que quiere seguir haciendo ropa cómoda y versátil pero que sea también única y especial. 
 
 Tomando en cuenta el estado actual del planeta, hoy más que nunca debemos imprimirle conciencia ambiental a nuestras decisiones de consumo.  El futuro de los textiles está en nuevos modelos de producción, diseños y procesos concientes de su impacto ecológico.
-	</text>
+    </text>
+    <image>
+        /images/201908/headers/fashion.jpg
+    </image>
 </article>
