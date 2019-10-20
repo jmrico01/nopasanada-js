@@ -41,14 +41,44 @@ const XML_ESCAPED_CHARS = {
 function ObjectToXMLRecursive(prefix, object)
 {
     let xml = "";
+    let attributes = [];
     let type = typeof(object);
     if (type === "object") {
         for (let key in object) {
-            let result = ObjectToXMLRecursive(prefix + XML_SINGLE_INDENT_STRING, object[key]);
-            if (result !== null) {
-                xml += prefix + "<" + key + ">\n";
-                xml += result;
-                xml += prefix + "</" + key + ">\n";
+            if (key === "_") {
+                // TODO same as bottom "else" case
+                if (object === "undefined") {
+                    console.warn("\"undefined\" string, treated as undefined value");
+                    return null;
+                }
+                let string = prefix + object[key] + "\n";
+                for (let i = 0; i < string.length; i++) {
+                    if (XML_ESCAPED_CHARS.hasOwnProperty(string[i])) {
+                        string = string.substring(0, i) + XML_ESCAPED_CHARS[string[i]] + string.substring(i + 1, string.length);
+                    }
+                }
+                xml += string;
+            }
+            else if (key === "$") {
+                for (let attrName in object[key]) {
+                    attributes.push({
+                        name: attrName,
+                        value: object[key][attrName]
+                    });
+                }
+            }
+            else {
+                // TODO same as top-level function
+                let result = ObjectToXMLRecursive(prefix + XML_SINGLE_INDENT_STRING, object[key]);
+                if (result !== null) {
+                    xml += prefix + "<" + key;
+                    for (let i = 0; i < result.attributes.length; i++) {
+                        xml += " " + result.attributes[i].name + "=" + "\"" + result.attributes[i].value + "\"";
+                    }
+                    xml += ">\n";
+                    xml += result.text;
+                    xml += prefix + "</" + key + ">\n";
+                }
             }
         }
     }
@@ -66,7 +96,10 @@ function ObjectToXMLRecursive(prefix, object)
         xml += string;
     }
 
-    return xml;
+    return {
+        text: xml,
+        attributes: attributes
+    };
 }
 
 function ObjectToXML(rootNode, object)
@@ -76,8 +109,12 @@ function ObjectToXML(rootNode, object)
         return null;
     }
 
-    let xml = "<" + rootNode + ">\n";
-    xml += result;
+    let xml = "<" + rootNode;
+    for (let i = 0; i < result.attributes.length; i++) {
+        xml += " " + result.attributes[i].name + "=" + "\"" + result.attributes[i].value + "\"";
+    }
+    xml += ">\n";
+    xml += result.text;
     xml += "</" + rootNode + ">\n";
     return xml;
 }
@@ -723,7 +760,7 @@ if (serverSettings.isDev) {
     appDev.post("/commit", checkAuthNoRedirect, async function(req, res) {
         console.log("Commit request received");
         exec("git add -A", function(err, stdout, stderr) {
-            console.log("> git add");
+            console.log("> git add -A");
             console.log(stdout);
             if (err) {
                 console.error("git add error: " + stderr);
@@ -734,7 +771,7 @@ if (serverSettings.isDev) {
             let date = Date(Date.now());
             let commitMessage = "backend : " + date.toString();
             exec("git commit -m \"" + commitMessage + "\"", function(err, stdout, stderr) {
-                console.log("> git commit");
+                console.log("> git commit -m ...");
                 console.log(stdout);
                 if (err) {
                     console.error("git commit error: " + stderr);

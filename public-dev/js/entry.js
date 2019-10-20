@@ -1,6 +1,8 @@
 let imageRowTemplate_ = null;
 let images_ = null;
 
+let entryMedia_ = null;
+
 function UpdateImageList(images)
 {
     let $imageList = $("#imagesList");
@@ -88,6 +90,8 @@ function LoadEntryData(entryData)
     document.getElementsByName("featuredText2")[0].value = entryData.featured.text2;
     document.getElementsByName("highlightColor")[0].value = entryData.featured.highlightColor;
 
+    entryMedia_ = entryData.media;
+
     document.getElementsByName("tags")[0].value = entryData.tags;
 
     document.getElementsByName("title")[0].value = entryData.title;
@@ -171,6 +175,8 @@ function SaveEntryData()
             highlightColor: document.getElementsByName("highlightColor")[0].value
         },
 
+        media:       entryMedia_,
+
         tags:        document.getElementsByName("tags")[0].value,
 
         title:       document.getElementsByName("title")[0].value,
@@ -203,7 +209,7 @@ function SaveEntryData()
     let images = images_;
     let imageHeader = GetImageByName("header", images);
     if (imageHeader === null) {
-        alert("Missing header image (upload image with name \"header\")");
+        alert("Missing header image");
         return;
     }
     entryData.featured.images = imageHeader.uri;
