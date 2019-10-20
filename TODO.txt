@@ -1,7 +1,8 @@
 0. slideshow thing
 
 1. back-end
-	a. save "passes"
+	a. password protect
+	b. option to add new entry
 
 2. landing page (on home page) scrolls through multiple featured articles
 
