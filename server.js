@@ -82,6 +82,30 @@ function ObjectToXML(rootNode, object)
     return xml;
 }
 
+function GetDateStringsFromUnixTime(unixTime)
+{
+    let date = Date(unixTime);
+    let dayString = date.getDay().toString();
+    if (dayString.length < 2) {
+        dayString = "0" + dayString;
+    }
+    else if (dayString.length > 2) {
+        throw new Error("day string on date has length > 2");
+    }
+    let monthString = date.getMonth().toString();
+    if (monthString.length < 2) {
+        monthString = "0" + monthString;
+    }
+    else if (monthString.length > 2) {
+        throw new Error("month string on date has length > 2");
+    }
+    return {
+        day: dayString,
+        month: monthString,
+        year: date.getFullYear().toString()
+    };
+}
+
 const serverSettings = require("./server-settings.js");
 
 const app = express();
@@ -558,19 +582,65 @@ if (serverSettings.isDev) {
 
     appDev.use(busboy());
     appDev.route("/newImage").post(function(req, res, next) {
-        console.log("new image");
-        let fstream;
         req.pipe(req.busboy);
-        req.busboy.on('file', function (fieldname, file, filename) {
-            console.log("Uploading: " + filename);
 
-            //Path where image will be uploaded
-            fstream = fs.createWriteStream(__dirname + '/img/' + filename);
+        let npnEntryPath = null;
+        let npnLabel = null;
+        req.busboy.on("field", function(fieldName, value, fieldNameTruncated, valueTruncated, encoding, mimetype) {
+            if (fieldName === "npnEntryPath") {
+                npnEntryPath = value;
+            }
+            else if (fieldName === "npnLabel") {
+                npnLabel = value;
+            }
+        });
+
+        let fstream;
+        req.busboy.on("file", function(fieldName, file, fileName) {
+            while (npnEntryPath === null || npnLabel === null);
+            let entryPathSplit = npnEntryPath.split("/");
+            let filePath = path.join(__dirname, "public", "images",
+                entryPathSplit[entryPathSplit.length - 2]);
+            if (npnLabel === "header") {
+                filePath = path.join(filePath, "headers",
+                    entryPathSplit[entryPathSplit.length - 1] + ".jpg");
+            }
+            else if (npnLabel === "poster") {
+                filePath = path.join(filePath, "posters",
+                    entryPathSplit[entryPathSplit.length - 1] + ".jpg");
+            }
+            else if (npnLabel.includes("header-desktop")) {
+                let number = npnLabel[npnLabel.length - 1];
+                if (number !== "1" && number !== "2" && number !== "3" && number !== "4") {
+                    console.error("Invalid npnLabel: " + npnLabel);
+                    res.status(400).end("Invalid npn label " + npnLabel);
+                    return;
+                }
+                filePath = path.join(filePath, entryPathSplit[entryPathSplit.length - 1],
+                    "vertical" + number + ".jpg");
+            }
+            else if (npnLabel.includes("header-mobile")) {
+                let number = npnLabel[npnLabel.length - 1];
+                if (number !== "1" && number !== "2" && number !== "3" && number !== "4") {
+                    console.error("Invalid npnLabel: " + npnLabel);
+                    res.status(400).end("Invalid npn label " + npnLabel);
+                    return;
+                }
+                filePath = path.join(filePath, entryPathSplit[entryPathSplit.length - 1],
+                    "square" + number + ".jpg");
+            }
+            else {
+                console.error("Invalid npnLabel: " + npnLabel);
+                res.status(400).end("Invalid npn label " + npnLabel);
+                return;
+            }
+
+            console.log("Uploading " + fileName + " to " + filePath);
+            fstream = fs.createWriteStream(filePath);
             file.pipe(fstream);
-            fstream.on('close', function () {    
-                console.log("Upload Finished of " + filename);              
-                //res.redirect('back');           //where to go next
-                res.end();
+            fstream.on("close", function () {
+                console.log("Upload finished for " + filePath);
+                res.status(200).end();
             });
         });
     });

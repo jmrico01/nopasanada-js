@@ -1,28 +1,6 @@
 let imageRowTemplate_ = null;
 let images_ = null;
 
-/*
-$("#imagesListAddForm").submit(function(event) {
-    event.preventDefault();
-
-    var formData = new FormData(this);
-    $.ajax({
-        type: "POST",
-        url: $(this).attr("action"),
-        data: formData,
-        cache: false,
-        contentType: false,
-        processData: false,
-        success: function(data) {
-            console.log(data);
-        },
-        error: function(data) {
-            alert(data);
-        }
-    });
-});
-*/
-
 function UpdateImageList(images)
 {
     let $imageList = $("#imagesList");
@@ -71,17 +49,19 @@ function LoadEntryData(entryData)
             uri: entryData.featured.images[i]
         });
     }
-    for (let i = 0; i < 4; i++) {
-        images.push({
-            name: "header-desktop" + (i + 1),
-            uri: entryData.imageDirectory + "/vertical" + (i + 1) + ".jpg"
-        });
-    }
-    for (let i = 0; i < 4; i++) {
-        images.push({
-            name: "header-mobile" + (i + 1),
-            uri: entryData.imageDirectory + "/square" + (i + 1) + ".jpg"
-        });
+    if (entryData.imageDirectory) {
+        for (let i = 0; i < 4; i++) {
+            images.push({
+                name: "header-desktop" + (i + 1),
+                uri: entryData.imageDirectory + "/vertical" + (i + 1) + ".jpg"
+            });
+        }
+        for (let i = 0; i < 4; i++) {
+            images.push({
+                name: "header-mobile" + (i + 1),
+                uri: entryData.imageDirectory + "/square" + (i + 1) + ".jpg"
+            });
+        }
     }
 
     let imagesDedup = [];
@@ -293,7 +273,59 @@ function SaveEntryData()
     });
 }
 
+Dropzone.options.imageDropzone = {
+    paramName: "imageFile",
+    acceptedFiles: "image/jpeg",
+    maxFiles: 1,
+    dictDefaultMessage: "Drag an image here to upload, or click to select one",
+    init: function() {
+        this.on("sending", function(file, xhr, formData) {
+            formData.set("npnEntryPath", GetEntryPath());
+            formData.set("npnLabel", file.npnLabel);
+        });
+        this.on("success", function(file, response) {
+            $("#statusMessage").html("Successfully uploaded " + file.name + " as " + file.npnLabel);
+            this.removeFile(file);
+        });
+        this.on("complete", function(file) {
+        });
+    },
+    accept: function(file, done) {
+        if (file.type !== "image/jpeg") {
+            done("Image format must be .jpg");
+            return;
+        }
+
+        let modalHtml = "<h3>Image Type</h3><select id=\"imageType\" name=\"imageType\"><option disabled selected value>-- select image type --</option></option><option value=\"header\">Header</option><option value=\"poster\">Poster</option>";
+        let contentType = document.getElementById("contentType").value;
+        if (contentType === "newsletter") {
+            for (let i = 0; i < 4; i++) {
+                modalHtml += "<option value=\"header-desktop" + (i + 1) + "\">Newsletter Desktop Header, Article " + (i + 1) + "</option>";
+            }
+            for (let i = 0; i < 4; i++) {
+                modalHtml += "<option value=\"header-mobile" + (i + 1) + "\">Newsletter Mobile Header, Article " + (i + 1) + "</option>";
+            }
+        }
+        modalHtml += "</select>";
+        $(".modal").show();
+        $(".modal-content").html(modalHtml);
+        $("#imageType").change(function(event) {
+            file.npnLabel = $("#imageType").val();
+            $(".modal").hide();
+            done();
+        });
+    }
+};
+
 $(document).ready(function() {
+    $(".modal").hide();
+    $(".modal").click(function(event) {
+        if (event.target === this) {
+            $(".modal").hide();
+            done("Cancelled");
+        }
+    });
+
     imageRowTemplate_ = $("#imagesListRowTemplate").html();
     $("#imagesListRowTemplate").remove();
 
@@ -318,11 +350,6 @@ $(document).ready(function() {
             $("#saveButton").click(function() {
                 SaveEntryData();
             });
-
-            let myDropzone = new Dropzone("div#imageDropzone", {
-                url: "/newImage"
-            });
-            console.log(myDropzone);
         },
         error: function(error) {
             console.error(error);

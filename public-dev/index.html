@@ -14,15 +14,24 @@
 </head>
 
 <body>
-	<div id="content">
-		<h1>No Pasa Nada: Back-End</h1>
+    <div id="header">
+        <h3 id="statusMessage"></h3>
         <div id="diffButton" class="bigBoyButton">DIFF</div>
         <div id="commitButton" class="bigBoyButton">COMMIT</div>
         <div id="deployButton" class="bigBoyButton">DEPLOY</div>
+    </div>
+
+	<div id="content">
+		<h1>No Pasa Nada: Back-End</h1>
 		<h2>All entries</h2>
 		<table id="entryTable">
 			<!-- Filled in by JS -->
 		</table>
 	</div>
+
+    <div id="modal" class="modal">
+        <div class="modal-content">
+        </div>
+    </div>
 </body>
 </html>

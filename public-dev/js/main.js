@@ -5,6 +5,8 @@ let tableFields = [
     [ "link", "ID / URL" ],
 ];
 
+let commitInProgress_ = false;
+
 function FormatTableFieldValue(tableField, entry)
 {
     const entryValue = entry[tableField[0]];
@@ -18,6 +20,14 @@ function FormatTableFieldValue(tableField, entry)
 }
 
 $(document).ready(function() {
+    $(".modal").hide();
+    $(".modal").click(function(event) {
+        if (event.target === this) {
+            $(".modal").hide();
+            done("Cancelled");
+        }
+    });
+
     $.get("/entries", function(data) {
         let tableHtml = "<tr>\n";
         for (let j = 0; j < tableFields.length; j++) {
@@ -48,17 +58,32 @@ $(document).ready(function() {
 
     $("#diffButton").click(function() {
         $.get("/diff", function(data) {
-            let string = "DIFF\n\n";
+            let diffHtml = "<h1>DIFF</h1>";
             for (let i = 0; i < data.length; i++) {
-                string += data[i].flag + " " + data[i].file + "\n";
+                diffHtml += "<p>" + data[i].flag + " " + data[i].file + "</p>";
             }
-            alert(string);
+            $(".modal").show();
+            $(".modal-content").html(diffHtml);
         });
     });
 
     $("#commitButton").click(function() {
-        $.post("/commit", function(data) {
-            console.log(data);
-        });
+        if (!commitInProgress_) {
+            commitInProgress_ = true;
+            $("#statusMessage").html("Committing changes...");
+            $.ajax({
+                type: "POST",
+                url: "/commit",
+                contentType: "application/json",
+                async: true,
+                data: "",
+                success: function(data) {
+                    $("#statusMessage").html("Successfully commited changes!");
+                },
+                error: function(error) {
+                    $("#statusMessage").html("Commit failed, error: " + error);
+                }
+            });
+        }
     });
 });

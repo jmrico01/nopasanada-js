@@ -7,6 +7,7 @@
 
     <title>No Pasa Nada</title>
 
+    <link rel="stylesheet" type="text/css" href="../css/dropzone.css">
     <link rel="stylesheet" type="text/css" href="../css/main.css">
     <link rel="stylesheet" type="text/css" href="../css/entry.css">
 
@@ -17,12 +18,13 @@
 
 <body>
     <div id="header">
+        <h3 id="statusMessage"></h3>
         <a href="../">
             <div id="backButton" class="bigBoyButton">BACK</div>
         </a>
         <div id="saveButton" class="bigBoyButton">SAVE</div>
-        <h3 id="statusMessage">- status -</h3>
     </div>
+
     <div id="content">
         <form>
             <div class="section">
@@ -120,29 +122,13 @@
         <div class="section">
             <h1>Images</h1>
             <div id="imagesListAdd">
-                <!--<div class="rowInfo">
-                    <div id="rowAddButton" class="bigBoyButton">
-                        ADD
-                    </div>
-                    <div class="rowText">
-                        Name: <input type="text" name="newImageName">
-                    </div>
-                </div>
-                <div class="rowImage">
-                </div>-->
-                <div id="imageDropzone"></div>
+                <form id="imageDropzone" class="dropzone" action="/newImage"></form>
             </div>
             <div id="imagesList">
                 <div id="imagesListRowTemplate">
                     <div class="imagesListRow">
                         <hr>
                         <div class="rowInfo">
-                            <div class="rowEditButton bigBoyButton">
-                                EDIT
-                            </div>
-                            <div class="rowDeleteButton bigBoyButton">
-                                DELETE
-                            </div>
                             <div class="rowText">
                                 <h2>Some text</h2>
                             </div>
@@ -152,6 +138,11 @@
                         </div>
                     </div>
                 </div>
+            </div>
+        </div>
+
+        <div id="modal" class="modal">
+            <div class="modal-content">
             </div>
         </div>
     </div>
