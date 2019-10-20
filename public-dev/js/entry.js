@@ -1,6 +1,28 @@
 let imageRowTemplate_ = null;
 let images_ = null;
 
+/*
+$("#imagesListAddForm").submit(function(event) {
+    event.preventDefault();
+
+    var formData = new FormData(this);
+    $.ajax({
+        type: "POST",
+        url: $(this).attr("action"),
+        data: formData,
+        cache: false,
+        contentType: false,
+        processData: false,
+        success: function(data) {
+            console.log(data);
+        },
+        error: function(data) {
+            alert(data);
+        }
+    });
+});
+*/
+
 function UpdateImageList(images)
 {
     let $imageList = $("#imagesList");
@@ -297,9 +319,10 @@ $(document).ready(function() {
                 SaveEntryData();
             });
 
-            $("#rowAddButton").click(function() {
-                document.getElementById("imagesListAddForm").submit();
-            })
+            let myDropzone = new Dropzone("div#imageDropzone", {
+                url: "/newImage"
+            });
+            console.log(myDropzone);
         },
         error: function(error) {
             console.error(error);

@@ -76,6 +76,12 @@ select {
     width: auto;
 }
 
+#imageDropzone {
+    width: 500pt;
+    height: 200pt;
+}
+
+/*
 #imagesListAdd {
 	height: 100pt;
 }
@@ -87,6 +93,7 @@ select {
     cursor: pointer;
     background-color: #2f2;
 }
+*/
 
 input[type=file] {
     font-family: sans-serif;

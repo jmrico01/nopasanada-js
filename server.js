@@ -1,4 +1,5 @@
 const assert = require("assert");
+const busboy = require("connect-busboy");
 const { exec } = require("child_process");
 const express = require("express");
 const fs = require("fs");
@@ -555,10 +556,23 @@ if (serverSettings.isDev) {
 
     const appDev = express();
 
-    appDev.post("/newImage", checkAuthNoRedirect, async function(req, res) {
-        console.log(req);
-        console.log(req.body);
-        res.end();
+    appDev.use(busboy());
+    appDev.route("/newImage").post(function(req, res, next) {
+        console.log("new image");
+        let fstream;
+        req.pipe(req.busboy);
+        req.busboy.on('file', function (fieldname, file, filename) {
+            console.log("Uploading: " + filename);
+
+            //Path where image will be uploaded
+            fstream = fs.createWriteStream(__dirname + '/img/' + filename);
+            file.pipe(fstream);
+            fstream.on('close', function () {    
+                console.log("Upload Finished of " + filename);              
+                //res.redirect('back');           //where to go next
+                res.end();
+            });
+        });
     });
 
     appDev.use(express.json());
