@@ -265,7 +265,7 @@ function SaveEntryData()
         async: true,
         data: JSON.stringify(entryData),
         success: function(data) {
-            $("#statusMessage").html("Successfully saved entry!");
+            $("#statusMessage").html("Entry save successful.");
         },
         error: function(error) {
             $("#statusMessage").html("Entry save failed, error: " + error);
@@ -308,6 +308,12 @@ Dropzone.options.imageDropzone = {
         }
         modalHtml += "</select>";
         $(".modal").show();
+        $(".modal").click(function(event) {
+            if (event.target === this) {
+                $(".modal").hide();
+                done("Cancelled");
+            }
+        });
         $(".modal-content").html(modalHtml);
         $("#imageType").change(function(event) {
             file.npnLabel = $("#imageType").val();
@@ -319,12 +325,6 @@ Dropzone.options.imageDropzone = {
 
 $(document).ready(function() {
     $(".modal").hide();
-    $(".modal").click(function(event) {
-        if (event.target === this) {
-            $(".modal").hide();
-            done("Cancelled");
-        }
-    });
 
     imageRowTemplate_ = $("#imagesListRowTemplate").html();
     $("#imagesListRowTemplate").remove();

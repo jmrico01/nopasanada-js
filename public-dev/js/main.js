@@ -6,6 +6,7 @@ let tableFields = [
 ];
 
 let commitInProgress_ = false;
+let deployInProgress_ = false;
 
 function FormatTableFieldValue(tableField, entry)
 {
@@ -24,7 +25,6 @@ $(document).ready(function() {
     $(".modal").click(function(event) {
         if (event.target === this) {
             $(".modal").hide();
-            done("Cancelled");
         }
     });
 
@@ -74,14 +74,42 @@ $(document).ready(function() {
             $.ajax({
                 type: "POST",
                 url: "/commit",
-                contentType: "application/json",
+                contentType: "application/text",
+                dataType: "text",
                 async: true,
                 data: "",
                 success: function(data) {
-                    $("#statusMessage").html("Successfully commited changes!");
+                    $("#statusMessage").html("Commit successful.");
+                    commitInProgress_ = false;
                 },
                 error: function(error) {
-                    $("#statusMessage").html("Commit failed, error: " + error);
+                    console.log(error);
+                    $("#statusMessage").html("Commit failed, error: " + error.responseText);
+                    commitInProgress_ = false;
+                }
+            });
+        }
+    });
+
+    $("#deployButton").click(function() {
+        if (!deployInProgress_) {
+            deployInProgress_ = true;
+            $("#statusMessage").html("Deploying changes...");
+            $.ajax({
+                type: "POST",
+                url: "/deploy",
+                contentType: "application/text",
+                dataType: "text",
+                async: true,
+                data: "",
+                success: function(data) {
+                    $("#statusMessage").html("Deploy successful.");
+                    deployInProgress_ = false;
+                },
+                error: function(error) {
+                    console.log(error);
+                    $("#statusMessage").html("Deploy failed, error: " + error.responseText);
+                    deployInProgress_ = false;
                 }
             });
         }

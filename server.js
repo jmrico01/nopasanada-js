@@ -721,33 +721,54 @@ if (serverSettings.isDev) {
     });
 
     appDev.post("/commit", checkAuthNoRedirect, async function(req, res) {
+        console.log("Commit request received");
         exec("git add -A", function(err, stdout, stderr) {
+            console.log("> git add");
+            console.log(stdout);
             if (err) {
-                console.error("git back-end add failed: " + stderr);
-                res.status(500).end();
+                console.error("git add error: " + stderr);
+                res.status(500).end("git add error");
                 return;
             }
 
             let date = Date(Date.now());
             let commitMessage = "backend : " + date.toString();
             exec("git commit -m \"" + commitMessage + "\"", function(err, stdout, stderr) {
+                console.log("> git commit");
+                console.log(stdout);
                 if (err) {
-                    console.error("git back-end commit failed: " + stderr);
-                    res.status(500).end();
+                    console.error("git commit error: " + stderr);
+                    res.status(500).end("git commit error");
                     return;
                 }
 
                 exec("git push", function(err, stdout, stderr) {
+                    console.log("> git push");
+                    console.log(stdout);
                     if (err) {
-                        console.error("git back-end push failed: " + stderr);
-                        res.status(500).end();
+                        console.error("git push error: " + stderr);
+                        res.status(500).end("git push error");
                         return;
                     }
 
                     console.log("added, commited, and pushed " + commitMessage);
-                    res.end();
+                    res.status(200).end();
                 });
             });
+        });
+    });
+
+    appDev.post("/deploy", checkAuthNoRedirect, async function(req, res) {
+        console.log("Deploy request received");
+        exec("cd ../nopasanada && git pull && pm2 restart npn", function(err, stdout, stderr) {
+            console.log(stdout);
+            if (err) {
+                console.error("deploy failed: " + stderr);
+                res.status(500).end("exec error");
+                return;
+            }
+
+            res.status(200).end();
         });
     });
 
