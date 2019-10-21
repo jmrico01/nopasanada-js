@@ -56,6 +56,22 @@ $(document).ready(function() {
         $("#entryTable").html(tableHtml);
     });
 
+    $.ajax({
+        type: "GET",
+        url: "/previewSite",
+        contentType: "application/json",
+        dataType: "json",
+        async: true,
+        data: "",
+        success: function(data) {
+            let previewUrl = data.url;
+            $("#previewLink").attr("href", previewUrl);
+        },
+        error: function(error) {
+            console.error(error);
+        }
+    });
+
     $("#diffButton").click(function() {
         $.get("/diff", function(data) {
             let diffHtml = "<h1>DIFF</h1>";

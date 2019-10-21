@@ -729,6 +729,16 @@ if (serverSettings.isDev) {
         });
     });
 
+    appDev.get("/previewSite", isAuthenticatedNoRedirect, function(req, res) {
+        let url = "https://preview.nopasanada.com";
+        if (!serverSettings.isHttps) {
+            url = "http://localhost:" + serverSettings.port;
+        }
+        res.status(200).send({
+            url: url
+        });
+    });
+
     appDev.get("/entries", isAuthenticatedNoRedirect, function(req, res) {
         let content = allEntryMetadata_.slice(0);
         content.sort(function(a, b) {

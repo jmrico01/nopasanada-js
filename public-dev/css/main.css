@@ -39,6 +39,25 @@ td {
     font-weight: normal;
     text-align: left;
 }
+td a {
+    color: #33f;
+    text-decoration: underline;
+}
+td a:hover {
+    color: #77f;
+    text-decoration: underline;
+}
+
+a {
+    color: inherit;
+    font-weight: inherit;
+    text-decoration: inherit;
+}
+a:hover {
+    color: inherit;
+    font-weight: inherit;
+    text-decoration: inherit;
+}
 
 .modal {
     position: fixed;
@@ -97,6 +116,15 @@ td {
 }
 .bigBoyButton:hover {
     cursor: pointer;
+}
+
+#previewButton {
+    margin-right: 20pt;
+
+    background-color: #ccf;
+}
+#previewButton:hover {
+    background-color: #99f;
 }
 
 #diffButton {

@@ -5,17 +5,32 @@ let entryMedia_ = null;
 
 function UpdateImageList(images)
 {
-    let $imageList = $("#imagesList");
-    $imageList.html("");
+    $.ajax({
+        type: "GET",
+        url: "/previewSite",
+        contentType: "application/json",
+        dataType: "json",
+        async: true,
+        data: "",
+        success: function(data) {
+            let previewUrl = data.url;
+            let $imageList = $("#imagesList");
+            $imageList.html("");
 
-    for (let i = 0; i < images.length; i++) {
-        let $imageRow = $(imageRowTemplate_);
-        $imageRow.find(".rowImage img").attr("src", "http://localhost:6060" + images[i].uri); // TODO url here oops
-        $imageRow.find(".rowText h2").html(images[i].name);
-        $imageList.append($imageRow);
-    }
+            for (let i = 0; i < images.length; i++) {
+                let $imageRow = $(imageRowTemplate_);
+                $imageRow.find(".rowImage img").attr("src", previewUrl + images[i].uri);
+                $imageRow.find(".rowText h2").html(images[i].name);
+                $imageList.append($imageRow);
+            }
 
-    images_ = images;
+            images_ = images;
+        },
+        error: function(error) {
+            console.error("UpdateImageList failed");
+            console.error(error);
+        }
+    });
 }
 
 function GetEntryPath()
