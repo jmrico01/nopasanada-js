@@ -599,12 +599,20 @@ else {
 }
 
 if (serverSettings.isDev) {
-    function isUserAuthenticated(req, res, next) {
+    function isAuthenticatedRedirect(req, res, next) {
         if (req.user) {
             next();
         }
         else {
             res.redirect("/login");
+        }
+    }
+    function isAuthenticatedNoRedirect(req, res, next) {
+        if (req.user) {
+            next();
+        }
+        else {
+            res.status(401).end();
         }
     }
 
@@ -657,7 +665,7 @@ if (serverSettings.isDev) {
     }));
 
     appDev.use("/newImage", busboy());
-    appDev.post("/newImage", isUserAuthenticated, function(req, res, next) {
+    appDev.post("/newImage", isAuthenticatedNoRedirect, function(req, res, next) {
         req.pipe(req.busboy);
 
         let npnEntryPath = null;
@@ -721,7 +729,7 @@ if (serverSettings.isDev) {
         });
     });
 
-    appDev.get("/entries", isUserAuthenticated, function(req, res) {
+    appDev.get("/entries", isAuthenticatedNoRedirect, function(req, res) {
         let content = allEntryMetadata_.slice(0);
         content.sort(function(a, b) {
             // descending date order
@@ -730,7 +738,7 @@ if (serverSettings.isDev) {
         res.status(200).send(content);
     });
 
-    appDev.get("/content/*/*", isUserAuthenticated, async function(req, res) {
+    appDev.get("/content/*/*", isAuthenticatedNoRedirect, async function(req, res) {
         let requestPath = req.path;
         if (requestPath[requestPath.length - 1] === "/") {
             requestPath = requestPath.substring(0, requestPath.length - 1);
@@ -746,7 +754,7 @@ if (serverSettings.isDev) {
         res.status(200).send(entryData);
     });
 
-    appDev.get("/diff", isUserAuthenticated, async function(req, res) {
+    appDev.get("/diff", isAuthenticatedNoRedirect, async function(req, res) {
         exec("git diff --name-status", (err, stdout, stderr) => {
             if (err) {
                 console.error("Error when running git diff: " + stderr);
@@ -776,7 +784,7 @@ if (serverSettings.isDev) {
         });
     });
 
-    appDev.post("/content/*/*", isUserAuthenticated, async function(req, res) {
+    appDev.post("/content/*/*", isAuthenticatedNoRedirect, async function(req, res) {
         let requestPath = req.path;
         if (requestPath[requestPath.length - 1] === "/") {
             requestPath = requestPath.substring(0, requestPath.length - 1);
@@ -795,7 +803,7 @@ if (serverSettings.isDev) {
         res.status(200).end();
     });
 
-    appDev.post("/commit", isUserAuthenticated, async function(req, res) {
+    appDev.post("/commit", isAuthenticatedNoRedirect, async function(req, res) {
         console.log("Commit request received");
         exec("git add -A", function(err, stdout, stderr) {
             console.log("> git add -A");
@@ -833,7 +841,7 @@ if (serverSettings.isDev) {
         });
     });
 
-    appDev.post("/deploy", isUserAuthenticated, async function(req, res) {
+    appDev.post("/deploy", isAuthenticatedNoRedirect, async function(req, res) {
         console.log("Deploy request received");
         exec("cd ../nopasanada && git pull && pm2 restart npn", function(err, stdout, stderr) {
             console.log(stdout);
@@ -847,8 +855,8 @@ if (serverSettings.isDev) {
         });
     });
 
-    appDev.get("/", isUserAuthenticated);
-    appDev.get("/entry", isUserAuthenticated);
+    appDev.get("/", isAuthenticatedRedirect);
+    appDev.get("/entry", isAuthenticatedRedirect);
 
     appDev.use(express.static(path.join(__dirname, "/public-dev")));
 
