@@ -1,12 +1,16 @@
 const assert = require("assert");
 const busboy = require("connect-busboy");
+const cookieParser = require("cookie-parser");
 const { exec } = require("child_process");
 const express = require("express");
 const fs = require("fs");
 const http = require("http");
 const https = require("https");
+const LocalStrategy = require("passport-local").Strategy;
 const mustache = require("mustache");
+const passport = require("passport");
 const path = require("path");
+const session = require("express-session");
 const showdown = require("showdown");
 const util = require("util");
 const xml2jsParseString = require("xml2js").parseString;
@@ -595,30 +599,65 @@ else {
 }
 
 if (serverSettings.isDev) {
-    function isAuthenticated(req) {
-        return true; // TODO authentication logic
-    }
-    function checkAuthRedirect(req, res, next) {
-        if (!isAuthenticated(req)) {
+    function isUserAuthenticated(req, res, next) {
+        if (req.user) {
+            next();
+        }
+        else {
             res.redirect("/login");
         }
-        else {
-            next();
-        }
     }
-    function checkAuthNoRedirect(req, res, next) {
-        if (!isAuthenticated(req)) {
-            res.send("UNAUTHORIZED");
+
+    function isUsernameAndPasswordCorrect(username, password) {
+        return username === "admin" && password === "password";
+    }
+
+    passport.use(new LocalStrategy({
+        usernameField: "username",
+        passwordField: "password",
+    }, function(username, password, done) {
+        if (isUsernameAndPasswordCorrect(username, password)) {
+            console.log(username + " : logged in on " + Date(Date.now()).toString());
+            done(null, {
+                id: username
+            });
         }
         else {
-            next();
+            done(null, false, { message: "Invalid username and/or password." });
         }
-    }
+    }));
+
+    passport.serializeUser(function(user, done) {
+        done(null, user.id); // TODO identity for now
+    });
+
+    passport.deserializeUser(function(userID, done) {
+        done(null, {
+            id: userID
+        });
+    });
 
     const appDev = express();
 
-    appDev.use(busboy());
-    appDev.route("/newImage").post(function(req, res, next) {
+    appDev.use(express.json());
+    appDev.use(express.urlencoded({ extended: true }));
+
+    appDev.use(cookieParser());
+    appDev.use(session({
+        secret: "keyboard-cat",
+        resave: true,
+        saveUninitialized: false
+    }));
+    appDev.use(passport.initialize());
+    appDev.use(passport.session());
+
+    appDev.post("/authenticate", passport.authenticate("local", {
+        successRedirect: "/",
+        failureRedirect: "/login"
+    }));
+
+    appDev.use("/newImage", busboy());
+    appDev.post("/newImage", isUserAuthenticated, function(req, res, next) {
         req.pipe(req.busboy);
 
         let npnEntryPath = null;
@@ -682,9 +721,7 @@ if (serverSettings.isDev) {
         });
     });
 
-    appDev.use(express.json());
-
-    appDev.get("/entries", checkAuthNoRedirect, function(req, res) {
+    appDev.get("/entries", isUserAuthenticated, function(req, res) {
         let content = allEntryMetadata_.slice(0);
         content.sort(function(a, b) {
             // descending date order
@@ -693,7 +730,7 @@ if (serverSettings.isDev) {
         res.status(200).send(content);
     });
 
-    appDev.get("/content/*/*", checkAuthNoRedirect, async function(req, res) {
+    appDev.get("/content/*/*", isUserAuthenticated, async function(req, res) {
         let requestPath = req.path;
         if (requestPath[requestPath.length - 1] === "/") {
             requestPath = requestPath.substring(0, requestPath.length - 1);
@@ -709,7 +746,7 @@ if (serverSettings.isDev) {
         res.status(200).send(entryData);
     });
 
-    appDev.get("/diff", checkAuthNoRedirect, async function(req, res) {
+    appDev.get("/diff", isUserAuthenticated, async function(req, res) {
         exec("git diff --name-status", (err, stdout, stderr) => {
             if (err) {
                 console.error("Error when running git diff: " + stderr);
@@ -739,7 +776,7 @@ if (serverSettings.isDev) {
         });
     });
 
-    appDev.post("/content/*/*", checkAuthNoRedirect, async function(req, res) {
+    appDev.post("/content/*/*", isUserAuthenticated, async function(req, res) {
         let requestPath = req.path;
         if (requestPath[requestPath.length - 1] === "/") {
             requestPath = requestPath.substring(0, requestPath.length - 1);
@@ -758,7 +795,7 @@ if (serverSettings.isDev) {
         res.status(200).end();
     });
 
-    appDev.post("/commit", checkAuthNoRedirect, async function(req, res) {
+    appDev.post("/commit", isUserAuthenticated, async function(req, res) {
         console.log("Commit request received");
         exec("git add -A", function(err, stdout, stderr) {
             console.log("> git add -A");
@@ -796,7 +833,7 @@ if (serverSettings.isDev) {
         });
     });
 
-    appDev.post("/deploy", checkAuthNoRedirect, async function(req, res) {
+    appDev.post("/deploy", isUserAuthenticated, async function(req, res) {
         console.log("Deploy request received");
         exec("cd ../nopasanada && git pull && pm2 restart npn", function(err, stdout, stderr) {
             console.log(stdout);
@@ -810,8 +847,8 @@ if (serverSettings.isDev) {
         });
     });
 
-    appDev.get("/", checkAuthRedirect);
-    appDev.get("/entry", checkAuthRedirect);
+    appDev.get("/", isUserAuthenticated);
+    appDev.get("/entry", isUserAuthenticated);
 
     appDev.use(express.static(path.join(__dirname, "/public-dev")));
 

@@ -11,8 +11,12 @@
 	},
 	"dependencies": {
 		"connect-busboy": "0.0.2",
+		"cookie-parser": "^1.4.4",
 		"express": "^4.16.3",
+		"express-session": "^1.17.0",
 		"mustache": "^3.0.2",
+		"passport": "^0.4.0",
+		"passport-local": "^1.0.0",
 		"showdown": "^1.9.0",
 		"xml2js": "^0.4.19"
 	}

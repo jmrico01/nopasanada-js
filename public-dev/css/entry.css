@@ -22,10 +22,10 @@ a:hover {
     float: left;
     margin-left: 5pt;
 
-    background-color: #ff8;
+    background-color: #f7ea7c;
 }
 #saveButton:hover {
-    background-color: #ee2;
+    background-color: #e3d02b;
 }
 
 .section {
@@ -80,7 +80,7 @@ input[type=file] {
 .rowInfo {
 	position: relative;
 	float: left;
-	width: 25%;
+	width: 33%;
 	height: 100%;
 }
 
@@ -109,7 +109,7 @@ input[type=file] {
 
 .rowImage {
 	float: left;
-	width: 75%;
+	width: 67%;
 	height: 100%;
 }
 .rowImage img {

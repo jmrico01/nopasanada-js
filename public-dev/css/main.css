@@ -100,17 +100,17 @@ td {
 }
 
 #diffButton {
-    background-color: #8f8;
+    background-color: #dfaef2;
 }
 #diffButton:hover {
-    background-color: #5f5;
+    background-color: #ca81e6;
 }
 
 #commitButton {
-    background-color: #ff8;
+    background-color: #f7ea7c;
 }
 #commitButton:hover {
-    background-color: #ee2;
+    background-color: #e3d02b;
 }
 
 #deployButton {
@@ -118,4 +118,11 @@ td {
 }
 #deployButton:hover {
     background-color: #f55;
+}
+
+#newEntryButton {
+    background-color: #8f8;
+}
+#newEntryButton:hover {
+    background-color: #4f4;
 }
