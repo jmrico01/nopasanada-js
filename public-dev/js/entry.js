@@ -294,6 +294,8 @@ function SaveEntryData()
     });
 }
 
+// TODO(important) change local image URLs so that they are updated in entry data
+// TODO(important) featured image url???
 Dropzone.options.imageDropzone = {
     paramName: "imageFile",
     acceptedFiles: "image/jpeg",
