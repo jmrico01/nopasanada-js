@@ -8,6 +8,8 @@ let tableFields = [
 let commitInProgress_ = false;
 let deployInProgress_ = false;
 
+let entryData_ = null;
+
 function FormatTableFieldValue(tableField, entry)
 {
     const entryValue = entry[tableField[0]];
@@ -29,6 +31,7 @@ $(document).ready(function() {
     });
 
     $.get("/entries", function(data) {
+        entryData_ = data;
         let tableHtml = "<tr>\n";
         for (let j = 0; j < tableFields.length; j++) {
             if (tableFields[j][0] === "date") {
@@ -74,7 +77,20 @@ $(document).ready(function() {
 
     $("#newEntryButton").click(function() {
         // TODO(important) implement copy-from thing
-        let newEntryHtml = "<h1>New Entry</h1><form id=\"newEntryForm\"><h3>Type</h3><select id=\"contentType\" name=\"contentType\"><option value=\"article\">article</option><option value=\"newsletter\">newsletter</option><option value=\"text\">text</option><option value=\"video\">video</option></select><br><h3>URL</h3>/content/201910/ <input type=\"text\" name=\"uniqueName\"></input><br><input type=\"submit\" value=\"Create\"></input></form>";
+        let newEntryHtml = "<h1>New Entry</h1>";
+
+        newEntryHtml += "<form id=\"newEntryForm\">"
+
+        newEntryHtml += "<h3>Type</h3><select name=\"contentType\"><option value=\"article\">article</option><option value=\"newsletter\">newsletter</option><option value=\"text\">text</option><option value=\"video\">video</option></select><br>";
+        newEntryHtml += "<h3>URL</h3>/content/201910/ <input type=\"text\" name=\"uniqueName\"></input><br>";
+
+        newEntryHtml += "<select type=\"copyFrom\">";
+
+        newEntryHtml += "</select>";
+
+        newEntryHtml += "<input type=\"submit\" value=\"Create\"></input>";
+
+        newEntryHtml += "</form>";
         $(".modal").show();
         $(".modal-content").html(newEntryHtml);
         $("#newEntryForm").submit(function(event) {
