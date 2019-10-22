@@ -72,6 +72,38 @@ $(document).ready(function() {
         }
     });
 
+    $("#newEntryButton").click(function() {
+        // TODO(important) implement copy-from thing
+        let newEntryHtml = "<h1>New Entry</h1><form id=\"newEntryForm\"><h3>Type</h3><select id=\"contentType\" name=\"contentType\"><option value=\"article\">article</option><option value=\"newsletter\">newsletter</option><option value=\"text\">text</option><option value=\"video\">video</option></select><br><h3>URL</h3>/content/201910/ <input type=\"text\" name=\"uniqueName\"></input><br><input type=\"submit\" value=\"Create\"></input></form>";
+        $(".modal").show();
+        $(".modal-content").html(newEntryHtml);
+        $("#newEntryForm").submit(function(event) {
+            event.preventDefault();
+
+            let $form = $("#newEntryForm");
+            let formData = {
+                contentType: $form.find("select[name=contentType]").val(),
+                uniqueName: $form.find("input[name=uniqueName]").val()
+            };
+            $.ajax({
+                type: "POST",
+                url: "/newEntry",
+                contentType: "application/json",
+                async: true,
+                data: JSON.stringify(formData),
+                dataType: "text",
+                success: function(data) {
+                    $("#statusMessage").html("New entry created successfully.");
+                },
+                error: function(error) {
+                    console.log(error);
+                    $("#statusMessage").html("New entry creation failed, error: " + error.responseText);
+                }
+            });
+            $(".modal").hide();
+        });
+    });
+
     $("#diffButton").click(function() {
         $.get("/diff", function(data) {
             let diffHtml = "<h1>DIFF</h1>";

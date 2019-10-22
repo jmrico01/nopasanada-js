@@ -97,8 +97,10 @@ a:hover {
 }
 
 #content {
-    margin: 24pt;
+    margin-left: 10%;
+    margin-right: 10%;
     margin-top: 120pt; /* at least #header height + 2*padding-top */
+    margin-bottom: 120pt;
 }
 
 #entryTable {
@@ -153,4 +155,24 @@ a:hover {
 }
 #newEntryButton:hover {
     background-color: #4f4;
+}
+
+input[type=text], input[type=submit], textarea, select {
+    padding: 8pt 12pt;
+    margin: 8pt 0;
+    display: inline-block;
+    border: 2pt solid #ccc;
+    border-radius: 5pt;
+    box-sizing: border-box;
+
+    font-family: sans-serif;
+    font-size: 12pt;
+    font-weight: normal;
+    text-align: left;
+}
+input[type=submit]:hover {
+    border: 2pt solid #444;
+}
+select {
+    width: auto;
 }

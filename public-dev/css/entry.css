@@ -25,24 +25,8 @@
     background-color: #eee;
 }
 
-input[type=text], textarea, select {
-    padding: 8pt 12pt;
-    margin: 8pt 0;
-    display: inline-block;
-    border: 2pt solid #ccc;
-    border-radius: 5pt;
-    box-sizing: border-box;
-
-    font-family: sans-serif;
-    font-size: 12pt;
-    font-weight: normal;
-    text-align: left;
-}
 input[type=text], textarea {
     width: 100%;
-}
-select {
-    width: auto;
 }
 
 #imageDropzone {

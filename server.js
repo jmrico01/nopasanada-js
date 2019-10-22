@@ -91,13 +91,15 @@ function ObjectToXMLRecursive(prefix, object)
             console.warn("\"undefined\" string, treated as undefined value");
             return null;
         }
-        let string = prefix + object + "\n";
-        for (let i = 0; i < string.length; i++) {
-            if (XML_ESCAPED_CHARS.hasOwnProperty(string[i])) {
-                string = string.substring(0, i) + XML_ESCAPED_CHARS[string[i]] + string.substring(i + 1, string.length);
+        if (object !== "") {
+            let string = prefix + object + "\n";
+            for (let i = 0; i < string.length; i++) {
+                if (XML_ESCAPED_CHARS.hasOwnProperty(string[i])) {
+                    string = string.substring(0, i) + XML_ESCAPED_CHARS[string[i]] + string.substring(i + 1, string.length);
+                }
             }
+            xml += string;
         }
-        xml += string;
     }
 
     return {
@@ -125,15 +127,15 @@ function ObjectToXML(rootNode, object)
 
 function GetDateStringsFromUnixTime(unixTime)
 {
-    let date = Date(unixTime);
-    let dayString = date.getDay().toString();
+    let date = new Date(unixTime);
+    let dayString = date.getDate().toString();
     if (dayString.length < 2) {
         dayString = "0" + dayString;
     }
     else if (dayString.length > 2) {
         throw new Error("day string on date has length > 2");
     }
-    let monthString = date.getMonth().toString();
+    let monthString = (date.getMonth() + 1).toString();
     if (monthString.length < 2) {
         monthString = "0" + monthString;
     }
@@ -146,6 +148,60 @@ function GetDateStringsFromUnixTime(unixTime)
         year: date.getFullYear().toString()
     };
 }
+
+let blankSlates = {};
+let commonSlate = {
+    featured: {
+        pretitle: "",
+        title: "",
+        text1: "",
+        text2: "",
+        highlightColor: "",
+        images: "/images/unused/garrazo.jpg"
+    },
+    tags: "",
+    title: "",
+    titlePoster: "",
+    description: "",
+    day: "",
+    month: "",
+    year: "",
+    color: "",
+
+    image: ""
+};
+
+blankSlates.article = commonSlate;
+blankSlates.article.author = "";
+blankSlates.article.subtitle = "";
+blankSlates.article.text = "";
+
+blankSlates.newsletter = commonSlate;
+blankSlates.newsletter.audioSource = "";
+blankSlates.newsletter.title1 = "";
+blankSlates.newsletter.author1 = "";
+blankSlates.newsletter.text1 = "";
+blankSlates.newsletter.title2 = "";
+blankSlates.newsletter.author2 = "";
+blankSlates.newsletter.text2 = "";
+blankSlates.newsletter.title3 = "";
+blankSlates.newsletter.author3 = "";
+blankSlates.newsletter.text3 = "";
+blankSlates.newsletter.title4 = "";
+blankSlates.newsletter.author4 = "";
+blankSlates.newsletter.text4 = "";
+
+blankSlates.text = commonSlate;
+blankSlates.text.subtext1 = "";
+blankSlates.text.subtext2 = "";
+blankSlates.text.subtitle = "";
+blankSlates.text.text = "";
+
+blankSlates.video = commonSlate;
+blankSlates.video.videoID = "";
+blankSlates.video.author = "";
+blankSlates.video.subtitle = "";
+blankSlates.video.text = "";
 
 const serverSettings = require("./server-settings.js");
 
@@ -684,14 +740,13 @@ if (serverSettings.isDev) {
         req.busboy.on("file", function(fieldName, file, fileName) {
             while (npnEntryPath === null || npnLabel === null);
             let entryPathSplit = npnEntryPath.split("/");
-            let filePath = path.join(__dirname, "public", "images",
-                entryPathSplit[entryPathSplit.length - 2]);
+            let uri = path.join("images", entryPathSplit[entryPathSplit.length - 2]);
             if (npnLabel === "header") {
-                filePath = path.join(filePath, "headers",
+                uri = path.join(uri, "headers",
                     entryPathSplit[entryPathSplit.length - 1] + ".jpg");
             }
             else if (npnLabel === "poster") {
-                filePath = path.join(filePath, "posters",
+                uri = path.join(uri, "posters",
                     entryPathSplit[entryPathSplit.length - 1] + ".jpg");
             }
             else if (npnLabel.includes("header-desktop")) {
@@ -701,7 +756,7 @@ if (serverSettings.isDev) {
                     res.status(400).end("Invalid npn label " + npnLabel);
                     return;
                 }
-                filePath = path.join(filePath, entryPathSplit[entryPathSplit.length - 1],
+                uri = path.join(uri, entryPathSplit[entryPathSplit.length - 1],
                     "vertical" + number + ".jpg");
             }
             else if (npnLabel.includes("header-mobile")) {
@@ -711,7 +766,7 @@ if (serverSettings.isDev) {
                     res.status(400).end("Invalid npn label " + npnLabel);
                     return;
                 }
-                filePath = path.join(filePath, entryPathSplit[entryPathSplit.length - 1],
+                uri = path.join(uri, entryPathSplit[entryPathSplit.length - 1],
                     "square" + number + ".jpg");
             }
             else {
@@ -720,12 +775,15 @@ if (serverSettings.isDev) {
                 return;
             }
 
+            let filePath = path.join(__dirname, "public", uri);
             console.log("Uploading " + fileName + " to " + filePath);
-            fstream = fs.createWriteStream(filePath);
+            fstream = fs.createWriteStream(filePath, {
+                flags: "w+"
+            });
             file.pipe(fstream);
-            fstream.on("close", function () {
+            fstream.on("close", function() {
                 console.log("Upload finished for " + filePath);
-                res.status(200).end();
+                res.status(200).end("<uri>" + uri + "</uri>");
             });
         });
     });
@@ -793,6 +851,33 @@ if (serverSettings.isDev) {
             }
             res.status(200).send(diffFiles);
         });
+    });
+
+    appDev.post("/newEntry", isAuthenticatedNoRedirect, async function(req, res) {
+        let contentType = req.body.contentType;
+        let name = req.body.uniqueName;
+        let dateStrings = GetDateStringsFromUnixTime(Date.now());
+        let filePath = path.join(__dirname, "content", dateStrings.year + dateStrings.month, name + ".xml");
+        if (!blankSlates.hasOwnProperty(contentType)) {
+            res.status(500).end("Invalid content type");
+        }
+        let blankSlate = blankSlates[contentType];
+        blankSlate.year = dateStrings.year;
+        blankSlate.month = dateStrings.month;
+        blankSlate.day = dateStrings.day;
+        let xml = ObjectToXML(contentType, blankSlate);
+        try {
+            await writeFileAsync(filePath, xml);
+            console.log("Created new entry " + filePath);
+            // Reload global data
+            templates_ = LoadTemplateData();
+            allEntryMetadata_ = await LoadAllEntryMetadata(templates_);
+        }
+        catch (e) {
+            console.error(e);
+            res.status(500).end("Failed to create new entry file");
+        }
+        res.status(200).end();
     });
 
     appDev.post("/content/*/*", isAuthenticatedNoRedirect, async function(req, res) {

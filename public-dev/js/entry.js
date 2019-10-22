@@ -121,7 +121,7 @@ function LoadEntryData(entryData)
     document.getElementsByName("color")[0].value = entryData.color;
 
     document.getElementsByName("author")[0].value = entryData.author;
-    document.getElementsByName("youtubeID")[0].value = entryData.id;
+    document.getElementsByName("youtubeID")[0].value = entryData.videoID;
 
     document.getElementsByName("audioSource")[0].value = entryData.audioSource;
     document.getElementsByName("title1")[0].value = entryData.title1;
@@ -203,7 +203,7 @@ function SaveEntryData()
         color:       document.getElementsByName("color")[0].value,
 
         author:      document.getElementsByName("author")[0].value,
-        id:          document.getElementsByName("youtubeID")[0].value,
+        videoID:     document.getElementsByName("youtubeID")[0].value,
         audioSource: document.getElementsByName("audioSource")[0].value,
         title1:      document.getElementsByName("title1")[0].value,
         author1:     document.getElementsByName("author1")[0].value,
@@ -300,13 +300,19 @@ Dropzone.options.imageDropzone = {
     paramName: "imageFile",
     acceptedFiles: "image/jpeg",
     maxFiles: 1,
-    dictDefaultMessage: "Drag an image here to upload, or click to select one",
+    dictDefaultMessage: "Click here to upload, or drag an image (JPG only)",
     init: function() {
         this.on("sending", function(file, xhr, formData) {
             formData.set("npnEntryPath", GetEntryPath());
             formData.set("npnLabel", file.npnLabel);
         });
         this.on("success", function(file, response) {
+            let parser = new DOMParser();
+            let xmlDoc = parser.parseFromString(response, "text/xml");
+            let imageUri = xmlDoc.getElementsByTagName("uri")[0];
+            console.log(imageUri);
+            GetImageByName(file.npnLabel, images_).uri = imageUri;
+
             $("#statusMessage").html("Successfully uploaded " + file.name + " as " + file.npnLabel);
             this.removeFile(file);
         });
