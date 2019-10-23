@@ -882,6 +882,7 @@ if (serverSettings.isDev) {
                 return;
             }
             entryData = blankSlates[contentType];
+            entryData.contentType = contentType;
         }
         else {
             const result = await GetEntryData(copyFrom, templates_);
