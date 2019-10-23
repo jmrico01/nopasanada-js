@@ -16,6 +16,7 @@ const util = require("util");
 const xml2jsParseString = require("xml2js").parseString;
 
 // Jesus...
+const mkdirAsync     = util.promisify(fs.mkdir);
 const readdirAsync   = util.promisify(fs.readdir);
 const readFileAsync  = util.promisify(fs.readFile);
 const unlinkAsync    = util.promisify(fs.unlink);
@@ -744,7 +745,6 @@ if (serverSettings.isDev) {
             }
         });
 
-        // TODO(important) create these dirs if they don't exist
         let fstream;
         req.busboy.on("file", function(fieldName, file, fileName) {
             while (npnEntryPath === null || npnLabel === null);
@@ -785,14 +785,22 @@ if (serverSettings.isDev) {
             }
 
             let filePath = path.join(__dirname, "public", uri);
-            console.log("Uploading " + fileName + " to " + filePath);
-            fstream = fs.createWriteStream(filePath, {
-                flags: "w+"
-            });
-            file.pipe(fstream);
-            fstream.on("close", function() {
-                console.log("Upload finished for " + filePath);
-                res.status(200).end("<uri>" + uri + "</uri>");
+            let fileDir = path.dirname(filePath);
+            fs.mkdir(fileDir, { recursive: true }, function(error) {
+                if (error) {
+                    console.error(error);
+                    res.status(400).end("Failed to create image directory");
+                    return;
+                }
+                console.log("Uploading " + fileName + " to " + filePath);
+                fstream = fs.createWriteStream(filePath, {
+                    flags: "w+"
+                });
+                file.pipe(fstream);
+                fstream.on("close", function() {
+                    console.log("Upload finished for " + filePath);
+                    res.status(200).end("<uri>" + uri + "</uri>");
+                });
             });
         });
     });

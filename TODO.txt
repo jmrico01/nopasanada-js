@@ -1,8 +1,7 @@
 0. slideshow thing
 
 1. back-end
-	a. password protect
-	b. option to add new entry
+	a. tag system
 
 2. landing page (on home page) scrolls through multiple featured articles
 
