@@ -1,20 +1,22 @@
-#backButton {
-    float: left;
-
+#backButton, #previewButton {
     background-color: #ccf;
 }
-#backButton:hover {
+#backButton:hover, #previewButton:hover {
     background-color: #99f;
 }
 
 #saveButton {
-    float: left;
-    margin-left: 5pt;
-
     background-color: #f7ea7c;
 }
 #saveButton:hover {
     background-color: #e3d02b;
+}
+
+#deleteButton {
+    background-color: #f88;
+}
+#saveButton:hover {
+    background-color: #f55;
 }
 
 .section {

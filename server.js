@@ -16,8 +16,10 @@ const util = require("util");
 const xml2jsParseString = require("xml2js").parseString;
 
 // Jesus...
-const readdirAsync = util.promisify(fs.readdir);
-const readFileAsync = util.promisify(fs.readFile);
+const mkdirAsync     = util.promisify(fs.mkdir);
+const readdirAsync   = util.promisify(fs.readdir);
+const readFileAsync  = util.promisify(fs.readFile);
+const unlinkAsync    = util.promisify(fs.unlink);
 const writeFileAsync = util.promisify(fs.writeFile);
 async function parseXMLStringAsync(xmlString)
 {
@@ -382,10 +384,18 @@ async function SaveEntryData(url, templates, entryData)
         throw new Error("Unknown contentType, can't save entry data: " + contentType);
     }
     delete entryData.contentType;
+    entryData.tags = entryData.tags.join(", ");
+    entryData.featured.images = entryData.featured.images.join(",\n");
     let xml = ObjectToXML(contentType, entryData);
 
     let xmlPath = path.join(__dirname, path.normalize(url + ".xml"));
     await writeFileAsync(xmlPath, xml);
+}
+
+async function DeleteEntry(url)
+{
+    let xmlPath = path.join(__dirname, path.normalize(url + ".xml"));
+    await unlinkAsync(xmlPath);
 }
 
 async function LoadAllEntryMetadata(templates)
@@ -735,7 +745,6 @@ if (serverSettings.isDev) {
             }
         });
 
-        // TODO(important) create these dirs if they don't exist
         let fstream;
         req.busboy.on("file", function(fieldName, file, fileName) {
             while (npnEntryPath === null || npnLabel === null);
@@ -776,14 +785,22 @@ if (serverSettings.isDev) {
             }
 
             let filePath = path.join(__dirname, "public", uri);
-            console.log("Uploading " + fileName + " to " + filePath);
-            fstream = fs.createWriteStream(filePath, {
-                flags: "w+"
-            });
-            file.pipe(fstream);
-            fstream.on("close", function() {
-                console.log("Upload finished for " + filePath);
-                res.status(200).end("<uri>" + uri + "</uri>");
+            let fileDir = path.dirname(filePath);
+            fs.mkdir(fileDir, { recursive: true }, function(error) {
+                if (error) {
+                    console.error(error);
+                    res.status(400).end("Failed to create image directory");
+                    return;
+                }
+                console.log("Uploading " + fileName + " to " + filePath);
+                fstream = fs.createWriteStream(filePath, {
+                    flags: "w+"
+                });
+                file.pipe(fstream);
+                fstream.on("close", function() {
+                    console.log("Upload finished for " + filePath);
+                    res.status(200).end("<uri>" + uri + "</uri>");
+                });
             });
         });
     });
@@ -854,28 +871,74 @@ if (serverSettings.isDev) {
     });
 
     appDev.post("/newEntry", isAuthenticatedNoRedirect, async function(req, res) {
-        let contentType = req.body.contentType;
         let name = req.body.uniqueName;
-        let dateStrings = GetDateStringsFromUnixTime(Date.now());
-        let filePath = path.join(__dirname, "content", dateStrings.year + dateStrings.month, name + ".xml");
-        if (!blankSlates.hasOwnProperty(contentType)) {
-            res.status(500).end("Invalid content type");
+        let contentType = req.body.contentType;
+        let copyFrom = req.body.copyFrom;
+
+        let entryData;
+        if (copyFrom === null) {
+            if (!blankSlates.hasOwnProperty(contentType)) {
+                res.status(500).end("Invalid content type");
+                return;
+            }
+            entryData = blankSlates[contentType];
         }
-        let blankSlate = blankSlates[contentType];
-        blankSlate.year = dateStrings.year;
-        blankSlate.month = dateStrings.month;
-        blankSlate.day = dateStrings.day;
-        let xml = ObjectToXML(contentType, blankSlate);
+        else {
+            const result = await GetEntryData(copyFrom, templates_);
+            if (result.status != 200) {
+                res.status(result.status).end("Failed to get existing entry data");
+                return;
+            }
+            entryData = result.entryData;
+            entryData.contentType = result.contentType;
+        }
+
+        let dateStrings = GetDateStringsFromUnixTime(Date.now());
+        entryData.year = dateStrings.year;
+        entryData.month = dateStrings.month;
+        entryData.day = dateStrings.day;
+
+        let uri = "content" + "/" + dateStrings.year + dateStrings.month + "/" + name;
         try {
-            await writeFileAsync(filePath, xml);
-            console.log("Created new entry " + filePath);
-            // Reload global data
+            await SaveEntryData(uri, templates_, entryData);
+        }
+        catch (e) {
+            console.error(e);
+            res.status(500).end("Failed to save new entry data");
+            return;
+        }
+        console.log("Saved new entry " + uri);
+        try {
             templates_ = LoadTemplateData();
             allEntryMetadata_ = await LoadAllEntryMetadata(templates_);
         }
         catch (e) {
             console.error(e);
-            res.status(500).end("Failed to create new entry file");
+            res.status(500).end("Failed to reload entry data");
+            return;
+        }
+        res.status(200).end();
+    });
+
+    appDev.post("/deleteEntry", isAuthenticatedNoRedirect, async function(req, res) {
+        let uri = req.body.uri;
+        try {
+            await DeleteEntry(uri);
+        }
+        catch (e) {
+            console.error(e);
+            res.status(500).end("Failed to delete entry");
+            return;
+        }
+        console.log("Deleted entry " + uri);
+        try {
+            templates_ = LoadTemplateData();
+            allEntryMetadata_ = await LoadAllEntryMetadata(templates_);
+        }
+        catch (e) {
+            console.error(e);
+            res.status(500).end("Failed to reload entry data");
+            return;
         }
         res.status(200).end();
     });
@@ -888,13 +951,22 @@ if (serverSettings.isDev) {
 
         try {
             await SaveEntryData(requestPath, templates_, req.body);
-            console.log("Saved entry " + requestPath);
-            // Reload global data
+        }
+        catch (e) {
+            console.error(e);
+            res.status(500).end("Failed to save entry data");
+            return;
+        }
+        console.log("Saved entry " + requestPath);
+
+        try {
             templates_ = LoadTemplateData();
             allEntryMetadata_ = await LoadAllEntryMetadata(templates_);
         }
         catch (e) {
-            res.status(500).end();
+            console.error(e);
+            res.status(500).end("Failed to reload entry data");
+            return;
         }
         res.status(200).end();
     });

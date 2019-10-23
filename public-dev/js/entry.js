@@ -107,7 +107,7 @@ function LoadEntryData(entryData)
 
     entryMedia_ = entryData.media;
 
-    document.getElementsByName("tags")[0].value = entryData.tags;
+    document.getElementsByName("tags")[0].value = entryData.tags.join(", ");
 
     document.getElementsByName("title")[0].value = entryData.title;
     let titlePoster = entryData.titlePoster;
@@ -180,6 +180,11 @@ function SaveEntryData()
         return;
     }
 
+    let tags = document.getElementsByName("tags")[0].value.split(",");
+    for (let i = 0; i < tags.length; i++) {
+        tags[i] = tags[i].trim();
+    }
+
     let entryData = {
         contentType: document.getElementById("contentType").value,
         featured: {
@@ -192,7 +197,7 @@ function SaveEntryData()
 
         media:       entryMedia_,
 
-        tags:        document.getElementsByName("tags")[0].value,
+        tags:        tags,
 
         title:       document.getElementsByName("title")[0].value,
         titlePoster: document.getElementsByName("titlePoster")[0].value,
@@ -227,7 +232,7 @@ function SaveEntryData()
         alert("Missing header image");
         return;
     }
-    entryData.featured.images = imageHeader.uri;
+    entryData.featured.images = [ imageHeader.uri ];
     entryData.image = imageHeader.uri;
 
     let imagePoster = GetImageByName("poster", images);
@@ -311,7 +316,16 @@ Dropzone.options.imageDropzone = {
             let xmlDoc = parser.parseFromString(response, "text/xml");
             let imageUri = xmlDoc.getElementsByTagName("uri")[0];
             console.log(imageUri);
-            GetImageByName(file.npnLabel, images_).uri = imageUri;
+            let image = GetImageByName(file.npnLabel, images_);
+            if (image === null) {
+                images_.push({
+                    name: file.npnLabel,
+                    url: imageUri
+                });
+            }
+            else {
+                image.uri = imageUri;
+            }
 
             $("#statusMessage").html("Successfully uploaded " + file.name + " as " + file.npnLabel);
             this.removeFile(file);
@@ -364,6 +378,22 @@ $(document).ready(function() {
 
     $.ajax({
         type: "GET",
+        url: "/previewSite",
+        contentType: "application/json",
+        dataType: "json",
+        async: true,
+        data: "",
+        success: function(data) {
+            let previewUrl = data.url;
+            $("#previewLink").attr("href", previewUrl + GetEntryPath());
+        },
+        error: function(error) {
+            console.error(error);
+        }
+    });
+
+    $.ajax({
+        type: "GET",
         url: GetEntryPath(),
         contentType: "application/json",
         dataType: "json",
@@ -378,6 +408,27 @@ $(document).ready(function() {
 
             $("#saveButton").click(function() {
                 SaveEntryData();
+            });
+
+            $("#deleteButton").click(function() {
+                let requestData = {
+                    uri: GetEntryPath()
+                };
+                $.ajax({
+                    type: "POST",
+                    url: "/deleteEntry",
+                    contentType: "application/json",
+                    async: true,
+                    data: JSON.stringify(requestData),
+                    success: function(data) {
+                        $("#statusMessage").html("Entry deleted successfully.");
+                        window.location = '/';
+                    },
+                    error: function(error) {
+                        console.error(error);
+                        $("#statusMessage").html("Delete failed, error: " + error);
+                    }
+                });
             });
         },
         error: function(error) {
