@@ -76,7 +76,7 @@ $(document).ready(function() {
     });
 
     $("#newEntryButton").click(function() {
-        // TODO(important) implement copy-from thing
+        // TODO validate uniqueName (no special characters, only lowercase/numbers/dashes)
         let newEntryHtml = "<h1>New Entry</h1>";
         newEntryHtml += "<form id=\"newEntryForm\">";
         // URI (name)

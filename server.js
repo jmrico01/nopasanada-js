@@ -731,7 +731,7 @@ if (serverSettings.isDev) {
     }));
 
     appDev.use("/newImage", busboy());
-    appDev.post("/newImage", isAuthenticatedNoRedirect, function(req, res, next) {
+    appDev.post("/newImage", isAuthenticatedNoRedirect, async function(req, res, next) {
         req.pipe(req.busboy);
 
         let npnEntryPath = null;
@@ -746,7 +746,7 @@ if (serverSettings.isDev) {
         });
 
         let fstream;
-        req.busboy.on("file", function(fieldName, file, fileName) {
+        req.busboy.on("file", async function(fieldName, file, fileName) {
             while (npnEntryPath === null || npnLabel === null);
             let entryPathSplit = npnEntryPath.split("/");
             let uri = path.join("images", entryPathSplit[entryPathSplit.length - 2]);
@@ -786,21 +786,25 @@ if (serverSettings.isDev) {
 
             let filePath = path.join(__dirname, "public", uri);
             let fileDir = path.dirname(filePath);
-            fs.mkdir(fileDir, { recursive: true }, function(error) {
-                if (error) {
-                    console.error(error);
+            if (!fs.existsSync(fileDir)) {
+                try {
+                    await mkdirAsync(fileDir, { recursive: true });
+                }
+                catch (e) {
+                    console.log(e);
                     res.status(400).end("Failed to create image directory");
                     return;
                 }
-                console.log("Uploading " + fileName + " to " + filePath);
-                fstream = fs.createWriteStream(filePath, {
-                    flags: "w+"
-                });
-                file.pipe(fstream);
-                fstream.on("close", function() {
-                    console.log("Upload finished for " + filePath);
-                    res.status(200).end("<uri>" + uri + "</uri>");
-                });
+            }
+
+            console.log("Uploading " + fileName + " to " + filePath);
+            fstream = fs.createWriteStream(filePath, {
+                flags: "w+"
+            });
+            file.pipe(fstream);
+            fstream.on("close", function() {
+                console.log("Upload finished for " + filePath);
+                res.status(200).end("<uri>" + uri + "</uri>");
             });
         });
     });
