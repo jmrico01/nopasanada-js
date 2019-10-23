@@ -78,28 +78,34 @@ $(document).ready(function() {
     $("#newEntryButton").click(function() {
         // TODO(important) implement copy-from thing
         let newEntryHtml = "<h1>New Entry</h1>";
-
-        newEntryHtml += "<form id=\"newEntryForm\">"
-
-        newEntryHtml += "<h3>Type</h3><select name=\"contentType\"><option value=\"article\">article</option><option value=\"newsletter\">newsletter</option><option value=\"text\">text</option><option value=\"video\">video</option></select><br>";
+        newEntryHtml += "<form id=\"newEntryForm\">";
+        // URI (name)
         newEntryHtml += "<h3>URL</h3>/content/201910/ <input type=\"text\" name=\"uniqueName\"></input><br>";
-
-        newEntryHtml += "<select type=\"copyFrom\">";
-
-        newEntryHtml += "</select>";
-
+        // Copy from
+        newEntryHtml += "<h3>Copy from</h3><select name=\"copyFrom\"><option value=\"none\">None</option>";
+        for (let i = 0; i < entryData_.length; i++) {
+            newEntryHtml += "<option value=\"" + entryData_[i].link + "\">" + entryData_[i].link + "</option>";
+        }
+        newEntryHtml += "</select><br>";
+        // Content type
+        newEntryHtml += "<h3>or Type (if \"Copy from: None\")</h3><select name=\"contentType\"><option value=\"article\">article</option><option value=\"newsletter\">newsletter</option><option value=\"text\">text</option><option value=\"video\">video</option></select><br>";
+        // Submit
         newEntryHtml += "<input type=\"submit\" value=\"Create\"></input>";
-
         newEntryHtml += "</form>";
-        $(".modal").show();
         $(".modal-content").html(newEntryHtml);
+        $(".modal").show();
         $("#newEntryForm").submit(function(event) {
             event.preventDefault();
 
             let $form = $("#newEntryForm");
+            let copyFrom = $form.find("select[name=copyFrom]").val();
+            if (copyFrom === "none") {
+                copyFrom = null;
+            }
             let formData = {
+                uniqueName: $form.find("input[name=uniqueName]").val(),
                 contentType: $form.find("select[name=contentType]").val(),
-                uniqueName: $form.find("input[name=uniqueName]").val()
+                copyFrom: copyFrom
             };
             $.ajax({
                 type: "POST",
@@ -110,6 +116,7 @@ $(document).ready(function() {
                 dataType: "text",
                 success: function(data) {
                     $("#statusMessage").html("New entry created successfully.");
+                    location.reload(true);
                 },
                 error: function(error) {
                     console.log(error);
