@@ -673,7 +673,7 @@ if (serverSettings.isDev) {
     }
 
     function isUsernameAndPasswordCorrect(username, password) {
-        return username === "admin" && password === "password";
+        return username === "admin" && password === "NoPasaNothing";
     }
 
     passport.use(new LocalStrategy({
