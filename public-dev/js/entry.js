@@ -123,6 +123,7 @@ function LoadEntryData(entryData)
     document.getElementsByName("author")[0].value = entryData.author;
     document.getElementsByName("youtubeID")[0].value = entryData.videoID;
 
+    document.getElementsByName("customTop")[0].value = entryData.customTop;
     document.getElementsByName("audioSource")[0].value = entryData.audioSource;
     document.getElementsByName("title1")[0].value = entryData.title1;
     document.getElementsByName("author1")[0].value = entryData.author1;
@@ -209,6 +210,7 @@ function SaveEntryData()
 
         author:      document.getElementsByName("author")[0].value,
         videoID:     document.getElementsByName("youtubeID")[0].value,
+        customTop:   document.getElementsByName("customTop")[0].value,
         audioSource: document.getElementsByName("audioSource")[0].value,
         title1:      document.getElementsByName("title1")[0].value,
         author1:     document.getElementsByName("author1")[0].value,
