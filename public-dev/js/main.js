@@ -1,8 +1,10 @@
-let tableFields = [
-    [ "date", "Date" ],
-    [ "type", "Type" ],
-    [ "title", "Title" ],
-    [ "link", "ID / URL" ],
+const FEATURED_TAG_PREFIX = "featured-";
+const TABLE_FIELDS = [
+    [ "date" , "Date"     ],
+    [ "type" , "Type"     ],
+    [ "title", "Title"    ],
+    [ "tags" , "Tags"     ],
+    [ "link" , "ID / URL" ],
 ];
 
 let commitInProgress_ = false;
@@ -19,6 +21,28 @@ function FormatTableFieldValue(tableField, entry)
     else if (tableField[0] === "title") {
         return "<i>" + entryValue + "</i>";
     }
+    else if (tableField[0] === "tags") {
+        let html = "";
+        let featuredCategories = [];
+        for (let i = 0; i < entryValue.length; i++) {
+            let tag = entryValue[i];
+            if (tag.length > FEATURED_TAG_PREFIX.length
+            && tag.substring(0, FEATURED_TAG_PREFIX.length) == FEATURED_TAG_PREFIX) {
+                let featuredCategory = tag.substring(FEATURED_TAG_PREFIX.length, tag.length);
+                html += "<b>" + featuredCategory + "</b> ";
+                featuredCategories.push(featuredCategory);
+                entryValue[i] = null;
+            }
+        }
+        for (let i = 0; i < entryValue.length; i++) {
+            if (entryValue[i] === null || featuredCategories.includes(entryValue[i])) {
+                continue;
+            }
+
+            html += entryValue[i] + " ";
+        }
+        return html;
+    }
     return entryValue;
 }
 
@@ -33,14 +57,14 @@ $(document).ready(function() {
     $.get("/entries", function(data) {
         entryData_ = data;
         let tableHtml = "<tr>\n";
-        for (let j = 0; j < tableFields.length; j++) {
-            if (tableFields[j][0] === "date") {
+        for (let j = 0; j < TABLE_FIELDS.length; j++) {
+            if (TABLE_FIELDS[j][0] === "date") {
                 tableHtml += "<th style=\"width: 64pt;\">";
             }
             else {
                 tableHtml += "<th>";
             }
-            tableHtml += tableFields[j][1];
+            tableHtml += TABLE_FIELDS[j][1];
             tableHtml += "</th>\n";
         }
         tableHtml += "</tr>\n";
@@ -48,9 +72,9 @@ $(document).ready(function() {
         for (let i = 0; i < data.length; i++) {
             const entry = data[i];
             tableHtml += "<tr>\n";
-            for (let j = 0; j < tableFields.length; j++) {
+            for (let j = 0; j < TABLE_FIELDS.length; j++) {
                 tableHtml += "<td>";
-                tableHtml += FormatTableFieldValue(tableFields[j], data[i]);
+                tableHtml += FormatTableFieldValue(TABLE_FIELDS[j], data[i]);
                 tableHtml += "</td>\n";
             }
             tableHtml += "</tr>\n\n";
@@ -76,7 +100,6 @@ $(document).ready(function() {
     });
 
     $("#newEntryButton").click(function() {
-        // TODO validate uniqueName (no special characters, only lowercase/numbers/dashes)
         let newEntryHtml = "<h1>New Entry</h1>";
         newEntryHtml += "<form id=\"newEntryForm\">";
         // URI (name)
@@ -98,12 +121,18 @@ $(document).ready(function() {
             event.preventDefault();
 
             let $form = $("#newEntryForm");
+            let uniqueName = $form.find("input[name=uniqueName]").val();
+            let uniqueNameRegex = /^[a-z0-9\-]+$/g;
+            if (!uniqueNameRegex.test(uniqueName)) {
+                $("#statusMessage").html("Entry name should only have lower-case letters, numbers, or dashes.");
+                return;
+            }
             let copyFrom = $form.find("select[name=copyFrom]").val();
             if (copyFrom === "none") {
                 copyFrom = null;
             }
             let formData = {
-                uniqueName: $form.find("input[name=uniqueName]").val(),
+                uniqueName: uniqueName,
                 contentType: $form.find("select[name=contentType]").val(),
                 copyFrom: copyFrom
             };

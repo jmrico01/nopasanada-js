@@ -159,9 +159,9 @@ let commonSlate = {
         text1: "",
         text2: "",
         highlightColor: "",
-        images: "/images/unused/garrazo.jpg"
+        images: [ "/images/unused/garrazo.jpg" ]
     },
-    tags: "",
+    tags: [],
     title: "",
     titlePoster: "",
     description: "",
@@ -170,7 +170,7 @@ let commonSlate = {
     year: "",
     color: "",
 
-    image: ""
+    image: "/images/unused/garrazo.jpg"
 };
 
 blankSlates.article = commonSlate;
@@ -493,6 +493,10 @@ async function LoadAllEntryMetadata(templates)
         }
     }
 
+    allEntryMetadata.sort(function(a, b) {
+        // descending date order
+        return a.date > b.date ? -1 : 1;
+    });
     return allEntryMetadata;
 }
 
@@ -627,15 +631,11 @@ app.get("/content/*/*", async function(req, res) {
     res.status(200).send(output);
 });
 
+// TODO change to get?
 app.post("/entries", function(req, res) {
     let category = req.query.category;
     // TODO filter content based on category
-    // TODO move this sort until after allEntryMetadata_ is ready (but async... bleh)
     let filteredContent = allEntryMetadata_.slice(0);
-    filteredContent.sort(function(a, b) {
-        // descending date order
-        return a.date > b.date ? -1 : 1;
-    });
     res.status(200).send(filteredContent);
 });
 
@@ -820,12 +820,7 @@ if (serverSettings.isDev) {
     });
 
     appDev.get("/entries", isAuthenticatedNoRedirect, function(req, res) {
-        let content = allEntryMetadata_.slice(0);
-        content.sort(function(a, b) {
-            // descending date order
-            return a.date > b.date ? -1 : 1;
-        });
-        res.status(200).send(content);
+        res.status(200).send(allEntryMetadata_);
     });
 
     appDev.get("/content/*/*", isAuthenticatedNoRedirect, async function(req, res) {
