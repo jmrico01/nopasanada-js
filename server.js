@@ -749,14 +749,12 @@ if (serverSettings.isDev) {
         req.busboy.on("file", async function(fieldName, file, fileName) {
             while (npnEntryPath === null || npnLabel === null);
             let entryPathSplit = npnEntryPath.split("/");
-            let uri = path.join("images", entryPathSplit[entryPathSplit.length - 2]);
+            let uri = "/images" + "/" + entryPathSplit[entryPathSplit.length - 2] + "/";
             if (npnLabel === "header") {
-                uri = path.join(uri, "headers",
-                    entryPathSplit[entryPathSplit.length - 1] + ".jpg");
+                uri += "headers/" + entryPathSplit[entryPathSplit.length - 1] + ".jpg";
             }
             else if (npnLabel === "poster") {
-                uri = path.join(uri, "posters",
-                    entryPathSplit[entryPathSplit.length - 1] + ".jpg");
+                uri += "posters/" + entryPathSplit[entryPathSplit.length - 1] + ".jpg";
             }
             else if (npnLabel.includes("header-desktop")) {
                 let number = npnLabel[npnLabel.length - 1];
@@ -765,8 +763,7 @@ if (serverSettings.isDev) {
                     res.status(400).end("Invalid npn label " + npnLabel);
                     return;
                 }
-                uri = path.join(uri, entryPathSplit[entryPathSplit.length - 1],
-                    "vertical" + number + ".jpg");
+                uri += entryPathSplit[entryPathSplit.length - 1] + "/vertical" + number + ".jpg";
             }
             else if (npnLabel.includes("header-mobile")) {
                 let number = npnLabel[npnLabel.length - 1];
@@ -775,8 +772,7 @@ if (serverSettings.isDev) {
                     res.status(400).end("Invalid npn label " + npnLabel);
                     return;
                 }
-                uri = path.join(uri, entryPathSplit[entryPathSplit.length - 1],
-                    "square" + number + ".jpg");
+                uri += entryPathSplit[entryPathSplit.length - 1] + "/square" + number + ".jpg";
             }
             else {
                 console.error("Invalid npnLabel: " + npnLabel);
