@@ -338,8 +338,7 @@ Dropzone.options.imageDropzone = {
             done("Image format must be .jpg");
             return;
         }
-
-        let modalHtml = "<h3>Image Type</h3><select id=\"imageType\" name=\"imageType\"><option disabled selected value>-- select image type --</option></option><option value=\"header\">Header</option><option value=\"poster\">Poster</option>";
+        let modalHtml = "<h3>" + file.name + "</h3><h3>Image Type</h3><select id=\"imageType\" name=\"imageType\"><option disabled selected value>-- select image type --</option></option><option value=\"header\">Header</option><option value=\"poster\">Poster</option>";
         let contentType = document.getElementById("contentType").value;
         if (contentType === "newsletter") {
             for (let i = 0; i < 4; i++) {

@@ -616,7 +616,10 @@ app.get("/content/*/*", async function(req, res) {
             if (style === undefined) {
                 style = "";
             }
-            if (type === "image") {
+            if (type === "text") {
+                secondPassData[k] = content;
+            }
+            else if (type === "image") {
                 secondPassData[k] = "<img style=\"" + style + "\" src=\"../../.." + content + "\">";
             }
             else if (type === "instagram") {
