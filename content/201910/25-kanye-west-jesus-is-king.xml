@@ -20,36 +20,15 @@
         </images>
     </featured>
     <media>
-        <instagram type="instagram">
-            B2QLFD9HwCJ
-        </instagram>
-        <image1 type="image">
-            /images/201910/24-natalia-del-rio/1.jpg
-        </image1>
-        <image2 type="image">
-            /images/201910/24-natalia-del-rio/2.jpg
-        </image2>
+        <kanye-tweet type="image">
+            /images/201910/25-kanye-west-jesus-is-king/kanye-tweet.jpg
+        </kanye-tweet>
         <image3 type="image">
-            /images/201910/24-natalia-del-rio/3.jpg
+            /images/201910/25-kanye-west-jesus-is-king/image3.jpg
         </image3>
-        <image4 type="image">
-            /images/201910/24-natalia-del-rio/4.jpg
-        </image4>
-        <image5 type="image">
-            /images/201910/24-natalia-del-rio/5.jpg
-        </image5>
-        <image6 type="image">
-            /images/201910/24-natalia-del-rio/6.jpg
-        </image6>
-        <image7 type="image">
-            /images/201910/24-natalia-del-rio/7.jpg
-        </image7>
-        <image8 type="image">
-            /images/201910/24-natalia-del-rio/8.jpg
-        </image8>
-        <image9 type="image">
-            /images/201910/24-natalia-del-rio/9.jpg
-        </image9>
+        <image2 type="image">
+            /images/201910/25-kanye-west-jesus-is-king/image2.jpg
+        </image2>
     </media>
     <tags>
         cultura, featured-cultura, featured-home
