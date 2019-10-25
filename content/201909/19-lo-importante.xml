@@ -31,7 +31,6 @@
         Lo Importante: 19-09-19
     </title>
     <titlePoster>
-        
     </titlePoster>
     <description>
         4 historias importantes de las más recientes noticias internacionales
@@ -48,9 +47,9 @@
     <color>
         #FCC285
     </color>
-    <audioSource>
-        https://mx.ivoox.com/en/player_ej_41674257_4_1.html?c1=4f4f4f
-    </audioSource>
+    <customTop>
+        &lt;iframe class=&quot;articleAudio&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot; scrolling=&quot;no&quot; height=&quot;200&quot; src=&quot;https://mx.ivoox.com/en/player_ej_41674257_4_1.html?c1=4f4f4f&quot; style=&apos;border:1px solid #EEE; box-sizing:border-box; width:100%;&apos;&gt;&lt;/iframe&gt;
+    </customTop>
     <title1>
         PSG evita la euforia tras su contundente victoria
     </title1>

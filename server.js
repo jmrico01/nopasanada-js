@@ -179,7 +179,6 @@ blankSlates.article.subtitle = "";
 blankSlates.article.text = "";
 
 blankSlates.newsletter = commonSlate;
-blankSlates.newsletter.audioSource = "";
 blankSlates.newsletter.title1 = "";
 blankSlates.newsletter.author1 = "";
 blankSlates.newsletter.text1 = "";
@@ -247,7 +246,6 @@ function LoadTemplateData()
         image: "",
 
         imageDirectory: "",
-        audioSource: "",
         color: "",
 
         title1: "",

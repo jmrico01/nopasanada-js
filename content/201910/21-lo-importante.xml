@@ -20,7 +20,7 @@
         </images>
     </featured>
     <tags>
-        noticias,home
+        noticias, home
     </tags>
     <title>
         Lo Importante: 21-10-19
@@ -42,9 +42,9 @@
     <color>
         #FCC285
     </color>
-    <audioSource>
-        https://us.ivoox.com/es/player_ej_43323661_4_1.html?c1=525252
-    </audioSource>
+    <customTop>
+        &lt;iframe class=&quot;articleAudio&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot; scrolling=&quot;no&quot; height=&quot;200&quot; src=&quot;https://us.ivoox.com/es/player_ej_43323661_4_1.html?c1=525252&quot; style=&apos;border:1px solid #EEE; box-sizing:border-box; width:100%;&apos;&gt;&lt;/iframe&gt;
+    </customTop>
     <title1>
         Chile aborda con lentitud primer día laboral tras violento fin de semana
     </title1>

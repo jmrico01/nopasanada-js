@@ -42,9 +42,9 @@
     <color>
         #FCC285
     </color>
-    <audioSource>
-        https://us.ivoox.com/es/player_ej_42952782_4_1.html?c1=6e6e6e
-    </audioSource>
+    <customTop>
+        &lt;iframe class=&quot;articleAudio&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot; scrolling=&quot;no&quot; height=&quot;200&quot; src=&quot;https://us.ivoox.com/es/player_ej_42952782_4_1.html?c1=6e6e6e&quot; style=&apos;border:1px solid #EEE; box-sizing:border-box; width:100%;&apos;&gt;&lt;/iframe&gt;
+    </customTop>
     <title1>
         Apple retira una controvertida aplicación de Hong Kong tras advertencia de China
     </title1>

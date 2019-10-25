@@ -1,19 +1,14 @@
 <newsletter>
     <featured>
         <pretitle>
-            
         </pretitle>
         <title>
-            
         </title>
         <text1>
-            
         </text1>
         <text2>
-            
         </text2>
         <highlightColor>
-            
         </highlightColor>
         <images>
             /images/201909/headers/newsletter-10.jpg
@@ -26,7 +21,6 @@
         Lo Importante: 10-09-19
     </title>
     <titlePoster>
-        
     </titlePoster>
     <description>
         4 historias importantes de las más recientes noticias internacionales
@@ -43,9 +37,9 @@
     <color>
         #FCC285
     </color>
-    <audioSource>
-        https://us.ivoox.com/en/player_ej_41202540_4_1.html?c1=e33c18
-    </audioSource>
+    <customTop>
+        &lt;iframe class=&quot;articleAudio&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot; scrolling=&quot;no&quot; height=&quot;200&quot; src=&quot;https://us.ivoox.com/en/player_ej_41202540_4_1.html?c1=e33c18&quot; style=&apos;border:1px solid #EEE; box-sizing:border-box; width:100%;&apos;&gt;&lt;/iframe&gt;
+    </customTop>
     <title1>
         Bachelet denuncia más posibles ejecuciones extrajudiciales y torturas en Venezuela
     </title1>
