@@ -316,7 +316,7 @@ Dropzone.options.imageDropzone = {
         this.on("success", function(file, response) {
             let parser = new DOMParser();
             let xmlDoc = parser.parseFromString(response, "text/xml");
-            let imageUri = xmlDoc.getElementsByTagName("uri")[0];
+            let imageUri = xmlDoc.getElementsByTagName("uri")[0].textContent;
             console.log(imageUri);
             let image = GetImageByName(file.npnLabel, images_);
             if (image === null) {
