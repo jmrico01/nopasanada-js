@@ -999,7 +999,7 @@ if (serverSettings.isDev) {
                         return;
                     }
 
-                    console.log("added, commited, and pushed " + commitMessage);
+                    console.log("added, commited, and pushed | " + commitMessage);
                     res.status(200).end();
                 });
             });
