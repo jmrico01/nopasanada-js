@@ -16,6 +16,9 @@
             #ff613c
         </highlightColor>
         <images>
+            /images/201908/headers/moto1.jpg,
+            /images/201908/headers/moto2.jpg,
+            /images/201908/headers/moto3.jpg,
             /images/201908/headers/moto4.jpg
         </images>
     </featured>
