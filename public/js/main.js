@@ -4,7 +4,6 @@ const FEATURED_IMAGE_FADE_MS = 400;
 const IMAGE_ANIM_MS = 250;
 
 const HOMEPAGE_CATEGORY = "home";
-const FEATURED_TAG_PREFIX = "featured-";
 
 let allEntries_ = null;
 let featuredEntries_ = null;
