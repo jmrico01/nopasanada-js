@@ -1,9 +1,9 @@
 exports.featured = {
-    "home": "/content/201910/28-guia-completa-examenes-its",
+    "home": "/content/201910/31-costa-rica-vs-el-cine",
     "noticias": "/content/201910/30-lo-importante",
     "ciencia": "/content/201910/29-campeon-ambiental",
-    "cultura": "/content/201910/25-kanye-west-jesus-is-king",
-    "opinion": "/content/201908/teletrabajo",
+    "cultura": "/content/201910/31-costa-rica-vs-el-cine",
+    "opinion": "/content/201910/31-costa-rica-vs-el-cine",
     "deporte": "/content/201908/pilotos-trailer",
     "nopasanada": "/content/201908/nopasanada"
 };
