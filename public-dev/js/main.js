@@ -56,7 +56,7 @@ $(document).ready(function() {
 
     $.get("/entries", function(data) {
         entryData_ = data;
-        let tableHtml = "<tr>\n";
+        let tableHtml = "<tr>";
         for (let j = 0; j < TABLE_FIELDS.length; j++) {
             if (TABLE_FIELDS[j][0] === "date") {
                 tableHtml += "<th style=\"width: 64pt;\">";
@@ -65,22 +65,40 @@ $(document).ready(function() {
                 tableHtml += "<th>";
             }
             tableHtml += TABLE_FIELDS[j][1];
-            tableHtml += "</th>\n";
+            tableHtml += "</th>";
         }
-        tableHtml += "</tr>\n";
+        tableHtml += "</tr>";
 
         for (let i = 0; i < data.length; i++) {
             const entry = data[i];
-            tableHtml += "<tr>\n";
+            tableHtml += "<tr>";
             for (let j = 0; j < TABLE_FIELDS.length; j++) {
                 tableHtml += "<td>";
                 tableHtml += FormatTableFieldValue(TABLE_FIELDS[j], data[i]);
-                tableHtml += "</td>\n";
+                tableHtml += "</td>";
             }
-            tableHtml += "</tr>\n\n";
+            tableHtml += "</tr>";
         }
 
         $("#entryTable").html(tableHtml);
+
+        let featuredTableHtml = "<tr><th>Tag</th><th>Title</th><th>ID / URL</th></tr>";
+        let categoryFeatured = {};
+        for (let i = 0; i < data.length; i++) {
+            const entry = data[i];
+            for (let j = 0; j < entry.featuredTags.length; j++) {
+                categoryFeatured[entry.featuredTags[j]] = entry;
+            }
+        }
+        for (let category in categoryFeatured) {
+            const entry = categoryFeatured[category];
+            featuredTableHtml += "<tr><td>" + category
+                + "</td><td>" + FormatTableFieldValue(TABLE_FIELDS[2], entry)
+                + "</td><td>" + FormatTableFieldValue(TABLE_FIELDS[4], entry)
+                + "</td></tr>\n";
+        }
+
+        $("#featuredEntryTable").html(featuredTableHtml);
     });
 
     $.ajax({

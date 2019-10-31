@@ -15,6 +15,8 @@ const showdown = require("showdown");
 const util = require("util");
 const xml2jsParseString = require("xml2js").parseString;
 
+let globalData = require("./data/globalData.js");
+
 // Jesus...
 const mkdirAsync     = util.promisify(fs.mkdir);
 const readdirAsync   = util.promisify(fs.readdir);
@@ -398,6 +400,16 @@ async function DeleteEntry(url)
 
 async function LoadAllEntryMetadata(templates)
 {
+    globalData = require("./data/globalData.js");
+    let featuredEntryCategories = {};
+    for (let category in globalData.featured) {
+        let entryUri = globalData.featured[category];
+        if (!(entryUri in featuredEntryCategories)) {
+            featuredEntryCategories[entryUri] = [];
+        }
+        featuredEntryCategories[entryUri].push(category);
+    }
+
     let allEntryMetadata = [];
     let allContentDirs = fs.readdirSync(path.join(__dirname, "content"));
     for (let i = 0; i < allContentDirs.length; i++) {
@@ -472,6 +484,17 @@ async function LoadAllEntryMetadata(templates)
                 throw new Error("poster incomplete year / bad format: " + uri);
             }
             let datePoster = entryData.year + "-" + monthPoster + "-" + dayPoster;
+            let featuredTags = [];
+            if (uri in featuredEntryCategories) {
+                featuredTags = featuredEntryCategories[uri];
+            }
+            let tags = [];
+            for (let t = 0; t < entryData.tags.length; t++) {
+                let tag = entryData.tags[t];
+                if (!featuredTags.includes(tag)) {
+                    tags.push(tag);
+                }
+            }
             allEntryMetadata.push({
                 featuredInfo: {
                     images: featuredInfo.images,
@@ -482,7 +505,8 @@ async function LoadAllEntryMetadata(templates)
                     highlightColor: featuredInfo.highlightColor
                 },
                 type: contentType,
-                tags: entryData.tags,
+                tags: tags,
+                featuredTags: featuredTags,
                 link: uri,
                 image: imagePoster,
                 title: titlePoster,
@@ -632,8 +656,7 @@ app.get("/content/*/*", async function(req, res) {
     res.status(200).send(output);
 });
 
-// TODO change to get?
-app.post("/entries", function(req, res) {
+app.get("/entries", function(req, res) {
     let category = req.query.category;
     // TODO filter content based on category
     let filteredContent = allEntryMetadata_.slice(0);

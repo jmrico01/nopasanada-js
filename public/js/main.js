@@ -263,7 +263,7 @@ $(document).ready(function() {
     entryTemplate_ = $("#entryTemplate").html();
     $("#entryTemplate").remove();
 
-    $.post("/entries", {}, function(data, status) {
+    $.get("/entries", {}, function(data, status) {
         if (status !== "success") {
             console.error("Failed to load entries");
             return;
@@ -277,16 +277,14 @@ $(document).ready(function() {
             allEntries_[i].title = allEntries_[i].title.toUpperCase();
             let entryTags = allEntries_[i].tags;
             for (let j = 0; j < entryTags.length; j++) {
-                let tag = entryTags[j];
-                if (tag.length > FEATURED_TAG_PREFIX.length
-                && tag.substring(0, FEATURED_TAG_PREFIX.length) == FEATURED_TAG_PREFIX) {
-                    let featuredCategory = tag.substring(FEATURED_TAG_PREFIX.length, tag.length);
-                    featuredEntries_[featuredCategory] = allEntries_[i].featuredInfo;
-                    featuredEntries_[featuredCategory].link = allEntries_[i].link;
-                }
-                if (tag === currentCategory) {
+                if (entryTags[j] === currentCategory) {
                     loadedEntries_.push(allEntries_[i]);
                 }
+            }
+            let entryFeaturedTags = allEntries_[i].featuredTags;
+            for (let j = 0; j < entryFeaturedTags.length; j++) {
+                featuredEntries_[entryFeaturedTags[j]] = allEntries_[i].featuredInfo;
+                featuredEntries_[entryFeaturedTags[j]].link = allEntries_[i].link;
             }
         }
 
