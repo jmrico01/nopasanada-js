@@ -918,6 +918,7 @@ if (serverSettings.isDev) {
         entryData.month = dateStrings.month;
         entryData.day = dateStrings.day;
 
+        // TODO create dir if doesn't exist
         let uri = "content" + "/" + dateStrings.year + dateStrings.month + "/" + name;
         try {
             await SaveEntryData(uri, templates_, entryData);

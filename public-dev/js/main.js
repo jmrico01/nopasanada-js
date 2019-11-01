@@ -121,7 +121,8 @@ $(document).ready(function() {
         let newEntryHtml = "<h1>New Entry</h1>";
         newEntryHtml += "<form id=\"newEntryForm\">";
         // URI (name)
-        newEntryHtml += "<h3>URL</h3>/content/201910/ <input type=\"text\" name=\"uniqueName\"></input><br>";
+        // TODO url year+month should be calculated
+        newEntryHtml += "<h3>URL</h3>/content/201911/ <input type=\"text\" name=\"uniqueName\"></input><br>";
         // Copy from
         newEntryHtml += "<h3>Copy from</h3><select name=\"copyFrom\"><option value=\"none\">None</option>";
         for (let i = 0; i < entryData_.length; i++) {
