@@ -22,26 +22,7 @@ function FormatTableFieldValue(tableField, entry)
         return "<i>" + entryValue + "</i>";
     }
     else if (tableField[0] === "tags") {
-        let html = "";
-        let featuredCategories = [];
-        for (let i = 0; i < entryValue.length; i++) {
-            let tag = entryValue[i];
-            if (tag.length > FEATURED_TAG_PREFIX.length
-            && tag.substring(0, FEATURED_TAG_PREFIX.length) == FEATURED_TAG_PREFIX) {
-                let featuredCategory = tag.substring(FEATURED_TAG_PREFIX.length, tag.length);
-                html += "<b>" + featuredCategory + "</b> ";
-                featuredCategories.push(featuredCategory);
-                entryValue[i] = null;
-            }
-        }
-        for (let i = 0; i < entryValue.length; i++) {
-            if (entryValue[i] === null || featuredCategories.includes(entryValue[i])) {
-                continue;
-            }
-
-            html += entryValue[i] + " ";
-        }
-        return html;
+        return entryValue.join(" ");
     }
     return entryValue;
 }
