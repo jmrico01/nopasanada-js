@@ -1012,11 +1012,10 @@ if (serverSettings.isDev) {
 
     appDev.post("/commit", isAuthenticatedNoRedirect, async function(req, res) {
         console.log("Commit request received");
-        const date = Date(Date.now());
-        const commitMessage = "backend, " + date.toString();
+        const commitMessage = "backend, " + Date(Date.now()).toString();
         const gitCommitCommands =
             "git add -A && " +
-            "git commit -m \"" + commitMessage + "\" " +
+            "git commit -m \"" + commitMessage + "\" && " +
             "git push";
         exec(gitCommitCommands, function(err, stdout, stderr) {
             console.log("Executed git commit commands:");
