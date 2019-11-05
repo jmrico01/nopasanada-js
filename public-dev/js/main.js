@@ -180,12 +180,11 @@ $(document).ready(function() {
                 async: true,
                 data: "",
                 success: function(data) {
-                    $("#statusMessage").html("Pull successful.");
+                    window.location = '/';
                     pullInProgress_ = false;
                 },
                 error: function(error) {
-                    console.log(error);
-                    $("#statusMessage").html("Pull failed, error: " + error.responseText);
+                    window.location = '/';
                     pullInProgress_ = false;
                 }
             });

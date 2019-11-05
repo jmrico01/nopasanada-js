@@ -993,7 +993,7 @@ if (serverSettings.isDev) {
     });
 
     appDev.post("/pull", isAuthenticatedNoRedirect, async function(req, res) {
-        console.log("Pull+reset request received");
+        console.log("Pull + reset request received");
         const gitPullCommands = "git pull && pm2 restart npn-dev";
         exec(gitPullCommands, function(err, stdout, stderr) {
             console.log("Executed git pull commands:");
