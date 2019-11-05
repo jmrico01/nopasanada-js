@@ -992,17 +992,17 @@ if (serverSettings.isDev) {
         res.status(200).end();
     });
 
-    appDev.post("/pull", isAuthenticatedNoRedirect, async function(req, res) {
+    appDev.post("/reset", isAuthenticatedNoRedirect, async function(req, res) {
         console.log("Pull + reset request received");
         const gitPullCommands = "git pull && pm2 restart npn-dev";
         exec(gitPullCommands, function(err, stdout, stderr) {
-            console.log("Executed git pull commands:");
+            console.log("Executed reset commands:");
             console.log(gitPullCommands);
             console.log("");
             console.log(stdout);
             if (err) {
-                console.error("git pull commands error: " + stderr);
-                res.status(500).end("Pull error");
+                console.error("Reset commands error: " + stderr);
+                res.status(500).end("Reset error");
                 return;
             }
 

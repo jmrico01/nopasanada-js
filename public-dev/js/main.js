@@ -7,7 +7,7 @@ const TABLE_FIELDS = [
     [ "link" , "ID / URL" ],
 ];
 
-let pullInProgress_   = false;
+let resetInProgress_  = false;
 let commitInProgress_ = false;
 let deployInProgress_ = false;
 
@@ -168,24 +168,24 @@ $(document).ready(function() {
         });
     });
 
-    $("#pullButton").click(function() {
-        if (!pullInProgress_) {
-            pullInProgress_ = true;
+    $("#resetButton").click(function() {
+        if (!resetInProgress_) {
+            resetInProgress_ = true;
             $("#statusMessage").html("Pulling and resetting...");
             $.ajax({
                 type: "POST",
-                url: "/pull",
+                url: "/reset",
                 contentType: "application/text",
                 dataType: "text",
                 async: true,
                 data: "",
                 success: function(data) {
                     window.location = '/';
-                    pullInProgress_ = false;
+                    resetInProgress_ = false;
                 },
                 error: function(error) {
                     window.location = '/';
-                    pullInProgress_ = false;
+                    resetInProgress_ = false;
                 }
             });
         }
