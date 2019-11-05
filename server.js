@@ -992,41 +992,45 @@ if (serverSettings.isDev) {
         res.status(200).end();
     });
 
-    appDev.post("/commit", isAuthenticatedNoRedirect, async function(req, res) {
-        console.log("Commit request received");
-        exec("git add -A", function(err, stdout, stderr) {
-            console.log("> git add -A");
+    appDev.post("/pull", isAuthenticatedNoRedirect, async function(req, res) {
+        console.log("Pull+reset request received");
+        const gitPullCommands = "git pull && pm2 restart npn-dev";
+        exec(gitPullCommands, function(err, stdout, stderr) {
+            console.log("Executed git pull commands:");
+            console.log(gitPullCommands);
+            console.log("");
             console.log(stdout);
             if (err) {
-                console.error("git add error: " + stderr);
-                res.status(500).end("git add error");
+                console.error("git pull commands error: " + stderr);
+                res.status(500).end("Pull error");
                 return;
             }
 
-            let date = Date(Date.now());
-            let commitMessage = "backend : " + date.toString();
-            exec("git commit -m \"" + commitMessage + "\"", function(err, stdout, stderr) {
-                console.log("> git commit -m ...");
-                console.log(stdout);
-                if (err) {
-                    console.error("git commit error: " + stderr);
-                    res.status(500).end("git commit error");
-                    return;
-                }
+            res.status(200).end();
+        });
+    });
 
-                exec("git push", function(err, stdout, stderr) {
-                    console.log("> git push");
-                    console.log(stdout);
-                    if (err) {
-                        console.error("git push error: " + stderr);
-                        res.status(500).end("git push error");
-                        return;
-                    }
+    appDev.post("/commit", isAuthenticatedNoRedirect, async function(req, res) {
+        console.log("Commit request received");
+        const date = Date(Date.now());
+        const commitMessage = "backend, " + date.toString();
+        const gitCommitCommands =
+            "git add -A && " +
+            "git commit -m \"" + commitMessage + "\" " +
+            "git push";
+        exec(gitCommitCommands, function(err, stdout, stderr) {
+            console.log("Executed git commit commands:");
+            console.log(gitCommitCommands);
+            console.log("");
+            console.log(stdout);
+            if (err) {
+                console.error("git commit commands error: " + stderr);
+                res.status(500).end("Commit error");
+                return;
+            }
 
-                    console.log("added, commited, and pushed | " + commitMessage);
-                    res.status(200).end();
-                });
-            });
+            console.log("added, commited, and pushed | " + commitMessage);
+            res.status(200).end();
         });
     });
 

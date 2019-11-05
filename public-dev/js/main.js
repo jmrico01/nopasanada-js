@@ -7,6 +7,7 @@ const TABLE_FIELDS = [
     [ "link" , "ID / URL" ],
 ];
 
+let pullInProgress_   = false;
 let commitInProgress_ = false;
 let deployInProgress_ = false;
 
@@ -165,6 +166,30 @@ $(document).ready(function() {
             $(".modal").show();
             $(".modal-content").html(diffHtml);
         });
+    });
+
+    $("#pullButton").click(function() {
+        if (!pullInProgress_) {
+            pullInProgress_ = true;
+            $("#statusMessage").html("Pulling and resetting...");
+            $.ajax({
+                type: "POST",
+                url: "/pull",
+                contentType: "application/text",
+                dataType: "text",
+                async: true,
+                data: "",
+                success: function(data) {
+                    $("#statusMessage").html("Pull successful.");
+                    pullInProgress_ = false;
+                },
+                error: function(error) {
+                    console.log(error);
+                    $("#statusMessage").html("Pull failed, error: " + error.responseText);
+                    pullInProgress_ = false;
+                }
+            });
+        }
     });
 
     $("#commitButton").click(function() {

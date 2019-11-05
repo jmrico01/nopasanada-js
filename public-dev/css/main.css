@@ -136,6 +136,13 @@ a:hover {
     background-color: #ca81e6;
 }
 
+#pullButton {
+    background-color: #dfaef2;
+}
+#pullButton:hover {
+    background-color: #ca81e6;
+}
+
 #commitButton {
     background-color: #f7ea7c;
 }
