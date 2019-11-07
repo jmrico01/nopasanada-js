@@ -10,6 +10,7 @@ const LocalStrategy = require("passport-local").Strategy;
 const mustache = require("mustache");
 const passport = require("passport");
 const path = require("path");
+const serverSettings = require("./server-settings.js");
 const session = require("express-session");
 const showdown = require("showdown");
 const util = require("util");
@@ -206,8 +207,6 @@ blankSlates.video.author = "";
 blankSlates.video.subtitle = "";
 blankSlates.video.text = "";
 
-const serverSettings = require("./server-settings.js");
-
 const app = express();
 
 function LoadTemplateData()
@@ -400,16 +399,6 @@ async function DeleteEntry(url)
 
 async function LoadAllEntryMetadata(templates)
 {
-    globalData = require("./data/globalData.js");
-    let featuredEntryCategories = {};
-    for (let category in globalData.featured) {
-        let entryUri = globalData.featured[category];
-        if (!(entryUri in featuredEntryCategories)) {
-            featuredEntryCategories[entryUri] = [];
-        }
-        featuredEntryCategories[entryUri].push(category);
-    }
-
     let allEntryMetadata = [];
     let allContentDirs = fs.readdirSync(path.join(__dirname, "content"));
     for (let i = 0; i < allContentDirs.length; i++) {
@@ -484,17 +473,6 @@ async function LoadAllEntryMetadata(templates)
                 throw new Error("poster incomplete year / bad format: " + uri);
             }
             let datePoster = entryData.year + "-" + monthPoster + "-" + dayPoster;
-            let featuredTags = [];
-            if (uri in featuredEntryCategories) {
-                featuredTags = featuredEntryCategories[uri];
-            }
-            let tags = [];
-            for (let t = 0; t < entryData.tags.length; t++) {
-                let tag = entryData.tags[t];
-                if (!featuredTags.includes(tag)) {
-                    tags.push(tag);
-                }
-            }
             allEntryMetadata.push({
                 featuredInfo: {
                     images: featuredInfo.images,
@@ -505,8 +483,7 @@ async function LoadAllEntryMetadata(templates)
                     highlightColor: featuredInfo.highlightColor
                 },
                 type: contentType,
-                tags: tags,
-                featuredTags: featuredTags,
+                tags: entryData.tags,
                 link: uri,
                 image: imagePoster,
                 title: titlePoster,
@@ -661,6 +638,10 @@ app.get("/entries", function(req, res) {
     // TODO filter content based on category
     let filteredContent = allEntryMetadata_.slice(0);
     res.status(200).send(filteredContent);
+});
+
+app.get("/featured", function(req, res) {
+    res.status(200).send(globalData.featured);
 });
 
 app.use(express.static(path.join(__dirname, "/public")));
@@ -841,6 +822,19 @@ if (serverSettings.isDev) {
 
     appDev.get("/entries", isAuthenticatedNoRedirect, function(req, res) {
         res.status(200).send(allEntryMetadata_);
+    });
+
+    appDev.get("/featured", function(req, res) {
+        res.status(200).send(globalData.featured);
+    });
+
+    appDev.post("/featured", async function(req, res) {
+        let newFeatured = req.body;
+        let globalDataContents = "exports.featured = " + JSON.stringify(newFeatured, null, 4) + ";";
+        await writeFileAsync("./data/globalData.js", globalDataContents);
+        delete require.cache[require.resolve("./data/globalData.js")];
+        globalData = require("./data/globalData.js");
+        res.status(200).end();
     });
 
     appDev.get("/content/*/*", isAuthenticatedNoRedirect, async function(req, res) {

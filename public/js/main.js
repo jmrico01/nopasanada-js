@@ -280,36 +280,44 @@ $(document).ready(function() {
                     loadedEntries_.push(allEntries_[i]);
                 }
             }
-            let entryFeaturedTags = allEntries_[i].featuredTags;
-            for (let j = 0; j < entryFeaturedTags.length; j++) {
-                featuredEntries_[entryFeaturedTags[j]] = allEntries_[i].featuredInfo;
-                featuredEntries_[entryFeaturedTags[j]].link = allEntries_[i].link;
-            }
         }
 
         ResetPosters(loadedEntries_);
 
-        let totalImages = 0;
-        for (let key in featuredEntries_) {
-            let imgClass = "featuredImage-" + key;
-            for (let i = 0; i < featuredEntries_[key].images.length; i++) {
-                let imgId = imgClass + "-" + i;
-                let imgPath = featuredEntries_[key].images[i];
-                $("#landingImageCycler").append("<img id=\"" + imgId + "\" class=\"featuredImage " + imgClass + "\" src=\"" + imgPath + "\">");
-                totalImages += 1;
+        $.get("/featured", function(data, status) {
+            for (let category in data) {
+                const uri = data[category];
+                for (let i = 0; i < allEntries_.length; i++) {
+                    if (allEntries_[i].link === uri) {
+                        featuredEntries_[category] = allEntries_[i].featuredInfo;
+                        featuredEntries_[category].link = uri;
+                        break;
+                    }
+                }
             }
-        }
 
-        let loadedImages = 0;
-        $(".featuredImage").hide();
-        $(".featuredImage").on("load", function() {
-            loadedImages += 1;
-            if (loadedImages === totalImages) {
-                allImagesLoaded_ = true;
-                $(".featuredImage").show();
-                OnResize();
-                OnHashChanged();
+            let totalImages = 0;
+            for (let key in featuredEntries_) {
+                let imgClass = "featuredImage-" + key;
+                for (let i = 0; i < featuredEntries_[key].images.length; i++) {
+                    let imgId = imgClass + "-" + i;
+                    let imgPath = featuredEntries_[key].images[i];
+                    $("#landingImageCycler").append("<img id=\"" + imgId + "\" class=\"featuredImage " + imgClass + "\" src=\"" + imgPath + "\">");
+                    totalImages += 1;
+                }
             }
+
+            let loadedImages = 0;
+            $(".featuredImage").hide();
+            $(".featuredImage").on("load", function() {
+                loadedImages += 1;
+                if (loadedImages === totalImages) {
+                    allImagesLoaded_ = true;
+                    $(".featuredImage").show();
+                    OnResize();
+                    OnHashChanged();
+                }
+            });
         });
     });
 

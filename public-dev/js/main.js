@@ -28,6 +28,84 @@ function FormatTableFieldValue(tableField, entry)
     return entryValue;
 }
 
+function SaveFeatured()
+{
+    console.log("saving featured");
+
+    let featured = {};
+    $("#featuredForm select").each(function() {
+        let $this = $(this);
+        featured[$this.attr("name")] = $this.val();
+    });
+
+    $.ajax({
+        type: "POST",
+        url: "/featured",
+        contentType: "application/json",
+        async: true,
+        data: featured,
+        dataType: "text",
+        success: function(data) {
+            $("#statusMessage").html("New entry created successfully.");
+        },
+        error: function(error) {
+            console.log(error);
+            $("#statusMessage").html("New entry creation failed, error: " + error.responseText);
+        }
+    });
+}
+
+function UpdateFeaturedTable(featured)
+{
+    let featuredTableHtml = "<form id=\"featuredForm\"><table><tr><th>Tag</th><th>ID / URL</th></tr>";
+    for (let category in featured) {
+        let uriHtml = "<select name=\"" + category + "\">";
+        for (let i = 0; i < entryData_.length; i++) {
+            uriHtml += "<option value=\"" + entryData_[i].link + "\">" + entryData_[i].link + "</option>";
+        }
+        featuredTableHtml += "<tr><td>" + category + "</td><td>" + uriHtml + "</td></tr>\n";
+    }
+    featuredTableHtml += "</table></form>";
+    $("#featuredEntryTable").html(featuredTableHtml);
+
+    for (let category in featured) {
+        let $selectCategory = $("select[name=" + category + "]");
+        $selectCategory.val(featured[category]);
+        $selectCategory.change(function() {
+            if (featuredRefreshInProgress_) {
+                return;
+            }
+            featuredRefreshInProgress_ = true;
+            $("#statusMessage").html("Saving featured entries...");
+
+            let newFeatured = {};
+            $("#featuredForm select").each(function() {
+                let $this = $(this);
+                newFeatured[$this.attr("name")] = $this.val();
+            });
+
+            $.ajax({
+                type: "POST",
+                url: "/featured",
+                contentType: "application/json",
+                async: true,
+                data: JSON.stringify(newFeatured),
+                dataType: "text",
+                success: function(data) {
+                    $("#statusMessage").html("Saved featured entries.");
+                    featuredRefreshInProgress_ = false;
+                },
+                error: function(error) {
+                    console.log(error);
+                    $("#statusMessage").html("Failed to save featured entries, error: " + error.responseText);
+                    featuredRefreshInProgress_ = false;
+                }
+            });
+
+        });
+    }
+}
+
 $(document).ready(function() {
     $(".modal").hide();
     $(".modal").click(function(event) {
@@ -64,23 +142,10 @@ $(document).ready(function() {
 
         $("#entryTable").html(tableHtml);
 
-        let featuredTableHtml = "<tr><th>Tag</th><th>Title</th><th>ID / URL</th></tr>";
-        let categoryFeatured = {};
-        for (let i = 0; i < data.length; i++) {
-            const entry = data[i];
-            for (let j = 0; j < entry.featuredTags.length; j++) {
-                categoryFeatured[entry.featuredTags[j]] = entry;
-            }
-        }
-        for (let category in categoryFeatured) {
-            const entry = categoryFeatured[category];
-            featuredTableHtml += "<tr><td>" + category
-                + "</td><td>" + FormatTableFieldValue(TABLE_FIELDS[2], entry)
-                + "</td><td>" + FormatTableFieldValue(TABLE_FIELDS[4], entry)
-                + "</td></tr>\n";
-        }
-
-        $("#featuredEntryTable").html(featuredTableHtml);
+        $.get("/featured", function(data) {
+            UpdateFeaturedTable(data);
+            featuredRefreshInProgress_ = false;
+        });
     });
 
     $.ajax({
