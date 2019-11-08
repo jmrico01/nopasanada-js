@@ -20,15 +20,15 @@
         </images>
     </featured>
     <media>
-        <kanye-tweet type="image">
-            /images/201910/25-kanye-west-jesus-is-king/kanye-tweet.jpg
-        </kanye-tweet>
-        <image3 type="image">
-            /images/201910/25-kanye-west-jesus-is-king/image3.jpg
-        </image3>
-        <image2 type="image">
+        <meme1 type="image">
+            /images/201911/08-bojack-horseman/meme1.jpg
+        </meme1>
+        <meme2 type="image">
             /images/201910/25-kanye-west-jesus-is-king/image2.jpg
-        </image2>
+        </meme2>
+        <meme3 type="image">
+            /images/201910/25-kanye-west-jesus-is-king/image2.jpg
+        </meme3>
     </media>
     <tags>
         cultura, home
