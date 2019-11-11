@@ -301,15 +301,21 @@ function SaveEntryData()
     });
 }
 
+let uploadQueueInProcess_ = false;
+
 function BuzzImageUploadQueue()
 {
+    if (uploadQueueInProcess_) {
+        return;
+    }
+    uploadQueueInProcess_ = true;
+
     let queued = imageDropzone_.getQueuedFiles();
     if (queued.length === 0) {
         return;
     }
 
     let image = queued[0];
-    console.log(image);
     $(image.previewElement);
     $("#imageUploadFileName").html(image.name);
     $("#imageUploadNameCustom").hide();
@@ -330,9 +336,19 @@ function BuzzImageUploadQueue()
     // typeHtml += "<option value=\"custom\">Custom</option>";
     $("#imageUploadType").html(typeHtml);
 
+    $("#imageUploadButton").off("click");
     $("#imageUploadButton").click(function() {
         image.npnLabel = $("#imageUploadType").val();
         imageDropzone_.processFile(image);
+        $("#imageUploadProcessor").hide();
+        uploadQueueInProcess_ = false;
+    });
+
+    $("#imageUploadCancelButton").off("click");
+    $("#imageUploadCancelButton").click(function() {
+        imageDropzone_.removeFile(image);
+        uploadQueueInProcess_ = false;
+        BuzzImageUploadQueue();
     });
 }
 
@@ -354,7 +370,6 @@ Dropzone.options.imageDropzone = {
             let parser = new DOMParser();
             let xmlDoc = parser.parseFromString(response, "text/xml");
             let imageUri = xmlDoc.getElementsByTagName("uri")[0].textContent;
-            console.log(imageUri);
             let image = GetImageByName(file.npnLabel, images_);
             if (image === null) {
                 images_.push({
@@ -368,6 +383,7 @@ Dropzone.options.imageDropzone = {
 
             $("#statusMessage").html("Successfully uploaded " + file.name + " as " + file.npnLabel);
             this.removeFile(file);
+            console.log("hello");
             BuzzImageUploadQueue();
         });
         this.on("complete", function(file) {
@@ -379,7 +395,7 @@ Dropzone.options.imageDropzone = {
             return;
         }
         done();
-
+        console.log("sailor");
         BuzzImageUploadQueue();
     }
 };
