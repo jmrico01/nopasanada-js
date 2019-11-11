@@ -316,7 +316,7 @@ function BuzzImageUploadQueue()
     }
 
     let image = queued[0];
-    $(image.previewElement);
+    $(image.previewElement).css("background-color", "#666");
     $("#imageUploadFileName").html(image.name);
     $("#imageUploadNameCustom").hide();
     $("#imageUploadProcessor").show();
@@ -341,12 +341,14 @@ function BuzzImageUploadQueue()
         image.npnLabel = $("#imageUploadType").val();
         imageDropzone_.processFile(image);
         $("#imageUploadProcessor").hide();
+        $(image.previewElement).css("background-color", "#fff");
         uploadQueueInProcess_ = false;
     });
 
     $("#imageUploadCancelButton").off("click");
     $("#imageUploadCancelButton").click(function() {
         imageDropzone_.removeFile(image);
+        $(image.previewElement).css("background-color", "#fff");
         uploadQueueInProcess_ = false;
         BuzzImageUploadQueue();
     });
