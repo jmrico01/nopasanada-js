@@ -315,7 +315,9 @@ function BuzzImageUploadQueue()
     $("#imageUploadNameCustom").hide();
     $("#imageUploadProcessor").show();
 
-    let typeHtml = $("#imageUploadType").html();
+    let typeHtml = "";
+    typeHtml += "<option value=\"header\">Header</option>";
+    typeHtml += "<option value=\"poster\">Poster</option>";
     let contentType = document.getElementById("contentType").value;
     if (contentType === "newsletter") {
         for (let i = 0; i < 4; i++) {
@@ -332,13 +334,6 @@ function BuzzImageUploadQueue()
         image.npnLabel = $("#imageUploadType").val();
         imageDropzone_.processFile(image);
     });
-
-    /*$(".modal-content").html(modalHtml);
-    $("#imageType").change(function(event) {
-        file.npnLabel = $("#imageType").val();
-        $(".modal").hide();
-        done();
-    });*/
 }
 
 // TODO(important) change local image URLs so that they are updated in entry data
@@ -347,7 +342,6 @@ Dropzone.options.imageDropzone = {
     autoProcessQueue: false,
     paramName: "imageFile",
     acceptedFiles: "image/jpeg",
-    // maxFiles: 1,
     dictDefaultMessage: "Click here to upload, or drag an image (JPG only)",
     init: function() {
         imageDropzone_ = this;
