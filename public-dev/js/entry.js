@@ -333,7 +333,7 @@ function BuzzImageUploadQueue()
             typeHtml += "<option value=\"header-mobile" + (i + 1) + "\">Newsletter Mobile Header, Article " + (i + 1) + "</option>";
         }
     }
-    // typeHtml += "<option value=\"custom\">Custom</option>";
+    // TODO typeHtml += "<option value=\"custom\">Custom</option>";
     $("#imageUploadType").html(typeHtml);
 
     $("#imageUploadButton").off("click");
@@ -354,7 +354,6 @@ function BuzzImageUploadQueue()
     });
 }
 
-// TODO(important) change local image URLs so that they are updated in entry data
 // TODO(important) featured image url???
 Dropzone.options.imageDropzone = {
     autoProcessQueue: false,
@@ -384,7 +383,6 @@ Dropzone.options.imageDropzone = {
             }
 
             $("#statusMessage").html("Successfully uploaded " + file.name + " as " + file.npnLabel);
-            this.removeFile(file);
             BuzzImageUploadQueue();
         });
         this.on("complete", function(file) {
