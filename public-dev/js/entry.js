@@ -305,15 +305,15 @@ let uploadQueueInProcess_ = false;
 
 function BuzzImageUploadQueue()
 {
-    if (uploadQueueInProcess_) {
-        return;
-    }
-    uploadQueueInProcess_ = true;
-
     let queued = imageDropzone_.getQueuedFiles();
     if (queued.length === 0) {
         return;
     }
+
+    if (uploadQueueInProcess_) {
+        return;
+    }
+    uploadQueueInProcess_ = true;
 
     let image = queued[0];
     $(image.previewElement).css("background-color", "#666");
@@ -385,7 +385,6 @@ Dropzone.options.imageDropzone = {
 
             $("#statusMessage").html("Successfully uploaded " + file.name + " as " + file.npnLabel);
             this.removeFile(file);
-            console.log("hello");
             BuzzImageUploadQueue();
         });
         this.on("complete", function(file) {
@@ -397,7 +396,7 @@ Dropzone.options.imageDropzone = {
             return;
         }
         done();
-        console.log("sailor");
+
         BuzzImageUploadQueue();
     }
 };
