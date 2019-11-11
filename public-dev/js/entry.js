@@ -3,6 +3,8 @@ let images_ = null;
 
 let entryMedia_ = null;
 
+let imageDropzone_ = null;
+
 function UpdateImageList(images)
 {
     $.ajax({
@@ -299,14 +301,57 @@ function SaveEntryData()
     });
 }
 
+function BuzzImageUploadQueue()
+{
+    let queued = imageDropzone_.getQueuedFiles();
+    if (queued.length === 0) {
+        return;
+    }
+
+    let image = queued[0];
+    console.log(image);
+    $(image.previewElement);
+    $("#imageUploadFileName").html(image.name);
+    $("#imageUploadNameCustom").hide();
+    $("#imageUploadProcessor").show();
+
+    let typeHtml = $("#imageUploadType").html();
+    let contentType = document.getElementById("contentType").value;
+    if (contentType === "newsletter") {
+        for (let i = 0; i < 4; i++) {
+            typeHtml += "<option value=\"header-desktop" + (i + 1) + "\">Newsletter Desktop Header, Article " + (i + 1) + "</option>";
+        }
+        for (let i = 0; i < 4; i++) {
+            typeHtml += "<option value=\"header-mobile" + (i + 1) + "\">Newsletter Mobile Header, Article " + (i + 1) + "</option>";
+        }
+    }
+    // typeHtml += "<option value=\"custom\">Custom</option>";
+    $("#imageUploadType").html(typeHtml);
+
+    $("#imageUploadButton").click(function() {
+        image.npnLabel = $("#imageUploadType").val();
+        imageDropzone_.processFile(image);
+    });
+
+    /*$(".modal-content").html(modalHtml);
+    $("#imageType").change(function(event) {
+        file.npnLabel = $("#imageType").val();
+        $(".modal").hide();
+        done();
+    });*/
+}
+
 // TODO(important) change local image URLs so that they are updated in entry data
 // TODO(important) featured image url???
 Dropzone.options.imageDropzone = {
+    autoProcessQueue: false,
     paramName: "imageFile",
     acceptedFiles: "image/jpeg",
-    maxFiles: 1,
+    // maxFiles: 1,
     dictDefaultMessage: "Click here to upload, or drag an image (JPG only)",
     init: function() {
+        imageDropzone_ = this;
+
         this.on("sending", function(file, xhr, formData) {
             formData.set("npnEntryPath", GetEntryPath());
             formData.set("npnLabel", file.npnLabel);
@@ -329,6 +374,7 @@ Dropzone.options.imageDropzone = {
 
             $("#statusMessage").html("Successfully uploaded " + file.name + " as " + file.npnLabel);
             this.removeFile(file);
+            BuzzImageUploadQueue();
         });
         this.on("complete", function(file) {
         });
@@ -338,35 +384,15 @@ Dropzone.options.imageDropzone = {
             done("Image format must be .jpg");
             return;
         }
-        let modalHtml = "<h3>" + file.name + "</h3><h3>Image Type</h3><select id=\"imageType\" name=\"imageType\"><option disabled selected value>-- select image type --</option></option><option value=\"header\">Header</option><option value=\"poster\">Poster</option>";
-        let contentType = document.getElementById("contentType").value;
-        if (contentType === "newsletter") {
-            for (let i = 0; i < 4; i++) {
-                modalHtml += "<option value=\"header-desktop" + (i + 1) + "\">Newsletter Desktop Header, Article " + (i + 1) + "</option>";
-            }
-            for (let i = 0; i < 4; i++) {
-                modalHtml += "<option value=\"header-mobile" + (i + 1) + "\">Newsletter Mobile Header, Article " + (i + 1) + "</option>";
-            }
-        }
-        modalHtml += "</select>";
-        $(".modal").show();
-        $(".modal").click(function(event) {
-            if (event.target === this) {
-                $(".modal").hide();
-                done("Cancelled");
-            }
-        });
-        $(".modal-content").html(modalHtml);
-        $("#imageType").change(function(event) {
-            file.npnLabel = $("#imageType").val();
-            $(".modal").hide();
-            done();
-        });
+        done();
+
+        BuzzImageUploadQueue();
     }
 };
 
 $(document).ready(function() {
     $(".modal").hide();
+    $("#imageUploadProcessor").hide();
 
     imageRowTemplate_ = $("#imagesListRowTemplate").html();
     $("#imagesListRowTemplate").remove();

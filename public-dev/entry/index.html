@@ -127,6 +127,22 @@
             <h1>Images</h1>
             <div id="imagesListAdd">
                 <form id="imageDropzone" class="dropzone" action="/newImage"></form>
+                <div id="imageUploadProcessor">
+                    <h3><b><div id="imageUploadFileName">filename.jpg</div></b></h3>
+                    <hr><br>
+                    <h3>Image Type</h3>
+                    <select id="imageUploadType" name="imageUploadType">
+                        <option value="header">Header</option>
+                        <option value="poster">Poster</option>
+                    </select>
+                    <br>
+                    <div id="imageUploadNameCustom">
+                        <h3>Custom Image Label (only lower-case letters, numbers, and dashes)</h3>
+                        <input type="text" name="imageUploadNameCustom"><br>
+                    </div>
+                    <br>
+                    <div id="imageUploadButton" class="bigBoyButton">UPLOAD</div>
+                </div>
             </div>
             <div id="imagesList">
                 <div id="imagesListRowTemplate">

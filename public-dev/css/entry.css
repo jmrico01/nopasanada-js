@@ -19,6 +19,13 @@
     background-color: #f55;
 }
 
+#imageUploadButton {
+    background-color: #8f8;
+}
+#imageUploadButton:hover {
+    background-color: #4f4;
+}
+
 .section {
     margin-top: 20pt;
     margin-bottom: 20pt;
@@ -31,8 +38,21 @@ input[type=text], textarea {
     width: 100%;
 }
 
-#imageDropzone {
+#imagesListAdd {
+    overflow: auto;
+}
+
+#imageDropzone, #imageUploadProcessor {
+    width: 48%;
     height: 300pt;
+}
+
+#imageDropzone {
+    float: left;
+}
+
+#imageUploadProcessor {
+    float: right;
 }
 
 input[type=file] {

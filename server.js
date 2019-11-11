@@ -765,7 +765,7 @@ if (serverSettings.isDev) {
                 let number = npnLabel[npnLabel.length - 1];
                 if (number !== "1" && number !== "2" && number !== "3" && number !== "4") {
                     console.error("Invalid npnLabel: " + npnLabel);
-                    res.status(400).end("Invalid npn label " + npnLabel);
+                    res.status(400).end("<error>Invalid npn label " + npnLabel + "</error>");
                     return;
                 }
                 uri += entryPathSplit[entryPathSplit.length - 1] + "/vertical" + number + ".jpg";
@@ -774,14 +774,14 @@ if (serverSettings.isDev) {
                 let number = npnLabel[npnLabel.length - 1];
                 if (number !== "1" && number !== "2" && number !== "3" && number !== "4") {
                     console.error("Invalid npnLabel: " + npnLabel);
-                    res.status(400).end("Invalid npn label " + npnLabel);
+                    res.status(400).end("<error>Invalid npn label " + npnLabel + "</error>");
                     return;
                 }
                 uri += entryPathSplit[entryPathSplit.length - 1] + "/square" + number + ".jpg";
             }
             else {
                 console.error("Invalid npnLabel: " + npnLabel);
-                res.status(400).end("Invalid npn label " + npnLabel);
+                res.status(400).end("<error>Invalid npn label " + npnLabel + "</error>");
                 return;
             }
 
