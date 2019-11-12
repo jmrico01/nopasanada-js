@@ -1,6 +1,6 @@
 exports.featured = {
     "home": "/content/201911/11-ilustradoras",
-    "noticias": "/content/201911/11-lo-importante",
+    "noticias": "/content/201911/12-lo-importante",
     "ciencia": "/content/201910/29-campeon-ambiental",
     "cultura": "/content/201911/11-ilustradoras",
     "opinion": "/content/201911/04-sociedad",
