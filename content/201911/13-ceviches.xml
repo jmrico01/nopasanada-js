@@ -20,15 +20,12 @@
         </images>
     </featured>
     <media>
-        <meme1 type="image">
-            /images/201911/08-bojack-horseman/meme1.jpg
-        </meme1>
-        <meme2 type="image">
-            /images/201911/08-bojack-horseman/meme2.jpg
-        </meme2>
-        <meme3 type="image">
-            /images/201911/08-bojack-horseman/meme3.jpg
-        </meme3>
+        <ceviche1 type="image">
+            /images/201911/13-ceviches/ceviche1.jpg
+        </ceviche1>
+        <ceviche2 type="image">
+            /images/201911/13-ceviches/ceviche2.jpg
+        </ceviche2>
     </media>
     <tags>
         cultura, home
@@ -70,7 +67,7 @@ El ceviche es una comida transcontinental: desde México hasta el sur de Améric
 
 Los ceviches tradicionales eran hasta hace poco la norma: una palangana de pescado troceado con “olores”, limón y gaseosa. De ahí a cucharadas a los vasos. Lo más sofisticado que llegaba era a ser mixto: camarones, pescado, conchas. Los vegetarianos, de palmito o de plátano, rompieron paradigmas. 
 
-IMAGE: ceviche 2.jpg
+$image/ceviche2$
 
 Hubo que esperar un poco para que los nuevos aires de la gastronomía costarricense soplaran y llegaran espíritus con ansias de transgredir los ceviches de palangana.
 
@@ -90,7 +87,7 @@ El restaurante El Pelícano, de Herradura, entregó un cevichazo con pulpo, ajo 
 
 También me llamó mucho la atención el vegano con chayote de Selina. Jamás habría pensado que el chayote podría aportar una textura tan interesante y un sabor que –aunque neutro– permitiera disfrutar a mares del maridaje con el limón, la cebolla morada y el culantro, entre otros ingredientes.
 
-IMAGE: ceviche 1.jpg
+$image/ceviche1$
 
 Los Chanchitos, un restaurante con nombre en las antípodas de la idea de la cocina de mar, presentó un ceviche de “pulpo enamorado”, resultado de una receta bien conseguida que incluía mayonesa picante. 
 
