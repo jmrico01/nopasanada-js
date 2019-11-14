@@ -23,12 +23,18 @@
         <poster type="image">
             /images/201911/posters/14-manual-para-el-cine-de-fantasia-latinoamericano.jpg
         </poster>
-        <ceviche1 type="image">
-            /images/201911/13-ceviches/ceviche1.jpg
-        </ceviche1>
-        <ceviche2 type="image">
-            /images/201911/13-ceviches/ceviche2.jpg
-        </ceviche2>
+        <image1 type="image">
+            /images/201911/14-manual/image1.jpg
+        </image1>
+        <image2 type="image">
+            /images/201911/14-manual/image2.jpg
+        </image2>
+        <image3 type="image">
+            /images/201911/14-manual/image3.jpg
+        </image3>
+        <image4 type="image">
+            /images/201911/14-manual/image4.jpg
+        </image4>
     </media>
     <tags>
         cultura, home
@@ -64,13 +70,13 @@
 
 Su compatriota [Daniel Castro Zimbrón](https://www.imdb.com/name/nm2435337/) no se queda atrás. Es el director de [Las Tinieblas](https://www.rottentomatoes.com/m/the_darkness_2016): un thriller destacado del cine latinoamericano, protagonizado por [Brontis Jodorowsky](https://www.imdb.com/name/nm0423526/?ref_=tt_cl_t1), y celebrado en su país de origen al igual que en varios festivales de alrededor del mundo. 
 
-EMBED: https://www.youtube.com/watch?v=v1i4XFHqilI
+$youtube/v1i4XFHqilI$
 
 Oscura, compleja, llena de pistas a propósito confusas: las tinieblas oscila entre el terror, el mood post-apocalíptico y el suspenso, y tal vez por eso ni siquiera Daniel sabe muy bien cómo encasillarla; lo que sí tiene claro es que es [una metáfora visual sobre la contemporaneidad Mexicana](https://www.youtube.com/watch?v=8XJtFyXCW3k). Precisamente por esta complejidad visual y de contenido, arrasó con fondos y concursos y terminó contando con el respetable presupuesto de un millón y medio de dólares para su producción.
 
 Daniel radica actualmente en Costa Rica, donde trabaja como profesor de dirección de cine. En una región donde el cine resulta un arte tan difícil de ejecutar - porque [el presupuesto por parte de los estados es deficiente y su permanencia se pone constantemente en entredicho](https://nopasanada.com/content/201910/31-costa-rica-vs-el-cine) - lograr hacer una buena película “de género” como Las Tinieblas no es fácil, y puede ser tentador pensar que depende sobretodo del dinero. 
 
-$image_1$
+$image/image1$
 
 Sin embargo, sospechábamos que eso no es lo único que hace a una película de fantasía exitosa, y por eso hablamos con Daniel para que nos contara, según su experiencia y en sus palabras, cómo hacer cine de fantasía - y hacerlo bien. Esto fue lo que nos dijo:
 
@@ -82,7 +88,7 @@ Sin embargo, sospechábamos que eso no es lo único que hace a una película de 
 
 *Tienes que estar consciente de que todo lo que estás creando ya se hizo antes, y entre más sepas de dónde viene mejor va a ser esa nueva creación. No negar a los maestros y a las inspiraciones que tienes. Las ideas están en el aire, y por eso todos hacemos películas muy parecidas. Por ejemplo, The Witch: cuando fui a verla dije… puta ¿qué es esto? ¡cómo se parece a mí película! Yo ya estaba editando Las Tinieblas y fue una sorpresa. Es válido tomar las ideas de otros para hacer nuevas obras.”*
 
-$image_2$
+$image/image2$
 
 **2. Hacer el cine que a uno le gusta ver**
 
@@ -102,7 +108,7 @@ $image_2$
 
 *Un ejemplo de esto es El Laberinto del Fauno de Guillermo del Toro, que es una historia en un contexto social muy duro pero contado desde un punto de vista fantástico... eso es darle otro sentido a la realidad.”*
 
-$image_3$
+$image/image3$
 
 **4.No callar los impulsos, pero considerar el presupuesto**
 
@@ -120,6 +126,6 @@ $image_3$
 
 *“Después de filmar Las Tinieblas, el diseñador de sonido se fue con su equipo a la cabaña a reconstruir los sonidos; a grabar toda la película otra vez con sonidos. Así está hecha la película, por eso el silencio es tan silencio, ¿no? Porque está lleno de detalles: el detalle de la madera, de los platos, el detalle de las puertas, del crujido de los árboles, del viento, el sonido de la bestia - que está hecho con sonidos de la casa, tal cual; así se construyó. Es una película hecha con puros detallitos. Esa forma de trabajo es la que a mí me encanta. El trabajo minucioso de construir un mundo a partir de la nada, algo que no existe: ¿cómo usamos los elementos que tenemos para hacer algo que antes no existía?”*
 
-$image_4$
+$image/image4$
     </text>
 </article>

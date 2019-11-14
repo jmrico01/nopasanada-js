@@ -664,8 +664,7 @@ app.get("/content/*/*", async function(req, res) {
         {
             tag: "youtube",
             content: function(arg, style, entryMedia) {
-                return "<img style=\"" + entryMedia[arg].style + "\" src=\"../../.."
-                    + entryMedia[arg].content + "\">";
+                return "<iframe style=\"width: 100%; height: 40vw;\" src=\"https://www.youtube.com/embed/" + arg + "\" frameborder=\"0\" allow=\"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>";
             }
         },
         {
