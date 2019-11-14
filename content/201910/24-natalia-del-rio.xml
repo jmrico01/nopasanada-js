@@ -15,11 +15,11 @@
         <highlightColor>
             #ff613c
         </highlightColor>
-        <images>
-            /images/201910/headers/24-natalia-del-rio.jpg
-        </images>
     </featured>
     <media>
+        <header type="image">
+            /images/201910/headers/24-natalia-del-rio.jpg
+        </header>
         <image1 type="image">
             /images/201910/24-natalia-del-rio/1.jpg
         </image1>
@@ -123,7 +123,4 @@ $image/image8$
 $image/image9$
 &lt;div class=&quot;articleCaption&quot;&gt;Fotos por Natalia del Río.&lt;/div&gt;
     </text>
-    <image>
-        /images/201910/headers/24-natalia-del-rio.jpg
-    </image>
 </article>

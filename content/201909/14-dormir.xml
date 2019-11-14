@@ -15,10 +15,12 @@
         <highlightColor>
             #ff613c
         </highlightColor>
-        <images>
-            /images/201909/headers/dormir.jpg
-        </images>
     </featured>
+    <media>
+        <header type="image">
+            /images/201909/headers/dormir.jpg
+        </header>
+    </media>
     <tags>
         ciencia
     </tags>
@@ -88,7 +90,4 @@ De sus conocidos, ¿cuántas personas realmente están alcanzando estos tiempos 
 
 **Nuestra generación prioriza situaciones de trabajo o estudio, y para lograrlo, sacrifica actividades sagradas como el sueño, sin darse cuenta de lo detrimental que pasar recto puede ser para la salud.** Dormir simplemente no está de moda… ¿existe alguna una actividad más injustamente underrated?
     </text>
-    <image>
-        /images/201909/headers/dormir.jpg
-    </image>
 </article>

@@ -1,24 +1,21 @@
 <text>
     <featured>
         <pretitle>
-            
         </pretitle>
         <title>
-            
         </title>
         <text1>
-            
         </text1>
         <text2>
-            
         </text2>
         <highlightColor>
-            
         </highlightColor>
-        <images>
-            /images/201909/headers/coral.jpg
-        </images>
     </featured>
+    <media>
+        <header type="image">
+            /images/201909/headers/coral.jpg
+        </header>
+    </media>
     <tags>
         
     </tags>
@@ -59,7 +56,4 @@ Estamos recibiendo cuentos o historias cortas (de no más de 1200 palabras) en l
 
 Tenés tiempo hasta el 20 de octubre. ¡Queremos leerte y tender puentes para conocernos mejor!
     </text>
-    <image>
-        /images/201909/headers/coral.jpg
-    </image>
 </text>

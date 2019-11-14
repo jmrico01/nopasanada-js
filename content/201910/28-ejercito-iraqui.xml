@@ -15,10 +15,12 @@
         <highlightColor>
             #ff613c
         </highlightColor>
-        <images>
-            /images/201910/headers/28-ejercito-iraqui.jpg
-        </images>
     </featured>
+    <media>
+        <header type="image">
+            /images/201910/headers/28-ejercito-iraqui.jpg
+        </header>
+    </media>
     <tags>
         noticias, home
     </tags>
@@ -92,7 +94,4 @@ Cuatro diputados dimitieron y la mayoría parlamentaria del primer ministro, Ade
 
 Desde el viernes, decenas de sedes de partidos y de facciones de las Unidades de Movilización Popular fueron incendiadas, en unos incidentes que dejaron varios manifestantes muertos.
     </text>
-    <image>
-        /images/201910/headers/28-ejercito-iraqui.jpg
-    </image>
 </article>

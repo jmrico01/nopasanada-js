@@ -15,11 +15,14 @@
         <highlightColor>
             #ff613c
         </highlightColor>
-        <images>
-            /images/201910/headers/25-kanye-west-jesus-is-king.jpg
-        </images>
     </featured>
     <media>
+        <header type="image">
+            /images/201910/headers/25-kanye-west-jesus-is-king.jpg
+        </header>
+        <poster type="image">
+            /images/201910/posters/25-kanye-west-jesus-is-king.jpg
+        </poster>
         <kanye-tweet type="image">
             /images/201910/25-kanye-west-jesus-is-king/kanye-tweet.jpg
         </kanye-tweet>
@@ -92,10 +95,4 @@ Kanye West es un artista controversial e icono mediatico que ha marcado la cultu
 Illustrado por un comentario de la misma entrevista con Zane Lowe el cual dijo: 
 &quot;Sin lugar a dudas soy, sin duda, el mejor artista humano de todos los tiempos. Es solo un hecho&quot;.
     </text>
-    <image>
-        /images/201910/headers/25-kanye-west-jesus-is-king.jpg
-    </image>
-    <imagePoster>
-        /images/201910/posters/25-kanye-west-jesus-is-king.jpg
-    </imagePoster>
 </article>

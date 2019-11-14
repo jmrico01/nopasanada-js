@@ -1,24 +1,21 @@
 <article>
     <featured>
         <pretitle>
-            
         </pretitle>
         <title>
-            
         </title>
         <text1>
-            
         </text1>
         <text2>
-            
         </text2>
         <highlightColor>
-            
         </highlightColor>
-        <images>
-            /images/201909/headers/alimentos.jpg
-        </images>
     </featured>
+    <media>
+        <header type="image">
+            /images/201909/headers/alimentos.jpg
+        </header>
+    </media>
     <tags>
         ciencia
     </tags>
@@ -79,7 +76,4 @@ Cuando consumimos proteínas animales, usualmente escogemos de entre un selecto 
 Con pequeños cambios en nuestra manera de hacer las cosas, acostumbramos a la mente a no desperdiciar. Por ejemplo, no hacer las compras con hambre nos puede evitar comprar antojos que no serán esenciales cuando ya estemos bien comidos en la casa. Muchos de estos antojos se quedan meses en las despensas antes de pasar a la basura; planear las comidas semanalmente puede ayudarnos a comprar solo lo estrictamente necesario; ponernos retos como el “viernes de sobras” es un win-win: al final de la semana, cuando más pereza da cocinar… ¿por qué no comerse todos esos poquitos de comida que nos sobraron después de cada comida? 
 Cambiar hábitos puede parecer difícil, pero en realidad toma poco tiempo. La próxima vez que caminen con un tupper hacia el basurero de la cocina, listos para botar sus contenidos, **fíjense en lo que están tirando y pregúntense si se pudo haber evitado.**
     </text>
-    <image>
-        /images/201909/headers/alimentos.jpg
-    </image>
 </article>

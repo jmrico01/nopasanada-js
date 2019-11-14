@@ -15,10 +15,15 @@
         <highlightColor>
             #7fffcb
         </highlightColor>
-        <images>
-            /images/201909/headers/maquillaje.jpg
-        </images>
     </featured>
+    <media>
+        <header type="image">
+            /images/201909/headers/maquillaje.jpg
+        </header>
+        <poster type="image">
+            /images/201909/posters/11-article.jpg
+        </poster>
+    </media>
     <tags>
         cultura,opinion
     </tags>
@@ -68,10 +73,4 @@ Las nuevas generaciones también consideran su impacto ecológico, y demandan lo
 
 Mi mamá se maquillaba todos los días, especialmente en las noches. Hoy en día, nunca se maquilla, y siempre me recuerda que mi generación se quitó - y le quitó a ella - ese peso de encima. Maquillarse se ha vuelto una práctica de autocuido, asociada con la expresión de la identidad y por lo tanto inclusiva… y no una búsqueda de “perfección” dictada por estándares canónicos de belleza.
     </text>
-    <image>
-        /images/201909/headers/maquillaje.jpg
-    </image>
-    <imagePoster>
-        /images/201909/posters/11-article.jpg
-    </imagePoster>
 </article>

@@ -15,11 +15,11 @@
         <highlightColor>
             #ff613c
         </highlightColor>
-        <images>
-            /images/201910/headers/23-felix-en-el-manglar.jpg
-        </images>
     </featured>
     <media>
+        <header type="image">
+            /images/201910/headers/23-felix-en-el-manglar.jpg
+        </header>
         <manglar type="image">
             /images/201910/23-felix-en-el-manglar/manglar.jpg
         </manglar>
@@ -130,7 +130,4 @@ Recibo el último mensaje a la mañana del día siguiente:
 $image/alcaravan$
 &lt;div class=&quot;articleCaption&quot;&gt;Fotografía por Félix Salazar.&lt;/div&gt;
     </text>
-    <image>
-        /images/201910/headers/23-felix-en-el-manglar.jpg
-    </image>
 </article>

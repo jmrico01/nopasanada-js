@@ -15,20 +15,14 @@
         <highlightColor>
             #ff613c
         </highlightColor>
-        <images>
-            /images/201910/headers/31-costa-rica-vs-el-cine.jpg
-        </images>
     </featured>
     <media>
-        <kanye-tweet type="image">
-            /images/201910/25-kanye-west-jesus-is-king/kanye-tweet.jpg
-        </kanye-tweet>
-        <image3 type="image">
-            /images/201910/25-kanye-west-jesus-is-king/image3.jpg
-        </image3>
-        <image2 type="image">
-            /images/201910/25-kanye-west-jesus-is-king/image2.jpg
-        </image2>
+        <header type="image">
+            /images/201910/headers/31-costa-rica-vs-el-cine.jpg
+        </header>
+        <poster type="image">
+            /images/201910/posters/31-costa-rica-vs-el-cine.jpg
+        </poster>
     </media>
     <tags>
         opinion, cultura, home
@@ -120,10 +114,4 @@ Pero tenerle miedo al cine es tenerle miedo a asomarse al reflejo y encontrarse 
 
 Para cerrar, cito a Alex: *“Recuerdo que Patricio Guzmán decía que “un país sin cine, es como una familia sin álbum fotográfico&apos;&apos; - creo que es una frase que sintetiza lo que quiero decir: hasta cierto punto no tener un cine propio, es como no tener memoria.”*
     </text>
-    <image>
-        /images/201910/headers/31-costa-rica-vs-el-cine.jpg
-    </image>
-    <imagePoster>
-        /images/201910/posters/31-costa-rica-vs-el-cine.jpg
-    </imagePoster>
 </article>

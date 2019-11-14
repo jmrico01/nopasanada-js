@@ -15,10 +15,12 @@
         <highlightColor>
             #ff613c
         </highlightColor>
-        <images>
-            /images/201909/headers/28-salud-mental.jpg
-        </images>
     </featured>
+    <media>
+        <header type="image">
+            /images/201909/headers/28-salud-mental.jpg
+        </header>
+    </media>
     <tags>
         ciencia
     </tags>
@@ -65,7 +67,4 @@ Se que con la anterior afirmación muchos lectores se echarán para atrás y dir
 **El reduccionismo nos lleva a pensar que la “bronca mental” es de aquella o de aquel, cuando en realidad es reflejo de un sistema**, de la competitividad voraz que manipula nuestra forma de relacionarlos; cómo el *brete* para muchos se vuelve panacea ante las crisis existenciales (obviando la precarización continua del mundo laboral); sobre todo, de lo que escondemos con los audífonos puestos, los celulares en la mesa y las sonrisas forzadas, en medio de conocidos y extraños que saborean su Gallo Pinto con sabor a papas fritas antes de iniciar otro día de trabajo, y haciendo chota de lo que ven en Buen Día sin comprenderlo. 
 ***Roberto Morales Rodríguez.** Escritor y Licenciado en Trabajo Social egresado de la Universidad de Costa Rica, con experiencia en trabajo comunitario y de campo en organizaciones y fundaciones con impacto social en diversas provincias del país.*
     </text>
-    <image>
-        /images/201909/headers/28-salud-mental.jpg
-    </image>
 </article>

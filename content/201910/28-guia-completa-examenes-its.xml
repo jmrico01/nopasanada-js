@@ -15,11 +15,11 @@
         <highlightColor>
             #ff613c
         </highlightColor>
-        <images>
-            /images/201910/headers/28-guia-completa-examenes-its.jpg
-        </images>
     </featured>
     <media>
+        <header type="image">
+            /images/201910/headers/28-guia-completa-examenes-its.jpg
+        </header>
         <image1 type="image">
             /images/201910/28-guia-completa-examenes-its/1.png
         </image1>
@@ -131,7 +131,4 @@ En cuanto a transmisión de ITS, **el uso de condón correcto y constante (sumad
 
 Hacerse pruebas mínimo una vez al año es demostrar educación sexual y responsabilidad por la salud propia y de las personas con las que nos relacionamos.
     </text>
-    <image>
-        /images/201910/headers/28-guia-completa-examenes-its.jpg
-    </image>
 </article>

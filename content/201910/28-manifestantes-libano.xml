@@ -15,10 +15,12 @@
         <highlightColor>
             #ff613c
         </highlightColor>
-        <images>
-            /images/201910/headers/28-manifestantes-libano.jpg
-        </images>
     </featured>
+    <media>
+        <header type="image">
+            /images/201910/headers/28-manifestantes-libano.jpg
+        </header>
+    </media>
     <tags>
         noticias, home
     </tags>
@@ -90,9 +92,5 @@ Hace una semana, el primer ministro, Saad Hariri, anuncio un paquete de reformas
 &quot;Nadie sabe adónde vamos. Pero para mí lo que vivimos es tan importante como la caída del Muro de Berlín&quot;, aseguró, agitando su bandera, Ziad Omais, un agente inmobiliario de 52 años cuyos negocios &quot;van mal desde hace varios años&quot;.
 
 Omar, el estudiante que se dice comunista, desearía que este levantamiento que aún no ha sido bautizado quedara en la memoria como &quot;la revolución de octubre&quot;. &quot;Como la que cambió para siempre el rostro de Rusia&quot;, agregó.
-
     </text>
-    <image>
-        /images/201910/headers/28-manifestantes-libano.jpg
-    </image>
 </article>

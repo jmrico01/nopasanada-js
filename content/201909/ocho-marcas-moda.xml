@@ -1,24 +1,21 @@
 <article>
     <featured>
         <pretitle>
-            
         </pretitle>
         <title>
-            
         </title>
         <text1>
-            
         </text1>
         <text2>
-            
         </text2>
         <highlightColor>
-            
         </highlightColor>
-        <images>
-            /images/201909/headers/moda2.jpg
-        </images>
     </featured>
+    <media>
+        <header type="image">
+            /images/201909/headers/moda2.jpg
+        </header>
+    </media>
     <tags>
         cultura,opinion
     </tags>
@@ -126,7 +123,4 @@ $instagram/B0Gs_KvF9oU$
 
 Agostina Bianchi no es nueva en la industria de la moda. Desde el 2012 produce prendas de lujo hechas a mano con reutilizando hilados que de otras producciones. En un artículo para Quinta Trends la diseñadora aseguró que sueña con poder [expandir su negocio](https://www.quintatrends.com/2011/07/agostina-bianchi-moda-sustentable-que.html) y llegar a vender sus piezas en países como Noruega, Uruguay, Chile, **Costa Rica** e Italia, entre otros. ¡Ojalá veamos sus creaciones por acá pronto!
     </text>
-    <image>
-        /images/201909/headers/moda2.jpg
-    </image>
 </article>

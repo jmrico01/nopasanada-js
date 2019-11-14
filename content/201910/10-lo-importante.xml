@@ -20,9 +20,9 @@
         <header type="image">
             /images/201910/headers/10-lo-importante.jpg
         </header>
-        <header type="image">
+        <poster type="image">
             /images/201910/posters/10-lo-importante.jpg
-        </header>
+        </poster>
         <header-desktop1 type="image">
             /images/201910/10-lo-importante/vertical1.jpg
         </header-desktop1>

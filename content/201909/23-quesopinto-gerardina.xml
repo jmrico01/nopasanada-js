@@ -15,10 +15,12 @@
         <highlightColor>
             #ff613c
         </highlightColor>
-        <images>
-            /images/201909/headers/23-quesopinto.jpg
-        </images>
     </featured>
+    <media>
+        <header type="image">
+            /images/201909/headers/23-quesopinto.jpg
+        </header>
+    </media>
     <tags>
         cultura
     </tags>
@@ -66,7 +68,4 @@ Doña Gerardina tiene 28 años de ir cada domingo a la Feria de Zapote. Ella es 
 
 ***Alberto Gatgens, el gastronomista ([www.elgastronomista.com](http://www.elgastronomista.com)).** ¿Vivís para comer o comés para vivir? Si tu respuesta es la primera parte de la pregunta, mi propuesta es tu propuesta. Hace año y pico inicié un viaje en el que decidí unir los caminos de mis experiencias e intereses previos para servir reseñas honestas de la comida que me gusta. Estudié periodismo y literatura, entre otras cosas, pero cuando me formé en cocina profesional todo el andamiaje se entrelazó y ahora disfruto tanto comer como escribir sobre comida. Visito restaurantes por mi cuenta, a veces recibo invitaciones de dueños de establecimientos que me invitan, pero les advierto que si no me gusta su comida no los reseño, y a veces cocino y comparto mis recetas. No busco ser crítico de comida. Busco compartir buenas experiencias y explicar por qué son buenas.*
     </text>
-    <image>
-        /images/201909/headers/23-quesopinto.jpg
-    </image>
 </article>

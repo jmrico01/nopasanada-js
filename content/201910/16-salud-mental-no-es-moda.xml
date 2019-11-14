@@ -15,10 +15,15 @@
         <highlightColor>
             #ff613c
         </highlightColor>
-        <images>
-            /images/201910/headers/16-salud-mental-moda.jpg
-        </images>
     </featured>
+    <media>
+        <header type="image">
+            /images/201910/headers/16-salud-mental-moda.jpg
+        </header>
+        <poster type="image">
+            /images/201910/posters/16-salud-mental-moda.jpg
+        </poster>
+    </media>
     <tags>
         cultura
     </tags>
@@ -61,10 +66,4 @@ Jones y otras cuantas de sus compañeras donarán sus ingresos de la pasarela a 
 
 Alessandro Michele, el diseñador de Gucci, confirmó que la ropa restrictiva formaba parte del *performance* o actuación en la pasarela, y que no se tenía pensado venderla. Afirmó, en cambio, que todos sus diseños se tratan sobre “la libertad”, y aceptó que las modelos tienen derecho de protestar. La casa de moda no dió ningún otro comunicado oficial -; no es la primera vez que han sido criticados por usar temas sensibles a la ligera en su diseños.
     </text>
-    <image>
-        /images/201910/headers/16-salud-mental-moda.jpg
-    </image>
-    <imagePoster>
-        /images/201910/posters/16-salud-mental-moda.jpg
-    </imagePoster>
 </article>

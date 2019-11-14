@@ -361,15 +361,15 @@ async function GetEntryData(url, templates)
         }
     }
 
-    if (!("media" in entryData)) {
+    /*if (!("media" in entryData)) {
         entryData.media = {};
     }
     if (!("header" in entryData.media)) {
         entryData.media.header = {};
         entryData.media.header._ = "";
-    }
+    }*/
     // TODO temp, migration
-    /*if ("image" in entryData) {
+    if ("image" in entryData) {
         throw new Error("image in " + url);
     }
     if ("imagePoster" in entryData) {
@@ -412,7 +412,7 @@ async function GetEntryData(url, templates)
     }
     if (!("highlightColor" in featuredInfo)) {
         throw new Error("no highlightColor on featured info, file " + url);
-    }*/
+    }
 
     return { status: 200, contentType: resultContentType, entryData: entryData };
 }
@@ -478,8 +478,19 @@ async function LoadAllEntryMetadata(templates)
                 throw new Error("poster incomplete year / bad format: " + uri);
             }
             let datePoster = entryData.year + "-" + monthPoster + "-" + dayPoster;
-            let featuredImages = ("featured1" in entryData.media) ?
-                [ entryData.media.featured1._ ] : [ entryData.media.header._ ];
+            let featuredImages = [ entryData.media.header._ ];
+            if ("featured1" in entryData.media) {
+                featuredImages = [ entryData.media.featured1._ ];
+                let featuredN = 2;
+                while (true) {
+                    let featuredKey = "featured" + featuredN.toString();
+                    if (!(featuredKey in entryData.media)) {
+                        break;
+                    }
+                    featuredImages.push(entryData.media[featuredKey]._);
+                    featuredN++;
+                }
+            }
             allEntryMetadata.push({
                 featuredInfo: {
                     images: featuredImages,

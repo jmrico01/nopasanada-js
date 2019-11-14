@@ -15,10 +15,12 @@
         <highlightColor>
             #ff613c
         </highlightColor>
-        <images>
-            /images/201909/headers/25-tendencias-2019.jpg
-        </images>
     </featured>
+    <media>
+        <header type="image">
+            /images/201909/headers/25-tendencias-2019.jpg
+        </header>
+    </media>
     <tags>
         cultura
     </tags>
@@ -102,7 +104,4 @@ $instagram/BsgtNJPBu-E$
 
 $instagram/BvbXem8gpDE$
     </text>
-    <image>
-        /images/201909/headers/25-tendencias-2019.jpg
-    </image>
 </article>

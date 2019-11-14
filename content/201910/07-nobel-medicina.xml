@@ -10,10 +10,15 @@
         </text2>
         <highlightColor>
         </highlightColor>
-        <images>
-            /images/201910/headers/07-nobel-medicina.jpg
-        </images>
     </featured>
+    <media>
+        <header type="image">
+            /images/201910/headers/07-nobel-medicina.jpg
+        </header>
+        <poster type="image">
+            /images/201910/posters/07-nobel-medicina.jpg
+        </poster>
+    </media>
     <tags>
         ciencia
     </tags>
@@ -85,10 +90,4 @@ La academia tuvo que postergar el anuncio del Nobel 2018 -algo inédito en 70 a�
 
 Por ello el jueves 10 habrá dos medallas de oro, una para 2018 y la otra para 2019. La polaca Olga Tokarczuk, el keniano Ngugi Wa Thiong&apos;o, el albanés Ismail Kadaré, la estadounidense Joyce Carol Oates y, el eterno olvidado, el japonés Haruki Murakami son algunos de los nombres más citados.
     </text>
-    <image>
-        /images/201910/headers/07-nobel-medicina.jpg
-    </image>
-    <imagePoster>
-        /images/201910/posters/07-nobel-medicina.jpg
-    </imagePoster>
 </article>

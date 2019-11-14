@@ -1,24 +1,45 @@
 <newsletter>
     <featured>
         <pretitle>
-            
         </pretitle>
         <title>
-            
         </title>
         <text1>
-            
         </text1>
         <text2>
-            
         </text2>
         <highlightColor>
-            
         </highlightColor>
-        <images>
-            /images/201909/headers/newsletter-03.jpg
-        </images>
     </featured>
+    <media>
+        <header type="image">
+            /images/201909/headers/newsletter-03.jpg
+        </header>
+        <header-desktop1 type="image">
+            /images/201909/newsletter-03/vertical1.jpg
+        </header-desktop1>
+        <header-desktop2 type="image">
+            /images/201909/newsletter-03/vertical2.jpg
+        </header-desktop2>
+        <header-desktop3 type="image">
+            /images/201909/newsletter-03/vertical3.jpg
+        </header-desktop3>
+        <header-desktop4 type="image">
+            /images/201909/newsletter-03/vertical4.jpg
+        </header-desktop4>
+        <header-mobile1 type="image">
+            /images/201909/newsletter-03/square1.jpg
+        </header-mobile1>
+        <header-mobile2 type="image">
+            /images/201909/newsletter-03/square2.jpg
+        </header-mobile2>
+        <header-mobile3 type="image">
+            /images/201909/newsletter-03/square3.jpg
+        </header-mobile3>
+        <header-mobile4 type="image">
+            /images/201909/newsletter-03/square4.jpg
+        </header-mobile4>
+    </media>
     <tags>
         noticias
     </tags>
@@ -221,10 +242,4 @@ El presidente Jimmy Morales se retractó de una promesa de campaña de ampliar l
 
 La decisión de Morales ocurrió después que la Cicig y la fiscalía pidieron investigarlo por sospechas de no haber reportado fondos en su campaña de 2015, una imputación similar a la de Torres, pero el Congreso ha evitado que se le retiren los fueros al gobernante.
     </text4>
-    <image>
-        /images/201909/headers/newsletter-03.jpg
-    </image>
-    <imageDirectory>
-        /images/201909/newsletter-03
-    </imageDirectory>
 </newsletter>

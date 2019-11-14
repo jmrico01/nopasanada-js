@@ -15,10 +15,12 @@
         <highlightColor>
             #ff613c
         </highlightColor>
-        <images>
-            /images/201910/headers/03-finales.jpg
-        </images>
     </featured>
+    <media>
+        <header type="image">
+            /images/201910/headers/03-finales.jpg
+        </header>
+    </media>
     <tags>
         cultura
     </tags>
@@ -67,7 +69,4 @@ Saber terminar una historia también influye en el  lugar que ocupará dentro de
  
 La bancarrota creativa que afecta al cine popular posiblemente se acabe cuando Hollywood se vea obligado a dejar morir sus franquicias, a terminarlas por el inevitable (y esperado) momento en que el público pierda interés en ideas viejas. **Las grandes productoras se lo deben al cine, el cual a pesar de semejante escasez de originalidad, sigue siendo fundamentalmente un medio artístico.** La historia difícilmente recordará con cariño esta época del cine popular, si es que la recuerda del todo.
     </text>
-    <image>
-        /images/201910/headers/03-finales.jpg
-    </image>
 </article>

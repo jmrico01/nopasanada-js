@@ -15,10 +15,39 @@
         <highlightColor>
             #ff613c
         </highlightColor>
-        <images>
-            /images/201909/headers/24-lo-importante.jpg
-        </images>
     </featured>
+    <media>
+        <header type="image">
+            /images/201909/headers/24-lo-importante.jpg
+        </header>
+        <poster type="image">
+            /images/201909/posters/24-lo-importante.jpg
+        </poster>
+        <header-desktop1 type="image">
+            /images/201909/24-lo-importante/vertical1.jpg
+        </header-desktop1>
+        <header-desktop2 type="image">
+            /images/201909/24-lo-importante/vertical2.jpg
+        </header-desktop2>
+        <header-desktop3 type="image">
+            /images/201909/24-lo-importante/vertical3.jpg
+        </header-desktop3>
+        <header-desktop4 type="image">
+            /images/201909/24-lo-importante/vertical4.jpg
+        </header-desktop4>
+        <header-mobile1 type="image">
+            /images/201909/24-lo-importante/square1.jpg
+        </header-mobile1>
+        <header-mobile2 type="image">
+            /images/201909/24-lo-importante/square2.jpg
+        </header-mobile2>
+        <header-mobile3 type="image">
+            /images/201909/24-lo-importante/square3.jpg
+        </header-mobile3>
+        <header-mobile4 type="image">
+            /images/201909/24-lo-importante/square4.jpg
+        </header-mobile4>
+    </media>
     <tags>
         noticias
     </tags>
@@ -113,13 +142,4 @@ Caracas abandonó hace seis años este tratado, pero en julio, la Asamblea Nacio
 Según un alto funcionario del Departamento de Estado, el TIAR es un mecanismo muy útil de presión económica y diplomática y para imponer sanciones contra Venezuela que Estados Unidos desea que apliquen más países.
 A mediados de septiembre, Guaidó declaró &quot;agotada&quot; la instancia de los diálogos que el gobierno y la oposición mantenían en Barbados desde mayo con la mediación de Noruega.
     </text4>
-    <image>
-        /images/201909/headers/24-lo-importante.jpg
-    </image>
-    <imagePoster>
-        /images/201909/posters/24-lo-importante.jpg
-    </imagePoster>
-    <imageDirectory>
-        /images/201909/24-lo-importante
-    </imageDirectory>
 </newsletter>

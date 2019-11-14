@@ -10,10 +10,15 @@
         </text2>
         <highlightColor>
         </highlightColor>
-        <images>
-            /images/201910/headers/08-otras-noticias.jpg
-        </images>
     </featured>
+    <media>
+        <header type="image">
+            /images/201910/headers/08-otras-noticias.jpg
+        </header>
+        <poster type="image">
+            /images/201910/posters/08-otras-noticias.jpg
+        </poster>
+    </media>
     <tags>
         noticias
     </tags>
@@ -89,10 +94,4 @@ Estados Unidos, aliado de Moreno, dijo que sigue de cerca la situación en Ecuad
 
 &quot;Rechazamos la violencia como una forma de protesta política&quot;, manifestó por Twitter el subsecretario interino de Estado para Asuntos del Hemisferio Occidental, Michael Kozak.
     </text>
-    <image>
-        /images/201910/headers/08-otras-noticias.jpg
-    </image>
-    <imagePoster>
-        /images/201910/posters/08-otras-noticias.jpg
-    </imagePoster>
 </article>

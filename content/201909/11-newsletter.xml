@@ -15,10 +15,36 @@
         <highlightColor>
             
         </highlightColor>
-        <images>
-            /images/201909/headers/11-newsletter.jpg
-        </images>
     </featured>
+    <media>
+        <header type="image">
+            /images/201909/headers/11-newsletter.jpg
+        </header>
+        <header-desktop1 type="image">
+            /images/201909/11-newsletter/vertical1.jpg
+        </header-desktop1>
+        <header-desktop2 type="image">
+            /images/201909/11-newsletter/vertical2.jpg
+        </header-desktop2>
+        <header-desktop3 type="image">
+            /images/201909/11-newsletter/vertical3.jpg
+        </header-desktop3>
+        <header-desktop4 type="image">
+            /images/201909/11-newsletter/vertical4.jpg
+        </header-desktop4>
+        <header-mobile1 type="image">
+            /images/201909/11-newsletter/square1.jpg
+        </header-mobile1>
+        <header-mobile2 type="image">
+            /images/201909/11-newsletter/square2.jpg
+        </header-mobile2>
+        <header-mobile3 type="image">
+            /images/201909/11-newsletter/square3.jpg
+        </header-mobile3>
+        <header-mobile4 type="image">
+            /images/201909/11-newsletter/square4.jpg
+        </header-mobile4>
+    </media>
     <tags>
         noticias
     </tags>
@@ -204,10 +230,4 @@ Añadió que con ese fin se comenzó a usar tecnología satelital para detectar 
 
 Maduro &quot;no entiende que se le acabó su tiempo y debemos ir a la solución del conflicto en Venezuela&quot;, añadió Guaidó, quien desde enero intenta sin éxito sacar del poder al gobernante socialista, para luego ir a un periodo de transición que culmine en elecciones presidenciales &quot;libres&quot;.
     </text4>
-    <image>
-        /images/201909/headers/11-newsletter.jpg
-    </image>
-    <imageDirectory>
-        /images/201909/11-newsletter
-    </imageDirectory>
 </newsletter>

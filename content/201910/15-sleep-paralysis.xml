@@ -15,10 +15,12 @@
         <highlightColor>
             #ff613c
         </highlightColor>
-        <images>
-            /images/201910/headers/15-sleep-paralysis.jpg
-        </images>
     </featured>
+    <media>
+        <header type="image">
+            /images/201910/headers/15-sleep-paralysis.jpg
+        </header>
+    </media>
     <tags>
         ciencia
     </tags>
@@ -73,7 +75,4 @@ Precisamente, ese fue mi caso: lo controlé no entrando en pánico, sin luchar p
 
 ***¿Tienen una historia relacionada con parálisis del sueño? En NPN siempre estamos buscando nuevos colaboradores. ¡Queremos escucharla, y tal vez publicarla en nuestra plataforma! Recibimos drafts al correo [info@nopasanada.com](mailto:info@nopasanada.com), con el asunto “sleep paralysis.”***
     </text>
-    <image>
-        /images/201910/headers/15-sleep-paralysis.jpg
-    </image>
 </article>

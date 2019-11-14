@@ -15,10 +15,12 @@
         <highlightColor>
             #ff613c
         </highlightColor>
-        <images>
-            /images/201909/headers/27-lana-del-rey.jpg
-        </images>
     </featured>
+    <media>
+        <header type="image">
+            /images/201909/headers/27-lana-del-rey.jpg
+        </header>
+    </media>
     <tags>
         cultura
     </tags>
@@ -80,7 +82,4 @@ Al final del álbum, todo se resume en que, para Lana, esta es su luna llena y n
 
 Lana del rey no es diferente de Lady Gaga, Beyoncé, Kanye o cualquier músico que haya creado un alter ego para hacer de su música una zona de confort. Pero a diferencia de muchos artistas, Lana se tomó un chance y un riesgo; clavó su bandera y se instaló para hacer lo que ama usando una fórmula complicada, pero que siempre le ha sido efectiva: es decir, no pedir disculpas, y dejarle claro al mundo que nunca se sentirá mal por hacer lo que es mejor para ella.
     </text>
-    <image>
-        /images/201909/headers/27-lana-del-rey.jpg
-    </image>
 </article>

@@ -15,11 +15,11 @@
         <highlightColor>
             #ff613c
         </highlightColor>
-        <images>
-            /images/201910/headers/18-koornea.jpg
-        </images>
     </featured>
     <media>
+        <header type="image">
+            /images/201910/headers/18-koornea.jpg
+        </header>
         <image1 type="image">
             /images/201910/18-koornea/1.jpg
         </image1>
@@ -87,7 +87,4 @@ $image/image3$
 $image/image4$
 &lt;div class=&quot;articleCaption&quot;&gt;Fotografías por &lt;a href=&quot;https://www.aorozco.net&quot;&gt;Andrés Orozco&lt;/a&gt; (&lt;a href=&quot;https://www.instagram.com/koornea&quot;&gt;@koornea&lt;/a&gt;)&lt;/div&gt;
     </text>
-    <image>
-        /images/201910/headers/18-koornea.jpg
-    </image>
 </article>

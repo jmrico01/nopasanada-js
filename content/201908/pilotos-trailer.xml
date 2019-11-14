@@ -17,6 +17,12 @@
         </highlightColor>
     </featured>
     <media>
+        <header type="image">
+            /images/201908/headers/moto4.jpg
+        </header>
+        <poster type="image">
+            /images/201908/posters/pilotos.jpg
+        </poster>
         <featured1 type="image">
             /images/201908/headers/moto1.jpg
         </featured1>
@@ -29,12 +35,6 @@
         <featured4 type="image">
             /images/201908/headers/moto4.jpg
         </featured4>
-        <header type="image">
-            /images/201908/headers/moto4.jpg
-        </header>
-        <poster type="image">
-            /images/201908/posters/pilotos.jpg
-        </poster>
     </media>
     <tags>
         cultura,deporte,home

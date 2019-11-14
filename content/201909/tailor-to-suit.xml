@@ -15,10 +15,12 @@
         <highlightColor>
             #ff613c
         </highlightColor>
-        <images>
-            /images/201909/headers/tailor1.jpg
-        </images>
     </featured>
+    <media>
+        <header type="image">
+            /images/201909/headers/tailor1.jpg
+        </header>
+    </media>
     <tags>
         cultura,home
     </tags>
@@ -61,7 +63,4 @@ Grabado en el teatro Nico Baker.
 
 *Video de música de Magpie Jay para la canción “Tailor To Suit&quot; producido por N.P.N. Producciones S.A ( No Pasa Nada ) todos los derechos reservados.*
     </text>
-    <image>
-        /images/201909/headers/tailor1.jpg
-    </image>
 </video>

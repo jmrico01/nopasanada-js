@@ -15,10 +15,12 @@
         <highlightColor>
             #ff613c
         </highlightColor>
-        <images>
-            /images/201910/headers/07-los-fermentos.jpg
-        </images>
     </featured>
+    <media>
+        <header type="image">
+            /images/201910/headers/07-los-fermentos.jpg
+        </header>
+    </media>
     <tags>
         ciencia
     </tags>
@@ -73,7 +75,4 @@ Para atraer estos buenos “bichitos”, el chef debe de asegurarse de crear el 
 
 Tendremos mucho tiempo de hablar de esto y más en esta columna, donde espero demostrar la intrínseca relación entre la ciencia y la comida. Después de todo, la gastronomía (sus sabores, texturas y procesos) podría fácilmente ser el experimento científico más largo y continuo en el que  se ha embarcado la humanidad.
     </text>
-    <image>
-        /images/201910/headers/07-los-fermentos.jpg
-    </image>
 </article>

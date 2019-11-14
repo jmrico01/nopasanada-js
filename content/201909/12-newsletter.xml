@@ -15,10 +15,39 @@
         <highlightColor>
             
         </highlightColor>
-        <images>
-            /images/201909/headers/12-newsletter.jpg
-        </images>
     </featured>
+    <media>
+        <header type="image">
+            /images/201909/headers/12-newsletter.jpg
+        </header>
+        <poster type="image">
+            /images/201909/posters/12-newsletter.jpg
+        </poster>
+        <header-desktop1 type="image">
+            /images/201909/12-newsletter/vertical1.jpg
+        </header-desktop1>
+        <header-desktop2 type="image">
+            /images/201909/12-newsletter/vertical2.jpg
+        </header-desktop2>
+        <header-desktop3 type="image">
+            /images/201909/12-newsletter/vertical3.jpg
+        </header-desktop3>
+        <header-desktop4 type="image">
+            /images/201909/12-newsletter/vertical4.jpg
+        </header-desktop4>
+        <header-mobile1 type="image">
+            /images/201909/12-newsletter/square1.jpg
+        </header-mobile1>
+        <header-mobile2 type="image">
+            /images/201909/12-newsletter/square2.jpg
+        </header-mobile2>
+        <header-mobile3 type="image">
+            /images/201909/12-newsletter/square3.jpg
+        </header-mobile3>
+        <header-mobile4 type="image">
+            /images/201909/12-newsletter/square4.jpg
+        </header-mobile4>
+    </media>
     <tags>
         noticias
     </tags>
@@ -219,13 +248,4 @@ El abogado detalló que López Obrador, conocido por sus iniciales como AMLO, al
 
 El tercer acuerdo es el establecimiento de un diálogo directo con la Sedena para que brinde la información que los familiares reclaman.
     </text4>
-    <image>
-        /images/201909/headers/12-newsletter.jpg
-    </image>
-    <imagePoster>
-        /images/201909/posters/12-newsletter.jpg
-    </imagePoster>
-    <imageDirectory>
-        /images/201909/12-newsletter
-    </imageDirectory>
 </newsletter>

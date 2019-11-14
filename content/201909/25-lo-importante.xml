@@ -15,10 +15,39 @@
         <highlightColor>
             #ff613c
         </highlightColor>
-        <images>
-            /images/201909/headers/25-lo-importante.jpg
-        </images>
     </featured>
+    <media>
+        <header type="image">
+            /images/201909/headers/25-lo-importante.jpg
+        </header>
+        <poster type="image">
+            /images/201909/posters/25-lo-importante.jpg
+        </poster>
+        <header-desktop1 type="image">
+            /images/201909/25-lo-importante/vertical1.jpg
+        </header-desktop1>
+        <header-desktop2 type="image">
+            /images/201909/25-lo-importante/vertical2.jpg
+        </header-desktop2>
+        <header-desktop3 type="image">
+            /images/201909/25-lo-importante/vertical3.jpg
+        </header-desktop3>
+        <header-desktop4 type="image">
+            /images/201909/25-lo-importante/vertical4.jpg
+        </header-desktop4>
+        <header-mobile1 type="image">
+            /images/201909/25-lo-importante/square1.jpg
+        </header-mobile1>
+        <header-mobile2 type="image">
+            /images/201909/25-lo-importante/square2.jpg
+        </header-mobile2>
+        <header-mobile3 type="image">
+            /images/201909/25-lo-importante/square3.jpg
+        </header-mobile3>
+        <header-mobile4 type="image">
+            /images/201909/25-lo-importante/square4.jpg
+        </header-mobile4>
+    </media>
     <tags>
         noticias
     </tags>
@@ -186,13 +215,4 @@ Pero para convocar elecciones anticipadas necesita el apoyo de dos tercios de un
 
 Antes de partir de Nueva York, el líder conservador había esquivado las preguntas de los periodistas sobre una eventual renuncia y reafirmó que pretende sacar al país de la Unión Europea dentro de un mes &quot;cueste lo que cueste&quot;, a pesar de una ley aprobada de urgencia antes de la suspensión parlamentaria que le obliga a pedir otro aplazamiento si al 19 de octubre no ha alcanzado un acuerdo con Bruselas.
     </text4>
-    <image>
-        /images/201909/headers/25-lo-importante.jpg
-    </image>
-    <imagePoster>
-        /images/201909/posters/25-lo-importante.jpg
-    </imagePoster>
-    <imageDirectory>
-        /images/201909/25-lo-importante
-    </imageDirectory>
 </newsletter>

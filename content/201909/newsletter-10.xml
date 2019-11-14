@@ -10,10 +10,36 @@
         </text2>
         <highlightColor>
         </highlightColor>
-        <images>
-            /images/201909/headers/newsletter-10.jpg
-        </images>
     </featured>
+    <media>
+        <header type="image">
+            /images/201909/headers/newsletter-10.jpg
+        </header>
+        <header-desktop1 type="image">
+            /images/201909/newsletter-10/vertical1.jpg
+        </header-desktop1>
+        <header-desktop2 type="image">
+            /images/201909/newsletter-10/vertical2.jpg
+        </header-desktop2>
+        <header-desktop3 type="image">
+            /images/201909/newsletter-10/vertical3.jpg
+        </header-desktop3>
+        <header-desktop4 type="image">
+            /images/201909/newsletter-10/vertical4.jpg
+        </header-desktop4>
+        <header-mobile1 type="image">
+            /images/201909/newsletter-10/square1.jpg
+        </header-mobile1>
+        <header-mobile2 type="image">
+            /images/201909/newsletter-10/square2.jpg
+        </header-mobile2>
+        <header-mobile3 type="image">
+            /images/201909/newsletter-10/square3.jpg
+        </header-mobile3>
+        <header-mobile4 type="image">
+            /images/201909/newsletter-10/square4.jpg
+        </header-mobile4>
+    </media>
     <tags>
         noticias
     </tags>
@@ -173,10 +199,4 @@ El canciller Arreaza reiteró que Caracas, que en febrero rompió relaciones dip
 
 &quot;Lo que hemos hecho con la autorización de las autoridades colombianas en todo momento ha sido estar al servicio del pueblo de Colombia (...) para procurar que haya paz&quot;, dijo el canciller venezolano, cuyo país fue uno de los facilitadores de los acuerdos de paz con las FARC.
     </text4>
-    <image>
-        /images/201909/headers/newsletter-10.jpg
-    </image>
-    <imageDirectory>
-        /images/201909/newsletter-10
-    </imageDirectory>
 </newsletter>
