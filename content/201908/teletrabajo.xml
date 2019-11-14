@@ -15,10 +15,12 @@
         <highlightColor>
             #ff613c
         </highlightColor>
-        <images>
-            /images/201908/headers/teletrabajo.jpg
-        </images>
     </featured>
+    <media>
+        <header type="image">
+            /images/201908/headers/teletrabajo.jpg
+        </header>
+    </media>
     <tags>
         ciencia, opinion
     </tags>
@@ -73,7 +75,4 @@ La reducción del flujo vehicular que podría resultar de la nueva ley no solo b
 
 Gracias a la aprobación de la ley, muchos podrán asumir sus responsabilidades sin pasar sus días entre pasillos grises o perdiendo su tiempo en presas interminables. **Seguramente habrá más empleados motivados, - y un país entero respirando aire más limpio.**
     </text>
-    <image>
-        /images/201908/headers/teletrabajo.jpg
-    </image>
 </article>

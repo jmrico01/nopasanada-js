@@ -1,24 +1,21 @@
 <article>
     <featured>
         <pretitle>
-            
         </pretitle>
         <title>
-            
         </title>
         <text1>
-            
         </text1>
         <text2>
-            
         </text2>
         <highlightColor>
-            
         </highlightColor>
-        <images>
-            /images/201908/headers/burnout.jpg
-        </images>
     </featured>
+    <media>
+        <header type="image">
+            /images/201908/headers/burnout.jpg
+        </header>
+    </media>
     <tags>
         ciencia
     </tags>
@@ -113,7 +110,4 @@ En cuanto a ambiente laboral, cooperar con otras especialidades en vez de compet
  
 La terapia se basa en sentimientos de humildad. Demostrar que uno es capaz de reconocer sus propias limitaciones. Siempre nos enseñan a dar más y más; que los errores son inaceptables: una autoexigencia que no sana. Hay que reconocer que hay cosas que se salen de nuestras manos, y si que si hubieran otras condiciones se hubiera resuelto el trabajo más satisfactoriamente.
     </text>
-    <image>
-        /images/201908/headers/burnout.jpg
-    </image>
 </article>

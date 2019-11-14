@@ -15,10 +15,39 @@
         <highlightColor>
             #ff613c
         </highlightColor>
-        <images>
-            /images/201910/headers/07-lo-importante.jpg
-        </images>
     </featured>
+    <media>
+        <header type="image">
+            /images/201910/headers/07-lo-importante.jpg
+        </header>
+        <header type="image">
+            /images/201910/posters/07-lo-importante.jpg
+        </header>
+        <header-desktop1 type="image">
+            /images/201910/07-lo-importante/vertical1.jpg
+        </header-desktop1>
+        <header-desktop2 type="image">
+            /images/201910/07-lo-importante/vertical2.jpg
+        </header-desktop2>
+        <header-desktop3 type="image">
+            /images/201910/07-lo-importante/vertical3.jpg
+        </header-desktop3>
+        <header-desktop4 type="image">
+            /images/201910/07-lo-importante/vertical4.jpg
+        </header-desktop4>
+        <header-mobile1 type="image">
+            /images/201910/07-lo-importante/square1.jpg
+        </header-mobile1>
+        <header-mobile2 type="image">
+            /images/201910/07-lo-importante/square2.jpg
+        </header-mobile2>
+        <header-mobile3 type="image">
+            /images/201910/07-lo-importante/square3.jpg
+        </header-mobile3>
+        <header-mobile4 type="image">
+            /images/201910/07-lo-importante/square4.jpg
+        </header-mobile4>
+    </media>
     <tags>
         noticias
     </tags>
@@ -188,13 +217,4 @@ Muchos opositores a esta prohibición temen que sea el preludio a la adopción d
 
 Desde hace cuatro meses, Hong Kong atraviesa su peor crisis política desde la retrocesión a China por parte de Londres, con manifestaciones casi diarias para denunciar una pérdida de libertades y la creciente influencia del gobierno chino en los asuntos de esa región semiautónoma, y también para exigir reformas democráticas.
     </text4>
-    <image>
-        /images/201910/headers/07-lo-importante.jpg
-    </image>
-    <imagePoster>
-        /images/201910/posters/07-lo-importante.jpg
-    </imagePoster>
-    <imageDirectory>
-        /images/201910/07-lo-importante
-    </imageDirectory>
 </newsletter>

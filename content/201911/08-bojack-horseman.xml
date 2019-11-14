@@ -15,11 +15,14 @@
         <highlightColor>
             #ff613c
         </highlightColor>
-        <images>
-            /images/201911/headers/08-bojack-horseman.jpg
-        </images>
     </featured>
     <media>
+        <header type="image">
+            /images/201911/headers/08-bojack-horseman.jpg
+        </header>
+        <poster type="image">
+            /images/201911/posters/08-bojack-horseman.jpg
+        </poster>
         <meme1 type="image">
             /images/201911/08-bojack-horseman/meme1.jpg
         </meme1>
@@ -102,10 +105,4 @@ Es aquí cuando la serie toma una postura más honesta y directa, desde los escr
 
 Esto no quiere decir que el personaje de Bojack sea un fracaso abusivo uni-dimensional; a lo largo de la serie se puede apreciar un muy claro sentido de progreso y construcción plasmado en el crecimiento de su personaje. Esto es, tal vez, a manera de aprendizaje personal de la audiencia, lo mejor que podemos interiorizar acerca de este tipo de personajes: sus historias ofrecen un *insight* de cómo ser autocrítico, y no son una muletilla para proyectar y justificar nuestras propias actitudes tóxicas.
     </text>
-    <image>
-        /images/201911/headers/08-bojack-horseman.jpg
-    </image>
-    <imagePoster>
-        /images/201911/posters/08-bojack-horseman.jpg
-    </imagePoster>
 </article>

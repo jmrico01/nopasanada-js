@@ -1,24 +1,21 @@
 <article>
     <featured>
         <pretitle>
-            
         </pretitle>
         <title>
-            
         </title>
         <text1>
-            
         </text1>
         <text2>
-            
         </text2>
         <highlightColor>
-            
         </highlightColor>
-        <images>
-            /images/201908/headers/diet-prada.jpg
-        </images>
     </featured>
+    <media>
+        <header type="image">
+            /images/201908/headers/diet-prada.jpg
+        </header>
+    </media>
     <tags>
         cultura,opinion
     </tags>
@@ -73,7 +70,4 @@ La revista The Cut hizo una serie de entrevistas a víctimas masculinas de acoso
 
 Aunque empresas como Condé Nast han implementado nuevos [códigos de conducta](https://www.vogue.com/article/anna-wintour-responds-mario-testino-bruce-weber-sexual-misconduct-allegations) después de haber entrevistado a modelos, estilistas, agencias, fotografos, maquillistas y encargados de sets, cambios significativos en la cultura aún deben suceder para que las víctimas puedan empoderarse y relatar sus experiencias. Imaginen los miles de casos como estos que no han salido a la luz por dinero, poder o influencia… de no ser por el movimiento #metoo, quizá no nos habríamos enterado de ninguno.
     </text>
-    <image>
-        /images/201908/headers/diet-prada.jpg
-    </image>
 </article>

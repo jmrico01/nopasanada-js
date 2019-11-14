@@ -15,13 +15,27 @@
         <highlightColor>
             #ff613c
         </highlightColor>
-        <images>
-            /images/201908/headers/moto1.jpg,
-            /images/201908/headers/moto2.jpg,
-            /images/201908/headers/moto3.jpg,
-            /images/201908/headers/moto4.jpg
-        </images>
     </featured>
+    <media>
+        <featured1 type="image">
+            /images/201908/headers/moto1.jpg
+        </featured1>
+        <featured2 type="image">
+            /images/201908/headers/moto2.jpg
+        </featured2>
+        <featured3 type="image">
+            /images/201908/headers/moto3.jpg
+        </featured3>
+        <featured4 type="image">
+            /images/201908/headers/moto4.jpg
+        </featured4>
+        <header type="image">
+            /images/201908/headers/moto4.jpg
+        </header>
+        <poster type="image">
+            /images/201908/posters/pilotos.jpg
+        </poster>
+    </media>
     <tags>
         cultura,deporte,home
     </tags>
@@ -62,10 +76,4 @@
 
 Pilotos comienza el 23 de Agosto.
     </text>
-    <image>
-        /images/201908/headers/moto4.jpg
-    </image>
-    <imagePoster>
-        /images/201908/posters/pilotos.jpg
-    </imagePoster>
 </video>

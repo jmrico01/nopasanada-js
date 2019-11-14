@@ -1,25 +1,20 @@
 <article>
     <featured>
         <pretitle>
-            
         </pretitle>
         <title>
-            
         </title>
         <text1>
-            
         </text1>
         <text2>
-            
         </text2>
         <highlightColor>
-            
         </highlightColor>
-        <images>
-            /images/201908/headers/copanoise.jpg
-        </images>
     </featured>
     <media>
+        <header type="image">
+            /images/201908/headers/copanoise.jpg
+        </header>
         <insert type="image">
             /images/201908/article-21/insert.png
         </insert>
@@ -147,7 +142,4 @@ $image/opinion3$
 
 “Son muchísimas las ventajas que he experimentado usando la copa menstrual. Mi piel es muy sensible y alérgica; cada vez que tenía la menstruación se me irritaba el área por los kotex. Llevo 3 meses usando la copa menstrual y desde la primera vez noté la diferencia en mi piel. También recuerdo que, con el kotex, cuando uno se levantaba en la mañana sentía la humedad que se había acumulado durante la noche - era un sentimiento muy desagradable. ¡Con la copa menstrual me levanto y hasta se me olvida que tengo la regla! Otra de las razones por las cuales la prefiero es porque soy una persona muy activa y voy mucho al gimnasio. Cuando hago ejercicio, siento para nada la copita. No le he encontrado ninguna desventaja.”
     </text>
-    <image>
-        /images/201908/headers/copanoise.jpg
-    </image>
 </article>

@@ -15,10 +15,39 @@
         <highlightColor>
             #ff613c
         </highlightColor>
-        <images>
-            /images/201910/headers/28-lo-importante.jpg
-        </images>
     </featured>
+    <media>
+        <header type="image">
+            /images/201910/headers/28-lo-importante.jpg
+        </header>
+        <header type="image">
+            /images/201910/posters/28-lo-importante.jpg
+        </header>
+        <header-desktop1 type="image">
+            /images/201910/28-lo-importante/vertical1.jpg
+        </header-desktop1>
+        <header-desktop2 type="image">
+            /images/201910/28-lo-importante/vertical2.jpg
+        </header-desktop2>
+        <header-desktop3 type="image">
+            /images/201910/28-lo-importante/vertical3.jpg
+        </header-desktop3>
+        <header-desktop4 type="image">
+            /images/201910/28-lo-importante/vertical4.jpg
+        </header-desktop4>
+        <header-mobile1 type="image">
+            /images/201910/28-lo-importante/square1.jpg
+        </header-mobile1>
+        <header-mobile2 type="image">
+            /images/201910/28-lo-importante/square2.jpg
+        </header-mobile2>
+        <header-mobile3 type="image">
+            /images/201910/28-lo-importante/square3.jpg
+        </header-mobile3>
+        <header-mobile4 type="image">
+            /images/201910/28-lo-importante/square4.jpg
+        </header-mobile4>
+    </media>
     <tags>
         noticias, home
     </tags>
@@ -237,13 +266,4 @@ El sábado, una protesta de los CDR terminó con nuevos altercados con la polic�
 
 Reflejo de la división existente en Cataluña sobre la secesión, alrededor de 80.000 personas se manifestaron el domingo en Barcelona a favor de la unidad de España y en contra de la violencia en las últimas protestas separatistas.
     </text4>
-    <image>
-        /images/201910/headers/28-lo-importante.jpg
-    </image>
-    <imagePoster>
-        /images/201910/posters/28-lo-importante.jpg
-    </imagePoster>
-    <imageDirectory>
-        /images/201910/28-lo-importante
-    </imageDirectory>
 </newsletter>

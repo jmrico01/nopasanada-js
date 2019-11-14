@@ -15,20 +15,14 @@
         <highlightColor>
             #ff613c
         </highlightColor>
-        <images>
-            /images/201911/headers/04-sociedad.jpg
-        </images>
     </featured>
     <media>
-        <kanye-tweet type="image">
-            /images/201910/25-kanye-west-jesus-is-king/kanye-tweet.jpg
-        </kanye-tweet>
-        <image3 type="image">
-            /images/201910/25-kanye-west-jesus-is-king/image3.jpg
-        </image3>
-        <image2 type="image">
-            /images/201910/25-kanye-west-jesus-is-king/image2.jpg
-        </image2>
+        <header type="image">
+            /images/201911/headers/04-sociedad.jpg
+        </header>
+        <poster type="image">
+            /images/201911/posters/04-sociedad.jpg
+        </poster>
     </media>
     <tags>
         ciencia, home
@@ -119,10 +113,4 @@ Ambos experimentos (el experimento de Standford y el de Milgram) hacen mella en 
 
 En otras palabras, condicionamos y perpetuamos el respeto y/o miedo hacia las figuras de poder, para tener que evitar la incertidumbre y el conflicto inmediato.
     </text>
-    <image>
-        /images/201911/headers/04-sociedad.jpg
-    </image>
-    <imagePoster>
-        /images/201911/posters/04-sociedad.jpg
-    </imagePoster>
 </article>

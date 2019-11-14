@@ -15,10 +15,12 @@
         <highlightColor>
             #f4b6a5
         </highlightColor>
-        <images>
-            /images/201911/headers/11-ilustradoras.jpg
-        </images>
     </featured>
+    <media>
+        <header type="image">
+            /images/201911/headers/11-ilustradoras.jpg
+        </header>
+    </media>
     <tags>
         cultura, home
     </tags>
@@ -108,7 +110,4 @@ Es cierto que los personajes en el trabajo de Alejandra tienen cortes de cabello
 
 $instagram/B3xNXgLBcX1$
     </text>
-    <image>
-        /images/201911/headers/11-ilustradoras.jpg
-    </image>
 </article>

@@ -15,10 +15,39 @@
         <highlightColor>
             #ff613c
         </highlightColor>
-        <images>
-            /images/201910/headers/21-lo-importante.jpg
-        </images>
     </featured>
+    <media>
+        <header type="image">
+            /images/201910/headers/21-lo-importante.jpg
+        </header>
+        <header type="image">
+            /images/201910/posters/21-lo-importante.jpg
+        </header>
+        <header-desktop1 type="image">
+            /images/201910/21-lo-importante/vertical1.jpg
+        </header-desktop1>
+        <header-desktop2 type="image">
+            /images/201910/21-lo-importante/vertical2.jpg
+        </header-desktop2>
+        <header-desktop3 type="image">
+            /images/201910/21-lo-importante/vertical3.jpg
+        </header-desktop3>
+        <header-desktop4 type="image">
+            /images/201910/21-lo-importante/vertical4.jpg
+        </header-desktop4>
+        <header-mobile1 type="image">
+            /images/201910/21-lo-importante/square1.jpg
+        </header-mobile1>
+        <header-mobile2 type="image">
+            /images/201910/21-lo-importante/square2.jpg
+        </header-mobile2>
+        <header-mobile3 type="image">
+            /images/201910/21-lo-importante/square3.jpg
+        </header-mobile3>
+        <header-mobile4 type="image">
+            /images/201910/21-lo-importante/square4.jpg
+        </header-mobile4>
+    </media>
     <tags>
         noticias
     </tags>
@@ -194,13 +223,4 @@ La cadena de farmacias Walgreens, por su parte, irá a juicio en una fecha poste
 
 Aunque el acuerdo comprende solo a dos condados en Ohio, podría sentar un precedente y allanar el camino para otros estados, ciudades, condados y comunidades que también buscan indemnizaciones por la crisis de opioides y que podrían llegar a obtener más 18.000 millones de dólares en efectivo y 30.000 millones de dólares en especie.
     </text4>
-    <image>
-        /images/201910/headers/21-lo-importante.jpg
-    </image>
-    <imagePoster>
-        /images/201910/posters/21-lo-importante.jpg
-    </imagePoster>
-    <imageDirectory>
-        /images/201910/21-lo-importante
-    </imageDirectory>
 </newsletter>

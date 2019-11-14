@@ -1,24 +1,45 @@
 <newsletter>
     <featured>
         <pretitle>
-            
         </pretitle>
         <title>
-            
         </title>
         <text1>
-            
         </text1>
         <text2>
-            
         </text2>
         <highlightColor>
-            
         </highlightColor>
-        <images>
-            /images/201908/headers/amazonas.jpg
-        </images>
     </featured>
+    <media>
+        <header type="image">
+            /images/201908/headers/amazonas.jpg
+        </header>
+        <header-desktop1 type="image">
+            /images/201908/newsletter-29/vertical1.jpg
+        </header-desktop1>
+        <header-desktop2 type="image">
+            /images/201908/newsletter-29/vertical2.jpg
+        </header-desktop2>
+        <header-desktop3 type="image">
+            /images/201908/newsletter-29/vertical3.jpg
+        </header-desktop3>
+        <header-desktop4 type="image">
+            /images/201908/newsletter-29/vertical4.jpg
+        </header-desktop4>
+        <header-mobile1 type="image">
+            /images/201908/newsletter-29/square1.jpg
+        </header-mobile1>
+        <header-mobile2 type="image">
+            /images/201908/newsletter-29/square2.jpg
+        </header-mobile2>
+        <header-mobile3 type="image">
+            /images/201908/newsletter-29/square3.jpg
+        </header-mobile3>
+        <header-mobile4 type="image">
+            /images/201908/newsletter-29/square4.jpg
+        </header-mobile4>
+    </media>
     <tags>
         noticias
     </tags>
@@ -133,10 +154,4 @@ La Asociación de Jóvenes Empresarios de Santa Cruz Juventud Empresa, instituci
 **ABA:** 026009593&lt;br&gt;
 **Cuenta:** 6550429365
     </text4>
-    <image>
-        /images/201908/headers/amazonas.jpg
-    </image>
-    <imageDirectory>
-        /images/201908/newsletter-29
-    </imageDirectory>
 </newsletter>

@@ -295,6 +295,7 @@ $(document).ready(function() {
                     }
                 }
             }
+            console.log(featuredEntries_);
 
             let totalImages = 0;
             for (let key in featuredEntries_) {

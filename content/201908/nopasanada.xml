@@ -15,10 +15,12 @@
         <highlightColor>
             #36fffd
         </highlightColor>
-        <images>
-            /images/201908/headers/garrotex1.jpg
-        </images>
     </featured>
+    <media>
+        <header type="image">
+            /images/201908/headers/garrotex1.jpg
+        </header>
+    </media>
     <tags>
         nopasanada
     </tags>
@@ -66,7 +68,4 @@ Es una voz que habla con amor y responsabilidad para decir:
 
 *“Anda amigo, tranquilo, no pasa nada.”*
     </text>
-    <image>
-        /images/201908/headers/garrotex1.jpg
-    </image>
 </video>

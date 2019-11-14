@@ -1,24 +1,21 @@
 <article>
     <featured>
         <pretitle>
-            
         </pretitle>
         <title>
-            
         </title>
         <text1>
-            
         </text1>
         <text2>
-            
         </text2>
         <highlightColor>
-            
         </highlightColor>
-        <images>
-            /images/201908/headers/jefas-de-hogar.jpg
-        </images>
     </featured>
+    <media>
+        <header type="image">
+            /images/201908/headers/jefas-de-hogar.jpg
+        </header>
+    </media>
     <tags>
         opinion
     </tags>
@@ -78,7 +75,4 @@ En una llamada telefónica, representantes del INAMU también nos confirmaron qu
 
 Para reducir - y eventualmente eliminar - estas cifras, se han puesto en marcha muchos esfuerzos: leyes en contra del acoso callejero y el hostigamiento sexual, derechos de maternidad, una red nacional de cuido, entre otros. Si bien debe reconocerse el trabajo de las autoridades en penar estos comportamientos negativos, está en nosotros ayudar a visibilizar prejuicios que en muchas ocasiones nos son inherentes. Un verdadero cambio cultural inicia con nosotros mismos.
     </text>
-    <image>
-        /images/201908/headers/jefas-de-hogar.jpg
-    </image>
 </article>

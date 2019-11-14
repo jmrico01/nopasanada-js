@@ -15,10 +15,39 @@
         <highlightColor>
             #ff613c
         </highlightColor>
-        <images>
-            /images/201911/headers/08-lo-importante.jpg
-        </images>
     </featured>
+    <media>
+        <header type="image">
+            /images/201911/headers/08-lo-importante.jpg
+        </header>
+        <poster type="image">
+            /images/201911/posters/08-lo-importante.jpg
+        </poster>
+        <header-desktop1 type="image">
+            /images/201911/08-lo-importante/vertical1.jpg
+        </header-desktop1>
+        <header-desktop2 type="image">
+            /images/201911/08-lo-importante/vertical2.jpg
+        </header-desktop2>
+        <header-desktop3 type="image">
+            /images/201911/08-lo-importante/vertical3.jpg
+        </header-desktop3>
+        <header-desktop4 type="image">
+            /images/201911/08-lo-importante/vertical4.jpg
+        </header-desktop4>
+        <header-mobile1 type="image">
+            /images/201911/08-lo-importante/square1.jpg
+        </header-mobile1>
+        <header-mobile2 type="image">
+            /images/201911/08-lo-importante/square2.jpg
+        </header-mobile2>
+        <header-mobile3 type="image">
+            /images/201911/08-lo-importante/square3.jpg
+        </header-mobile3>
+        <header-mobile4 type="image">
+            /images/201911/08-lo-importante/square4.jpg
+        </header-mobile4>
+    </media>
     <tags>
         noticias, home
     </tags>
@@ -256,13 +285,4 @@ Sin embargo el movimiento prodemocracia acusa a Pekín de no respetar estas prom
 
 Los manifestantes piden, entre otras exigencias, la instauración de un verdadero sufragio universal y una investigación sobre la acción de la policía.
     </text4>
-    <image>
-        /images/201911/headers/08-lo-importante.jpg
-    </image>
-    <imagePoster>
-        /images/201911/posters/08-lo-importante.jpg
-    </imagePoster>
-    <imageDirectory>
-        /images/201911/08-lo-importante
-    </imageDirectory>
 </newsletter>

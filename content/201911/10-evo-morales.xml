@@ -15,20 +15,17 @@
         <highlightColor>
             #ff613c
         </highlightColor>
-        <images>
-            /images/201911/headers/10-evo-morales.jpg
-        </images>
     </featured>
     <media>
-        <meme1 type="image">
-            /images/201911/08-bojack-horseman/meme1.jpg
-        </meme1>
-        <meme2 type="image">
-            /images/201911/08-bojack-horseman/meme2.jpg
-        </meme2>
-        <meme3 type="image">
-            /images/201911/08-bojack-horseman/meme3.jpg
-        </meme3>
+        <featured1 type="image">
+            /images/201911/headers/10-evo-morales.jpg
+        </featured1>
+        <header type="image">
+            /images/201911/headers/10-evo-morales.jpg
+        </header>
+        <poster type="image">
+            /images/201911/posters/10-evo-morales.jpg
+        </poster>
     </media>
     <tags>
         noticias, home
@@ -75,10 +72,4 @@ En las horas siguientes, Morales perdió el apoyo de las Fuerzas Armadas y de la
 
 &quot;El golpe de Estado se ha consumado&quot;, dijo el vicepresidente Álvaro García Linera, sentado al lado de Morales, quien también anunció su dimisión.
     </text>
-    <image>
-        /images/201911/headers/10-evo-morales.jpg
-    </image>
-    <imagePoster>
-        /images/201911/posters/10-evo-morales.jpg
-    </imagePoster>
 </article>

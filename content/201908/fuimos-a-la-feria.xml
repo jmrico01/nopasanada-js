@@ -1,25 +1,20 @@
 <article>
     <featured>
         <pretitle>
-            
         </pretitle>
         <title>
-            
         </title>
         <text1>
-            
         </text1>
         <text2>
-            
         </text2>
         <highlightColor>
-            
         </highlightColor>
-        <images>
-            /images/201908/headers/garlic.jpg
-        </images>
     </featured>
     <media>
+        <header type="image">
+            /images/201908/headers/garlic.jpg
+        </header>
         <image1 type="image">
             /images/201908/article-28/1.jpg
         </image1>
@@ -138,7 +133,4 @@ Con cero colones restantes y sin la prisa de tener que comprar, disfrutamos un r
 
 $image/image8$
     </text>
-    <image>
-        /images/201908/headers/garlic.jpg
-    </image>
 </article>

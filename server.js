@@ -161,8 +161,7 @@ let commonSlate = {
         title: "",
         text1: "",
         text2: "",
-        highlightColor: "",
-        images: [ "/images/unused/garrazo.jpg" ]
+        highlightColor: ""
     },
     tags: [],
     title: "",
@@ -171,9 +170,7 @@ let commonSlate = {
     day: "",
     month: "",
     year: "",
-    color: "",
-
-    image: "/images/unused/garrazo.jpg"
+    color: ""
 };
 
 blankSlates.article = commonSlate;
@@ -232,7 +229,7 @@ function LoadTemplateData()
         title: "",
         description: "",
         url: "",
-        image: "",
+        // image: "",
 
         color: "",
         subtitle: "",
@@ -244,9 +241,9 @@ function LoadTemplateData()
         title: "",
         description: "",
         url: "",
-        image: "",
+        //image: "",
 
-        imageDirectory: "",
+        //imageDirectory: "",
         color: "",
 
         title1: "",
@@ -269,7 +266,7 @@ function LoadTemplateData()
         title: "",
         description: "",
         url: "",
-        image: "",
+        // image: "",
 
         color: "",
         subtitle: "",
@@ -281,7 +278,7 @@ function LoadTemplateData()
         title: "",
         description: "",
         url: "",
-        image: "",
+        // image: "",
 
         videoID: "",
         color: "",
@@ -335,22 +332,13 @@ async function GetEntryData(url, templates)
         entryData[k] = entryData[k][0];
         if (k === "featured") {
             for (let kFeatured in entryData[k]) {
-                entryData[k][kFeatured] = entryData[k][kFeatured][0];
-                if (kFeatured === "images") {
-                    entryData[k][kFeatured] = entryData[k][kFeatured].split(",");
-                    for (let i = 0; i < entryData[k][kFeatured].length; i++) {
-                        entryData[k][kFeatured][i] = entryData[k][kFeatured][i].trim();
-                        if (entryData[k][kFeatured][i] === "") {
-                            throw new Error("Empty featured image, maybe a trailing comma? " + url);
-                        }
-                    }
-                }
-                else {
-                    entryData[k][kFeatured] = entryData[k][kFeatured].trim();
-                }
+                entryData[k][kFeatured] = entryData[k][kFeatured][0].trim();
             }
         }
         else if (k === "media") {
+            if (typeof entryData[k] === "string") {
+                entryData[k] = {};
+            }
             for (let k2 in entryData[k]) {
                 entryData[k][k2] = entryData[k][k2][0];
                 entryData[k][k2]._ = entryData[k][k2]._.trim();
@@ -372,6 +360,59 @@ async function GetEntryData(url, templates)
             entryData[k] = entryData[k].trim();
         }
     }
+
+    if (!("media" in entryData)) {
+        entryData.media = {};
+    }
+    if (!("header" in entryData.media)) {
+        entryData.media.header = {};
+        entryData.media.header._ = "";
+    }
+    // TODO temp, migration
+    /*if ("image" in entryData) {
+        throw new Error("image in " + url);
+    }
+    if ("imagePoster" in entryData) {
+        throw new Error("imagePoster in " + url);
+    }
+    if ("images" in entryData.featured) {
+        throw new Error("featured images in " + url);
+    }
+
+    if (!("media" in entryData)) {
+        throw new Error("no media on file " + url);
+    }
+    if (!("header" in entryData.media)) {
+        throw new Error("no header on file media " + url);
+    }
+    if (!("titlePoster" in entryData) && !("title" in entryData)) {
+        throw new Error("no title on file " + url);
+    }
+    if (!("day" in entryData) || !("month" in entryData) || !("year" in entryData)) {
+        throw new Error("no day/month/year on file " + url);
+    }
+    if (!("tags" in entryData)) {
+        throw new Error("no tags data on file " + url);
+    }
+    if (!("featured" in entryData)) {
+        throw new Error("no featured data on file " + url);
+    }
+    let featuredInfo = entryData.featured;
+    if (!("pretitle" in featuredInfo)) {
+        throw new Error("no pretitle on featured info, file " + url);
+    }
+    if (!("title" in featuredInfo)) {
+        throw new Error("no title on featured info, file " + url);
+    }
+    if (!("text1" in featuredInfo)) {
+        throw new Error("no text1 on featured info, file " + url);
+    }
+    if (!("text2" in featuredInfo)) {
+        throw new Error("no text2 on featured info, file " + url);
+    }
+    if (!("highlightColor" in featuredInfo)) {
+        throw new Error("no highlightColor on featured info, file " + url);
+    }*/
 
     return { status: 200, contentType: resultContentType, entryData: entryData };
 }
@@ -419,43 +460,7 @@ async function LoadAllEntryMetadata(templates)
                 throw new Error("GetEntryData failed: " + uri + " status " + status);
             }
 
-            if (!entryData.hasOwnProperty("imagePoster") && !entryData.hasOwnProperty("image")) {
-                throw new Error("no image on file " + uri);
-            }
-            if (!entryData.hasOwnProperty("titlePoster") && !entryData.hasOwnProperty("title")) {
-                throw new Error("no title on file " + uri);
-            }
-            if (!entryData.hasOwnProperty("day") && !entryData.hasOwnProperty("month") && !entryData.hasOwnProperty("year")) {
-                throw new Error("no day/month/year on file " + uri);
-            }
-
-            if (!entryData.hasOwnProperty("tags")) {
-                throw new Error("no tags data on file " + uri);
-            }
-            if (!entryData.hasOwnProperty("featured")) {
-                throw new Error("no featured data on file " + uri);
-            }
-            let featuredInfo = entryData.featured;
-            if (!featuredInfo.hasOwnProperty("images")) {
-                throw new Error("no images on featured info, file " + uri);
-            }
-            if (!featuredInfo.hasOwnProperty("pretitle")) {
-                throw new Error("no pretitle on featured info, file " + uri);
-            }
-            if (!featuredInfo.hasOwnProperty("title")) {
-                throw new Error("no title on featured info, file " + uri);
-            }
-            if (!featuredInfo.hasOwnProperty("text1")) {
-                throw new Error("no text1 on featured info, file " + uri);
-            }
-            if (!featuredInfo.hasOwnProperty("text2")) {
-                throw new Error("no text2 on featured info, file " + uri);
-            }
-            if (!featuredInfo.hasOwnProperty("highlightColor")) {
-                throw new Error("no highlightColor on featured info, file " + uri);
-            }
-
-            let imagePoster = entryData.hasOwnProperty("imagePoster") ? entryData.imagePoster : entryData.image;
+            let imagePoster = ("poster" in entryData.media) ? entryData.media.poster._ : entryData.media.header._;
             let titlePoster = entryData.title;
             if (entryData.hasOwnProperty("titlePoster") && entryData.titlePoster.trim() !== "") {
                 titlePoster = entryData.titlePoster;
@@ -473,14 +478,16 @@ async function LoadAllEntryMetadata(templates)
                 throw new Error("poster incomplete year / bad format: " + uri);
             }
             let datePoster = entryData.year + "-" + monthPoster + "-" + dayPoster;
+            let featuredImages = ("featured1" in entryData.media) ?
+                [ entryData.media.featured1._ ] : [ entryData.media.header._ ];
             allEntryMetadata.push({
                 featuredInfo: {
-                    images: featuredInfo.images,
-                    pretitle: featuredInfo.pretitle,
-                    title: featuredInfo.title,
-                    text1: featuredInfo.text1,
-                    text2: featuredInfo.text2,
-                    highlightColor: featuredInfo.highlightColor
+                    images: featuredImages,
+                    pretitle: entryData.featured.pretitle,
+                    title: entryData.featured.title,
+                    text1: entryData.featured.text1,
+                    text2: entryData.featured.text2,
+                    highlightColor: entryData.featured.highlightColor
                 },
                 type: contentType,
                 tags: entryData.tags,
@@ -603,6 +610,17 @@ app.get("/content/*/*", async function(req, res) {
             return;
         }
     }
+    entryData.image = entryData.media.header._;
+    if (contentType === "newsletter") {
+        entryData["header-desktop1"] = entryData.media["header-desktop1"]._;
+        entryData["header-desktop2"] = entryData.media["header-desktop2"]._;
+        entryData["header-desktop3"] = entryData.media["header-desktop3"]._;
+        entryData["header-desktop4"] = entryData.media["header-desktop4"]._;
+        entryData["header-mobile1"] = entryData.media["header-mobile1"]._;
+        entryData["header-mobile2"] = entryData.media["header-mobile2"]._;
+        entryData["header-mobile3"] = entryData.media["header-mobile3"]._;
+        entryData["header-mobile4"] = entryData.media["header-mobile4"]._;
+    }
     // Normal template pass
     let output = mustache.render(templateObject.template, entryData);
 
@@ -625,7 +643,6 @@ app.get("/content/*/*", async function(req, res) {
         };
     }
 
-    console.log(output);
     const MEDIA_TAGS = [
         {
             tag: "image",

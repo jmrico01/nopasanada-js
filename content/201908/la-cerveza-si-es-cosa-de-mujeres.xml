@@ -1,25 +1,23 @@
 <article>
     <featured>
         <pretitle>
-            
         </pretitle>
         <title>
-            
         </title>
         <text1>
-            
         </text1>
         <text2>
-            
         </text2>
         <highlightColor>
-            
         </highlightColor>
-        <images>
-            /images/201908/headers/cerveza.jpg
-        </images>
     </featured>
     <media>
+        <header type="image">
+            /images/201908/headers/cerveza.jpg
+        </header>
+        <poster type="image">
+            /images/201908/posters/cerveza.jpg
+        </poster>
         <image1 type="image">
             /images/201908/article-20/1.jpeg
         </image1>
@@ -124,10 +122,4 @@ $image/image4$
 
 *Imágen 3: Fotografía proporcionada por Carolina Castro de Elviaje Cervecería y Mujeres Cerveceras en Latinoamérica.*
     </text>
-    <image>
-        /images/201908/headers/cerveza.jpg
-    </image>
-    <imagePoster>
-        /images/201908/posters/cerveza.jpg
-    </imagePoster>
 </article>

@@ -15,10 +15,39 @@
         <highlightColor>
             #ff613c
         </highlightColor>
-        <images>
-            /images/201910/headers/29-lo-importante.jpg
-        </images>
     </featured>
+    <media>
+        <header type="image">
+            /images/201910/headers/29-lo-importante.jpg
+        </header>
+        <header type="image">
+            /images/201910/posters/29-lo-importante.jpg
+        </header>
+        <header-desktop1 type="image">
+            /images/201910/29-lo-importante/vertical1.jpg
+        </header-desktop1>
+        <header-desktop2 type="image">
+            /images/201910/29-lo-importante/vertical2.jpg
+        </header-desktop2>
+        <header-desktop3 type="image">
+            /images/201910/29-lo-importante/vertical3.jpg
+        </header-desktop3>
+        <header-desktop4 type="image">
+            /images/201910/29-lo-importante/vertical4.jpg
+        </header-desktop4>
+        <header-mobile1 type="image">
+            /images/201910/29-lo-importante/square1.jpg
+        </header-mobile1>
+        <header-mobile2 type="image">
+            /images/201910/29-lo-importante/square2.jpg
+        </header-mobile2>
+        <header-mobile3 type="image">
+            /images/201910/29-lo-importante/square3.jpg
+        </header-mobile3>
+        <header-mobile4 type="image">
+            /images/201910/29-lo-importante/square4.jpg
+        </header-mobile4>
+    </media>
     <tags>
         noticias, home
     </tags>
@@ -223,13 +252,4 @@ Unos 4,5 millones de venezolanos huyeron de la crisis política y económica que
 
 Stein estimó además en 1.350 millones de dólares el monto necesario en 2020 para atender a 4,3 millones de venezolanos establecidos en 17 países, cifra que multiplica por dos un llamado anterior de diciembre de 2018, del que logró recaudarse por el momento la mitad.
     </text4>
-    <image>
-        /images/201910/headers/29-lo-importante.jpg
-    </image>
-    <imagePoster>
-        /images/201910/posters/29-lo-importante.jpg
-    </imagePoster>
-    <imageDirectory>
-        /images/201910/29-lo-importante
-    </imageDirectory>
 </newsletter>

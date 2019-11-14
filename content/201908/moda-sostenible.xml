@@ -1,24 +1,21 @@
 <article>
     <featured>
         <pretitle>
-            
         </pretitle>
         <title>
-            
         </title>
         <text1>
-            
         </text1>
         <text2>
-            
         </text2>
         <highlightColor>
-            
         </highlightColor>
-        <images>
-            /images/201908/headers/fashion.jpg
-        </images>
     </featured>
+    <media>
+        <header type="image">
+            /images/201908/headers/fashion.jpg
+        </header>
+    </media>
     <tags>
         cultura
     </tags>
@@ -90,7 +87,4 @@ En los próximos años, Andrea sueña con hacer crecer su propia empresa y vende
 
 Tomando en cuenta el estado actual del planeta, hoy más que nunca debemos imprimirle conciencia ambiental a nuestras decisiones de consumo.  El futuro de los textiles está en nuevos modelos de producción, diseños y procesos concientes de su impacto ecológico.
     </text>
-    <image>
-        /images/201908/headers/fashion.jpg
-    </image>
 </article>

@@ -15,10 +15,12 @@
         <highlightColor>
             #ff613c
         </highlightColor>
-        <images>
-            /images/201910/headers/29-campeon-ambiental.jpg
-        </images>
     </featured>
+    <media>
+        <header type="image">
+            /images/201910/headers/29-campeon-ambiental.jpg
+        </header>
+    </media>
     <tags>
         ciencia, home
     </tags>
@@ -136,7 +138,4 @@ El problema es más profundo. [La biodiversidad tiene un ritmo de extinción de 
 
 El problema es el mismo en todo el mundo: estamos usando más tierra, agua y combustibles fósiles de lo que el planeta puede soportar. Al final, los que sufrirán las consecuencias serán los más pobres y vulnerables.
     </text>
-    <image>
-        /images/201910/headers/29-campeon-ambiental.jpg
-    </image>
 </article>

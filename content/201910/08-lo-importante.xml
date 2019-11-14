@@ -15,10 +15,39 @@
         <highlightColor>
             #ff613c
         </highlightColor>
-        <images>
-            /images/201910/headers/08-lo-importante.jpg
-        </images>
     </featured>
+    <media>
+        <header type="image">
+            /images/201910/headers/08-lo-importante.jpg
+        </header>
+        <header type="image">
+            /images/201910/posters/08-lo-importante.jpg
+        </header>
+        <header-desktop1 type="image">
+            /images/201910/08-lo-importante/vertical1.jpg
+        </header-desktop1>
+        <header-desktop2 type="image">
+            /images/201910/08-lo-importante/vertical2.jpg
+        </header-desktop2>
+        <header-desktop3 type="image">
+            /images/201910/08-lo-importante/vertical3.jpg
+        </header-desktop3>
+        <header-desktop4 type="image">
+            /images/201910/08-lo-importante/vertical4.jpg
+        </header-desktop4>
+        <header-mobile1 type="image">
+            /images/201910/08-lo-importante/square1.jpg
+        </header-mobile1>
+        <header-mobile2 type="image">
+            /images/201910/08-lo-importante/square2.jpg
+        </header-mobile2>
+        <header-mobile3 type="image">
+            /images/201910/08-lo-importante/square3.jpg
+        </header-mobile3>
+        <header-mobile4 type="image">
+            /images/201910/08-lo-importante/square4.jpg
+        </header-mobile4>
+    </media>
     <tags>
         noticias
     </tags>
@@ -120,13 +149,4 @@ El gobierno de Donald Trump impidió a su embajador ante la Unión Europea testi
 
 &quot;Temprano esta mañana, el Departamento de Estado estadounidense ordenó al embajador Gordon Sondland no comparecer hoy para su deposición programada ante el Comité Conjunto de la Cámara de Representantes&quot;, dijo el abogado Robert Luskin, señalando que su cliente &quot;está listo para testificar a corto plazo, siempre y cuando se le permita&quot;.
     </text4>
-    <image>
-        /images/201910/headers/08-lo-importante.jpg
-    </image>
-    <imagePoster>
-        /images/201910/posters/08-lo-importante.jpg
-    </imagePoster>
-    <imageDirectory>
-        /images/201910/08-lo-importante
-    </imageDirectory>
 </newsletter>

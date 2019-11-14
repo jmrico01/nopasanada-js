@@ -1,24 +1,21 @@
 <video>
     <featured>
         <pretitle>
-            
         </pretitle>
         <title>
-            
         </title>
         <text1>
-            
         </text1>
         <text2>
-            
         </text2>
         <highlightColor>
-            
         </highlightColor>
-        <images>
-            /images/201908/headers/enfoque3.jpg
-        </images>
     </featured>
+    <media>
+        <header type="image">
+            /images/201908/headers/enfoque3.jpg
+        </header>
+    </media>
     <tags>
         cultura,home
     </tags>
@@ -55,7 +52,4 @@
     <text>
         *En Enfoque conocemos las vidas e historias de celebrados y nuevos artistas viviendo y trabajando en Latinoamérica.*
     </text>
-    <image>
-        /images/201908/headers/enfoque3.jpg
-    </image>
 </video>
