@@ -425,7 +425,6 @@ async function SaveEntryData(url, templates, entryData)
     }
     delete entryData.contentType;
     entryData.tags = entryData.tags.join(", ");
-    entryData.featured.images = entryData.featured.images.join(",\n");
     let xml = ObjectToXML(contentType, entryData);
 
     let xmlPath = path.join(__dirname, path.normalize(url + ".xml"));

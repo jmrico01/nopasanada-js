@@ -1,8 +1,6 @@
 let imageRowTemplate_ = null;
 let images_ = null;
 
-let entryMedia_ = null;
-
 let imageDropzone_ = null;
 
 function UpdateImageList(images)
@@ -52,33 +50,12 @@ function OnContentTypeChanged()
 function LoadEntryData(entryData)
 {
     let images = [];
-    images.push({
-        name: "header",
-        uri: entryData.image
-    });
-    if (entryData.imagePoster) {
-        images.push({
-            name: "poster",
-            uri: entryData.imagePoster
-        });
-    }
-    for (let i = 0; i < entryData.featured.images.length; i++) {
-        images.push({
-            name: "featured" + (i + 1),
-            uri: entryData.featured.images[i]
-        });
-    }
-    if (entryData.imageDirectory) {
-        for (let i = 0; i < 4; i++) {
+    for (let key in entryData.media) {
+        let mediaItem = entryData.media[key];
+        if (mediaItem.$.type === "image") {
             images.push({
-                name: "header-desktop" + (i + 1),
-                uri: entryData.imageDirectory + "/vertical" + (i + 1) + ".jpg"
-            });
-        }
-        for (let i = 0; i < 4; i++) {
-            images.push({
-                name: "header-mobile" + (i + 1),
-                uri: entryData.imageDirectory + "/square" + (i + 1) + ".jpg"
+                name: key,
+                uri: mediaItem._
             });
         }
     }
@@ -106,8 +83,6 @@ function LoadEntryData(entryData)
     document.getElementsByName("featuredText1")[0].value = entryData.featured.text1;
     document.getElementsByName("featuredText2")[0].value = entryData.featured.text2;
     document.getElementsByName("highlightColor")[0].value = entryData.featured.highlightColor;
-
-    entryMedia_ = entryData.media;
 
     document.getElementsByName("tags")[0].value = entryData.tags.join(", ");
 
@@ -187,6 +162,21 @@ function SaveEntryData()
         tags[i] = tags[i].trim();
     }
 
+    if (GetImageByName("header", images_) === null) {
+        alert("Missing header image");
+        return;
+    }
+    let media = {};
+    for (let i = 0; i < images_.length; i++) {
+        let image = images_[i];
+        media[image.name] = {
+            _: image.uri,
+            $: {
+                type: "image"
+            }
+        };
+    }
+
     let entryData = {
         contentType: document.getElementById("contentType").value,
         featured: {
@@ -197,7 +187,7 @@ function SaveEntryData()
             highlightColor: document.getElementsByName("highlightColor")[0].value
         },
 
-        media:       entryMedia_,
+        media:       media,
 
         tags:        tags,
 
@@ -227,63 +217,6 @@ function SaveEntryData()
         subtitle:    document.getElementsByName("subtitle")[0].value,
         text:        document.getElementsByName("text")[0].value
     };
-
-    let images = images_;
-    let imageHeader = GetImageByName("header", images);
-    if (imageHeader === null) {
-        alert("Missing header image");
-        return;
-    }
-    entryData.featured.images = [ imageHeader.uri ];
-    entryData.image = imageHeader.uri;
-
-    let imagePoster = GetImageByName("poster", images);
-    if (imagePoster !== null) {
-        entryData.imagePoster = imagePoster.uri;
-    }
-
-    let anyPresent = false;
-    let allPresent = true;
-    let imagesDesktop = [];
-    let imagesMobile = [];
-    for (let i = 0; i < 4; i++) {
-        let imageDesktop = GetImageByName("header-desktop" + (i + 1), images);
-        let imageMobile = GetImageByName("header-mobile" + (i + 1), images);
-        if (imageDesktop !== null || imageMobile !== null) {
-            anyPresent = true;
-        }
-        if (imageDesktop === null || imageMobile === null) {
-            allPresent = false;
-        }
-        imagesDesktop.push(imageDesktop);
-        imagesMobile.push(imageMobile);
-    }
-    if (anyPresent && !allPresent) {
-        alert("Missing some newsletter images");
-        return;
-    }
-    if (!anyPresent && allPresent) {
-        alert("Unexpected error with newsletter images");
-        return;
-    }
-
-    if (anyPresent) {
-        let uri0 = imagesDesktop[0].uri;
-        let commonPath = uri0.substring(0, uri0.lastIndexOf("/"));
-        for (let i = 0; i < 4; i++) {
-            let uri = imagesDesktop[i].uri;
-            if (commonPath !== uri.substring(0, uri.lastIndexOf("/"))) {
-                alert("Upload path error with newsletter desktop images");
-                return;
-            }
-            uri = imagesMobile[i].uri;
-            if (commonPath !== uri.substring(0, uri.lastIndexOf("/"))) {
-                alert("Upload path error with newsletter mobile images");
-                return;
-            }
-        }
-        entryData.imageDirectory = commonPath;
-    }
 
     $("#statusMessage").html("Saving...");
     $.ajax({
