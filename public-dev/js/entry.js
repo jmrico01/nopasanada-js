@@ -3,6 +3,8 @@ let images_ = null;
 
 let imageDropzone_ = null;
 
+let uploadQueueInProcess_ = false;
+
 function UpdateImageList(images)
 {
     $.ajax({
@@ -218,6 +220,12 @@ function SaveEntryData()
         text:        document.getElementsByName("text")[0].value
     };
 
+    for (let k in entryData) {
+        if (entryData[k] === "undefined") {
+            delete entryData[k];
+        }
+    }
+
     $("#statusMessage").html("Saving...");
     $.ajax({
         type: "POST",
@@ -233,8 +241,6 @@ function SaveEntryData()
         }
     });
 }
-
-let uploadQueueInProcess_ = false;
 
 function BuzzImageUploadQueue()
 {
@@ -266,12 +272,32 @@ function BuzzImageUploadQueue()
             typeHtml += "<option value=\"header-mobile" + (i + 1) + "\">Newsletter Mobile Header, Article " + (i + 1) + "</option>";
         }
     }
-    // TODO typeHtml += "<option value=\"custom\">Custom</option>";
+    typeHtml += "<option value=\"custom\">Custom</option>";
     $("#imageUploadType").html(typeHtml);
+
+    $("#imageUploadType").off("change");
+    $("#imageUploadType").change(function() {
+        let uploadType = $("#imageUploadType").val();
+        if (uploadType === "custom") {
+            $("#imageUploadNameCustom").show();
+        }
+        else {
+            $("#imageUploadNameCustom").hide();
+        }
+    });
 
     $("#imageUploadButton").off("click");
     $("#imageUploadButton").click(function() {
-        image.npnLabel = $("#imageUploadType").val();
+        let imageLabel = $("#imageUploadType").val();
+        if (imageLabel === "custom") {
+            imageLabel = $("input[name=imageUploadNameCustom]").val();
+        }
+        let uploadTypeRegex = /^[a-z0-9\-]+$/g;
+        if (!uploadTypeRegex.test(imageLabel)) {
+            $("#statusMessage").html("Image label should only have lower-case letters, numbers, or dashes.");
+            return;
+        }
+        image.npnLabel = imageLabel;
         imageDropzone_.processFile(image);
         $("#imageUploadProcessor").hide();
         $(image.previewElement).css("background-color", "#fff");
@@ -317,6 +343,7 @@ Dropzone.options.imageDropzone = {
 
             $("#statusMessage").html("Successfully uploaded " + file.name + " as " + file.npnLabel);
             BuzzImageUploadQueue();
+            SaveEntryData();
         });
         this.on("complete", function(file) {
         });
@@ -342,6 +369,10 @@ $(document).ready(function() {
     $(".taSmall").attr("rows", "8");
     $(".taMedium").attr("rows", "50");
     $(".taLarge").attr("rows", "100");
+
+    setInterval(function() {
+        SaveEntryData();
+    }, 5000);
 
     $.ajax({
         type: "GET",
@@ -389,7 +420,7 @@ $(document).ready(function() {
                     data: JSON.stringify(requestData),
                     success: function(data) {
                         $("#statusMessage").html("Entry deleted successfully.");
-                        window.location = '/';
+                        window.location = "/";
                     },
                     error: function(error) {
                         console.error(error);
