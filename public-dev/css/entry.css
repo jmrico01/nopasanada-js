@@ -51,7 +51,7 @@ input[type=text], textarea {
 
 #imageDropzone, #imageUploadProcessor {
     width: 48%;
-    height: 300pt;
+    height: 400pt;
 }
 
 #imageDropzone {

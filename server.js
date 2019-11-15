@@ -56,10 +56,6 @@ function ObjectToXMLRecursive(prefix, object)
         for (let key in object) {
             if (key === "_") {
                 // TODO same as bottom "else" case
-                if (object === "undefined") {
-                    console.warn("\"undefined\" string, treated as undefined value");
-                    return null;
-                }
                 let string = prefix + object[key] + "\n";
                 for (let i = 0; i < string.length; i++) {
                     if (XML_ESCAPED_CHARS.hasOwnProperty(string[i])) {
@@ -92,10 +88,6 @@ function ObjectToXMLRecursive(prefix, object)
         }
     }
     else {
-        if (object === "undefined") {
-            console.warn("\"undefined\" string, treated as undefined value");
-            return null;
-        }
         if (object !== "") {
             let string = prefix + object + "\n";
             for (let i = 0; i < string.length; i++) {
@@ -361,24 +353,6 @@ async function GetEntryData(url, templates)
         }
     }
 
-    /*if (!("media" in entryData)) {
-        entryData.media = {};
-    }
-    if (!("header" in entryData.media)) {
-        entryData.media.header = {};
-        entryData.media.header._ = "";
-    }*/
-    // TODO temp, migration
-    if ("image" in entryData) {
-        throw new Error("image in " + url);
-    }
-    if ("imagePoster" in entryData) {
-        throw new Error("imagePoster in " + url);
-    }
-    if ("images" in entryData.featured) {
-        throw new Error("featured images in " + url);
-    }
-
     if (!("media" in entryData)) {
         throw new Error("no media on file " + url);
     }
@@ -634,7 +608,6 @@ app.get("/content/*/*", async function(req, res) {
     // Normal template pass
     let output = mustache.render(templateObject.template, entryData);
 
-    // Additional passes
     let media = {};
     for (let k in entryData.media) {
         let content = entryData.media[k]._;
@@ -950,9 +923,12 @@ if (serverSettings.isDev) {
                 uri += entryPathSplit[entryPathSplit.length - 1] + "/square" + number + ".jpg";
             }
             else {
-                console.error("Invalid npnLabel: " + npnLabel);
-                res.status(400).end("<error>Invalid npn label " + npnLabel + "</error>");
-                return;
+                let npnLabelRegex = /^[a-z0-9\-]+$/g;
+                if (!npnLabelRegex.test(npnLabel)) {
+                    res.status(400).end("<error>Invalid npn label " + npnLabel + "</error>");
+                    return;
+                }
+                uri += entryPathSplit[entryPathSplit.length - 1] + "/" + npnLabel + ".jpg";
             }
 
             let filePath = path.join(__dirname, "public", uri);
