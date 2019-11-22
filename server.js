@@ -332,6 +332,8 @@ async function GetEntryData(url, templates)
                 entryData[k] = {};
             }
             for (let k2 in entryData[k]) {
+                // TODO sometimes entries get created with empty media element (e.g. poster),
+                // and then the access to "_" crashes.
                 entryData[k][k2] = entryData[k][k2][0];
                 entryData[k][k2]._ = entryData[k][k2]._.trim();
                 if (!entryData[k][k2].hasOwnProperty("$")) {
