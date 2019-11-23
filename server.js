@@ -952,7 +952,7 @@ if (serverSettings.isDev) {
             });
             file.pipe(fstream);
             fstream.on("close", function() {
-                console.log("Upload finished for " + filePath);
+                console.log("Upload finished for " + filePath + ", uri " + uri);
                 res.status(200).end("<uri>" + uri + "</uri>");
             });
         });
@@ -1112,6 +1112,8 @@ if (serverSettings.isDev) {
             requestPath = requestPath.substring(0, requestPath.length - 1);
         }
 
+        console.log(req.path);
+        console.log(req.body);
         try {
             await SaveEntryData(requestPath, templates_, req.body);
         }

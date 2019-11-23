@@ -236,8 +236,8 @@ function SaveEntryData()
         success: function(data) {
             $("#statusMessage").html("Entry save successful.");
         },
-        error: function(error) {
-            $("#statusMessage").html("Entry save failed, error: " + error);
+        error: function(xhr, textStatus, error) {
+            $("#statusMessage").html("Entry save failed, error: " + textStatus);
         }
     });
 }
@@ -313,7 +313,6 @@ function BuzzImageUploadQueue()
     });
 }
 
-// TODO(important) featured image url???
 Dropzone.options.imageDropzone = {
     autoProcessQueue: false,
     paramName: "imageFile",
@@ -334,12 +333,13 @@ Dropzone.options.imageDropzone = {
             if (image === null) {
                 images_.push({
                     name: file.npnLabel,
-                    url: imageUri
+                    uri: imageUri
                 });
             }
             else {
                 image.uri = imageUri;
             }
+            console.log(images_);
 
             $("#statusMessage").html("Successfully uploaded " + file.name + " as " + file.npnLabel);
             BuzzImageUploadQueue();
@@ -371,7 +371,7 @@ $(document).ready(function() {
     $(".taLarge").attr("rows", "100");
 
     setInterval(function() {
-        SaveEntryData();
+        //SaveEntryData();
     }, 5000);
 
     $.ajax({
