@@ -18,10 +18,10 @@
     </featured>
     <media>
         <header type="image">
-            /images/201911/headers/13-ceviches.jpg
+            /images/201911/headers/26-ok-boomer.jpg
         </header>
         <poster type="image">
-            /images/201911/posters/13-ceviches.jpg
+            /images/201911/posters/26-ok-boomer.jpg
         </poster>
         <ceviche1 type="image">
             /images/201911/13-ceviches/ceviche1.jpg
@@ -29,6 +29,18 @@
         <ceviche2 type="image">
             /images/201911/13-ceviches/ceviche2.jpg
         </ceviche2>
+        <boomer1 type="image">
+            /images/201911/26-ok-boomer/boomer1.jpg
+        </boomer1>
+        <boomer2 type="image">
+            /images/201911/26-ok-boomer/boomer2.jpg
+        </boomer2>
+        <boomer3 type="image">
+            /images/201911/26-ok-boomer/boomer3.jpg
+        </boomer3>
+        <boomer4 type="image">
+            /images/201911/26-ok-boomer/boomer4.jpg
+        </boomer4>
     </media>
     <tags>
         opinion, home
@@ -39,7 +51,7 @@
     <titlePoster>
     </titlePoster>
     <description>
-        Lo que está detrás del meme que une a la GenZ y los Millennials: “así que, boomers... hablemos - pero no solo eso: escuchémonos. Hasta que eso no pase, seguiremos saliendo de la conversación con la cabeza en alto, al mejor estilo descarado del OK, BOOMER.” 
+        Lo que está detrás del meme que une a la GenZ y los Millennials: “así que, boomers... hablemos - pero no solo eso: escuchémonos. Hasta que eso no pase, seguiremos saliendo de la conversación con la cabeza en alto, al mejor estilo descarado del OK, BOOMER.”
     </description>
     <day>
         26
@@ -95,6 +107,5 @@ Siguiendo la tradición de la buena comedia, hemos convertido la desesperanza qu
 Así que, *boomers*: hablemos… pero no solo eso: escuchémonos. Y *sorry*, hasta que eso no pase, seguiremos saliendo de la conversación con la cabeza en alto, al mejor estilo descarado del “OK, BOOMER.”
 
 $image/boomer4$
-
     </text>
 </article>
