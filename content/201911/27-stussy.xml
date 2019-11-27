@@ -18,10 +18,10 @@
     </featured>
     <media>
         <header type="image">
-            /images/201911/headers/26-ok-boomer.jpg
+            /images/201911/headers/27-stussy.jpg
         </header>
         <poster type="image">
-            /images/201911/posters/26-ok-boomer.jpg
+            /images/201911/posters/27-stussy.jpg
         </poster>
         <ceviche1 type="image">
             /images/201911/13-ceviches/ceviche1.jpg
@@ -41,6 +41,15 @@
         <boomer4 type="image">
             /images/201911/26-ok-boomer/boomer4.jpg
         </boomer4>
+        <shawnstussy type="image">
+            /images/201911/27-stussy/shawnstussy.jpg
+        </shawnstussy>
+        <stussytribejacket type="image">
+            /images/201911/27-stussy/stussytribejacket.jpg
+        </stussytribejacket>
+        <skaterstussy type="image">
+            /images/201911/27-stussy/skaterstussy.jpg
+        </skaterstussy>
     </media>
     <tags>
         cultura, home
