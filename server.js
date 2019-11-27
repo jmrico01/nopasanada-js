@@ -628,10 +628,14 @@ app.get("/content/*/*", async function(req, res) {
         };
     }
 
+    const BAD_MEDIA_TAG_ERROR = "$$ ERROR! BAD MEDIA TAG $$";
     const MEDIA_TAGS = [
         {
             tag: "image",
             content: function(arg, style, entryMedia) {
+                if (!(arg in entryMedia)) {
+                    return BAD_MEDIA_TAG_ERROR;
+                }
                 return "<img style=\"" + entryMedia[arg].style + "\" src=\"../../.."
                     + entryMedia[arg].content + "\">";
             }
@@ -756,17 +760,18 @@ app.get("/content/*/*", async function(req, res) {
             }
             let argStart = index + tag.length;
             let argEnd = argStart;
-            while (output[argEnd] !== "$") {
+            while (argEnd < output.length && output[argEnd] !== "$") {
                 argEnd++;
-                if (argEnd >= output.length) {
-                    console.error("embed/tag media has no terminating $");
-                    res.status(500).end();
-                    return;
-                }
             }
-            let arg = output.slice(argStart, argEnd);
-            let style = "";
-            let contentString = MEDIA_TAGS[i].content(arg, style, media);
+            let contentString;
+            if (argEnd >= output.length) {
+                contentString = BAD_MEDIA_TAG_ERROR;
+            }
+            else {
+                let arg = output.slice(argStart, argEnd);
+                let style = "";
+                contentString = MEDIA_TAGS[i].content(arg, style, media)
+            }
             output = [
                 output.slice(0, index),
                 contentString,
