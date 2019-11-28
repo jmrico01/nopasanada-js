@@ -122,6 +122,7 @@ function ObjectToXML(rootNode, object)
     return xml;
 }
 
+// TODO duplicated in main.js
 function GetDateStringsFromUnixTime(unixTime)
 {
     let date = new Date(unixTime);
@@ -332,8 +333,6 @@ async function GetEntryData(url, templates)
                 entryData[k] = {};
             }
             for (let k2 in entryData[k]) {
-                // TODO sometimes entries get created with empty media element (e.g. poster),
-                // and then the access to "_" crashes.
                 entryData[k][k2] = entryData[k][k2][0];
                 entryData[k][k2]._ = entryData[k][k2]._.trim();
                 if (!entryData[k][k2].hasOwnProperty("$")) {
@@ -404,6 +403,10 @@ async function SaveEntryData(url, templates, entryData)
     let xml = ObjectToXML(contentType, entryData);
 
     let xmlPath = path.join(__dirname, path.normalize(url + ".xml"));
+    let xmlDir = path.dirname(xmlPath);
+    if (!fs.existsSync(xmlDir)) {
+        await mkdirAsync(xmlDir, { recursive: true });
+    }
     await writeFileAsync(xmlPath, xml);
 }
 
@@ -945,7 +948,7 @@ if (serverSettings.isDev) {
                     await mkdirAsync(fileDir, { recursive: true });
                 }
                 catch (e) {
-                    console.log(e);
+                    console.error(e);
                     res.status(400).end("Failed to create image directory");
                     return;
                 }
@@ -1065,7 +1068,6 @@ if (serverSettings.isDev) {
         entryData.month = dateStrings.month;
         entryData.day = dateStrings.day;
 
-        // TODO create dir if doesn't exist
         let uri = "content" + "/" + dateStrings.year + dateStrings.month + "/" + name;
         try {
             await SaveEntryData(uri, templates_, entryData);
@@ -1117,8 +1119,6 @@ if (serverSettings.isDev) {
             requestPath = requestPath.substring(0, requestPath.length - 1);
         }
 
-        console.log(req.path);
-        console.log(req.body);
         try {
             await SaveEntryData(requestPath, templates_, req.body);
         }

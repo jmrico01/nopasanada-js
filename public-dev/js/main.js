@@ -13,6 +13,31 @@ let deployInProgress_ = false;
 
 let entryData_ = null;
 
+// TODO duplicated in server.js
+function GetDateStringsFromUnixTime(unixTime)
+{
+    let date = new Date(unixTime);
+    let dayString = date.getDate().toString();
+    if (dayString.length < 2) {
+        dayString = "0" + dayString;
+    }
+    else if (dayString.length > 2) {
+        throw new Error("day string on date has length > 2");
+    }
+    let monthString = (date.getMonth() + 1).toString();
+    if (monthString.length < 2) {
+        monthString = "0" + monthString;
+    }
+    else if (monthString.length > 2) {
+        throw new Error("month string on date has length > 2");
+    }
+    return {
+        day: dayString,
+        month: monthString,
+        year: date.getFullYear().toString()
+    };
+}
+
 function FormatTableFieldValue(tableField, entry)
 {
     const entryValue = entry[tableField[0]];
@@ -168,8 +193,9 @@ $(document).ready(function() {
         let newEntryHtml = "<h1>New Entry</h1>";
         newEntryHtml += "<form id=\"newEntryForm\">";
         // URI (name)
-        // TODO url year+month should be calculated
-        newEntryHtml += "<h3>URL</h3>/content/201911/ <input type=\"text\" name=\"uniqueName\"></input><br>";
+        let dateStrings = GetDateStringsFromUnixTime(Date.now());
+        newEntryHtml += "<h3>URL</h3>/content/" + dateStrings.year + dateStrings.month
+            + "/ <input type=\"text\" name=\"uniqueName\"></input><br>";
         // Copy from
         newEntryHtml += "<h3>Copy from</h3><select name=\"copyFrom\"><option value=\"none\">None</option>";
         for (let i = 0; i < entryData_.length; i++) {
