@@ -1,6 +1,6 @@
 exports.featured = {
     "home": "/content/201911/27-stussy",
-    "noticias": "/content/201911/27-lo-importante",
+    "noticias": "/content/201911/29-lo-importante",
     "ciencia": "/content/201910/29-campeon-ambiental",
     "cultura": "/content/201911/27-stussy",
     "opinion": "/content/201911/26-ok-boomer",
