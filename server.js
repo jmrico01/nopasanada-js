@@ -156,6 +156,7 @@ let commonSlate = {
         text2: "",
         highlightColor: ""
     },
+    media: [],
     tags: [],
     title: "",
     titlePoster: "",
