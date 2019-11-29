@@ -156,7 +156,14 @@ let commonSlate = {
         text2: "",
         highlightColor: ""
     },
-    media: [],
+    media: [
+        header: {
+            "_": "/images/unused/garrazo.jpg",
+            "$": {
+                "type": "image"
+            }
+        }
+    ],
     tags: [],
     title: "",
     titlePoster: "",
@@ -358,10 +365,9 @@ async function GetEntryData(url, templates)
     if (!("media" in entryData)) {
         throw new Error("no media on file " + url);
     }
-    // TODO hmm...
-    // if (!("header" in entryData.media)) {
-    //     throw new Error("no header on file media " + url);
-    // }
+    if (!("header" in entryData.media)) {
+        throw new Error("no header on file media " + url);
+    }
     if (!("titlePoster" in entryData) && !("title" in entryData)) {
         throw new Error("no title on file " + url);
     }
