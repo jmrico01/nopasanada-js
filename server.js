@@ -156,16 +156,14 @@ let commonSlate = {
         text2: "",
         highlightColor: ""
     },
-    media: [
-        {
-            header: {
-                "_": "/images/unused/garrazo.jpg",
-                "$": {
-                    "type": "image"
-                }
+    media: {
+        header: {
+            "_": "/images/unused/garrazo.jpg",
+            "$": {
+                "type": "image"
             }
         }
-    ],
+    },
     tags: [],
     title: "",
     titlePoster: "",
