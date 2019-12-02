@@ -959,6 +959,7 @@ if (serverSettings.isDev) {
             let fileDir = path.dirname(filePath);
             if (!fs.existsSync(fileDir)) {
                 try {
+                    // TODO seems like recursive isn't actually working?
                     await mkdirAsync(fileDir, { recursive: true });
                 }
                 catch (e) {
