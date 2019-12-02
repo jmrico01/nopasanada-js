@@ -18,8 +18,11 @@
     </featured>
     <media>
         <header type="image">
-            /images/201911/headers/11-ilustradoras.jpg
+            /images/201912/headers/02-ocean-cleanup.jpg
         </header>
+        <poster type="image">
+            /images/201912/posters/02-ocean-cleanup.jpg
+        </poster>
     </media>
     <tags>
         ciencia
