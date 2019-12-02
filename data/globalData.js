@@ -1,5 +1,5 @@
 exports.featured = {
-    "home": "/content/201912/02-ocean-cleanup",
+    "home": "/content/201911/30-tristeza",
     "noticias": "/content/201911/29-lo-importante",
     "ciencia": "/content/201912/02-ocean-cleanup",
     "cultura": "/content/201911/30-tristeza",
