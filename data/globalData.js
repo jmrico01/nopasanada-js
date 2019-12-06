@@ -1,6 +1,6 @@
 exports.featured = {
     "home": "/content/201912/05-himno-feminista",
-    "noticias": "/content/201912/05-trump-impeachment",
+    "noticias": "/content/201912/06-lo-importante",
     "ciencia": "/content/201912/02-ocean-cleanup",
     "cultura": "/content/201912/05-himno-feminista",
     "opinion": "/content/201912/05-woke-brands",
