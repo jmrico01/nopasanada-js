@@ -1,6 +1,6 @@
 exports.featured = {
     "home": "/content/201912/09-gallo-pinto",
-    "noticias": "/content/201912/09-lo-importante",
+    "noticias": "/content/201912/10-lo-importante",
     "ciencia": "/content/201912/02-ocean-cleanup",
     "cultura": "/content/201912/09-gallo-pinto",
     "opinion": "/content/201912/05-woke-brands",
