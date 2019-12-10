@@ -1,5 +1,5 @@
 exports.featured = {
-    "home": "/content/201912/09-gallo-pinto",
+    "home": "/content/201912/09-al-mercat",
     "noticias": "/content/201912/10-lo-importante",
     "ciencia": "/content/201912/02-ocean-cleanup",
     "cultura": "/content/201912/09-gallo-pinto",
