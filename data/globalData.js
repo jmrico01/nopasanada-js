@@ -1,8 +1,8 @@
 exports.featured = {
-    "home": "/content/201912/09-al-mercat",
+    "home": "/content/201912/12-gustav-klimt",
     "noticias": "/content/201912/12-lo-importante",
     "ciencia": "/content/201912/02-ocean-cleanup",
-    "cultura": "/content/201912/09-al-mercat",
+    "cultura": "/content/201912/12-gustav-klimt",
     "opinion": "/content/201912/05-woke-brands",
     "deporte": "/content/201908/pilotos-trailer",
     "nopasanada": "/content/201908/nopasanada"
