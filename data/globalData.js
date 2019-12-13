@@ -1,9 +1,9 @@
 exports.featured = {
-    "home": "/content/201912/12-solo-lo-importante-video",
-    "noticias": "/content/201912/12-solo-lo-importante-video",
+    "home": "/content/201912/13-lo-importante",
+    "noticias": "/content/201912/13-lo-importante",
     "ciencia": "/content/201912/02-ocean-cleanup",
     "cultura": "/content/201912/12-gustav-klimt",
-    "opinion": "/content/201912/05-woke-brands",
+    "opinion": "/content/201912/13-beatles-y-satanismo",
     "deporte": "/content/201908/pilotos-trailer",
     "nopasanada": "/content/201908/nopasanada"
 };
