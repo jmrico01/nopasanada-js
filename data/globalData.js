@@ -1,5 +1,5 @@
 exports.featured = {
-    "home": "/content/201912/13-lo-importante",
+    "home": "/content/201912/13-beatles-y-satanismo",
     "noticias": "/content/201912/13-lo-importante",
     "ciencia": "/content/201912/02-ocean-cleanup",
     "cultura": "/content/201912/12-gustav-klimt",
