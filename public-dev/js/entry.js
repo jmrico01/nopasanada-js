@@ -360,6 +360,12 @@ Dropzone.options.imageDropzone = {
 };
 
 $(document).ready(function() {
+    /*tinymce.init({
+        selector: "textarea",
+        menubar: false,
+        //toolbar: "undo redo | styleselect | bold italic | link image"
+    });*/
+
     $(".modal").hide();
     $("#imageUploadProcessor").hide();
 
@@ -371,7 +377,7 @@ $(document).ready(function() {
     $(".taLarge").attr("rows", "100");
 
     setInterval(function() {
-        //SaveEntryData();
+        SaveEntryData();
     }, 5000);
 
     $.ajax({
