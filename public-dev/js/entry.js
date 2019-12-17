@@ -423,7 +423,7 @@ $(document).ready(async function() {
                 });
 
                 setInterval(function() {
-                    // SaveEntryData();
+                    SaveEntryData();
                 }, 5000);
                 $("#saveButton").click(function() {
                     SaveEntryData();
