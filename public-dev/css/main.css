@@ -87,7 +87,7 @@ a:hover {
     top: 0;
     padding: 24pt;
     height: 50pt;
-    z-index: 1;
+    z-index: 10;
 
     background-color: #aaa;
 }
