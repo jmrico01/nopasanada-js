@@ -855,7 +855,7 @@ if (serverSettings.isDev) {
 
     const appDev = express();
 
-    appDev.use(express.json());
+    appDev.use(express.json({ limit: "10MB" }));
     appDev.use(express.urlencoded({ extended: true }));
 
     appDev.use(cookieParser());
