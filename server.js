@@ -12,7 +12,6 @@ const passport = require("passport");
 const path = require("path");
 const serverSettings = require("./server-settings.js");
 const session = require("express-session");
-const showdown = require("showdown");
 const util = require("util");
 const xml2jsParseString = require("xml2js").parseString;
 
@@ -569,35 +568,6 @@ app.get("/content/*/*", async function(req, res) {
         entryData.date = "";
     }
     entryData.url = requestPath;
-
-    /*let converter = new showdown.Converter();
-    if (contentType === "newsletter") {
-        for (let t = 1; t <= 4; t++) {
-            let tttt = "text" + t.toString();
-            entryData[tttt] = converter.makeHtml(entryData[tttt]);
-            let formattedText = "";
-            let textSplit = entryData[tttt].split("\n");
-            for (let i = 0; i < textSplit.length; i++) {
-                textSplit[i] = textSplit[i].trim();
-                if (textSplit[i] !== "") {
-                    formattedText += "<p>" + textSplit[i] + "</p>";
-                }
-            }
-            entryData[tttt] = formattedText;
-        }
-    }
-    else {
-        entryData.text = converter.makeHtml(entryData.text);
-        let formattedText = "";
-        let textSplit = entryData.text.split("\n");
-        for (let i = 0; i < textSplit.length; i++) {
-            textSplit[i] = textSplit[i].trim();
-            if (textSplit[i] !== "") {
-                formattedText += "<p>" + textSplit[i] + "</p>";
-            }
-        }
-        entryData.text = formattedText;
-    }*/
 
     const templateObject = templates_[contentType];
     for (let k in templateObject.requiredParameters) {

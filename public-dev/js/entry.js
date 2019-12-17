@@ -399,9 +399,9 @@ $(document).ready(async function() {
     tinymce.init({
         selector: "tinymce",
         menubar: false,
-        plugins: "autoresize lists link",
+        plugins: "autoresize colorpicker hr lists link",
         toolbar: "undo redo | formatselect | bold italic backcolor | alignleft aligncenter " +
-            "alignright alignjustify | link | bullist numlist"
+            "alignright alignjustify | link hr | bullist numlist"
     }).then(function(editors) {
         editors_ = {};
         for (let i = 0; i < editors.length; i++) {
