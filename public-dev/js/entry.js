@@ -1,3 +1,7 @@
+"use strict";
+
+let editors_ = null;
+
 let imageRowTemplate_ = null;
 let images_ = null;
 
@@ -105,18 +109,28 @@ function LoadEntryData(entryData)
     document.getElementsByName("customTop")[0].value = entryData.customTop;
     document.getElementsByName("title1")[0].value = entryData.title1;
     document.getElementsByName("author1")[0].value = entryData.author1;
-    document.getElementsByName("text1")[0].value = entryData.text1;
+    if ("text1" in entryData) {
+        editors_["text1"].setContent(entryData.text1);
+    }
     document.getElementsByName("title2")[0].value = entryData.title2;
     document.getElementsByName("author2")[0].value = entryData.author2;
-    document.getElementsByName("text2")[0].value = entryData.text2;
+    if ("text2" in entryData) {
+        editors_["text2"].setContent(entryData.text2);
+    }
     document.getElementsByName("title3")[0].value = entryData.title3;
     document.getElementsByName("author3")[0].value = entryData.author3;
-    document.getElementsByName("text3")[0].value = entryData.text3;
+    if ("text3" in entryData) {
+        editors_["text3"].setContent(entryData.text3);
+    }
     document.getElementsByName("title4")[0].value = entryData.title4;
     document.getElementsByName("author4")[0].value = entryData.author4;
-    document.getElementsByName("text4")[0].value = entryData.text4;
+    if ("text4" in entryData) {
+        editors_["text4"].setContent(entryData.text4);
+    }
     document.getElementsByName("subtitle")[0].value = entryData.subtitle;
-    document.getElementsByName("text")[0].value = entryData.text;
+    if ("text" in entryData) {
+        editors_["text"].setContent(entryData.text);
+    }
 }
 
 function GetImageByName(name, images)
@@ -206,18 +220,18 @@ function SaveEntryData()
         customTop:   document.getElementsByName("customTop")[0].value,
         title1:      document.getElementsByName("title1")[0].value,
         author1:     document.getElementsByName("author1")[0].value,
-        text1:       document.getElementsByName("text1")[0].value,
+        text1:       editors_["text1"].getContent(),
         title2:      document.getElementsByName("title2")[0].value,
         author2:     document.getElementsByName("author2")[0].value,
-        text2:       document.getElementsByName("text2")[0].value,
+        text2:       editors_["text2"].getContent(),
         title3:      document.getElementsByName("title3")[0].value,
         author3:     document.getElementsByName("author3")[0].value,
-        text3:       document.getElementsByName("text3")[0].value,
+        text3:       editors_["text3"].getContent(),
         title4:      document.getElementsByName("title4")[0].value,
         author4:     document.getElementsByName("author4")[0].value,
-        text4:       document.getElementsByName("text4")[0].value,
+        text4:       editors_["text4"].getContent(),
         subtitle:    document.getElementsByName("subtitle")[0].value,
-        text:        document.getElementsByName("text")[0].value
+        text:        editors_["text"].getContent(),
     };
 
     for (let k in entryData) {
@@ -359,26 +373,12 @@ Dropzone.options.imageDropzone = {
     }
 };
 
-$(document).ready(function() {
-    /*tinymce.init({
-        selector: "textarea",
-        menubar: false,
-        //toolbar: "undo redo | styleselect | bold italic | link image"
-    });*/
+$(document).ready(async function() {
+    $(".section").hide();
 
-    $(".modal").hide();
     $("#imageUploadProcessor").hide();
-
     imageRowTemplate_ = $("#imagesListRowTemplate").html();
     $("#imagesListRowTemplate").remove();
-
-    $(".taSmall").attr("rows", "8");
-    $(".taMedium").attr("rows", "50");
-    $(".taLarge").attr("rows", "100");
-
-    setInterval(function() {
-        SaveEntryData();
-    }, 5000);
 
     $.ajax({
         type: "GET",
@@ -396,47 +396,65 @@ $(document).ready(function() {
         }
     });
 
-    $.ajax({
-        type: "GET",
-        url: GetEntryPath(),
-        contentType: "application/json",
-        dataType: "json",
-        async: true,
-        data: "",
-        success: function(data) {
-            LoadEntryData(data);
-
-            $("#contentType").change(function() {
-                OnContentTypeChanged();
-            });
-
-            $("#saveButton").click(function() {
-                SaveEntryData();
-            });
-
-            $("#deleteButton").click(function() {
-                let requestData = {
-                    uri: GetEntryPath()
-                };
-                $.ajax({
-                    type: "POST",
-                    url: "/deleteEntry",
-                    contentType: "application/json",
-                    async: true,
-                    data: JSON.stringify(requestData),
-                    success: function(data) {
-                        $("#statusMessage").html("Entry deleted successfully.");
-                        window.location = "/";
-                    },
-                    error: function(error) {
-                        console.error(error);
-                        $("#statusMessage").html("Delete failed, error: " + error);
-                    }
-                });
-            });
-        },
-        error: function(error) {
-            console.error(error);
+    tinymce.init({
+        selector: "tinymce",
+        menubar: false,
+        plugins: "autoresize lists link",
+        toolbar: "undo redo | formatselect | bold italic backcolor | alignleft aligncenter " +
+            "alignright alignjustify | link | bullist numlist"
+    }).then(function(editors) {
+        editors_ = {};
+        for (let i = 0; i < editors.length; i++) {
+            editors_[editors[i].id] = editors[i];
         }
+
+        $.ajax({
+            type: "GET",
+            url: GetEntryPath(),
+            contentType: "application/json",
+            dataType: "json",
+            async: true,
+            data: "",
+            success: function(data) {
+                LoadEntryData(data);
+
+                $("#contentType").change(function() {
+                    OnContentTypeChanged();
+                });
+
+                setInterval(function() {
+                    // SaveEntryData();
+                }, 5000);
+                $("#saveButton").click(function() {
+                    SaveEntryData();
+                });
+
+                $("#deleteButton").click(function() {
+                    let requestData = {
+                        uri: GetEntryPath()
+                    };
+                    $.ajax({
+                        type: "POST",
+                        url: "/deleteEntry",
+                        contentType: "application/json",
+                        async: true,
+                        data: JSON.stringify(requestData),
+                        success: function(data) {
+                            $("#statusMessage").html("Entry deleted successfully.");
+                            window.location = "/";
+                        },
+                        error: function(error) {
+                            console.error(error);
+                            $("#statusMessage").html("Delete failed, error: " + error);
+                        }
+                    });
+                });
+
+                $(".section").show();
+            },
+            error: function(error) {
+                console.error(error);
+            }
+        });
     });
 });

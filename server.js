@@ -570,7 +570,7 @@ app.get("/content/*/*", async function(req, res) {
     }
     entryData.url = requestPath;
 
-    let converter = new showdown.Converter();
+    /*let converter = new showdown.Converter();
     if (contentType === "newsletter") {
         for (let t = 1; t <= 4; t++) {
             let tttt = "text" + t.toString();
@@ -597,7 +597,7 @@ app.get("/content/*/*", async function(req, res) {
             }
         }
         entryData.text = formattedText;
-    }
+    }*/
 
     const templateObject = templates_[contentType];
     for (let k in templateObject.requiredParameters) {

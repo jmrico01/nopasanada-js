@@ -13,7 +13,7 @@
 
     <script type="application/javascript" src="../js/jquery-3.4.1.min.js"></script>
     <script type="application/javascript" src="../js/dropzone.js"></script>
-    <!--<script src="https://cdn.tiny.cloud/1/xbdvg4trrf8s0h2yxbvj5fl0ts5loiw2xyp5y9ezov6h3mi6/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>-->
+    <script src="https://cdn.tiny.cloud/1/xbdvg4trrf8s0h2yxbvj5fl0ts5loiw2xyp5y9ezov6h3mi6/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
     <script type="application/javascript" src="../js/entry.js"></script>
 </head>
 
@@ -89,7 +89,7 @@
                     <h3>Author</h3>
                     <input type="text" name="author1"><br>
                     <h3>Text</h3>
-                    <textarea class="taMedium" name="text1"></textarea><br>
+                    <tinymce id="text1"></tinymce><br>
 
                     <h2>Article 2</h2>
                     <h3>Title</h3>
@@ -97,7 +97,7 @@
                     <h3>Author</h3>
                     <input type="text" name="author2"><br>
                     <h3>Text</h3>
-                    <textarea class="taMedium" name="text2"></textarea><br>
+                    <tinymce id="text2"></tinymce><br>
 
                     <h2>Article 3</h2>
                     <h3>Title</h3>
@@ -105,7 +105,7 @@
                     <h3>Author</h3>
                     <input type="text" name="author3"><br>
                     <h3>Text</h3>
-                    <textarea class="taMedium" name="text3"></textarea><br>
+                    <tinymce id="text3"></tinymce><br>
 
                     <h2>Article 4</h2>
                     <h3>Title</h3>
@@ -113,13 +113,13 @@
                     <h3>Author</h3>
                     <input type="text" name="author4"><br>
                     <h3>Text</h3>
-                    <textarea class="taMedium" name="text4"></textarea><br>
+                    <tinymce id="text4"></tinymce><br>
                 </div>
                 <div class="input-article input-text input-video">
                     <h3>Subtitle</h3>
                     <textarea class="taSmall" name="subtitle"></textarea><br>
                     <h3>Text</h3>
-                    <textarea class="taLarge" name="text"></textarea><br>
+                    <tinymce id="text"></tinymce><br>
                 </div>
             </div>
         </form>
@@ -158,11 +158,6 @@
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
-
-        <div id="modal" class="modal">
-            <div class="modal-content">
             </div>
         </div>
     </div>
