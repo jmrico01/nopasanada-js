@@ -398,10 +398,17 @@ $(document).ready(async function() {
 
     tinymce.init({
         selector: "tinymce",
+        style_formats: [
+            { title: "Paragraph", block: "p", style: {} }
+        ],
         menubar: false,
         plugins: "autoresize colorpicker hr lists link",
-        toolbar: "undo redo | formatselect | bold italic backcolor | alignleft aligncenter " +
-            "alignright alignjustify | link hr | bullist numlist"
+        toolbar: "undo redo | formatselect fontselect | bold italic backcolor | alignleft aligncenter " +
+            "alignright alignjustify | link hr | bullist numlist",
+        font_formats: "Default (Futura)=FuturaPTBook;",
+        content_css: [
+            "https://nopasanada.com/css/article.css"
+        ],
     }).then(function(editors) {
         editors_ = {};
         for (let i = 0; i < editors.length; i++) {
