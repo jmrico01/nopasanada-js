@@ -18,8 +18,11 @@
     </featured>
     <media>
         <header type="image">
-            /images/unused/garrazo.jpg
+            /images/201912/headers/17-me-mejor-experiencia.jpg
         </header>
+        <poster type="image">
+            /images/201912/posters/17-me-mejor-experiencia.jpg
+        </poster>
     </media>
     <tags>
         deporte, pasaen
