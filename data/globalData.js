@@ -1,6 +1,6 @@
 exports.featured = {
-    "home": "/content/201912/17-solo-lo-importante-video",
-    "noticias": "/content/201912/17-solo-lo-importante-video",
+    "home": "/content/201912/18-lo-importante",
+    "noticias": "/content/201912/18-lo-importante",
     "ciencia": "/content/201912/02-ocean-cleanup",
     "cultura": "/content/201912/17-anna-karina",
     "opinion": "/content/201912/17-anna-karina",
