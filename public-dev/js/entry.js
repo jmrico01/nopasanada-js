@@ -403,8 +403,8 @@ $(document).ready(async function() {
         ],
         menubar: false,
         plugins: "autoresize colorpicker hr lists link",
-        toolbar: "undo redo | formatselect fontselect | bold italic backcolor | alignleft aligncenter " +
-            "alignright alignjustify | link hr | bullist numlist",
+        toolbar: "undo redo | bold italic backcolor | alignleft aligncenter " +
+            "alignright alignjustify | link hr | bullist numlist | removeformat",
         font_formats: "Default (Futura)=FuturaPTBook;",
         content_css: [
             "https://nopasanada.com/css/article.css"
@@ -431,7 +431,7 @@ $(document).ready(async function() {
 
                 setInterval(function() {
                     SaveEntryData();
-                }, 5000);
+                }, 20000);
                 $("#saveButton").click(function() {
                     SaveEntryData();
                 });
