@@ -1,5 +1,5 @@
 exports.featured = {
-    "home": "/content/201912/18-lo-importante",
+    "home": "/content/201912/19-lo-importante",
     "noticias": "/content/201912/18-lo-importante",
     "ciencia": "/content/201912/02-ocean-cleanup",
     "cultura": "/content/201912/13-desayunos",
