@@ -15,7 +15,9 @@ const session = require("express-session");
 const util = require("util");
 const xml2jsParseString = require("xml2js").parseString;
 
-let globalData = require("./data/globalData.js");
+const ROOT_DIR = path.join(__dirname, "..");
+
+let globalData = require("../data/globalData.js");
 
 // Jesus...
 const mkdirAsync     = util.promisify(fs.mkdir);
@@ -209,7 +211,7 @@ const app = express();
 function LoadTemplateData()
 {
     let templates = {};
-    let templateFiles = fs.readdirSync(path.join(__dirname, "/content/templates"));
+    let templateFiles = fs.readdirSync(path.join(ROOT_DIR, "/content/templates"));
     for (let i = 0; i < templateFiles.length; i++) {
         let templateFileSplit = templateFiles[i].split(".");
         assert(templateFileSplit.length === 2);
@@ -217,7 +219,7 @@ function LoadTemplateData()
         assert(templateFileSplit[1] === "html");
 
         let templateName = templateFileSplit[0];
-        let fullPath = path.join(__dirname, "/content/templates/", templateFiles[i]);
+        let fullPath = path.join(ROOT_DIR, "/content/templates/", templateFiles[i]);
         templates[templateName] = {
             template: fs.readFileSync(fullPath).toString(),
             requiredParameters: {}
@@ -293,7 +295,7 @@ function LoadTemplateData()
 
 async function GetEntryData(url, templates)
 {
-    let xmlPath = path.join(__dirname, path.normalize(url + ".xml"));
+    let xmlPath = path.join(ROOT_DIR, path.normalize(url + ".xml"));
     let fileData;
     try {
         fileData = await readFileAsync(xmlPath);
@@ -409,7 +411,7 @@ async function SaveEntryData(url, templates, entryData)
     entryData.tags = entryData.tags.join(", ");
     let xml = ObjectToXML(contentType, entryData);
 
-    let xmlPath = path.join(__dirname, path.normalize(url + ".xml"));
+    let xmlPath = path.join(ROOT_DIR, path.normalize(url + ".xml"));
     let xmlDir = path.dirname(xmlPath);
     if (!fs.existsSync(xmlDir)) {
         await mkdirAsync(xmlDir, { recursive: true });
@@ -419,20 +421,20 @@ async function SaveEntryData(url, templates, entryData)
 
 async function DeleteEntry(url)
 {
-    let xmlPath = path.join(__dirname, path.normalize(url + ".xml"));
+    let xmlPath = path.join(ROOT_DIR, path.normalize(url + ".xml"));
     await unlinkAsync(xmlPath);
 }
 
 async function LoadAllEntryMetadata(templates)
 {
     let allEntryMetadata = [];
-    let allContentDirs = fs.readdirSync(path.join(__dirname, "content"));
+    let allContentDirs = fs.readdirSync(path.join(ROOT_DIR, "content"));
     for (let i = 0; i < allContentDirs.length; i++) {
         let dirName = allContentDirs[i];
         if (dirName === "templates") {
             continue;
         }
-        let allContentUnderDir = fs.readdirSync(path.join(__dirname, "content", dirName));
+        let allContentUnderDir = fs.readdirSync(path.join(ROOT_DIR, "content", dirName));
         for (let j = 0; j < allContentUnderDir.length; j++) {
             let contentFileName = allContentUnderDir[j];
             if (contentFileName.length <= 4) {
@@ -781,7 +783,7 @@ app.get("/featured", function(req, res) {
     res.status(200).send(globalData.featured);
 });
 
-app.use(express.static(path.join(__dirname, "/public")));
+app.use(express.static(path.join(ROOT_DIR, "/public")));
 
 let credentials = null;
 if (serverSettings.isHttps) {
@@ -925,7 +927,7 @@ if (serverSettings.isDev) {
                 uri += entryPathSplit[entryPathSplit.length - 1] + "/" + npnLabel + ".jpg";
             }
 
-            let filePath = path.join(__dirname, "public", uri);
+            let filePath = path.join(ROOT_DIR, "public", uri);
             let fileDir = path.dirname(filePath);
             if (!fs.existsSync(fileDir)) {
                 try {
@@ -1184,7 +1186,7 @@ if (serverSettings.isDev) {
     appDev.get("/", isAuthenticatedRedirect);
     appDev.get("/entry", isAuthenticatedRedirect);
 
-    appDev.use(express.static(path.join(__dirname, "/public-dev")));
+    appDev.use(express.static(path.join(ROOT_DIR, "/public-dev")));
 
     if (serverSettings.isHttps) {
         const httpsServerDev = https.createServer(credentials, appDev);

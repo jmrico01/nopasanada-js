@@ -2,12 +2,15 @@
 	"name": "nopasanada",
 	"version": "1.0.0",
 	"description": "I am sad to be using Node",
-	"main": "server.js",
+	"main": "src/server.js",
 	"author": "Jose M Rico",
 	"license": "ISC",
 	"repository": {
 		"type": "git",
 		"url": "https://github.com/jmrico01/nopasanada.git"
+	},
+	"scripts": {
+		"start": "node src/server.js"
 	},
 	"dependencies": {
 		"connect-busboy": "0.0.2",
