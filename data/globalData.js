@@ -1,6 +1,6 @@
 exports.featured = {
-    "home": "/content/201912/18-lo-importante",
-    "noticias": "/content/201912/22-navidad-laica",
+    "home": "/content/201912/22-navidad-laica",
+    "noticias": "/content/201912/18-lo-importante",
     "ciencia": "/content/201912/02-ocean-cleanup",
     "cultura": "/content/201912/13-desayunos",
     "opinion": "/content/201912/17-anna-karina",
