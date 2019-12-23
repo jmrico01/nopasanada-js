@@ -1,8 +1,8 @@
 exports.featured = {
     "home": "/content/201912/18-lo-importante",
-    "noticias": "/content/201912/18-lo-importante",
+    "noticias": "/content/201912/22-navidad-laica",
     "ciencia": "/content/201912/02-ocean-cleanup",
-    "cultura": "/content/201912/20-peliculas-subestimadas",
+    "cultura": "/content/201912/13-desayunos",
     "opinion": "/content/201912/17-anna-karina",
     "deporte": "/content/201912/17-me-mejor-experiencia",
     "nopasanada": "/content/201908/nopasanada"
