@@ -16,8 +16,9 @@ const util = require("util");
 const xml2jsParseString = require("xml2js").parseString;
 
 const ROOT_DIR = path.join(__dirname, "..");
+const GLOBAL_DATA_PATH = path.join(ROOT_DIR, "data", "globalData.js");
 
-let globalData = require("../data/globalData.js");
+let globalData = require(GLOBAL_DATA_PATH);
 
 // Jesus...
 const mkdirAsync     = util.promisify(fs.mkdir);
@@ -974,9 +975,9 @@ if (serverSettings.isDev) {
     appDev.post("/featured", async function(req, res) {
         let newFeatured = req.body;
         let globalDataContents = "exports.featured = " + JSON.stringify(newFeatured, null, 4) + ";";
-        await writeFileAsync("./data/globalData.js", globalDataContents);
-        delete require.cache[require.resolve("./data/globalData.js")];
-        globalData = require("./data/globalData.js");
+        await writeFileAsync(GLOBAL_DATA_PATH, globalDataContents);
+        delete require.cache[require.resolve(GLOBAL_DATA_PATH)];
+        globalData = require(GLOBAL_DATA_PATH);
         res.status(200).end();
     });
 
