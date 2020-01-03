@@ -1,6 +1,6 @@
 exports.featured = {
-    "home": "/content/202001/qasem-soleimani",
-    "noticias": "/content/201912/18-lo-importante",
+    "home": "/content/202001/03-trastorno-obsesivo-compulsivo",
+    "noticias": "/content/202001/qasem-soleimani",
     "ciencia": "/content/201912/02-ocean-cleanup",
     "cultura": "/content/201912/13-desayunos",
     "opinion": "/content/201912/17-anna-karina",
