@@ -126,30 +126,37 @@
     height: 5vw;
 }
 
-.articleText p {
+/* Below styles are for article text */
+
+p {
     font-family: FuturaPTBook;
     font-size: 1.4vw;
     letter-spacing: 0.01vw;
     line-height: 2.2vw;
 }
 
-.articleText p b {
+b {
+    font-family: FuturaPTMedium;
+}
+strong {
     font-family: FuturaPTMedium;
 }
 
-.articleText em {
+i {
+    font-family: FuturaPTBookItalic;
+}
+em {
     font-family: FuturaPTBookItalic;
 }
 
-.articleText img {
+img {
     width: 100%;
 }
 
-.articleText a {
+a {
     text-decoration: underline;
 }
-
-.articleText a:hover {
+a:hover {
     color: #ff301b;
 }
 

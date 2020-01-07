@@ -402,9 +402,10 @@ $(document).ready(async function() {
             { title: "Paragraph", block: "p", style: {} }
         ],
         menubar: false,
-        plugins: "autoresize colorpicker hr lists link",
-        toolbar: "undo redo | bold italic backcolor | alignleft aligncenter " +
+        plugins: "autoresize colorpicker hr lists link paste",
+        toolbar: "undo redo | bold italic | alignleft aligncenter " +
             "alignright alignjustify | link hr | bullist numlist | removeformat",
+        paste_as_text: true,
         font_formats: "Default (Futura)=FuturaPTBook;",
         content_css: [
             "https://nopasanada.com/css/article.css"
