@@ -49,7 +49,7 @@ const XML_ESCAPED_CHARS = {
     "\'": "&apos;"
 };
 
-function ObjectToXMLRecursive(prefix, object)
+function ObjectToXMLRecursive(prefix, object, escapeText)
 {
     let xml = "";
     let attributes = [];
@@ -59,9 +59,11 @@ function ObjectToXMLRecursive(prefix, object)
             if (key === "_") {
                 // TODO same as bottom "else" case
                 let string = prefix + object[key] + "\n";
-                for (let i = 0; i < string.length; i++) {
-                    if (XML_ESCAPED_CHARS.hasOwnProperty(string[i])) {
-                        string = string.substring(0, i) + XML_ESCAPED_CHARS[string[i]] + string.substring(i + 1, string.length);
+                if (escapeText) {
+                    for (let i = 0; i < string.length; i++) {
+                        if (XML_ESCAPED_CHARS.hasOwnProperty(string[i])) {
+                            string = string.substring(0, i) + XML_ESCAPED_CHARS[string[i]] + string.substring(i + 1, string.length);
+                        }
                     }
                 }
                 xml += string;
@@ -76,7 +78,11 @@ function ObjectToXMLRecursive(prefix, object)
             }
             else {
                 // TODO same as top-level function
-                let result = ObjectToXMLRecursive(prefix + XML_SINGLE_INDENT_STRING, object[key]);
+                let esc = key !== "text"  && key !== "text1" && key !== "text2" &&
+                          key !== "text3" && key !== "text4";
+                esc = true;
+                let result = ObjectToXMLRecursive(prefix + XML_SINGLE_INDENT_STRING, object[key],
+                                                  esc);
                 if (result !== null) {
                     xml += prefix + "<" + key;
                     for (let i = 0; i < result.attributes.length; i++) {
@@ -92,9 +98,11 @@ function ObjectToXMLRecursive(prefix, object)
     else {
         if (object !== "") {
             let string = prefix + object + "\n";
-            for (let i = 0; i < string.length; i++) {
-                if (XML_ESCAPED_CHARS.hasOwnProperty(string[i])) {
-                    string = string.substring(0, i) + XML_ESCAPED_CHARS[string[i]] + string.substring(i + 1, string.length);
+            if (escapeText) {
+                for (let i = 0; i < string.length; i++) {
+                    if (XML_ESCAPED_CHARS.hasOwnProperty(string[i])) {
+                        string = string.substring(0, i) + XML_ESCAPED_CHARS[string[i]] + string.substring(i + 1, string.length);
+                    }
                 }
             }
             xml += string;
@@ -109,7 +117,7 @@ function ObjectToXMLRecursive(prefix, object)
 
 function ObjectToXML(rootNode, object)
 {
-    let result = ObjectToXMLRecursive(XML_SINGLE_INDENT_STRING, object);
+    let result = ObjectToXMLRecursive(XML_SINGLE_INDENT_STRING, object, true);
     if (result === null) {
         return null;
     }
