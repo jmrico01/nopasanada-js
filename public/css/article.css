@@ -160,6 +160,10 @@ a:hover {
     color: #ff301b;
 }
 
+#header a {
+    text-decoration: none;
+}
+
 .articleCaption {
     font-family: FuturaPTBook;
     font-size: 1.4vw;
