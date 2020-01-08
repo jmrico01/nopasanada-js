@@ -13,39 +13,39 @@
             CURADAS POR&lt;br&gt;NO PASA NADA NOTICIAS
         </text2>
         <highlightColor>
-            #ff613c
+            #ffff00
         </highlightColor>
     </featured>
     <media>
         <header type="image">
-            /images/202001/headers/07-lo-importante.jpg
+            /images/202001/headers/08-lo-importante.jpg
         </header>
         <poster type="image">
-            /images/202001/posters/07-lo-importante.jpg
+            /images/202001/posters/08-lo-importante.jpg
         </poster>
         <header-desktop1 type="image">
-            /images/202001/07-lo-importante/vertical1.jpg
+            /images/202001/08-lo-importante/vertical1.jpg
         </header-desktop1>
         <header-desktop2 type="image">
-            /images/202001/07-lo-importante/vertical2.jpg
+            /images/202001/08-lo-importante/vertical2.jpg
         </header-desktop2>
         <header-desktop3 type="image">
-            /images/202001/07-lo-importante/vertical3.jpg
+            /images/202001/08-lo-importante/vertical3.jpg
         </header-desktop3>
         <header-desktop4 type="image">
-            /images/202001/07-lo-importante/vertical4.jpg
+            /images/202001/08-lo-importante/vertical4.jpg
         </header-desktop4>
         <header-mobile1 type="image">
-            /images/202001/07-lo-importante/square1.jpg
+            /images/202001/08-lo-importante/square1.jpg
         </header-mobile1>
         <header-mobile2 type="image">
-            /images/202001/07-lo-importante/square2.jpg
+            /images/202001/08-lo-importante/square2.jpg
         </header-mobile2>
         <header-mobile3 type="image">
-            /images/202001/07-lo-importante/square3.jpg
+            /images/202001/08-lo-importante/square3.jpg
         </header-mobile3>
         <header-mobile4 type="image">
-            /images/202001/07-lo-importante/square4.jpg
+            /images/202001/08-lo-importante/square4.jpg
         </header-mobile4>
     </media>
     <tags>
@@ -157,6 +157,7 @@
 &lt;p&gt;Pese a que la elecci&amp;oacute;n de S&amp;aacute;nchez puso fin a varios meses de bloqueo, analistas ponen en duda que el nuevo gobierno finalice con la inestabilidad cr&amp;oacute;nica persistente en la cuarta econom&amp;iacute;a de la zona euro desde 2015, cuando vol&amp;oacute; en pedazos el bipartidismo del PSOE y el PP y el Parlamento se fragment&amp;oacute;.&lt;/p&gt;
     </text3>
     <title4>
+        Un ejecutivo de Facebook reconoce que la red social ayudó a elegir a Trump
     </title4>
     <author4>
         No Pasa Nada Noticias y AFP
