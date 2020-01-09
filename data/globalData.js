@@ -1,5 +1,5 @@
 exports.featured = {
-    "home": "/content/202001/09-lo-importante",
+    "home": "/content/202001/coladegallo-ep-1",
     "noticias": "/content/202001/necesita-saber-iran",
     "ciencia": "/content/202001/04-bush-fires",
     "cultura": "/content/202001/09-hildur-guonadottir",
