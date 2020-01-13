@@ -1,6 +1,6 @@
 exports.featured = {
     "home": "/content/202001/menu-perfecto-ep1",
-    "noticias": "/content/202001/necesita-saber-iran",
+    "noticias": "/content/202001/13-lo-importante",
     "ciencia": "/content/202001/04-bush-fires",
     "cultura": "/content/202001/09-hildur-guonadottir",
     "opinion": "/content/202001/09-hildur-guonadottir",
