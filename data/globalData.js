@@ -1,6 +1,6 @@
 exports.featured = {
     "home": "/content/202001/15-camaras-trampa",
-    "noticias": "/content/202001/13-lo-importante",
+    "noticias": "/content/202001/15-lo-importante",
     "ciencia": "/content/202001/15-camaras-trampa",
     "cultura": "/content/202001/09-hildur-guonadottir",
     "opinion": "/content/202001/09-hildur-guonadottir",
