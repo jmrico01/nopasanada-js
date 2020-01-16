@@ -1,5 +1,5 @@
 exports.featured = {
-    "home": "/content/202001/15-camaras-trampa",
+    "home": "/content/202001/15-oscars",
     "noticias": "/content/202001/15-lo-importante",
     "ciencia": "/content/202001/15-camaras-trampa",
     "cultura": "/content/202001/15-oscars",
