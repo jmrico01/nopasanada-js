@@ -1,5 +1,5 @@
 exports.featured = {
-    "home": "/content/202001/17-musee-paris",
+    "home": "/content/202001/20-supernova-betelgeuse",
     "noticias": "/content/202001/20-lo-importante",
     "ciencia": "/content/202001/20-supernova-betelgeuse",
     "cultura": "/content/202001/17-musee-paris",
