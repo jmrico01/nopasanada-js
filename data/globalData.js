@@ -1,6 +1,6 @@
 exports.featured = {
     "home": "/content/202001/20-supernova-betelgeuse",
-    "noticias": "/content/202001/20-lo-importante",
+    "noticias": "/content/202001/21-lo-importante",
     "ciencia": "/content/202001/20-supernova-betelgeuse",
     "cultura": "/content/202001/17-musee-paris",
     "opinion": "/content/202001/09-hildur-guonadottir",
