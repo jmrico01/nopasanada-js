@@ -1,6 +1,6 @@
 exports.featured = {
     "home": "/content/202001/23-gaultier",
-    "noticias": "/content/202001/23-lo-importante",
+    "noticias": "/content/202001/24-lo-importante",
     "ciencia": "/content/202001/20-supernova-betelgeuse",
     "cultura": "/content/202001/23-gaultier",
     "opinion": "/content/202001/09-hildur-guonadottir",
