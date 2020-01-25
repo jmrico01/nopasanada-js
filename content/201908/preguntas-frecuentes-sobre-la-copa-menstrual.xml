@@ -24,13 +24,13 @@
         <folds2 type="image">
             /images/201908/article-21/folds2.png
         </folds2>
-        <opinion1 type="image" style="width: 50%;">
+        <opinion1 type="image">
             /images/201908/article-21/opinion1.png
         </opinion1>
-        <opinion2 type="image" style="width: 50%;">
+        <opinion2 type="image">
             /images/201908/article-21/opinion2.png
         </opinion2>
-        <opinion3 type="image" style="width: 50%;">
+        <opinion3 type="image">
             /images/201908/article-21/opinion3.png
         </opinion3>
     </media>
